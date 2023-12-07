@@ -78,3 +78,37 @@ if mods["big_power_poles_patched"] then
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "lead-plate", 4 })
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "concrete", 2 })
 end
+
+--Advanced Furnaces 2
+
+if mods['Load-Furn-2'] then
+--1
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-01", { "temperature-sensor", 1 })
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-01", { "crucible", 1 })
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-01", { "hardened-hull", 10 })
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-01", { "zirconium-plate", 10 })
+if mods["IfNickel"] then
+bobmods.lib.recipe.replace_ingredient("furnace-pro-01", "steel-plate", "nitinol-plate")
+else 
+bobmods.lib.recipe.replace_ingredient("furnace-pro-01", "steel-plate", "tungsten-plate")
+end
+--2
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-02", { "temperature-sensor", 1 })
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-02", { "crucible", 1 })
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-02", { "hardened-hull", 20 })
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-02", { "zirconium-plate", 20 })
+bobmods.lib.recipe.replace_ingredient("furnace-pro-02", "steel-plate", "titanium-plate")
+--3
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-03", { "temperature-sensor", 1 })
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-03", { "graphite", 10 })
+--4
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-04", { "temperature-sensor", 1 })
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-04", { "imersium-plate", 10 })
+--5
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-05", { "temperature-sensor", 1 })
+bobmods.lib.recipe.add_new_ingredient("furnace-pro-05", { "se-heavy-girder", 10 })
+
+--Add Furnace MK5 in Krastorio's furnace
+bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "furnace-pro-05")
+
+end

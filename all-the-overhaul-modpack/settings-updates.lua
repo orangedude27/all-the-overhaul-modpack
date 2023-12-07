@@ -360,3 +360,9 @@ end
 if mods["heroturrets"] then
   change_setting("heroturrets-setting-level-up-modifier", 50)
 end
+if mods["Load-Furn-2"] then
+  change_setting("bool-setting", "logist", false)
+  change_setting("bool-setting", "steel-plate2", false)
+  change_setting("bool-setting", "cool", false)
+  change_setting("double-setting", "load-furn-energy", 2)
+end
