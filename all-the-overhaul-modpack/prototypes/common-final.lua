@@ -120,19 +120,33 @@ local arr_categories_for_transport = { "solar-equipmen", "transport-shield", "ba
 -- locomotives grid
 data.raw["movement-bonus-equipment"]["el_train_equipment_accelerator_item"].movement_bonus = 0.25
 
--- kr-locomotive-grid
-data.raw["equipment-grid"]["kr-locomotive-grid"].width = 6
-data.raw["equipment-grid"]["kr-locomotive-grid"].height = 6
-equipment.clear_categories_from_grid("kr-locomotive-grid")
-equipment.add_category_to_grid("kr-locomotive-grid", "el_train_equipment")
-equipment.add_category_to_grid("kr-locomotive-grid", "fi_train_equipment")
-equipment.add_categories_to_grid("kr-locomotive-grid", arr_categories_for_transport)
+-- locomotive 
+data.raw["locomotive"]["locomotive"].max_speed = 1 
+data.raw["locomotive"]["locomotive"].weight = 2500 
+data.raw["locomotive"]["locomotive"].braking_force = 30 
+data.raw["locomotive"]["locomotive"].friction_force = 0.5 
+data.raw["locomotive"]["locomotive"].air_resistance = 0.0075 
+data.raw["locomotive"]["locomotive"].max_power = "1MW" 
+data.raw["locomotive"]["locomotive"].reversing_power_modifier = 0.5 
+data.raw["equipment-grid"]["kr-locomotive-grid"].width = 6 
+data.raw["equipment-grid"]["kr-locomotive-grid"].height = 6 
+equipment.clear_categories_from_grid("kr-locomotive-grid") 
+equipment.add_category_to_grid("kr-locomotive-grid", "el_train_equipment") 
+equipment.add_category_to_grid("kr-locomotive-grid", "fi_train_equipment") 
+equipment.add_categories_to_grid("kr-locomotive-grid", arr_categories_for_transport) 
+ 
+-- el_diesel_train 
+data.raw["locomotive"]["el_diesel_train_entity"].max_speed = 1.25 
+data.raw["locomotive"]["el_diesel_train_entity"].weight = 3000 
+data.raw["locomotive"]["el_diesel_train_entity"].braking_force = 40 
+data.raw["locomotive"]["el_diesel_train_entity"].friction_force = 0.5 
+data.raw["locomotive"]["el_diesel_train_entity"].air_resistance = 0.0050 
+data.raw["locomotive"]["el_diesel_train_entity"].max_power = "2MW" 
+data.raw["locomotive"]["el_diesel_train_entity"].reversing_power_modifier = 0.6 
+data.raw["equipment-grid"]["el_train_equipment_grid"].width = 9 
+data.raw["equipment-grid"]["el_train_equipment_grid"].height = 6 
+equipment.add_categories_to_grid("el_train_equipment_grid", arr_categories_for_transport) 
 
--- el_train_equipment_grid
-data.raw["locomotive"]["el_diesel_train_entity"].max_power = "3000kW"
-data.raw["equipment-grid"]["el_train_equipment_grid"].width = 9
-data.raw["equipment-grid"]["el_train_equipment_grid"].height = 6
-equipment.add_categories_to_grid("el_train_equipment_grid", arr_categories_for_transport)
 
 -- kr-nuclear-locomotive-grid
 data.raw["locomotive"]["kr-nuclear-locomotive"].max_power = "4000kW"
@@ -144,49 +158,125 @@ equipment.add_category_to_grid("kr-nuclear-locomotive-grid", "fi_train_equipment
 equipment.add_categories_to_grid("kr-nuclear-locomotive-grid", arr_categories_for_transport)
 
 if mods["RampantArsenal"] then
-  -- nuclear-train-grid-rampant-arsenal
-  data.raw["locomotive"]["nuclear-train-vehicle-rampant-arsenal"].max_power = "4000kW"
-  data.raw["equipment-grid"]["nuclear-train-grid-rampant-arsenal"].width = 12
-  data.raw["equipment-grid"]["nuclear-train-grid-rampant-arsenal"].height = 6
-  equipment.clear_categories_from_grid("nuclear-train-grid-rampant-arsenal")
-  equipment.add_category_to_grid("nuclear-train-grid-rampant-arsenal", "el_train_equipment")
-  equipment.add_category_to_grid("nuclear-train-grid-rampant-arsenal", "fi_train_equipment")
-  equipment.add_categories_to_grid("nuclear-train-grid-rampant-arsenal", arr_categories_for_transport)
+  -- kr-nuclear-locomotive 
+  data.raw["locomotive"]["kr-nuclear-locomotive"].max_speed = 2 
+  data.raw["locomotive"]["kr-nuclear-locomotive"].weight = 4000 
+  data.raw["locomotive"]["kr-nuclear-locomotive"].braking_force = 50 
+  data.raw["locomotive"]["kr-nuclear-locomotive"].friction_force = 0.5 
+  data.raw["locomotive"]["kr-nuclear-locomotive"].air_resistance = 0.0035 
+  data.raw["locomotive"]["kr-nuclear-locomotive"].max_power = "2.25MW" 
+  data.raw["locomotive"]["kr-nuclear-locomotive"].reversing_power_modifier = 0.7 
+  data.raw["locomotive"]["kr-nuclear-locomotive"].equipment_grid = "kr-nuclear-locomotive-grid" 
+  data.raw["equipment-grid"]["kr-nuclear-locomotive-grid"].width = 12 
+  data.raw["equipment-grid"]["kr-nuclear-locomotive-grid"].height = 6 
+  equipment.add_category_to_grid("kr-nuclear-locomotive-grid", "el_train_equipment") 
+  equipment.add_category_to_grid("kr-nuclear-locomotive-grid", "fi_train_equipment") 
+  equipment.add_categories_to_grid("kr-nuclear-locomotive-grid", arr_categories_for_transport) 
 end
 
--- space-locomotive-grid
-data.raw["locomotive"]["space-locomotive"].max_power = "5000kW"
-data.raw["locomotive"]["space-locomotive"].equipment_grid = "space-locomotive-grid"
-data.raw["equipment-grid"]["space-locomotive-grid"].width = 15
-data.raw["equipment-grid"]["space-locomotive-grid"].height = 6
-equipment.add_category_to_grid("space-locomotive-grid", "el_train_equipment")
-equipment.add_category_to_grid("space-locomotive-grid", "fi_train_equipment")
-equipment.add_categories_to_grid("space-locomotive-grid", arr_categories_for_transport)
-
--- gr_magnet_train_pre_grid
-data.raw["locomotive"]["gr_magnet_train_pre_entity"].equipment_grid = "gr_magnet_train_pre_grid"
-data.raw["equipment-grid"]["gr_magnet_train_pre_grid"].width = 15
-data.raw["equipment-grid"]["gr_magnet_train_pre_grid"].height = 9
-equipment.add_category_to_grid("gr_magnet_train_pre_grid", "fi_train_equipment")
-equipment.add_categories_to_grid("gr_magnet_train_pre_grid", arr_categories_for_transport)
-
--- gr_magnet_train_grid
-data.raw["locomotive"]["gr_magnet_train_entity"].equipment_grid = "gr_magnet_train_grid"
-data.raw["equipment-grid"]["gr_magnet_train_grid"].width = 15
-data.raw["equipment-grid"]["gr_magnet_train_grid"].height = 12
-equipment.add_category_to_grid("gr_magnet_train_grid", "fi_train_equipment")
-equipment.add_categories_to_grid("gr_magnet_train_grid", arr_categories_for_transport)
-
--- wagons
-data.raw["equipment-grid"]["kr-wagons-grid"].width = 10
-data.raw["equipment-grid"]["kr-wagons-grid"].height = 10
-equipment.clear_categories_from_grid("kr-wagons-grid")
-equipment.add_categories_to_grid("kr-wagons-grid", arr_categories_for_transport)
-
-data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"].equipment_grid = "kr-wagons-grid"
-data.raw["cargo-wagon"]["gr_magnet_wagon_entity"].equipment_grid = "kr-wagons-grid"
-
-data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"].equipment_grid = "kr-wagons-grid"
+-- space-locomotive 
+data.raw["locomotive"]["space-locomotive"].max_speed = 2.5 
+data.raw["locomotive"]["space-locomotive"].weight = 3000 
+data.raw["locomotive"]["space-locomotive"].braking_force = 60 
+data.raw["locomotive"]["space-locomotive"].friction_force = 0.5 
+data.raw["locomotive"]["space-locomotive"].air_resistance = 0.0025 
+data.raw["locomotive"]["space-locomotive"].max_power = "2.5MW" 
+data.raw["locomotive"]["space-locomotive"].reversing_power_modifier = 0.8 
+data.raw["locomotive"]["space-locomotive"].equipment_grid = "space-locomotive-grid" 
+data.raw["equipment-grid"]["space-locomotive-grid"].width = 15 
+data.raw["equipment-grid"]["space-locomotive-grid"].height = 6 
+equipment.add_category_to_grid("space-locomotive-grid", "el_train_equipment") 
+equipment.add_category_to_grid("space-locomotive-grid", "fi_train_equipment") 
+equipment.add_categories_to_grid("space-locomotive-grid", arr_categories_for_transport) 
+ 
+-- gr_magnet_train 
+data.raw["locomotive"]["gr_magnet_train_pre_entity"].max_speed = 3 
+data.raw["locomotive"]["gr_magnet_train_pre_entity"].braking_force = 1 
+data.raw["locomotive"]["gr_magnet_train_pre_entity"].friction_force = 0.00025 
+data.raw["locomotive"]["gr_magnet_train_pre_entity"].air_resistance = 0.00010 
+data.raw["locomotive"]["gr_magnet_train_pre_entity"].reversing_power_modifier = 0.9 
+data.raw["locomotive"]["gr_magnet_train_pre_entity"].equipment_grid = "gr_magnet_train_pre_grid" 
+data.raw["equipment-grid"]["gr_magnet_train_pre_grid"].width = 15 
+data.raw["equipment-grid"]["gr_magnet_train_pre_grid"].height = 9 
+equipment.add_category_to_grid("gr_magnet_train_pre_grid", "fi_train_equipment") 
+equipment.add_categories_to_grid("gr_magnet_train_pre_grid", arr_categories_for_transport) 
+ 
+-- gr_magnet_train 
+data.raw["locomotive"]["gr_magnet_train_entity"].max_speed = 4 
+data.raw["locomotive"]["gr_magnet_train_entity"].braking_force = 1 
+data.raw["locomotive"]["gr_magnet_train_entity"].friction_force = 0.00025 
+data.raw["locomotive"]["gr_magnet_train_entity"].air_resistance = 0.00010 
+data.raw["locomotive"]["gr_magnet_train_entity"].reversing_power_modifier = 1 
+data.raw["locomotive"]["gr_magnet_train_entity"].equipment_grid = "gr_magnet_train_grid" 
+data.raw["equipment-grid"]["gr_magnet_train_grid"].width = 15 
+data.raw["equipment-grid"]["gr_magnet_train_grid"].height = 12 
+equipment.add_category_to_grid("gr_magnet_train_grid", "fi_train_equipment") 
+equipment.add_categories_to_grid("gr_magnet_train_grid", arr_categories_for_transport) 
+ 
+-- wagons 
+data.raw["equipment-grid"]["kr-wagons-grid"].width = 10 
+data.raw["equipment-grid"]["kr-wagons-grid"].height = 10 
+equipment.clear_categories_from_grid("kr-wagons-grid") 
+equipment.add_categories_to_grid("kr-wagons-grid", arr_categories_for_transport) 
+ 
+-- cargo-wagon 
+data.raw["cargo-wagon"]["cargo-wagon"].weight = 2000 
+data.raw["cargo-wagon"]["cargo-wagon"].braking_force = 3 
+data.raw["cargo-wagon"]["cargo-wagon"].friction_force = 0.5 
+data.raw["cargo-wagon"]["cargo-wagon"].max_speed = 2 
+data.raw["cargo-wagon"]["cargo-wagon"].air_resistance = 0.01 
+ 
+-- space-cargo-wagon 
+data.raw["cargo-wagon"]["space-cargo-wagon"].weight = 1000 
+data.raw["cargo-wagon"]["space-cargo-wagon"].braking_force = 3 
+data.raw["cargo-wagon"]["space-cargo-wagon"].friction_force = 0.5 
+data.raw["cargo-wagon"]["space-cargo-wagon"].max_speed = 2.5 
+data.raw["cargo-wagon"]["space-cargo-wagon"].air_resistance = 0.01 
+ 
+-- gr_magnet_wagon_pre 
+data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"].weight = 10 
+data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"].braking_force = 1 
+data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"].friction_force = 0.00125 
+data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"].max_speed = 3 
+data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"].air_resistance = 0.00125 
+data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"].equipment_grid = "kr-wagons-grid" 
+ 
+-- gr_magnet_wagon_pre 
+data.raw["cargo-wagon"]["gr_magnet_wagon_entity"].weight = 10 
+data.raw["cargo-wagon"]["gr_magnet_wagon_entity"].braking_force = 1 
+data.raw["cargo-wagon"]["gr_magnet_wagon_entity"].friction_force = 0.00125 
+data.raw["cargo-wagon"]["gr_magnet_wagon_entity"].max_speed = 3 
+data.raw["cargo-wagon"]["gr_magnet_wagon_entity"].air_resistance = 0.00125 
+data.raw["cargo-wagon"]["gr_magnet_wagon_entity"].equipment_grid = "kr-wagons-grid" 
+ 
+-- fluid-wagon 
+data.raw["fluid-wagon"]["fluid-wagon"].weight = 2000 
+data.raw["fluid-wagon"]["fluid-wagon"].braking_force = 3 
+data.raw["fluid-wagon"]["fluid-wagon"].friction_force = 0.5 
+data.raw["fluid-wagon"]["fluid-wagon"].max_speed = 2 
+data.raw["fluid-wagon"]["fluid-wagon"].air_resistance = 0.01 
+ 
+-- space-fluid-wagon 
+data.raw["fluid-wagon"]["space-fluid-wagon"].weight = 1000 
+data.raw["fluid-wagon"]["space-fluid-wagon"].braking_force = 3 
+data.raw["fluid-wagon"]["space-fluid-wagon"].friction_force = 0.5 
+data.raw["fluid-wagon"]["space-fluid-wagon"].max_speed = 2.5 
+data.raw["fluid-wagon"]["space-fluid-wagon"].air_resistance = 0.01 
+ 
+-- gr_magnet_tanker_pre 
+data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"].weight = 10 
+data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"].braking_force = 1 
+data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"].friction_force = 0.00125 
+data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"].max_speed = 3 
+data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"].air_resistance = 0.00125 
+data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"].equipment_grid = "kr-wagons-grid" 
+ 
+-- gr_magnet_tanker_pre 
+data.raw["fluid-wagon"]["gr_magnet_tanker_entity"].weight = 10 
+data.raw["fluid-wagon"]["gr_magnet_tanker_entity"].braking_force = 1 
+data.raw["fluid-wagon"]["gr_magnet_tanker_entity"].friction_force = 0.00125 
+data.raw["fluid-wagon"]["gr_magnet_tanker_entity"].max_speed = 3 
+data.raw["fluid-wagon"]["gr_magnet_tanker_entity"].air_resistance = 0.00125 
 data.raw["fluid-wagon"]["gr_magnet_tanker_entity"].equipment_grid = "kr-wagons-grid"
 
 -- car

@@ -114,3 +114,38 @@ util.tech_remove_ingredients("mantle_extractor", {"automation-science-pack","log
 util.tech_add_ingredients("mantle_extractor",
 {"production-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack","space-science-pack",
 "production-science-pack","utility-science-pack","advanced-tech-card","se-energy-science-pack-4","se-material-science-pack-3"},false)
+
+-- Fix research line of Advanced Furnaces 2
+if mods['Load-Furn-2'] then
+--1
+util.tech_remove_ingredients("furnace-pro-1", {"automation-science-pack","logistic-science-pack"})
+util.tech_add_ingredients("furnace-pro-1",
+{"automation-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack"},false)
+util.tech_add_prerequisites("furnace-pro-1", "se-rocket-science-pack")
+if mods["IfNickel"] then
+util.tech_add_prerequisites("furnace-pro-1", "nitinol-processing")
+end
+--2
+util.tech_remove_ingredients("furnace-pro-2", {"automation-science-pack","logistic-science-pack","chemical-science-pack"})
+util.tech_add_ingredients("furnace-pro-2",
+{"automation-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack","space-science-pack"},false)
+util.tech_add_prerequisites("furnace-pro-2", "space-science-pack")
+--4
+util.tech_remove_ingredients("furnace-pro-4", {"automation-science-pack","logistic-science-pack","chemical-science-pack",
+"production-science-pack"})
+util.tech_add_ingredients("furnace-pro-4",
+{"automation-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack","space-science-pack",
+"production-science-pack", "utility-science-pack","kr-optimization-tech-card"},false)
+util.tech_add_prerequisites("furnace-pro-4", "kr-optimization-tech-card")
+--5
+util.tech_remove_ingredients("furnace-pro-5", {"automation-science-pack","logistic-science-pack","chemical-science-pack",
+"production-science-pack","utility-science-pack"})
+util.tech_add_ingredients("furnace-pro-5",
+{"automation-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack","space-science-pack",
+"production-science-pack", "utility-science-pack","kr-optimization-tech-card","se-material-science-pack-1"},false)
+util.tech_remove_prerequisites("furnace-pro-5",{"utility-science-pack"})
+util.tech_add_prerequisites("furnace-pro-5", "se-heavy-girder")
+-- and integrate it with Krastorio
+util.tech_add_prerequisites("kr-advanced-furnace", "furnace-pro-5")
+
+end

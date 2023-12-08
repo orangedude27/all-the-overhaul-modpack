@@ -38,13 +38,14 @@ local CircuitSubOrder =
     ["switch"] = "[e]",
     ["signal"] = "[f]",
     ["speaker"] = "[e]",
-    ["nixie-tube"] = "[h]"
+    ["nixie-tube"] = "[h]",
 }
 local CircuitRecipeOrder =
 {
     ["constant"] = "[a]",
     ["decider"] = "[a]",
     ["arithmetic"] = "[a]",
+    ["crafting"] = "[ab]",
     ["wooden"] = "[c]",
     ["small"] = "[b]",
     ["alpha"] = "[b]",
@@ -427,12 +428,13 @@ local LogisticsRecipeOrder =
 }
 --resources
 local ResourceBlacklist = { "landfill", "matter", "text", "stream", "formatting", "cannon", "machine", "inserter",
-    "alloy", "nitinol", "sludge", "shotgun", "fence", "crusher", "battery", "solar", "bi-cokery", "probe", "science", "dect", "repair"}
+    "alloy", "nitinol", "sludge", "shotgun", "fence", "crusher", "battery", "solar", "bi-cokery", "probe", "science", "dect", "repair", "combinator"}
 local ResourceSubOrder =
 {
     ["coal"] = "[m]",
     ["iron"] = "[a]",
     ["copper"] = "[b]",
+    ["cuw"] = "[b]",
     ["bronze"] = "[b]",
     ["uranium"] = "[o]",
     ["rare"] = "[p]",
@@ -519,7 +521,7 @@ local ResourceRecipeOrder =
     ["synthe"] = "[y]",
 }
 --manufactoring (intermediat-products)
-local ManufactoringBlacklist = {"filtration", "ki", "dect"}
+local ManufactoringBlacklist = {"filtration", "ki", "dect","equipment"}
 local ManufactoringSubOrder =
 {
     ["upgrade"] = "[y]",
@@ -716,7 +718,7 @@ local EquipmentSubOrder =
 {
     ["armor"] = "[a]",
     ["suit"] = "[a]",
-    ["battery"] = "[c]",
+    ["battery-equipment"] = "[c]",
     ["panel-equipment"] = "[d]",
     ["rtg"] = "[e]",
     ["portable-generator"] = "[e]",
@@ -1083,4 +1085,14 @@ SortDirectTable =
     ["ltn-port"] = { name = "port", order = "[a]"},
     ["ironclad"] = { name = "vehicle", order = "[a]"},
     ["energy-absorber"] = { name = "shield", order = "[a]"},
+    ["battery-equipment"] = { name = "battery-equipment", order = "[c]"},
+    ["battery-mk2-equipment"] = { name = "battery-equipment", order = "[c]"},
+    ["battery-mk3-equipment"] = { name = "battery-equipment", order = "[c]"},
+    ["big-battery-equipment"] = { name = "battery-equipment", order = "[c]"},
+    ["big-battery-mk2-equipment"] = { name = "battery-equipment", order = "[c]"},
+    ["big-battery-mk3-equipment"] = { name = "battery-equipment", order = "[c]"},
+    ["crafting_combinator:crafting-combinator"] = { name = "combinator", order = "[i]"},
+    ["crafting_combinator:recipe-combinator"] = { name = "combinator", order = "[i]"},
+    ["cuw"] = { name = "copper", order = "[z]"},
+    --[""] = { name = "", order = ""},
 }
