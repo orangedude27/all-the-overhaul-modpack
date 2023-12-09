@@ -175,3 +175,142 @@ bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "speed-module-6", 20
 bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-naquium-plate", 100 })
 bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-heavy-bearing", 200 })
 bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-space-pipe", 300 })
+
+-- 248K research balance
+--Rename Fusion tech to Fusion catalogue
+data.raw.technology["fu_energy_tech"].localised_name = "Fusion catalogue"
+data.raw.item["fu_tech_sign_item"].localised_name = "Fusion catalogue"
+--Hige the recipe
+bobmods.lib.recipe.hide("fu_tech_sign_item")
+
+data:extend({
+	--Data
+	{
+        type = "recipe",
+        name = "fusion-data-248",
+		ingredients = {
+            { "fu_materials_fusion_card", 1},
+            { "se-empty-data", 1},
+            { type = "fluid", name = "se-ion-stream", amount=100},
+        },
+		results = {
+			{ name = "fusion-data-248", amount = 1},
+			{ name = "se-contaminated-scrap", amount = 8},
+		},
+        energy_required = 2,
+		main_product = "fusion-data-248",
+		category = "space-collider",
+		enabled = false,
+		always_show_made_in = true,
+    },
+	{
+        type = "recipe",
+        name = "laser-data-248",
+		ingredients = {
+            { "fu_materials_laser_card", 1},
+            { "fu_materials_TIM", 1},
+			{ "se-empty-data", 1},
+            { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
+        },
+		results = {
+			{ name = "laser-data-248", amount = 1},
+			{ name = "se-contaminated-scrap", amount = 2},
+			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
+		},
+        energy_required = 10,
+		main_product = "laser-data-248",
+		category = "space-laser",
+		enabled = false,
+		always_show_made_in = true,
+    },
+	{
+        type = "recipe",
+        name = "magnet-data-248",
+		ingredients = {
+			{ "nickel-electromagnet", 1},
+			{ "niobium-plate", 1},
+            { "fu_materials_magnet_card", 1},
+            { "se-empty-data", 1},
+			{ type = "fluid", name = "se-ion-stream", amount=50},
+            { type = "fluid", name = "se-space-coolant-cold", amount=10},
+        },
+		results = {
+			{ name = "magnet-data-248", amount_min = 1, amount_max = 1, probability = 0.95},
+			{ name = "se-junk-data", amount_min = 1, amount_max = 1, probability = 0.04},
+			{ name = "niobium-plate", amount_min = 1, amount_max = 1, probability = 0.95},
+			{ name = "nickel-electromagnet", amount_min = 1, amount_max = 1, probability = 0.75},
+			{ name = "se-scrap", amount_min = 1, amount_max = 1, probability = 0.1},
+			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
+		},
+        energy_required = 10,
+		main_product = "magnet-data-248",
+		category = "space-electromagnetics",
+		enabled = false,
+		always_show_made_in = true,
+    },
+	{
+        type = "recipe",
+        name = "plasma-data-248",
+		ingredients = {
+			{ "nickel-electromagnet", 1},
+			{ "fu_materials_plasma_card", 1},
+            { "se-empty-data", 1},
+			{ type = "fluid", name = "se-proton-stream", amount=20},
+            { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
+        },
+		results = {
+			{ name = "plasma-data-248", amount_min = 1, amount_max = 1, probability = 0.7},
+			{ name = "se-junk-data", amount_min = 1, amount_max = 1, probability = 0.29},
+			{ name = "nickel-electromagnet", amount_min = 1, amount_max = 1, probability = 0.75},
+			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
+		},
+        energy_required = 5,
+		main_product = "plasma-data-248",
+		category = "space-collider",
+		enabled = false,
+		always_show_made_in = true,
+    },
+	{
+		type = "recipe",
+		name = "fusion-catalogue-1",
+		allow_productivity = true,
+		ingredients = {
+			{ "fusion-data-248", 1 },
+			{ "laser-data-248", 1 },
+			{ "magnet-data-248", 1 },
+			{ "plasma-data-248", 1 },
+			{ type = "fluid", name = "se-space-coolant-cold", amount=10},
+		},
+		results = {
+			{ name = "fu_tech_sign_item", amount = 1},
+			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
+		},
+		energy_required = 20,
+		main_product = "fu_tech_sign_item",
+		category = "catalogue-creation-1",
+		enabled = false,
+		always_show_made_in = true,
+	},
+	{
+        type = "recipe",
+        name = "fusion-science-pack-1",
+        allow_productivity = true,
+		ingredients = {
+          { "fu_tech_sign_item", 1 },
+          { "fi_materials_neodym", 20 },
+          { "se-significant-data", 1 },
+          { type = "fluid", name = "se-space-coolant-cold", amount = 20},
+        },
+        results = {
+          { name = "fusion-science-pack-1", amount = 2},
+          { name = "se-junk-data", amount = 6},
+          { type = "fluid", name = "se-space-coolant-hot", amount = 20},
+        },
+		energy_required = 30,
+        main_product = "fusion-science-pack-1",
+        category = "science-pack-creation-1",
+		enabled = false,
+		always_show_made_in = true,
+    },
+	
+})

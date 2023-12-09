@@ -20,3 +20,4 @@ require("prototypes/bio-industries")
 if mods["RampantArsenal"] then
     require("prototypes/rampant-arsenal")
 end
+require("prototypes.items")

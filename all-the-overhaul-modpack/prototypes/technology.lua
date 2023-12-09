@@ -168,3 +168,68 @@ util.tech_add_ingredients("mantle_extractor",
 {"production-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack","space-science-pack",
 "production-science-pack","utility-science-pack","advanced-tech-card","se-astronomic-science-pack-4","se-energy-science-pack-4",
 "se-material-science-pack-4","matter-tech-card"},false)
+
+-- 248K research balance
+-- Hide Fusion Tech by 248K
+bobmods.lib.tech.hide("fu_energy_tech")
+-- New technologies
+data:extend({
+    {
+        type = "technology",
+        name = "space-fusion-catalogue",
+        effects = {
+            {type = "unlock-recipe", recipe = "fusion-catalogue-1"},
+			{type = "unlock-recipe", recipe = "fusion-data-248"},
+			{type = "unlock-recipe", recipe = "laser-data-248"},
+			{type = "unlock-recipe", recipe = "magnet-data-248"},
+			{type = "unlock-recipe", recipe = "plasma-data-248"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-1.png",
+        icon_size = 128,
+        prerequisites = {"se-space-particle-collider"},
+        unit = {
+            count = 200,
+			time = 45,
+            ingredients = {
+                { "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "se-rocket-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "se-energy-science-pack-1", 1 },
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "space-fusion-science-pack",
+        effects = {
+            {type = "unlock-recipe", recipe = "fusion-science-pack-1"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-science-pack-1.png",
+        icon_size = 128,
+        prerequisites = {"space-fusion-catalogue"},
+        unit = {
+            count = 100,
+			time = 60,
+            ingredients = {
+                { "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "se-rocket-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "se-energy-science-pack-1", 1 },
+            },
+        },
+    },
+	
+})
+-- Research line
+util.tech_add_prerequisites("fu_reactor_tech","space-fusion-science-pack")
+util.tech_add_prerequisites("fu_robo_tech","space-fusion-science-pack")
+util.tech_add_prerequisites("fi_modules_3_tech","space-fusion-science-pack")
+util.tech_add_prerequisites("fu_tokamak_tech","space-fusion-science-pack")
+util.tech_add_prerequisites("fu_turbine_tech","space-fusion-science-pack")
+util.tech_add_prerequisites("kr-imersite-solar-panel-equipment","space-fusion-science-pack")
+util.tech_add_prerequisites("fusion-reactor-equipment","space-fusion-science-pack")
+util.tech_add_prerequisites("kr-matter-tech-card","space-fusion-science-pack")
