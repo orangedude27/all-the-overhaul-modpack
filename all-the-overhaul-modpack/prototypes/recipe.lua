@@ -178,8 +178,8 @@ bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-space-pipe", 300
 
 -- 248K research balance
 --Rename Fusion tech to Fusion catalogue
-data.raw.technology["fu_energy_tech"].localised_name = "Fusion catalogue"
-data.raw.item["fu_tech_sign_item"].localised_name = "Fusion catalogue"
+data.raw.technology["fu_energy_tech"].localised_name = "Fusion catalogue 2"
+data.raw.item["fu_tech_sign_item"].localised_name = "Fusion catalogue 2"
 --Hige the recipe
 bobmods.lib.recipe.hide("fu_tech_sign_item")
 
@@ -270,9 +270,114 @@ data:extend({
 		enabled = false,
 		always_show_made_in = true,
     },
+	
+	{
+        type = "recipe",
+        name = "highenergy-data-248",
+		ingredients = {
+			{ "nickel-electromagnet", 1},
+			{ "fi_energy_crystal_charged_item", 1},
+            { "se-empty-data", 1},
+            { type = "fluid", name = "se-space-coolant-cold", amount=10},
+        },
+		results = {
+			{ name = "highenergy-data-248", amount = 1},
+			{ name = "fi_energy_crystal_charged_item", amount_min = 1, amount_max = 1, probability = 0.99},
+			{ name = "nickel-electromagnet", amount_min = 1, amount_max = 1, probability = 0.75},
+			{ name = "se-contaminated-scrap", amount = 1},
+			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
+		},
+        energy_required = 10,
+		main_product = "highenergy-data-248",
+		category = "space-electromagnetics",
+		enabled = false,
+		always_show_made_in = true,
+    },
+	{
+        type = "recipe",
+        name = "radioisotop-data-248",
+		ingredients = {
+			{ "fi_plutonium239_item", 1},
+			{ "se-empty-data", 1},
+        },
+		results = {
+			{ name = "radioisotop-data-248", amount = 1},
+			{ name = "fi_plutonium239_item", amount_min = 1, amount_max = 1, probability = 0.99},
+		},
+        energy_required = 8,
+		main_product = "radioisotop-data-248",
+		category = "space-radiation",
+		enabled = false,
+		always_show_made_in = true,
+    },
+	{
+        type = "recipe",
+        name = "star-data-248",
+		ingredients = {
+			{ "scanner", 1},
+			{ "se-visible-observation-data", 1},
+			{ "se-uv-observation-data", 1},
+			{ "se-infrared-observation-data", 1},
+			{ "se-empty-data", 1},
+        },
+		results = {
+			{ name = "star-data-248", amount = 4},
+			{ name = "scanner", amount_min = 1, amount_max = 1, probability = 0.99},
+			{ name = "se-scrap", amount_min = 1, amount_max = 1, probability = 0.1},
+		},
+        energy_required = 8,
+		main_product = "star-data-248",
+		category = "space-astrometrics",
+		enabled = false,
+		always_show_made_in = true,
+    },
+	{
+        type = "recipe",
+        name = "structural-data-248",
+		ingredients = {
+			{ "se-material-testing-pack", 3},
+			{ "inconel-718", 1},
+			{ "low-density-structure", 1},
+			{ "aluminum-6061", 1},
+			{ "se-empty-data", 3},
+			{ type = "fluid", name = "lubricant", amount = 5},
+        },
+		results = {
+			{ name = "structural-data-248", amount = 3},
+			{ name = "se-scrap", amount = 6},
+			{ type = "fluid", name = "se-contaminated-space-water", amount = 1},
+		},
+        energy_required = 10,
+		main_product = "structural-data-248",
+		category = "space-mechanical",
+		enabled = false,
+		always_show_made_in = true,
+    },
+
 	{
 		type = "recipe",
 		name = "fusion-catalogue-1",
+		allow_productivity = true,
+		ingredients = {
+			{ "highenergy-data-248", 1 },
+			{ "radioisotop-data-248", 1 },
+			{ "star-data-248", 1 },
+			{ "structural-data-248", 1 },
+			{ type = "fluid", name = "se-space-coolant-cold", amount=10},
+		},
+		results = {
+			{ name = "fusion-catalogue-1", amount = 1},
+			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
+		},
+		energy_required = 20,
+		main_product = "fusion-catalogue-1",
+		category = "catalogue-creation-1",
+		enabled = false,
+		always_show_made_in = true,
+	},
+	{
+		type = "recipe",
+		name = "fusion-catalogue-2",
 		allow_productivity = true,
 		ingredients = {
 			{ "fusion-data-248", 1 },
@@ -296,8 +401,8 @@ data:extend({
         name = "fusion-science-pack-1",
         allow_productivity = true,
 		ingredients = {
-          { "fu_tech_sign_item", 1 },
-          { "fi_materials_neodym", 20 },
+          { "fusion-catalogue-1", 1 },
+          { "chromium-plate", 20 },
           { "se-significant-data", 1 },
           { type = "fluid", name = "se-space-coolant-cold", amount = 20},
         },
@@ -308,6 +413,27 @@ data:extend({
         },
 		energy_required = 30,
         main_product = "fusion-science-pack-1",
+        category = "science-pack-creation-1",
+		enabled = false,
+		always_show_made_in = true,
+    },
+	{
+        type = "recipe",
+        name = "fusion-science-pack-2",
+        allow_productivity = true,
+		ingredients = {
+          { "fu_tech_sign_item", 1 },
+          { "fi_materials_neodym", 20 },
+          { "se-significant-data", 1 },
+          { type = "fluid", name = "se-space-coolant-cold", amount = 20},
+        },
+        results = {
+          { name = "fusion-science-pack-2", amount = 2},
+          { name = "se-junk-data", amount = 6},
+          { type = "fluid", name = "se-space-coolant-hot", amount = 20},
+        },
+		energy_required = 30,
+        main_product = "fusion-science-pack-2",
         category = "science-pack-creation-1",
 		enabled = false,
 		always_show_made_in = true,

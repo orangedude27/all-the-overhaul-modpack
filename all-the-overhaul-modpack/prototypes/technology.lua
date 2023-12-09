@@ -171,6 +171,7 @@ util.tech_add_ingredients("mantle_extractor",
 
 -- 248K research balance
 -- Hide Fusion Tech by 248K
+bobmods.lib.tech.hide("fu_stage_tech")
 bobmods.lib.tech.hide("fu_energy_tech")
 -- New technologies
 data:extend({
@@ -179,12 +180,38 @@ data:extend({
         name = "space-fusion-catalogue",
         effects = {
             {type = "unlock-recipe", recipe = "fusion-catalogue-1"},
+			{type = "unlock-recipe", recipe = "highenergy-data-248"},
+			{type = "unlock-recipe", recipe = "radioisotop-data-248"},
+			{type = "unlock-recipe", recipe = "star-data-248"},
+			{type = "unlock-recipe", recipe = "structural-data-248"}
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-1.png",
+        icon_size = 128,
+        prerequisites = {"utility-science-pack", "fi_robo_tech", "fi_crystal_tech", "fi_solid_reactor_tech", "fi_train_tech"},
+        unit = {
+            count = 200,
+			time = 45,
+            ingredients = {
+                { "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "se-rocket-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "kr-optimization-tech-card", 1 },
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "space-fusion-catalogue-2",
+        effects = {
+            {type = "unlock-recipe", recipe = "fusion-catalogue-2"},
 			{type = "unlock-recipe", recipe = "fusion-data-248"},
 			{type = "unlock-recipe", recipe = "laser-data-248"},
 			{type = "unlock-recipe", recipe = "magnet-data-248"},
 			{type = "unlock-recipe", recipe = "plasma-data-248"},
         },
-		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-1.png",
+		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-2.png",
         icon_size = 128,
         prerequisites = {"se-space-particle-collider"},
         unit = {
@@ -218,6 +245,28 @@ data:extend({
 				{ "chemical-science-pack", 1 },
 				{ "se-rocket-science-pack", 1 },
 				{ "space-science-pack", 1 },
+				{ "kr-optimization-tech-card", 1 },
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "space-fusion-science-pack-2",
+        effects = {
+            {type = "unlock-recipe", recipe = "fusion-science-pack-2"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-science-pack-2.png",
+        icon_size = 128,
+        prerequisites = {"space-fusion-catalogue-2"},
+        unit = {
+            count = 100,
+			time = 60,
+            ingredients = {
+                { "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "se-rocket-science-pack", 1 },
+				{ "space-science-pack", 1 },
 				{ "se-energy-science-pack-1", 1 },
             },
         },
@@ -225,6 +274,8 @@ data:extend({
 	
 })
 -- Research line
+util.tech_add_prerequisites("fu_TIM_tech","space-fusion-science-pack")
+
 util.tech_add_prerequisites("fu_reactor_tech","space-fusion-science-pack")
 util.tech_add_prerequisites("fu_robo_tech","space-fusion-science-pack")
 util.tech_add_prerequisites("fi_modules_3_tech","space-fusion-science-pack")
@@ -243,3 +294,13 @@ util.tech_add_ingredients("kr-imersite-solar-panel-equipment",{"fusion-science-p
 util.tech_add_ingredients("fusion-reactor-equipment",{"fusion-science-pack-1"},false)
 util.tech_add_ingredients("kr-matter-tech-card",{"fusion-science-pack-1"},false)
 util.tech_add_ingredients("fu_activator_tech",{"fusion-science-pack-1"},false)
+
+-- Delete unusing research line
+util.tech_remove_prerequisites("kr-imersium-processing", {"fu_crystal_tech"})
+-- Add usage for Optimization card
+util.tech_add_ingredients("se-space-science-lab",{"kr-optimization-tech-card"},false)
+util.tech_add_ingredients("se-astronomic-science-pack",{"kr-optimization-tech-card"},false)
+util.tech_add_ingredients("se-biological-science-pack",{"kr-optimization-tech-card"},false)
+util.tech_add_ingredients("se-energy-science-pack",{"kr-optimization-tech-card"},false)
+util.tech_add_ingredients("se-material-science-pack",{"kr-optimization-tech-card"},false)
+
