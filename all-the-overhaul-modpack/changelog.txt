@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: 12.8.2023
+  Changes:
+    - Added changes for trains from Mortality
+    - Added Supporty for Advance Furnaces 2 (Thanks @Sportacus)
+    - Sorted out some sorting issues
+    - General Balancing
+  Added Mods:
+    - BrimStuff
+    - LasingAround
+    - MetalsForYou
+    - WipMod_TA-miners
+    - ThemTharHills
+---------------------------------------------------------------------------------------------------
 Version: 1.5.14
 Date: 12.3.2023
   Changes:
