@@ -272,6 +272,7 @@ data:extend({
 	
 })
 -- Research line
+-- Fusion science pack 1 
 util.tech_add_prerequisites("fu_TIM_tech","space-fusion-science-pack")
 
 util.tech_add_ingredients("fu_TIM_tech",{"fusion-science-pack-1"},false)
@@ -292,6 +293,9 @@ util.tech_add_ingredients("fu_hydrogen_2_tech",{"fusion-science-pack-1"},false)
 util.tech_add_ingredients("fu_hydrogen_3_tech",{"fusion-science-pack-1"},false)
 util.tech_add_ingredients("fu_upgrade_tech",{"fusion-science-pack-1"},false)
 
+-- Fusion science pack 2
+util.tech_remove_prerequisites("fusion-reactor-equipment","se-energy-science-pack-4")
+
 util.tech_add_prerequisites("fu_reactor_tech","space-fusion-science-pack-2")
 util.tech_add_prerequisites("fu_robo_tech","space-fusion-science-pack-2")
 util.tech_add_prerequisites("fi_modules_3_tech","space-fusion-science-pack-2")
@@ -299,7 +303,11 @@ util.tech_add_prerequisites("fu_tokamak_tech","space-fusion-science-pack-2")
 util.tech_add_prerequisites("fu_turbine_tech","space-fusion-science-pack-2")
 util.tech_add_prerequisites("kr-imersite-solar-panel-equipment","space-fusion-science-pack-2")
 util.tech_add_prerequisites("fusion-reactor-equipment","space-fusion-science-pack-2")
-util.tech_add_prerequisites("kr-matter-tech-card","space-fusion-science-pack-2")
+util.tech_add_prerequisites("se-space-material-fabricator","space-fusion-science-pack-2")
+util.tech_add_prerequisites("kr-fusion-energy","space-fusion-science-pack-2")
+util.tech_add_prerequisites("fu_hydrogen_1_tech","space-fusion-science-pack-2")
+
+util.tech_remove_ingredients("fusion-reactor-equipment","se-energy-science-pack-4")
 
 util.tech_add_ingredients("fu_reactor_tech",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("fu_robo_tech",{"fusion-science-pack-2"},false)
@@ -307,9 +315,13 @@ util.tech_add_ingredients("fi_modules_3_tech",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("fu_tokamak_tech",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("fu_turbine_tech",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("kr-imersite-solar-panel-equipment",{"fusion-science-pack-2"},false)
-util.tech_add_ingredients("fusion-reactor-equipment",{"fusion-science-pack-2"},false)
+util.tech_add_ingredients("fusion-reactor-equipment",{"fusion-science-pack-2", "se-energy-science-pack-3"},false)
 util.tech_add_ingredients("kr-matter-tech-card",{"fusion-science-pack-2"},false)
+util.tech_add_ingredients("se-material-catalogue-1",{"fusion-science-pack-2"},false)
+util.tech_add_ingredients("se-space-material-fabricator",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("fu_activator_tech",{"fusion-science-pack-2"},false)
+util.tech_add_ingredients("kr-fusion-energy",{"fusion-science-pack-2"},false)
+util.tech_add_ingredients("fu_hydrogen_1_tech",{"fusion-science-pack-2"},false)
 
 -- Delete unusing research line
 util.tech_remove_prerequisites("kr-imersium-processing", {"fu_crystal_tech"})
