@@ -187,7 +187,8 @@ data:extend({
         },
 		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-1.png",
         icon_size = 128,
-        prerequisites = {"utility-science-pack", "fi_robo_tech", "fi_crystal_tech", "fi_solid_reactor_tech", "fi_train_tech"},
+        prerequisites = {"utility-science-pack", "fi_robo_tech", "fi_crystal_tech", "fi_solid_reactor_tech", "fi_train_tech",
+			"se-space-radiation-laboratory", "se-space-astrometrics-laboratory", "se-space-electromagnetics-laboratory", "se-space-mechanical-laboratory"},
         unit = {
             count = 200,
 			time = 45,
@@ -213,7 +214,7 @@ data:extend({
         },
 		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-2.png",
         icon_size = 128,
-        prerequisites = {"se-space-particle-collider"},
+        prerequisites = {"se-space-particle-collider", "fu_laser_tech", "fu_magnet_tech", "fu_plasma_tech", "fu_fusor_tech"},
         unit = {
             count = 200,
 			time = 45,
@@ -262,12 +263,9 @@ data:extend({
             count = 100,
 			time = 60,
             ingredients = {
-                { "automation-science-pack", 1 },
-				{ "logistic-science-pack", 1 },
-				{ "chemical-science-pack", 1 },
 				{ "se-rocket-science-pack", 1 },
 				{ "space-science-pack", 1 },
-				{ "se-energy-science-pack-1", 1 },
+				{ "fusion-science-pack-1", 1 },
             },
         },
     },
@@ -275,6 +273,24 @@ data:extend({
 })
 -- Research line
 util.tech_add_prerequisites("fu_TIM_tech","space-fusion-science-pack")
+
+util.tech_add_ingredients("fu_TIM_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_lead_ingot_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_titan_ingot_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_gold_ingot_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_neodym_ingot_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_ingot_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_lead_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_laser_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_magnet_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_plasma_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_basic_elements_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_fusor_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_crystal_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_hydrogen_1_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_hydrogen_2_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_hydrogen_3_tech",{"fusion-science-pack-1"},false)
+util.tech_add_ingredients("fu_upgrade_tech",{"fusion-science-pack-1"},false)
 
 util.tech_add_prerequisites("fu_reactor_tech","space-fusion-science-pack-2")
 util.tech_add_prerequisites("fu_robo_tech","space-fusion-science-pack-2")
@@ -299,8 +315,8 @@ util.tech_add_ingredients("fu_activator_tech",{"fusion-science-pack-2"},false)
 util.tech_remove_prerequisites("kr-imersium-processing", {"fu_crystal_tech"})
 -- Add usage for Optimization card
 util.tech_add_ingredients("se-space-science-lab",{"kr-optimization-tech-card"},false)
---util.tech_add_ingredients("se-astronomic-science-pack",{"kr-optimization-tech-card"},false)
---util.tech_add_ingredients("se-biological-science-pack",{"kr-optimization-tech-card"},false)
---util.tech_add_ingredients("se-energy-science-pack",{"kr-optimization-tech-card"},false)
---util.tech_add_ingredients("se-material-science-pack",{"kr-optimization-tech-card"},false)
+util.tech_add_ingredients("se-astronomic-science-pack-1",{"kr-optimization-tech-card"},false)
+util.tech_add_ingredients("se-biological-science-pack-1",{"kr-optimization-tech-card"},false)
+util.tech_add_ingredients("se-energy-science-pack-1",{"kr-optimization-tech-card"},false)
+util.tech_add_ingredients("se-material-science-pack-1",{"kr-optimization-tech-card"},false)
 

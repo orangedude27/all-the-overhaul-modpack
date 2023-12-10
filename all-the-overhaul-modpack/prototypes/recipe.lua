@@ -422,13 +422,14 @@ data:extend({
         name = "fusion-science-pack-2",
         allow_productivity = true,
 		ingredients = {
+		  { "se-significant-data", 1 },
           { "fu_tech_sign_item", 1 },
-          { "fi_materials_neodym", 20 },
-          { "se-significant-data", 1 },
+          { "fusion-science-pack-1", 2 },
+          
           { type = "fluid", name = "se-space-coolant-cold", amount = 20},
         },
         results = {
-          { name = "fusion-science-pack-2", amount = 2},
+          { name = "fusion-science-pack-2", amount = 4},
           { name = "se-junk-data", amount = 6},
           { type = "fluid", name = "se-space-coolant-hot", amount = 20},
         },
