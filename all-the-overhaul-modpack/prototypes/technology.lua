@@ -173,6 +173,8 @@ util.tech_add_ingredients("mantle_extractor",
 -- Hide Fusion Tech by 248K
 bobmods.lib.tech.hide("fu_stage_tech")
 bobmods.lib.tech.hide("fu_energy_tech")
+-- Lock recipe
+util.tech_lock_recipes("fu_activator_tech", { "248k-krastorio2-tritium" })
 -- New technologies
 data:extend({
     {
@@ -190,8 +192,8 @@ data:extend({
         prerequisites = {"utility-science-pack", "fi_robo_tech", "fi_crystal_tech", "fi_solid_reactor_tech", "fi_train_tech",
 			"se-space-radiation-laboratory", "se-space-astrometrics-laboratory", "se-space-electromagnetics-laboratory", "se-space-mechanical-laboratory"},
         unit = {
-            count = 200,
-			time = 45,
+            count = 100,
+			time = 60,
             ingredients = {
                 { "automation-science-pack", 1 },
 				{ "logistic-science-pack", 1 },
@@ -209,17 +211,17 @@ data:extend({
         name = "space-fusion-catalogue-2",
         effects = {
             {type = "unlock-recipe", recipe = "fusion-catalogue-2"},
-			{type = "unlock-recipe", recipe = "fusion-data-248"},
-			{type = "unlock-recipe", recipe = "laser-data-248"},
-			{type = "unlock-recipe", recipe = "magnet-data-248"},
-			{type = "unlock-recipe", recipe = "plasma-data-248"},
+			{type = "unlock-recipe", recipe = "fusion-stable-data"},
+			{type = "unlock-recipe", recipe = "laser-heating-data"},
+			{type = "unlock-recipe", recipe = "magnet-stabilazer-data"},
+			{type = "unlock-recipe", recipe = "plasma-rotating-data"},
         },
 		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-2.png",
         icon_size = 128,
         prerequisites = {"se-space-particle-collider", "fu_laser_tech", "fu_magnet_tech", "fu_plasma_tech", "fu_fusor_tech"},
         unit = {
-            count = 200,
-			time = 45,
+            count = 10,
+			time = 60,
             ingredients = {
                 { "automation-science-pack", 1 },
 				{ "logistic-science-pack", 1 },
@@ -229,9 +231,72 @@ data:extend({
 				{ "production-science-pack", 1 },
 				{ "utility-science-pack", 1 },
 				{ "se-energy-science-pack-1", 1 },
+				{ "fusion-science-pack-1", 1 },
             },
         },
     },
+	{
+        type = "technology",
+        name = "space-fusion-catalogue-3",
+        effects = {
+            {type = "unlock-recipe", recipe = "fusion-catalogue-3"},
+			{type = "unlock-recipe", recipe = "fusion-speed-data"},
+			{type = "unlock-recipe", recipe = "laser-calculation-data"},
+			{type = "unlock-recipe", recipe = "magnet-trajectory-data"},
+			{type = "unlock-recipe", recipe = "plasma-spinning-data"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-3.png",
+        icon_size = 128,
+        prerequisites = {"kr-fusion-energy"},
+        unit = {
+            count = 100,
+			time = 60,
+            ingredients = {
+                { "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "se-rocket-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "production-science-pack", 1 },
+				{ "utility-science-pack", 1 },
+				{ "se-energy-science-pack-2", 1 },
+				{ "fusion-science-pack-1", 1 },
+				{ "fusion-science-pack-2", 1 },
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "space-fusion-catalogue-4",
+        effects = {
+            {type = "unlock-recipe", recipe = "fusion-catalogue-4"},
+			{type = "unlock-recipe", recipe = "fusion-accuracy-data"},
+			{type = "unlock-recipe", recipe = "laser-decay-data"},
+			{type = "unlock-recipe", recipe = "magnet-contain-data"},
+			{type = "unlock-recipe", recipe = "plasma-star-data"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-4.png",
+        icon_size = 128,
+        prerequisites = {"fu_activator_tech"},
+        unit = {
+            count = 500,
+			time = 60,
+            ingredients = {
+                { "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "se-rocket-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "production-science-pack", 1 },
+				{ "utility-science-pack", 1 },
+				{ "se-energy-science-pack-3", 1 },
+				{ "fusion-science-pack-1", 1 },
+				{ "fusion-science-pack-2", 1 },
+				{ "fusion-science-pack-3", 1 },
+            },
+        },
+    },
+	
 	{
         type = "technology",
         name = "space-fusion-science-pack",
@@ -275,6 +340,47 @@ data:extend({
             },
         },
     },
+	{
+        type = "technology",
+        name = "space-fusion-science-pack-3",
+        effects = {
+            {type = "unlock-recipe", recipe = "fusion-science-pack-3"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-science-pack-3.png",
+        icon_size = 128,
+        prerequisites = {"space-fusion-catalogue-3"},
+        unit = {
+            count = 200,
+			time = 60,
+            ingredients = {
+				{ "se-rocket-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "fusion-science-pack-1", 1 },
+				{ "fusion-science-pack-2", 1 },
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "space-fusion-science-pack-4",
+        effects = {
+            {type = "unlock-recipe", recipe = "fusion-science-pack-4"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-science-pack-4.png",
+        icon_size = 128,
+        prerequisites = {"space-fusion-catalogue-4"},
+        unit = {
+            count = 500,
+			time = 60,
+            ingredients = {
+				{ "se-rocket-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "fusion-science-pack-1", 1 },
+				{ "fusion-science-pack-2", 1 },
+				{ "fusion-science-pack-3", 1 },
+            },
+        },
+    },
 	
 })
 -- Research line
@@ -294,19 +400,13 @@ util.tech_add_ingredients("fu_plasma_tech",{"fusion-science-pack-1"},false)
 util.tech_add_ingredients("fu_basic_elements_tech",{"fusion-science-pack-1"},false)
 util.tech_add_ingredients("fu_fusor_tech",{"fusion-science-pack-1"},false)
 util.tech_add_ingredients("fu_crystal_tech",{"fusion-science-pack-1"},false)
-util.tech_add_ingredients("fu_hydrogen_1_tech",{"fusion-science-pack-1"},false)
-util.tech_add_ingredients("fu_hydrogen_2_tech",{"fusion-science-pack-1"},false)
-util.tech_add_ingredients("fu_hydrogen_3_tech",{"fusion-science-pack-1"},false)
 util.tech_add_ingredients("fu_upgrade_tech",{"fusion-science-pack-1"},false)
 
 -- Fusion science pack 2
-util.tech_remove_prerequisites("fusion-reactor-equipment","se-energy-science-pack-4")
+util.tech_remove_prerequisites("fusion-reactor-equipment", {"se-energy-science-pack-4"})
 
-util.tech_add_prerequisites("fu_reactor_tech","space-fusion-science-pack-2")
 util.tech_add_prerequisites("fu_robo_tech","space-fusion-science-pack-2")
 util.tech_add_prerequisites("fi_modules_3_tech","space-fusion-science-pack-2")
-util.tech_add_prerequisites("fu_tokamak_tech","space-fusion-science-pack-2")
-util.tech_add_prerequisites("fu_turbine_tech","space-fusion-science-pack-2")
 util.tech_add_prerequisites("kr-imersite-solar-panel-equipment","space-fusion-science-pack-2")
 util.tech_add_prerequisites("fusion-reactor-equipment","space-fusion-science-pack-2")
 util.tech_add_prerequisites("se-space-material-fabricator","space-fusion-science-pack-2")
@@ -315,11 +415,8 @@ util.tech_add_prerequisites("fu_hydrogen_1_tech","space-fusion-science-pack-2")
 
 util.tech_remove_ingredients("fusion-reactor-equipment","se-energy-science-pack-4")
 
-util.tech_add_ingredients("fu_reactor_tech",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("fu_robo_tech",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("fi_modules_3_tech",{"fusion-science-pack-2"},false)
-util.tech_add_ingredients("fu_tokamak_tech",{"fusion-science-pack-2"},false)
-util.tech_add_ingredients("fu_turbine_tech",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("kr-imersite-solar-panel-equipment",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("fusion-reactor-equipment",{"fusion-science-pack-2", "se-energy-science-pack-3"},false)
 util.tech_add_ingredients("kr-matter-tech-card",{"fusion-science-pack-2"},false)
@@ -328,6 +425,22 @@ util.tech_add_ingredients("se-space-material-fabricator",{"fusion-science-pack-2
 util.tech_add_ingredients("fu_activator_tech",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("kr-fusion-energy",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("fu_hydrogen_1_tech",{"fusion-science-pack-2"},false)
+
+-- Fusion science pack 3
+util.tech_add_prerequisites("fu_hydrogen_2_tech","space-fusion-science-pack-3")
+util.tech_add_prerequisites("fu_tokamak_tech","space-fusion-science-pack-3")
+util.tech_add_prerequisites("fu_turbine_tech","space-fusion-science-pack-3")
+util.tech_add_prerequisites("fu_reactor_tech","space-fusion-science-pack-3")
+
+util.tech_add_ingredients("fu_hydrogen_2_tech",{"fusion-science-pack-3"},false)
+util.tech_add_ingredients("fu_tokamak_tech",{"fusion-science-pack-3"},false)
+util.tech_add_ingredients("fu_turbine_tech",{"fusion-science-pack-3"},false)
+util.tech_add_ingredients("fu_reactor_tech",{"fusion-science-pack-3"},false)
+
+-- Fusion science pack 4
+util.tech_add_prerequisites("fu_hydrogen_3_tech","space-fusion-science-pack-4")
+
+util.tech_add_ingredients("fu_hydrogen_3_tech",{"fusion-science-pack-4"},false)
 
 -- Delete unusing research line
 util.tech_remove_prerequisites("kr-imersium-processing", {"fu_crystal_tech"})

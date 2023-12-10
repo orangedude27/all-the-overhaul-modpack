@@ -1,8 +1,8 @@
 data:extend({
   {
     type = "item",
-    name = "fusion-data-248",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-data-248.png",
+    name = "fusion-stable-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-stable-data.png",
     icon_size = 64,
     subgroup = "data-energy",
     order = "z",
@@ -10,8 +10,8 @@ data:extend({
   },
   {
     type = "item",
-    name = "laser-data-248",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/laser-data-248.png",
+    name = "fusion-speed-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-speed-data.png",
     icon_size = 64,
     subgroup = "data-energy",
     order = "z",
@@ -19,8 +19,18 @@ data:extend({
   },
   {
     type = "item",
-    name = "magnet-data-248",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/magnet-data-248.png",
+    name = "fusion-accuracy-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-accuracy-data.png",
+    icon_size = 64,
+    subgroup = "data-energy",
+    order = "z",
+    stack_size = 50
+  },
+  
+  {
+    type = "item",
+    name = "laser-heating-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/laser-heating-data.png",
     icon_size = 64,
     subgroup = "data-energy",
     order = "z",
@@ -28,13 +38,79 @@ data:extend({
   },
   {
     type = "item",
-    name = "plasma-data-248",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/plasma-data-248.png",
+    name = "laser-calculation-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/laser-calculation-data.png",
     icon_size = 64,
     subgroup = "data-energy",
     order = "z",
     stack_size = 50
   },
+  {
+    type = "item",
+    name = "laser-decay-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/laser-decay-data.png",
+    icon_size = 64,
+    subgroup = "data-energy",
+    order = "z",
+    stack_size = 50
+  },
+  
+  {
+    type = "item",
+    name = "magnet-stabilazer-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/magnet-stabilazer-data.png",
+    icon_size = 64,
+    subgroup = "data-energy",
+    order = "z",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "magnet-trajectory-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/magnet-trajectory-data.png",
+    icon_size = 64,
+    subgroup = "data-energy",
+    order = "z",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "magnet-contain-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/magnet-contain-data.png",
+    icon_size = 64,
+    subgroup = "data-energy",
+    order = "z",
+    stack_size = 50
+  },
+  
+  {
+    type = "item",
+    name = "plasma-rotating-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/plasma-rotating-data.png",
+    icon_size = 64,
+    subgroup = "data-energy",
+    order = "z",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "plasma-spinning-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/plasma-spinning-data.png",
+    icon_size = 64,
+    subgroup = "data-energy",
+    order = "z",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "plasma-star-data",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/plasma-star-data.png",
+    icon_size = 64,
+    subgroup = "data-energy",
+    order = "z",
+    stack_size = 50
+  },
+  
   {
     type = "item",
     name = "highenergy-data-248",
