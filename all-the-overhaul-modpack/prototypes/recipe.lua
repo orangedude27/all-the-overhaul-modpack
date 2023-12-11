@@ -117,6 +117,10 @@ bobmods.lib.recipe.add_new_ingredient("furnace-pro-05", { "se-heavy-girder", 10 
 --Add Furnace MK5 in Krastorio's furnace
 bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "furnace-pro-05")
 
+else
+
+bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "electric-furnace-3")
+
 end
 
 -- TA Miners
@@ -175,3 +179,11 @@ bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "speed-module-6", 20
 bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-naquium-plate", 100 })
 bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-heavy-bearing", 200 })
 bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-space-pipe", 300 })
+
+-- Bob's Assembly
+-- K2 Integration
+util.replace_or_add_ingredient("kr-advanced-assembling-machine", "assembling-machine-3", "assembling-machine-6", 2, false)
+util.replace_or_add_ingredient("kr-advanced-assembling-machine", "electric-furnace", "electric-furnace-3", 2, false)
+
+bobmods.lib.recipe.add_new_ingredient("kr-advanced-chemical-plant", "chemical-plant-4")
+
