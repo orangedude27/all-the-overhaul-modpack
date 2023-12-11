@@ -422,7 +422,6 @@ util.tech_add_ingredients("fusion-reactor-equipment",{"fusion-science-pack-2", "
 util.tech_add_ingredients("kr-matter-tech-card",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("se-material-catalogue-1",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("se-space-material-fabricator",{"fusion-science-pack-2"},false)
-util.tech_add_ingredients("fu_activator_tech",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("kr-fusion-energy",{"fusion-science-pack-2"},false)
 util.tech_add_ingredients("fu_hydrogen_1_tech",{"fusion-science-pack-2"},false)
 
@@ -431,17 +430,49 @@ util.tech_add_prerequisites("fu_hydrogen_2_tech","space-fusion-science-pack-3")
 util.tech_add_prerequisites("fu_tokamak_tech","space-fusion-science-pack-3")
 util.tech_add_prerequisites("fu_turbine_tech","space-fusion-science-pack-3")
 util.tech_add_prerequisites("fu_reactor_tech","space-fusion-science-pack-3")
+util.tech_add_prerequisites("se-space-matter-fusion","space-fusion-science-pack-3")
+
+util.tech_remove_ingredients("fu_tokamak_tech","se-energy-science-pack-1")
+util.tech_remove_ingredients("fu_reactor_tech","se-energy-science-pack-1")
 
 util.tech_add_ingredients("fu_hydrogen_2_tech",{"fusion-science-pack-3"},false)
-util.tech_add_ingredients("fu_tokamak_tech",{"fusion-science-pack-3"},false)
-util.tech_add_ingredients("fu_turbine_tech",{"fusion-science-pack-3"},false)
-util.tech_add_ingredients("fu_reactor_tech",{"fusion-science-pack-3"},false)
+util.tech_add_ingredients("fu_tokamak_tech",{"fusion-science-pack-3","se-energy-science-pack-3"},false)
+util.tech_add_ingredients("fu_turbine_tech",{"fusion-science-pack-3","se-energy-science-pack-3"},false)
+util.tech_add_ingredients("fu_reactor_tech",{"fusion-science-pack-3","se-energy-science-pack-3"},false)
+util.tech_add_ingredients("fu_activator_tech",{"fusion-science-pack-3","se-energy-science-pack-3"},false)
+util.tech_add_ingredients("se-space-matter-fusion",{"fusion-science-pack-3"},false)
 
 -- Fusion science pack 4
 util.tech_add_prerequisites("fu_hydrogen_3_tech","space-fusion-science-pack-4")
+util.tech_add_prerequisites("se-big-heat-exchanger","space-fusion-science-pack-4")
+util.tech_add_prerequisites("se-antimatter-production","space-fusion-science-pack-4")
 
 util.tech_add_ingredients("fu_hydrogen_3_tech",{"fusion-science-pack-4"},false)
+util.tech_add_ingredients("se-big-heat-exchanger",{"fusion-science-pack-4"},false)
+util.tech_add_ingredients("se-big-turbine",{"fusion-science-pack-4"},false)
+util.tech_add_ingredients("se-antimatter-production",{"fusion-science-pack-4"},false)
+util.tech_add_ingredients("se-antimatter-reactor",{"fusion-science-pack-4"},false)
+util.tech_add_ingredients("se-antimatter-engine",{"fusion-science-pack-4"},false)
+util.tech_add_ingredients("kr-antimatter-reactor",{"fusion-science-pack-4"},false)
+util.tech_add_ingredients("kr-antimatter-reactor-equipment",{"fusion-science-pack-4"},false)
+util.tech_add_ingredients("kr-antimatter-ammo",{"fusion-science-pack-4"},false)
 
+-- Rampant technology
+if mods["RampantArsenal"] then
+util.tech_add_prerequisites("rampant-arsenal-technology-generator-equipment-2","space-fusion-science-pack-3")
+util.tech_add_prerequisites("rampant-arsenal-technology-generator-equipment-2","se-energy-science-pack-4")
+
+util.tech_add_ingredients("rampant-arsenal-technology-generator-equipment-2",{"se-energy-science-pack-4", "fusion-science-pack-3"},false)
+
+util.tech_add_prerequisites("rampant-arsenal-technology-generator-equipment-3","space-fusion-science-pack-4")
+
+util.tech_add_ingredients("rampant-arsenal-technology-generator-equipment-3",{"se-energy-science-pack-4", "fusion-science-pack-4"},false)
+end
+
+-- Change count
+data.raw.technology["fu_hydrogen_1_tech"].unit.count = 600
+data.raw.technology["fu_hydrogen_2_tech"].unit.count = 800
+data.raw.technology["fu_hydrogen_3_tech"].unit.count = 1000
 -- Delete unusing research line
 util.tech_remove_prerequisites("kr-imersium-processing", {"fu_crystal_tech"})
 -- Add usage for Optimization card

@@ -180,11 +180,19 @@ bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-space-pipe", 300
 -- Rename Fusion tech to Fusion catalogue
 data.raw.technology["fu_energy_tech"].localised_name = "Fusion catalogue 2"
 data.raw.item["fu_tech_sign_item"].localised_name = "Broad fusion catalogue"
--- Hige the recipe
+-- Hide the recipe
 bobmods.lib.recipe.hide("fu_tech_sign_item")
 -- Fix Portable fusion reactor recipe
 bobmods.lib.recipe.remove_ingredient("fusion-reactor-equipment", "se-fusion-test-data")
-bobmods.lib.recipe.add_new_ingredient("fusion-reactor-equipment", { "fusion-data-248", 50 })
+bobmods.lib.recipe.add_new_ingredient("fusion-reactor-equipment", { "fusion-stable-data", 50 })
+if mods["RampantArsenal"] then
+-- Portable Fusion Reactor MK2
+bobmods.lib.recipe.add_new_ingredient("mk3-generator-rampant-arsenal", { "fusion-speed-data", 50 })
+-- Portable Nuclear Reactor
+bobmods.lib.recipe.add_new_ingredient("nuclear-generator-rampant-arsenal", { "fusion-accuracy-data", 50 })
+end
+-- Delete HCP circuit
+bobmods.lib.recipe.remove_ingredient("se-quantum-processor", "gr_materials_circuit")
 
 data:extend({
 --Alt recipe of Tritium
