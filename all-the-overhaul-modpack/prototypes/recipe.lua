@@ -187,3 +187,4 @@ util.replace_or_add_ingredient("kr-advanced-assembling-machine", "electric-furna
 
 bobmods.lib.recipe.add_new_ingredient("kr-advanced-chemical-plant", "chemical-plant-4")
 
+util.replace_or_add_ingredient("k11-advanced-centrifuge", "centrifuge", "centrifuge-3", 2, false)

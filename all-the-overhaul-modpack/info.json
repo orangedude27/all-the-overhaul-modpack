@@ -61,6 +61,7 @@
         "WipMod_TA-miners",
         "boblibrary >= 1.1.6",
         "bobassembly",
+        "advanced-centrifuge",
         "? ReStack",
         "? RampantEvolution",
         "? RampantFixed",
