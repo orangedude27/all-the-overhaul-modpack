@@ -169,6 +169,7 @@ util.tech_add_ingredients("mantle_extractor",
 "production-science-pack","utility-science-pack","advanced-tech-card","se-astronomic-science-pack-4","se-energy-science-pack-4",
 "se-material-science-pack-4","matter-tech-card"},false)
 
+=======
 -- 248K research balance
 -- Hide Fusion Tech by 248K
 bobmods.lib.tech.hide("fu_stage_tech")
@@ -482,3 +483,60 @@ util.tech_add_ingredients("se-biological-science-pack-1",{"kr-optimization-tech-
 util.tech_add_ingredients("se-energy-science-pack-1",{"kr-optimization-tech-card"},false)
 util.tech_add_ingredients("se-material-science-pack-1",{"kr-optimization-tech-card"},false)
 
+-- Bob's Mods
+-- Chemical reactor
+util.tech_remove_prerequisites("chemical-plant-3", {"production-science-pack"})
+util.tech_add_prerequisites("chemical-plant-3","kr-optimization-tech-card")
+util.tech_remove_ingredients("chemical-plant-3", {"production-science-pack"})
+util.tech_add_ingredients("chemical-plant-3",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("chemical-plant-4","se-heavy-girder")
+util.tech_add_prerequisites("chemical-plant-4","se-biological-science-pack-1")
+util.tech_add_ingredients("chemical-plant-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
+
+-- Oil Refinery
+util.tech_remove_prerequisites("oil-refinery-3", {"production-science-pack"})
+util.tech_add_prerequisites("oil-refinery-3","kr-optimization-tech-card")
+util.tech_remove_ingredients("oil-refinery-3", {"production-science-pack"})
+util.tech_add_ingredients("oil-refinery-3",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("oil-refinery-4","se-heavy-girder")
+util.tech_add_prerequisites("oil-refinery-4","se-biological-science-pack-1")
+util.tech_add_ingredients("oil-refinery-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
+
+-- Centrifuge 
+util.tech_remove_prerequisites("centrifuge-2", {"production-science-pack"})
+util.tech_add_prerequisites("centrifuge-2","kr-optimization-tech-card")
+util.tech_add_ingredients("centrifuge-2",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("centrifuge-3","se-heavy-girder")
+util.tech_add_prerequisites("centrifuge-3","se-energy-science-pack-1")
+util.tech_add_ingredients("centrifuge-3",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
+
+-- Assembler
+util.tech_add_prerequisites("automation-4","kr-optimization-tech-card")
+util.tech_add_ingredients("automation-4",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("automation-5","se-heavy-girder")
+util.tech_add_prerequisites("automation-5","se-energy-science-pack-1")
+util.tech_add_ingredients("automation-5",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
+
+util.tech_add_prerequisites("automation-6","se-heavy-bearing")
+util.tech_remove_ingredients("automation-6", {"se-material-science-pack-1"})
+util.tech_add_ingredients("automation-6",{"kr-optimization-tech-card","se-material-science-pack-2","se-energy-science-pack-1"},false)
+
+-- Electronic machine
+util.tech_remove_prerequisites("electronics-machine-3", {"production-science-pack"})
+util.tech_add_prerequisites("electronics-machine-3","kr-optimization-tech-card")
+util.tech_remove_ingredients("electronics-machine-3", {"production-science-pack"})
+util.tech_add_ingredients("electronics-machine-3",{"space-science-pack","kr-optimization-tech-card"},false)
+
+-- Furnace
+util.tech_remove_prerequisites("electric-furnace-2", {"production-science-pack"})
+util.tech_add_prerequisites("electric-furnace-2","kr-optimization-tech-card")
+util.tech_remove_ingredients("electric-furnace-2", {"production-science-pack"})
+util.tech_add_ingredients("electric-furnace-2",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("electric-furnace-3","se-heavy-girder")
+util.tech_add_prerequisites("electric-furnace-3","se-energy-science-pack-1")
+util.tech_add_ingredients("electric-furnace-3",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)

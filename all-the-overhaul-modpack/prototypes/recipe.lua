@@ -117,6 +117,10 @@ bobmods.lib.recipe.add_new_ingredient("furnace-pro-05", { "se-heavy-girder", 10 
 --Add Furnace MK5 in Krastorio's furnace
 bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "furnace-pro-05")
 
+else
+
+bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "electric-furnace-3")
+
 end
 
 -- TA Miners
@@ -207,27 +211,27 @@ data:extend({
     },
 --Data
 	{
-        type = "recipe",
-        name = "fusion-stable-data",
+    type = "recipe",
+    name = "fusion-stable-data",
 		ingredients = {
-            { "fu_materials_fusion_card", 1},
-            { "se-empty-data", 1},
-            { type = "fluid", name = "se-ion-stream", amount=100},
-        },
+      { "fu_materials_fusion_card", 1},
+      { "se-empty-data", 1},
+      { type = "fluid", name = "se-ion-stream", amount=100},
+    },
 		results = {
 			{ name = "fusion-stable-data", amount = 1},
 			{ name = "se-contaminated-scrap", amount = 8},
 		},
-        energy_required = 2,
+    energy_required = 2,
 		main_product = "fusion-stable-data",
 		category = "space-collider",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
+    type = "recipe",
 		name = "fusion-speed-data",
-        ingredients = {
+    ingredients = {
 			{ "se-material-testing-pack", 1},
 			{ "dt-fuel", 1},
 			{ "fu_materials_fusion_card", 1},
@@ -235,22 +239,22 @@ data:extend({
 			{ "se-entanglement-data", 1},
 			{ "se-empty-data", 1},
 			{ type = "fluid", name = "se-ion-stream", amount=100},
-        },
-        results = {
+   },
+   results = {
 			{ name = "fusion-speed-data", amount = 3},
 			{ "dt-fuel", 1},
 			{ name = "se-contaminated-scrap", amount = 4},
 		},
-        energy_required = 2,
+    energy_required = 2,
 		main_product = "fusion-speed-data",
 		category = "space-collider",
-        enabled = "false",
-        always_show_made_in = true,
-    },
+   enabled = "false",
+   always_show_made_in = true,
+  },
 	{
-        type = "recipe",
-		name = "fusion-accuracy-data",
-        ingredients = {
+   type = "recipe",
+	 name = "fusion-accuracy-data",
+   ingredients = {
 			{ "nickel-electromagnet", 1},
 			{ "fu_materials_charged_container", 1},
 			{ "fu_materials_fusion_card", 1},
@@ -259,8 +263,8 @@ data:extend({
 			{ "se-empty-data", 1},
 			{ type = "fluid", name = "se-ion-stream", amount=20},
 			{ type = "fluid", name = "se-space-coolant-supercooled", amount=10},
-        },
-        results = {
+   },
+   results = {
 			{ name = "fusion-accuracy-data", amount_min = 1, amount_max = 3, probability = 0.5},
 			{ "fu_materials_charged_container", 1},
 			{ name = "se-junk-data", amount_min = 1, amount_max = 1, probability = 0.5},
@@ -268,56 +272,56 @@ data:extend({
 			{ name = "se-scrap", amount_min = 1, amount_max = 1, probability = 0.25},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 4,
+    energy_required = 4,
 		main_product = "fusion-accuracy-data",
 		category = "space-collider",
-        enabled = "false",
-        always_show_made_in = true,
-    },
+    enabled = "false",
+    always_show_made_in = true,
+  },
 	
 	{
-        type = "recipe",
-        name = "laser-heating-data",
+    type = "recipe",
+    name = "laser-heating-data",
 		ingredients = {
-            { "fu_materials_laser_card", 1},
-            { "fu_materials_TIM", 1},
+      { "fu_materials_laser_card", 1},
+      { "fu_materials_TIM", 1},
 			{ "se-empty-data", 1},
-            { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
-        },
+      { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
+    },
 		results = {
 			{ name = "laser-heating-data", amount = 1},
 			{ name = "se-contaminated-scrap", amount = 2},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 10,
+    energy_required = 10,
 		main_product = "laser-heating-data",
 		category = "space-laser",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "laser-calculation-data",
+    type = "recipe",
+    name = "laser-calculation-data",
 		ingredients = {
 			{ "scanner", 1},
-            { "se-material-testing-pack", 1},
-            { "se-explosion-shielding-data", 1},
+      { "se-material-testing-pack", 1},
+      { "se-explosion-shielding-data", 1},
 			{ "fu_materials_laser_card", 1},
 			{ "se-empty-data", 1},
-            { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
-        },
+      { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
+    },
 		results = {
 			{ name = "laser-calculation-data", amount = 2},
 			{ name = "se-contaminated-scrap", amount = 2},
 			{ name = "scanner", amount_min = 1, amount_max = 1, probability = 0.95},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 5,
+    energy_required = 5,
 		main_product = "laser-calculation-data",
 		category = "space-laser",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
 		type = "recipe",
 		name = "laser-decay-data",
@@ -329,7 +333,7 @@ data:extend({
 			{ "fu_materials_laser_card", 1},
 			{ "se-empty-data", 2},
 			{ type = "fluid", name = "se-space-coolant-supercooled", amount=10},
-        },
+    },
 		results = {
 			{ name = "laser-decay-data", amount = 3},
 			{ name = "se-junk-data", amount = 1},
@@ -338,25 +342,25 @@ data:extend({
 			{ name = "se-scrap", amount_min = 1, amount_max = 3, probability = 0.25},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 5,
+    energy_required = 5,
 		main_product = "laser-decay-data",
 		category = "space-laser",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	
 	
 	{
-        type = "recipe",
-        name = "magnet-stabilazer-data",
+    type = "recipe",
+    name = "magnet-stabilazer-data",
 		ingredients = {
 			{ "nickel-electromagnet", 1},
 			{ "niobium-plate", 1},
-            { "fu_materials_magnet_card", 1},
-            { "se-empty-data", 1},
+      { "fu_materials_magnet_card", 1},
+      { "se-empty-data", 1},
 			{ type = "fluid", name = "se-ion-stream", amount=50},
-            { type = "fluid", name = "se-space-coolant-cold", amount=10},
-        },
+      { type = "fluid", name = "se-space-coolant-cold", amount=10},
+    },
 		results = {
 			{ name = "magnet-stabilazer-data", amount_min = 1, amount_max = 1, probability = 0.95},
 			{ name = "se-junk-data", amount_min = 1, amount_max = 1, probability = 0.04},
@@ -365,49 +369,49 @@ data:extend({
 			{ name = "se-scrap", amount_min = 1, amount_max = 1, probability = 0.1},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 10,
+    energy_required = 10,
 		main_product = "magnet-stabilazer-data",
 		category = "space-electromagnetics",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "magnet-trajectory-data",
+    type = "recipe",
+    name = "magnet-trajectory-data",
 		ingredients = {
 			{ "nickel-electromagnet", 1},
 			{ "se-electromagnetic-field-data", 1},
 			{ "se-polarisation-data", 1},
 			{ "fu_materials_magnet", 1},
-            { "fu_materials_magnet_card", 1},
-            { "se-empty-data", 1},
-            { type = "fluid", name = "se-space-coolant-cold", amount=10},
-        },
+      { "fu_materials_magnet_card", 1},
+      { "se-empty-data", 1},
+      { type = "fluid", name = "se-space-coolant-cold", amount=10},
+    },
 		results = {
 			{ name = "magnet-trajectory-data", amount = 3},
 			{ name = "nickel-electromagnet", amount_min = 1, amount_max = 1, probability = 0.75},
 			{ name = "se-scrap", amount_min = 1, amount_max = 1, probability = 0.25},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 10,
+    energy_required = 10,
 		main_product = "magnet-trajectory-data",
 		category = "space-electromagnetics",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "magnet-contain-data",
+    type = "recipe",
+    name = "magnet-contain-data",
 		ingredients = {
 			{ "nickel-electromagnet", 1},
 			{ "se-experimental-alloys-data", 1},
 			{ "se-superconductivity-data", 1},
 			{ "highenergy-data-248", 1},
-            { "fu_materials_magnet_card", 1},
-            { "se-empty-data", 1},
+      { "fu_materials_magnet_card", 1},
+      { "se-empty-data", 1},
 			{ type = "fluid", name = "se-ion-stream", amount=50},
-            { type = "fluid", name = "se-space-coolant-cold", amount=10},
-        },
+      { type = "fluid", name = "se-space-coolant-cold", amount=10},
+    },
 		results = {
 			{ name = "magnet-contain-data", amount = 3},
 			{ name = "se-junk-data", amount_min = 1, amount_max = 1, probability = 0.95},
@@ -415,47 +419,47 @@ data:extend({
 			{ name = "se-scrap", amount_min = 1, amount_max = 1, probability = 0.25},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 10,
+    energy_required = 10,
 		main_product = "magnet-contain-data",
 		category = "space-electromagnetics",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	
 	
 	{
-        type = "recipe",
-        name = "plasma-rotating-data",
+    type = "recipe",
+    name = "plasma-rotating-data",
 		ingredients = {
 			{ "nickel-electromagnet", 1},
 			{ "fu_materials_plasma_card", 1},
-            { "se-empty-data", 1},
+      { "se-empty-data", 1},
 			{ type = "fluid", name = "se-proton-stream", amount=20},
-            { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
-        },
+      { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
+    },
 		results = {
 			{ name = "plasma-rotating-data", amount_min = 1, amount_max = 1, probability = 0.7},
 			{ name = "se-junk-data", amount_min = 1, amount_max = 1, probability = 0.29},
 			{ name = "nickel-electromagnet", amount_min = 1, amount_max = 1, probability = 0.75},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 5,
+    energy_required = 5,
 		main_product = "plasma-rotating-data",
 		category = "space-collider",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "plasma-spinning-data",
+    type = "recipe",
+    name = "plasma-spinning-data",
 		ingredients = {
 			{ "nickel-electromagnet", 1},
 			{ "se-quantum-phenomenon-data", 1},
 			{ "fu_materials_plasma_card", 1},
-            { "se-empty-data", 1},
+      { "se-empty-data", 1},
 			{ type = "fluid", name = "se-ion-stream", amount=20},
-            { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
-        },
+      { type = "fluid", name = "se-space-coolant-supercooled", amount=10},
+    },
 		results = {
 			{ name = "plasma-spinning-data", amount_min = 1, amount_max = 2, probability = 0.6},
 			{ name = "se-junk-data", amount_min = 1, amount_max = 1, probability = 0.39},
@@ -463,45 +467,45 @@ data:extend({
 			{ name = "se-scrap", amount_min = 1, amount_max = 1, probability = 0.25},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 5,
+    energy_required = 5,
 		main_product = "plasma-spinning-data",
 		category = "space-collider",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "plasma-star-data",
+    type = "recipe",
+    name = "plasma-star-data",
 		ingredients = {
 			{ "se-magnetic-canister", 5},
 			{ "se-hot-thermodynamics-data", 1},
 			{ "se-gravitational-lensing-data", 1},
 			{ "se-fusion-test-data", 1},
 			{ "fu_materials_plasma_card", 1},
-            { "se-empty-data", 1},
+      { "se-empty-data", 1},
 			{ type = "fluid", name = "se-particle-stream", amount=100},
-        },
+    },
 		results = {
 			{ name = "plasma-star-data", amount_min = 3, amount_max = 3, probability = 0.6},
 			{ name = "se-junk-data", amount_min = 1, amount_max = 1, probability = 0.39},
 			{ name = "se-scrap", amount = 15},
 			{ name = "se-contaminated-scrap", amount = 10},
 		},
-        main_product = "plasma-star-data",
+    main_product = "plasma-star-data",
 		category = "space-materialisation",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	
 	{
-        type = "recipe",
-        name = "highenergy-data-248",
+    type = "recipe",
+    name = "highenergy-data-248",
 		ingredients = {
 			{ "nickel-electromagnet", 1},
 			{ "fi_energy_crystal_charged_item", 1},
-            { "se-empty-data", 1},
-            { type = "fluid", name = "se-space-coolant-cold", amount=10},
-        },
+      { "se-empty-data", 1},
+      { type = "fluid", name = "se-space-coolant-cold", amount=10},
+    },
 		results = {
 			{ name = "highenergy-data-248", amount = 1},
 			{ name = "fi_energy_crystal_charged_item", amount_min = 1, amount_max = 1, probability = 0.99},
@@ -509,32 +513,32 @@ data:extend({
 			{ name = "se-contaminated-scrap", amount = 1},
 			{ type = "fluid", name = "se-space-coolant-hot", amount=10},
 		},
-        energy_required = 10,
+    energy_required = 10,
 		main_product = "highenergy-data-248",
 		category = "space-electromagnetics",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "radioisotop-data-248",
+    type = "recipe",
+    name = "radioisotop-data-248",
 		ingredients = {
 			{ "fi_plutonium239_item", 1},
 			{ "se-empty-data", 1},
-        },
+    },
 		results = {
 			{ name = "radioisotop-data-248", amount = 1},
 			{ name = "fi_plutonium239_item", amount_min = 1, amount_max = 1, probability = 0.99},
 		},
-        energy_required = 8,
+    energy_required = 8,
 		main_product = "radioisotop-data-248",
 		category = "space-radiation",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "star-data-248",
+    type = "recipe",
+    name = "star-data-248",
 		ingredients = {
 			{ "scanner", 1},
 			{ "se-visible-observation-data", 1},
@@ -547,15 +551,15 @@ data:extend({
 			{ name = "scanner", amount_min = 1, amount_max = 1, probability = 0.99},
 			{ name = "se-scrap", amount_min = 1, amount_max = 1, probability = 0.1},
 		},
-        energy_required = 8,
+    energy_required = 8,
 		main_product = "star-data-248",
 		category = "space-astrometrics",
 		enabled = false,
 		always_show_made_in = true,
     },
 	{
-        type = "recipe",
-        name = "structural-data-248",
+    type = "recipe",
+    name = "structural-data-248",
 		ingredients = {
 			{ "se-material-testing-pack", 3},
 			{ "inconel-718", 1},
@@ -563,13 +567,13 @@ data:extend({
 			{ "aluminum-6061", 1},
 			{ "se-empty-data", 3},
 			{ type = "fluid", name = "lubricant", amount = 5},
-        },
+    },
 		results = {
 			{ name = "structural-data-248", amount = 3},
 			{ name = "se-scrap", amount = 6},
 			{ type = "fluid", name = "se-contaminated-space-water", amount = 1},
 		},
-        energy_required = 10,
+    energy_required = 10,
 		main_product = "structural-data-248",
 		category = "space-mechanical",
 		enabled = false,
@@ -662,93 +666,166 @@ data:extend({
 	},
 	
 	{
-        type = "recipe",
-        name = "fusion-science-pack-1",
-        allow_productivity = true,
+    type = "recipe",
+    name = "fusion-science-pack-1",
+    allow_productivity = true,
 		ingredients = {
           { "fusion-catalogue-1", 1 },
           { "chromium-plate", 20 },
           { "se-significant-data", 1 },
           { type = "fluid", name = "se-space-coolant-cold", amount = 20},
-        },
-        results = {
+    },
+    results = {
           { name = "fusion-science-pack-1", amount = 2},
           { name = "se-junk-data", amount = 6},
           { type = "fluid", name = "se-space-coolant-hot", amount = 20},
-        },
+    },
 		energy_required = 30,
-        main_product = "fusion-science-pack-1",
-        category = "science-pack-creation-1",
+    main_product = "fusion-science-pack-1",
+    category = "science-pack-creation-1",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "fusion-science-pack-2",
-        allow_productivity = true,
+    type = "recipe",
+    name = "fusion-science-pack-2",
+    allow_productivity = true,
 		ingredients = {
-		  { "se-significant-data", 1 },
+		      { "se-significant-data", 1 },
           { "fu_tech_sign_item", 1 },
           { "fusion-science-pack-1", 2 },
-          
           { type = "fluid", name = "se-space-coolant-cold", amount = 20},
-        },
-        results = {
+    },
+    results = {
           { name = "fusion-science-pack-2", amount = 4},
           { name = "se-junk-data", amount = 6},
           { type = "fluid", name = "se-space-coolant-hot", amount = 20},
-        },
+    },
 		energy_required = 30,
-        main_product = "fusion-science-pack-2",
-        category = "science-pack-creation-1",
+    main_product = "fusion-science-pack-2",
+    category = "science-pack-creation-1",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "fusion-science-pack-3",
-        allow_productivity = true,
+    type = "recipe",
+    name = "fusion-science-pack-3",
+    allow_productivity = true,
 		ingredients = {
 		  { "se-significant-data", 1 },
 		  { "fu_materials_magnet", 1},
-          { "fusion-catalogue-3", 1 },
+      { "fusion-catalogue-3", 1 },
 		  { "fusion-science-pack-2", 4 },
-          
-          { type = "fluid", name = "se-space-coolant-cold", amount = 20},
-        },
-        results = {
+      { type = "fluid", name = "se-space-coolant-cold", amount = 20},
+    },
+    results = {
           { name = "fusion-science-pack-3", amount = 6},
           { name = "se-junk-data", amount = 6},
           { type = "fluid", name = "se-space-coolant-hot", amount = 20},
-        },
+    },
 		energy_required = 30,
-        main_product = "fusion-science-pack-3",
-        category = "science-pack-creation-1",
+    main_product = "fusion-science-pack-3",
+    category = "science-pack-creation-1",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	{
-        type = "recipe",
-        name = "fusion-science-pack-4",
-        allow_productivity = true,
+    type = "recipe",
+    name = "fusion-science-pack-4",
+    allow_productivity = true,
 		ingredients = {
 		  { "se-significant-data", 1 },
 		  { "tritium", 1},
-          { "fusion-catalogue-4", 1 },
+      { "fusion-catalogue-4", 1 },
 		  { "fusion-science-pack-3", 6 },
-          
-          { type = "fluid", name = "se-space-coolant-cold", amount = 20},
-        },
-        results = {
+      { type = "fluid", name = "se-space-coolant-cold", amount = 20},
+    },
+    results = {
           { name = "fusion-science-pack-4", amount = 8},
           { name = "se-junk-data", amount = 6},
           { type = "fluid", name = "se-space-coolant-hot", amount = 20},
-        },
+    },
 		energy_required = 30,
-        main_product = "fusion-science-pack-4",
-        category = "science-pack-creation-1",
+    main_product = "fusion-science-pack-4",
+    category = "science-pack-creation-1",
 		enabled = false,
 		always_show_made_in = true,
-    },
+  },
 	
 })
+
+-- Bob's Assembly
+-- K2 Integration
+util.replace_or_add_ingredient("kr-advanced-assembling-machine", "assembling-machine-3", "assembling-machine-6", 2, false)
+util.replace_or_add_ingredient("kr-advanced-assembling-machine", "electric-furnace", "electric-furnace-3", 2, false)
+
+bobmods.lib.recipe.add_new_ingredient("kr-advanced-chemical-plant", "chemical-plant-4")
+
+util.replace_or_add_ingredient("k11-advanced-centrifuge", "centrifuge", "centrifuge-3", 2, false)
+
+-- Electronic machine
+util.replace_or_add_ingredient("electronics-machine-1", "iron-plate", "aluminum-plate", 5, false)
+util.replace_or_add_ingredient("electronics-machine-1", nil, "articulated-mechanism", 2, false)
+
+bobmods.lib.recipe.remove_ingredient("electronics-machine-2", "steel-plate")
+bobmods.lib.recipe.remove_ingredient("electronics-machine-2", "steel-gear")
+bobmods.lib.recipe.add_new_ingredient("electronics-machine-2", { "automation-core-2", 1 })
+bobmods.lib.recipe.add_new_ingredient("electronics-machine-2", { "solder", 3 })
+
+util.replace_or_add_ingredient("electronics-machine-3", "titanium-plate", "automation-core-3", 1, false)
+util.replace_or_add_ingredient("electronics-machine-3", "iron-gear-wheel", "imersium-gear-wheel", 4, false)
+bobmods.lib.recipe.add_new_ingredient("electronics-machine-3", { "solder", 8 })
+
+-- Assembler
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-4", { "solder", 8 })
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-4", { "hv-power-regulator", 1 })
+util.replace_or_add_ingredient("assembling-machine-4", "steel-plate", "nitinol-plate", 9, false)
+util.replace_or_add_ingredient("assembling-machine-4", "steel-gear-wheel", "imersium-gear-wheel", 8, false)
+
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-5", { "solder", 8 })
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-5", { "hv-power-regulator", 1 })
+util.replace_or_add_ingredient("assembling-machine-5", "titanium-plate", "se-heavy-girder", 9, false)
+util.replace_or_add_ingredient("assembling-machine-5", "iron-gear-wheel", "imersium-gear-wheel", 8, false)
+
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-6", { "solder", 8 })
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-6", { "hv-power-regulator", 1 })
+util.replace_or_add_ingredient("assembling-machine-6", "titanium-plate", "imersium-beam", 9, false)
+util.replace_or_add_ingredient("assembling-machine-6", "iron-gear-wheel", "se-heavy-bearing", 8, false)
+
+-- Centrifuge
+bobmods.lib.recipe.add_new_ingredient("centrifuge-2", { "imersium-beam", 50 })
+bobmods.lib.recipe.add_new_ingredient("centrifuge-2", { "bearing", 20 })
+bobmods.lib.recipe.add_new_ingredient("centrifuge-2", { "se-heat-shielding", 40 })
+
+bobmods.lib.recipe.add_new_ingredient("centrifuge-3", { "se-heavy-girder", 50 })
+bobmods.lib.recipe.add_new_ingredient("centrifuge-3", { "bearing", 40 })
+bobmods.lib.recipe.add_new_ingredient("centrifuge-3", { "se-heat-shielding", 40 })
+util.replace_or_add_ingredient("centrifuge-3", "steel-plate", "nitinol-plate", 50, false)
+
+-- Oil Refinery
+util.replace_or_add_ingredient("oil-refinery-2", "steel-plate", "tungsten-plate", 15, false)
+
+bobmods.lib.recipe.add_new_ingredient("oil-refinery-3", { "advanced-multi-cylinder-engine", 6 })
+util.replace_or_add_ingredient("oil-refinery-3", "titanium-plate", "imersium-beam", 15, false)
+util.replace_or_add_ingredient("oil-refinery-3", "steel-gear-wheel", "imersium-gear-wheel", 10, false)
+util.replace_or_add_ingredient("oil-refinery-3", "pipe", "kr-steel-pipe", 10, false)
+
+bobmods.lib.recipe.remove_ingredient("oil-refinery-4", "tungsten-plate")
+bobmods.lib.recipe.add_new_ingredient("oil-refinery-4", { "advanced-multi-cylinder-engine", 8 })
+util.replace_or_add_ingredient("oil-refinery-4", "titanium-plate", "se-heavy-girder", 15, false)
+util.replace_or_add_ingredient("oil-refinery-4", "steel-gear-wheel", "imersium-gear-wheel", 10, false)
+util.replace_or_add_ingredient("oil-refinery-4", "pipe", "brass-pipe", 10, false)
+
+-- Chemical reactor
+util.replace_or_add_ingredient("chemical-plant-2", "steel-plate", "tungsten-plate", 15, false)
+
+bobmods.lib.recipe.add_new_ingredient("chemical-plant-3", { "advanced-multi-cylinder-engine", 6 })
+util.replace_or_add_ingredient("chemical-plant-3", "titanium-plate", "imersium-beam", 15, false)
+util.replace_or_add_ingredient("chemical-plant-3", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
+util.replace_or_add_ingredient("chemical-plant-3", "pipe", "kr-steel-pipe", 10, false)
+
+bobmods.lib.recipe.remove_ingredient("chemical-plant-4", "tungsten-plate")
+bobmods.lib.recipe.add_new_ingredient("chemical-plant-4", { "advanced-multi-cylinder-engine", 8 })
+util.replace_or_add_ingredient("chemical-plant-4", "steel-plate", "se-heavy-girder", 15, false)
+util.replace_or_add_ingredient("chemical-plant-4", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
+util.replace_or_add_ingredient("chemical-plant-4", "pipe", "brass-pipe", 10, false)
