@@ -29,6 +29,7 @@
         "bzzirconium",
         "crafting_combinator",
         "Expensive_Fluid_Must_Flow_Recipes",
+        "flib >= 0.6.0",
         "Flow Control",
         "FluidMustFlow",
         "FluidMustFlowSE",
