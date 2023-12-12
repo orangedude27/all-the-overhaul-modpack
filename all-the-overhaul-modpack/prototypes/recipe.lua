@@ -188,3 +188,70 @@ util.replace_or_add_ingredient("kr-advanced-assembling-machine", "electric-furna
 bobmods.lib.recipe.add_new_ingredient("kr-advanced-chemical-plant", "chemical-plant-4")
 
 util.replace_or_add_ingredient("k11-advanced-centrifuge", "centrifuge", "centrifuge-3", 2, false)
+
+-- Electronic machine
+util.replace_or_add_ingredient("electronics-machine-1", "iron-plate", "aluminum-plate", 5, false)
+util.replace_or_add_ingredient("electronics-machine-1", nil, "articulated-mechanism", 2, false)
+
+bobmods.lib.recipe.remove_ingredient("electronics-machine-2", "steel-plate")
+bobmods.lib.recipe.remove_ingredient("electronics-machine-2", "steel-gear")
+bobmods.lib.recipe.add_new_ingredient("electronics-machine-2", { "automation-core-2", 1 })
+bobmods.lib.recipe.add_new_ingredient("electronics-machine-2", { "solder", 3 })
+
+util.replace_or_add_ingredient("electronics-machine-3", "titanium-plate", "automation-core-3", 1, false)
+util.replace_or_add_ingredient("electronics-machine-3", "iron-gear-wheel", "imersium-gear-wheel", 4, false)
+bobmods.lib.recipe.add_new_ingredient("electronics-machine-3", { "solder", 8 })
+
+-- Assembler
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-4", { "solder", 8 })
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-4", { "hv-power-regulator", 1 })
+util.replace_or_add_ingredient("assembling-machine-4", "steel-plate", "nitinol-plate", 9, false)
+util.replace_or_add_ingredient("assembling-machine-4", "steel-gear-wheel", "imersium-gear-wheel", 8, false)
+
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-5", { "solder", 8 })
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-5", { "hv-power-regulator", 1 })
+util.replace_or_add_ingredient("assembling-machine-5", "titanium-plate", "se-heavy-girder", 9, false)
+util.replace_or_add_ingredient("assembling-machine-5", "iron-gear-wheel", "imersium-gear-wheel", 8, false)
+
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-6", { "solder", 8 })
+bobmods.lib.recipe.add_new_ingredient("assembling-machine-6", { "hv-power-regulator", 1 })
+util.replace_or_add_ingredient("assembling-machine-6", "titanium-plate", "imersium-beam", 9, false)
+util.replace_or_add_ingredient("assembling-machine-6", "iron-gear-wheel", "se-heavy-bearing", 8, false)
+
+-- Centrifuge
+bobmods.lib.recipe.add_new_ingredient("centrifuge-2", { "imersium-beam", 50 })
+bobmods.lib.recipe.add_new_ingredient("centrifuge-2", { "bearing", 20 })
+bobmods.lib.recipe.add_new_ingredient("centrifuge-2", { "se-heat-shielding", 40 })
+
+bobmods.lib.recipe.add_new_ingredient("centrifuge-3", { "se-heavy-girder", 50 })
+bobmods.lib.recipe.add_new_ingredient("centrifuge-3", { "bearing", 40 })
+bobmods.lib.recipe.add_new_ingredient("centrifuge-3", { "se-heat-shielding", 40 })
+util.replace_or_add_ingredient("centrifuge-3", "steel-plate", "nitinol-plate", 50, false)
+
+-- Oil Refinery
+util.replace_or_add_ingredient("oil-refinery-2", "steel-plate", "tungsten-plate", 15, false)
+
+bobmods.lib.recipe.add_new_ingredient("oil-refinery-3", { "advanced-multi-cylinder-engine", 6 })
+util.replace_or_add_ingredient("oil-refinery-3", "titanium-plate", "imersium-beam", 15, false)
+util.replace_or_add_ingredient("oil-refinery-3", "steel-gear-wheel", "imersium-gear-wheel", 10, false)
+util.replace_or_add_ingredient("oil-refinery-3", "pipe", "kr-steel-pipe", 10, false)
+
+bobmods.lib.recipe.remove_ingredient("oil-refinery-4", "tungsten-plate")
+bobmods.lib.recipe.add_new_ingredient("oil-refinery-4", { "advanced-multi-cylinder-engine", 8 })
+util.replace_or_add_ingredient("oil-refinery-4", "titanium-plate", "se-heavy-girder", 15, false)
+util.replace_or_add_ingredient("oil-refinery-4", "steel-gear-wheel", "imersium-gear-wheel", 10, false)
+util.replace_or_add_ingredient("oil-refinery-4", "pipe", "brass-pipe", 10, false)
+
+-- Chemical reactor
+util.replace_or_add_ingredient("chemical-plant-2", "steel-plate", "tungsten-plate", 15, false)
+
+bobmods.lib.recipe.add_new_ingredient("chemical-plant-3", { "advanced-multi-cylinder-engine", 6 })
+util.replace_or_add_ingredient("chemical-plant-3", "titanium-plate", "imersium-beam", 15, false)
+util.replace_or_add_ingredient("chemical-plant-3", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
+util.replace_or_add_ingredient("chemical-plant-3", "pipe", "kr-steel-pipe", 10, false)
+
+bobmods.lib.recipe.remove_ingredient("chemical-plant-4", "tungsten-plate")
+bobmods.lib.recipe.add_new_ingredient("chemical-plant-4", { "advanced-multi-cylinder-engine", 8 })
+util.replace_or_add_ingredient("chemical-plant-4", "steel-plate", "se-heavy-girder", 15, false)
+util.replace_or_add_ingredient("chemical-plant-4", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
+util.replace_or_add_ingredient("chemical-plant-4", "pipe", "brass-pipe", 10, false)

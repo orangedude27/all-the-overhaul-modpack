@@ -181,16 +181,17 @@ util.tech_add_prerequisites("chemical-plant-4","se-biological-science-pack-1")
 util.tech_add_ingredients("chemical-plant-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
 
 -- Oil Refinery
-util.tech_remove_prerequisites("bob-distillery-3", {"production-science-pack"})
-util.tech_add_prerequisites("bob-distillery-3","kr-optimization-tech-card")
-util.tech_remove_ingredients("bob-distillery-3", {"production-science-pack"})
-util.tech_add_ingredients("bob-distillery-3",{"space-science-pack","kr-optimization-tech-card"},false)
+util.tech_remove_prerequisites("oil-refinery-3", {"production-science-pack"})
+util.tech_add_prerequisites("oil-refinery-3","kr-optimization-tech-card")
+util.tech_remove_ingredients("oil-refinery-3", {"production-science-pack"})
+util.tech_add_ingredients("oil-refinery-3",{"space-science-pack","kr-optimization-tech-card"},false)
 
-util.tech_add_prerequisites("bob-distillery-4","se-heavy-girder")
-util.tech_add_prerequisites("bob-distillery-4","se-biological-science-pack-1")
-util.tech_add_ingredients("bob-distillery-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
+util.tech_add_prerequisites("oil-refinery-4","se-heavy-girder")
+util.tech_add_prerequisites("oil-refinery-4","se-biological-science-pack-1")
+util.tech_add_ingredients("oil-refinery-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
 
 -- Centrifuge 
+util.tech_remove_prerequisites("centrifuge-2", {"production-science-pack"})
 util.tech_add_prerequisites("centrifuge-2","kr-optimization-tech-card")
 util.tech_add_ingredients("centrifuge-2",{"space-science-pack","kr-optimization-tech-card"},false)
 
@@ -207,6 +208,7 @@ util.tech_add_prerequisites("automation-5","se-energy-science-pack-1")
 util.tech_add_ingredients("automation-5",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
 
 util.tech_add_prerequisites("automation-6","se-heavy-bearing")
+util.tech_remove_ingredients("automation-6", {"se-material-science-pack-1"})
 util.tech_add_ingredients("automation-6",{"kr-optimization-tech-card","se-material-science-pack-2","se-energy-science-pack-1"},false)
 
 -- Electronic machine
