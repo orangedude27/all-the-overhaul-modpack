@@ -76,6 +76,15 @@ data:extend(
         },
         {
             type = "item-group",
+            name = "scienceData",
+            icon = "__space-exploration-graphics__/graphics/icons/catalogue/material-catalogue-1.png",
+            icon_size = 64,
+            icon_mipmaps = 1,
+            inventory_order = "cy",
+            order = "cy"
+        },
+        {
+            type = "item-group",
             name = "terrain",
             icon = "__base__/graphics/icons/landfill.png",
             icon_size = 64,

@@ -136,7 +136,7 @@ local AmmoRecipeOrder =
     ["bomb"] = "[a]",
 }
 --tiles
-local TilesBlacklist = { "se-matter-fusion-dirty", "fu_fusion_card_2_recipe"}
+local TilesBlacklist = { "se-matter-fusion-dirty", "fu_fusion_card_2_recipe", "catalogue", "science-pack"}
 local TilesSubOrder =
 {
     ["text"] = "[e]",
@@ -521,7 +521,7 @@ local ResourceRecipeOrder =
     ["synthe"] = "[y]",
 }
 --manufactoring (intermediat-products)
-local ManufactoringBlacklist = {"filtration", "ki", "dect","equipment"}
+local ManufactoringBlacklist = {"filtration", "ki", "dect","equipment", "data"}
 local ManufactoringSubOrder =
 {
     ["upgrade"] = "[y]",
@@ -662,14 +662,63 @@ local FluidRecipeOrder =
     ["antimatter"] = "[a]",
 }
 --science
-local ScienceBlacklist = { "se-fusion-test-data", "gravit", "infrared", "micro", "electromagnetic", "shielding",
-    "monopole", "basic",
-    "blank", "optimization", "singularity", "advanced" }
+local ScienceDataBlacklist = {"basic", "blank", "research", "storage", "empty", "equipment", "card", "data"}
+--first string to look for and what order to set the subgroup
+local ScienceDataSubOrder =
+{
+    ["se-simulation"] = "[a]",
+    ["astronomic-catalogue"] = "[ab]",
+    ["biological-catalogue"] = "[b]",
+    ["fusion-catalogue"] = "[f]",
+    ["energy-catalogue"] = "[e]",
+    ["material-catalogue"] = "[m]",
+    ["matter-catalogue"] = "[m]",
+    ["astronomic-insight"] = "[ab]",
+    ["biological-insight"] = "[b]",
+    ["fusion-insight"] = "[g]",
+    ["energy-insight"] = "[e]",
+    ["material-insight"] = "[m]",
+    ["astronomic-science"] = "[ab]",
+    ["biological-science"] = "[b]",
+    ["fusion-science"] = "[g]",
+    ["energy-science"] = "[e]",
+    ["material-science"] = "[m]",
+    ["matter-science"] = "[m]",
+    ["deep-catalogue"] = "[za]",
+    ["deep-space-science"] = "[zb]",
+}
+--second string to look for and what order to set the item
+local ScienceDataRecipeOrder =
+{
+    ["sign"] = "[z]",
+    ["test"] = "[z]",
+    ["astro"] = "[a]",
+    ["astrometric"] = "[a]",
+    ["gravi"] = "[g]",
+    ["genetics"] = "[g]",
+    ["bio"] = "[b]",
+    ["mech"] = "[m]",
+    ["laser"] = "[l]",
+    ["radi"] = "[r]",
+    ["thermo"] = "[t]",
+    ["electromag"] = "[e]",
+    ["fusion"] = "[f]",
+    ["energy"] = "[f]",
+    ["material"] = "[f]",
+    ["simulation"] = "[s]",
+    ["1"] = "[z]",
+    ["2"] = "[z]",
+    ["3"] = "[z]",
+    ["4"] = "[z]",
+}
+
+--science
+local ScienceBlacklist = {"gravit", "infrared", "micro", "electromagnetic", "shielding",
+    "monopole", "basic", "blank", "optimization", "singularity", "advanced"}
 --first string to look for and what order to set the subgroup
 local ScienceSubOrder =
 {
     ["pack"] = "z",
-    ["data"] = "z",
     ["tech"] = "z",
     ["card"] = "z",
 }
@@ -685,11 +734,11 @@ local ScienceRecipeOrder =
     ["yellow"] = "[a]",
     ["grey"] = "[a]",
     ["stacked"] = "[a]",
-    ["sign"] = "z",
-    ["fusion"] = "z",
-    ["laser"] = "z",
-    ["magnet"] = "z",
-    ["plasma"] = "z",
+    ["sign"] = "[z]",
+    ["fusion"] = "[zf]",
+    ["laser"] = "[zl]",
+    ["magnet"] = "[zm]",
+    ["plasma"] = "[zp]",
 }
 
 local PipesBlacklist = {"shelter"}
@@ -730,7 +779,7 @@ local EquipmentSubOrder =
     ["energy"] = "[h]",
     ["player"] = "[h]",
     ["vision"] = "[i]",
-    ["laser"] = "[j]",
+    ["laser-def"] = "[j]",
     ["rampant"] = "[j]",
     ["lifesupport"] = "[k]",
     ["discharge"] = "[l]",
@@ -772,6 +821,7 @@ GroupBlacklist = {
     ["resources"] = ResourceBlacklist,
     ["intermediate-products"] = ManufactoringBlacklist,
     ["fluids"] = FluidBlacklist,
+    ["scienceData"] = ScienceDataBlacklist,
     ["science"] = ScienceBlacklist,
     ["equipment"] = EquipmentBlacklist,
 }
@@ -790,6 +840,7 @@ GroupSubOrder = {
     ["resources"] = ResourceSubOrder,
     ["intermediate-products"] = ManufactoringSubOrder,
     ["fluids"] = FluidSubOrder,
+    ["scienceData"] = ScienceDataSubOrder,
     ["science"] = ScienceSubOrder,
     ["equipment"] = EquipmentSubOrder,
 }
@@ -808,12 +859,13 @@ GroupRecipeOrder = {
     ["resources"] = ResourceRecipeOrder,
     ["intermediate-products"] = ManufactoringRecipeOrder,
     ["fluids"] = FluidRecipeOrder,
+    ["scienceData"] = ScienceDataRecipeOrder,
     ["science"] = ScienceRecipeOrder,
     ["equipment"] = EquipmentRecipeOrder,
 }
 --this sorts the recipes into these groups in this order
-GroupSortOrder = {"equipment", "fluids", "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "science", "combat", "production",
-    "logistics", "pipes", "resources", "intermediate-products" }
+GroupSortOrder = {"equipment", "fluids", "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "scienceData",
+    "science", "combat", "production", "logistics", "pipes", "resources", "intermediate-products" }
 
 -- This allows for the conversion of odd group names to become the more common variant
 ReplaceSubgroup = {
@@ -855,6 +907,7 @@ ReplaceSubgroup = {
     ["bi-fertilizer"] = "seed",
     ["energy-shield"] = "shield",
 }
+
 --ADDD ORDER TO MEEE!!
 ReplaceSubgroupDirectName =
 {
@@ -986,7 +1039,6 @@ SortDirectTable =
     ["invar-from-atoms"] = { name = "nickel", order = "[a]" },
     ["gr_materials_charge_recipe"] = { name = "equipment", order = "[a]" },
     ["gr_materials_charge_remote_recipe"] = { name = "equipment", order = "[a]" },
-    ["gr_data_recipe"] = { name = "data", order = "[a]" },
     ["fi_plutonium239_recipe"] = { name = "uranium", order = "[a]" },
     ["bi-wooden-fence"] = { name = "wall", order = "[a]" },
     ["fi_solid_1_recipe"] = { name = "fuel", order = "[a]" },
@@ -1094,5 +1146,6 @@ SortDirectTable =
     ["crafting_combinator:crafting-combinator"] = { name = "combinator", order = "[i]"},
     ["crafting_combinator:recipe-combinator"] = { name = "combinator", order = "[i]"},
     ["cuw"] = { name = "copper", order = "[z]"},
+    ["matter-tech-card"] = { name = "matter-science", order = "[m]"},
     --[""] = { name = "", order = ""},
 }

@@ -5,7 +5,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-stable-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -14,7 +14,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-speed-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -23,7 +23,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-accuracy-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   
@@ -33,7 +33,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/laser-heating-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -42,7 +42,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/laser-calculation-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -51,7 +51,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/laser-decay-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   
@@ -61,7 +61,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/magnet-stabilazer-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -70,7 +70,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/magnet-trajectory-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -79,7 +79,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/magnet-contain-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   
@@ -89,7 +89,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/plasma-rotating-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -98,7 +98,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/plasma-spinning-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -107,7 +107,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/plasma-star-data.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   
@@ -117,7 +117,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/highenergy-data-248.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -126,7 +126,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/radioisotop-data-248.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -135,7 +135,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/star-data-248.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -144,7 +144,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/structural-data-248.png",
     icon_size = 64,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -153,7 +153,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-1.png",
     icon_size = 128,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -162,7 +162,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-3.png",
     icon_size = 128,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -171,7 +171,7 @@ data:extend({
     icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-4.png",
     icon_size = 128,
     subgroup = "data-energy",
-    order = "z",
+    order = "f",
     stack_size = 50
   },
   {
@@ -184,7 +184,7 @@ data:extend({
     icon_size = 64,
 	icon_mipmaps = 1,
     subgroup = "energy-science-pack",
-    order = "z",
+    order = "f",
     stack_size = 200,
 	pictures = {
       {
@@ -214,7 +214,7 @@ data:extend({
     icon_size = 64,
 	icon_mipmaps = 1,
     subgroup = "energy-science-pack",
-    order = "z",
+    order = "f",
     stack_size = 200,
 	pictures = {
       {
@@ -244,7 +244,7 @@ data:extend({
     icon_size = 64,
 	icon_mipmaps = 1,
     subgroup = "energy-science-pack",
-    order = "z",
+    order = "f",
     stack_size = 200,
 	pictures = {
       {
@@ -274,7 +274,7 @@ data:extend({
     icon_size = 64,
 	icon_mipmaps = 1,
     subgroup = "energy-science-pack",
-    order = "z",
+    order = "f",
     stack_size = 200,
 	pictures = {
       {

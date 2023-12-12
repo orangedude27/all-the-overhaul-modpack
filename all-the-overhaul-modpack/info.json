@@ -1,6 +1,6 @@
 {
     "name": "all-the-overhaul-modpack",
-    "version": "1.6.0",
+    "version": "1.6.1",
     "title": "All The Overhauls Modpack",
     "author": "Orangedude27",
     "factorio_version": "1.1",
@@ -59,6 +59,7 @@
         "ThemTharHills",
         "WireShortcuts",
         "WipMod_TA-miners",
+        "All-The-Mods-Translated-BR",
         "? ReStack",
         "? RampantEvolution",
         "? RampantFixed",
