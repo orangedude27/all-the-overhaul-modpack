@@ -169,7 +169,6 @@ util.tech_add_ingredients("mantle_extractor",
 "production-science-pack","utility-science-pack","advanced-tech-card","se-astronomic-science-pack-4","se-energy-science-pack-4",
 "se-material-science-pack-4","matter-tech-card"},false)
 
-=======
 -- 248K research balance
 -- Hide Fusion Tech by 248K
 bobmods.lib.tech.hide("fu_stage_tech")
@@ -540,3 +539,64 @@ util.tech_add_ingredients("electric-furnace-2",{"space-science-pack","kr-optimiz
 util.tech_add_prerequisites("electric-furnace-3","se-heavy-girder")
 util.tech_add_prerequisites("electric-furnace-3","se-energy-science-pack-1")
 util.tech_add_ingredients("electric-furnace-3",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
+
+-- Entity
+data:extend({
+	{
+        type = "technology",
+        name = "t0-filtration-plant",
+        effects = {
+            {type = "unlock-recipe", recipe = "t0-filtration-plant"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t0-filtration-plant.png",
+        icon_size = 64,
+        prerequisites = {"electric-engine"},
+        unit = {
+            count = 300,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "t2-filtration-plant",
+        effects = {
+            {type = "unlock-recipe", recipe = "t2-filtration-plant"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t2-filtration-plant.png",
+        icon_size = 64,
+        prerequisites = {"t0-filtration-plant"},
+        unit = {
+            count = 300,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "t3-filtration-plant",
+        effects = {
+            {type = "unlock-recipe", recipe = "t3-filtration-plant"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t3-filtration-plant.png",
+        icon_size = 64,
+        prerequisites = {"t2-filtration-plant"},
+        unit = {
+            count = 300,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+            },
+        },
+    },
+})
