@@ -1,6 +1,6 @@
 {
     "name": "all-the-overhaul-modpack",
-    "version": "1.6.0",
+    "version": "1.6.1",
     "title": "All The Overhauls Modpack",
     "author": "Orangedude27",
     "factorio_version": "1.1",
@@ -29,6 +29,7 @@
         "bzzirconium",
         "crafting_combinator",
         "Expensive_Fluid_Must_Flow_Recipes",
+        "flib >= 0.6.0",
         "Flow Control",
         "FluidMustFlow",
         "FluidMustFlowSE",
@@ -59,6 +60,7 @@
         "ThemTharHills",
         "WireShortcuts",
         "WipMod_TA-miners",
+        "All-The-Mods-Translated-BR",
         "boblibrary >= 1.1.6",
         "bobassembly",
         "advanced-centrifuge",

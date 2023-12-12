@@ -13,10 +13,13 @@ end
 Test(true)
 
 --call all needed scripts
+flib = require('__flib__.data-util')
 require("prototypes/imersium-wall")
 require("prototypes/common")
 require("prototypes/pipes")
 require("prototypes/bio-industries")
+require("prototypes/bi-dir-inserter/data")
 if mods["RampantArsenal"] then
     require("prototypes/rampant-arsenal")
-end
+  
+require("prototypes.items")
