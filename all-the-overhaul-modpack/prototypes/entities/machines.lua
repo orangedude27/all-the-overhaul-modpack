@@ -11,9 +11,9 @@ t0_kr_filtration_plant_item.icons = {
 data:extend({t0_kr_filtration_plant_item})
 
 local t0_kr_filtration_plant = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-filtration-plant"], "t0-filtration-plant")
-t0_kr_filtration_plant.module_specification = { module_slots = 2}
-t0_kr_filtration_plant.energy_usage = "750kW"
-t0_kr_filtration_plant.crafting_speed = 2.5
+t0_kr_filtration_plant.module_specification = { module_slots = 3}
+t0_kr_filtration_plant.energy_usage = "500kW"
+t0_kr_filtration_plant.crafting_speed = 1
 data.raw["assembling-machine"]["kr-filtration-plant"].next_upgrade = "t0-filtration-plant"
 t0_kr_filtration_plant.animation = {
 	layers = {
@@ -75,7 +75,7 @@ t2_kr_filtration_plant_item.icons = {
 data:extend({t2_kr_filtration_plant_item})
 
 local t2_kr_filtration_plant = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-filtration-plant"], "t2-filtration-plant")
-t2_kr_filtration_plant.module_specification = { module_slots = 3}
+t2_kr_filtration_plant.module_specification = { module_slots = 5}
 t2_kr_filtration_plant.energy_usage = "750kW"
 t2_kr_filtration_plant.crafting_speed = 2.5
 data.raw["assembling-machine"]["kr-filtration-plant"].next_upgrade = "t2-filtration-plant"
@@ -139,9 +139,9 @@ t3_kr_filtration_plant_item.icons = {
 data:extend({t3_kr_filtration_plant_item})
 
 local t3_kr_filtration_plant = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-filtration-plant"], "t3-filtration-plant")
-t3_kr_filtration_plant.module_specification = { module_slots = 3}
-t3_kr_filtration_plant.energy_usage = "750kW"
-t3_kr_filtration_plant.crafting_speed = 2.5
+t3_kr_filtration_plant.module_specification = { module_slots = 6}
+t3_kr_filtration_plant.energy_usage = "875kW"
+t3_kr_filtration_plant.crafting_speed = 3.75
 data.raw["assembling-machine"]["kr-filtration-plant"].next_upgrade = "t3-filtration-plant"
 t3_kr_filtration_plant.animation = {
 	layers = {
