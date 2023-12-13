@@ -1,6 +1,35 @@
 local flib_data_util = require('__flib__.data-util');
 
+-- Modified K2 machines
+data.raw["assembling-machine"]["kr-advanced-assembling-machine"].module_specification = { 
+	module_slots = 6, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5 
+}
+
+data.raw["assembling-machine"]["kr-advanced-chemical-plant"].module_specification = {
+	module_slots = 6, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5 
+}
+
+--data.raw["assembling-machine"]["kr-filtration-plant"].localised_name = "Filtration Plant MK2"
+data.raw["assembling-machine"]["kr-filtration-plant"].module_specification = {
+	module_slots = 4, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5 
+}
+data.raw["assembling-machine"]["kr-filtration-plant"].crafting_speed = 1.75
+data.raw["assembling-machine"]["kr-filtration-plant"].energy_usage = "625kW"
+
+data.raw["assembling-machine"]["kr-advanced-furnace"].module_specification = { 
+	module_slots = 8, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5 
+}
+
+data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_speed = 384
+data.raw["assembling-machine"]["kr-advanced-furnace"].energy_usage = "300MW"
+data.raw["assembling-machine"]["kr-advanced-furnace"].energy_source = {
+	type = "electric",
+	usage_priority = "secondary-input",
+	emissions_per_minute = 192,
+}
+
 -- Filtration plant
+-- Original code from Seatorio by Rebecca-x https://mods.factorio.com/mod/SeaTorio
 -- MK0
 local t0_kr_filtration_plant_item = flib_data_util.copy_prototype(data.raw["item"]["kr-filtration-plant"], "t0-filtration-plant")
 t0_kr_filtration_plant_item.subgroup = "production-machine"
