@@ -43,7 +43,7 @@ local t0_kr_filtration_plant = flib_data_util.copy_prototype(data.raw["assemblin
 t0_kr_filtration_plant.module_specification = { module_slots = 3}
 t0_kr_filtration_plant.energy_usage = "500kW"
 t0_kr_filtration_plant.crafting_speed = 1
-data.raw["assembling-machine"]["kr-filtration-plant"].next_upgrade = "t0-filtration-plant"
+t0_kr_filtration_plant.next_upgrade = "kr-filtration-plant"
 t0_kr_filtration_plant.animation = {
 	layers = {
 		{
@@ -108,6 +108,7 @@ t2_kr_filtration_plant.module_specification = { module_slots = 5}
 t2_kr_filtration_plant.energy_usage = "750kW"
 t2_kr_filtration_plant.crafting_speed = 2.5
 data.raw["assembling-machine"]["kr-filtration-plant"].next_upgrade = "t2-filtration-plant"
+t2_kr_filtration_plant.next_upgrade = "t3-filtration-plant"
 t2_kr_filtration_plant.animation = {
 	layers = {
 		{
@@ -171,7 +172,6 @@ local t3_kr_filtration_plant = flib_data_util.copy_prototype(data.raw["assemblin
 t3_kr_filtration_plant.module_specification = { module_slots = 6}
 t3_kr_filtration_plant.energy_usage = "875kW"
 t3_kr_filtration_plant.crafting_speed = 3.75
-data.raw["assembling-machine"]["kr-filtration-plant"].next_upgrade = "t3-filtration-plant"
 t3_kr_filtration_plant.animation = {
 	layers = {
 		{
@@ -222,6 +222,7 @@ t3_kr_filtration_plant.working_visualisations = {
 }
 data:extend({t3_kr_filtration_plant})
 
+--Recipes
 data:extend({
 	{
 		type = "recipe",
@@ -229,10 +230,12 @@ data:extend({
 		energy_required = 10,
 		name = "t0-filtration-plant",
         ingredients = {
-			{"electric-engine-unit", 5},
-			{"kr-filtration-plant", 1},	
-			{"kr-steel-pipe", 4},
-			{"tungsten-carbide", 5}
+			{"galvanized-steel-plate", 10},
+			{"automation-core", 3},
+			{"flow-controller", 5},
+			{"basic-chemical-plant", 1},
+			{"glass", 10},
+			{"el_materials_ALK", 10},
         },
 		result = "t0-filtration-plant",
 	},
@@ -242,10 +245,14 @@ data:extend({
 		energy_required = 10,
 		name = "t2-filtration-plant",
         ingredients = {
-			{"electric-engine-unit", 5},
+			{"imersium-beam", 20},
+			{"advanced-multi-cylinder-engine", 10},
+			{"glass", 10},
 			{"kr-filtration-plant", 1},	
-			{"kr-steel-pipe", 4},
-			{"tungsten-carbide", 5}
+			{"kr-steel-pipe", 10},
+			{"imersium-plate", 20},
+			{"tungsten-carbide", 5},
+			{"el_materials_ALK", 20},
         },
 		result = "t2-filtration-plant",
 	},
@@ -255,10 +262,14 @@ data:extend({
 		energy_required = 10,
 		name = "t3-filtration-plant",
         ingredients = {
-			{"electric-engine-unit", 5},
+			{"se-heavy-girder", 20},
+			{"advanced-multi-cylinder-engine", 20},
+			{"glass", 10},
 			{"t2-filtration-plant", 1},	
-			{"kr-steel-pipe", 4},
-			{"tungsten-carbide", 5}
+			{"brass-pipe", 10},
+			{"se-iridium-plate", 20},
+			{"tungsten-carbide", 5},
+			{"el_materials_ALK", 20},
         },
 		result = "t3-filtration-plant",
 	},

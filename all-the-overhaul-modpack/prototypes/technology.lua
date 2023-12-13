@@ -494,14 +494,14 @@ util.tech_add_prerequisites("chemical-plant-4","se-biological-science-pack-1")
 util.tech_add_ingredients("chemical-plant-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
 
 -- Oil Refinery
-util.tech_remove_prerequisites("oil-refinery-3", {"production-science-pack"})
-util.tech_add_prerequisites("oil-refinery-3","kr-optimization-tech-card")
-util.tech_remove_ingredients("oil-refinery-3", {"production-science-pack"})
-util.tech_add_ingredients("oil-refinery-3",{"space-science-pack","kr-optimization-tech-card"},false)
+util.tech_remove_prerequisites("oil-processing-3", {"production-science-pack"})
+util.tech_add_prerequisites("oil-processing-3","kr-optimization-tech-card")
+util.tech_remove_ingredients("oil-processing-3", {"production-science-pack"})
+util.tech_add_ingredients("oil-processing-3",{"space-science-pack","kr-optimization-tech-card"},false)
 
-util.tech_add_prerequisites("oil-refinery-4","se-heavy-girder")
-util.tech_add_prerequisites("oil-refinery-4","se-biological-science-pack-1")
-util.tech_add_ingredients("oil-refinery-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
+util.tech_add_prerequisites("oil-processing-4","se-heavy-girder")
+util.tech_add_prerequisites("oil-processing-4","se-biological-science-pack-1")
+util.tech_add_ingredients("oil-processing-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
 
 -- Centrifuge 
 util.tech_remove_prerequisites("centrifuge-2", {"production-science-pack"})
@@ -540,19 +540,20 @@ util.tech_add_prerequisites("electric-furnace-3","se-heavy-girder")
 util.tech_add_prerequisites("electric-furnace-3","se-energy-science-pack-1")
 util.tech_add_ingredients("electric-furnace-3",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
 
--- Entity
+-- K2 technologies
+util.tech_lock_recipes("kr-fluids-chemistry", { "t0-filtration-plant" })
+
+-- New machines
 data:extend({
 	{
         type = "technology",
         name = "t0-filtration-plant",
-        effects = {
-            {type = "unlock-recipe", recipe = "t0-filtration-plant"},
-        },
-		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t0-filtration-plant.png",
+        effects = {},
+		icon = "__Krastorio2Assets__/icons/entities/filtration-plant.png",
         icon_size = 64,
-        prerequisites = {"electric-engine"},
+        prerequisites = {"advanced-multi-cylinder-engine", "kr-optimization-tech-card"},
         unit = {
-            count = 300,
+            count = 50,
 			time = 30,
             ingredients = {
 				{"automation-science-pack", 1},
@@ -569,7 +570,7 @@ data:extend({
         },
 		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t2-filtration-plant.png",
         icon_size = 64,
-        prerequisites = {"t0-filtration-plant"},
+        prerequisites = {"t0-filtration-plant", "kr-optimization-tech-card"},
         unit = {
             count = 300,
 			time = 30,
@@ -577,6 +578,9 @@ data:extend({
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
+				{"se-rocket-science-pack", 1},
+				{"space-science-pack", 1},
+				{"kr-optimization-tech-card", 1},
             },
         },
     },
@@ -588,7 +592,7 @@ data:extend({
         },
 		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t3-filtration-plant.png",
         icon_size = 64,
-        prerequisites = {"t2-filtration-plant"},
+        prerequisites = {"t2-filtration-plant", "se-heavy-girder", "se-biological-science-pack-1"},
         unit = {
             count = 300,
 			time = 30,
@@ -596,7 +600,13 @@ data:extend({
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
+				{"se-rocket-science-pack", 1},
+				{"space-science-pack", 1},
+				{"kr-optimization-tech-card", 1},
+				{"se-material-science-pack-1", 1},
+				{"se-biological-science-pack-1", 1},
             },
         },
     },
 })
+util.tech_lock_recipes("t0-filtration-plant", { "kr-filtration-plant" })
