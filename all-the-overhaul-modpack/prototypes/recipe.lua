@@ -769,6 +769,12 @@ util.replace_or_add_ingredient("kr-filtration-plant", "flow-controller", "advanc
 bobmods.lib.recipe.add_new_ingredient("kr-filtration-plant", { "tungsten-carbide", 5})
 bobmods.lib.recipe.add_new_ingredient("kr-filtration-plant", { "tungsten-plate", 20})
 
+bobmods.lib.recipe.remove_ingredient("kr-electrolysis-plant", "automation-core")
+util.replace_or_add_ingredient("kr-electrolysis-plant", "graphite", "t0-electrolysis-plant", 1, false)
+util.replace_or_add_ingredient("kr-electrolysis-plant", "flow-controller", "advanced-multi-cylinder-engine", 2, false)
+bobmods.lib.recipe.add_new_ingredient("kr-electrolysis-plant", { "tungsten-carbide", 5})
+bobmods.lib.recipe.add_new_ingredient("kr-electrolysis-plant", { "hv-power-regulator", 5})
+
 -- Electronic machine
 util.replace_or_add_ingredient("electronics-machine-1", "iron-plate", "aluminum-plate", 5, false)
 util.replace_or_add_ingredient("electronics-machine-1", nil, "articulated-mechanism", 2, false)
