@@ -19,7 +19,7 @@ data.raw["assembling-machine"]["kr-electrolysis-plant"].module_specification = {
 	module_slots = 4, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5 
 }
 data.raw["assembling-machine"]["kr-electrolysis-plant"].crafting_speed = 1.75
-data.raw["assembling-machine"]["kr-electrolysis-plant"].energy_usage = "500kW"
+data.raw["assembling-machine"]["kr-electrolysis-plant"].energy_usage = "3.125MW"
 
 data.raw["assembling-machine"]["kr-advanced-furnace"].module_specification = { 
 	module_slots = 8, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5 
@@ -432,9 +432,10 @@ data:extend({t0_kr_electrolysis_plant_item})
 
 local t0_kr_electrolysis_plant = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-electrolysis-plant"], "t0-electrolysis-plant")
 t0_kr_electrolysis_plant.module_specification = { module_slots = 3}
-t0_kr_electrolysis_plant.energy_usage = "0.375MW"
+t0_kr_electrolysis_plant.energy_usage = "2.5MW"
 t0_kr_electrolysis_plant.crafting_speed = 1
---t0_kr_electrolysis_plant.next_upgrade = "kr-electrolysis-plant"
+t0_kr_electrolysis_plant.next_upgrade = "kr-electrolysis-plant"
+t0_kr_electrolysis_plant.se_allow_in_space = true
 t0_kr_electrolysis_plant.animation = {
 	layers = {
 		{
@@ -536,10 +537,11 @@ data:extend({t2_kr_electrolysis_plant_item})
 
 local t2_kr_electrolysis_plant = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-electrolysis-plant"], "t2-electrolysis-plant")
 t2_kr_electrolysis_plant.module_specification = { module_slots = 5}
-t2_kr_electrolysis_plant.energy_usage = "625kW"
+t2_kr_electrolysis_plant.energy_usage = "4MW"
 t2_kr_electrolysis_plant.crafting_speed = 2.5
---data.raw["assembling-machine"]["kr-electrolysis-plant"].next_upgrade = "t2-electrolysis-plant"
---t2_kr_electrolysis_plant.next_upgrade = "t3-electrolysis-plant"
+data.raw["assembling-machine"]["kr-electrolysis-plant"].next_upgrade = "t2-electrolysis-plant"
+t2_kr_electrolysis_plant.next_upgrade = "t3-electrolysis-plant"
+t2_kr_electrolysis_plant.se_allow_in_space = true
 t2_kr_electrolysis_plant.animation = {
 	layers = {
 		{
@@ -641,8 +643,9 @@ data:extend({t3_kr_electrolysis_plant_item})
 
 local t3_kr_electrolysis_plant = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-electrolysis-plant"], "t3-electrolysis-plant")
 t3_kr_electrolysis_plant.module_specification = { module_slots = 6}
-t3_kr_electrolysis_plant.energy_usage = "750kW"
+t3_kr_electrolysis_plant.energy_usage = "5MW"
 t3_kr_electrolysis_plant.crafting_speed = 3.75
+t3_kr_electrolysis_plant.se_allow_in_space = true
 t3_kr_electrolysis_plant.animation = {
 	layers = {
 		{
@@ -732,6 +735,7 @@ t3_kr_electrolysis_plant.working_visualisations = {
 	},
 }
 data:extend({t3_kr_electrolysis_plant})
+
 
 --Recipes
 data:extend({
