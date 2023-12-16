@@ -34,7 +34,7 @@ local function change_setting(setting_name, value)
           end
           setting.default_value = value
         end
-        setting.hidden = false
+        setting.hidden = true
       end
     end
   end
