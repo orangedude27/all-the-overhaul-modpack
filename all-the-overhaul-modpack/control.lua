@@ -47,6 +47,3 @@ EASY_AUTOMATION = {
     { "underground-belt",      50 },
     { "splitter",              50 }
 }
-
-require("prototypes/bi-dir-inserter/control")
-require("prototypes/bi-dir-inserter/init")
