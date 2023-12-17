@@ -841,3 +841,96 @@ bobmods.lib.recipe.add_new_ingredient("chemical-plant-4", { "advanced-multi-cyli
 util.replace_or_add_ingredient("chemical-plant-4", "steel-plate", "se-heavy-girder", 15, false)
 util.replace_or_add_ingredient("chemical-plant-4", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
 util.replace_or_add_ingredient("chemical-plant-4", "pipe", "brass-pipe", 10, false)
+
+
+--HCP circuit
+util.replace_or_add_ingredient("big-battery-mk3-equipment", "processing-unit", "gr_materials_circuit", 2, false)
+util.replace_or_add_ingredient("battery-mk3-equipment", "processing-unit", "gr_materials_circuit", 1, false)
+
+util.replace_or_add_ingredient("se-space-supercomputer-3", "advanced-processing-unit", "gr_materials_circuit", 1000, false)
+bobmods.lib.recipe.add_new_ingredient("se-space-supercomputer-3", { "gr_materials_circuit", 50 })
+
+util.replace_or_add_ingredient("se-thruster-suit-3", "processing-unit", "gr_materials_circuit", 100, false)
+util.replace_or_add_ingredient("se-thruster-suit-4", "processing-unit", "gr_materials_circuit", 200, false)
+
+bobmods.lib.recipe.add_new_ingredient("se-big-turbine", { "gr_materials_circuit", 20 })
+
+util.replace_or_add_ingredient("se-energy-transmitter-emitter", "processing-unit", "gr_materials_circuit", 100, false)
+util.replace_or_add_ingredient("se-energy-transmitter-injector", "processing-unit", "gr_materials_circuit", 50, false)
+util.replace_or_add_ingredient("se-energy-receiver", "processing-unit", "gr_materials_circuit", 50, false)
+
+util.replace_or_add_ingredient("fusion-reactor-equipment", "processing-unit", "gr_materials_circuit", 150, false)
+
+util.replace_or_add_ingredient("se-antimatter-reactor", "processing-unit", "gr_materials_circuit", 500, false)
+
+util.replace_or_add_ingredient("antimatter-turret-rocket", "processing-unit", "gr_materials_circuit", 1, false)
+util.replace_or_add_ingredient("antimatter-rocket", "processing-unit", "gr_materials_circuit", 1, false)
+util.replace_or_add_ingredient("antimatter-artillery-shell", "processing-unit", "gr_materials_circuit", 1, false)
+util.replace_or_add_ingredient("antimatter-railgun-shell", "processing-unit", "gr_materials_circuit", 1, false)
+
+util.replace_or_add_ingredient("kr-stabilizer-charging-station", "processing-unit", "gr_materials_circuit", 1, false)
+
+util.replace_or_add_ingredient("fu_star_engine_core_entity", "processing-unit", "gr_materials_circuit", 3000, false)
+
+bobmods.lib.recipe.add_new_ingredient("kr-antimatter-reactor", { "gr_materials_circuit", 100 })
+bobmods.lib.recipe.add_new_ingredient("antimatter-reactor-equipment", { "gr_materials_circuit", 50 })
+
+bobmods.lib.recipe.add_new_ingredient("kr-energy-storage", { "gr_materials_circuit", 10 })
+
+bobmods.lib.recipe.add_new_ingredient("se-nexus", { "gr_materials_circuit", 10 })
+
+data:extend({
+	{
+		type = "recipe",
+		name = "hcp-board",
+		category = "electronics-machine",
+		energy_required = 10,
+		enabled = false,
+		ingredients =
+		{
+			{"gr_materials_pcb", 1},
+			{"se-holmium-plate", 1},
+			{"tin-plate", 2},
+			{type="fluid", name="ferric-chloride-solution", amount=5}
+		},
+		result = "hcp-board",
+		allow_decomposition = false
+	},
+	{
+		type = "recipe",
+		name = "pcb-recipe",
+		category = "crafting-with-fluid",
+		energy_required = 2,
+		enabled = false,
+		ingredients = {
+            {type="fluid", name="se-vitalic-acid", amount=4},
+            {type="item", name="fi_materials_glass_fiber", amount=1},
+            {type="item", name="fu_materials_carbon_fiber", amount=1},
+            {type="item", name="plastic-bar", amount=4},
+        },
+        results = {
+            {type="item", name="gr_materials_pcb", amount=6},
+        },
+		allow_decomposition = false
+	},
+	{
+		type = "recipe",
+		name = "hcp-circuit",
+		category = "crafting-with-fluid",
+		energy_required = 1,
+		enabled = false,
+		ingredients = {
+            {type="item", name="se-superconductive-cable", amount=2},
+			{type="item", name="advanced-electronic-components", amount=3},
+			{type="item", name="electronic-components", amount=2},
+            {type="item", name="hcp-board", amount=1},
+            {type="fluid", name="fi_strong_acid", amount=50},
+        },
+        results = {
+            {type="fluid", name="depleted-acid", amount=50},
+            {type="item", name="gr_materials_circuit", amount=1},
+        },
+		main_product = "gr_materials_circuit",
+		allow_decomposition = false
+	},
+})
