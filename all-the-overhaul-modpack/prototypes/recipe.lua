@@ -841,3 +841,8 @@ bobmods.lib.recipe.add_new_ingredient("chemical-plant-4", { "advanced-multi-cyli
 util.replace_or_add_ingredient("chemical-plant-4", "steel-plate", "se-heavy-girder", 15, false)
 util.replace_or_add_ingredient("chemical-plant-4", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
 util.replace_or_add_ingredient("chemical-plant-4", "pipe", "brass-pipe", 10, false)
+
+-- Fix burner assembler
+util.replace_or_add_ingredient("burner-assembling-machine", "iron-gear-wheel", "automation-core", 2, false)
+util.replace_or_add_ingredient("burner-assembling-machine", "aluminum-plate", "aluminum-plate", 8, false)
+bobmods.lib.recipe.add_new_ingredient("burner-assembling-machine", { "stone-brick", 4 })
