@@ -841,3 +841,21 @@ bobmods.lib.recipe.add_new_ingredient("chemical-plant-4", { "advanced-multi-cyli
 util.replace_or_add_ingredient("chemical-plant-4", "steel-plate", "se-heavy-girder", 15, false)
 util.replace_or_add_ingredient("chemical-plant-4", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
 util.replace_or_add_ingredient("chemical-plant-4", "pipe", "brass-pipe", 10, false)
+
+-- Fix coke recipe
+data:extend({
+	{
+		type = "recipe",
+		name = "coke",
+		category = "smelting",
+		energy_required = 16,
+		enabled = false,
+		allow_productivity = true,
+		ingredients = {
+			{ "coal", 6 },
+			{ "wood", 6 },
+		},
+		result = "coke",
+		result_count = 6,
+	},
+})
