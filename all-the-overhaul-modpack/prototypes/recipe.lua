@@ -842,8 +842,9 @@ util.replace_or_add_ingredient("chemical-plant-4", "steel-plate", "se-heavy-gird
 util.replace_or_add_ingredient("chemical-plant-4", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
 util.replace_or_add_ingredient("chemical-plant-4", "pipe", "brass-pipe", 10, false)
 
--- Fix coke recipe
+
 data:extend({
+-- Fix coke recipe
 	{
 		type = "recipe",
 		name = "coke",
@@ -857,5 +858,21 @@ data:extend({
 		},
 		result = "coke",
 		result_count = 6,
+	},
+	
+-- Fix stone recipe
+	{
+		type = "recipe",
+		name = "stone-brick",
+		category = "smelting",
+		energy_required = 16,
+		enabled = true,
+		allow_productivity = true,
+		ingredients = {
+			{ "stone", 5 },
+			{ "zircon", 5 },
+		},
+		result = "stone-brick",
+		result_count = 5,
 	},
 })
