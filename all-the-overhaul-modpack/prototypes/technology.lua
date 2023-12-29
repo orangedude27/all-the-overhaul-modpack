@@ -595,7 +595,7 @@ data.raw.technology["5d-oil-refinery-2"].unit.count = 300
 util.tech_remove_prerequisites("5d-oil-refinery-2", {"production-science-pack"})
 util.tech_add_prerequisites("5d-oil-refinery-2","kr-optimization-tech-card")
 util.tech_remove_ingredients("5d-oil-refinery-2", {"production-science-pack"})
-util.tech_add_ingredients("5d-oil-refinery-2",{"space-science-pack","kr-optimization-tech-card"},false)
+util.tech_add_ingredients("5d-oil-refinery-2",{"chemical-science-pack","se-rocket-science-pack","space-science-pack","kr-optimization-tech-card"},false)
 -- 04
 data.raw.technology["5d-oil-refinery-3"].unit.count = 400
 util.tech_add_prerequisites("5d-oil-refinery-3",{"se-heavy-girder","se-biological-science-pack-1"})
@@ -762,7 +762,6 @@ data.raw.technology["5d-masher-1"].unit.count = 100
 util.tech_remove_prerequisites("5d-masher-1", {"advanced-material-processing-2"})
 util.tech_add_prerequisites("5d-masher-1",{"automation-science-pack","electricity"})
 util.tech_remove_ingredients("5d-masher-1", {"logistic-science-pack","chemical-science-pack"})
-util.tech_add_ingredients("5d-masher-1",{"chemical-science-pack"},false)
 -- 02
 data.raw.technology["5d-masher-2"].unit.count = 200
 util.tech_remove_prerequisites("5d-masher-2", {"advanced-material-processing-3"})
@@ -777,6 +776,7 @@ util.tech_remove_ingredients("5d-masher-3", {"production-science-pack","se-rocke
 data.raw.technology["5d-masher-4"].unit.count = 400
 util.tech_remove_prerequisites("5d-masher-4", {"production-science-pack","advanced-material-processing-5"})
 util.tech_add_prerequisites("5d-masher-4","kr-optimization-tech-card")
+util.tech_remove_ingredients("5d-masher-4", {"production-science-pack"})
 util.tech_add_ingredients("5d-masher-4",{"space-science-pack","kr-optimization-tech-card"},false)
 -- 05
 data.raw.technology["5d-masher-5"].unit.count = 500
