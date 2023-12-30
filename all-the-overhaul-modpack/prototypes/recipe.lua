@@ -1273,6 +1273,47 @@ util.replace_or_add_ingredient("5d-masher-10", "low-density-structure", "se-nano
 bobmods.lib.recipe.add_new_ingredient("5d-masher-10", { "ai-core", 1 })
 bobmods.lib.recipe.add_new_ingredient("5d-masher-10", { "se-naquium-cube", 1 })
 
+-- Hide nuke recipes
+bobmods.lib.recipe.hide("5d-steam-turbine-02")
+bobmods.lib.recipe.hide("5d-steam-turbine-03")
+bobmods.lib.recipe.hide("5d-steam-turbine-04")
+bobmods.lib.recipe.hide("5d-steam-turbine-05")
+bobmods.lib.recipe.hide("5d-steam-turbine-06")
+bobmods.lib.recipe.hide("5d-steam-turbine-07")
+bobmods.lib.recipe.hide("5d-steam-turbine-08")
+bobmods.lib.recipe.hide("5d-steam-turbine-09")
+bobmods.lib.recipe.hide("5d-steam-turbine-10")
+
+bobmods.lib.recipe.hide("5d-heat-exchanger-02")
+bobmods.lib.recipe.hide("5d-heat-exchanger-03")
+bobmods.lib.recipe.hide("5d-heat-exchanger-04")
+bobmods.lib.recipe.hide("5d-heat-exchanger-05")
+bobmods.lib.recipe.hide("5d-heat-exchanger-06")
+bobmods.lib.recipe.hide("5d-heat-exchanger-07")
+bobmods.lib.recipe.hide("5d-heat-exchanger-08")
+bobmods.lib.recipe.hide("5d-heat-exchanger-09")
+bobmods.lib.recipe.hide("5d-heat-exchanger-10")
+
+bobmods.lib.recipe.hide("5d-heat-pipe-02")
+bobmods.lib.recipe.hide("5d-heat-pipe-03")
+bobmods.lib.recipe.hide("5d-heat-pipe-04")
+bobmods.lib.recipe.hide("5d-heat-pipe-05")
+bobmods.lib.recipe.hide("5d-heat-pipe-06")
+bobmods.lib.recipe.hide("5d-heat-pipe-07")
+bobmods.lib.recipe.hide("5d-heat-pipe-08")
+bobmods.lib.recipe.hide("5d-heat-pipe-09")
+bobmods.lib.recipe.hide("5d-heat-pipe-10")
+
+bobmods.lib.recipe.hide("5d-nuclear-reactor-02")
+bobmods.lib.recipe.hide("5d-nuclear-reactor-03")
+bobmods.lib.recipe.hide("5d-nuclear-reactor-04")
+bobmods.lib.recipe.hide("5d-nuclear-reactor-05")
+bobmods.lib.recipe.hide("5d-nuclear-reactor-06")
+bobmods.lib.recipe.hide("5d-nuclear-reactor-07")
+bobmods.lib.recipe.hide("5d-nuclear-reactor-08")
+bobmods.lib.recipe.hide("5d-nuclear-reactor-09")
+bobmods.lib.recipe.hide("5d-nuclear-reactor-10")
+
 
 data:extend({
 -- Fix coke recipe
@@ -1312,6 +1353,7 @@ data:extend({
 --util.replace_or_add_ingredient("burner-assembling-machine", "iron-gear-wheel", "automation-core", 2, false)
 --util.replace_or_add_ingredient("burner-assembling-machine", "aluminum-plate", "aluminum-plate", 8, false)
 --bobmods.lib.recipe.add_new_ingredient("burner-assembling-machine", { "stone-brick", 4 })
+
 
 --HCP circuit
 util.replace_or_add_ingredient("big-battery-mk3-equipment", "processing-unit", "gr_materials_circuit", 2, false)

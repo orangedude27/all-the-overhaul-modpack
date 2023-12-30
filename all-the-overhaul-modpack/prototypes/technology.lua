@@ -853,6 +853,51 @@ data.raw.technology["5d-lab-9"].unit.count = 1000
 util.tech_add_prerequisites("5d-lab-9","se-naquium-cube")
 util.tech_add_ingredients("5d-lab-9",{"kr-optimization-tech-card","se-biological-science-pack-4","se-energy-science-pack-4","se-astronomic-science-pack-4","se-deep-space-science-pack-1"},false)
 
+-- Remove nuke techs
+bobmods.lib.tech.hide("5d-steam-turbine-1")
+bobmods.lib.tech.hide("5d-heat-exchanger-1")
+bobmods.lib.tech.hide("5d-heat-pipe-1")
+bobmods.lib.tech.hide("5d-nuclear-reactor-1")
+--
+bobmods.lib.tech.hide("5d-steam-turbine-2")
+bobmods.lib.tech.hide("5d-heat-exchanger-2")
+bobmods.lib.tech.hide("5d-heat-pipe-2")
+bobmods.lib.tech.hide("5d-nuclear-reactor-2")
+--
+bobmods.lib.tech.hide("5d-steam-turbine-3")
+bobmods.lib.tech.hide("5d-heat-exchanger-3")
+bobmods.lib.tech.hide("5d-heat-pipe-3")
+bobmods.lib.tech.hide("5d-nuclear-reactor-3")
+--
+bobmods.lib.tech.hide("5d-steam-turbine-4")
+bobmods.lib.tech.hide("5d-heat-exchanger-4")
+bobmods.lib.tech.hide("5d-heat-pipe-4")
+bobmods.lib.tech.hide("5d-nuclear-reactor-4")
+--
+bobmods.lib.tech.hide("5d-steam-turbine-5")
+bobmods.lib.tech.hide("5d-heat-exchanger-5")
+bobmods.lib.tech.hide("5d-heat-pipe-5")
+bobmods.lib.tech.hide("5d-nuclear-reactor-5")
+--
+bobmods.lib.tech.hide("5d-steam-turbine-6")
+bobmods.lib.tech.hide("5d-heat-exchanger-6")
+bobmods.lib.tech.hide("5d-heat-pipe-6")
+bobmods.lib.tech.hide("5d-nuclear-reactor-6")
+--
+bobmods.lib.tech.hide("5d-steam-turbine-7")
+bobmods.lib.tech.hide("5d-heat-exchanger-7")
+bobmods.lib.tech.hide("5d-heat-pipe-7")
+bobmods.lib.tech.hide("5d-nuclear-reactor-7")
+--
+bobmods.lib.tech.hide("5d-steam-turbine-8")
+bobmods.lib.tech.hide("5d-heat-exchanger-8")
+bobmods.lib.tech.hide("5d-heat-pipe-8")
+bobmods.lib.tech.hide("5d-nuclear-reactor-8")
+--
+bobmods.lib.tech.hide("5d-steam-turbine-9")
+bobmods.lib.tech.hide("5d-heat-exchanger-9")
+bobmods.lib.tech.hide("5d-heat-pipe-9")
+bobmods.lib.tech.hide("5d-nuclear-reactor-9")
 
 -- K2 technologies
 util.tech_lock_recipes("kr-fluids-chemistry", { "t0-filtration-plant" })
