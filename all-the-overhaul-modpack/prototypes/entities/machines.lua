@@ -33,6 +33,10 @@ data.raw["assembling-machine"]["kr-advanced-furnace"].energy_source = {
 	emissions_per_minute = 192,
 }
 
+data.raw["lab"]["5d-lab-03"].module_specification = { 
+	module_slots = 3, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5 
+}
+
 -- Filtration plant
 -- Original code from Seatorio by Rebecca-x https://mods.factorio.com/mod/SeaTorio
 -- MK0
