@@ -1,5 +1,12 @@
 local flib_data_util = require('__flib__.data-util');
 
+-- Modified 248K machines
+data.raw.lab["fu_lab_entity"].se_allow_in_space = true
+data.raw.lab["fu_lab_entity"].researching_speed = 20
+data.raw.lab["fu_lab_entity"].module_specification = { 
+	module_slots = 9, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5 
+}
+
 -- Modified K2 machines
 data.raw["assembling-machine"]["kr-advanced-assembling-machine"].module_specification = { 
 	module_slots = 6, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5 

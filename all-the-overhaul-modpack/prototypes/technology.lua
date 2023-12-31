@@ -816,11 +816,11 @@ util.tech_remove_prerequisites("5d-lab-1", {"engine"})
 util.tech_add_prerequisites("5d-lab-1",{"zirconia-processing"})
 -- 03
 data.raw.technology["5d-lab-2"].unit.count = 300
-util.tech_add_prerequisites("5d-lab-2",{"nitinol-processing", "advanced-electronics-2"})
+util.tech_add_prerequisites("5d-lab-2",{"nitinol-processing", "advanced-electronics-2", "scanner"})
 util.tech_add_ingredients("5d-lab-2",{"chemical-science-pack"},false)
 -- 04
 data.raw.technology["5d-lab-3"].unit.count = 400
-util.tech_remove_prerequisites("5d-lab-3", {"chemical-science-pack"})
+util.tech_remove_prerequisites("5d-lab-3", {"chemical-science-pack","5d-lab-2"})
 util.tech_add_prerequisites("5d-lab-3","kr-optimization-tech-card")
 util.tech_add_ingredients("5d-lab-3",{"se-rocket-science-pack","space-science-pack","kr-optimization-tech-card"},false)
 -- 05
@@ -899,10 +899,53 @@ bobmods.lib.tech.hide("5d-heat-exchanger-9")
 bobmods.lib.tech.hide("5d-heat-pipe-9")
 bobmods.lib.tech.hide("5d-nuclear-reactor-9")
 
+-- SE technologies
+util.tech_add_prerequisites("se-space-science-lab","5d-lab-3")
+
+util.tech_add_prerequisites("se-nexus","5d-lab-9")
+
+-- 248K technologt
+util.tech_add_prerequisites("gr_lab_tech","5d-lab-9")
+
+data:extend({
+	{
+        type = "technology",
+        name = "t-lab",
+        effects = {
+            {type = "unlock-recipe", recipe = "fu_lab_recipe"},
+        },
+		icon = "__248k__/ressources/techs/fu_lab_tech.png",
+        icon_size = 128,
+        prerequisites = {"se-deep-space-science-pack-4"},
+        unit = {
+            count = 10000,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"se-rocket-science-pack", 1},
+				{"space-science-pack", 1},
+				{"production-science-pack", 1},
+				{"utility-science-pack", 1},
+				{"se-material-science-pack-4", 1},
+				{"se-energy-science-pack-4", 1},
+				{"se-biological-science-pack-4", 1},
+				{"se-astronomic-science-pack-4", 1},
+				{"fusion-science-pack-4", 1},
+				{"se-deep-space-science-pack-4", 1},
+            },
+        },
+    },
+})
+
 -- K2 technologies
 util.tech_lock_recipes("kr-fluids-chemistry", { "t0-filtration-plant" })
 util.tech_lock_recipes("kr-fluids-chemistry", { "t0-electrolysis-plant" })
 
+util.tech_add_prerequisites("kr-advanced-lab","5d-lab-2")
+
+util.tech_add_prerequisites("kr-singularity-lab","5d-lab-8")
 
 -- New machines
 data:extend({

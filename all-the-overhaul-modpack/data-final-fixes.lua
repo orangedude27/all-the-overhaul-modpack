@@ -22,6 +22,8 @@ table.insert(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-3
 table.insert(data.raw.lab['kr-singularity-lab'].inputs, "fusion-science-pack-4")
 table.insert(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-4")
 
+data.raw.lab["fu_lab_entity"].inputs = util.table.deepcopy(data.raw.lab["kr-singularity-lab"].inputs)
+
 for i = 4, 10 do
     local lab_name = "5d-lab-" .. (i < 10 and "0" or "") .. i
     data.raw.lab[lab_name].se_allow_in_space = true

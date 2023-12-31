@@ -130,7 +130,7 @@ bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "furnace-pro-05")
 
 else
 
-bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "electric-furnace-3")
+bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "5d-electric-furnace-03")
 
 end
 
@@ -802,6 +802,44 @@ util.replace_or_add_ingredient("kr-electrolysis-plant", "flow-controller", "adva
 bobmods.lib.recipe.add_new_ingredient("kr-electrolysis-plant", { "tungsten-carbide", 5})
 bobmods.lib.recipe.add_new_ingredient("kr-electrolysis-plant", { "hv-power-regulator", 5})
 
+util.replace_or_add_ingredient("biusart-lab", "lab", "5d-lab-03", 1, false)
+
+bobmods.lib.recipe.add_new_ingredient("kr-singularity-lab", { "5d-lab-09", 10 })
+
+util.replace_or_add_ingredient("se-space-science-lab", "biusart-lab", "5d-lab-04", 10, false)
+
+bobmods.lib.recipe.add_new_ingredient("se-nexus", { "5d-lab-10", 10 })
+
+util.replace_or_add_ingredient("gr_lab_recipe", "lab", "5d-lab-10", 40, false)
+
+util.replace_or_add_ingredient("fu_fusor_recipe", "lab", "5d-lab-04", 10, false)
+util.replace_or_add_ingredient("fu_fusor_recipe", "low-density-structure", "heat-resistant-low-density-structure", 100, false)
+
+util.replace_or_add_ingredient("gr_charger_recipe", "lab", "5d-lab-10", 10, false)
+bobmods.lib.recipe.add_new_ingredient("gr_charger_recipe", { "kr-stabilizer-charging-station", 1 })
+
+-- T-Lab
+data.raw.recipe["fu_lab_recipe"].category = "space-manufacturing"
+data.raw.recipe["fu_lab_recipe"].ingredients = {
+  {"5d-lab-10", 10},
+  {"kr-singularity-lab", 1},
+  {"energy-control-unit",50},
+  {"se-space-radiator-2",10},
+  {"se-space-hypercooler",4},
+  {"gr_materials_circuit",100},
+  {"fu_materials_energy_charged_crystal",50},
+  {"fu_materials_KFK", 100},
+  {"fu_materials_TIM", 100},
+  {"fu_materials_magnet", 50},
+  {"ai-core", 50},
+  {"se-naquium-processor", 20},
+  {"se-heavy-composite",50},
+  {"se-dynamic-emitter",50},
+  {"se-nanomaterial",50},
+  {"se-naquium-plate",300},
+  {"se-naquium-tessaract",5},
+  { type = "fluid", name = "se-space-coolant-supercooled", amount = 2000},
+}
 
 -- Assembler
 -- 04
@@ -1160,40 +1198,43 @@ util.replace_or_add_ingredient("5d-electric-furnace-10", "low-density-structure"
 util.replace_or_add_ingredient("5d-lab-02", "transport-belt", "glass", 10, false)
 util.replace_or_add_ingredient("5d-lab-02", "bakelite", "zircaloy-4", 10, false)
 -- 03
+bobmods.lib.recipe.add_new_ingredient("5d-lab-03", { "scanner", 5 })
 util.replace_or_add_ingredient("5d-lab-03", "transport-belt", "fi_materials_glass", 10, false)
 util.replace_or_add_ingredient("5d-lab-03", "bakelite", "nitinol-plate", 10, false)
 util.replace_or_add_ingredient("5d-lab-03", "electronic-circuit", "processing-unit", 10, false)
 -- 04
+bobmods.lib.recipe.add_new_ingredient("5d-lab-04", { "scanner", 5 })
 util.replace_or_add_ingredient("5d-lab-04", "fast-transport-belt", "fi_materials_glass", 10, false)
 util.replace_or_add_ingredient("5d-lab-04", "steel-plate", "imersium-plate", 10, false)
 util.replace_or_add_ingredient("5d-lab-04", "advanced-circuit", "advanced-processing-unit", 10, false)
+util.replace_or_add_ingredient("5d-lab-04", "5d-lab-03", "biusart-lab", 1, false)
 -- 05
 util.replace_or_add_ingredient("5d-lab-05", "fast-transport-belt", "fi_materials_glass", 10, false)
 util.replace_or_add_ingredient("5d-lab-05", "steel-plate", "se-heavy-girder", 10, false)
 util.replace_or_add_ingredient("5d-lab-05", "advanced-circuit", "advanced-processing-unit", 10, false)
-bobmods.lib.recipe.remove_ingredient("5d-lab-05", "speed-module")
+util.replace_or_add_ingredient("5d-lab-05", "speed-module", "scanner", 5, false)
 -- 06
 util.replace_or_add_ingredient("5d-lab-06", "fast-transport-belt", "fi_materials_glass", 10, false)
 util.replace_or_add_ingredient("5d-lab-06", "steel-plate", "se-aeroframe-scaffold", 10, false)
 util.replace_or_add_ingredient("5d-lab-06", "advanced-circuit", "advanced-processing-unit", 10, false)
-bobmods.lib.recipe.remove_ingredient("5d-lab-06", "productivity-module")
+util.replace_or_add_ingredient("5d-lab-06", "productivity-module", "scanner", 5, false)
 -- 07
 util.replace_or_add_ingredient("5d-lab-07", "express-transport-belt", "fi_materials_glass", 10, false)
 util.replace_or_add_ingredient("5d-lab-07", "steel-plate", "se-aeroframe-bulkhead", 10, false)
 util.replace_or_add_ingredient("5d-lab-07", "advanced-circuit", "advanced-processing-unit", 10, false)
-bobmods.lib.recipe.remove_ingredient("5d-lab-07", "speed-module-2")
+util.replace_or_add_ingredient("5d-lab-07", "speed-module-2", "scanner", 5, false)
 -- 08
 util.replace_or_add_ingredient("5d-lab-08", "low-density-structure", "ai-core", 1, false)
 util.replace_or_add_ingredient("5d-lab-08", "express-transport-belt", "fi_materials_glass", 10, false)
 util.replace_or_add_ingredient("5d-lab-08", "steel-plate", "se-aeroframe-bulkhead", 10, false)
 util.replace_or_add_ingredient("5d-lab-08", "advanced-circuit", "gr_materials_circuit", 10, false)
-bobmods.lib.recipe.remove_ingredient("5d-lab-08", "productivity-module-2")
+util.replace_or_add_ingredient("5d-lab-08", "productivity-module-2", "scanner", 5, false)
 -- 09
 util.replace_or_add_ingredient("5d-lab-09", "low-density-structure", "ai-core", 1, false)
 util.replace_or_add_ingredient("5d-lab-09", "express-transport-belt", "se-heavy-assembly", 10, false)
 util.replace_or_add_ingredient("5d-lab-09", "steel-plate", "se-nanomaterial", 10, false)
 util.replace_or_add_ingredient("5d-lab-09", "advanced-circuit", "gr_materials_circuit", 10, false)
-bobmods.lib.recipe.remove_ingredient("5d-lab-09", "speed-module-3")
+util.replace_or_add_ingredient("5d-lab-09", "speed-module-3", "se-dynamic-emitter", 5, false)
 -- 10
 util.replace_or_add_ingredient("5d-lab-10", "low-density-structure", "ai-core", 1, false)
 util.replace_or_add_ingredient("5d-lab-10", "express-transport-belt", "se-heavy-assembly", 10, false)
