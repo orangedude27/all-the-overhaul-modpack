@@ -766,20 +766,6 @@ data:extend({
 	
 })
 
--- Bob's Assembly
--- Electronic machine
---util.replace_or_add_ingredient("electronics-machine-1", "iron-plate", "aluminum-plate", 5, false)
---util.replace_or_add_ingredient("electronics-machine-1", nil, "articulated-mechanism", 2, false)
-
---bobmods.lib.recipe.remove_ingredient("electronics-machine-2", "steel-plate")
---bobmods.lib.recipe.remove_ingredient("electronics-machine-2", "steel-gear-wheel")
---bobmods.lib.recipe.add_new_ingredient("electronics-machine-2", { "automation-core-2", 1 })
---bobmods.lib.recipe.add_new_ingredient("electronics-machine-2", { "solder", 3 })
-
---util.replace_or_add_ingredient("electronics-machine-3", "titanium-plate", "automation-core-3", 1, false)
---util.replace_or_add_ingredient("electronics-machine-3", "iron-gear-wheel", "imersium-gear-wheel", 4, false)
---bobmods.lib.recipe.add_new_ingredient("electronics-machine-3", { "solder", 8 })
-
 
 -- 5DIM Machines
 -- K2 Integration
@@ -898,6 +884,76 @@ util.replace_or_add_ingredient("5d-assembling-machine-10", "productivity-module-
 util.replace_or_add_ingredient("5d-assembling-machine-10", "low-density-structure", "se-heavy-assembly", 10, false)
 util.replace_or_add_ingredient("5d-assembling-machine-10", "processing-unit", "gr_materials_circuit", 20, false)
 util.replace_or_add_ingredient("5d-assembling-machine-10", "tungsten-carbide", "se-naquium-cube", 1, false)
+
+-- Electronic machine
+-- 01
+util.replace_or_add_ingredient("mini-assembler-1", "burner-assembling-machine", "automation-core", 3, false)
+util.replace_or_add_ingredient("mini-assembler-1", "articulated-mechanism", "articulated-mechanism", 2, false)
+-- 02
+-- Nothing
+-- 03
+-- it doesn't work!!!
+bobmods.lib.recipe.remove_ingredient("mini-assembler-3", "advanced-gearbox")
+bobmods.lib.recipe.remove_ingredient("mini-assembler-3", "complex-joint")
+bobmods.lib.recipe.remove_ingredient("mini-assembler-3", "advanced-machining-tool")
+util.replace_or_add_ingredient("mini-assembler-3", "steel-plate", "automation-core-3", 1, false)
+-- 04
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-4", { "solder", 5 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-4", { "hv-power-regulator", 1 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-4", { "imersium-gear-wheel", 4 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-4", { "processing-unit", 2 })
+util.replace_or_add_ingredient("mini-assembler-4", "steel-plate", "nitinol-plate", 9, false)
+util.replace_or_add_ingredient("mini-assembler-4", "productivity-module", "cermet", 1, false)
+-- 05
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-5", { "solder", 5 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-5", { "hv-power-regulator", 1 })
+util.replace_or_add_ingredient("mini-assembler-5", "titanium-plate", "se-heavy-girder", 2, false)
+util.replace_or_add_ingredient("mini-assembler-5", "iron-gear-wheel", "imersium-gear-wheel", 4, false)
+util.replace_or_add_ingredient("mini-assembler-5", "steel-plate", "cermet", 1, false)
+util.replace_or_add_ingredient("mini-assembler-5", "speed-module-2", "processing-unit", 5, false)
+util.replace_or_add_ingredient("mini-assembler-5", "tungsten-carbide", "cobalt-carbide", 2, false)
+-- 06
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-6", { "solder", 5 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-6", { "hv-power-regulator", 1 })
+util.replace_or_add_ingredient("mini-assembler-6", "titanium-plate", "imersium-beam", 2, false)
+util.replace_or_add_ingredient("mini-assembler-6", "iron-gear-wheel", "se-heavy-bearing", 2, false)
+util.replace_or_add_ingredient("mini-assembler-6", "steel-plate", "se-aeroframe-scaffold", 5, false)
+util.replace_or_add_ingredient("mini-assembler-6", "productivity-module-2", "advanced-processing-unit", 5, false)
+util.replace_or_add_ingredient("mini-assembler-6", "tungsten-carbide", "cobalt-carbide", 2, false)
+-- 07
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-7", { "solder", 5 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-7", { "hv-power-regulator", 1 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-7", { "se-heavy-bearing", 2 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-7", { "se-aeroframe-bulkhead", 5 })
+util.replace_or_add_ingredient("mini-assembler-7", "titanium-plate", "imersium-beam", 2, false)
+util.replace_or_add_ingredient("mini-assembler-7", "speed-module-3", "advanced-processing-unit", 5, false)
+util.replace_or_add_ingredient("mini-assembler-7", "tungsten-carbide", "cobalt-carbide", 2, false)
+-- 08
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-8", { "solder", 5 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-8", { "ai-core", 1 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-8", { "se-heavy-bearing", 2 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-8", { "se-aeroframe-bulkhead", 5 })
+util.replace_or_add_ingredient("mini-assembler-8", "titanium-plate", "imersium-beam", 2, false)
+util.replace_or_add_ingredient("mini-assembler-8", "productivity-module-3", "gr_materials_circuit", 5, false)
+util.replace_or_add_ingredient("mini-assembler-8", "tungsten-carbide", "cobalt-carbide", 2, false)
+-- 09
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-9", { "solder", 5 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-9", { "ai-core", 1 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-9", { "se-heavy-bearing", 2 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-9", { "se-aeroframe-bulkhead", 5 })
+util.replace_or_add_ingredient("mini-assembler-9", "speed-module-3", "se-nanomaterial", 5, false)
+util.replace_or_add_ingredient("mini-assembler-9", "low-density-structure", "se-heavy-assembly", 2, false)
+util.replace_or_add_ingredient("mini-assembler-9", "processing-unit", "gr_materials_circuit", 10, false)
+util.replace_or_add_ingredient("mini-assembler-9", "tungsten-carbide", "cobalt-carbide", 2, false)
+-- 10
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-10", { "solder", 5 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-10", { "ai-core", 1 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-10", { "se-heavy-bearing", 2 })
+bobmods.lib.recipe.add_new_ingredient("mini-assembler-10", { "se-aeroframe-bulkhead", 5})
+util.replace_or_add_ingredient("mini-assembler-10", "productivity-module-3", "se-nanomaterial", 5, false)
+util.replace_or_add_ingredient("mini-assembler-10", "low-density-structure", "se-heavy-assembly", 2, false)
+util.replace_or_add_ingredient("mini-assembler-10", "processing-unit", "gr_materials_circuit", 10, false)
+util.replace_or_add_ingredient("mini-assembler-10", "tungsten-carbide", "se-naquium-cube", 1, false)
 
 -- Centrifuge
 -- 02
