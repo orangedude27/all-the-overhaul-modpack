@@ -902,6 +902,7 @@ bobmods.lib.recipe.add_new_ingredient("mini-assembler-4", { "solder", 5 })
 bobmods.lib.recipe.add_new_ingredient("mini-assembler-4", { "hv-power-regulator", 1 })
 bobmods.lib.recipe.add_new_ingredient("mini-assembler-4", { "imersium-gear-wheel", 4 })
 bobmods.lib.recipe.add_new_ingredient("mini-assembler-4", { "processing-unit", 2 })
+util.replace_or_add_ingredient("mini-assembler-4", "assembling-machine-3", "mini-assembler-3", 1, false)
 util.replace_or_add_ingredient("mini-assembler-4", "steel-plate", "nitinol-plate", 9, false)
 util.replace_or_add_ingredient("mini-assembler-4", "productivity-module", "cermet", 1, false)
 -- 05
