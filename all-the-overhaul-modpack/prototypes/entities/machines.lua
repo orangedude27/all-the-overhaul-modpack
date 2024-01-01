@@ -747,6 +747,51 @@ t3_kr_electrolysis_plant.working_visualisations = {
 }
 data:extend({t3_kr_electrolysis_plant})
 
+for i = 1, 10 do
+    local item = util.table.deepcopy(data.raw.item["5d-assembling-machine-" .. i])
+	local recipe = util.table.deepcopy(data.raw.recipe["5d-assembling-machine-" .. i])
+	local entity = util.table.deepcopy(data.raw["assembling-machine"]["5d-assembling-machine-" .. i])
+	local tech = util.table.deepcopy(data.raw.technology["5d-assembling-machine-" .. i])
+	if item ~= nil and recipe ~= nil and entity ~= nil and tech ~= nil then
+
+		-- Entity Changes
+		entity.name = "electronics-assembling-machine-" .. i
+		entity.minable.result = entity.name
+		entity.collision_box = {{-0.7, -0.7}, {0.7, 0.7}}
+		entity.selection_box = {{-1, -1}, {1, 1}}
+		entity.fast_replaceable_group = "electronics-assembling-machine"
+		entity.next_upgrade = "electronics-assembling-machine-" .. (i + 1)
+		entity.energy_usage = entity.energy_usage / 2
+
+		entity.animation.layers[1].scale = 2/3
+		entity.animation.layers[1].shift = util.by_pixel(0, 2 * 2 / 3)
+		entity.animation.layers[1].hr_version.scale = 1/3
+		entity.animation.layers[1].hr_version.shift = util.by_pixel(0, 2 * 2 / 3)
+
+		item.name = entity.name
+		item.icon = "__5dim_automation__/graphics/icon/assembling-machine/assembling-machine-icon-" .. i .. ".png"
+		item.place_resultv = item.name
+
+		recipe.name = item.name
+		recipe.icon = item.icon
+		recipe.result = item.name
+		recipe.icon_size = 64
+		recipe.enabled = true
+
+		data:extend({entity, recipe, item})
+
+		tech.name = "electronics-automation-" .. i
+        tech.icon = item.icon
+        tech.icon_size = 64
+        tech.effects = {
+            {
+                type = "unlock-recipe",
+                recipe = item.name
+            }
+        }
+        data:extend({tech})
+	end
+end
 
 --Recipes
 data:extend({
