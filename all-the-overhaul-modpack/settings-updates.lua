@@ -354,6 +354,19 @@ if mods["RPGsystem"] then
   change_setting("charxpmod_time_ratio_xp", true)
   change_setting("charxpmod_print_critical", true)
 end
+
+if mods["mini-machines"] then
+  change_setting("mini-furnace", false)
+  change_setting("mini-miner", false)
+  change_setting("mini-chemplant", false)
+  change_setting("mini-refinery", false)
+  change_setting("mini-beacon", false)
+  change_setting("mini-tank", false)
+  change_setting("mini-radar", false)
+  change_setting("mini-electro", false)
+  change_setting("mini-multi", false)
+end
+
 --se
 if mods["space-exploration"] then
   change_setting("se-space-pipe-capacity", 150)
