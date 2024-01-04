@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 1.4.2024
+  Mod Changes:
+    - Removed bobassembly and made it incompatible
+    - Added mini-machines
+    - Added 5dim_core
+    - Added 5dim_compatibility
+    - Added 5dim_automation
+    - Added 5dim_nuclear
+    - Added 5dim_resources
+  Misc Changes:
+    - Add 10 tiers of Assemblers, Electronic Assemblers, Chemical Labs, Oil refineries, Ore Mashers, Labs
+    - Maintained the Fluid Burning furnace from the bobassembly mod becuase it was nice
+    - Made hydrogen usable as a burnable "fluid"
+    - Added phenolic boards to circuit boards
+    - Moved Bio industries recipes into the K2 Greenhouse
+    - Other various tweaks and bug fixes :)
+  Sorting Changes:
+    - Partially reorginized the Production Recipe category
+    - Did some other reorginizing
+---------------------------------------------------------------------------------------------------
 Version: 1.6.9
 Date: 12.27.2023
   Note:
