@@ -8,13 +8,11 @@ local function change_setting(setting_name, value, hide)
     if setting then
 
       if setting_type == "bool-setting" then
-        if hide == nil then
-          setting.forced_value = value
-        end
+        setting.forced_value = value
       end
 
       if setting_type == "int-setting" then
-        if hide == nil then
+        if hide == nil or hide == true then
           if setting.maximum_value ~= nil then
             setting.maximum_value = value + 1
             setting.minimum = value
@@ -26,7 +24,7 @@ local function change_setting(setting_name, value, hide)
       end
 
       if setting_type == "double-setting" then
-        if hide == nil then
+        if hide == nil or hide == true then
           if setting.maximum_value ~= nil then
             setting.maximum_value = value
             setting.minimum = value
@@ -38,7 +36,7 @@ local function change_setting(setting_name, value, hide)
       end
 
       if setting_type == "string-setting" then
-        if hide == nil then
+        if hide == nil or hide == true then
           setting.allowed_values = { value }
         end
       end
@@ -354,6 +352,19 @@ if mods["RPGsystem"] then
   change_setting("charxpmod_time_ratio_xp", true)
   change_setting("charxpmod_print_critical", true)
 end
+
+if mods["mini-machines"] then
+  change_setting("mini-furnace", false)
+  change_setting("mini-miner", false)
+  change_setting("mini-chemplant", false)
+  change_setting("mini-refinery", false)
+  change_setting("mini-beacon", false)
+  change_setting("mini-tank", false)
+  change_setting("mini-radar", false)
+  change_setting("mini-electro", false)
+  change_setting("mini-multi", false)
+end
+
 --se
 if mods["space-exploration"] then
   change_setting("se-space-pipe-capacity", 150)

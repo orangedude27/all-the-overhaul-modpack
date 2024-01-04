@@ -1,4 +1,5 @@
 local util = require("data-util")
+local Recipe = require('__stdlib__/stdlib/data/recipe')
 --LDS 248k Recipe fix
 util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "titanium-plate", 8, false)
 util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "diamond", 4, false)
@@ -38,13 +39,6 @@ bobmods.lib.recipe.hide("bi-rail-wood")
 bobmods.lib.recipe.hide("bi-rail-wood-to-concrete")
 bobmods.lib.recipe.hide("bi-plastic-1")
 bobmods.lib.recipe.hide("bi-plastic-2")
-bobmods.lib.recipe.hide("bi-arboretum")
-bobmods.lib.recipe.hide("bi-bio-farm")
-bobmods.lib.recipe.hide("bi-bio-greenhouse")
-
-table.insert(data.raw["assembling-machine"]["chemical-plant-2"].crafting_categories, "basic-chemistry")
-table.insert(data.raw["assembling-machine"]["chemical-plant-3"].crafting_categories, "basic-chemistry")
-table.insert(data.raw["assembling-machine"]["chemical-plant-4"].crafting_categories, "basic-chemistry")
 
 --Change bismuth ammo to output rifle magazines
 data.raw.recipe["rifle-magazine-bismuth"].results = { { "rifle-magazine", 1} }
@@ -130,66 +124,65 @@ bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "furnace-pro-05")
 
 else
 
-bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "electric-furnace-3")
+bobmods.lib.recipe.add_new_ingredient("kr-advanced-furnace", "5d-electric-furnace-03")
 
 end
 
 -- TA Miners
 -- Crust Extractor
-bobmods.lib.recipe.remove_ingredient("crust_extractor", "pipe")
-bobmods.lib.recipe.remove_ingredient("crust_extractor", "speed-module")
-bobmods.lib.recipe.remove_ingredient("crust_extractor", "electric-motor")
-bobmods.lib.recipe.remove_ingredient("crust_extractor", "engine-unit")
-bobmods.lib.recipe.remove_ingredient("crust_extractor", "steel-plate")
-bobmods.lib.recipe.remove_ingredient("crust_extractor", "se-vulcanite-block")
-bobmods.lib.recipe.remove_ingredient("crust_extractor", "kr-steel-pipe")
-bobmods.lib.recipe.add_new_ingredient("crust_extractor", { "fi_materials_upgrade", 1 })
-bobmods.lib.recipe.add_new_ingredient("crust_extractor", { "area-mining-drill", 1 })
-bobmods.lib.recipe.add_new_ingredient("crust_extractor", { "elite-gearbox", 5 })
-bobmods.lib.recipe.add_new_ingredient("crust_extractor", { "se-dynamic-emitter", 5 })
-bobmods.lib.recipe.add_new_ingredient("crust_extractor", { "industrial-drill-head", 10 })
-bobmods.lib.recipe.add_new_ingredient("crust_extractor", { "speed-module-4", 20 })
-bobmods.lib.recipe.add_new_ingredient("crust_extractor", { "se-heavy-composite", 50 })
-bobmods.lib.recipe.add_new_ingredient("crust_extractor", { "se-heavy-bearing", 50 })
-bobmods.lib.recipe.add_new_ingredient("crust_extractor", { "se-space-pipe", 100 })
+Recipe("crust_extractor"):remove_ingredient("pipe")
+Recipe("crust_extractor"):remove_ingredient("speed-module")
+Recipe("crust_extractor"):remove_ingredient("electric-motor")
+Recipe("crust_extractor"):remove_ingredient("engine-unit")
+Recipe("crust_extractor"):remove_ingredient("steel-plate")
+Recipe("crust_extractor"):remove_ingredient("se-vulcanite-block")
+Recipe("crust_extractor"):remove_ingredient("kr-steel-pipe")
+Recipe("crust_extractor"):add_ingredient({ "fi_materials_upgrade", 1 })
+Recipe("crust_extractor"):add_ingredient({ "area-mining-drill", 1 })
+Recipe("crust_extractor"):add_ingredient({ "elite-gearbox", 5 })
+Recipe("crust_extractor"):add_ingredient({ "se-dynamic-emitter", 5 })
+Recipe("crust_extractor"):add_ingredient({ "industrial-drill-head", 10 })
+Recipe("crust_extractor"):add_ingredient({ "speed-module-4", 20 })
+Recipe("crust_extractor"):add_ingredient({ "se-heavy-composite", 50 })
+Recipe("crust_extractor"):add_ingredient({ "se-heavy-bearing", 50 })
+Recipe("crust_extractor"):add_ingredient({ "se-space-pipe", 100 })
 -- Moho Extractor
-bobmods.lib.recipe.remove_ingredient("moho_extractor", "pipe")
-bobmods.lib.recipe.remove_ingredient("moho_extractor", "speed-module-2")
-bobmods.lib.recipe.remove_ingredient("moho_extractor", "electric-engine-unit")
-bobmods.lib.recipe.remove_ingredient("moho_extractor", "steel-plate")
-bobmods.lib.recipe.remove_ingredient("moho_extractor", "se-cryonite-rod")
-bobmods.lib.recipe.remove_ingredient("moho_extractor", "se-beryllium-ingot")
-bobmods.lib.recipe.remove_ingredient("moho_extractor", "se-iridium-ingot")
-bobmods.lib.recipe.remove_ingredient("moho_extractor", "kr-steel-pipe")
-bobmods.lib.recipe.add_new_ingredient("moho_extractor", { "fu_materials_upgrade", 1 })
-bobmods.lib.recipe.add_new_ingredient("moho_extractor", { "crust_extractor", 1 })
-bobmods.lib.recipe.add_new_ingredient("moho_extractor", { "se-heavy-assembly", 10 })
-bobmods.lib.recipe.add_new_ingredient("moho_extractor", { "se-dynamic-emitter", 10 })
-bobmods.lib.recipe.add_new_ingredient("moho_extractor", { "industrial-drill-head", 20 })
-bobmods.lib.recipe.add_new_ingredient("moho_extractor", { "speed-module-5", 20 })
-bobmods.lib.recipe.add_new_ingredient("moho_extractor", { "imersium-beam", 100 })
-bobmods.lib.recipe.add_new_ingredient("moho_extractor", { "se-heavy-bearing", 100 })
-bobmods.lib.recipe.add_new_ingredient("moho_extractor", { "se-space-pipe", 200 })
+Recipe("moho_extractor"):remove_ingredient("pipe")
+Recipe("moho_extractor"):remove_ingredient("speed-module-2")
+Recipe("moho_extractor"):remove_ingredient("electric-engine-unit")
+Recipe("moho_extractor"):remove_ingredient("steel-plate")
+Recipe("moho_extractor"):remove_ingredient("se-cryonite-rod")
+Recipe("moho_extractor"):remove_ingredient("se-beryllium-ingot")
+Recipe("moho_extractor"):remove_ingredient("se-iridium-ingot")
+Recipe("moho_extractor"):remove_ingredient("kr-steel-pipe")
+Recipe("moho_extractor"):add_ingredient({ "fu_materials_upgrade", 1 })
+Recipe("moho_extractor"):add_ingredient({ "se-heavy-assembly", 10 })
+Recipe("moho_extractor"):add_ingredient({ "se-dynamic-emitter", 10 })
+Recipe("moho_extractor"):add_ingredient({ "industrial-drill-head", 20 })
+Recipe("moho_extractor"):add_ingredient({ "speed-module-5", 20 })
+Recipe("moho_extractor"):add_ingredient({ "imersium-beam", 100 })
+Recipe("moho_extractor"):add_ingredient({ "se-heavy-bearing", 100 })
+Recipe("moho_extractor"):add_ingredient({ "se-space-pipe", 200 })
 -- Mantle Extractor
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "pipe")
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "speed-module-3")
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "flying-robot-frame")
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "steel-plate")
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "imersium-beam")
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "imersium-plate")
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "se-cryonite-rod")
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "se-beryllium-plate")
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "se-iridium-plate")
-bobmods.lib.recipe.remove_ingredient("mantle_extractor", "kr-steel-pipe")
-bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "gr_materials_upgrade", 1 })
-bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "moho_extractor", 1 })
-bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-heavy-assembly", 20 })
-bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-dynamic-emitter", 20 })
-bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "industrial-drill-head", 40 })
-bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "speed-module-6", 20 })
-bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-naquium-plate", 100 })
-bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-heavy-bearing", 200 })
-bobmods.lib.recipe.add_new_ingredient("mantle_extractor", { "se-space-pipe", 300 })
+Recipe("mantle_extractor"):remove_ingredient("pipe")
+Recipe("mantle_extractor"):remove_ingredient("speed-module-3")
+Recipe("mantle_extractor"):remove_ingredient("flying-robot-frame")
+Recipe("mantle_extractor"):remove_ingredient("steel-plate")
+Recipe("mantle_extractor"):remove_ingredient("imersium-beam")
+Recipe("mantle_extractor"):remove_ingredient("imersium-plate")
+Recipe("mantle_extractor"):remove_ingredient("se-cryonite-rod")
+Recipe("mantle_extractor"):remove_ingredient("se-beryllium-plate")
+Recipe("mantle_extractor"):remove_ingredient("se-iridium-plate")
+Recipe("mantle_extractor"):remove_ingredient("kr-steel-pipe")
+Recipe("mantle_extractor"):add_ingredient({ "gr_materials_upgrade", 1 })
+Recipe("mantle_extractor"):add_ingredient({ "se-heavy-assembly", 20 })
+Recipe("mantle_extractor"):add_ingredient({ "se-dynamic-emitter", 20 })
+Recipe("mantle_extractor"):add_ingredient({ "industrial-drill-head", 40 })
+Recipe("mantle_extractor"):add_ingredient({ "speed-module-6", 20 })
+Recipe("mantle_extractor"):add_ingredient({ "se-naquium-plate", 100 })
+Recipe("mantle_extractor"):add_ingredient({ "se-heavy-bearing", 200 })
+Recipe("mantle_extractor"):add_ingredient({ "se-space-pipe", 300 })
+
 
 -- 248K research balance
 -- Rename Fusion tech to Fusion catalogue
@@ -360,7 +353,9 @@ data:extend({
 		enabled = false,
 		always_show_made_in = true,
   },
-	
+	--bobmods.lib.recipe.hide("bi-arboretum")
+--bobmods.lib.recipe.hide("bi-bio-farm")
+--bobmods.lib.recipe.hide("bi-bio-greenhouse")
 	
 	{
     type = "recipe",
@@ -766,14 +761,15 @@ data:extend({
 	
 })
 
--- Bob's Assembly
+
+-- 5DIM Machines
 -- K2 Integration
-util.replace_or_add_ingredient("kr-advanced-assembling-machine", "assembling-machine-3", "assembling-machine-6", 2, false)
-util.replace_or_add_ingredient("kr-advanced-assembling-machine", "electric-furnace", "electric-furnace-3", 2, false)
+util.replace_or_add_ingredient("kr-advanced-assembling-machine", "assembling-machine-3", "5d-assembling-machine-06", 2, false)
+util.replace_or_add_ingredient("kr-advanced-assembling-machine", "electric-furnace", "5d-electric-furnace-03", 2, false)
 
-bobmods.lib.recipe.add_new_ingredient("kr-advanced-chemical-plant", "chemical-plant-4")
+bobmods.lib.recipe.add_new_ingredient("kr-advanced-chemical-plant", "5d-chemical-plant-04")
 
-util.replace_or_add_ingredient("k11-advanced-centrifuge", "centrifuge", "centrifuge-3", 2, false)
+util.replace_or_add_ingredient("k11-advanced-centrifuge", "centrifuge", "5d-centrifuge-03", 2, false)
 
 bobmods.lib.recipe.remove_ingredient("kr-filtration-plant", "automation-core")
 util.replace_or_add_ingredient("kr-filtration-plant", "basic-chemical-plant", "t0-filtration-plant", 1, false)
@@ -787,72 +783,689 @@ util.replace_or_add_ingredient("kr-electrolysis-plant", "flow-controller", "adva
 bobmods.lib.recipe.add_new_ingredient("kr-electrolysis-plant", { "tungsten-carbide", 5})
 bobmods.lib.recipe.add_new_ingredient("kr-electrolysis-plant", { "hv-power-regulator", 5})
 
--- Electronic machine
-util.replace_or_add_ingredient("electronics-machine-1", "iron-plate", "aluminum-plate", 5, false)
-util.replace_or_add_ingredient("electronics-machine-1", nil, "articulated-mechanism", 2, false)
+util.replace_or_add_ingredient("biusart-lab", "lab", "5d-lab-03", 1, false)
 
-bobmods.lib.recipe.remove_ingredient("electronics-machine-2", "steel-plate")
-bobmods.lib.recipe.remove_ingredient("electronics-machine-2", "steel-gear")
-bobmods.lib.recipe.add_new_ingredient("electronics-machine-2", { "automation-core-2", 1 })
-bobmods.lib.recipe.add_new_ingredient("electronics-machine-2", { "solder", 3 })
+bobmods.lib.recipe.add_new_ingredient("kr-singularity-lab", { "5d-lab-09", 10 })
 
-util.replace_or_add_ingredient("electronics-machine-3", "titanium-plate", "automation-core-3", 1, false)
-util.replace_or_add_ingredient("electronics-machine-3", "iron-gear-wheel", "imersium-gear-wheel", 4, false)
-bobmods.lib.recipe.add_new_ingredient("electronics-machine-3", { "solder", 8 })
+util.replace_or_add_ingredient("se-space-science-lab", "biusart-lab", "5d-lab-04", 10, false)
+
+bobmods.lib.recipe.add_new_ingredient("se-nexus", { "5d-lab-10", 10 })
+
+util.replace_or_add_ingredient("gr_lab_recipe", "lab", "5d-lab-10", 40, false)
+
+util.replace_or_add_ingredient("fu_fusor_recipe", "lab", "5d-lab-04", 10, false)
+util.replace_or_add_ingredient("fu_fusor_recipe", "low-density-structure", "heat-resistant-low-density-structure", 100, false)
+
+util.replace_or_add_ingredient("gr_charger_recipe", "lab", "5d-lab-10", 10, false)
+bobmods.lib.recipe.add_new_ingredient("gr_charger_recipe", { "kr-stabilizer-charging-station", 1 })
+
+-- T-Lab
+data.raw.recipe["fu_lab_recipe"].category = "space-manufacturing"
+data.raw.recipe["fu_lab_recipe"].ingredients = {
+  {"5d-lab-10", 10},
+  {"kr-singularity-lab", 1},
+  {"energy-control-unit",50},
+  {"se-space-radiator-2",10},
+  {"se-space-hypercooler",4},
+  {"gr_materials_circuit",100},
+  {"fu_materials_energy_charged_crystal",50},
+  {"fu_materials_KFK", 100},
+  {"fu_materials_TIM", 100},
+  {"fu_materials_magnet", 50},
+  {"ai-core", 50},
+  {"se-naquium-processor", 20},
+  {"se-heavy-composite",50},
+  {"se-dynamic-emitter",50},
+  {"se-nanomaterial",50},
+  {"se-naquium-plate",300},
+  {"se-naquium-tessaract",5},
+  { type = "fluid", name = "se-space-coolant-supercooled", amount = 2000},
+}
 
 -- Assembler
-bobmods.lib.recipe.add_new_ingredient("assembling-machine-4", { "solder", 8 })
-bobmods.lib.recipe.add_new_ingredient("assembling-machine-4", { "hv-power-regulator", 1 })
-util.replace_or_add_ingredient("assembling-machine-4", "steel-plate", "nitinol-plate", 9, false)
-util.replace_or_add_ingredient("assembling-machine-4", "steel-gear-wheel", "imersium-gear-wheel", 8, false)
+-- 04 
+Recipe("5d-assembling-machine-04"):add_ingredient({ "solder", 8 })
+Recipe("5d-assembling-machine-04"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-assembling-machine-04"):replace_ingredient("steel-plate", { "nitinol-plate", 9 })
+Recipe("5d-assembling-machine-04"):replace_ingredient("steel-gear-wheel", { "imersium-gear-wheel", 8 })
+Recipe("5d-assembling-machine-04"):replace_ingredient("productivity-module", { "cermet", 2 })
+-- 05
+Recipe("5d-assembling-machine-05"):add_ingredient({ "solder", 8 })
+Recipe("5d-assembling-machine-05"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-assembling-machine-05"):replace_ingredient("titanium-plate", { "se-heavy-girder", 9 })
+Recipe("5d-assembling-machine-05"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 8 })
+Recipe("5d-assembling-machine-05"):replace_ingredient("steel-plate", { "cermet", 2 })
+Recipe("5d-assembling-machine-05"):replace_ingredient("speed-module-2", { "processing-unit", 5 })
+Recipe("5d-assembling-machine-05"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 06
+Recipe("5d-assembling-machine-06"):add_ingredient({ "solder", 8 })
+Recipe("5d-assembling-machine-06"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-assembling-machine-06"):replace_ingredient("titanium-plate", { "imersium-beam", 9 })
+Recipe("5d-assembling-machine-06"):replace_ingredient("iron-gear-wheel", { "se-heavy-bearing", 8 })
+Recipe("5d-assembling-machine-06"):replace_ingredient("steel-plate", { "se-aeroframe-scaffold", 20 })
+Recipe("5d-assembling-machine-06"):replace_ingredient("productivity-module-2", { "advanced-processing-unit", 5 })
+Recipe("5d-assembling-machine-06"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 07
+Recipe("5d-assembling-machine-07"):add_ingredient({ "solder", 8 })
+Recipe("5d-assembling-machine-07"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-assembling-machine-07"):add_ingredient({ "se-heavy-bearing", 8 })
+Recipe("5d-assembling-machine-07"):add_ingredient({ "se-aeroframe-bulkhead", 10 })
+Recipe("5d-assembling-machine-07"):replace_ingredient("titanium-plate", { "imersium-beam", 9 })
+Recipe("5d-assembling-machine-07"):replace_ingredient("speed-module-3", { "advanced-processing-unit", 10 })
+Recipe("5d-assembling-machine-07"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 08
+Recipe("5d-assembling-machine-08"):add_ingredient({ "solder", 8 })
+Recipe("5d-assembling-machine-08"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-assembling-machine-08"):add_ingredient({ "se-heavy-bearing", 8 })
+Recipe("5d-assembling-machine-08"):add_ingredient({ "se-aeroframe-bulkhead", 10 })
+Recipe("5d-assembling-machine-08"):replace_ingredient("titanium-plate", { "imersium-beam", 9 })
+Recipe("5d-assembling-machine-08"):replace_ingredient("productivity-module-3", { "gr_materials_circuit", 10 })
+Recipe("5d-assembling-machine-08"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 09
+Recipe("5d-assembling-machine-09"):add_ingredient({ "solder", 8 })
+Recipe("5d-assembling-machine-09"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-assembling-machine-09"):add_ingredient({ "se-heavy-bearing", 8 })
+Recipe("5d-assembling-machine-09"):add_ingredient({ "se-aeroframe-bulkhead", 10 })
+Recipe("5d-assembling-machine-09"):replace_ingredient("speed-module-3", { "se-nanomaterial", 10 })
+Recipe("5d-assembling-machine-09"):replace_ingredient("low-density-structure", { "se-heavy-assembly", 10 })
+Recipe("5d-assembling-machine-09"):replace_ingredient("processing-unit", { "gr_materials_circuit", 15 })
+Recipe("5d-assembling-machine-09"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 10
+Recipe("5d-assembling-machine-10"):add_ingredient({ "solder", 8 })
+Recipe("5d-assembling-machine-10"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-assembling-machine-10"):add_ingredient({ "se-heavy-bearing", 8 })
+Recipe("5d-assembling-machine-10"):add_ingredient({ "se-aeroframe-bulkhead", 10 })
+Recipe("5d-assembling-machine-10"):replace_ingredient("productivity-module-3", { "se-nanomaterial", 10 })
+Recipe("5d-assembling-machine-10"):replace_ingredient("low-density-structure", { "se-heavy-assembly", 10 })
+Recipe("5d-assembling-machine-10"):replace_ingredient("processing-unit", { "gr_materials_circuit", 20 })
+Recipe("5d-assembling-machine-10"):replace_ingredient("tungsten-carbide", { "se-naquium-cube", 1 })
 
-bobmods.lib.recipe.add_new_ingredient("assembling-machine-5", { "solder", 8 })
-bobmods.lib.recipe.add_new_ingredient("assembling-machine-5", { "hv-power-regulator", 1 })
-util.replace_or_add_ingredient("assembling-machine-5", "titanium-plate", "se-heavy-girder", 9, false)
-util.replace_or_add_ingredient("assembling-machine-5", "iron-gear-wheel", "imersium-gear-wheel", 8, false)
+-- Electronic machine
+-- 01
+Recipe("mini-assembler-1"):replace_ingredient("burner-assembling-machine", { "automation-core", 3 })
+Recipe("mini-assembler-1"):replace_ingredient("articulated-mechanism", { "articulated-mechanism", 2 })
+-- 02
+-- Nothing
+-- 03
+Recipe("mini-assembler-3"):remove_ingredient("advanced-gearbox", true)
+Recipe("mini-assembler-3"):remove_ingredient("complex-joint", true)
+Recipe("mini-assembler-3"):remove_ingredient("advanced-machining-tool", true)
+Recipe("mini-assembler-3"):replace_ingredient("steel-plate", { "automation-core-3", 1 })
+-- 04
+Recipe("mini-assembler-4"):add_ingredient({ "solder", 5 })
+Recipe("mini-assembler-4"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("mini-assembler-4"):add_ingredient({ "imersium-gear-wheel", 4 })
+Recipe("mini-assembler-4"):add_ingredient({ "processing-unit", 2 })
+Recipe("mini-assembler-4"):replace_ingredient("assembling-machine-3", {"mini-assembler-3", 1})
+Recipe("mini-assembler-4"):replace_ingredient("steel-plate", {"nitinol-plate", 9})
+Recipe("mini-assembler-4"):replace_ingredient("productivity-module", {"cermet", 1})
+-- 05
+Recipe("mini-assembler-5"):add_ingredient({ "solder", 5 })
+Recipe("mini-assembler-5"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("mini-assembler-5"):replace_ingredient("titanium-plate", { "se-heavy-girder", 2 })
+Recipe("mini-assembler-5"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 4 })
+Recipe("mini-assembler-5"):replace_ingredient("steel-plate", { "cermet", 1 })
+Recipe("mini-assembler-5"):replace_ingredient("speed-module-2", { "processing-unit", 5 })
+Recipe("mini-assembler-5"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 06
+Recipe("mini-assembler-6"):add_ingredient({ "solder", 5 })
+Recipe("mini-assembler-6"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("mini-assembler-6"):replace_ingredient("titanium-plate", { "imersium-beam", 2 })
+Recipe("mini-assembler-6"):replace_ingredient("iron-gear-wheel", { "se-heavy-bearing", 2 })
+Recipe("mini-assembler-6"):replace_ingredient("steel-plate", { "se-aeroframe-scaffold", 5 })
+Recipe("mini-assembler-6"):replace_ingredient("productivity-module-2", { "advanced-processing-unit", 5 })
+Recipe("mini-assembler-6"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 07
+Recipe("mini-assembler-7"):add_ingredient({ "solder", 5 })
+Recipe("mini-assembler-7"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("mini-assembler-7"):add_ingredient({ "se-heavy-bearing", 2 })
+Recipe("mini-assembler-7"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
+Recipe("mini-assembler-7"):replace_ingredient("titanium-plate", { "imersium-beam", 2 })
+Recipe("mini-assembler-7"):replace_ingredient("speed-module-3", { "advanced-processing-unit", 5 })
+Recipe("mini-assembler-7"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 08
+Recipe("mini-assembler-8"):add_ingredient({ "solder", 5 })
+Recipe("mini-assembler-8"):add_ingredient({ "ai-core", 1 })
+Recipe("mini-assembler-8"):add_ingredient({ "se-heavy-bearing", 2 })
+Recipe("mini-assembler-8"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
+Recipe("mini-assembler-8"):replace_ingredient("titanium-plate", { "imersium-beam", 2 })
+Recipe("mini-assembler-8"):replace_ingredient("productivity-module-3", { "gr_materials_circuit", 5 })
+Recipe("mini-assembler-8"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 09
+Recipe("mini-assembler-9"):add_ingredient({ "solder", 5 })
+Recipe("mini-assembler-9"):add_ingredient({ "ai-core", 1 })
+Recipe("mini-assembler-9"):add_ingredient({ "se-heavy-bearing", 2 })
+Recipe("mini-assembler-9"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
+Recipe("mini-assembler-9"):replace_ingredient("speed-module-3", { "se-nanomaterial", 5 })
+Recipe("mini-assembler-9"):replace_ingredient("low-density-structure", { "se-heavy-assembly", 2 })
+Recipe("mini-assembler-9"):replace_ingredient("processing-unit", { "gr_materials_circuit", 10 })
+Recipe("mini-assembler-9"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 10
+Recipe("mini-assembler-10"):add_ingredient({ "solder", 5 })
+Recipe("mini-assembler-10"):add_ingredient({ "ai-core", 1 })
+Recipe("mini-assembler-10"):add_ingredient({ "se-heavy-bearing", 2 })
+Recipe("mini-assembler-10"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
+Recipe("mini-assembler-10"):replace_ingredient("productivity-module-3", { "se-nanomaterial", 5 })
+Recipe("mini-assembler-10"):replace_ingredient("low-density-structure", { "se-heavy-assembly", 2 })
+Recipe("mini-assembler-10"):replace_ingredient("processing-unit", { "gr_materials_circuit", 10 })
+Recipe("mini-assembler-10"):replace_ingredient("tungsten-carbide", { "se-naquium-cube", 1 })
 
-bobmods.lib.recipe.add_new_ingredient("assembling-machine-6", { "solder", 8 })
-bobmods.lib.recipe.add_new_ingredient("assembling-machine-6", { "hv-power-regulator", 1 })
-util.replace_or_add_ingredient("assembling-machine-6", "titanium-plate", "imersium-beam", 9, false)
-util.replace_or_add_ingredient("assembling-machine-6", "iron-gear-wheel", "se-heavy-bearing", 8, false)
+--set all the crafting categories for the new electronics assemblers
+
+Recipe("basic-electronic-components"):change_category("electronics")
+Recipe("automation-core"):change_category("electronics")
+Recipe("blank-tech-card"):change_category("electronics")
+Recipe("electronic-components"):change_category("electronics-machine")
+Recipe("advanced-electronic-components"):change_category("electronics-machine")
+Recipe("gold-wire"):change_category("electronics-machine")
+Recipe("integrated-circuit"):change_category("electronics-machine")
+Recipe("tantalum-capacitor"):change_category("electronics-machine")
+Recipe("temperature-sensor"):change_category("electronics-machine")
+Recipe("mlcc"):change_category("electronics-machine")
+Recipe("nickel-electromagnet"):change_category("electronics-machine")
+Recipe("optical-fiber"):change_category("electronics-machine")
+Recipe("silver-wire"):change_category("electronics-machine")
+Recipe("tinned-cable"):change_category("electronics-machine")
+Recipe("advanced-cable"):change_category("electronics-machine")
+Recipe("advanced-processing-unit"):change_category("electronics-machine")
+Recipe("advanced-cable"):change_category("electronics-machine")
+Recipe("advanced-processing-unit"):change_category("electronics-machine")
+
+Recipe("electronic-circuit"):change_category("crafting")
+Recipe("processing-unit"):change_category("crafting-with-fluid")
+Recipe("rocket-control-unit"):change_category("crafting")
+
+data.raw["assembling-machine"]["mini-assembler-1"].crafting_categories = {"electronics"}
+data.raw["assembling-machine"]["mini-assembler-2"].crafting_categories = {"electronics", "electronics-machine"}
+data.raw["assembling-machine"]["mini-assembler-3"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-4"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-5"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-6"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-7"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-8"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-9"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-10"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+
+table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-04"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-05"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-06"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-07"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-08"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-09"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-10"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-farm")
+table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-greenhouse")
+table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "growing")
 
 -- Centrifuge
-bobmods.lib.recipe.add_new_ingredient("centrifuge-2", { "imersium-beam", 50 })
-bobmods.lib.recipe.add_new_ingredient("centrifuge-2", { "bearing", 20 })
-bobmods.lib.recipe.add_new_ingredient("centrifuge-2", { "se-heat-shielding", 40 })
-
-bobmods.lib.recipe.add_new_ingredient("centrifuge-3", { "se-heavy-girder", 50 })
-bobmods.lib.recipe.add_new_ingredient("centrifuge-3", { "bearing", 40 })
-bobmods.lib.recipe.add_new_ingredient("centrifuge-3", { "se-heat-shielding", 40 })
-util.replace_or_add_ingredient("centrifuge-3", "steel-plate", "nitinol-plate", 50, false)
+-- 02
+Recipe("5d-centrifuge-02"):add_ingredient({ "imersite-crystal", 10 })
+Recipe("5d-centrifuge-02"):add_ingredient({ "bearing", 20 })
+Recipe("5d-centrifuge-02"):replace_ingredient("steel-plate", { "se-heat-shielding", 40 })
+Recipe("5d-centrifuge-02"):replace_ingredient("advanced-circuit", { "processing-unit", 40 })
+-- 03
+Recipe("5d-centrifuge-03"):add_ingredient({ "imersium-beam", 50 })
+Recipe("5d-centrifuge-03"):add_ingredient({ "bearing", 30 })
+Recipe("5d-centrifuge-03"):replace_ingredient("steel-plate", { "se-heat-shielding", 40 })
+Recipe("5d-centrifuge-03"):replace_ingredient("advanced-circuit", { "processing-unit", 50 })
+-- 04
+Recipe("5d-centrifuge-04"):add_ingredient({ "se-heavy-girder", 50 })
+Recipe("5d-centrifuge-04"):add_ingredient({ "bearing", 40 })
+Recipe("5d-centrifuge-04"):replace_ingredient("low-density-structure", { "se-heat-shielding", 40 })
+Recipe("5d-centrifuge-04"):replace_ingredient("steel-plate", { "nitinol-plate", 50 })
+Recipe("5d-centrifuge-04"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 50 })
+Recipe("5d-centrifuge-04"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 50 })
+-- 05
+Recipe("5d-centrifuge-05"):add_ingredient({ "se-heavy-girder", 50 })
+Recipe("5d-centrifuge-05"):add_ingredient({ "bearing", 50 })
+Recipe("5d-centrifuge-05"):replace_ingredient("low-density-structure", { "se-heat-shielding", 40 })
+Recipe("5d-centrifuge-05"):replace_ingredient("steel-plate", { "nitinol-plate", 50 })
+Recipe("5d-centrifuge-05"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 50 })
+Recipe("5d-centrifuge-05"):replace_ingredient("processing-unit", { "advanced-processing-unit", 50 })
+Recipe("5d-centrifuge-05"):replace_ingredient("speed-module", { "fu_materials_TIM", 40 })
+-- 06
+Recipe("5d-centrifuge-06"):add_ingredient({ "imersium-beam", 50 })
+Recipe("5d-centrifuge-06"):add_ingredient({ "se-heavy-bearing", 50 })
+Recipe("5d-centrifuge-06"):replace_ingredient("low-density-structure", { "se-heat-shielding", 40 })
+Recipe("5d-centrifuge-06"):replace_ingredient("steel-plate", { "se-aeroframe-scaffold", 100 })
+Recipe("5d-centrifuge-06"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 60 })
+Recipe("5d-centrifuge-06"):replace_ingredient("processing-unit", { "advanced-processing-unit", 50 })
+Recipe("5d-centrifuge-06"):replace_ingredient("productivity-module", { "fu_materials_TIM", 50 })
+-- 07
+Recipe("5d-centrifuge-07"):add_ingredient({ "imersium-beam", 60 })
+Recipe("5d-centrifuge-07"):add_ingredient({ "se-heavy-bearing", 60 })
+Recipe("5d-centrifuge-07"):replace_ingredient("low-density-structure", { "se-heat-shielding", 40 })
+Recipe("5d-centrifuge-07"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 100 })
+Recipe("5d-centrifuge-07"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 70 })
+Recipe("5d-centrifuge-07"):replace_ingredient("processing-unit", { "advanced-processing-unit", 50 })
+Recipe("5d-centrifuge-07"):replace_ingredient("speed-module-2", { "fu_materials_TIM", 60 })
+-- 08
+Recipe("5d-centrifuge-08"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-centrifuge-08"):add_ingredient({ "imersium-beam", 60 })
+Recipe("5d-centrifuge-08"):add_ingredient({ "se-heavy-bearing", 60 })
+Recipe("5d-centrifuge-08"):replace_ingredient("low-density-structure", { "se-heat-shielding", 50 })
+Recipe("5d-centrifuge-08"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 100 })
+Recipe("5d-centrifuge-08"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 80 })
+Recipe("5d-centrifuge-08"):replace_ingredient("processing-unit", { "gr_materials_circuit", 50 })
+Recipe("5d-centrifuge-08"):replace_ingredient("productivity-module-2", { "fu_materials_TIM", 60 })
+-- 09
+Recipe("5d-centrifuge-09"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-centrifuge-09"):add_ingredient({ "se-heavy-assembly", 20 })
+Recipe("5d-centrifuge-09"):add_ingredient({ "se-heavy-bearing", 60 })
+Recipe("5d-centrifuge-09"):replace_ingredient("low-density-structure", { "se-nanomaterial", 20 })
+Recipe("5d-centrifuge-09"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 100 })
+Recipe("5d-centrifuge-09"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 90 })
+Recipe("5d-centrifuge-09"):replace_ingredient("processing-unit", { "gr_materials_circuit", 60 })
+Recipe("5d-centrifuge-09"):replace_ingredient("speed-module-3", { "fu_materials_TIM", 80 })
+-- 10
+Recipe("5d-centrifuge-10"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-centrifuge-10"):add_ingredient({ "se-heavy-assembly", 20 })
+Recipe("5d-centrifuge-10"):add_ingredient({ "se-heavy-bearing", 60 })
+Recipe("5d-centrifuge-10"):replace_ingredient("low-density-structure", { "se-nanomaterial", 20 })
+Recipe("5d-centrifuge-10"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 100 })
+Recipe("5d-centrifuge-10"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 100 })
+Recipe("5d-centrifuge-10"):replace_ingredient("processing-unit", { "gr_materials_circuit", 80 })
+Recipe("5d-centrifuge-10"):replace_ingredient("productivity-module-2", { "se-naquium-cube", 1 })
 
 -- Oil Refinery
-util.replace_or_add_ingredient("oil-refinery-2", "steel-plate", "tungsten-plate", 15, false)
-
-bobmods.lib.recipe.add_new_ingredient("oil-refinery-3", { "advanced-multi-cylinder-engine", 6 })
-util.replace_or_add_ingredient("oil-refinery-3", "titanium-plate", "imersium-beam", 15, false)
-util.replace_or_add_ingredient("oil-refinery-3", "steel-gear-wheel", "imersium-gear-wheel", 10, false)
-util.replace_or_add_ingredient("oil-refinery-3", "pipe", "kr-steel-pipe", 10, false)
-
-bobmods.lib.recipe.remove_ingredient("oil-refinery-4", "tungsten-plate")
-bobmods.lib.recipe.add_new_ingredient("oil-refinery-4", { "advanced-multi-cylinder-engine", 8 })
-util.replace_or_add_ingredient("oil-refinery-4", "titanium-plate", "se-heavy-girder", 15, false)
-util.replace_or_add_ingredient("oil-refinery-4", "steel-gear-wheel", "imersium-gear-wheel", 10, false)
-util.replace_or_add_ingredient("oil-refinery-4", "pipe", "brass-pipe", 10, false)
+-- 02
+Recipe("5d-oil-refinery-02"):add_ingredient({ "advanced-multi-cylinder-engine", 4 })
+Recipe("5d-oil-refinery-02"):replace_ingredient("steel-plate", { "tungsten-plate", 15 })
+Recipe("5d-oil-refinery-02"):replace_ingredient("iron-gear-wheel", { "steel-gear-wheel", 10 })
+Recipe("5d-oil-refinery-02"):replace_ingredient("electronic-circuit", { "glass", 15 })
+-- 03
+Recipe("5d-oil-refinery-03"):add_ingredient({ "advanced-multi-cylinder-engine", 6 })
+Recipe("5d-oil-refinery-03"):replace_ingredient("steel-plate", { "imersium-beam", 15 })
+Recipe("5d-oil-refinery-03"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-oil-refinery-03"):replace_ingredient("pipe", { "kr-steel-pipe", 10 })
+Recipe("5d-oil-refinery-03"):replace_ingredient("electronic-circuit", { "fi_materials_glass", 15 })
+-- 04
+Recipe("5d-oil-refinery-04"):add_ingredient({ "advanced-multi-cylinder-engine", 8 })
+Recipe("5d-oil-refinery-04"):replace_ingredient("steel-plate", { "se-heavy-girder", 15 })
+Recipe("5d-oil-refinery-04"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-oil-refinery-04"):replace_ingredient("pipe", { "brass-pipe", 10 })
+Recipe("5d-oil-refinery-04"):replace_ingredient("advanced-circuit", { "fi_materials_glass", 20 })
+-- 05
+Recipe("5d-oil-refinery-05"):replace_ingredient("speed-module", { "se-bioscrubber", 20 })
+Recipe("5d-oil-refinery-05"):replace_ingredient("steel-plate", { "se-heavy-girder", 20 })
+Recipe("5d-oil-refinery-05"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 20 })
+Recipe("5d-oil-refinery-05"):replace_ingredient("pipe", { "brass-pipe", 20 })
+Recipe("5d-oil-refinery-05"):replace_ingredient("advanced-circuit", { "fi_materials_glass", 30 })
+-- 06
+Recipe("5d-oil-refinery-06"):add_ingredient({ "se-aeroframe-scaffold", 50 })
+Recipe("5d-oil-refinery-06"):replace_ingredient("productivity-module", { "se-bioscrubber", 20 })
+Recipe("5d-oil-refinery-06"):replace_ingredient("steel-plate", { "se-heavy-girder", 20 })
+Recipe("5d-oil-refinery-06"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 30 })
+Recipe("5d-oil-refinery-06"):replace_ingredient("pipe", { "brass-pipe", 30 })
+Recipe("5d-oil-refinery-06"):replace_ingredient("advanced-circuit", { "fi_materials_glass", 40 })
+-- 07
+Recipe("5d-oil-refinery-07"):add_ingredient({ "se-aeroframe-bulkhead", 50 })
+Recipe("5d-oil-refinery-07"):replace_ingredient("speed-module-2", { "se-bioscrubber", 20 })
+Recipe("5d-oil-refinery-07"):replace_ingredient("steel-plate", { "se-heavy-girder", 20 })
+Recipe("5d-oil-refinery-07"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 40 })
+Recipe("5d-oil-refinery-07"):replace_ingredient("pipe", { "brass-pipe", 40 })
+Recipe("5d-oil-refinery-07"):replace_ingredient("advanced-circuit", { "fi_materials_glass", 50 })
+-- 08
+Recipe("5d-oil-refinery-08"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-oil-refinery-08"):add_ingredient({ "se-aeroframe-bulkhead", 50 })
+Recipe("5d-oil-refinery-08"):replace_ingredient("productivity-module-2", { "se-bioscrubber", 20 })
+Recipe("5d-oil-refinery-08"):replace_ingredient("steel-plate", { "se-heavy-girder", 20 })
+Recipe("5d-oil-refinery-08"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 50 })
+Recipe("5d-oil-refinery-08"):replace_ingredient("pipe", { "brass-pipe", 50 })
+Recipe("5d-oil-refinery-08"):replace_ingredient("advanced-circuit", { "fi_materials_glass", 60 })
+-- 09
+Recipe("5d-oil-refinery-09"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-oil-refinery-09"):add_ingredient({ "se-aeroframe-bulkhead", 50 })
+Recipe("5d-oil-refinery-09"):replace_ingredient("speed-module-3", { "se-bioscrubber", 20 })
+Recipe("5d-oil-refinery-09"):replace_ingredient("steel-plate", { "se-nanomaterial", 20 })
+Recipe("5d-oil-refinery-09"):replace_ingredient("iron-gear-wheel", { "se-heavy-assembly", 50 })
+Recipe("5d-oil-refinery-09"):replace_ingredient("pipe", { "brass-pipe", 50 })
+Recipe("5d-oil-refinery-09"):replace_ingredient("processing-unit", { "fi_materials_glass", 80 })
+-- 10
+Recipe("5d-oil-refinery-10"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-oil-refinery-10"):add_ingredient({ "se-aeroframe-bulkhead", 50 })
+Recipe("5d-oil-refinery-10"):replace_ingredient("speed-module-3", { "se-bioscrubber", 20 })
+Recipe("5d-oil-refinery-10"):replace_ingredient("steel-plate", { "se-nanomaterial", 20 })
+Recipe("5d-oil-refinery-10"):replace_ingredient("iron-gear-wheel", { "se-heavy-assembly", 50 })
+Recipe("5d-oil-refinery-10"):replace_ingredient("pipe", { "brass-pipe", 50 })
+Recipe("5d-oil-refinery-10"):replace_ingredient("processing-unit", { "se-naquium-cube", 1 })
 
 -- Chemical reactor
-util.replace_or_add_ingredient("chemical-plant-2", "steel-plate", "tungsten-plate", 15, false)
+-- 02
+Recipe("5d-chemical-plant-02"):replace_ingredient("steel-plate", { "tungsten-plate", 15 })
+Recipe("5d-chemical-plant-02"):replace_ingredient("iron-gear-wheel", { "steel-gear-wheel", 5 })
+Recipe("5d-chemical-plant-02"):replace_ingredient("electronic-circuit", { "advanced-circuit", 5 })
+Recipe("5d-chemical-plant-02"):add_ingredient({ "advanced-multi-cylinder-engine", 2 })
+Recipe("5d-chemical-plant-02"):add_ingredient({ "fi_materials_glass", 10 })
+-- 03
+Recipe("5d-chemical-plant-03"):add_ingredient({ "cermet", 2 })
+Recipe("5d-chemical-plant-03"):add_ingredient({ "advanced-multi-cylinder-engine", 4 })
+Recipe("5d-chemical-plant-03"):add_ingredient({ "fi_materials_glass", 10 })
+Recipe("5d-chemical-plant-03"):replace_ingredient("electronic-circuit", { "processing-unit", 5 })
+Recipe("5d-chemical-plant-03"):replace_ingredient("steel-plate", { "imersium-beam", 15 })
+Recipe("5d-chemical-plant-03"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-chemical-plant-03"):replace_ingredient("pipe", { "kr-steel-pipe", 10 })
+Recipe("5d-chemical-plant-03"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 04
+Recipe("5d-chemical-plant-04"):add_ingredient({ "cermet", 2 })
+Recipe("5d-chemical-plant-04"):add_ingredient({ "advanced-multi-cylinder-engine", 6 })
+Recipe("5d-chemical-plant-04"):add_ingredient({ "fi_materials_glass", 10 })
+Recipe("5d-chemical-plant-04"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 5 })
+Recipe("5d-chemical-plant-04"):replace_ingredient("steel-plate", { "se-heavy-girder", 15 })
+Recipe("5d-chemical-plant-04"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-chemical-plant-04"):replace_ingredient("pipe", { "brass-pipe", 10 })
+Recipe("5d-chemical-plant-04"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+-- 05
+Recipe("5d-chemical-plant-05"):add_ingredient({ "cermet", 2 })
+Recipe("5d-chemical-plant-05"):add_ingredient({ "advanced-multi-cylinder-engine", 8 })
+Recipe("5d-chemical-plant-05"):add_ingredient({ "fi_materials_glass", 10 })
+Recipe("5d-chemical-plant-05"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 5 })
+Recipe("5d-chemical-plant-05"):replace_ingredient("steel-plate", { "se-heavy-girder", 15 })
+Recipe("5d-chemical-plant-05"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-chemical-plant-05"):replace_ingredient("pipe", { "brass-pipe", 10 })
+Recipe("5d-chemical-plant-05"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+Recipe("5d-chemical-plant-05"):replace_ingredient("speed-module", { "se-bioscrubber", 10 })
+-- 06
+Recipe("5d-chemical-plant-06"):add_ingredient({ "se-aeroframe-scaffold", 10 })
+Recipe("5d-chemical-plant-06"):add_ingredient({ "advanced-multi-cylinder-engine", 10 })
+Recipe("5d-chemical-plant-06"):add_ingredient({ "fi_materials_glass", 10 })
+Recipe("5d-chemical-plant-06"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 5 })
+Recipe("5d-chemical-plant-06"):replace_ingredient("steel-plate", { "se-heavy-girder", 15 })
+Recipe("5d-chemical-plant-06"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-chemical-plant-06"):replace_ingredient("pipe", { "brass-pipe", 10 })
+Recipe("5d-chemical-plant-06"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+Recipe("5d-chemical-plant-06"):replace_ingredient("productivity-module", { "se-bioscrubber", 10 })
+-- 07
+Recipe("5d-chemical-plant-07"):add_ingredient({ "advanced-multi-cylinder-engine", 10 })
+Recipe("5d-chemical-plant-07"):add_ingredient({ "fi_materials_glass", 10 })
+Recipe("5d-chemical-plant-07"):replace_ingredient("low-density-structure", { "se-aeroframe-bulkhead", 10 })
+Recipe("5d-chemical-plant-07"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 5 })
+Recipe("5d-chemical-plant-07"):replace_ingredient("steel-plate", { "se-heavy-girder", 15 })
+Recipe("5d-chemical-plant-07"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-chemical-plant-07"):replace_ingredient("pipe", { "brass-pipe", 10 })
+Recipe("5d-chemical-plant-07"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+Recipe("5d-chemical-plant-07"):replace_ingredient("speed-module-2", { "se-bioscrubber", 10 })
+-- 08
+Recipe("5d-chemical-plant-08"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-chemical-plant-08"):add_ingredient({ "advanced-multi-cylinder-engine", 10 })
+Recipe("5d-chemical-plant-08"):add_ingredient({ "fi_materials_glass", 10 })
+Recipe("5d-chemical-plant-08"):replace_ingredient("low-density-structure", { "se-aeroframe-bulkhead", 10 })
+Recipe("5d-chemical-plant-08"):replace_ingredient("advanced-circuit", { "gr_materials_circuit", 10 })
+Recipe("5d-chemical-plant-08"):replace_ingredient("steel-plate", { "se-heavy-girder", 15 })
+Recipe("5d-chemical-plant-08"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-chemical-plant-08"):replace_ingredient("pipe", { "brass-pipe", 10 })
+Recipe("5d-chemical-plant-08"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+Recipe("5d-chemical-plant-08"):replace_ingredient("productivity-module-2", { "se-bioscrubber", 10 })
+-- 09
+Recipe("5d-chemical-plant-09"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-chemical-plant-09"):add_ingredient({ "advanced-multi-cylinder-engine", 10 })
+Recipe("5d-chemical-plant-09"):add_ingredient({ "fi_materials_glass", 10 })
+Recipe("5d-chemical-plant-09"):replace_ingredient("low-density-structure", { "se-aeroframe-bulkhead", 10 })
+Recipe("5d-chemical-plant-09"):replace_ingredient("processing-unit", { "gr_materials_circuit", 10 })
+Recipe("5d-chemical-plant-09"):replace_ingredient("steel-plate", { "se-nanomaterial", 10 })
+Recipe("5d-chemical-plant-09"):replace_ingredient("iron-gear-wheel", { "se-heavy-assembly", 10 })
+Recipe("5d-chemical-plant-09"):replace_ingredient("pipe", { "brass-pipe", 10 })
+Recipe("5d-chemical-plant-09"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
+Recipe("5d-chemical-plant-09"):replace_ingredient("speed-module-3", { "se-bioscrubber", 10 })
+-- 10
+Recipe("5d-chemical-plant-10"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-chemical-plant-10"):add_ingredient({ "advanced-multi-cylinder-engine", 10 })
+Recipe("5d-chemical-plant-10"):add_ingredient({ "fi_materials_glass", 10 })
+Recipe("5d-chemical-plant-10"):replace_ingredient("low-density-structure", { "se-aeroframe-bulkhead", 10 })
+Recipe("5d-chemical-plant-10"):replace_ingredient("processing-unit", { "gr_materials_circuit", 10 })
+Recipe("5d-chemical-plant-10"):replace_ingredient("steel-plate", { "se-nanomaterial", 10 })
+Recipe("5d-chemical-plant-10"):replace_ingredient("iron-gear-wheel", { "se-heavy-assembly", 10 })
+Recipe("5d-chemical-plant-10"):replace_ingredient("pipe", { "brass-pipe", 10 })
+Recipe("5d-chemical-plant-10"):replace_ingredient("tungsten-carbide", { "se-naquium-cube", 1 })
+Recipe("5d-chemical-plant-10"):replace_ingredient("productivity-module-3", { "se-bioscrubber", 10 })
 
-bobmods.lib.recipe.add_new_ingredient("chemical-plant-3", { "advanced-multi-cylinder-engine", 6 })
-util.replace_or_add_ingredient("chemical-plant-3", "titanium-plate", "imersium-beam", 15, false)
-util.replace_or_add_ingredient("chemical-plant-3", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
-util.replace_or_add_ingredient("chemical-plant-3", "pipe", "kr-steel-pipe", 10, false)
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-02"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-03"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-04"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-05"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-06"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-07"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-08"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-09"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-10"].crafting_categories, "basic-chemistry")
 
-bobmods.lib.recipe.remove_ingredient("chemical-plant-4", "tungsten-plate")
-bobmods.lib.recipe.add_new_ingredient("chemical-plant-4", { "advanced-multi-cylinder-engine", 8 })
-util.replace_or_add_ingredient("chemical-plant-4", "steel-plate", "se-heavy-girder", 15, false)
-util.replace_or_add_ingredient("chemical-plant-4", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
-util.replace_or_add_ingredient("chemical-plant-4", "pipe", "brass-pipe", 10, false)
+-- Furnaces
+-- 02
+Recipe("5d-electric-furnace-02"):add_ingredient({ "solder", 8 })
+Recipe("5d-electric-furnace-02"):add_ingredient({ "temperature-sensor", 1 })
+Recipe("5d-electric-furnace-02"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-electric-furnace-02"):add_ingredient({ "imersite-crystal", 1 })
+Recipe("5d-electric-furnace-02"):replace_ingredient("steel-plate", { "nitinol-plate", 9 })
+Recipe("5d-electric-furnace-02"):replace_ingredient("advanced-circuit", { "se-heat-shielding", 10 })
+-- 03
+Recipe("5d-electric-furnace-03"):add_ingredient({ "solder", 8 })
+Recipe("5d-electric-furnace-03"):add_ingredient({ "temperature-sensor", 1 })
+Recipe("5d-electric-furnace-03"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-electric-furnace-03"):add_ingredient({ "el_energy_crystal_charged_item", 1 })
+Recipe("5d-electric-furnace-03"):replace_ingredient("steel-plate", { "imersium-plate", 9 })
+Recipe("5d-electric-furnace-03"):replace_ingredient("advanced-circuit", { "se-heat-shielding", 10 })
+-- 04
+Recipe("5d-electric-furnace-04"):add_ingredient({ "solder", 8 })
+Recipe("5d-electric-furnace-04"):add_ingredient({ "temperature-sensor", 1 })
+Recipe("5d-electric-furnace-04"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-electric-furnace-04"):add_ingredient({ "fi_energy_crystal_charged_item", 1 })
+Recipe("5d-electric-furnace-04"):replace_ingredient("steel-plate", { "se-heavy-girder", 9 })
+Recipe("5d-electric-furnace-04"):replace_ingredient("advanced-circuit", { "se-heat-shielding", 10 })
+-- 05
+Recipe("5d-electric-furnace-05"):add_ingredient({ "solder", 8 })
+Recipe("5d-electric-furnace-05"):add_ingredient({ "temperature-sensor", 1 })
+Recipe("5d-electric-furnace-05"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-electric-furnace-05"):add_ingredient({ "fu_materials_energy_charged_crystal", 1 })
+Recipe("5d-electric-furnace-05"):replace_ingredient("speed-module", { "fu_materials_TIM", 5 })
+Recipe("5d-electric-furnace-05"):replace_ingredient("steel-plate", { "se-heavy-girder", 9 })
+Recipe("5d-electric-furnace-05"):replace_ingredient("advanced-circuit", { "se-heat-shielding", 10 })
+-- 06
+Recipe("5d-electric-furnace-06"):add_ingredient({ "solder", 8 })
+Recipe("5d-electric-furnace-06"):add_ingredient({ "temperature-sensor", 1 })
+Recipe("5d-electric-furnace-06"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-electric-furnace-06"):add_ingredient({ "fu_materials_energy_charged_crystal", 1 })
+Recipe("5d-electric-furnace-06"):replace_ingredient("productivity-module", { "fu_materials_TIM", 5 })
+Recipe("5d-electric-furnace-06"):replace_ingredient("steel-plate", { "se-aeroframe-scaffold", 10 })
+Recipe("5d-electric-furnace-06"):replace_ingredient("advanced-circuit", { "se-heat-shielding", 10 })
+-- 07
+Recipe("5d-electric-furnace-07"):add_ingredient({ "solder", 8 })
+Recipe("5d-electric-furnace-07"):add_ingredient({ "temperature-sensor", 1 })
+Recipe("5d-electric-furnace-07"):add_ingredient({ "hv-power-regulator", 1 })
+Recipe("5d-electric-furnace-07"):add_ingredient({ "fu_materials_energy_charged_crystal", 1 })
+Recipe("5d-electric-furnace-07"):replace_ingredient("speed-module-2", { "fu_materials_TIM", 5 })
+Recipe("5d-electric-furnace-07"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 10 })
+Recipe("5d-electric-furnace-07"):replace_ingredient("advanced-circuit", { "se-heat-shielding", 10 })
+-- 08
+Recipe("5d-electric-furnace-08"):add_ingredient({ "solder", 8 })
+Recipe("5d-electric-furnace-08"):add_ingredient({ "temperature-sensor", 1 })
+Recipe("5d-electric-furnace-08"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-electric-furnace-08"):add_ingredient({ "fu_materials_energy_charged_crystal", 1 })
+Recipe("5d-electric-furnace-08"):replace_ingredient("productivity-module-2", { "fu_materials_TIM", 5 })
+Recipe("5d-electric-furnace-08"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 10 })
+Recipe("5d-electric-furnace-08"):replace_ingredient("low-density-structure", { "se-heat-shielding", 10 })
+-- 09
+Recipe("5d-electric-furnace-09"):add_ingredient({ "solder", 8 })
+Recipe("5d-electric-furnace-09"):add_ingredient({ "temperature-sensor", 1 })
+Recipe("5d-electric-furnace-09"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-electric-furnace-09"):add_ingredient({ "fu_materials_energy_charged_crystal", 1 })
+Recipe("5d-electric-furnace-09"):replace_ingredient("speed-module-3", { "se-nanomaterial", 5 })
+Recipe("5d-electric-furnace-09"):replace_ingredient("steel-plate", { "se-heavy-assembly", 10 })
+Recipe("5d-electric-furnace-09"):replace_ingredient("low-density-structure", { "se-heat-shielding", 10 })
+-- 10
+Recipe("5d-electric-furnace-10"):add_ingredient({ "solder", 8 })
+Recipe("5d-electric-furnace-10"):add_ingredient({ "temperature-sensor", 1 })
+Recipe("5d-electric-furnace-10"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-electric-furnace-10"):add_ingredient({ "se-naquium-cube", 1 })
+Recipe("5d-electric-furnace-10"):replace_ingredient("productivity-module-3", { "se-nanomaterial", 5 })
+Recipe("5d-electric-furnace-10"):replace_ingredient("steel-plate", { "se-heavy-assembly", 10 })
+Recipe("5d-electric-furnace-10"):replace_ingredient("low-density-structure", { "se-heat-shielding", 10 })
+
+-- Labs
+-- 02
+Recipe("5d-lab-02"):replace_ingredient("transport-belt", { "glass", 10 })
+Recipe("5d-lab-02"):replace_ingredient("bakelite", { "zircaloy-4", 10 })
+-- 03
+Recipe("5d-lab-03"):add_ingredient({ "scanner", 5 })
+Recipe("5d-lab-03"):replace_ingredient("transport-belt", { "fi_materials_glass", 10 })
+Recipe("5d-lab-03"):replace_ingredient("bakelite", { "nitinol-plate", 10 })
+Recipe("5d-lab-03"):replace_ingredient("electronic-circuit", { "processing-unit", 10 })
+-- 04
+Recipe("5d-lab-04"):add_ingredient({ "scanner", 5 })
+Recipe("5d-lab-04"):replace_ingredient("fast-transport-belt", { "fi_materials_glass", 10 })
+Recipe("5d-lab-04"):replace_ingredient("steel-plate", { "imersium-plate", 10 })
+Recipe("5d-lab-04"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 10 })
+Recipe("5d-lab-04"):replace_ingredient("5d-lab-03", { "biusart-lab", 1 })
+-- 05
+Recipe("5d-lab-05"):replace_ingredient("fast-transport-belt", { "fi_materials_glass", 10 })
+Recipe("5d-lab-05"):replace_ingredient("steel-plate", { "se-heavy-girder", 10 })
+Recipe("5d-lab-05"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 10 })
+Recipe("5d-lab-05"):replace_ingredient("speed-module", { "scanner", 5 })
+-- 06
+Recipe("5d-lab-06"):replace_ingredient("fast-transport-belt", { "fi_materials_glass", 10 })
+Recipe("5d-lab-06"):replace_ingredient("steel-plate", { "se-aeroframe-scaffold", 10 })
+Recipe("5d-lab-06"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 10 })
+Recipe("5d-lab-06"):replace_ingredient("productivity-module", { "scanner", 5 })
+-- 07
+Recipe("5d-lab-07"):replace_ingredient("express-transport-belt", { "fi_materials_glass", 10 })
+Recipe("5d-lab-07"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 10 })
+Recipe("5d-lab-07"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 10 })
+Recipe("5d-lab-07"):replace_ingredient("speed-module-2", { "scanner", 5 })
+-- 08
+Recipe("5d-lab-08"):replace_ingredient("low-density-structure", { "ai-core", 1 })
+Recipe("5d-lab-08"):replace_ingredient("express-transport-belt", { "fi_materials_glass", 10 })
+Recipe("5d-lab-08"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 10 })
+Recipe("5d-lab-08"):replace_ingredient("advanced-circuit", { "gr_materials_circuit", 10 })
+Recipe("5d-lab-08"):replace_ingredient("productivity-module-2", { "scanner", 5 })
+-- 09
+Recipe("5d-lab-09"):replace_ingredient("low-density-structure", { "ai-core", 1 })
+Recipe("5d-lab-09"):replace_ingredient("express-transport-belt", { "se-heavy-assembly", 10 })
+Recipe("5d-lab-09"):replace_ingredient("steel-plate", { "se-nanomaterial", 10 })
+Recipe("5d-lab-09"):replace_ingredient("advanced-circuit", { "gr_materials_circuit", 10 })
+Recipe("5d-lab-09"):replace_ingredient("speed-module-3", { "se-dynamic-emitter", 5 })
+-- 10
+Recipe("5d-lab-10"):replace_ingredient("low-density-structure", { "ai-core", 1 })
+Recipe("5d-lab-10"):replace_ingredient("express-transport-belt", { "se-heavy-assembly", 10 })
+Recipe("5d-lab-10"):replace_ingredient("steel-plate", { "se-nanomaterial", 10 })
+Recipe("5d-lab-10"):replace_ingredient("processing-unit", { "gr_materials_circuit", 10 })
+Recipe("5d-lab-10"):replace_ingredient("productivity-module-3", { "se-naquium-cube", 1 })
+
+-- Masher
+-- 01
+Recipe("5d-masher-01"):replace_ingredient("electronic-circuit", { "electric-motor", 2 })
+Recipe("5d-masher-01"):replace_ingredient("steel-plate", { "articulated-mechanism", 5 })
+Recipe("5d-masher-01"):add_ingredient({ "aluminum-plate", 4 })
+Recipe("5d-masher-01"):add_ingredient({ "stone-brick", 4 })
+-- 02
+Recipe("5d-masher-02"):replace_ingredient("steel-plate", { "motorized-articulator", 5 })
+Recipe("5d-masher-02"):replace_ingredient("iron-gear-wheel", { "steel-gear-wheel", 10 })
+Recipe("5d-masher-02"):add_ingredient({ "gearbox", 2 })
+Recipe("5d-masher-02"):add_ingredient({ "tungsten-plate", 4 })
+Recipe("5d-masher-02"):add_ingredient({ "stone-brick", 4 })
+-- 03
+Recipe("5d-masher-03"):replace_ingredient("advanced-circuit", { "processing-unit", 4 })
+Recipe("5d-masher-03"):replace_ingredient("steel-plate", { "motorized-articulator", 5 })
+Recipe("5d-masher-03"):replace_ingredient("iron-gear-wheel", { "steel-gear-wheel", 10 })
+Recipe("5d-masher-03"):add_ingredient({ "advanced-gearbox", 2 })
+Recipe("5d-masher-03"):add_ingredient({ "nitinol-plate", 4 })
+Recipe("5d-masher-03"):add_ingredient({ "concrete", 4 })
+-- 04
+Recipe("5d-masher-04"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 4 })
+Recipe("5d-masher-04"):replace_ingredient("steel-plate", { "complex-joint", 5 })
+Recipe("5d-masher-04"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-masher-04"):add_ingredient({ "advanced-gearbox", 2 })
+Recipe("5d-masher-04"):add_ingredient({ "imersium-plate", 4 })
+Recipe("5d-masher-04"):add_ingredient({ "concrete", 4 })
+-- 05
+Recipe("5d-masher-05"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 4 })
+Recipe("5d-masher-05"):replace_ingredient("steel-plate", { "complex-joint", 5 })
+Recipe("5d-masher-05"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-masher-05"):replace_ingredient("speed-module", { "advanced-gearbox", 2 })
+Recipe("5d-masher-05"):add_ingredient({ "se-heavy-girder", 4 })
+Recipe("5d-masher-05"):add_ingredient({ "concrete", 4 })
+-- 06
+Recipe("5d-masher-06"):replace_ingredient("advanced-circuit", { "advanced-processing-unit", 4 })
+Recipe("5d-masher-06"):replace_ingredient("steel-plate", { "se-aeroframe-scaffold", 5 })
+Recipe("5d-masher-06"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-masher-06"):replace_ingredient("productivity-module", { "elite-gearbox", 2 })
+Recipe("5d-masher-06"):add_ingredient({ "se-heavy-girder", 4 })
+Recipe("5d-masher-06"):add_ingredient({ "concrete", 4 })
+-- 07
+Recipe("5d-masher-07"):replace_ingredient("processing-unit", { "advanced-processing-unit", 4 })
+Recipe("5d-masher-07"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 5 })
+Recipe("5d-masher-07"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-masher-07"):replace_ingredient("speed-module-2", { "elite-gearbox", 2 })
+Recipe("5d-masher-07"):add_ingredient({ "se-heavy-girder", 4 })
+Recipe("5d-masher-07"):add_ingredient({ "concrete", 4 })
+-- 08
+Recipe("5d-masher-08"):replace_ingredient("processing-unit", { "gr_materials_circuit", 4 })
+Recipe("5d-masher-08"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 5 })
+Recipe("5d-masher-08"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-masher-08"):replace_ingredient("productivity-module-2", { "elite-gearbox", 2 })
+Recipe("5d-masher-08"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-masher-08"):add_ingredient({ "se-heavy-girder", 4 })
+Recipe("5d-masher-08"):add_ingredient({ "concrete", 4 })
+-- 09
+Recipe("5d-masher-09"):replace_ingredient("processing-unit", { "gr_materials_circuit", 4 })
+Recipe("5d-masher-09"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 5 })
+Recipe("5d-masher-09"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-masher-09"):replace_ingredient("speed-module-3", { "se-heavy-assembly", 2 })
+Recipe("5d-masher-09"):replace_ingredient("low-density-structure", { "se-nanomaterial", 4 })
+Recipe("5d-masher-09"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-masher-09"):add_ingredient({ "concrete", 4 })
+-- 10
+Recipe("5d-masher-10"):replace_ingredient("processing-unit", { "gr_materials_circuit", 4 })
+Recipe("5d-masher-10"):replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 5 })
+Recipe("5d-masher-10"):replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+Recipe("5d-masher-10"):replace_ingredient("productivity-module-3", { "se-heavy-assembly", 2 })
+Recipe("5d-masher-10"):replace_ingredient("low-density-structure", { "se-nanomaterial", 4 })
+Recipe("5d-masher-10"):add_ingredient({ "ai-core", 1 })
+Recipe("5d-masher-10"):add_ingredient({ "se-naquium-cube", 1 })
+
+-- Hide nuke recipes
+
+Recipe("5d-steam-turbine-02"):set_enabled(false)
+Recipe("5d-steam-turbine-03"):set_enabled(false)
+Recipe("5d-steam-turbine-04"):set_enabled(false)
+Recipe("5d-steam-turbine-05"):set_enabled(false)
+Recipe("5d-steam-turbine-06"):set_enabled(false)
+Recipe("5d-steam-turbine-07"):set_enabled(false)
+Recipe("5d-steam-turbine-08"):set_enabled(false)
+Recipe("5d-steam-turbine-09"):set_enabled(false)
+Recipe("5d-steam-turbine-10"):set_enabled(false)
+
+Recipe("5d-heat-exchanger-02"):set_enabled(false)
+Recipe("5d-heat-exchanger-03"):set_enabled(false)
+Recipe("5d-heat-exchanger-04"):set_enabled(false)
+Recipe("5d-heat-exchanger-05"):set_enabled(false)
+Recipe("5d-heat-exchanger-06"):set_enabled(false)
+Recipe("5d-heat-exchanger-07"):set_enabled(false)
+Recipe("5d-heat-exchanger-08"):set_enabled(false)
+Recipe("5d-heat-exchanger-09"):set_enabled(false)
+Recipe("5d-heat-exchanger-10"):set_enabled(false)
+
+Recipe("5d-heat-pipe-02"):set_enabled(false)
+Recipe("5d-heat-pipe-03"):set_enabled(false)
+Recipe("5d-heat-pipe-04"):set_enabled(false)
+Recipe("5d-heat-pipe-05"):set_enabled(false)
+Recipe("5d-heat-pipe-06"):set_enabled(false)
+Recipe("5d-heat-pipe-07"):set_enabled(false)
+Recipe("5d-heat-pipe-08"):set_enabled(false)
+Recipe("5d-heat-pipe-09"):set_enabled(false)
+Recipe("5d-heat-pipe-10"):set_enabled(false)
+
+Recipe("5d-nuclear-reactor-02"):set_enabled(false)
+Recipe("5d-nuclear-reactor-03"):set_enabled(false)
+Recipe("5d-nuclear-reactor-04"):set_enabled(false)
+Recipe("5d-nuclear-reactor-05"):set_enabled(false)
+Recipe("5d-nuclear-reactor-06"):set_enabled(false)
+Recipe("5d-nuclear-reactor-07"):set_enabled(false)
+Recipe("5d-nuclear-reactor-08"):set_enabled(false)
+Recipe("5d-nuclear-reactor-09"):set_enabled(false)
+Recipe("5d-nuclear-reactor-10"):set_enabled(false)
+
+
 
 data:extend({
 -- Fix coke recipe
@@ -890,8 +1503,9 @@ data:extend({
 
 -- Fix burner assembler
 --util.replace_or_add_ingredient("burner-assembling-machine", "iron-gear-wheel", "automation-core", 2, false)
-util.replace_or_add_ingredient("burner-assembling-machine", "aluminum-plate", "aluminum-plate", 8, false)
-bobmods.lib.recipe.add_new_ingredient("burner-assembling-machine", { "stone-brick", 4 })
+--util.replace_or_add_ingredient("burner-assembling-machine", "aluminum-plate", "aluminum-plate", 8, false)
+--bobmods.lib.recipe.add_new_ingredient("burner-assembling-machine", { "stone-brick", 4 })
+
 
 --HCP circuit
 util.replace_or_add_ingredient("big-battery-mk3-equipment", "processing-unit", "gr_materials_circuit", 2, false)
@@ -928,6 +1542,8 @@ bobmods.lib.recipe.add_new_ingredient("antimatter-reactor-equipment", { "gr_mate
 bobmods.lib.recipe.add_new_ingredient("kr-energy-storage", { "gr_materials_circuit", 10 })
 
 bobmods.lib.recipe.add_new_ingredient("se-nexus", { "gr_materials_circuit", 10 })
+
+data.raw.fluid["hydrogen"].fuel_value = "150kJ"
 
 data:extend({
 	{
@@ -984,3 +1600,6 @@ data:extend({
 		allow_decomposition = false
 	},
 })
+
+-- Add usage for Fenolic Board
+Recipe("circuit-board"):add_ingredient({ "phenolic-board", 1 })
