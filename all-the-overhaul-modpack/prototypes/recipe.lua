@@ -1603,3 +1603,19 @@ data:extend({
 
 -- Add usage for Fenolic Board
 Recipe("circuit-board"):add_ingredient({ "phenolic-board", 1 })
+
+
+-- Change recipes of drills
+Recipe("kr-electric-mining-drill-mk3"):replace_ingredient("se-dynamic-emitter", { "imersium-gear-wheel", 5 })
+Recipe("kr-electric-mining-drill-mk3"):replace_ingredient("elite-gearbox", { "advanced-gearbox", 4 })
+Recipe("kr-electric-mining-drill-mk3"):replace_ingredient("se-heavy-composite", { "nitinol-plate", 4 })
+Recipe("kr-electric-mining-drill-mk3"):replace_ingredient("area-mining-drill", { "kr-electric-mining-drill-mk2", 1 })
+Recipe("kr-electric-mining-drill-mk3"):add_ingredient({ "cobalt-carbide", 5 })
+Recipe("kr-electric-mining-drill-mk3"):add_ingredient({ "fu_materials_KFK", 6 })
+Recipe("kr-electric-mining-drill-mk3"):add_ingredient({ "processing-unit", 5 })
+
+Recipe("area-mining-drill"):replace_ingredient("kr-electric-mining-drill-mk2", { "kr-electric-mining-drill-mk3", 1 })
+Recipe("area-mining-drill"):replace_ingredient("advanced-gearbox", { "elite-gearbox", 4 })
+Recipe("area-mining-drill"):replace_ingredient("processing-unit", { "advanced-processing-unit", 5 })
+Recipe("area-mining-drill"):replace_ingredient("motorized-articulator", { "advanced-machining-tool", 10 })
+Recipe("area-mining-drill"):add_ingredient({ "se-aeroframe-pole", 5 })

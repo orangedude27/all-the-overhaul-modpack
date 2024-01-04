@@ -12,6 +12,10 @@ moho.module_specification.module_slots = 7
 local mantle = data.raw["mining-drill"]["mantle_extractor"]
 table.insert(mantle.resource_categories, "hard-resource")
 
+-- Modified AAI drill
+local miner_aai = data.raw["mining-drill"]["area-mining-drill"]
+miner_aai.mining_speed = 1.5
+
 -- Modified 248K machines
 data.raw.lab["fu_lab_entity"].se_allow_in_space = true
 data.raw.lab["fu_lab_entity"].researching_speed = 20
