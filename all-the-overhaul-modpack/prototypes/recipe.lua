@@ -1619,3 +1619,213 @@ Recipe("area-mining-drill"):replace_ingredient("advanced-gearbox", { "elite-gear
 Recipe("area-mining-drill"):replace_ingredient("processing-unit", { "advanced-processing-unit", 5 })
 Recipe("area-mining-drill"):replace_ingredient("motorized-articulator", { "advanced-machining-tool", 10 })
 Recipe("area-mining-drill"):add_ingredient({ "se-aeroframe-pole", 5 })
+
+
+-- Ore refining
+Recipe("5d-iron-dust"):set_enabled(false)
+Recipe("5d-copper-plate"):set_enabled(false)
+Recipe("tungsten-plate-dust"):set_enabled(false)
+Recipe("titanium-plate-dust"):set_enabled(false)
+Recipe("lead-plate-dust"):set_enabled(false)
+Recipe("graphite-5d"):set_enabled(false)
+
+data:extend({
+	-- Iron
+	{
+        type = "recipe",
+        name = "atom-iron-plate-dust",
+        icons = {
+          { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64, icon_mipmaps = 3,},
+          { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-iron-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
+        },
+        category = "smelting",
+        energy_required = 3.2,
+        ingredients = {
+            {"5d-iron-dust", 10}
+        },
+        result = "iron-plate",
+		result_count = 5,
+    },
+	-- Copper
+	{
+        type = "recipe",
+        name = "atom-copper-plate-dust",
+        icons = {
+          { icon = "__base__/graphics/icons/copper-plate.png", icon_size = 64, icon_mipmaps = 3,},
+          { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-copper-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
+        },
+        category = "smelting",
+        energy_required = 3.2,
+        ingredients = {
+            {"5d-copper-dust", 10}
+        },
+        result = "copper-plate",
+		result_count = 5,
+    },
+	-- Tungsten
+	{
+        type = "recipe",
+        name = "atom-tungsten-plate-dust",
+        icons = {
+          { icon = "__bztungsten__/graphics/icons/tungsten-plate.png", icon_size = 128, icon_mipmaps = 3,},
+          { icon = "__bztungsten__/graphics/icons/tungsten-powder.png", icon_size = 64,  scale=0.25, shift= {-8, -8}},
+        },
+        category = "smelting",
+        energy_required = 32/15,
+        ingredients = {
+            {"tungsten-dust", 8}
+        },
+        result = "tungsten-plate",
+		result_count = 2,
+    },
+	-- Titanium
+	{
+        type = "recipe",
+        name = "atom-titanium-plate-dust",
+        icons = {
+          { icon = "__bztitanium__/graphics/icons/titanium-plate.png", icon_size = 64, icon_mipmaps = 3,},
+          { icon = "__bztitanium__/graphics/icons/titanium-powder.png", icon_size = 64,  scale=0.25, shift= {-8, -8}},
+        },
+        category = "smelting",
+        energy_required = 8,
+        ingredients = {
+            {"titanium-dust", 10}
+        },
+        result = "titanium-plate",
+		result_count = 1,
+    },
+	-- Lead
+	{
+        type = "recipe",
+        name = "atom-lead-plate-dust",
+        icons = {
+          { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64, icon_mipmaps = 3,},
+          { icon = "__bzlead__/graphics/icons/lead-powder.png", icon_size = 64,  scale=0.25, shift= {-8, -8}},
+        },
+        category = "smelting",
+        energy_required = 3.2,
+        ingredients = {
+            {"lead-dust", 10}
+        },
+        result = "lead-plate",
+		result_count = 5,
+    },
+	-- Gold
+	{
+        type = "recipe",
+        name = "atom-gold-dust",
+        icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-gold-dust.png", icon_size = 32, icon_mipmaps = 3,
+        category = "mashering",
+        energy_required = 3.2,
+        ingredients = {
+            {"gold-ore", 1}
+        },
+        result = "atom-gold-dust",
+		result_count = 2,
+    },
+	-- Tin
+	{
+        type = "recipe",
+        name = "atom-tin-dust",
+        icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-tin-dust.png", icon_size = 32, icon_mipmaps = 3,
+        category = "mashering",
+        energy_required = 3.2,
+        ingredients = {
+            {"tin-ore", 1}
+        },
+        result = "atom-tin-dust",
+		result_count = 2,
+    },
+	{
+        type = "recipe",
+        name = "atom-tin-plate-dust",
+        icons = {
+          { icon = "__bztin__/graphics/icons/tin-plate.png", icon_size = 128, icon_mipmaps = 3,},
+          { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-tin-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
+        },
+        category = "smelting",
+        energy_required = 3.2,
+        ingredients = {
+            {"atom-tin-dust", 12}
+        },
+        results = {
+			{ name = "tin-plate", amount = 5},
+			{ name = "bismuth-plate", amount = 1, probability = 0.09},
+		},
+    },
+	-- Zinc
+	{
+        type = "recipe",
+        name = "atom-zinc-dust",
+        icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png", icon_size = 32, icon_mipmaps = 3,
+        category = "mashering",
+        energy_required = 3.2,
+        ingredients = {
+            {"zinc-ore", 1}
+        },
+        result = "atom-zinc-dust",
+		result_count = 2,
+    },
+	{
+        type = "recipe",
+        name = "atom-zinc-plate-dust",
+        icons = {
+          { icon = "__BrassTacks__/graphics/classic/icons/zinc-plate.png", icon_size = 64, icon_mipmaps = 3,},
+          { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
+        },
+        category = "smelting",
+        energy_required = 3.2,
+        ingredients = {
+            {"atom-zinc-dust", 21}
+        },
+        results = {
+			{ name = "zinc-plate", amount = 15},
+			{ name = "silver-ore", amount = 1, probability = 0.06},
+			{ name = "bismuth-plate", amount = 1, probability = 0.06},
+		},
+    },
+})
+
+
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="atom-iron-plate-dust"})
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="5d-iron-dust"})
+Recipe("enriched-iron"):replace_ingredient("iron-ore", { "5d-iron-dust", 9 })
+
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="atom-copper-plate-dust"})
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="5d-copper-dust"})
+Recipe("enriched-copper"):replace_ingredient("copper-ore", { "5d-copper-dust", 9 })
+
+table.insert(data.raw.technology["tungsten-processing"].effects, 
+	{type = "unlock-recipe", recipe="atom-tungsten-plate-dust"})
+table.insert(data.raw.technology["tungsten-processing"].effects, 
+	{type = "unlock-recipe", recipe="tungsten-dust"})
+Recipe("enriched-tungsten"):replace_ingredient("tungsten-ore", { "tungsten-dust", 9 })
+
+Recipe("enriched-titanium"):replace_ingredient("titanium-ore", { "titanium-dust", 9 })
+
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="atom-lead-plate-dust"})
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="lead-dust"})
+Recipe("enriched-lead"):replace_ingredient("lead-ore", { "lead-dust", 9 })
+
+table.insert(data.raw.technology["gold-processing"].effects, 
+	{type = "unlock-recipe", recipe="atom-gold-dust"})
+Recipe("gold-powder"):replace_ingredient("gold-ore", { "atom-gold-dust", 1 })
+Recipe("enriched-gold"):replace_ingredient("gold-ore", { "atom-gold-dust", 9 })
+
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="atom-tin-dust"})
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="atom-tin-plate-dust"})
+Recipe("enriched-tin"):replace_ingredient("tin-ore", { "atom-tin-dust", 9 })
+	
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="atom-zinc-dust"})
+table.insert(data.raw.technology["5d-masher-1"].effects, 
+	{type = "unlock-recipe", recipe="atom-zinc-plate-dust"})
+Recipe("enriched-zinc"):replace_ingredient("zinc-ore", { "atom-zinc-dust", 9 })

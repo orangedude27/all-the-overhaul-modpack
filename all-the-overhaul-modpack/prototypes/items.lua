@@ -303,5 +303,32 @@ data:extend({
     order = "c-b4",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "atom-gold-dust",
+    icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-gold-dust.png",
+    icon_size = 32,
+    --subgroup = "data-energy",
+    --order = "f",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-tin-dust",
+    icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-tin-dust.png",
+    icon_size = 32,
+    --subgroup = "data-energy",
+    --order = "f",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-zinc-dust",
+    icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png",
+    icon_size = 32,
+    --subgroup = "data-energy",
+    --order = "f",
+    stack_size = 100
+  },
   
 })
