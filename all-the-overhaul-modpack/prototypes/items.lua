@@ -308,8 +308,6 @@ data:extend({
     name = "atom-gold-dust",
     icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-gold-dust.png",
     icon_size = 32,
-    --subgroup = "data-energy",
-    --order = "f",
     stack_size = 100
   },
   {
@@ -317,8 +315,6 @@ data:extend({
     name = "atom-tin-dust",
     icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-tin-dust.png",
     icon_size = 32,
-    --subgroup = "data-energy",
-    --order = "f",
     stack_size = 100
   },
   {
@@ -326,8 +322,62 @@ data:extend({
     name = "atom-zinc-dust",
     icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png",
     icon_size = 32,
-    --subgroup = "data-energy",
-    --order = "f",
+   stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-aluminium-dust",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-aluminium-dust.png",
+    icon_size = 32,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-bismuth-dust",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-bismuth-dust.png",
+    icon_size = 32,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-chrome-dust",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-dust.png",
+    icon_size = 32,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-cobalt-dust",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-dust.png",
+    icon_size = 32,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-indium-dust",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-dust.png",
+    icon_size = 32,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-manganese-dust",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-dust.png",
+    icon_size = 32,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-nickel-dust",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-dust.png",
+    icon_size = 32,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-tantalite-dust",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-dust.png",
+    icon_size = 32,
     stack_size = 100
   },
   
