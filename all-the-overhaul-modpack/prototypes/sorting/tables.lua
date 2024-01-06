@@ -805,7 +805,8 @@ local PipesSubOrder =
     ["ground"] = "[pg]",
     ["elbow"] = "[pe]",
     ["straight"] = "[ps]",
-    ["pipe"] = "[b]"
+    ["pipe"] = "[b]",
+    ["swivel-joint"] = "[z]"
 }
 
 local PipesRecipeOrder =
@@ -817,7 +818,9 @@ local PipesRecipeOrder =
     ["flow"] = "[a]",
     ["duct"] = "[z]",
     ["pipe"] = "[z]",
-    ["steel"] = "[z]"
+    ["steel"] = "[z]",
+    ["underground"] = "[z]",
+    ["top-up"] = "[z]"
 }
 
 local EquipmentBlacklist = { "data", "heat", "lab", "facility", "projector", "pistol", "ammo", "magazine", "shell", "launcher", "mine", "gun"}

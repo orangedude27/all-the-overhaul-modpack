@@ -128,9 +128,6 @@ util.tech_add_prerequisites("kr-advanced-furnace", "furnace-pro-5")
 
 end
 
--- Change miners
--- Remove T3 Miner by Krastorio
-bobmods.lib.tech.hide("kr-electric-mining-drill-mk3")
 -- Add TA Miners
 -- Crust Extractor
 data.raw.technology["crust_extractor"].unit.count = 600
@@ -1104,6 +1101,41 @@ data:extend({
             },
         },
     },
+	
+	{
+		type = "technology",
+		name = "mining-drill-mk3",
+		icon = "__Krastorio2Assets__/icons/entities/electric-mining-drill-mk3.png",
+		icon_size = 64,
+		--icon_mipmaps = 4,
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "kr-electric-mining-drill-mk3",
+			},
+		},
+		prerequisites = { "kr-electric-mining-drill-mk2", "kr-optimization-tech-card" },
+		unit = {
+			count = 300,
+			time = 45,
+			ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"se-rocket-science-pack", 1},
+				{"space-science-pack", 1},
+				{"kr-optimization-tech-card", 1 },
+			},
+		},
+	},
 })
 util.tech_lock_recipes("t0-filtration-plant", { "kr-filtration-plant" })
 util.tech_lock_recipes("t0-electrolysis-plant", { "kr-electrolysis-plant" })
+
+-- Change research or Drills
+util.tech_remove_prerequisites("area-mining-drill", {"production-science-pack", "kr-electric-mining-drill-mk2"})
+util.tech_add_prerequisites("area-mining-drill",{"se-heavy-bearing","mining-drill-mk3","se-aeroframe-pole"})
+util.tech_add_ingredients("area-mining-drill",{"utility-science-pack","se-material-science-pack-2","se-astronomic-science-pack-1"},false)
+
+util.tech_remove_prerequisites("se-processing-iridium", {"area-mining-drill"})
+util.tech_add_prerequisites("se-processing-iridium",{"mining-drill-mk3"})
