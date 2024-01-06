@@ -1,4 +1,30 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.1
+Date: 1.6.2024
+  Changes:
+    - Added back the MK3 Miner from K2 and AAI
+    - Major tweaks and addition of metal dusts to facilitate balanced ore refining
+    - Tweaked the Electronic assemblers power and pollution values to be what bobsassembly was doing.
+    - Added the silver based basic electronic components to the tier 1 machine
+  Mod Changes:
+    - Removed 5dim_core
+    - Removed 5dim_compatibility
+    - Removed 5dim_automation
+    - Removed 5dim_nuclear
+    - Removed 5dim_resources
+    - Added OD27_5dim_core
+    - Added OD27_5dim_compatibility
+    - Added OD27_5dim_automation
+    - Added OD27_5dim_nuclear
+    - Added OD27_5dim_resources
+  Bug Fixes:
+    - Fixed issue where the fusion pack was added to a lab twice causing a crash: https://discord.com/channels/1174743568590590053/1192429468841689090
+    - Fixed an issue with the deadlock mod: https://discord.com/channels/1174743568590590053/1192458952949121114
+    - Fixed some issues with the advanced fluid handling item groupings: https://discord.com/channels/1174743568590590053/1191892319826362468
+  Note:
+    - This update will require you to manually download the OD27_5dim mods manually if you are updating from the mod manager, and make sure to disable the original 5dim mods.
+    - If you are downloading this for the first time, everything should work fine. If not, please submit a bug report.
+---------------------------------------------------------------------------------------------------
 Version: 1.7.0
 Date: 1.4.2024
   Mod Changes:
