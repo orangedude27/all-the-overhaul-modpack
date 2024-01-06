@@ -1,5 +1,6 @@
 local util = require("data-util")
 local equipment = require("functions/equipment")
+local futil = require("util")
 
 -- wagons
 data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 50
@@ -66,9 +67,6 @@ end
 if settings.startup["bismuth-disable-bismuth-as-smelting-byproduct"].value == true then
   data.raw["resource"]["bismuth-ore"].minable.required_fluid = "water"
 end
-
---data.raw.recipe["bronze-plate"].energy_required = 25
---data.raw.recipe["cuw"].energy_required = 25
 
 equipment.add_category_to_equipment("small-portable-generator", "generator-equipment")
 equipment.add_category_to_equipment("portable-generator", "generator-equipment")
@@ -337,3 +335,9 @@ data.raw["car"]["kr-advanced-tank"].equipment_grid = "kr-advanced-tank-grid"
 equipment.clear_categories_from_grid("kr-advanced-tank-grid")
 equipment.add_category_to_grid("kr-advanced-tank-grid", "vehicle-motor")
 equipment.add_categories_to_grid("kr-advanced-tank-grid", arr_categories_for_transport)
+
+for i = 1, 10 do
+	data.raw["assembling-machine"]["mini-assembler-" .. i].crafting_speed = data.raw["assembling-machine"]["mini-assembler-" .. i].crafting_speed * 2
+  data.raw["assembling-machine"]["mini-assembler-" .. i].energy_source.emissions_per_minute = data.raw["assembling-machine"]["mini-assembler-" .. i].energy_source.emissions_per_minute / 2
+  data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage = (futil.parse_energy(data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage) / 2) .. "J"
+end

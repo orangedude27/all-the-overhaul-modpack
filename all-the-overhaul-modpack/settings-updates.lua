@@ -363,6 +363,7 @@ if mods["mini-machines"] then
   change_setting("mini-radar", false)
   change_setting("mini-electro", false)
   change_setting("mini-multi", false)
+  change_setting("mini-balance", false)
 end
 
 --se

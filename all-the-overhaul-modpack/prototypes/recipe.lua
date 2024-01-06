@@ -953,6 +953,7 @@ Recipe("mini-assembler-10"):replace_ingredient("tungsten-carbide", { "se-naquium
 --set all the crafting categories for the new electronics assemblers
 
 Recipe("basic-electronic-components"):change_category("electronics")
+Recipe("basic-electronic-components-silver"):change_category("electronics")
 Recipe("automation-core"):change_category("electronics")
 Recipe("blank-tech-card"):change_category("electronics")
 Recipe("electronic-components"):change_category("electronics-machine")
