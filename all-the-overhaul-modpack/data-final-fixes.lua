@@ -44,8 +44,20 @@ end
 
 data.raw.lab["fu_lab_entity"].inputs = util.table.deepcopy(data.raw.lab["kr-singularity-lab"].inputs)
 
+for i = 1, 3 do
+    if i == 1 then
+        data.raw.lab["lab"].inputs = util.table.deepcopy(data.raw.lab["5d-lab-02"].inputs)
+        table.insert(data.raw.lab["lab"].inputs, 1, "basic-tech-card")
+    else
+        local lab_name = "5d-lab-" .. (i < 10 and "0" or "") .. i
+        table.insert(data.raw.lab[lab_name].inputs, 1, "basic-tech-card")
+    end
+end
+
+data.raw.lab["5d-lab-03"].next_upgrade = nil
+data.raw.lab["biusart-lab"].researching_speed = 1.5
+
 for i = 4, 10 do
     local lab_name = "5d-lab-" .. (i < 10 and "0" or "") .. i
-    data.raw.lab[lab_name].se_allow_in_space = true
     data.raw.lab[lab_name].inputs = util.table.deepcopy(data.raw.lab["biusart-lab"].inputs)
 end

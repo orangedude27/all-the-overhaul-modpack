@@ -979,3 +979,8 @@ data:extend({
 	},
 })
 data.raw.furnace["fluid-furnace"].energy_source = fluid_energy_source()
+
+for i = 4, 10 do
+    local lab_name = "5d-lab-" .. (i < 10 and "0" or "") .. i
+    data.raw.lab[lab_name].se_allow_in_space = true
+end
