@@ -1,38 +1,38 @@
-local util = require("data-util")
+local atom_util = require("data-util")
 local Recipe = require('__stdlib__/stdlib/data/recipe')
 --LDS 248k Recipe fix
-util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "titanium-plate", 8, false)
-util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "diamond", 4, false)
-util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "zirconia", 20, false)
-util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "carbon-fiber", 20, false)
+atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "titanium-plate", 8, false)
+atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "diamond", 4, false)
+atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "zirconia", 20, false)
+atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "carbon-fiber", 20, false)
 --Adjust basic electronic components to require more ingredients
-util.replace_or_add_ingredient("basic-electronic-components", "copper-cable", "copper-cable", 5, false)
-util.replace_or_add_ingredient("basic-electronic-components", "graphite", "graphite", 5, false)
+atom_util.replace_or_add_ingredient("basic-electronic-components", "copper-cable", "copper-cable", 5, false)
+atom_util.replace_or_add_ingredient("basic-electronic-components", "graphite", "graphite", 5, false)
 --Adjust Electronic circuits recipies to use less electronic components
-util.replace_or_add_ingredient("electronic-circuit", "basic-electronic-components", "basic-electronic-components", 2,
+atom_util.replace_or_add_ingredient("electronic-circuit", "basic-electronic-components", "basic-electronic-components", 2,
     false)
-util.replace_or_add_ingredient("electronic-circuit-silver", "basic-electronic-components", "silver-wire", 4, false)
+atom_util.replace_or_add_ingredient("electronic-circuit-silver", "basic-electronic-components", "silver-wire", 4, false)
 --Add Mysterious energy crystals to Prod 1
-util.replace_or_add_ingredient("productivity-module", "glass", "el_energy_crystal_item", 10, false)
+atom_util.replace_or_add_ingredient("productivity-module", "glass", "el_energy_crystal_item", 10, false)
 --Adjust Artificial energy crystals to be use more.
-util.replace_or_add_ingredient("big-battery-equipment", nil, "fi_energy_crystal_item", 4, false)
-util.replace_or_add_ingredient("se-rtg-equipment", nil, "fi_energy_crystal_item", 4, false)
-util.replace_or_add_ingredient("big-solar-panel-equipment", nil, "fi_energy_crystal_item", 4, false)
-util.replace_or_add_ingredient("productivity-module-2", "glass", "fi_energy_crystal_item", 10, false)
+atom_util.replace_or_add_ingredient("big-battery-equipment", nil, "fi_energy_crystal_item", 4, false)
+atom_util.replace_or_add_ingredient("se-rtg-equipment", nil, "fi_energy_crystal_item", 4, false)
+atom_util.replace_or_add_ingredient("big-solar-panel-equipment", nil, "fi_energy_crystal_item", 4, false)
+atom_util.replace_or_add_ingredient("productivity-module-2", "glass", "fi_energy_crystal_item", 10, false)
 --Adjust Refined Crystals to be used more
-util.replace_or_add_ingredient("productivity-module-3", "mlcc", "fu_materials_refined_crystal", 4, false)
-util.replace_or_add_ingredient("big-battery-mk2-equipment", nil, "fu_materials_refined_crystal", 4, false)
-util.replace_or_add_ingredient("big-imersite-solar-panel-equipment", nil, "fu_materials_refined_crystal", 4, false)
+atom_util.replace_or_add_ingredient("productivity-module-3", "mlcc", "fu_materials_refined_crystal", 4, false)
+atom_util.replace_or_add_ingredient("big-battery-mk2-equipment", nil, "fu_materials_refined_crystal", 4, false)
+atom_util.replace_or_add_ingredient("big-imersite-solar-panel-equipment", nil, "fu_materials_refined_crystal", 4, false)
 --Adding Neodymium to some recipes
-util.replace_or_add_ingredient("se-space-hypercooler", nil, "fi_materials_neodym", 15, false)
-util.replace_or_add_ingredient("se-space-radiator", nil, "fi_materials_neodym", 15, false)
-util.replace_or_add_ingredient("se-space-radiator-2", nil, "fi_materials_neodym", 15, false)
+atom_util.replace_or_add_ingredient("se-space-hypercooler", nil, "fi_materials_neodym", 15, false)
+atom_util.replace_or_add_ingredient("se-space-radiator", nil, "fi_materials_neodym", 15, false)
+atom_util.replace_or_add_ingredient("se-space-radiator-2", nil, "fi_materials_neodym", 15, false)
 --Adjust 248k recipes to be better balanced
-util.replace_or_add_ingredient("steel-plate", "iron-plate", "iron-plate", 10, false)
-util.replace_or_add_ingredient("el_purify_iron_recipe", "iron-ore", "iron-ore", 13, false)
-util.replace_or_add_ingredient("el_purify_copper_recipe", "copper-ore", "copper-ore", 13, false)
+atom_util.replace_or_add_ingredient("steel-plate", "iron-plate", "iron-plate", 10, false)
+atom_util.replace_or_add_ingredient("el_purify_iron_recipe", "iron-ore", "iron-ore", 13, false)
+atom_util.replace_or_add_ingredient("el_purify_copper_recipe", "copper-ore", "copper-ore", 13, false)
 --Changed quantum processors to use hcp instead of blue curcuits
-util.replace_or_add_ingredient("se-quantum-processor","processing-unit","gr_materials_circuit", 4 ,false)
+atom_util.replace_or_add_ingredient("se-quantum-processor","processing-unit","gr_materials_circuit", 4 ,false)
 
 --Disable wooden rails and rail conversions
 bobmods.lib.recipe.hide("bi-rail-wood")
@@ -59,11 +59,11 @@ data.raw.recipe["fi_dirty_solution_pack_recipe"].localised_name = "Cloudy water 
 
 --Change pcb solder(Bismuth) ingredients to solder(BZTIN) and adjust recipe and remove PCB-Solder
 --Until I can find a better way to remove pcb solder from recipes that have both, i'm doing this
-util.replace_or_add_ingredient("roboport", "pcb-solder", "battery", 50, false)
-util.find_and_replace_ingredients({ ["pcb-solder"] = "solder" })
+atom_util.replace_or_add_ingredient("roboport", "pcb-solder", "battery", 50, false)
+atom_util.find_and_replace_ingredients({ ["pcb-solder"] = "solder" })
 data.raw.recipe["pcb-solder"].localised_name = "Lead Free Solder"
-util.replace_or_add_ingredient("pcb-solder", "tin-plate", "tin-plate", 3, false)
-util.replace_or_add_ingredient("pcb-solder", "bismuth-plate", "bismuth-plate", 3, false)
+atom_util.replace_or_add_ingredient("pcb-solder", "tin-plate", "tin-plate", 3, false)
+atom_util.replace_or_add_ingredient("pcb-solder", "bismuth-plate", "bismuth-plate", 3, false)
 data.raw.recipe["pcb-solder"].results = { { "solder", 6 }, { type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8 } }
 data.raw.recipe["pcb-solder"].main_product = "solder"
 data.raw.technology["pcb-solder"].localised_name = "Lead free solder"
@@ -764,39 +764,39 @@ data:extend({
 
 -- 5DIM Machines
 -- K2 Integration
-util.replace_or_add_ingredient("kr-advanced-assembling-machine", "assembling-machine-3", "5d-assembling-machine-06", 2, false)
-util.replace_or_add_ingredient("kr-advanced-assembling-machine", "electric-furnace", "5d-electric-furnace-03", 2, false)
+atom_util.replace_or_add_ingredient("kr-advanced-assembling-machine", "assembling-machine-3", "5d-assembling-machine-06", 2, false)
+atom_util.replace_or_add_ingredient("kr-advanced-assembling-machine", "electric-furnace", "5d-electric-furnace-03", 2, false)
 
 bobmods.lib.recipe.add_new_ingredient("kr-advanced-chemical-plant", "5d-chemical-plant-04")
 
-util.replace_or_add_ingredient("k11-advanced-centrifuge", "centrifuge", "5d-centrifuge-03", 2, false)
+atom_util.replace_or_add_ingredient("k11-advanced-centrifuge", "centrifuge", "5d-centrifuge-03", 2, false)
 
 bobmods.lib.recipe.remove_ingredient("kr-filtration-plant", "automation-core")
-util.replace_or_add_ingredient("kr-filtration-plant", "basic-chemical-plant", "t0-filtration-plant", 1, false)
-util.replace_or_add_ingredient("kr-filtration-plant", "flow-controller", "advanced-multi-cylinder-engine", 2, false)
+atom_util.replace_or_add_ingredient("kr-filtration-plant", "basic-chemical-plant", "t0-filtration-plant", 1, false)
+atom_util.replace_or_add_ingredient("kr-filtration-plant", "flow-controller", "advanced-multi-cylinder-engine", 2, false)
 bobmods.lib.recipe.add_new_ingredient("kr-filtration-plant", { "tungsten-carbide", 5})
 bobmods.lib.recipe.add_new_ingredient("kr-filtration-plant", { "tungsten-plate", 20})
 
 bobmods.lib.recipe.remove_ingredient("kr-electrolysis-plant", "automation-core")
-util.replace_or_add_ingredient("kr-electrolysis-plant", "graphite", "t0-electrolysis-plant", 1, false)
-util.replace_or_add_ingredient("kr-electrolysis-plant", "flow-controller", "advanced-multi-cylinder-engine", 2, false)
+atom_util.replace_or_add_ingredient("kr-electrolysis-plant", "graphite", "t0-electrolysis-plant", 1, false)
+atom_util.replace_or_add_ingredient("kr-electrolysis-plant", "flow-controller", "advanced-multi-cylinder-engine", 2, false)
 bobmods.lib.recipe.add_new_ingredient("kr-electrolysis-plant", { "tungsten-carbide", 5})
 bobmods.lib.recipe.add_new_ingredient("kr-electrolysis-plant", { "hv-power-regulator", 5})
 
-util.replace_or_add_ingredient("biusart-lab", "lab", "5d-lab-03", 1, false)
+atom_util.replace_or_add_ingredient("biusart-lab", "lab", "5d-lab-03", 1, false)
 
 bobmods.lib.recipe.add_new_ingredient("kr-singularity-lab", { "5d-lab-09", 10 })
 
-util.replace_or_add_ingredient("se-space-science-lab", "biusart-lab", "5d-lab-04", 10, false)
+atom_util.replace_or_add_ingredient("se-space-science-lab", "biusart-lab", "5d-lab-04", 10, false)
 
 bobmods.lib.recipe.add_new_ingredient("se-nexus", { "5d-lab-10", 10 })
 
-util.replace_or_add_ingredient("gr_lab_recipe", "lab", "5d-lab-10", 40, false)
+atom_util.replace_or_add_ingredient("gr_lab_recipe", "lab", "5d-lab-10", 40, false)
 
-util.replace_or_add_ingredient("fu_fusor_recipe", "lab", "5d-lab-04", 10, false)
-util.replace_or_add_ingredient("fu_fusor_recipe", "low-density-structure", "heat-resistant-low-density-structure", 100, false)
+atom_util.replace_or_add_ingredient("fu_fusor_recipe", "lab", "5d-lab-04", 10, false)
+atom_util.replace_or_add_ingredient("fu_fusor_recipe", "low-density-structure", "heat-resistant-low-density-structure", 100, false)
 
-util.replace_or_add_ingredient("gr_charger_recipe", "lab", "5d-lab-10", 10, false)
+atom_util.replace_or_add_ingredient("gr_charger_recipe", "lab", "5d-lab-10", 10, false)
 bobmods.lib.recipe.add_new_ingredient("gr_charger_recipe", { "kr-stabilizer-charging-station", 1 })
 
 -- T-Lab
@@ -1503,39 +1503,39 @@ data:extend({
 })
 
 -- Fix burner assembler
---util.replace_or_add_ingredient("burner-assembling-machine", "iron-gear-wheel", "automation-core", 2, false)
---util.replace_or_add_ingredient("burner-assembling-machine", "aluminum-plate", "aluminum-plate", 8, false)
+--atom_util.replace_or_add_ingredient("burner-assembling-machine", "iron-gear-wheel", "automation-core", 2, false)
+--atom_util.replace_or_add_ingredient("burner-assembling-machine", "aluminum-plate", "aluminum-plate", 8, false)
 --bobmods.lib.recipe.add_new_ingredient("burner-assembling-machine", { "stone-brick", 4 })
 
 
 --HCP circuit
-util.replace_or_add_ingredient("big-battery-mk3-equipment", "processing-unit", "gr_materials_circuit", 2, false)
-util.replace_or_add_ingredient("battery-mk3-equipment", "processing-unit", "gr_materials_circuit", 1, false)
+atom_util.replace_or_add_ingredient("big-battery-mk3-equipment", "processing-unit", "gr_materials_circuit", 2, false)
+atom_util.replace_or_add_ingredient("battery-mk3-equipment", "processing-unit", "gr_materials_circuit", 1, false)
 
-util.replace_or_add_ingredient("se-space-supercomputer-3", "advanced-processing-unit", "gr_materials_circuit", 1000, false)
+atom_util.replace_or_add_ingredient("se-space-supercomputer-3", "advanced-processing-unit", "gr_materials_circuit", 1000, false)
 bobmods.lib.recipe.add_new_ingredient("se-space-supercomputer-3", { "gr_materials_circuit", 50 })
 
-util.replace_or_add_ingredient("se-thruster-suit-3", "processing-unit", "gr_materials_circuit", 100, false)
-util.replace_or_add_ingredient("se-thruster-suit-4", "processing-unit", "gr_materials_circuit", 200, false)
+atom_util.replace_or_add_ingredient("se-thruster-suit-3", "processing-unit", "gr_materials_circuit", 100, false)
+atom_util.replace_or_add_ingredient("se-thruster-suit-4", "processing-unit", "gr_materials_circuit", 200, false)
 
 bobmods.lib.recipe.add_new_ingredient("se-big-turbine", { "gr_materials_circuit", 20 })
 
-util.replace_or_add_ingredient("se-energy-transmitter-emitter", "processing-unit", "gr_materials_circuit", 100, false)
-util.replace_or_add_ingredient("se-energy-transmitter-injector", "processing-unit", "gr_materials_circuit", 50, false)
-util.replace_or_add_ingredient("se-energy-receiver", "processing-unit", "gr_materials_circuit", 50, false)
+atom_util.replace_or_add_ingredient("se-energy-transmitter-emitter", "processing-unit", "gr_materials_circuit", 100, false)
+atom_util.replace_or_add_ingredient("se-energy-transmitter-injector", "processing-unit", "gr_materials_circuit", 50, false)
+atom_util.replace_or_add_ingredient("se-energy-receiver", "processing-unit", "gr_materials_circuit", 50, false)
 
-util.replace_or_add_ingredient("fusion-reactor-equipment", "processing-unit", "gr_materials_circuit", 150, false)
+atom_util.replace_or_add_ingredient("fusion-reactor-equipment", "processing-unit", "gr_materials_circuit", 150, false)
 
-util.replace_or_add_ingredient("se-antimatter-reactor", "processing-unit", "gr_materials_circuit", 500, false)
+atom_util.replace_or_add_ingredient("se-antimatter-reactor", "processing-unit", "gr_materials_circuit", 500, false)
 
-util.replace_or_add_ingredient("antimatter-turret-rocket", "processing-unit", "gr_materials_circuit", 1, false)
-util.replace_or_add_ingredient("antimatter-rocket", "processing-unit", "gr_materials_circuit", 1, false)
-util.replace_or_add_ingredient("antimatter-artillery-shell", "processing-unit", "gr_materials_circuit", 1, false)
-util.replace_or_add_ingredient("antimatter-railgun-shell", "processing-unit", "gr_materials_circuit", 1, false)
+atom_util.replace_or_add_ingredient("antimatter-turret-rocket", "processing-unit", "gr_materials_circuit", 1, false)
+atom_util.replace_or_add_ingredient("antimatter-rocket", "processing-unit", "gr_materials_circuit", 1, false)
+atom_util.replace_or_add_ingredient("antimatter-artillery-shell", "processing-unit", "gr_materials_circuit", 1, false)
+atom_util.replace_or_add_ingredient("antimatter-railgun-shell", "processing-unit", "gr_materials_circuit", 1, false)
 
-util.replace_or_add_ingredient("kr-stabilizer-charging-station", "processing-unit", "gr_materials_circuit", 1, false)
+atom_util.replace_or_add_ingredient("kr-stabilizer-charging-station", "processing-unit", "gr_materials_circuit", 1, false)
 
-util.replace_or_add_ingredient("fu_star_engine_core_entity", "processing-unit", "gr_materials_circuit", 3000, false)
+atom_util.replace_or_add_ingredient("fu_star_engine_core_entity", "processing-unit", "gr_materials_circuit", 3000, false)
 
 bobmods.lib.recipe.add_new_ingredient("kr-antimatter-reactor", { "gr_materials_circuit", 100 })
 bobmods.lib.recipe.add_new_ingredient("antimatter-reactor-equipment", { "gr_materials_circuit", 50 })

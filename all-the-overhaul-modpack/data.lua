@@ -25,3 +25,5 @@ if mods["RampantArsenal"] then
 end
 require("prototypes/items")
 require("prototypes/entities/machines")
+
+require("prototypes/ore-refining")

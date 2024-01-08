@@ -95,3 +95,6 @@ for _, ammo in pairs(data.raw.ammo) do
     end
     ::continue::
 end
+
+
+table.insert(data.raw["assembling-machine"]["fu_ingot_entity"].crafting_categories, "casting")
