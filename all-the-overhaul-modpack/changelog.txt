@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.2
+Date: 1.7.2024
+  Changes:
+    - Tweaked the speed of the labs slightly and made them all fall into a 11 tier system
+  Bug Fixes:
+    - Fixed Mk2 Lab missing some science packs
+---------------------------------------------------------------------------------------------------
 Version: 1.7.1
 Date: 1.6.2024
   Changes:
