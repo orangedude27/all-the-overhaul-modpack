@@ -1139,3 +1139,180 @@ util.tech_add_ingredients("area-mining-drill",{"utility-science-pack","se-materi
 
 util.tech_remove_prerequisites("se-processing-iridium", {"area-mining-drill"})
 util.tech_add_prerequisites("se-processing-iridium",{"mining-drill-mk3"})
+
+
+-- 5DIM Military
+bobmods.lib.tech.hide("stone-wall-2")
+bobmods.lib.tech.hide("stone-wall-3")
+bobmods.lib.tech.hide("stone-wall-4")
+bobmods.lib.tech.hide("stone-wall-5")
+bobmods.lib.tech.hide("stone-wall-6")
+bobmods.lib.tech.hide("stone-wall-7")
+bobmods.lib.tech.hide("stone-wall-8")
+bobmods.lib.tech.hide("stone-wall-9")
+bobmods.lib.tech.hide("stone-wall-10")
+
+bobmods.lib.tech.hide("gate-2")
+bobmods.lib.tech.hide("gate-3")
+bobmods.lib.tech.hide("gate-4")
+bobmods.lib.tech.hide("gate-5")
+bobmods.lib.tech.hide("gate-6")
+bobmods.lib.tech.hide("gate-7")
+bobmods.lib.tech.hide("gate-8")
+bobmods.lib.tech.hide("gate-9")
+bobmods.lib.tech.hide("gate-10")
+
+-- Basic Turret
+-- 02
+util.tech_add_prerequisites("gun-turret-2",{"steel-processing"})
+-- 03
+data.raw.technology["gun-turret-3"].unit.count = 150
+util.tech_add_prerequisites("gun-turret-3",{"hardened-hull"})
+-- 04
+data.raw.technology["gun-turret-4"].unit.count = 200
+util.tech_add_prerequisites("gun-turret-4",{"tungsten-processing"})
+util.tech_remove_ingredients("gun-turret-4", {"chemical-science-pack"})
+-- 05
+data.raw.technology["gun-turret-5"].unit.count = 250
+util.tech_remove_prerequisites("gun-turret-5", {"production-science-pack"})
+util.tech_add_prerequisites("gun-turret-5",{"zirconia-processing"})
+util.tech_remove_ingredients("gun-turret-5", {"chemical-science-pack", "se-rocket-science-pack", "space-science-pack"})
+-- 06
+data.raw.technology["gun-turret-6"].unit.count = 300
+util.tech_add_ingredients("gun-turret-6",{"military-science-pack"},false)
+util.tech_add_prerequisites("gun-turret-6",{"titanium-processing"})
+util.tech_remove_ingredients("gun-turret-6", {"se-rocket-science-pack", "space-science-pack", "production-science-pack", "se-material-science-pack-1"})
+-- 07
+data.raw.technology["gun-turret-7"].unit.count = 350
+util.tech_add_prerequisites("gun-turret-7",{"nitinol-processing"})
+util.tech_remove_ingredients("gun-turret-7", {"space-science-pack", "production-science-pack", "se-material-science-pack-2"})
+-- 08
+data.raw.technology["gun-turret-8"].unit.count = 400
+util.tech_add_prerequisites("gun-turret-8",{"kr-imersium-processing"})
+util.tech_remove_ingredients("gun-turret-8", {"production-science-pack", "se-material-science-pack-3"})
+-- 09
+data.raw.technology["gun-turret-9"].unit.count = 450
+util.tech_add_prerequisites("gun-turret-9",{"se-processing-iridium"})
+util.tech_remove_ingredients("gun-turret-9", {"se-material-science-pack-4"})
+-- 10
+data.raw.technology["gun-turret-10"].unit.count = 500
+util.tech_add_prerequisites("gun-turret-10",{"se-heavy-girder"})
+util.tech_remove_ingredients("gun-turret-10", {"se-material-science-pack-4", "se-deep-space-science-pack-1"})
+util.tech_add_ingredients("gun-turret-10",{"se-material-science-pack-1"},false)
+--Small Turret
+-- 02
+util.tech_add_prerequisites("5d-gun-turret-small-2",{"steel-processing"})
+-- 03
+data.raw.technology["5d-gun-turret-small-3"].unit.count = 150
+util.tech_add_prerequisites("5d-gun-turret-small-3",{"hardened-hull"})
+-- 04
+data.raw.technology["5d-gun-turret-small-4"].unit.count = 200
+util.tech_add_prerequisites("5d-gun-turret-small-4",{"tungsten-processing"})
+util.tech_remove_ingredients("5d-gun-turret-small-4", {"chemical-science-pack"})
+-- 05
+data.raw.technology["5d-gun-turret-small-5"].unit.count = 250
+util.tech_remove_prerequisites("5d-gun-turret-small-5", {"production-science-pack"})
+util.tech_add_prerequisites("5d-gun-turret-small-5",{"zirconia-processing"})
+util.tech_remove_ingredients("5d-gun-turret-small-5", {"chemical-science-pack", "se-rocket-science-pack", "space-science-pack"})
+-- 06
+data.raw.technology["5d-gun-turret-small-6"].unit.count = 300
+util.tech_add_ingredients("5d-gun-turret-small-6",{"military-science-pack"},false)
+util.tech_add_prerequisites("5d-gun-turret-small-6",{"titanium-processing"})
+util.tech_remove_ingredients("5d-gun-turret-small-6", {"se-rocket-science-pack", "space-science-pack", "production-science-pack", "se-material-science-pack-1"})
+-- 07
+data.raw.technology["5d-gun-turret-small-7"].unit.count = 350
+util.tech_add_prerequisites("5d-gun-turret-small-7",{"nitinol-processing"})
+util.tech_remove_ingredients("5d-gun-turret-small-7", {"space-science-pack", "production-science-pack", "se-material-science-pack-2"})
+-- 08
+data.raw.technology["5d-gun-turret-small-8"].unit.count = 400
+util.tech_add_prerequisites("5d-gun-turret-small-8",{"kr-imersium-processing"})
+util.tech_remove_ingredients("5d-gun-turret-small-8", {"production-science-pack", "se-material-science-pack-3"})
+-- 09
+data.raw.technology["5d-gun-turret-small-9"].unit.count = 450
+util.tech_add_prerequisites("5d-gun-turret-small-9",{"se-processing-iridium"})
+util.tech_remove_ingredients("5d-gun-turret-small-9", {"se-material-science-pack-4"})
+-- 10
+data.raw.technology["5d-gun-turret-small-10"].unit.count = 500
+util.tech_add_prerequisites("5d-gun-turret-small-10",{"se-heavy-girder"})
+util.tech_remove_ingredients("5d-gun-turret-small-10", {"se-material-science-pack-4", "se-deep-space-science-pack-1"})
+util.tech_add_ingredients("5d-gun-turret-small-10",{"se-material-science-pack-1"},false)
+--Big Turret
+-- 02
+util.tech_add_prerequisites("5d-gun-turret-big-2",{"steel-processing"})
+-- 03
+data.raw.technology["5d-gun-turret-big-3"].unit.count = 150
+util.tech_add_prerequisites("5d-gun-turret-big-3",{"hardened-hull"})
+-- 04
+data.raw.technology["5d-gun-turret-big-4"].unit.count = 200
+util.tech_add_prerequisites("5d-gun-turret-big-4",{"tungsten-processing"})
+util.tech_remove_ingredients("5d-gun-turret-big-4", {"chemical-science-pack"})
+-- 05
+data.raw.technology["5d-gun-turret-big-5"].unit.count = 250
+util.tech_remove_prerequisites("5d-gun-turret-big-5", {"production-science-pack"})
+util.tech_add_prerequisites("5d-gun-turret-big-5",{"zirconia-processing"})
+util.tech_remove_ingredients("5d-gun-turret-big-5", {"chemical-science-pack", "se-rocket-science-pack", "space-science-pack"})
+-- 06
+data.raw.technology["5d-gun-turret-big-6"].unit.count = 300
+util.tech_add_ingredients("5d-gun-turret-big-6",{"military-science-pack"},false)
+util.tech_add_prerequisites("5d-gun-turret-big-6",{"titanium-processing"})
+util.tech_remove_ingredients("5d-gun-turret-big-6", {"se-rocket-science-pack", "space-science-pack", "production-science-pack", "se-material-science-pack-1"})
+-- 07
+data.raw.technology["5d-gun-turret-big-7"].unit.count = 350
+util.tech_add_prerequisites("5d-gun-turret-big-7",{"nitinol-processing"})
+util.tech_remove_ingredients("5d-gun-turret-big-7", {"space-science-pack", "production-science-pack", "se-material-science-pack-2"})
+-- 08
+data.raw.technology["5d-gun-turret-big-8"].unit.count = 400
+util.tech_add_prerequisites("5d-gun-turret-big-8",{"kr-imersium-processing"})
+util.tech_remove_ingredients("5d-gun-turret-big-8", {"production-science-pack", "se-material-science-pack-3"})
+-- 09
+data.raw.technology["5d-gun-turret-big-9"].unit.count = 450
+util.tech_add_prerequisites("5d-gun-turret-big-9",{"se-processing-iridium"})
+util.tech_remove_ingredients("5d-gun-turret-big-9", {"se-material-science-pack-4"})
+-- 10
+data.raw.technology["5d-gun-turret-big-10"].unit.count = 500
+util.tech_add_prerequisites("5d-gun-turret-big-10",{"se-heavy-girder"})
+util.tech_remove_ingredients("5d-gun-turret-big-10", {"se-material-science-pack-4", "se-deep-space-science-pack-1"})
+util.tech_add_ingredients("5d-gun-turret-big-10",{"se-material-science-pack-1"},false)
+-- Flamethrower
+-- 02
+data.raw.technology["5d-flamethrower-tower-turrets-1"].unit.count = 100
+util.tech_add_prerequisites("5d-flamethrower-tower-turrets-1",{"advanced-multi-cylinder-engine"})
+util.tech_add_ingredients("5d-flamethrower-tower-turrets-1",{"chemical-science-pack"},false)
+-- 03
+data.raw.technology["5d-flamethrower-tower-turrets-2"].unit.count = 150
+util.tech_add_prerequisites("5d-flamethrower-tower-turrets-2",{"nitinol-processing"})
+util.tech_add_ingredients("5d-flamethrower-tower-turrets-2",{"chemical-science-pack","se-rocket-science-pack"},false)
+-- 04
+data.raw.technology["5d-flamethrower-tower-turrets-3"].unit.count = 200
+util.tech_remove_prerequisites("5d-flamethrower-tower-turrets-3", {"chemical-science-pack"})
+util.tech_add_prerequisites("5d-flamethrower-tower-turrets-3",{"cobalt-carbide"})
+util.tech_add_ingredients("5d-flamethrower-tower-turrets-3",{"se-rocket-science-pack","space-science-pack","production-science-pack"},false)
+-- 05
+data.raw.technology["5d-flamethrower-tower-turrets-4"].unit.count = 250
+util.tech_add_prerequisites("5d-flamethrower-tower-turrets-4","kr-imersium-processing")
+util.tech_add_ingredients("5d-flamethrower-tower-turrets-4",{"se-rocket-science-pack","space-science-pack"},false)
+-- 06
+data.raw.technology["5d-flamethrower-tower-turrets-5"].unit.count = 300
+util.tech_add_prerequisites("5d-flamethrower-tower-turrets-5",{"se-processing-iridium"})
+util.tech_add_ingredients("5d-flamethrower-tower-turrets-5",{"production-science-pack"},false)
+-- 07
+data.raw.technology["5d-flamethrower-tower-turrets-6"].unit.count = 350
+util.tech_remove_prerequisites("5d-flamethrower-tower-turrets-6", {"utility-science-pack"})
+util.tech_add_prerequisites("5d-flamethrower-tower-turrets-6",{"se-bioscrubber"})
+util.tech_remove_ingredients("5d-flamethrower-tower-turrets-6", {"utility-science-pack"})
+util.tech_add_ingredients("5d-flamethrower-tower-turrets-6",{"se-biological-science-pack-1"},false)
+-- 08
+data.raw.technology["5d-flamethrower-tower-turrets-7"].unit.count = 400
+util.tech_add_prerequisites("5d-flamethrower-tower-turrets-7",{"se-vitalic-reagent"})
+util.tech_remove_ingredients("5d-flamethrower-tower-turrets-7", {"utility-science-pack","se-material-science-pack-2"})
+util.tech_add_ingredients("5d-flamethrower-tower-turrets-7",{"se-material-science-pack-1", "se-biological-science-pack-2"},false)
+-- 09
+data.raw.technology["5d-flamethrower-tower-turrets-8"].unit.count = 450
+util.tech_remove_ingredients("5d-flamethrower-tower-turrets-8", {"utility-science-pack","se-material-science-pack-3"})
+util.tech_add_prerequisites("5d-flamethrower-tower-turrets-8","se-vitalic-epoxy")
+util.tech_add_ingredients("5d-flamethrower-tower-turrets-8",{"se-material-science-pack-1","se-biological-science-pack-3"},false)
+-- 10
+data.raw.technology["5d-flamethrower-tower-turrets-9"].unit.count = 500
+util.tech_remove_ingredients("5d-flamethrower-tower-turrets-9", {"utility-science-pack","se-material-science-pack-4"})
+util.tech_add_prerequisites("5d-flamethrower-tower-turrets-9","se-self-sealing-gel")
+util.tech_add_ingredients("5d-flamethrower-tower-turrets-9",{"se-material-science-pack-1","se-biological-science-pack-4"},false)

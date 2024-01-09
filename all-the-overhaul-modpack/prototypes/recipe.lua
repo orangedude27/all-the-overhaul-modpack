@@ -2139,3 +2139,25 @@ table.insert(data.raw.technology["5d-masher-1"].effects,
 table.insert(data.raw.technology["5d-masher-1"].effects, 
 	{type = "unlock-recipe", recipe="atom-tantalite-plate-dust"})
 Recipe("enriched-tantalite"):replace_ingredient("tantalite-ore", { "atom-tantalite-dust", 9 })
+
+
+-- 5DIM Military
+Recipe("5d-stone-wall-02"):set_enabled(false)
+Recipe("5d-stone-wall-03"):set_enabled(false)
+Recipe("5d-stone-wall-04"):set_enabled(false)
+Recipe("5d-stone-wall-05"):set_enabled(false)
+Recipe("5d-stone-wall-06"):set_enabled(false)
+Recipe("5d-stone-wall-07"):set_enabled(false)
+Recipe("5d-stone-wall-08"):set_enabled(false)
+Recipe("5d-stone-wall-09"):set_enabled(false)
+Recipe("5d-stone-wall-10"):set_enabled(false)
+
+Recipe("5d-gate-02"):set_enabled(false)
+Recipe("5d-gate-03"):set_enabled(false)
+Recipe("5d-gate-04"):set_enabled(false)
+Recipe("5d-gate-05"):set_enabled(false)
+Recipe("5d-gate-06"):set_enabled(false)
+Recipe("5d-gate-07"):set_enabled(false)
+Recipe("5d-gate-08"):set_enabled(false)
+Recipe("5d-gate-09"):set_enabled(false)
+Recipe("5d-gate-10"):set_enabled(false)
