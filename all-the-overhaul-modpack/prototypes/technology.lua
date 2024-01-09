@@ -555,12 +555,12 @@ util.tech_add_ingredients("5d-chemical-plant-3",{"se-rocket-science-pack","space
 -- 05
 data.raw.technology["5d-chemical-plant-4"].unit.count = 500
 util.tech_add_prerequisites("5d-chemical-plant-4","se-bioscrubber")
-util.tech_add_ingredients("5d-chemical-plant-4",{"production-science-pack","utility-science-pack","se-rocket-science-pack","space-science-pack","production-science-pack","kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
+util.tech_add_ingredients("5d-chemical-plant-4",{"production-science-pack","utility-science-pack","se-rocket-science-pack","space-science-pack","kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
 -- 06
 data.raw.technology["5d-chemical-plant-5"].unit.count = 600
 util.tech_remove_prerequisites("5d-chemical-plant-5", {"production-science-pack"})
 util.tech_add_prerequisites("5d-chemical-plant-5",{"se-aeroframe-scaffold","se-heavy-bearing","se-biological-science-pack-2"})
-util.tech_add_ingredients("5d-chemical-plant-5",{"production-science-pack","utility-science-pack","production-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-biological-science-pack-2","se-astronomic-science-pack-2"},false)
+util.tech_add_ingredients("5d-chemical-plant-5",{"production-science-pack","utility-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-biological-science-pack-2","se-astronomic-science-pack-2"},false)
 -- 07
 data.raw.technology["5d-chemical-plant-6"].unit.count = 700
 util.tech_add_prerequisites("5d-chemical-plant-6",{"se-aeroframe-bulkhead","se-material-science-pack-3","se-biological-science-pack-3"})
@@ -600,12 +600,12 @@ util.tech_add_ingredients("5d-oil-refinery-3",{"se-rocket-science-pack","space-s
 -- 05
 data.raw.technology["5d-oil-refinery-4"].unit.count = 500
 util.tech_add_prerequisites("5d-oil-refinery-4","se-bioscrubber")
-util.tech_add_ingredients("5d-oil-refinery-4",{"production-science-pack","utility-science-pack","se-rocket-science-pack","space-science-pack","production-science-pack","kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
+util.tech_add_ingredients("5d-oil-refinery-4",{"production-science-pack","utility-science-pack","se-rocket-science-pack","space-science-pack","kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
 -- 06
 data.raw.technology["5d-oil-refinery-5"].unit.count = 600
 util.tech_remove_prerequisites("5d-oil-refinery-5", {"production-science-pack"})
 util.tech_add_prerequisites("5d-oil-refinery-5",{"se-aeroframe-scaffold","se-material-science-pack-2","se-biological-science-pack-2"})
-util.tech_add_ingredients("5d-oil-refinery-5",{"production-science-pack","utility-science-pack","production-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-biological-science-pack-2","se-astronomic-science-pack-2"},false)
+util.tech_add_ingredients("5d-oil-refinery-5",{"production-science-pack","utility-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-biological-science-pack-2","se-astronomic-science-pack-2"},false)
 -- 07
 data.raw.technology["5d-oil-refinery-6"].unit.count = 700
 util.tech_add_prerequisites("5d-oil-refinery-6",{"se-aeroframe-bulkhead","se-material-science-pack-3","se-biological-science-pack-3"})
@@ -649,7 +649,7 @@ util.tech_add_ingredients("5d-centrifuge-4",{"kr-optimization-tech-card","se-mat
 data.raw.technology["5d-centrifuge-5"].unit.count = 600
 util.tech_remove_prerequisites("5d-centrifuge-5", {"production-science-pack"})
 util.tech_add_prerequisites("5d-centrifuge-5",{"se-aeroframe-scaffold","se-heavy-bearing","se-energy-science-pack-2","space-fusion-science-pack-2"})
-util.tech_add_ingredients("5d-centrifuge-5",{"production-science-pack","utility-science-pack","production-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-energy-science-pack-2","fusion-science-pack-2","se-astronomic-science-pack-2"},false)
+util.tech_add_ingredients("5d-centrifuge-5",{"production-science-pack","utility-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-energy-science-pack-2","fusion-science-pack-2","se-astronomic-science-pack-2"},false)
 -- 07
 data.raw.technology["5d-centrifuge-6"].unit.count = 700
 util.tech_add_prerequisites("5d-centrifuge-6",{"se-aeroframe-bulkhead","se-material-science-pack-3","se-energy-science-pack-3","space-fusion-science-pack-3"})
@@ -760,7 +760,7 @@ util.tech_add_ingredients("advanced-material-processing-6",{"production-science-
 -- 06
 data.raw.technology["advanced-material-processing-7"].unit.count = 600
 util.tech_add_prerequisites("advanced-material-processing-7",{"se-aeroframe-scaffold","se-material-science-pack-2","se-energy-science-pack-2","space-fusion-science-pack-2"})
-util.tech_add_ingredients("advanced-material-processing-7",{"production-science-pack","utility-science-pack","production-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-energy-science-pack-2","fusion-science-pack-2","se-astronomic-science-pack-2"},false)
+util.tech_add_ingredients("advanced-material-processing-7",{"production-science-pack","utility-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-energy-science-pack-2","fusion-science-pack-2","se-astronomic-science-pack-2"},false)
 -- 07
 data.raw.technology["advanced-material-processing-8"].unit.count = 700
 util.tech_add_prerequisites("advanced-material-processing-8",{"se-aeroframe-bulkhead","se-material-science-pack-3","se-energy-science-pack-3","space-fusion-science-pack-3"})
@@ -1275,44 +1275,172 @@ util.tech_remove_ingredients("5d-gun-turret-big-10", {"se-material-science-pack-
 util.tech_add_ingredients("5d-gun-turret-big-10",{"se-material-science-pack-1"},false)
 -- Flamethrower
 -- 02
-data.raw.technology["5d-flamethrower-tower-turrets-1"].unit.count = 100
-util.tech_add_prerequisites("5d-flamethrower-tower-turrets-1",{"advanced-multi-cylinder-engine"})
-util.tech_add_ingredients("5d-flamethrower-tower-turrets-1",{"chemical-science-pack"},false)
+data.raw.technology["5d-flamethrower-turrets-1"].unit.count = 100
+util.tech_add_prerequisites("5d-flamethrower-turrets-1",{"advanced-multi-cylinder-engine"})
+util.tech_add_ingredients("5d-flamethrower-turrets-1",{"chemical-science-pack"},false)
 -- 03
-data.raw.technology["5d-flamethrower-tower-turrets-2"].unit.count = 150
-util.tech_add_prerequisites("5d-flamethrower-tower-turrets-2",{"nitinol-processing"})
-util.tech_add_ingredients("5d-flamethrower-tower-turrets-2",{"chemical-science-pack","se-rocket-science-pack"},false)
+data.raw.technology["5d-flamethrower-turrets-2"].unit.count = 150
+util.tech_add_prerequisites("5d-flamethrower-turrets-2",{"nitinol-processing"})
+util.tech_add_ingredients("5d-flamethrower-turrets-2",{"chemical-science-pack","se-rocket-science-pack"},false)
 -- 04
-data.raw.technology["5d-flamethrower-tower-turrets-3"].unit.count = 200
-util.tech_remove_prerequisites("5d-flamethrower-tower-turrets-3", {"chemical-science-pack"})
-util.tech_add_prerequisites("5d-flamethrower-tower-turrets-3",{"cobalt-carbide"})
-util.tech_add_ingredients("5d-flamethrower-tower-turrets-3",{"se-rocket-science-pack","space-science-pack","production-science-pack"},false)
+data.raw.technology["5d-flamethrower-turrets-3"].unit.count = 200
+util.tech_remove_prerequisites("5d-flamethrower-turrets-3", {"chemical-science-pack"})
+util.tech_add_prerequisites("5d-flamethrower-turrets-3",{"cobalt-carbide"})
+util.tech_add_ingredients("5d-flamethrower-turrets-3",{"se-rocket-science-pack","space-science-pack"},false)
 -- 05
-data.raw.technology["5d-flamethrower-tower-turrets-4"].unit.count = 250
-util.tech_add_prerequisites("5d-flamethrower-tower-turrets-4","kr-imersium-processing")
-util.tech_add_ingredients("5d-flamethrower-tower-turrets-4",{"se-rocket-science-pack","space-science-pack"},false)
+data.raw.technology["5d-flamethrower-turrets-4"].unit.count = 250
+util.tech_add_prerequisites("5d-flamethrower-turrets-4","kr-imersium-processing")
+util.tech_add_ingredients("5d-flamethrower-turrets-4",{"se-rocket-science-pack","space-science-pack"},false)
 -- 06
-data.raw.technology["5d-flamethrower-tower-turrets-5"].unit.count = 300
-util.tech_add_prerequisites("5d-flamethrower-tower-turrets-5",{"se-processing-iridium"})
-util.tech_add_ingredients("5d-flamethrower-tower-turrets-5",{"production-science-pack"},false)
+data.raw.technology["5d-flamethrower-turrets-5"].unit.count = 300
+util.tech_add_prerequisites("5d-flamethrower-turrets-5",{"se-processing-iridium"})
+util.tech_add_ingredients("5d-flamethrower-turrets-5",{"production-science-pack"},false)
 -- 07
-data.raw.technology["5d-flamethrower-tower-turrets-6"].unit.count = 350
-util.tech_remove_prerequisites("5d-flamethrower-tower-turrets-6", {"utility-science-pack"})
-util.tech_add_prerequisites("5d-flamethrower-tower-turrets-6",{"se-bioscrubber"})
-util.tech_remove_ingredients("5d-flamethrower-tower-turrets-6", {"utility-science-pack"})
-util.tech_add_ingredients("5d-flamethrower-tower-turrets-6",{"se-biological-science-pack-1"},false)
+data.raw.technology["5d-flamethrower-turrets-6"].unit.count = 350
+util.tech_remove_prerequisites("5d-flamethrower-turrets-6", {"utility-science-pack"})
+util.tech_add_prerequisites("5d-flamethrower-turrets-6",{"se-bioscrubber"})
+util.tech_remove_ingredients("5d-flamethrower-turrets-6", {"utility-science-pack"})
+util.tech_add_ingredients("5d-flamethrower-turrets-6",{"se-biological-science-pack-1"},false)
 -- 08
-data.raw.technology["5d-flamethrower-tower-turrets-7"].unit.count = 400
-util.tech_add_prerequisites("5d-flamethrower-tower-turrets-7",{"se-vitalic-reagent"})
-util.tech_remove_ingredients("5d-flamethrower-tower-turrets-7", {"utility-science-pack","se-material-science-pack-2"})
-util.tech_add_ingredients("5d-flamethrower-tower-turrets-7",{"se-material-science-pack-1", "se-biological-science-pack-2"},false)
+data.raw.technology["5d-flamethrower-turrets-7"].unit.count = 400
+util.tech_add_prerequisites("5d-flamethrower-turrets-7",{"se-vitalic-reagent"})
+util.tech_remove_ingredients("5d-flamethrower-turrets-7", {"utility-science-pack","se-material-science-pack-2"})
+util.tech_add_ingredients("5d-flamethrower-turrets-7",{"se-material-science-pack-1", "se-biological-science-pack-2"},false)
 -- 09
-data.raw.technology["5d-flamethrower-tower-turrets-8"].unit.count = 450
-util.tech_remove_ingredients("5d-flamethrower-tower-turrets-8", {"utility-science-pack","se-material-science-pack-3"})
-util.tech_add_prerequisites("5d-flamethrower-tower-turrets-8","se-vitalic-epoxy")
-util.tech_add_ingredients("5d-flamethrower-tower-turrets-8",{"se-material-science-pack-1","se-biological-science-pack-3"},false)
+data.raw.technology["5d-flamethrower-turrets-8"].unit.count = 450
+util.tech_remove_ingredients("5d-flamethrower-turrets-8", {"utility-science-pack","se-material-science-pack-3"})
+util.tech_add_prerequisites("5d-flamethrower-turrets-8","se-vitalic-epoxy")
+util.tech_add_ingredients("5d-flamethrower-turrets-8",{"se-material-science-pack-1","se-biological-science-pack-3"},false)
 -- 10
-data.raw.technology["5d-flamethrower-tower-turrets-9"].unit.count = 500
-util.tech_remove_ingredients("5d-flamethrower-tower-turrets-9", {"utility-science-pack","se-material-science-pack-4"})
-util.tech_add_prerequisites("5d-flamethrower-tower-turrets-9","se-self-sealing-gel")
-util.tech_add_ingredients("5d-flamethrower-tower-turrets-9",{"se-material-science-pack-1","se-biological-science-pack-4"},false)
+data.raw.technology["5d-flamethrower-turrets-9"].unit.count = 500
+util.tech_remove_ingredients("5d-flamethrower-turrets-9", {"utility-science-pack","se-material-science-pack-4"})
+util.tech_add_prerequisites("5d-flamethrower-turrets-9","se-self-sealing-gel")
+util.tech_add_ingredients("5d-flamethrower-turrets-9",{"se-material-science-pack-1","se-biological-science-pack-4"},false)
+-- Basic Laser
+-- 02
+data.raw.technology["laser-turret-2"].unit.count = 100
+util.tech_add_prerequisites("laser-turret-2",{"nitinol-processing"})
+util.tech_add_ingredients("laser-turret-2",{"se-rocket-science-pack"},false)
+-- 03
+data.raw.technology["laser-turret-3"].unit.count = 150
+util.tech_add_prerequisites("laser-turret-3",{"cobalt-carbide"})
+util.tech_add_ingredients("laser-turret-3",{"se-rocket-science-pack","space-science-pack"},false)
+-- 04
+data.raw.technology["laser-turret-4"].unit.count = 200
+util.tech_add_prerequisites("laser-turret-4","kr-imersium-processing")
+util.tech_add_ingredients("laser-turret-4",{"se-rocket-science-pack","space-science-pack"},false)
+-- 05
+data.raw.technology["laser-turret-5"].unit.count = 250
+util.tech_add_prerequisites("laser-turret-5",{"se-processing-iridium"})
+util.tech_add_ingredients("laser-turret-5",{"production-science-pack"},false)
+-- 06
+data.raw.technology["laser-turret-6"].unit.count = 300
+util.tech_add_prerequisites("laser-turret-6",{"se-holmium-cable"})
+util.tech_add_ingredients("laser-turret-6",{"production-science-pack"},false)
+-- 07
+data.raw.technology["laser-turret-7"].unit.count = 350
+util.tech_remove_prerequisites("laser-turret-7", {"utility-science-pack"})
+util.tech_add_prerequisites("laser-turret-7",{"se-heavy-girder"})
+util.tech_remove_ingredients("laser-turret-7", {"se-energy-science-pack-2"})
+util.tech_add_ingredients("laser-turret-7",{"se-material-science-pack-1","se-energy-science-pack-1"},false)
+-- 08
+data.raw.technology["laser-turret-8"].unit.count = 400
+util.tech_add_prerequisites("laser-turret-8",{"se-holmium-solenoid"})
+util.tech_remove_ingredients("laser-turret-8", {"se-energy-science-pack-3"})
+util.tech_add_ingredients("laser-turret-8",{"se-material-science-pack-1","se-energy-science-pack-2"},false)
+-- 09
+data.raw.technology["laser-turret-9"].unit.count = 450
+util.tech_add_prerequisites("laser-turret-9",{"se-superconductive-cable"})
+util.tech_remove_ingredients("laser-turret-9", {"se-energy-science-pack-4"})
+util.tech_add_ingredients("laser-turret-9",{"se-material-science-pack-1","se-energy-science-pack-3"},false)
+-- 10
+data.raw.technology["laser-turret-10"].unit.count = 500
+util.tech_add_prerequisites("laser-turret-10",{"se-dynamic-emitter"})
+util.tech_remove_ingredients("laser-turret-10", {"se-deep-space-science-pack-1"})
+util.tech_add_ingredients("laser-turret-10",{"se-material-science-pack-1"},false)
+-- Big Laser
+-- 02
+data.raw.technology["5d-laser-turret-big-2"].unit.count = 100
+util.tech_add_prerequisites("5d-laser-turret-big-2",{"nitinol-processing"})
+util.tech_add_ingredients("5d-laser-turret-big-2",{"se-rocket-science-pack"},false)
+-- 03
+data.raw.technology["5d-laser-turret-big-3"].unit.count = 150
+util.tech_add_prerequisites("5d-laser-turret-big-3",{"cobalt-carbide"})
+util.tech_add_ingredients("5d-laser-turret-big-3",{"se-rocket-science-pack","space-science-pack"},false)
+-- 04
+data.raw.technology["5d-laser-turret-big-4"].unit.count = 200
+util.tech_add_prerequisites("5d-laser-turret-big-4","kr-imersium-processing")
+util.tech_add_ingredients("5d-laser-turret-big-4",{"se-rocket-science-pack","space-science-pack"},false)
+-- 05
+data.raw.technology["5d-laser-turret-big-5"].unit.count = 250
+util.tech_add_prerequisites("5d-laser-turret-big-5",{"se-processing-iridium"})
+util.tech_add_ingredients("5d-laser-turret-big-5",{"production-science-pack"},false)
+-- 06
+data.raw.technology["5d-laser-turret-big-6"].unit.count = 300
+util.tech_add_prerequisites("5d-laser-turret-big-6",{"se-holmium-cable"})
+util.tech_add_ingredients("5d-laser-turret-big-6",{"production-science-pack"},false)
+-- 07
+data.raw.technology["5d-laser-turret-big-7"].unit.count = 350
+util.tech_remove_prerequisites("5d-laser-turret-big-7", {"utility-science-pack"})
+util.tech_add_prerequisites("5d-laser-turret-big-7",{"se-heavy-girder"})
+util.tech_remove_ingredients("5d-laser-turret-big-7", {"se-energy-science-pack-2"})
+util.tech_add_ingredients("5d-laser-turret-big-7",{"se-material-science-pack-1","se-energy-science-pack-1"},false)
+-- 08
+data.raw.technology["5d-laser-turret-big-8"].unit.count = 400
+util.tech_add_prerequisites("5d-laser-turret-big-8",{"se-holmium-solenoid"})
+util.tech_remove_ingredients("5d-laser-turret-big-8", {"se-energy-science-pack-3"})
+util.tech_add_ingredients("5d-laser-turret-big-8",{"se-material-science-pack-1","se-energy-science-pack-2"},false)
+-- 09
+data.raw.technology["5d-laser-turret-big-9"].unit.count = 450
+util.tech_add_prerequisites("5d-laser-turret-big-9",{"se-superconductive-cable"})
+util.tech_remove_ingredients("5d-laser-turret-big-9", {"se-energy-science-pack-4"})
+util.tech_add_ingredients("5d-laser-turret-big-9",{"se-material-science-pack-1","se-energy-science-pack-3"},false)
+-- 10
+data.raw.technology["5d-laser-turret-big-10"].unit.count = 500
+util.tech_add_prerequisites("5d-laser-turret-big-10",{"se-dynamic-emitter"})
+util.tech_remove_ingredients("5d-laser-turret-big-10", {"se-deep-space-science-pack-1"})
+util.tech_add_ingredients("5d-laser-turret-big-10",{"se-material-science-pack-1"},false)
+-- Small Laser
+-- 02
+data.raw.technology["5d-laser-turret-small-2"].unit.count = 100
+util.tech_add_prerequisites("5d-laser-turret-small-2",{"nitinol-processing"})
+util.tech_add_ingredients("5d-laser-turret-small-2",{"se-rocket-science-pack"},false)
+-- 03
+data.raw.technology["5d-laser-turret-small-3"].unit.count = 150
+util.tech_add_prerequisites("5d-laser-turret-small-3",{"cobalt-carbide"})
+util.tech_add_ingredients("5d-laser-turret-small-3",{"se-rocket-science-pack","space-science-pack"},false)
+-- 04
+data.raw.technology["5d-laser-turret-small-4"].unit.count = 200
+util.tech_add_prerequisites("5d-laser-turret-small-4","kr-imersium-processing")
+util.tech_add_ingredients("5d-laser-turret-small-4",{"se-rocket-science-pack","space-science-pack"},false)
+-- 05
+data.raw.technology["5d-laser-turret-small-5"].unit.count = 250
+util.tech_add_prerequisites("5d-laser-turret-small-5",{"se-processing-iridium"})
+util.tech_add_ingredients("5d-laser-turret-small-5",{"production-science-pack"},false)
+-- 06
+data.raw.technology["5d-laser-turret-small-6"].unit.count = 300
+util.tech_add_prerequisites("5d-laser-turret-small-6",{"se-holmium-cable"})
+util.tech_add_ingredients("5d-laser-turret-small-6",{"production-science-pack"},false)
+-- 07
+data.raw.technology["5d-laser-turret-small-7"].unit.count = 350
+util.tech_remove_prerequisites("5d-laser-turret-small-7", {"utility-science-pack"})
+util.tech_add_prerequisites("5d-laser-turret-small-7",{"se-heavy-girder"})
+util.tech_remove_ingredients("5d-laser-turret-small-7", {"se-energy-science-pack-2"})
+util.tech_add_ingredients("5d-laser-turret-small-7",{"se-material-science-pack-1","se-energy-science-pack-1"},false)
+-- 08
+data.raw.technology["5d-laser-turret-small-8"].unit.count = 400
+util.tech_add_prerequisites("5d-laser-turret-small-8",{"se-holmium-solenoid"})
+util.tech_remove_ingredients("5d-laser-turret-small-8", {"se-energy-science-pack-3"})
+util.tech_add_ingredients("5d-laser-turret-small-8",{"se-material-science-pack-1","se-energy-science-pack-2"},false)
+-- 09
+data.raw.technology["5d-laser-turret-small-9"].unit.count = 450
+util.tech_add_prerequisites("5d-laser-turret-small-9",{"se-superconductive-cable"})
+util.tech_remove_ingredients("5d-laser-turret-small-9", {"se-energy-science-pack-4"})
+util.tech_add_ingredients("5d-laser-turret-small-9",{"se-material-science-pack-1","se-energy-science-pack-3"},false)
+-- 10
+data.raw.technology["5d-laser-turret-small-10"].unit.count = 500
+util.tech_add_prerequisites("5d-laser-turret-small-10",{"se-dynamic-emitter"})
+util.tech_remove_ingredients("5d-laser-turret-small-10", {"se-deep-space-science-pack-1"})
+util.tech_add_ingredients("5d-laser-turret-small-10",{"se-material-science-pack-1"},false)
+
+
