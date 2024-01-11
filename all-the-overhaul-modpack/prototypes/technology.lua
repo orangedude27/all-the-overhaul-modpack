@@ -1273,6 +1273,50 @@ data.raw.technology["5d-gun-turret-big-10"].unit.count = 500
 util.tech_add_prerequisites("5d-gun-turret-big-10",{"se-heavy-girder"})
 util.tech_remove_ingredients("5d-gun-turret-big-10", {"se-material-science-pack-4", "se-deep-space-science-pack-1"})
 util.tech_add_ingredients("5d-gun-turret-big-10",{"se-material-science-pack-1"},false)
+-- Sniper Turret
+-- 01
+data.raw.technology["5d-gun-turret-sniper-1"].unit.count = 100
+util.tech_remove_ingredients("5d-gun-turret-sniper-1", {"se-rocket-science-pack"})
+-- 02
+data.raw.technology["5d-gun-turret-sniper-2"].unit.count = 200
+util.tech_add_prerequisites("5d-gun-turret-sniper-2", {"titanium-processing"})
+util.tech_remove_ingredients("5d-gun-turret-sniper-2", {"se-rocket-science-pack"})
+util.tech_add_ingredients("5d-gun-turret-sniper-2",{"chemical-science-pack"},false)
+-- 03
+data.raw.technology["5d-gun-turret-sniper-3"].unit.count = 300
+util.tech_add_prerequisites("5d-gun-turret-sniper-3", {"nitinol-processing"})
+util.tech_add_ingredients("5d-gun-turret-sniper-3",{"chemical-science-pack"},false)
+-- 04
+data.raw.technology["5d-gun-turret-sniper-4"].unit.count = 400
+util.tech_add_prerequisites("5d-gun-turret-sniper-4", {"cobalt-carbide"})
+util.tech_add_ingredients("5d-gun-turret-sniper-4",{"space-science-pack"},false)
+-- 05
+data.raw.technology["5d-gun-turret-sniper-5"].unit.count = 500
+util.tech_add_prerequisites("5d-gun-turret-sniper-5", {"kr-imersium-processing"})
+-- 06
+data.raw.technology["5d-gun-turret-sniper-6"].unit.count = 600
+util.tech_add_prerequisites("5d-gun-turret-sniper-6", {"se-processing-iridium"})
+util.tech_remove_ingredients("5d-gun-turret-sniper-6", {"se-material-science-pack-1"})
+-- 07
+data.raw.technology["5d-gun-turret-sniper-7"].unit.count = 700
+util.tech_add_prerequisites("5d-gun-turret-sniper-7", {"se-heavy-girder"})
+util.tech_remove_ingredients("5d-gun-turret-sniper-7", {"se-material-science-pack-2"})
+util.tech_add_ingredients("5d-gun-turret-sniper-7",{"se-material-science-pack-1"},false)
+-- 08
+data.raw.technology["5d-gun-turret-sniper-8"].unit.count = 800
+util.tech_add_prerequisites("5d-gun-turret-sniper-8", {"se-heavy-bearing"})
+util.tech_remove_ingredients("5d-gun-turret-sniper-8", {"se-material-science-pack-3"})
+util.tech_add_ingredients("5d-gun-turret-sniper-8",{"se-material-science-pack-2"},false)
+-- 09
+data.raw.technology["5d-gun-turret-sniper-9"].unit.count = 900
+util.tech_remove_prerequisites("5d-gun-turret-sniper-9", {"utility-science-pack", "production-science-pack"})
+util.tech_add_prerequisites("5d-gun-turret-sniper-9", {"se-heavy-composite"})
+util.tech_remove_ingredients("5d-gun-turret-sniper-9", {"se-material-science-pack-4"})
+util.tech_add_ingredients("5d-gun-turret-sniper-9",{"se-material-science-pack-3"},false)
+-- 10
+data.raw.technology["5d-gun-turret-sniper-10"].unit.count = 1000
+util.tech_add_prerequisites("5d-gun-turret-sniper-10", {"se-heavy-assembly"})
+util.tech_remove_ingredients("5d-gun-turret-sniper-10", {"se-deep-space-science-pack-1"})
 -- Flamethrower
 -- 02
 data.raw.technology["5d-flamethrower-turrets-1"].unit.count = 100
@@ -1442,5 +1486,105 @@ data.raw.technology["5d-laser-turret-small-10"].unit.count = 500
 util.tech_add_prerequisites("5d-laser-turret-small-10",{"se-dynamic-emitter"})
 util.tech_remove_ingredients("5d-laser-turret-small-10", {"se-deep-space-science-pack-1"})
 util.tech_add_ingredients("5d-laser-turret-small-10",{"se-material-science-pack-1"},false)
-
+-- Sniper laser turret
+-- 01
+data.raw.technology["5d-laser-turret-sniper-1"].unit.count = 200
+util.tech_add_prerequisites("5d-laser-turret-sniper-1",{"se-holmium-cable"})
+util.tech_add_ingredients("5d-laser-turret-sniper-1",{"production-science-pack","se-rocket-science-pack","space-science-pack","se-energy-science-pack-1"},false)
+-- 02
+data.raw.technology["5d-laser-turret-sniper-2"].unit.count = 400
+util.tech_add_prerequisites("5d-laser-turret-sniper-2",{"se-heavy-girder"})
+util.tech_add_ingredients("5d-laser-turret-sniper-2",{"production-science-pack","se-rocket-science-pack","space-science-pack","se-energy-science-pack-1","se-material-science-pack-1"},false)
+-- 03
+data.raw.technology["5d-laser-turret-sniper-3"].unit.count = 600
+util.tech_add_prerequisites("5d-laser-turret-sniper-3",{"se-holmium-solenoid"})
+util.tech_add_ingredients("5d-laser-turret-sniper-3",{"production-science-pack","se-rocket-science-pack","space-science-pack","se-energy-science-pack-2","se-material-science-pack-1"},false)
+-- 04
+data.raw.technology["5d-laser-turret-sniper-4"].unit.count = 800
+util.tech_remove_prerequisites("5d-laser-turret-sniper-4", {"utility-science-pack"})
+util.tech_add_prerequisites("5d-laser-turret-sniper-4",{"se-heavy-bearing"})
+util.tech_add_ingredients("5d-laser-turret-sniper-4",{"production-science-pack","se-energy-science-pack-2","se-material-science-pack-2"},false)
+-- 05
+data.raw.technology["5d-laser-turret-sniper-5"].unit.count = 1000
+util.tech_add_prerequisites("5d-laser-turret-sniper-5",{"se-superconductive-cable"})
+util.tech_add_ingredients("5d-laser-turret-sniper-5",{"production-science-pack","se-energy-science-pack-3","se-material-science-pack-2"},false)
+-- 06
+data.raw.technology["5d-laser-turret-sniper-6"].unit.count = 1200
+util.tech_add_prerequisites("5d-laser-turret-sniper-6",{"se-heavy-composite"})
+util.tech_remove_ingredients("5d-laser-turret-sniper-6", {"se-energy-science-pack-1"})
+util.tech_add_ingredients("5d-laser-turret-sniper-6",{"production-science-pack","se-energy-science-pack-3","se-material-science-pack-3"},false)
+-- 07
+data.raw.technology["5d-laser-turret-sniper-7"].unit.count = 1400
+util.tech_add_prerequisites("5d-laser-turret-sniper-7",{"se-dynamic-emitter"})
+util.tech_remove_ingredients("5d-laser-turret-sniper-7", {"se-energy-science-pack-2"})
+util.tech_add_ingredients("5d-laser-turret-sniper-7",{"production-science-pack","se-energy-science-pack-4","se-material-science-pack-3"},false)
+-- 08
+data.raw.technology["5d-laser-turret-sniper-8"].unit.count = 1600
+util.tech_add_prerequisites("5d-laser-turret-sniper-8",{"se-heavy-assembly"})
+util.tech_remove_ingredients("5d-laser-turret-sniper-8", {"se-energy-science-pack-3"})
+util.tech_add_ingredients("5d-laser-turret-sniper-8",{"production-science-pack","se-energy-science-pack-4","se-material-science-pack-4"},false)
+-- 09
+data.raw.technology["5d-laser-turret-sniper-9"].unit.count = 1800
+util.tech_add_prerequisites("5d-laser-turret-sniper-9",{"se-nanomaterial"})
+util.tech_add_ingredients("5d-laser-turret-sniper-9",{"production-science-pack","se-material-science-pack-4","se-astronomic-science-pack-4","se-biological-science-pack-4"},false)
+-- 10
+data.raw.technology["5d-laser-turret-sniper-10"].unit.count = 2000
+util.tech_add_prerequisites("5d-laser-turret-sniper-10",{"se-processing-naquium"})
+util.tech_remove_ingredients("5d-laser-turret-sniper-10", {"se-deep-space-science-pack-1"})
+util.tech_add_ingredients("5d-laser-turret-sniper-10",{"production-science-pack","se-material-science-pack-4","se-astronomic-science-pack-4","se-biological-science-pack-4"},false)
+-- Tesla turret
+-- 01
+data.raw.technology["5d-tesla-turrets-1"].unit.count = 200
+util.tech_remove_prerequisites("5d-tesla-turrets-1", {"utility-science-pack","5d-laser-turret-small-5","5d-laser-turret-big-5","5d-laser-turret-sniper-1"})
+util.tech_add_prerequisites("5d-tesla-turrets-1",{"se-holmium-cable"})
+util.tech_add_ingredients("5d-tesla-turrets-1",{"production-science-pack","se-energy-science-pack-1"},false)
+-- 02
+data.raw.technology["5d-tesla-turrets-2"].unit.count = 400
+util.tech_remove_prerequisites("5d-tesla-turrets-2", {"laser-turret-6","5d-laser-turret-small-6","5d-laser-turret-big-6","5d-laser-turret-sniper-2"})
+util.tech_add_prerequisites("5d-tesla-turrets-2",{"se-aeroframe-pole"})
+util.tech_add_ingredients("5d-tesla-turrets-2",{"production-science-pack","se-energy-science-pack-1","se-astronomic-science-pack-1"},false)
+-- 03
+data.raw.technology["5d-tesla-turrets-3"].unit.count = 600
+util.tech_remove_prerequisites("5d-tesla-turrets-3", {"laser-turret-7","5d-laser-turret-small-7","5d-laser-turret-big-7","5d-laser-turret-sniper-3"})
+util.tech_add_prerequisites("5d-tesla-turrets-3",{"se-holmium-solenoid"})
+util.tech_add_ingredients("5d-tesla-turrets-3",{"production-science-pack","se-rocket-science-pack","space-science-pack","se-energy-science-pack-2","se-astronomic-science-pack-1"},false)
+-- 04
+data.raw.technology["5d-tesla-turrets-4"].unit.count = 800
+util.tech_remove_prerequisites("5d-tesla-turrets-4", {"laser-turret-8","5d-laser-turret-small-8","5d-laser-turret-big-8","5d-laser-turret-sniper-4"})
+util.tech_add_prerequisites("5d-tesla-turrets-4",{"se-aeroframe-scaffold"})
+util.tech_add_ingredients("5d-tesla-turrets-4",{"production-science-pack","se-energy-science-pack-2","se-astronomic-science-pack-2"},false)
+-- 05
+data.raw.technology["5d-tesla-turrets-5"].unit.count = 1000
+util.tech_remove_prerequisites("5d-tesla-turrets-5", {"laser-turret-9","5d-laser-turret-small-9","5d-laser-turret-big-9","5d-laser-turret-sniper-5"})
+util.tech_add_prerequisites("5d-tesla-turrets-5",{"se-superconductive-cable"})
+util.tech_add_ingredients("5d-tesla-turrets-5",{"production-science-pack","se-energy-science-pack-3","se-astronomic-science-pack-2"},false)
+-- 06
+data.raw.technology["5d-tesla-turrets-6"].unit.count = 1200
+util.tech_remove_prerequisites("5d-tesla-turrets-6", {"laser-turret-10","5d-laser-turret-small-10","5d-laser-turret-big-10","5d-laser-turret-sniper-6"})
+util.tech_add_prerequisites("5d-tesla-turrets-6",{"se-aeroframe-bulkhead"})
+util.tech_remove_ingredients("5d-tesla-turrets-6", {"se-material-science-pack-1"})
+util.tech_add_ingredients("5d-tesla-turrets-6",{"production-science-pack","se-energy-science-pack-3","se-astronomic-science-pack-3"},false)
+-- 07
+data.raw.technology["5d-tesla-turrets-7"].unit.count = 1400
+util.tech_remove_prerequisites("5d-tesla-turrets-7", {"5d-laser-turret-sniper-7"})
+util.tech_add_prerequisites("5d-tesla-turrets-7",{"se-dynamic-emitter"})
+util.tech_remove_ingredients("5d-tesla-turrets-7", {"se-material-science-pack-2"})
+util.tech_add_ingredients("5d-tesla-turrets-7",{"production-science-pack","se-energy-science-pack-4","se-astronomic-science-pack-3"},false)
+-- 08
+data.raw.technology["5d-tesla-turrets-8"].unit.count = 1600
+util.tech_remove_prerequisites("5d-tesla-turrets-8", {"5d-laser-turret-sniper-8"})
+util.tech_add_prerequisites("5d-tesla-turrets-8",{"se-heavy-assembly"})
+util.tech_remove_ingredients("5d-tesla-turrets-8", {"se-material-science-pack-3"})
+util.tech_add_ingredients("5d-tesla-turrets-8",{"production-science-pack","se-energy-science-pack-4","se-material-science-pack-4","se-astronomic-science-pack-3"},false)
+-- 09
+data.raw.technology["5d-tesla-turrets-9"].unit.count = 1800
+util.tech_remove_prerequisites("5d-tesla-turrets-9", {"5d-laser-turret-sniper-9"})
+util.tech_add_prerequisites("5d-tesla-turrets-9",{"se-nanomaterial"})
+util.tech_add_ingredients("5d-tesla-turrets-9",{"production-science-pack","se-energy-science-pack-4","se-astronomic-science-pack-4","se-biological-science-pack-4"},false)
+-- 10
+data.raw.technology["5d-tesla-turrets-10"].unit.count = 2000
+util.tech_remove_prerequisites("5d-tesla-turrets-10", {"5d-laser-turret-sniper-10"})
+util.tech_add_prerequisites("5d-tesla-turrets-10",{"se-processing-naquium"})
+util.tech_remove_ingredients("5d-tesla-turrets-10", {"se-deep-space-science-pack-1"})
+util.tech_add_ingredients("5d-tesla-turrets-10",{"production-science-pack","se-energy-science-pack-4","se-material-science-pack-4","se-astronomic-science-pack-4","se-biological-science-pack-4"},false)
 
