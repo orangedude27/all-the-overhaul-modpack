@@ -1170,6 +1170,7 @@ data.raw.technology["gun-turret-3"].unit.count = 150
 util.tech_add_prerequisites("gun-turret-3",{"hardened-hull"})
 -- 04
 data.raw.technology["gun-turret-4"].unit.count = 200
+util.tech_remove_prerequisites("gun-turret-4", {"logistic-science-pack"})
 util.tech_add_prerequisites("gun-turret-4",{"tungsten-processing"})
 util.tech_remove_ingredients("gun-turret-4", {"chemical-science-pack"})
 -- 05
@@ -1184,6 +1185,7 @@ util.tech_add_prerequisites("gun-turret-6",{"titanium-processing"})
 util.tech_remove_ingredients("gun-turret-6", {"se-rocket-science-pack", "space-science-pack", "production-science-pack", "se-material-science-pack-1"})
 -- 07
 data.raw.technology["gun-turret-7"].unit.count = 350
+util.tech_remove_prerequisites("gun-turret-4", {"utility-science-pack"})
 util.tech_add_prerequisites("gun-turret-7",{"nitinol-processing"})
 util.tech_remove_ingredients("gun-turret-7", {"space-science-pack", "production-science-pack", "se-material-science-pack-2"})
 -- 08
@@ -1587,4 +1589,47 @@ util.tech_remove_prerequisites("5d-tesla-turrets-10", {"5d-laser-turret-sniper-1
 util.tech_add_prerequisites("5d-tesla-turrets-10",{"se-processing-naquium"})
 util.tech_remove_ingredients("5d-tesla-turrets-10", {"se-deep-space-science-pack-1"})
 util.tech_add_ingredients("5d-tesla-turrets-10",{"production-science-pack","se-energy-science-pack-4","se-material-science-pack-4","se-astronomic-science-pack-4","se-biological-science-pack-4"},false)
+-- Radar
+-- 02
+data.raw.technology["5d-radars-1"].unit.count = 200
+util.tech_remove_prerequisites("5d-radars-1", {"logistic-science-pack"})
+util.tech_add_prerequisites("5d-radars-1",{"kr-radar", "military-science-pack"})
+util.tech_add_ingredients("5d-radars-1",{"military-science-pack"},false)
+-- 03
+data.raw.technology["5d-radars-2"].unit.count = 300
+util.tech_remove_prerequisites("5d-radars-2", {"military-science-pack"})
+util.tech_add_prerequisites("5d-radars-2",{"titanium-processing"})
+util.tech_add_ingredients("5d-radars-2",{"chemical-science-pack"},false)
+-- 04
+data.raw.technology["5d-radars-3"].unit.count = 400
+util.tech_add_prerequisites("5d-radars-3","nitinol-processing")
+util.tech_add_ingredients("5d-radars-3",{"chemical-science-pack", "se-rocket-science-pack"},false)
+-- 05
+data.raw.technology["5d-radars-4"].unit.count = 500
+util.tech_remove_prerequisites("5d-radars-4", {"chemical-science-pack"})
+util.tech_add_prerequisites("5d-radars-4",{"cobalt-carbide"})
+util.tech_add_ingredients("5d-radars-4",{"se-rocket-science-pack","space-science-pack"},false)
+-- 06
+data.raw.technology["5d-radars-5"].unit.count = 600
+util.tech_add_prerequisites("5d-radars-5",{"kr-imersium-processing"})
+-- 07
+data.raw.technology["5d-radars-6"].unit.count = 700
+util.tech_add_prerequisites("5d-radars-6",{"se-aeroframe-pole"})
+util.tech_remove_ingredients("5d-radars-6", {"se-material-science-pack-1","production-science-pack"})
+util.tech_add_ingredients("5d-radars-6",{"utility-science-pack","se-astronomic-science-pack-1"},false)
+-- 08
+data.raw.technology["5d-radars-7"].unit.count = 800
+util.tech_remove_prerequisites("5d-radars-7", {"utility-science-pack"})
+util.tech_add_prerequisites("5d-radars-7",{"se-aeroframe-scaffold"})
+util.tech_remove_ingredients("5d-radars-7", {"se-material-science-pack-2","production-science-pack"})
+util.tech_add_ingredients("5d-radars-7",{"se-astronomic-science-pack-2"},false)
+-- 09
+data.raw.technology["5d-radars-8"].unit.count = 900
+util.tech_add_prerequisites("5d-radars-8",{"se-aeroframe-bulkhead"})
+util.tech_remove_ingredients("5d-radars-8", {"se-material-science-pack-3","production-science-pack"})
+util.tech_add_ingredients("5d-radars-8",{"se-astronomic-science-pack-3"},false)
+-- 10
+data.raw.technology["5d-radars-9"].unit.count = 1000
+util.tech_add_prerequisites("5d-radars-9","se-nanomaterial")
+util.tech_add_ingredients("5d-radars-9",{"se-biological-science-pack-4","se-energy-science-pack-4","se-astronomic-science-pack-4"},false)
 
