@@ -1632,4 +1632,5 @@ util.tech_add_ingredients("5d-radars-8",{"se-astronomic-science-pack-3"},false)
 data.raw.technology["5d-radars-9"].unit.count = 1000
 util.tech_add_prerequisites("5d-radars-9","se-nanomaterial")
 util.tech_add_ingredients("5d-radars-9",{"se-biological-science-pack-4","se-energy-science-pack-4","se-astronomic-science-pack-4"},false)
-
+-- Hide K2 Radar
+bobmods.lib.tech.hide("kr-advanced-radar")

@@ -2853,3 +2853,5 @@ Recipe("5d-radar-10"):replace_ingredient("low-density-structure", { "hv-power-re
 Recipe("5d-radar-10"):add_ingredient({ "se-nanomaterial", 5 })
 Recipe("5d-radar-10"):add_ingredient({ "se-aeroframe-pole", 2 })
 Recipe("5d-radar-10"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
+-- Hide K2 Radar
+Recipe("kr-advanced-radar"):set_enabled(false)
