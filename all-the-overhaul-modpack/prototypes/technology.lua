@@ -1185,7 +1185,7 @@ util.tech_add_prerequisites("gun-turret-6",{"titanium-processing"})
 util.tech_remove_ingredients("gun-turret-6", {"se-rocket-science-pack", "space-science-pack", "production-science-pack", "se-material-science-pack-1"})
 -- 07
 data.raw.technology["gun-turret-7"].unit.count = 350
-util.tech_remove_prerequisites("gun-turret-4", {"utility-science-pack"})
+util.tech_remove_prerequisites("gun-turret-7", {"utility-science-pack"})
 util.tech_add_prerequisites("gun-turret-7",{"nitinol-processing"})
 util.tech_remove_ingredients("gun-turret-7", {"space-science-pack", "production-science-pack", "se-material-science-pack-2"})
 -- 08
@@ -1351,17 +1351,17 @@ util.tech_add_ingredients("5d-flamethrower-turrets-6",{"se-biological-science-pa
 data.raw.technology["5d-flamethrower-turrets-7"].unit.count = 400
 util.tech_add_prerequisites("5d-flamethrower-turrets-7",{"se-vitalic-reagent"})
 util.tech_remove_ingredients("5d-flamethrower-turrets-7", {"utility-science-pack","se-material-science-pack-2"})
-util.tech_add_ingredients("5d-flamethrower-turrets-7",{"se-material-science-pack-1", "se-biological-science-pack-2"},false)
+util.tech_add_ingredients("5d-flamethrower-turrets-7",{"se-biological-science-pack-2"},false)
 -- 09
 data.raw.technology["5d-flamethrower-turrets-8"].unit.count = 450
 util.tech_remove_ingredients("5d-flamethrower-turrets-8", {"utility-science-pack","se-material-science-pack-3"})
 util.tech_add_prerequisites("5d-flamethrower-turrets-8","se-vitalic-epoxy")
-util.tech_add_ingredients("5d-flamethrower-turrets-8",{"se-material-science-pack-1","se-biological-science-pack-3"},false)
+util.tech_add_ingredients("5d-flamethrower-turrets-8",{"se-biological-science-pack-3"},false)
 -- 10
 data.raw.technology["5d-flamethrower-turrets-9"].unit.count = 500
 util.tech_remove_ingredients("5d-flamethrower-turrets-9", {"utility-science-pack","se-material-science-pack-4"})
 util.tech_add_prerequisites("5d-flamethrower-turrets-9","se-self-sealing-gel")
-util.tech_add_ingredients("5d-flamethrower-turrets-9",{"se-material-science-pack-1","se-biological-science-pack-4"},false)
+util.tech_add_ingredients("5d-flamethrower-turrets-9",{"se-biological-science-pack-4"},false)
 -- Basic Laser
 -- 02
 data.raw.technology["laser-turret-2"].unit.count = 100
