@@ -1102,43 +1102,22 @@ data:extend({
         },
     },
 	
-	{
-		type = "technology",
-		name = "mining-drill-mk3",
-		icon = "__Krastorio2Assets__/icons/entities/electric-mining-drill-mk3.png",
-		icon_size = 64,
-		--icon_mipmaps = 4,
-		effects = {
-			{
-				type = "unlock-recipe",
-				recipe = "kr-electric-mining-drill-mk3",
-			},
-		},
-		prerequisites = { "kr-electric-mining-drill-mk2", "kr-optimization-tech-card" },
-		unit = {
-			count = 300,
-			time = 45,
-			ingredients = {
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 1},
-				{"se-rocket-science-pack", 1},
-				{"space-science-pack", 1},
-				{"kr-optimization-tech-card", 1 },
-			},
-		},
-	},
 })
 util.tech_lock_recipes("t0-filtration-plant", { "kr-filtration-plant" })
 util.tech_lock_recipes("t0-electrolysis-plant", { "kr-electrolysis-plant" })
 
 -- Change research or Drills
+util.tech_remove_prerequisites("kr-electric-mining-drill-mk3", {"se-dynamic-emitter", "kr-advanced-tech-card", "se-heavy-composite"})
+util.tech_add_prerequisites("kr-electric-mining-drill-mk3",{"kr-electric-mining-drill-mk2", "kr-optimization-tech-card"})
+util.tech_remove_ingredients("kr-electric-mining-drill-mk3", {"production-science-pack", "utility-science-pack", "se-energy-science-pack-4", "se-material-science-pack-3", "kr-advanced-tech-card"})
+util.tech_add_ingredients("kr-electric-mining-drill-mk3",{"kr-optimization-tech-card"},false)
+
 util.tech_remove_prerequisites("area-mining-drill", {"production-science-pack", "kr-electric-mining-drill-mk2"})
 util.tech_add_prerequisites("area-mining-drill",{"se-heavy-bearing","mining-drill-mk3","se-aeroframe-pole"})
 util.tech_add_ingredients("area-mining-drill",{"utility-science-pack","se-material-science-pack-2","se-astronomic-science-pack-1"},false)
 
 util.tech_remove_prerequisites("se-processing-iridium", {"area-mining-drill"})
-util.tech_add_prerequisites("se-processing-iridium",{"mining-drill-mk3"})
+util.tech_add_prerequisites("se-processing-iridium",{"kr-electric-mining-drill-mk3"})
 
 
 -- 5DIM Military
