@@ -380,5 +380,117 @@ data:extend({
     icon_size = 32,
     stack_size = 100
   },
+  {
+    type = "item",
+    name = "atom-iron-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-iron-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-copper-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-copper-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-aluminium-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-aluminium-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-bismuth-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-bismuth-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-chrome-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-cobalt-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-gold-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-gold-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-indium-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-lead-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-lead-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-manganese-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-nickel-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-tantalite-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-tin-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-titanium-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-titanium-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-tungsten-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tungsten-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-zinc-pellets",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pellets.png",
+    icon_size = 128,
+    stack_size = 100
+  },
   
 })
