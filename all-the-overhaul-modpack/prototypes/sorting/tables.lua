@@ -293,12 +293,11 @@ local PowerRecipeOrder =
     ["transceiver"] = "[c]",
 }
 --combat
-local CombatBlacklist = { "data", "delivery"}
+local CombatBlacklist = { "data", "delivery", "turret", "pylon"}
 local CombatSubOrder =
 {
     ["cliff"] = "[q]",
     ["artillery-t"] = "[at]",
-    ["turret"] = "f",
     ["wall"] = "f",
     ["gate"] = "f",
     ["repair"] = "[ra]",
@@ -335,7 +334,11 @@ local CombatRecipeOrder =
     ["repair"] = "[r]",
     ["grenade"] = "[a]",
     ["capsule"] = "[a]",
-    ["mine"] = "[a]"
+    ["mine"] = "[a]",
+    ["advanced-radar"] = "[d]",
+    ["radar-1"] = "[c]",
+    ["radar-0"] = "[b]",
+    ["radar"] = "[a]",
 }
 --production
 local ProductionBlacklist = { "head", "coal", "sulfur", "kerosene", "fi_refinery_basic_recipe", "fu_drill_recipe",
@@ -585,6 +588,7 @@ local ManufactoringSubOrder =
     ["fiber"] = "[a]",
     ["space"] = "[a]",
     ["gr"] = "[a]",
+    ["ceramic"] = "[a]",
     --["fi"] = "[y]",
     --["fu"] = "[y]",
     --["gr"] = "[y]",
@@ -770,6 +774,7 @@ local ScienceSubOrder =
     ["pack"] = "[b]",
     ["tech"] = "[b]",
     ["card"] = "[b]",
+    ["gr_"] = "[b]"
 }
 --second string to look for and what order to set the item
 local ScienceRecipeOrder =
@@ -792,6 +797,7 @@ local ScienceRecipeOrder =
     ["logistic"] = "[b]",
     ["military"] = "[b]",
     ["chemical"] = "[b]",
+    ["data"] = "[z]"
 }
 
 local PipesBlacklist = {"shelter", "science", "data", "cable"}
@@ -868,6 +874,29 @@ local EquipmentRecipeOrder =
     ["power"] = "[ad]", 
 }
 
+local TurretBlacklist = {}
+local TurretSubOrder =
+{
+    ["artillery-turret"] = "[k]",
+    ["flamethrower-turret"] = "[j]",
+    ["glaser-turret-sniper"] = "[i]",
+    ["tesla-turret"] = "[h]",
+    ["laser-turret-big"] = "[f]",
+    ["laser-turret-small"] = "[g]",
+    ["laser-turret"] = "[e]",
+    ["gun-turret-sniper"] = "[d]",
+    ["gun-turret-big"] = "[b]",
+    ["gun-turret-small"] = "[c]",
+    ["gun-turret"] = "[a]",
+}
+
+local TurretRecipeOrder =
+{
+    ["turret-1"] = "[c]",
+    ["turret-0"] = "[b]",
+    ["turret"] = "[a]"
+}
+
 GroupBlacklist = {
     ["beacons"] = BeaconsBlacklist,
     ["circuit"] = CircuitBlacklist,
@@ -886,6 +915,7 @@ GroupBlacklist = {
     ["scienceData"] = ScienceDataBlacklist,
     ["science"] = ScienceBlacklist,
     ["equipment"] = EquipmentBlacklist,
+    ["turret"] = TurretBlacklist,
 }
 GroupSubOrder = {
     ["beacons"] = BeaconsSubOrder,
@@ -905,6 +935,7 @@ GroupSubOrder = {
     ["scienceData"] = ScienceDataSubOrder,
     ["science"] = ScienceSubOrder,
     ["equipment"] = EquipmentSubOrder,
+    ["turret"] = TurretSubOrder,
 }
 GroupRecipeOrder = {
     ["beacons"] = BeaconsRecipeOrder,
@@ -924,10 +955,11 @@ GroupRecipeOrder = {
     ["scienceData"] = ScienceDataRecipeOrder,
     ["science"] = ScienceRecipeOrder,
     ["equipment"] = EquipmentRecipeOrder,
+    ["turret"] = TurretRecipeOrder,
 }
 --this sorts the recipes into these groups in this order
 GroupSortOrder = {"equipment", "fluids", "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "scienceData",
-    "science", "combat", "production", "logistics", "pipes", "resources", "intermediate-products" }
+    "science", "turret", "combat", "production", "logistics", "pipes", "resources", "intermediate-products" }
 
 -- This allows for the conversion of odd group names to become the more common variant
 ReplaceSubgroup = {
@@ -1128,6 +1160,7 @@ SortDirectTable =
     ["cpu"] = { name = "electro", order = "a" },
     ["cpu-holmium"] = { name = "electro", order = "a" },
     ["pcb-solder"] = { name = "electro", order = "a" },
+    ["pcb-recipe"] = { name = "electro", order = "a" },
     ["solder"] = { name = "electro", order = "a" },
     ["temperature-sensor"] = { name = "electro", order = "a" },
     ["carbon-fiber"] = { name = "beam", order = "a" },
@@ -1210,5 +1243,7 @@ SortDirectTable =
     ["matter-tech-card"] = { name = "matter-science", order = "[m]"},
     ["basic-tech-card"] = { name = "science-pack", order = "[a]"},
     ["rocket-control-unit"] = { name = "rocket-part", order = "[a]"},
+    ["kr-rocket-turret"] = { name = "artillery-turret", order = "[a]"},
+    ["kr-railgun-turret"] = { name = "artillery-turret", order = "[a]"}
     --[""] = { name = "", order = ""},
 }
