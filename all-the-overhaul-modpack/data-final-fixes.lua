@@ -23,22 +23,22 @@ end
 
 --Science packs in labs
 table.insert(data.raw.lab['kr-singularity-lab'].inputs, "fusion-science-pack-1")
-if(table.contains(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-1") == false) then
+if (table.contains(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-1") == false) then
     table.insert(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-1")
 end
 
 table.insert(data.raw.lab['kr-singularity-lab'].inputs, "fusion-science-pack-2")
-if(table.contains(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-2") == false) then
+if (table.contains(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-2") == false) then
     table.insert(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-2")
 end
 
 table.insert(data.raw.lab['kr-singularity-lab'].inputs, "fusion-science-pack-3")
-if(table.contains(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-3") == false) then
+if (table.contains(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-3") == false) then
     table.insert(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-3")
 end
 
 table.insert(data.raw.lab['kr-singularity-lab'].inputs, "fusion-science-pack-4")
-if(table.contains(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-4") == false) then
+if (table.contains(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-4") == false) then
     table.insert(data.raw.lab["se-space-science-lab"].inputs, "fusion-science-pack-4")
 end
 
@@ -67,4 +67,27 @@ for i = 4, 10 do
     data.raw.lab[lab_name].inputs = util.table.deepcopy(data.raw.lab["biusart-lab"].inputs)
     data.raw.lab[lab_name].researching_speed = research_rate
     research_rate = research_rate + 0.25
+end
+
+for _, ammo in pairs(data.raw.ammo) do
+    if type(ammo.ammo_type) == "table" then
+        for _, category in pairs(ammo.ammo_type) do
+            if category ~= "bullet" then
+                goto continue
+            else
+                if type(ammo.ammo_type.action) == "table" then
+                    for _, action in pairs(ammo.ammo_type.action) do
+                        if type(action.action_delivery) == "table" then
+                            for _, action_delivery in pairs(action.action_delivery) do
+                                if action_delivery.max_range then
+                                    action_delivery.max_range = 79
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    ::continue::
 end
