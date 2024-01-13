@@ -89,7 +89,7 @@ local SpaceRecipeOrder =
     ["gps"] = "[f]",
 }
 --ammo
-local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", "fuel", "artillery-turret", "heavy-rocket-launcher", "rocket-"}
+local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", "fuel", "artillery-turret", "heavy-rocket-launcher", "rocket-", "turret"}
 local AmmoSubOrder =
 {
     ["anti-material"] = "[a]",
