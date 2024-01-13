@@ -2161,6 +2161,10 @@ Recipe("5d-gate-07"):set_enabled(false)
 Recipe("5d-gate-08"):set_enabled(false)
 Recipe("5d-gate-09"):set_enabled(false)
 Recipe("5d-gate-10"):set_enabled(false)
+
+-- Hide K2 Radar
+bobmods.lib.recipe.hide("kr-advanced-radar")
+
 -- Base turret
 -- 02
 Recipe("5d-gun-turret-02"):replace_ingredient("iron-plate", { "steel-plate", 8 })
@@ -2853,5 +2857,3 @@ Recipe("5d-radar-10"):replace_ingredient("low-density-structure", { "hv-power-re
 Recipe("5d-radar-10"):replace_ingredient("steel-plate", { "se-nanomaterial", 5 })
 Recipe("5d-radar-10"):add_ingredient({ "se-aeroframe-pole", 2 })
 Recipe("5d-radar-10"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
--- Hide K2 Radar
-Recipe("kr-advanced-radar"):set_enabled(false)

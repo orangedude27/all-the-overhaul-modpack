@@ -44,7 +44,7 @@ data:extend(
             icon = "__base__/graphics/icons/solar-panel.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "ba",
+            inventory_order = "bb",
             order = "ba"
         },
         {
@@ -62,8 +62,8 @@ data:extend(
             icon = "__base__/graphics/icons/rocket-silo.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "dc",
-            order = "dc"
+            inventory_order = "dd",
+            order = "dd"
         },
         {
             type = "item-group",
@@ -71,8 +71,8 @@ data:extend(
             icon = "__base__/graphics/icons/power-armor.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "db",
-            order = "db"
+            inventory_order = "dc",
+            order = "dc"
         },
         {
             type = "item-group",
@@ -98,8 +98,8 @@ data:extend(
             icon = "__base__/graphics/icons/beacon.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "e",
-            order = "e"
+            inventory_order = "ba",
+            order = "ba"
         },
         {
             type = "item-group",
@@ -118,6 +118,15 @@ data:extend(
             icon_mipmaps = 1,
             inventory_order = "f",
             order = "f"
+        },
+        {
+            type = "item-group",
+            name = "turret",
+            icon = "__base__/graphics/icons/gun-turret.png",
+            icon_size = 64,
+            icon_mipmaps = 1,
+            inventory_order = "db",
+            order = "db"
         },
         {
             type = "item-subgroup",
