@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.4
+Date: 1.13.2024
+  Mod Changes:
+    - Removed More Ammo as a Dependency
+  Bug Fixes:
+    - Added some code to force the K2 ammo's range to be the max of the highest tier turret
+    - Added missing Item Tab name
+---------------------------------------------------------------------------------------------------
 Version: 1.7.3
 Date: 1.12.2024
   Mod Changes:
