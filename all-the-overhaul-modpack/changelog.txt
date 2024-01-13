@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.3
+Date: 1.12.2024
+  Mod Changes:
+    - Added OD27_5dim_battlefield
+  Changes:
+    - Rebalanced Recipes and Tech tree for Turrets
+    - Added a new Turrents Group to help de-clutter
+---------------------------------------------------------------------------------------------------
 Version: 1.7.2
 Date: 1.7.2024
   Changes:
