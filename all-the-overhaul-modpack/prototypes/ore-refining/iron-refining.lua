@@ -144,8 +144,8 @@ data:extend({
   {
     type = "item",
     name = "atom-iron-pellets",
-    icon = "__space-exploration-graphics__/graphics/icons/core-fragment.png",
-    icon_size = 64,
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-iron-pellets.png",
+    icon_size = 128,
     icon_mipmaps = 1,
     order = "a[iron-pellet]",
     stack_size = 50,
@@ -159,7 +159,7 @@ data:extend({
         type = "recipe",
         name = "atom-iron-pellets",
         icons = {
-          { icon = "__space-exploration-graphics__/graphics/icons/core-fragment.png", icon_size = 64, icon_mipmaps = 3,},
+          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-iron-pellets.png", icon_size = 128, icon_mipmaps = 3,},
           { icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png", icon_size = 64,  scale=0.25, shift= {-8, -8}},
         },
         category = "pulverising",

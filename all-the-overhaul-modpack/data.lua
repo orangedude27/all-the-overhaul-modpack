@@ -26,4 +26,4 @@ end
 require("prototypes/items")
 require("prototypes/entities/machines")
 
-require("prototypes/ore-refining")
+require("prototypes/ore-refining/iron-refining")
