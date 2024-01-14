@@ -1,3 +1,4 @@
+-- #1
 data:extend({
 	-- copper ingot
 	{
@@ -58,6 +59,7 @@ data:extend({
     }
 })
 
+-- #2
 data:extend({
 	-- copper enrichment
 	{
@@ -70,11 +72,16 @@ data:extend({
         category = "fluid-filtration",
         energy_required = 11.25,
         ingredients = {
-            { name = "5d-copper-dust", amount = 20 }
+            { name = "5d-copper-dust", amount = 20 },
+            { type = "fluid", name = "water", amount = 50 }
         },
         results = {
-			{ name = "enriched-copper", amount = 2 },
-		},
+            { name = "enriched-copper", amount = 2 },
+            { name = "indium-ore", probability = 0.2, amount = 1 },
+            { name = "bismuth-ore", probability = 0.5, amount = 1 },
+            { type = "fluid", name = "dirty-water", amount = 50 }
+        },
+		main_product = "enriched-copper",
     }
 })
 
@@ -90,7 +97,8 @@ data:extend({
         category = "casting",
         energy_required = 18,
         ingredients = {
-            { name = "enriched-copper", amount = 2 }
+            { name = "enriched-copper", amount = 2 },
+            { type = "fluid", name = "carbon-dioxide", amount = 20 },
         },
         results = {
 			{ name = "se-copper-ingot", amount = 6 },
@@ -98,6 +106,7 @@ data:extend({
     }
 })
 
+-- #3
 data:extend({
 	-- copper slurry
 	{
@@ -110,11 +119,14 @@ data:extend({
         category = "el_purifier_category",
         energy_required = 5,
         ingredients = {
-            { name = "5d-copper-dust", amount = 20 }
+            { name = "5d-copper-dust", amount = 20 },
+            { type = "fluid", name = "sulfuric-acid", amount = 5 },
         },
         results = {
 			{ name = "el_materials_pure_copper", amount = 1 },
+			{ name = "silver-ore", amount = 1 },
 		},
+		main_product = "el_materials_pure_copper",
     }
 })
 
@@ -130,14 +142,20 @@ data:extend({
         category = "fluid-filtration",
         energy_required = 5,
         ingredients = {
-            { name = "el_materials_pure_copper", amount = 1 }
+            { name = "el_materials_pure_copper", amount = 1 },
+            { type = "fluid", name = "water", amount = 75 }
         },
         results = {
 			{ name = "enriched-copper", amount = 3 },
+			{ name = "indium-ore", probability = 0.5, amount = 1 },
+			{ name = "bismuth-ore", amount = 1 },
+			{ type = "fluid", name = "dirty-water", amount = 75 }
 		},
+		main_product = "enriched-copper",
     }
 })
 
+-- #4
 data:extend({
   {
     type = "item",
@@ -183,7 +201,8 @@ data:extend({
         category = "casting",
         energy_required = 5,
         ingredients = {
-            { name = "atom-copper-pellets", amount = 2 }
+            { name = "atom-copper-pellets", amount = 2 },
+            { type = "fluid", name = "carbon-dioxide", amount = 20 },
         },
         results = {
 			{ name = "se-copper-ingot", amount = 5 },
