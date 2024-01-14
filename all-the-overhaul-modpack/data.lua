@@ -28,3 +28,4 @@ require("prototypes/entities/machines")
 
 require("prototypes/ore-refining/iron-refining")
 require("prototypes/ore-refining/copper-refining")
+require("prototypes/ore-refining/cobalt-refining")
