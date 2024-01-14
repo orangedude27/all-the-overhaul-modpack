@@ -180,7 +180,7 @@ data:extend({
         name = "atom-iron-ingot-pellets",
         icons = {
           { icon = "__space-exploration-graphics__/graphics/icons/iron-ingot.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__space-exploration-graphics__/graphics/icons/core-fragment.png", icon_size = 64,  scale=0.25, shift= {-8, -8}},
+          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-iron-pellets.png", icon_size = 128,  scale=0.15, shift= {-8, -8}},
         },
         category = "casting",
         energy_required = 5,
