@@ -1703,25 +1703,6 @@ data:extend({
 			{ name = "titanium-plate", amount_min = 2, amount_max = 3},
 		},
     },
-	-- Lead
-	{
-        type = "recipe",
-        name = "atom-lead-plate-dust",
-        icons = {
-          { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__bzlead__/graphics/icons/lead-powder.png", icon_size = 64,  scale=0.25, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 16,
-        ingredients = {
-            {"lead-dust", 12}
-        },
-        results = {
-			{ name = "lead-plate", amount_min = 4, amount_max = 5},
-			{ name = "silver-ore", amount_min = 1, amount_max = 2},
-			{ name = "bismuth-plate", amount = 1, probability = 0.16},
-		},
-    },
 	-- Gold
 	{
         type = "recipe",
@@ -2039,7 +2020,6 @@ data:extend({
 		},
 		main_product = "tantalum-plate",
     },
-	
 })
 
 

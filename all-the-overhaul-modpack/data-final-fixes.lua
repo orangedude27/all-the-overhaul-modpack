@@ -7,6 +7,7 @@ require("prototypes/common-final")
 require("prototypes/recipe")
 require("prototypes/technology")
 require("prototypes/sorting/sorter")
+require("prototypes/ore-refining/refining-fixes")
 
 
 data.raw["item"]["fu_tech_sign_item"].icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-2.png"

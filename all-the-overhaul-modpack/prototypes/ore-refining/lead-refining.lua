@@ -1,5 +1,59 @@
 -- #1
 data:extend({
+    {
+        type = "item",
+        name = "atom-lead-dust",
+        icon = "__bzlead__/graphics/icons/lead-powder.png",
+        icon_size = 64,
+        icon_mipmaps = 1,
+        order = "a[lead-dust]",
+        stack_size = 50,
+        subgroup = "lead",
+    }
+})
+
+data:extend({
+    {
+        -- Lead Dust
+        type = "recipe",
+        name = "atom-lead-dust",
+        icons = {
+            { icon = "__bzlead__/graphics/icons/lead-powder.png",  icon_size = 64, icon_mipmaps = 3, },
+        },
+        category = "mashering",
+        energy_required = 3.2,
+        ingredients = {
+            { "lead-ore", 1 }
+        },
+        results = {
+            { name = "atom-lead-dust", amount = 2 },
+        }
+    }
+})
+
+data:extend({
+    {
+        -- Lead Plate
+        type = "recipe",
+        name = "atom-lead-plate-dust",
+        icons = {
+            { icon = "__bzlead__/graphics/icons/lead-plate.png",  icon_size = 64, icon_mipmaps = 3, },
+            { icon = "__bzlead__/graphics/icons/lead-powder.png", icon_size = 64, scale = 0.25,     shift = { -8, -8 } },
+        },
+        category = "smelting",
+        energy_required = 16,
+        ingredients = {
+            { "atom-lead-dust", 12 }
+        },
+        results = {
+            { name = "lead-plate",    amount_min = 4, amount_max = 5 },
+            { name = "silver-ore",    amount_min = 1, amount_max = 2 },
+            { name = "bismuth-plate", amount = 1,     probability = 0.16 },
+        }
+    }
+})
+
+data:extend({
     -- Lead ingot
     {
         type = "recipe",
@@ -11,11 +65,51 @@ data:extend({
         category = "casting",
         energy_required = 28.8,
         ingredients = {
-            { name = "lead-dust", type = "item", amount = 20 },
+            { name = "atom-lead-dust", type = "item", amount = 20 },
         },
         results = {
             { name = "lead-ingot", amount = 4 },
         },
+    }
+})
+
+data:extend({
+	-- Lead molten
+	{
+        type = "recipe",
+        name = "atom-lead-molten",
+        icons = {
+          { icon = "__bzlead__/graphics/icons/molten-lead.png", icon_size = 128},
+          { icon = "__bzlead__/graphics/icons/lead-ingot.png", icon_size = 64,  scale=0.25, shift= {-8, -8}},
+        },
+        category = "el_arc_furnace_category",
+        energy_required = 14.4,
+        ingredients = {
+            { name = "lead-ingot", amount = 4 }
+        },
+        results = {
+			{ type = "fluid", name = "molten-lead", amount = 400 },
+		},
+    }
+})
+
+data:extend({
+	-- Lead molten
+	{
+        type = "recipe",
+        name = "atom-lead-plate",
+        icons = {
+          { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64, icon_mipmaps = 3,},
+          { icon = "__bzlead__/graphics/icons/molten-lead.png", icon_size = 128,  scale=0.15, shift= {-8, -8}},
+        },
+        category = "el_caster_category",
+        energy_required = 14.4,
+        ingredients = {
+            { type = "fluid", name = "molten-lead", amount = 400 }
+        },
+        results = {
+			{ name = "lead-plate", amount = 20 },
+		},
     }
 })
 
@@ -33,7 +127,7 @@ data:extend({
 --         category = "fluid-filtration",
 --         energy_required = 11.25,
 --         ingredients = {
---             { name = "lead-dust", amount = 20 },
+--             { name = "atom-lead-dust", amount = 20 },
 --             { type = "fluid", name = "water", amount = 50 }
 --         },
 --         results = {
@@ -79,8 +173,8 @@ data:extend({
         category = "el_purifier_category",
         energy_required = 5,
         ingredients = {
-            { name = "lead-dust", amount = 20 },
-            { type = "fluid",       name = "oxygen", amount = 5 },
+            { name = "atom-lead-dust", amount = 20 },
+            { type = "fluid",          name = "oxygen", amount = 5 },
         },
         results = {
             { name = "fu_materials_pure_lead", amount = 1 },
@@ -162,7 +256,6 @@ data:extend({
         ingredients = {
             { name = "atom-lead-pellets", amount = 2 },
             { name = "quicklime",         amount = 2 },
-            { name = "coke",              amount = 2 },
         },
         results = {
             { name = "lead-ingot", amount = 5 },
