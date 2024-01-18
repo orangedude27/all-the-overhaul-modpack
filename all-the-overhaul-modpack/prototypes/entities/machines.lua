@@ -984,3 +984,5 @@ for i = 4, 10 do
     local lab_name = "5d-lab-" .. (i < 10 and "0" or "") .. i
     data.raw.lab[lab_name].se_allow_in_space = true
 end
+
+data.raw.furnace["fu_burner_entity"].energy_source.emissions_per_minute = 100;
