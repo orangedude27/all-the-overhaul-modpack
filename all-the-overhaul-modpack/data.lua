@@ -26,7 +26,4 @@ end
 require("prototypes/items")
 require("prototypes/entities/machines")
 
-require("prototypes/ore-refining/iron-refining")
-require("prototypes/ore-refining/copper-refining")
-require("prototypes/ore-refining/cobalt-refining")
-require("prototypes/ore-refining/lead-refining")
+require("prototypes/ore-refining/refining-data")
