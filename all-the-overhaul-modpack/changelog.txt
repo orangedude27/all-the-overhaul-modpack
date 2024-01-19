@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.5
+Date: 1.18.2024
+  Changes:
+    - Due to SE updates, I added some pollution output to the 248k item and fluid handler to act as a new way of "voiding"
+  Bug Fixes:
+    - Fixed issue with T2 and T3 labs not having the correct sciences for research progression: https://discord.com/channels/1174743568590590053/1193399533275709471
+---------------------------------------------------------------------------------------------------
 Version: 1.7.4
 Date: 1.13.2024
   Mod Changes:
