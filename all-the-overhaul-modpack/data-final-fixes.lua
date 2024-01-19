@@ -52,6 +52,10 @@ for i = 1, 4 do
         table.insert(data.raw.lab["lab"].inputs, 1, "basic-tech-card")
     elseif i < 4 then
         local lab_name = "5d-lab-" .. (i < 10 and "0" or "") .. i
+        if i == 2 or i == 3 then
+            table.insert(data.raw.lab[lab_name].inputs, "se-rocket-science-pack")
+            table.insert(data.raw.lab[lab_name].inputs, "productivity-science-pack")
+        end
         table.insert(data.raw.lab[lab_name].inputs, 1, "basic-tech-card")
         data.raw.lab[lab_name].researching_speed = research_rate
     else
