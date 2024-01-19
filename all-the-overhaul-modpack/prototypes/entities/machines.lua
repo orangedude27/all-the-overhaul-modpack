@@ -986,3 +986,47 @@ for i = 4, 10 do
 end
 
 data.raw.furnace["fu_burner_entity"].energy_source.emissions_per_minute = 100;
+
+function make_burner_recipe(item)
+    if string.find(item, "dummy") then return end -- fix for ElectricTrains crash
+    local blank = {
+        name = 'fu_burn_oxygen_recipe',
+        type = 'recipe',
+        category = 'fu_burner_category',
+        icon = '__248k__/ressources/elements/fu_oxygen.png',
+        icon_size = 64,
+        enabled = true,
+        hidden = true,
+        ingredients = {
+            {type="item", name="blank", amount=1},
+        },
+        results = {},
+        result_count = 1,
+        energy_required = 0.1,
+        always_show_made_in = true,
+        subgroup = 'fu_item_subgroup_f',
+    }
+    blank["name"] = "fu_burn_"..item.."_recipe"
+    blank["ingredients"] = {
+        {item,1}
+    }
+    if data.raw.item[item].icon then 
+        blank["icon"] = data.raw.item[item].icon
+        blank["icon_size"] = data.raw.item[item].icon_size
+    end
+    --table.insert(data.raw.recipe, base)
+    data:extend({blank})
+end
+
+function new_burner_recipe_generator()
+    local items = data.raw.item
+    for i,v in pairs(items) do
+        if not (data.raw.item[i].name == "fi_materials_waste") then
+			if (data.raw.item["fu_burn_"..i.."_recipe"] == nil) then
+            	make_burner_recipe(data.raw.item[i].name)
+			end
+        end
+    end
+end
+
+new_burner_recipe_generator()
