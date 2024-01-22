@@ -1918,7 +1918,7 @@ data:extend({
         category = "mashering",
         energy_required = 3.2,
         ingredients = {
-            {"indium-ore", 1}
+            {"indite-ore", 1}
         },
         result = "atom-indium-dust",
 		result_count = 2,
@@ -2119,7 +2119,7 @@ table.insert(data.raw.technology["indium-processing"].effects,
 	{type = "unlock-recipe", recipe="atom-indium-dust-alt"})
 table.insert(data.raw.technology["indium-processing"].effects, 
 	{type = "unlock-recipe", recipe="atom-indium-plate-dust"})
-Recipe("enriched-indium"):replace_ingredient("indium-ore", { "atom-indium-dust", 9 })
+Recipe("enriched-indium"):replace_ingredient("indite-ore", { "atom-indium-dust", 9 })
 
 table.insert(data.raw.technology["manganese-smelting"].effects, 
 	{type = "unlock-recipe", recipe="atom-manganese-dust"})
