@@ -77,7 +77,7 @@ data:extend({
         },
         results = {
             { name = "enriched-copper", amount = 2 },
-            { name = "indium-ore", probability = 0.2, amount = 1 },
+            { name = "indite-ore", probability = 0.2, amount = 1 },
             { name = "bismuth-ore", probability = 0.5, amount = 1 },
             { type = "fluid", name = "dirty-water", amount = 50 }
         },
@@ -147,7 +147,7 @@ data:extend({
         },
         results = {
 			{ name = "enriched-copper", amount = 3 },
-			{ name = "indium-ore", probability = 0.5, amount = 1 },
+			{ name = "indite-ore", probability = 0.5, amount = 1 },
 			{ name = "bismuth-ore", amount = 1 },
 			{ type = "fluid", name = "dirty-water", amount = 75 }
 		},
