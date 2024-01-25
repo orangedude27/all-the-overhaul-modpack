@@ -492,5 +492,33 @@ data:extend({
     icon_size = 128,
     stack_size = 100
   },
+  {
+    type = "item",
+    name = "atom-nickel-pure",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pure.png",
+    icon_size = 64,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-tungsten-pure",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tungsten-pure.png",
+    icon_size = 64,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-zinc-pure",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pure.png",
+    icon_size = 64,
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "atom-manganese-pure",
+    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-pure.png",
+    icon_size = 64,
+    stack_size = 100
+  },
   
 })
