@@ -201,7 +201,6 @@ data:extend({
         ingredients = {
             { name = "atom-cobalt-pellets", amount = 2 },
             { name = "quicklime", amount = 2 },
-			{ name = "coke", amount = 2 },
         },
         results = {
 			{ name = "cobalt-ingot", amount = 5 },

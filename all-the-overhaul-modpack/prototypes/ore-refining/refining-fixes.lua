@@ -11,3 +11,6 @@ bobmods.lib.recipe.hide("se-molten-iron")
 
 -- Lead Recipes to Disable
 bobmods.lib.recipe.hide("lead-dust")
+data.raw.recipe["enriched-lead"].category = "fluid-filtration"
+Recipe("enriched-lead"):remove_ingredient("sulfuric-acid")
+Recipe("enriched-lead"):replace_ingredient("lead-dust", "atom-lead-dust")
