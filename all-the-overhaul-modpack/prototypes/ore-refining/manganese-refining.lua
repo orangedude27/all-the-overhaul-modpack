@@ -11,7 +11,8 @@ data:extend({
         category = "casting",
         energy_required = 28.8,
         ingredients = {
-            { name = "atom-manganese-dust", amount = 20 }
+            { name = "atom-manganese-dust", amount = 20 },
+			{ name = "atom-carbon", amount = 6 },
         },
         results = {
 			{ name = "manganese-ingot", amount = 4 },
@@ -96,7 +97,7 @@ data:extend({
         energy_required = 18,
         ingredients = {
             { name = "enriched-manganese", amount = 2 },
-            { name = "coke", amount = 2 },
+            { type = "fluid", name = "sulfuric-acid", amount = 10 },
         },
         results = {
 			{ name = "manganese-ingot", amount = 6 },
@@ -197,7 +198,7 @@ data:extend({
         energy_required = 5,
         ingredients = {
             { name = "atom-manganese-pellets", amount = 2 },
-            { name = "quicklime", amount = 2 },
+            { type = "fluid", name = "gas", amount = 30 },
         },
         results = {
 			{ name = "manganese-ingot", amount = 5 },

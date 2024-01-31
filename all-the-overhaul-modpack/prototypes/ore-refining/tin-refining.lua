@@ -211,7 +211,7 @@ data:extend({
     energy_required = 5,
     ingredients = {
       { name = "atom-tin-pellets", amount = 2 },
-      { name = "quicklime",        amount = 2 },
+      { name = "atom-carbon",      amount = 2 },
     },
     results = {
       { name = "tin-ingot", amount = 5 },
