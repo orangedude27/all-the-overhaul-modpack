@@ -5,6 +5,7 @@ config: {
 
     -- Names of the indermediate and end result items (e.g. "5d-copper-dust", "se-copper-ingot")
     itemNames: {
+        ore: string,
         ingot: string,
         dust: string,
         molten: string,
@@ -27,13 +28,17 @@ config: {
 
     -- Optional additional results from the enrichment processes
     additionalResults: {
+        dustToPlate: array[ProductPrototype],
         dustToEnriched: array[ProductPrototype],
-        pureToEnriched: array[ProductPrototype],
-        dustToPure: array[ProductPrototype]
+        dustToPure: array[ProductPrototype],
+        pureToEnriched: array[ProductPrototype]
     }
 
     -- Optional additional ingredients (replaces the default ones)
     additionalIngredient: {
+        -- Defaults to none
+        dustToIngot: ProductPrototype
+
         -- Defaults to { name = "coke", amount = 2 }
         enrichedToIngot: ProductPrototype
 
@@ -46,6 +51,9 @@ config: {
 }
 --]]
 function createRefiningData(config)
+    config.additionalResults = config.additionalResults or {}
+    config.additionalIngredient = config.additionalIngredient or {}
+
     return {
         dustToIngotRecipe(config),
         ingotToMoltenRecipe(config),
@@ -56,21 +64,38 @@ function createRefiningData(config)
         pureToEnrichedRecipe(config),
         enrichedToPelletsRecipe(config),
         pelletsToIngotRecipe(config),
-        pelletsItem(config)
+        item(config, "pellets")
     }
 end
 
 function createSmallIcon(icon)
     local smallIcon = table.deepcopy(icon)
     smallIcon.scale = 16 / smallIcon.icon_size
-    smallIcon.shift = {-8, -8}
+    smallIcon.shift = { -8, -8 }
     return smallIcon
 end
 
-function dustToIngotRecipe(config)
+function oreToDustRecipe(config)
     return {
         type = "recipe",
-        name = "atom-"..config.name.."-ingot",
+        name = "atom-" .. config.name .. "-dust",
+        icons = { config.icons.dust },
+        category = "mashering",
+        energy_required = 3.2,
+        ingredients = {
+            { config.itemNames.ore, 1 }
+        },
+        results = {
+            { name = config.itemNames.dust, amount = 2 },
+        }
+    }
+end
+
+function dustToIngotRecipe(config)
+    local additionalIngredient = config.additionalIngredient.dustToIngot or nil
+    return {
+        type = "recipe",
+        name = "atom-" .. config.name .. "-ingot",
         icons = {
             config.icons.ingot,
             createSmallIcon(config.icons.dust)
@@ -78,18 +103,19 @@ function dustToIngotRecipe(config)
         category = "casting",
         energy_required = 28.8,
         ingredients = {
-            { name = config.itemNames.dust, amount = 20 }
+            { name = config.itemNames.dust, amount = 20 },
+            additionalIngredient
         },
         results = {
             { name = config.itemNames.ingot, amount = 4 },
-        },
+        }
     }
 end
 
 function ingotToMoltenRecipe(config)
     return {
         type = "recipe",
-        name = "atom-"..config.name.."-molten",
+        name = "atom-" .. config.name .. "-molten",
         icons = {
             config.icons.molten,
             createSmallIcon(config.icons.ingot)
@@ -101,14 +127,14 @@ function ingotToMoltenRecipe(config)
         },
         results = {
             { type = "fluid", name = config.itemNames.molten, amount = 400 },
-        },
+        }
     }
 end
 
 function moltenToPlateRecipe(config)
     return {
         type = "recipe",
-        name = "atom-"..config.name.."-plate",
+        name = "atom-" .. config.name .. "-plate",
         icons = {
             config.icons.plate,
             createSmallIcon(config.icons.molten)
@@ -131,7 +157,7 @@ function dustToEnrichedRecipe(config)
 
     return {
         type = "recipe",
-        name = "atom-"..config.name.."-enrichment",
+        name = "atom-" .. config.name .. "-enrichment",
         icons = {
             config.icons.enriched,
             createSmallIcon(config.icons.dust)
@@ -151,7 +177,7 @@ function enrichedToIngotRecipe(config)
     local additionalIngredient = config.additionalIngredient.enrichedToIngot or { name = "coke", amount = 2 }
     return {
         type = "recipe",
-        name = "atom-"..config.name.."-ingot-enriched",
+        name = "atom-" .. config.name .. "-ingot-enriched",
         icons = {
             config.icons.ingot,
             createSmallIcon(config.icons.enriched)
@@ -175,7 +201,7 @@ function dustToPureRecipe(config)
 
     return {
         type = "recipe",
-        name = "atom-"..config.name.."-slurry",
+        name = "atom-" .. config.name .. "-slurry",
         icons = {
             config.icons.dust,
             createSmallIcon(config.icons.pure),
@@ -187,7 +213,7 @@ function dustToPureRecipe(config)
             additionalIngredient
         },
         results = results,
-        main_product = config.itemNames.pure,
+        main_product = config.itemNames.pure
     }
 end
 
@@ -198,7 +224,7 @@ function pureToEnrichedRecipe(config)
 
     return {
         type = "recipe",
-        name = "atom-"..config.name.."-enriched-pure",
+        name = "atom-" .. config.name .. "-enriched-pure",
         icons = {
             config.icons.enriched,
             createSmallIcon(config.icons.pure)
@@ -214,10 +240,10 @@ function pureToEnrichedRecipe(config)
     }
 end
 
-function enrichedToPelletsRecipe(config) 
+function enrichedToPelletsRecipe(config)
     return {
         type = "recipe",
-        name = "atom-"..config.name.."-pellets",
+        name = "atom-" .. config.name .. "-pellets",
         icons = {
             config.icons.pellets,
             createSmallIcon(config.icons.enriched)
@@ -237,7 +263,7 @@ function pelletsToIngotRecipe(config)
     local additionalIngredient = config.additionalIngredient.pelletsToIngot or { name = "quicklime", amount = 2 }
     return {
         type = "recipe",
-        name = "atom-"..config.name.."-ingot-pellets",
+        name = "atom-" .. config.name .. "-ingot-pellets",
         icons = {
             config.icons.ingot,
             createSmallIcon(config.icons.pellets)
@@ -254,14 +280,12 @@ function pelletsToIngotRecipe(config)
     }
 end
 
-function pelletsItem(config)
+function item(config, category)
     return {
         type = "item",
-        name = "atom-"..config.name.."-pellets",
-        icons = {
-            config.icons.pellets
-        },
-        order = "a["..config.name.."-pellet]",
+        name = "atom-" .. config.name .. "-" .. category,
+        icons = { config.icons[category] },
+        order = "a[" .. config.name .. "-" .. category .. "]",
         stack_size = 50,
         subgroup = config.name
     }
