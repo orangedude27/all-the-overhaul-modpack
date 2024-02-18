@@ -1,3 +1,5 @@
+require('refining')
+
 require("cobalt")
 require("copper")
 require("gold")

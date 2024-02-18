@@ -1,5 +1,3 @@
-require('refining')
-
 data:extend(
     createRefiningData({
         name = "",

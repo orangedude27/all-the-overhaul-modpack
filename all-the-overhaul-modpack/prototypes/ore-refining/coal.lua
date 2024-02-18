@@ -1,5 +1,3 @@
-require('refining')
-
 local config = {
     name = "coal",
     itemNames = {
