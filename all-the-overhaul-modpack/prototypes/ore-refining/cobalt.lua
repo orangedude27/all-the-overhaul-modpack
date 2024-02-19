@@ -25,4 +25,5 @@ data:extend(createRefiningData(config))
 
 data:extend({
     oreToDustRecipe(config),
+    item(config, "dust")
 })

@@ -24,5 +24,6 @@ local config = {
 data:extend(createRefiningData(config))
 
 data:extend({
-    oreToDustRecipe(config)
+    oreToDustRecipe(config),
+    item(config, "dust")
 })

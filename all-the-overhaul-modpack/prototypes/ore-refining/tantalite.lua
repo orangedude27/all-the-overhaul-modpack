@@ -26,6 +26,10 @@ local tantalumConfig = {
 
 data:extend(createRefiningData(tantalumConfig))
 
+data:extend({
+    item(tantalumConfig, "dust")
+})
+
 --[[
 local niobiumConfig = {
     name = "niobium",

@@ -300,13 +300,13 @@ function pelletsToIngotRecipe(config)
     }
 end
 
-function item(config, category)
+function item(config, category, stackSize)
     return {
         type = "item",
         name = "atom-" .. config.name .. "-" .. category,
         icons = { config.icons[category] },
         order = "a[" .. config.name .. "-" .. category .. "]",
-        stack_size = 50,
+        stack_size = stackSize or 100,
         subgroup = config.name
     }
 end

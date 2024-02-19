@@ -305,20 +305,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "atom-gold-dust",
-    icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-gold-dust.png",
-    icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-tin-dust",
-    icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-tin-dust.png",
-    icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
     name = "atom-zinc-dust",
     icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png",
     icon_size = 32,
@@ -347,51 +333,9 @@ data:extend({
   },
   {
     type = "item",
-    name = "atom-cobalt-dust",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-dust.png",
-    icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-indium-dust",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-dust.png",
-    icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-manganese-dust",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-dust.png",
-    icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
     name = "atom-nickel-dust",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-dust.png",
     icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-tantalite-dust",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-dust.png",
-    icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-iron-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-iron-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-copper-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-copper-pellets.png",
-    icon_size = 128,
     stack_size = 100
   },
   {
@@ -417,57 +361,8 @@ data:extend({
   },
   {
     type = "item",
-    name = "atom-cobalt-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-gold-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-gold-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-indium-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-lead-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-lead-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-manganese-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
     name = "atom-nickel-pellets",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-tantalite-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-tin-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pellets.png",
     icon_size = 128,
     stack_size = 100
   },
@@ -510,13 +405,6 @@ data:extend({
     type = "item",
     name = "atom-zinc-pure",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pure.png",
-    icon_size = 64,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-manganese-pure",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-pure.png",
     icon_size = 64,
     stack_size = 100
   },
