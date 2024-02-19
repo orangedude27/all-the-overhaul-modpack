@@ -2,6 +2,7 @@ data:extend(
     createRefiningData({
         name = "copper",
         itemNames = {
+            ore = "copper-ore",
             ingot = "se-copper-ingot",
             dust = "5d-copper-dust",
             molten = "se-molten-copper",
@@ -20,6 +21,11 @@ data:extend(
             pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-copper-pellets.png", icon_size = 128, icon_mipmaps = 3 }
         },
         additionalResults = {
+            dustToPlate = {
+                { name = "silver-ore", amount = 1},
+                { name = "cobaltite-ore", amount = 1},
+                { name = "bismuth-plate", amount = 1, probability = 0.2}
+            },
             dustToEnriched = {
                 { name = "indite-ore", probability = 0.2, amount = 1 },
                 { name = "bismuth-ore", probability = 0.5, amount = 1 }

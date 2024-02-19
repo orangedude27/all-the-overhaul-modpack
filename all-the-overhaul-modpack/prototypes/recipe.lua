@@ -1619,52 +1619,7 @@ Recipe("area-mining-drill"):add_ingredient({ "se-aeroframe-pole", 5 })
 
 
 -- Ore refining
-Recipe("5d-iron-dust"):set_enabled(false)
-Recipe("5d-copper-plate"):set_enabled(false)
-Recipe("tungsten-plate-dust"):set_enabled(false)
-Recipe("titanium-plate-dust"):set_enabled(false)
-Recipe("lead-plate-dust"):set_enabled(false)
-Recipe("graphite-5d"):set_enabled(false)
-
 data:extend({
-	-- Iron
-	{
-        type = "recipe",
-        name = "atom-iron-plate-dust",
-        icons = {
-          { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-iron-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 48,
-        ingredients = {
-            {"5d-iron-dust", 22}
-        },
-        results = {
-			{ name = "iron-plate", amount = 15},
-			{ name = "manganese-plate", amount = 1, probability = 0.33},
-		},
-    },
-	-- Copper
-	{
-        type = "recipe",
-        name = "atom-copper-plate-dust",
-        icons = {
-          { icon = "__base__/graphics/icons/copper-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-copper-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 48,
-        ingredients = {
-            {"5d-copper-dust", 22}
-        },
-        results = {
-			{ name = "silver-ore", amount = 1},
-			{ name = "cobaltite-ore", amount = 1},
-			{ name = "copper-plate", amount = 15},
-			{ name = "bismuth-plate", amount = 1, probability = 0.2},
-		},
-    },
 	-- Tungsten
 	{
         type = "recipe",
@@ -1697,49 +1652,6 @@ data:extend({
         result = "titanium-plate",
 		results = {
 			{ name = "titanium-plate", amount_min = 2, amount_max = 3},
-		},
-    },
-	-- Gold
-	{
-        type = "recipe",
-        name = "atom-gold-dust",
-        icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-gold-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"gold-ore", 1}
-        },
-        result = "atom-gold-dust",
-		result_count = 2,
-    },
-	-- Tin
-	{
-        type = "recipe",
-        name = "atom-tin-dust",
-        icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-tin-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"tin-ore", 1}
-        },
-        result = "atom-tin-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-tin-plate-dust",
-        icons = {
-          { icon = "__bztin__/graphics/icons/tin-plate.png", icon_size = 128, icon_mipmaps = 3,},
-          { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-tin-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 12,
-        ingredients = {
-            {"atom-tin-dust", 12}
-        },
-        results = {
-			{ name = "tin-plate", amount = 5},
-			{ name = "bismuth-plate", amount = 1, probability = 0.09},
 		},
     },
 	-- Zinc
@@ -1859,102 +1771,6 @@ data:extend({
         result = "chromium-plate",
 		result_count = 5,
     },
-	-- Cobalt
-	{
-        type = "recipe",
-        name = "atom-cobalt-dust",
-        icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"cobaltite-ore", 1}
-        },
-        result = "atom-cobalt-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-cobalt-plate-dust",
-        icons = {
-          { icon = "__Cobalt__/graphics/icons/cobalt-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 24,
-        ingredients = {
-            {"atom-cobalt-dust", 15}
-        },
-        result = "cobalt-plate",
-		result_count = 5,
-    },
-	-- Indium
-	{
-        type = "recipe",
-        name = "atom-indium-dust",
-        icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"indite-ore", 1}
-        },
-        result = "atom-indium-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-indium-dust-alt",
-        icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"indite-ore", 1}
-        },
-        result = "atom-indium-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-indium-plate-dust",
-        icons = {
-          { icon = "__Indium__/graphics/icons/indium-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 12,
-        ingredients = {
-            {"atom-indium-dust", 10}
-        },
-        result = "indium-plate",
-		result_count = 5,
-    },
-	-- Manganese
-	{
-        type = "recipe",
-        name = "atom-manganese-dust",
-        icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"manganese-ore", 1}
-        },
-        result = "atom-manganese-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-manganese-plate-dust",
-        icons = {
-          { icon = "__manganese__/graphics/icons/manganese-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 16,
-        ingredients = {
-            {"atom-manganese-dust", 10}
-        },
-        result = "manganese-plate",
-		result_count = 5,
-    },
 	-- Nickel
 	{
         type = "recipe",
@@ -2020,13 +1836,13 @@ data:extend({
 
 
 table.insert(data.raw.technology["5d-masher-1"].effects, 
-	{type = "unlock-recipe", recipe="atom-iron-plate-dust"})
+	{type = "unlock-recipe", recipe="5d-iron-plate"})
 table.insert(data.raw.technology["5d-masher-1"].effects, 
 	{type = "unlock-recipe", recipe="5d-iron-dust"})
 Recipe("enriched-iron"):replace_ingredient("iron-ore", { "5d-iron-dust", 9 })
 
 table.insert(data.raw.technology["copper-processing"].effects, 
-	{type = "unlock-recipe", recipe="atom-copper-plate-dust"})
+	{type = "unlock-recipe", recipe="5d-copper-plate"})
 table.insert(data.raw.technology["copper-processing"].effects, 
 	{type = "unlock-recipe", recipe="5d-copper-dust"})
 Recipe("enriched-copper"):replace_ingredient("copper-ore", { "5d-copper-dust", 9 })
@@ -2040,7 +1856,7 @@ Recipe("enriched-tungsten"):replace_ingredient("tungsten-ore", { "tungsten-dust"
 Recipe("enriched-titanium"):replace_ingredient("titanium-ore", { "titanium-dust", 9 })
 
 table.insert(data.raw.technology["5d-masher-1"].effects, 
-	{type = "unlock-recipe", recipe="atom-lead-plate-dust"})
+	{type = "unlock-recipe", recipe="lead-plate-dust"})
 table.insert(data.raw.technology["5d-masher-1"].effects, 
 	{type = "unlock-recipe", recipe="lead-dust"})
 Recipe("enriched-lead"):replace_ingredient("lead-ore", { "lead-dust", 9 })
@@ -2091,9 +1907,7 @@ Recipe("enriched-cobalt"):replace_ingredient("cobaltite-ore", { "atom-cobalt-dus
 
 table.insert(data.raw.technology["indium-processing"].effects, 
 	{type = "unlock-recipe", recipe="atom-indium-dust"})
-table.insert(data.raw.technology["indium-processing"].effects, 
-	{type = "unlock-recipe", recipe="atom-indium-dust-alt"})
-table.insert(data.raw.technology["indium-processing"].effects, 
+table.insert(data.raw.technology["indium-processing"].effects,
 	{type = "unlock-recipe", recipe="atom-indium-plate-dust"})
 Recipe("enriched-indium"):replace_ingredient("indite-ore", { "atom-indium-dust", 9 })
 

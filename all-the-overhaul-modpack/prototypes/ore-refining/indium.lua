@@ -1,6 +1,7 @@
 local config = {
     name = "indium",
     itemNames = {
+        ore = "indite-ore",
         ingot = "indium-ingot",
         dust = "atom-indium-dust",
         molten = "molten-indium",
@@ -28,5 +29,6 @@ local config = {
 data:extend(createRefiningData(config))
 
 data:extend({
+    oreToDustRecipe(config),
     item(config, "pure")
 })

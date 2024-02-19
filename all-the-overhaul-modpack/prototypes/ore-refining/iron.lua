@@ -1,6 +1,7 @@
 local config = {
     name = "iron",
     itemNames = {
+        ore = "iron-ore",
         ingot = "se-iron-ingot",
         dust = "5d-iron-dust",
         molten = "se-molten-iron",
@@ -19,6 +20,9 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-iron-pellets.png", icon_size = 128, icon_mipmaps = 3 }
     },
     additionalResults = {
+        dustToPlate = {
+            { name = "manganese-plate", amount = 1, probability = 0.33}
+        },
         dustToEnriched = {
             { name = "manganese-ore", probability = 0.8, amount = 1 }
         },
@@ -33,6 +37,8 @@ local config = {
 
 data:extend(createRefiningData(config))
 
+-- TODO: They all have the same name, so they will overwrite each other
+--[[
 local manganeseRecipe = ingotToMoltenRecipe(config)
 table.insert(manganeseRecipe.ingredients, { name = "manganese-ingot", amount = 4 })
 table.insert(manganeseRecipe.ingredients, { type = "fluid", name = "se-pyroflux", amount = 10 })
@@ -55,3 +61,4 @@ data:extend({
     cobaltNickelRecipe,
     chromiumNickelRecipe
 })
+]]--

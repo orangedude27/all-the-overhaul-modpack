@@ -1,6 +1,7 @@
 local config = {
     name = "tin",
     itemNames = {
+        ore = "tin-ore",
         ingot = "tin-ingot",
         dust = "atom-tin-dust",
         molten = "molten-tin",
@@ -18,6 +19,11 @@ local config = {
         pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pure.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pellets.png", icon_size = 128 }
     },
+    additionalResults = {
+        dustToPlate = {
+            { name = "bismuth-plate", amount = 1, probability = 0.09}
+        }
+    },
     additionalIngredient = {
         pelletsToIngot = { name = "atom-carbon", amount = 2 }
     }
@@ -26,5 +32,6 @@ local config = {
 data:extend(createRefiningData(config))
 
 data:extend({
+    oreToDustRecipe(config),
     item(config, "pure")
 })

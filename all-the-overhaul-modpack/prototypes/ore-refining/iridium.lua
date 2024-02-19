@@ -4,6 +4,7 @@ data:extend(
     createRefiningData({
         name = "iridium",
         itemNames = {
+            ore = "iridium-ore",
             ingot = "se-iridium-ingot",
             dust = "iridium-powder",
             molten = "molten-tin",

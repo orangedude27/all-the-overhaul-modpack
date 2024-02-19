@@ -55,6 +55,7 @@ function createRefiningData(config)
     config.additionalIngredient = config.additionalIngredient or {}
 
     return {
+        dustToPlateRecipe(config),
         dustToIngotRecipe(config),
         ingotToMoltenRecipe(config),
         moltenToPlateRecipe(config),
@@ -88,6 +89,25 @@ function oreToDustRecipe(config)
         results = {
             { name = config.itemNames.dust, amount = 2 },
         }
+    }
+end
+
+function dustToPlateRecipe(config)
+    local results = config.additionalResults.dustToPlate or {}
+    table.insert(results, { name = config.itemNames.plate, amount = 15 })
+    return {
+        type = "recipe",
+        name = "atom-" .. config.name .. "-plate-dust",
+        icons = {
+            config.icons.plate,
+            createSmallIcon(config.icons.dust),
+        },
+        category = "smelting",
+        energy_required = 48,
+        ingredients = {
+            {config.itemNames.dust, 22}
+        },
+        results = results,
     }
 end
 

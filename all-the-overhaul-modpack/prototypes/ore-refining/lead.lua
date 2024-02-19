@@ -3,7 +3,7 @@ local config = {
     itemNames = {
         ore = "lead-ore",
         ingot = "lead-ingot",
-        dust = "atom-lead-dust",
+        dust = "lead-dust",
         molten = "molten-lead",
         plate = "lead-plate",
         enriched = "enriched-lead",
@@ -20,6 +20,10 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-lead-pellets.png", icon_size = 128, icon_mipmaps = 3 }
     },
     additionalResults = {
+        dustToPlate = {
+            { name = "silver-ore", amount_min = 1, amount_max = 2 },
+            { name = "bismuth-plate", amount = 1, probability = 0.16 }
+        },
         dustToPure = {
             { name = "silver-ore", amount = 1 }
         },
@@ -32,40 +36,21 @@ local config = {
     }
 }
 
--- Because lead is different
-data:extend({
-    oreToDustRecipe(config),
-    dustToIngotRecipe(config),
-    ingotToMoltenRecipe(config),
-    moltenToPlateRecipe(config),
-    -- Lead already has a way to make enriched ores
-    -- dustToEnrichedRecipe(config),
-    enrichedToIngotRecipe(config),
-    dustToPureRecipe(config),
-    pureToEnrichedRecipe(config),
-    enrichedToPelletsRecipe(config),
-    pelletsToIngotRecipe(config),
-    item(config, "dust"),
-    item(config, "pellets")
-})
+data:extend(createRefiningData(config))
 
 data:extend({
-    {
-        type = "recipe",
-        name = "atom-" .. config.name .. "-plate-dust",
-        icons = {
-            config.icons.plate,
-            createSmallIcon(config.icons.dust),
-        },
-        category = "smelting",
-        energy_required = 16,
-        ingredients = {
-            { config.itemNames.dust, 12 }
-        },
-        results = {
-            { name = config.itemNames.plate, amount_min = 4, amount_max = 5 },
-            { name = "silver-ore", amount_min = 1, amount_max = 2 },
-            { name = "bismuth-plate", amount = 1, probability = 0.16 },
-        }
-    }
+    item(config, "dust")
 })
+
+-- TODO: lead-dust is missing in final-fixes recipe
+log(serpent.block(data.raw.recipe["atom-lead-plate-dust"]))
+--[[
+8.177 Script @__boblibrary__/error-functions.lua:108: Ingredient.name not a valid item of any type.
+   8.177 Script @__boblibrary__/recipe-functions.lua:606: Invalid item found on recipe atom-lead-plate-dust.
+   8.177 Script @__boblibrary__/item-functions.lua:124: stack traceback:
+	__boblibrary__/item-functions.lua:124: in function 'ingredient'
+	__boblibrary__/recipe-functions.lua:595: in function 'duplicate_ingredient_check'
+	__boblibrary__/recipe-functions.lua:617: in function 'duplicate_ingredient_check_full'
+	__boblibrary__/recipe-functions.lua:643: in function 'ingredients_cleanup'
+	__boblibrary__/data-final-fixes.lua:5: in main chunk
+]]--
