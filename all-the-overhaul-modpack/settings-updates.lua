@@ -53,6 +53,10 @@ local function change_setting(setting_name, value, hide)
   end
 end
 
+--boblibrary
+if mods["boblibrary"] then
+  change_setting("bobmods-library-recipe-cleanup", false)
+end
 --248k
 if mods["248k"] then
   change_setting("el_solar_power_output", "80kW (normal)")

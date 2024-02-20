@@ -99,3 +99,7 @@ end
 
 
 table.insert(data.raw["assembling-machine"]["fu_ingot_entity"].crafting_categories, "casting")
+
+-- processing-electronics is removed by bzgold
+data.raw.recipe["fu_burn_processing-electronics_recipe"] = nil
+data.raw.recipe["kr-vc-processing-electronics"] = nil

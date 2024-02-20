@@ -1,7 +1,7 @@
 local config = {
     name = "cobalt",
     itemNames = {
-        ore = "cobalt-ore",
+        ore = "cobaltite-ore",
         plate = "cobalt-plate",
         dust = "atom-cobalt-dust",
         ingot = "cobalt-ingot",

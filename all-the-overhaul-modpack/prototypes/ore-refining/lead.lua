@@ -41,16 +41,3 @@ data:extend(createRefiningData(config))
 data:extend({
     item(config, "dust")
 })
-
--- TODO: lead-dust is missing in final-fixes recipe
-log(serpent.block(data.raw.recipe["atom-lead-plate-dust"]))
---[[
-8.177 Script @__boblibrary__/error-functions.lua:108: Ingredient.name not a valid item of any type.
-   8.177 Script @__boblibrary__/recipe-functions.lua:606: Invalid item found on recipe atom-lead-plate-dust.
-   8.177 Script @__boblibrary__/item-functions.lua:124: stack traceback:
-	__boblibrary__/item-functions.lua:124: in function 'ingredient'
-	__boblibrary__/recipe-functions.lua:595: in function 'duplicate_ingredient_check'
-	__boblibrary__/recipe-functions.lua:617: in function 'duplicate_ingredient_check_full'
-	__boblibrary__/recipe-functions.lua:643: in function 'ingredients_cleanup'
-	__boblibrary__/data-final-fixes.lua:5: in main chunk
-]]--
