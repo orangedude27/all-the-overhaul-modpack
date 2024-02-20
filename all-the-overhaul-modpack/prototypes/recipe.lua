@@ -1620,22 +1620,6 @@ Recipe("area-mining-drill"):add_ingredient({ "se-aeroframe-pole", 5 })
 
 -- Ore refining
 data:extend({
-	-- Tungsten
-	{
-        type = "recipe",
-        name = "atom-tungsten-plate-dust",
-        icons = {
-          { icon = "__bztungsten__/graphics/icons/tungsten-plate.png", icon_size = 128, icon_mipmaps = 3,},
-          { icon = "__bztungsten__/graphics/icons/tungsten-powder.png", icon_size = 64,  scale=0.25, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 24,
-        ingredients = {
-            {"tungsten-dust", 8}
-        },
-        result = "tungsten-plate",
-		result_count = 2,
-    },
 	-- Titanium
 	{
         type = "recipe",

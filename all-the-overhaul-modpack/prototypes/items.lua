@@ -375,13 +375,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "atom-tungsten-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tungsten-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
     name = "atom-zinc-pellets",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pellets.png",
     icon_size = 128,
@@ -391,13 +384,6 @@ data:extend({
     type = "item",
     name = "atom-nickel-pure",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pure.png",
-    icon_size = 64,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-tungsten-pure",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tungsten-pure.png",
     icon_size = 64,
     stack_size = 100
   },
