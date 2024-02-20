@@ -105,7 +105,7 @@ function dustToPlateRecipe(config)
         category = "smelting",
         energy_required = 48,
         ingredients = {
-            {config.itemNames.dust, 22}
+            { config.itemNames.dust, 22 }
         },
         results = results,
     }

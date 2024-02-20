@@ -5,7 +5,7 @@ local config = {
         dust = "atom-coal-dust",
     },
     icons = {
-        dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-coal-dust.png", icon_size = 32, icon_mipmaps = 3 } ,
+        dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-coal-dust.png", icon_size = 32, icon_mipmaps = 3 },
     }
 }
 

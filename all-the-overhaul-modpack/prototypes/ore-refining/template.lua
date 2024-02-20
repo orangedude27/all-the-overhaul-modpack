@@ -1,31 +1,32 @@
-data:extend(
-    createRefiningData({
-        name = "",
-        itemNames = {
-            ingot = "",
-            dust = "",
-            molten = "",
-            plate = "",
-            enriched = "",
-            pure = "",
-            pellets = ""
+local config = {
+    name = "",
+    itemNames = {
+        ore = "",
+        plate = "",
+        dust = "",
+        ingot = "",
+        molten = "",
+        enriched = "",
+        pure = "",
+        pellets = ""
+    },
+    icons = {
+        plate = ,
+        dust = ,
+        ingot = ,
+        molten = ,
+        enriched = ,
+        pure = ,
+        pellets =
+    },
+    additionalResults = {
+        dustToEnriched = {
         },
-        icons = {
-            ingot = ,
-            dust = ,
-            molten = ,
-            plate = ,
-            enriched = ,
-            pure = ,
-            pellets =
+        dustToPure = {
         },
-        additionalResults = {
-            dustToEnriched = {
-            },
-            dustToPure = {
-            },
-            pureToEnriched = {
-            }
+        pureToEnriched = {
         }
-    })
-)
+    }
+}
+
+data:extend(createRefiningData(config))
