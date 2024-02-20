@@ -1638,37 +1638,6 @@ data:extend({
 			{ name = "titanium-plate", amount_min = 2, amount_max = 3},
 		},
     },
-	-- Zinc
-	{
-        type = "recipe",
-        name = "atom-zinc-dust",
-        icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"zinc-ore", 1}
-        },
-        result = "atom-zinc-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-zinc-plate-dust",
-        icons = {
-          { icon = "__BrassTacks__/graphics/classic/icons/zinc-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 48,
-        ingredients = {
-            {"atom-zinc-dust", 21}
-        },
-        results = {
-			{ name = "zinc-plate", amount = 15},
-			{ name = "silver-ore", amount = 1, probability = 0.06},
-			{ name = "bismuth-plate", amount = 1, probability = 0.06},
-		},
-    },
 	-- Aluminium
 	{
         type = "recipe",

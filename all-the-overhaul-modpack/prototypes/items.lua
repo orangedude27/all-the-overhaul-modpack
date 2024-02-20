@@ -305,13 +305,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "atom-zinc-dust",
-    icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png",
-    icon_size = 32,
-   stack_size = 100
-  },
-  {
-    type = "item",
     name = "atom-aluminium-dust",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-aluminium-dust.png",
     icon_size = 32,
@@ -375,22 +368,8 @@ data:extend({
   },
   {
     type = "item",
-    name = "atom-zinc-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
     name = "atom-nickel-pure",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pure.png",
-    icon_size = 64,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-zinc-pure",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pure.png",
     icon_size = 64,
     stack_size = 100
   },
