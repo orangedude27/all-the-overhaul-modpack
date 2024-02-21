@@ -29,6 +29,7 @@ config: {
     -- Optional additional results from the enrichment processes
     additionalResults: {
         dustToPlate: array[ProductPrototype],
+        dustToIngot: array[ProductPrototype],
         dustToEnriched: array[ProductPrototype],
         dustToPure: array[ProductPrototype],
         pureToEnriched: array[ProductPrototype]
@@ -108,11 +109,14 @@ function dustToPlateRecipe(config)
             { config.itemNames.dust, 22 }
         },
         results = results,
+        main_product = config.itemNames.plate
     }
 end
 
 function dustToIngotRecipe(config)
     local additionalIngredient = config.additionalIngredient.dustToIngot or nil
+    local results = config.additionalResults.dustToIngot or {}
+    table.insert(results, { name = config.itemNames.ingot, amount = 4 })
     return {
         type = "recipe",
         name = "atom-" .. config.name .. "-ingot",
@@ -126,9 +130,8 @@ function dustToIngotRecipe(config)
             { name = config.itemNames.dust, amount = 20 },
             additionalIngredient
         },
-        results = {
-            { name = config.itemNames.ingot, amount = 4 },
-        }
+        results = results,
+        main_product = config.itemNames.ingot
     }
 end
 

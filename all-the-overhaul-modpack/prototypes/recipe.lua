@@ -1638,36 +1638,6 @@ data:extend({
 			{ name = "titanium-plate", amount_min = 2, amount_max = 3},
 		},
     },
-	-- Aluminium
-	{
-        type = "recipe",
-        name = "atom-aluminium-dust",
-        icon = "__all-the-overhaul-modpack__/graphics/icons/atom-aluminium-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"aluminum-ore", 1}
-        },
-        result = "atom-aluminium-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-aluminium-plate-dust",
-        icons = {
-          { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128, icon_mipmaps = 3,},
-          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-aluminium-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 16,
-        ingredients = {
-            {"atom-aluminium-dust", 10}
-        },
-        results = {
-			{ name = "alumina", amount = 5, probability = 0.95},
-			{ name = "silica", amount = 1, probability = 0.25},
-		},
-    },
 	-- Bismuth
 	{
         type = "recipe",
@@ -1833,10 +1803,10 @@ table.insert(data.raw.technology["5d-masher-1"].effects,
 Recipe("enriched-zinc"):replace_ingredient("zinc-ore", { "atom-zinc-dust", 9 })
 
 table.insert(data.raw.technology["5d-masher-1"].effects, 
-	{type = "unlock-recipe", recipe="atom-aluminium-dust"})
+	{type = "unlock-recipe", recipe="atom-aluminum-dust"})
 table.insert(data.raw.technology["5d-masher-1"].effects, 
-	{type = "unlock-recipe", recipe="atom-aluminium-plate-dust"})
-Recipe("enriched-aluminum"):replace_ingredient("aluminum-ore", { "atom-aluminium-dust", 9 })
+	{type = "unlock-recipe", recipe="atom-alumina-dust"})
+Recipe("enriched-aluminum"):replace_ingredient("aluminum-ore", { "atom-aluminum-dust", 9 })
 
 table.insert(data.raw.technology["bismanol"].effects, 
 	{type = "unlock-recipe", recipe="atom-bismuth-dust"})
