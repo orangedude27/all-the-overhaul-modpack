@@ -1617,44 +1617,7 @@ Recipe("area-mining-drill"):replace_ingredient("processing-unit", { "advanced-pr
 Recipe("area-mining-drill"):replace_ingredient("motorized-articulator", { "advanced-machining-tool", 10 })
 Recipe("area-mining-drill"):add_ingredient({ "se-aeroframe-pole", 5 })
 
-
--- Ore refining
-data:extend({
-	-- Tantalite
-	{
-        type = "recipe",
-        name = "atom-tantalite-dust",
-        icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"tantalite-ore", 1}
-        },
-        result = "atom-tantalite-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-tantalite-plate-dust",
-        icons = {
-          { icon = "__Tantalite__/graphics/icons/tantalum-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 12,
-        ingredients = {
-            {"atom-tantalite-dust", 20}
-        },
-        results = {
-			{ name = "tantalum-plate", amount = 5},
-			{ name = "niobium-plate", amount = 5},
-		},
-		main_product = "tantalum-plate",
-    },
-})
-
-
-table.insert(data.raw.technology["5d-masher-1"].effects, 
+table.insert(data.raw.technology["5d-masher-1"].effects,
 	{type = "unlock-recipe", recipe="5d-iron-plate"})
 table.insert(data.raw.technology["5d-masher-1"].effects, 
 	{type = "unlock-recipe", recipe="5d-iron-dust"})

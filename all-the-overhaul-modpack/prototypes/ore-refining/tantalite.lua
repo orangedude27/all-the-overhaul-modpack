@@ -71,6 +71,7 @@ _dustToPureRecipe.results = {
 }
 
 data:extend({
+    oreToDustRecipe(tantalumConfig),
     _dustToPlateRecipe,
     _dustToIngotRecipe,
     _dustToEnrichedRecipe,

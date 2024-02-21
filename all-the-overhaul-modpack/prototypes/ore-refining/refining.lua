@@ -56,6 +56,7 @@ function createRefiningData(config)
     config.additionalIngredient = config.additionalIngredient or {}
 
     return {
+        oreToDustRecipe(config),
         dustToPlateRecipe(config),
         dustToIngotRecipe(config),
         ingotToMoltenRecipe(config),
@@ -66,6 +67,8 @@ function createRefiningData(config)
         pureToEnrichedRecipe(config),
         enrichedToPelletsRecipe(config),
         pelletsToIngotRecipe(config),
+        item(config, "dust"),
+        item(config, "pure"),
         item(config, "pellets")
     }
 end

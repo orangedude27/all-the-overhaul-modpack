@@ -37,7 +37,3 @@ local config = {
 }
 
 data:extend(createRefiningData(config))
-
-data:extend({
-    item(config, "dust")
-})

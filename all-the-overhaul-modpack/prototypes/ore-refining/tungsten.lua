@@ -24,8 +24,6 @@ local config = {
 data:extend(createRefiningData(config))
 
 data:extend({
-    dustToPlateRecipe(config),
-    item(config, "pure"),
     {
         type = "fluid",
         name = "molten-tungsten",
