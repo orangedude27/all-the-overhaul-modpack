@@ -54,3 +54,6 @@ require("timeken")
 require("5dim")
 require("bz")
 require("brasstacks")
+
+-- Remove all vanilla-ish named plate recipes
+--removeRecipesByPattern("^%a+%-plate$")

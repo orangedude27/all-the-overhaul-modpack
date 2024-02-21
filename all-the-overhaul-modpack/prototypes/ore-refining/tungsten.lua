@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-tungsten-pellets"
     },
     icons = {
+        ore = { icon = "__bztungsten__/graphics/icons/tungsten-ore.png", icon_size = 64, icon_mipmaps = 3 },
         plate = { icon = "__bztungsten__/graphics/icons/tungsten-plate.png", icon_size = 128, icon_mipmaps = 3 },
         dust = { icon = "__bztungsten__/graphics/icons/tungsten-powder.png", icon_size = 64, icon_mipmaps = 3 },
         ingot = { icon = "__bztungsten__/graphics/icons/tungsten-ingot.png", icon_size = 128 },

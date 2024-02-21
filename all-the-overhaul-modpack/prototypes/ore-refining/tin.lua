@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-tin-pellets"
     },
     icons = {
+        ore = { icon = "__bztin__/graphics/icons/tin-ore.png", icon_size = 64, icon_mipmaps = 3 },
         plate = { icon = "__bztin__/graphics/icons/tin-plate.png", icon_size = 128, icon_mipmaps = 3 },
         dust = { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-tin-dust.png", icon_size = 32 },
         ingot = { icon = "__bztin__/graphics/icons/tin-ingot.png", icon_size = 128 },

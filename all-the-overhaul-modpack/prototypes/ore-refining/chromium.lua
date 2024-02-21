@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-chromium-pellets"
     },
     icons = {
+        ore = { icon = "__Chromium__/graphics/icons/chromite-ore.png", icon_size = 64, icon_mipmaps = 3 },
         plate = { icon = "__Chromium__/graphics/icons/chromium-plate.png", icon_size = 64 },
         dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-dust.png", icon_size = 32, icon_mipmaps = 3 },
         ingot = { icon = "__Chromium__/graphics/icons/chromium-ingot.png", icon_size = 64 },

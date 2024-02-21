@@ -28,6 +28,7 @@ config: {
 
     -- Optional additional results from the enrichment processes
     additionalResults: {
+        oreToPlate: array[ProductPrototype],
         dustToPlate: array[ProductPrototype],
         dustToIngot: array[ProductPrototype],
         dustToEnriched: array[ProductPrototype],
@@ -56,6 +57,7 @@ function createRefiningData(config)
     config.additionalIngredient = config.additionalIngredient or {}
 
     return {
+        oreToPlateRecipe(config),
         oreToDustRecipe(config),
         dustToPlateRecipe(config),
         dustToIngotRecipe(config),
@@ -78,6 +80,26 @@ function createSmallIcon(icon)
     smallIcon.scale = 16 / smallIcon.icon_size
     smallIcon.shift = { -8, -8 }
     return smallIcon
+end
+
+function oreToPlateRecipe(config)
+    local results = config.additionalResults.oreToPlate or {}
+    table.insert(results, { name = config.itemNames.plate, amount = 1 })
+    return {
+        type = "recipe",
+        name = "atom-" .. config.name .. "-plate",
+        icons = {
+            config.icons.plate,
+            createSmallIcon(config.icons.ore),
+        },
+        category = "smelting",
+        energy_required = 3.2,
+        ingredients = {
+            { config.itemNames.ore, 2 }
+        },
+        results = results,
+        main_product = config.itemNames.plate
+    }
 end
 
 function oreToDustRecipe(config)
@@ -160,7 +182,7 @@ end
 function moltenToPlateRecipe(config)
     return {
         type = "recipe",
-        name = "atom-" .. config.name .. "-plate",
+        name = "atom-" .. config.name .. "-plate-molten",
         icons = {
             config.icons.plate,
             createSmallIcon(config.icons.molten)

@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-lead-pellets"
     },
     icons = {
+        ore = { icon = "__bzlead__/graphics/icons/lead-ore.png", icon_size = 64, icon_mipmaps = 3 },
         plate = { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64, icon_mipmaps = 3 },
         dust = { icon = "__bzlead__/graphics/icons/lead-powder.png", icon_size = 64 },
         ingot = { icon = "__bzlead__/graphics/icons/lead-ingot.png", icon_size = 128, icon_mipmaps = 3 },

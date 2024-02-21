@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-gold-pellets"
     },
     icons = {
+        ore = { icon = "__ThemTharHills__/graphics/icons/gold-ore.png", icon_size = 64, icon_mipmaps = 4 },
         plate = { icon = "__ThemTharHills__/graphics/icons/gold-plate.png", icon_size = 64, icon_mipmaps = 3 },
         dust = { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-gold-dust.png", icon_size = 32 },
         ingot = { icon = "__ThemTharHills__/graphics/icons/gold-ingot.png", icon_size = 64 },

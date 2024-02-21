@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-iron-pellets"
     },
     icons = {
+        ore = { icon = "__base__/graphics/icons/iron-ore.png", icon_size = 64, icon_mipmaps = 4 },
         plate = { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64, icon_mipmaps = 3 },
         dust = { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-iron-dust.png", icon_size = 32, icon_mipmaps = 3 },
         ingot = { icon = "__space-exploration-graphics__/graphics/icons/iron-ingot.png", icon_size = 64, icon_mipmaps = 3 },

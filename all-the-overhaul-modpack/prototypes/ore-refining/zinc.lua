@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-zinc-pellets"
     },
     icons = {
+        ore = { icon = "__BrassTacks__/graphics/icons/zinc-ore.png", icon_size = 64, icon_mipmaps = 4 },
         plate = { icon = "__BrassTacks__/graphics/galdoc/icons/zinc-plate.png", icon_size = 64 },
         dust = { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png", icon_size = 32, icon_mipmaps = 3 },
         ingot = { icon = "__BrassTacks__/graphics/galdoc/icons/zinc-ingot.png", icon_size = 64 },
@@ -21,8 +22,8 @@ local config = {
     },
     additionalResults = {
         dustToPlate = {
-            { name = "silver-ore", amount = 1, probability = 0.06},
-            { name = "bismuth-plate", amount = 1, probability = 0.06}
+            { name = "silver-ore", amount = 1, probability = 0.06 },
+            { name = "bismuth-plate", amount = 1, probability = 0.06 }
         }
     }
 }

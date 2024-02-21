@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-manganese-pellets"
     },
     icons = {
+        ore = { icon = "__manganese__/graphics/icons/manganese-ore.png", icon_size = 64, icon_mipmaps = 4 },
         plate = { icon = "__manganese__/graphics/icons/manganese-plate.png", icon_size = 64, icon_mipmaps = 3 },
         dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-dust.png", icon_size = 32 },
         ingot = { icon = "__manganese__/graphics/icons/manganese-ingot.png", icon_size = 128 },

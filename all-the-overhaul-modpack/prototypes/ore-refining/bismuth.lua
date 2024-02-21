@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-bismuth-pellets"
     },
     icons = {
+        ore = { icon = "__bismuth__/graphics/icons/bismuth-ore.png", icon_size = 64, icon_mipmaps = 3 },
         plate = { icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3 },
         dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-bismuth-dust.png", icon_size = 32 },
         ingot = { icon = "__bismuth__/graphics/icons/bismuth-ingot.png", icon_size = 128 },

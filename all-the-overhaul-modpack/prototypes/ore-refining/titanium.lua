@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-titanium-pellets"
     },
     icons = {
+        ore = { icon = "__bztitanium__/graphics/icons/titanium-ore.png", icon_size = 64, icon_mipmaps = 3 },
         plate = { icon = "__bztitanium__/graphics/icons/titanium-plate.png", icon_size = 64, icon_mipmaps = 3 },
         dust = { icon = "__bztitanium__/graphics/icons/titanium-powder.png", icon_size = 64 },
         ingot = { icon = "__bztitanium__/graphics/icons/titanium-ingot.png", icon_size = 128 },
