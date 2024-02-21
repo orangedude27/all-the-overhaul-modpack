@@ -1620,34 +1620,6 @@ Recipe("area-mining-drill"):add_ingredient({ "se-aeroframe-pole", 5 })
 
 -- Ore refining
 data:extend({
-	-- Chrome
-	{
-        type = "recipe",
-        name = "atom-chrome-dust",
-        icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"chromite-ore", 1}
-        },
-        result = "atom-chrome-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-chrome-plate-dust",
-        icons = {
-          { icon = "__Chromium__/graphics/icons/chromium-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 24,
-        ingredients = {
-            {"atom-chrome-dust", 15}
-        },
-        result = "chromium-plate",
-		result_count = 5,
-    },
 	-- Nickel
 	{
         type = "recipe",
@@ -1770,11 +1742,11 @@ Recipe("bismuth-plate"):replace_ingredient("bismuth-plate", { "bismuth-plate", 5
 Recipe("enriched-bismuth"):replace_ingredient("bismuth-ore", { "atom-bismuth-dust", 9 })
 
 table.insert(data.raw.technology["stainless-steel-processing"].effects, 
-	{type = "unlock-recipe", recipe="atom-chrome-dust"})
+	{type = "unlock-recipe", recipe="atom-chromium-dust"})
 table.insert(data.raw.technology["stainless-steel-processing"].effects, 
-	{type = "unlock-recipe", recipe="atom-chrome-plate-dust"})
-Recipe("chromium-electrolysis"):replace_ingredient("chromite-ore", { "atom-chrome-dust", 20 })
-Recipe("enriched-chromium"):replace_ingredient("chromite-ore", { "atom-chrome-dust", 9 })
+	{type = "unlock-recipe", recipe="atom-chromium-plate-dust"})
+Recipe("chromium-electrolysis"):replace_ingredient("chromite-ore", { "atom-chromium-dust", 20 })
+Recipe("enriched-chromium"):replace_ingredient("chromite-ore", { "atom-chromium-dust", 9 })
 
 table.insert(data.raw.technology["cobalt-refining"].effects, 
 	{type = "unlock-recipe", recipe="atom-cobalt-dust"})
