@@ -305,13 +305,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "atom-bismuth-dust",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-bismuth-dust.png",
-    icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
     name = "atom-chrome-dust",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-dust.png",
     icon_size = 32,
@@ -322,13 +315,6 @@ data:extend({
     name = "atom-nickel-dust",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-dust.png",
     icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-bismuth-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-bismuth-pellets.png",
-    icon_size = 128,
     stack_size = 100
   },
   {

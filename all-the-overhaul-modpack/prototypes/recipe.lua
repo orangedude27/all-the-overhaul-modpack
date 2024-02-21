@@ -1638,34 +1638,6 @@ data:extend({
 			{ name = "titanium-plate", amount_min = 2, amount_max = 3},
 		},
     },
-	-- Bismuth
-	{
-        type = "recipe",
-        name = "atom-bismuth-dust",
-        icon = "__all-the-overhaul-modpack__/graphics/icons/atom-bismuth-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"bismuth-ore", 1}
-        },
-        result = "atom-bismuth-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-bismuth-plate-dust",
-        icons = {
-          { icon = "__bismuth__/graphics/icons/bismuth-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-bismuth-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 9,
-        ingredients = {
-            {"atom-bismuth-dust", 10}
-        },
-        result = "bismuth-plate",
-		result_count = 5,
-    },
 	-- Chrome
 	{
         type = "recipe",
