@@ -1620,24 +1620,6 @@ Recipe("area-mining-drill"):add_ingredient({ "se-aeroframe-pole", 5 })
 
 -- Ore refining
 data:extend({
-	-- Titanium
-	{
-        type = "recipe",
-        name = "atom-titanium-plate-dust",
-        icons = {
-          { icon = "__bztitanium__/graphics/icons/titanium-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__bztitanium__/graphics/icons/titanium-powder.png", icon_size = 64,  scale=0.25, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 16,
-        ingredients = {
-            {"titanium-dust", 10}
-        },
-        result = "titanium-plate",
-		results = {
-			{ name = "titanium-plate", amount_min = 2, amount_max = 3},
-		},
-    },
 	-- Chrome
 	{
         type = "recipe",

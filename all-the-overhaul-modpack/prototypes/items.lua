@@ -333,13 +333,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "atom-titanium-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-titanium-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
     name = "atom-nickel-pure",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pure.png",
     icon_size = 64,
