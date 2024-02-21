@@ -1620,36 +1620,6 @@ Recipe("area-mining-drill"):add_ingredient({ "se-aeroframe-pole", 5 })
 
 -- Ore refining
 data:extend({
-	-- Nickel
-	{
-        type = "recipe",
-        name = "atom-nickel-dust",
-        icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-dust.png", icon_size = 32, icon_mipmaps = 3,
-        category = "mashering",
-        energy_required = 3.2,
-        ingredients = {
-            {"nickel-ore", 1}
-        },
-        result = "atom-nickel-dust",
-		result_count = 2,
-    },
-	{
-        type = "recipe",
-        name = "atom-nickel-plate-dust",
-        icons = {
-          { icon = "__IfNickel__/graphics/icons/nickel-plate.png", icon_size = 64, icon_mipmaps = 3,},
-          { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-dust.png", icon_size = 32,  scale=0.5, shift= {-8, -8}},
-        },
-        category = "smelting",
-        energy_required = 48,
-        ingredients = {
-            {"atom-nickel-dust", 20}
-        },
-        results = {
-			{ name = "nickel-plate", amount = 15},
-			{ name = "cobaltite-ore", amount = 1},
-		},
-    },
 	-- Tantalite
 	{
         type = "recipe",

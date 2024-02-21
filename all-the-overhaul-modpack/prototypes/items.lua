@@ -305,27 +305,6 @@ data:extend({
   },
   {
     type = "item",
-    name = "atom-nickel-dust",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-dust.png",
-    icon_size = 32,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-nickel-pellets",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pellets.png",
-    icon_size = 128,
-    stack_size = 100
-  },
-  {
-    type = "item",
-    name = "atom-nickel-pure",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pure.png",
-    icon_size = 64,
-    stack_size = 100
-  },
-  {
-    type = "item",
     name = "atom-carbon",
     icon = "__all-the-overhaul-modpack__/graphics/icons/atom-carbon.png",
     icon_size = 128,
