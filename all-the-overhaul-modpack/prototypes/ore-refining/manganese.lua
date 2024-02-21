@@ -7,7 +7,7 @@ local config = {
         ingot = "manganese-ingot",
         molten = "molten-manganese",
         enriched = "enriched-manganese",
-        pure = "crushed-manganese",
+        pure = "atom-manganese-pure",
         pellets = "atom-manganese-pellets"
     },
     icons = {
@@ -16,7 +16,7 @@ local config = {
         ingot = { icon = "__manganese__/graphics/icons/manganese-ingot.png", icon_size = 128 },
         molten = { icon = "__manganese__/graphics/icons/molten-manganese.png", icon_size = 128 },
         enriched = { icon = "__manganese__/graphics/icons/enriched-manganese.png", icon_size = 64 },
-        pure = { icon = "__manganese__/graphics/icons/crushed-manganese.png", icon_size = 128 },
+        pure = { icon = "__Cobalt__/graphics/icons/fi-materials-pure-cobalt.png", icon_size = 64 }, -- TODO
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-pellets.png", icon_size = 128 }
     },
     additionalIngredient = {
