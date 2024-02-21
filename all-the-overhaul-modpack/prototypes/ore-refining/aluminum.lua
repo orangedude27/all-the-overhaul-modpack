@@ -53,6 +53,7 @@ local function dustToAlumina()
             { name = "alumina", amount = 15 },
             { name = "silica", amount = 1, probability = 0.25 }
         },
+        main_product = "alumina"
     }
 end
 

@@ -7,6 +7,7 @@ require("prototypes/common-final")
 require("prototypes/recipe")
 require("prototypes/technology")
 require("prototypes/sorting/sorter")
+require("prototypes/ore-refining/refining-data")
 require("prototypes/ore-refining/refining-fixes")
 
 
