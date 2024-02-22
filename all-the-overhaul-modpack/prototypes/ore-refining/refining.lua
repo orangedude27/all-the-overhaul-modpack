@@ -82,10 +82,25 @@ function createSmallIcon(icon)
     return smallIcon
 end
 
+local productivityModules = {}
+for _, module in pairs(data.raw["module"]) do
+    if string.find(module.name, "productivity", 1, true) then
+        table.insert(productivityModules, module)
+    end
+end
+
+function allowProductivity(recipeName)
+    for _, module in pairs(productivityModules) do
+        if (module.limitation) then
+            table.insert(module.limitation, recipeName)
+        end
+    end
+end
+
 function oreToPlateRecipe(config)
     local results = config.additionalResults.oreToPlate or {}
     table.insert(results, { name = config.itemNames.plate, amount = 1 })
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate",
         icons = {
@@ -98,12 +113,14 @@ function oreToPlateRecipe(config)
             { config.itemNames.ore, 2 }
         },
         results = results,
-        main_product = config.itemNames.plate
+        main_product = config.itemNames.plate,
     }
+    allowProductivity(recipe.name)
+    return recipe
 end
 
 function oreToDustRecipe(config)
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-dust",
         icons = { config.icons.dust },
@@ -114,14 +131,15 @@ function oreToDustRecipe(config)
         },
         results = {
             { name = config.itemNames.dust, amount = 2 },
-        }
+        },
     }
+    return recipe
 end
 
 function dustToPlateRecipe(config)
     local results = config.additionalResults.dustToPlate or {}
-    table.insert(results, { name = config.itemNames.plate, amount = 2 })
-    return {
+    table.insert(results, { name = config.itemNames.plate, amount = 1 })
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate-dust",
         icons = {
@@ -129,20 +147,22 @@ function dustToPlateRecipe(config)
             createSmallIcon(config.icons.dust),
         },
         category = "smelting",
-        energy_required = 48,
+        energy_required = 3.2,
         ingredients = {
             { config.itemNames.dust, 3 }
         },
         results = results,
         main_product = config.itemNames.plate
     }
+    allowProductivity(recipe.name)
+    return recipe
 end
 
 function dustToIngotRecipe(config)
     local additionalIngredient = config.additionalIngredient.dustToIngot or nil
     local results = config.additionalResults.dustToIngot or {}
-    table.insert(results, { name = config.itemNames.ingot, amount = 4 })
-    return {
+    table.insert(results, { name = config.itemNames.ingot, amount = 2 })
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-ingot",
         icons = {
@@ -150,7 +170,7 @@ function dustToIngotRecipe(config)
             createSmallIcon(config.icons.dust)
         },
         category = "casting",
-        energy_required = 28.8,
+        energy_required = 3.2,
         ingredients = {
             { name = config.itemNames.dust, amount = 4 },
             additionalIngredient
@@ -158,6 +178,8 @@ function dustToIngotRecipe(config)
         results = results,
         main_product = config.itemNames.ingot
     }
+    allowProductivity(recipe.name)
+    return recipe
 end
 
 function ingotToMoltenRecipe(config)
@@ -169,12 +191,12 @@ function ingotToMoltenRecipe(config)
             createSmallIcon(config.icons.ingot)
         },
         category = "el_arc_furnace_category",
-        energy_required = 14.4,
+        energy_required = 1.6,
         ingredients = {
-            { name = config.itemNames.ingot, amount = 4 }
+            { name = config.itemNames.ingot, amount = 2 }
         },
         results = {
-            { type = "fluid", name = config.itemNames.molten, amount = 400 },
+            { type = "fluid", name = config.itemNames.molten, amount = 100 },
         }
     }
 end
@@ -188,22 +210,21 @@ function moltenToPlateRecipe(config)
             createSmallIcon(config.icons.molten)
         },
         category = "el_caster_category",
-        energy_required = 14.4,
+        energy_required = 1.6,
         ingredients = {
-            { type = "fluid", name = config.itemNames.molten, amount = 400 }
+            { type = "fluid", name = config.itemNames.molten, amount = 100 }
         },
         results = {
-            { name = config.itemNames.plate, amount = 4 },
+            { name = config.itemNames.plate, amount = 2 },
         }
     }
 end
 
 function dustToEnrichedRecipe(config)
     local results = config.additionalResults.dustToEnriched or {}
-    table.insert(results, { name = config.itemNames.enriched, amount = 8 })
+    table.insert(results, { name = config.itemNames.enriched, amount = 1 })
     table.insert(results, { type = "fluid", name = "dirty-water", amount = 50 })
-
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enrichment",
         icons = {
@@ -211,19 +232,21 @@ function dustToEnrichedRecipe(config)
             createSmallIcon(config.icons.dust)
         },
         category = "fluid-filtration",
-        energy_required = 11.25,
+        energy_required = 1.6,
         ingredients = {
-            { name = config.itemNames.dust, amount = 4 },
+            { name = config.itemNames.dust, amount = 1 },
             { type = "fluid", name = "water", amount = 50 }
         },
         results = results,
         main_product = config.itemNames.enriched
     }
+    allowProductivity(recipe.name)
+    return recipe
 end
 
 function enrichedToIngotRecipe(config)
     local additionalIngredient = config.additionalIngredient.enrichedToIngot or { name = "coke", amount = 2 }
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-ingot-enriched",
         icons = {
@@ -231,7 +254,7 @@ function enrichedToIngotRecipe(config)
             createSmallIcon(config.icons.enriched)
         },
         category = "casting",
-        energy_required = 18,
+        energy_required = 1.6,
         ingredients = {
             { name = config.itemNames.enriched, amount = 1 },
             additionalIngredient
@@ -240,14 +263,15 @@ function enrichedToIngotRecipe(config)
             { name = config.itemNames.ingot, amount = 1 },
         }
     }
+    allowProductivity(recipe.name)
+    return recipe
 end
 
 function dustToPureRecipe(config)
     local additionalIngredient = config.additionalIngredient.dustToPure or { type = "fluid", name = "sulfuric-acid", amount = 5 }
     local results = config.additionalResults.dustToPure or {}
-    table.insert(results, { name = config.itemNames.pure, amount = 6 })
-
-    return {
+    table.insert(results, { name = config.itemNames.pure, amount = 3 })
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-slurry",
         icons = {
@@ -255,7 +279,7 @@ function dustToPureRecipe(config)
             createSmallIcon(config.icons.pure),
         },
         category = "el_purifier_category",
-        energy_required = 5,
+        energy_required = 4.8,
         ingredients = {
             { name = config.itemNames.dust, amount = 4 },
             additionalIngredient
@@ -263,14 +287,15 @@ function dustToPureRecipe(config)
         results = results,
         main_product = config.itemNames.pure
     }
+    allowProductivity(recipe.name)
+    return recipe
 end
 
 function pureToEnrichedRecipe(config)
     local results = config.additionalResults.pureToEnriched or {}
-    table.insert(results, { name = config.itemNames.enriched, amount = 12 })
+    table.insert(results, { name = config.itemNames.enriched, amount = 2 })
     table.insert(results, { type = "fluid", name = "dirty-water", amount = 75 })
-
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enriched-pure",
         icons = {
@@ -278,18 +303,20 @@ function pureToEnrichedRecipe(config)
             createSmallIcon(config.icons.pure)
         },
         category = "fluid-filtration",
-        energy_required = 5,
+        energy_required = 3.2,
         ingredients = {
-            { name = config.itemNames.pure, amount = 6 },
+            { name = config.itemNames.pure, amount = 1 },
             { type = "fluid", name = "water", amount = 75 }
         },
         results = results,
         main_product = config.itemNames.enriched
     }
+    allowProductivity(recipe.name)
+    return recipe
 end
 
 function enrichedToPelletsRecipe(config)
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-pellets",
         icons = {
@@ -297,19 +324,21 @@ function enrichedToPelletsRecipe(config)
             createSmallIcon(config.icons.enriched)
         },
         category = "pulverising",
-        energy_required = 5,
+        energy_required = 4.8,
         ingredients = {
-            { name = config.itemNames.enriched, amount = 12 }
+            { name = config.itemNames.enriched, amount = 3 }
         },
         results = {
-            { name = config.itemNames.pellets, amount = 16 }
+            { name = config.itemNames.pellets, amount = 4 }
         }
     }
+    allowProductivity(recipe.name)
+    return recipe
 end
 
 function pelletsToIngotRecipe(config)
     local additionalIngredient = config.additionalIngredient.pelletsToIngot or { name = "quicklime", amount = 2 }
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-ingot-pellets",
         icons = {
@@ -317,15 +346,17 @@ function pelletsToIngotRecipe(config)
             createSmallIcon(config.icons.pellets)
         },
         category = "casting",
-        energy_required = 5,
+        energy_required = 3.2,
         ingredients = {
-            { name = config.itemNames.pellets, amount = 1 },
+            { name = config.itemNames.pellets, amount = 2 },
             additionalIngredient
         },
         results = {
-            { name = config.itemNames.ingot, amount = 1 }
+            { name = config.itemNames.ingot, amount = 2 }
         }
     }
+    allowProductivity(recipe.name)
+    return recipe
 end
 
 function item(config, category, stackSize)

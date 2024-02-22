@@ -18,3 +18,6 @@ removeRecipesByName("fu_lead_recipe")
 
 -- re-add exceptions
 data:extend(exceptions)
+
+-- Allow productivity modules in el_purifier_entity
+table.insert(data.raw["assembling-machine"]["el_purifier_entity"].allowed_effects, "productivity")
