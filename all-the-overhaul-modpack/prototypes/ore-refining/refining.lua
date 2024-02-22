@@ -141,7 +141,7 @@ end
 
 function dustToPlateRecipe(config)
     local results = config.additionalResults.dustToPlate or {}
-    table.insert(results, { name = config.itemNames.plate, amount = 1 })
+    table.insert(results, { name = config.itemNames.plate, amount = 6 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate-dust",
@@ -150,9 +150,9 @@ function dustToPlateRecipe(config)
             createSmallIcon(config.icons.dust),
         },
         category = "smelting",
-        energy_required = 3.2,
+        energy_required = 13.2,
         ingredients = {
-            { config.itemNames.dust, 3 }
+            { config.itemNames.dust, 18 }
         },
         results = results,
         main_product = config.itemNames.plate
@@ -164,7 +164,7 @@ end
 function dustToIngotRecipe(config)
     local additionalIngredient = config.additionalIngredient.dustToIngot or nil
     local results = config.additionalResults.dustToIngot or {}
-    table.insert(results, { name = config.itemNames.ingot, amount = 2 })
+    table.insert(results, { name = config.itemNames.ingot, amount = 6 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-ingot",
@@ -173,9 +173,9 @@ function dustToIngotRecipe(config)
             createSmallIcon(config.icons.dust)
         },
         category = "casting",
-        energy_required = 3.2,
+        energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.dust, amount = 4 },
+            { name = config.itemNames.dust, amount = 12 },
             additionalIngredient
         },
         results = results,
@@ -225,8 +225,8 @@ end
 
 function dustToEnrichedRecipe(config)
     local results = config.additionalResults.dustToEnriched or {}
-    table.insert(results, { name = config.itemNames.enriched, amount = 1 })
-    table.insert(results, { type = "fluid", name = "dirty-water", amount = 40 })
+    table.insert(results, { name = config.itemNames.enriched, amount = 6 })
+    table.insert(results, { type = "fluid", name = "dirty-water", amount = 240 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enrichment",
@@ -235,10 +235,10 @@ function dustToEnrichedRecipe(config)
             createSmallIcon(config.icons.dust)
         },
         category = "fluid-filtration",
-        energy_required = 1.6,
+        energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.dust, amount = 1 },
-            { type = "fluid", name = "water", amount = 40 }
+            { name = config.itemNames.dust, amount = 6 },
+            { type = "fluid", name = "water", amount = 240 }
         },
         results = results,
         main_product = config.itemNames.enriched

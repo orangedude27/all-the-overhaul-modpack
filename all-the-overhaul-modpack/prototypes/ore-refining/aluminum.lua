@@ -11,6 +11,7 @@ local config = {
         pellets = "atom-aluminum-pellets"
     },
     icons = {
+        ore = { icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, icon_mipmaps = 3},
         plate = { icon = "__bzaluminum__/graphics/icons/aluminum-plate.png", icon_size = 128, icon_mipmaps = 3 },
         dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-aluminium-dust.png", icon_size = 32 },
         ingot = { icon = "__bzaluminum__/graphics/icons/aluminum-ingot.png", icon_size = 128 },
@@ -22,21 +23,44 @@ local config = {
     additionalIngredient = {},
     additionalResults = {
         dustToIngot = {
-            { name = "alumina", amount = 1 },
-            { name = "silica", amount = 1, probability = 0.25 }
+            { name = "alumina", amount = 1, probability = 0.6 },
+            { name = "silica", amount = 1, probability = 0.1 }
         },
         dustToEnriched = {
-            { name = "alumina", amount = 1 },
-            { name = "silica", amount = 1, probability = 0.25 }
+            { name = "alumina", amount = 1, probability = 0.6 },
+            { name = "silica", amount = 1, probability = 0.1 }
         },
         dustToPure = {
-            { name = "alumina", amount = 1 },
-            { name = "silica", amount = 1, probability = 0.25 }
+            { name = "alumina", amount = 1, probability = 0.6 },
+            { name = "silica", amount = 1, probability = 0.1 }
         }
     }
 }
 
-local function dustToAlumina()
+local function oreToAluminaRecipe()
+    local recipe = {
+        type = "recipe",
+        name = "atom-alumina-ore",
+        icons = {
+            { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128 },
+            createSmallIcon(config.icons.ore),
+        },
+        category = "smelting",
+        energy_required = 3.2,
+        ingredients = {
+            { config.itemNames.ore, 2 }
+        },
+        results = {
+            { name = "alumina", amount = 1 },
+            { name = "silica", amount = 1, probability = 0.05 }
+        },
+        main_product = "alumina",
+    }
+    allowProductivity(recipe.name)
+    return recipe
+end
+
+local function dustToAluminaRecipe()
     return {
         type = "recipe",
         name = "atom-alumina-dust",
@@ -45,20 +69,21 @@ local function dustToAlumina()
             createSmallIcon(config.icons.dust),
         },
         category = "smelting",
-        energy_required = 48,
+        energy_required = 3.2,
         ingredients = {
-            { config.itemNames.dust, 22 }
+            { config.itemNames.dust, 3 }
         },
         results = {
-            { name = "alumina", amount = 15 },
-            { name = "silica", amount = 1, probability = 0.25 }
+            { name = "alumina", amount = 1 },
+            { name = "silica", amount = 1, probability = 0.05 }
         },
         main_product = "alumina"
     }
 end
 
 data:extend({
-    dustToAlumina(),
+    oreToAluminaRecipe(),
+    dustToAluminaRecipe(),
     oreToDustRecipe(config),
     dustToIngotRecipe(config),
     ingotToMoltenRecipe(config),

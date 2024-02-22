@@ -21,7 +21,7 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-pellets.png", icon_size = 128 }
     },
     additionalIngredient = {
-        dustToIngot = { name = "atom-carbon", amount = 6 },
+        dustToIngot = { name = "atom-carbon", amount = 18 },
         enrichedToIngot = { type = "fluid", name = "sulfuric-acid", amount = 10 },
         pelletsToIngot = { type = "fluid", name = "gas", amount = 30 }
     }
