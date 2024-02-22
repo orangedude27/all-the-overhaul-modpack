@@ -120,7 +120,7 @@ end
 
 function dustToPlateRecipe(config)
     local results = config.additionalResults.dustToPlate or {}
-    table.insert(results, { name = config.itemNames.plate, amount = 15 })
+    table.insert(results, { name = config.itemNames.plate, amount = 2 })
     return {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate-dust",
@@ -131,7 +131,7 @@ function dustToPlateRecipe(config)
         category = "smelting",
         energy_required = 48,
         ingredients = {
-            { config.itemNames.dust, 22 }
+            { config.itemNames.dust, 3 }
         },
         results = results,
         main_product = config.itemNames.plate
@@ -152,7 +152,7 @@ function dustToIngotRecipe(config)
         category = "casting",
         energy_required = 28.8,
         ingredients = {
-            { name = config.itemNames.dust, amount = 20 },
+            { name = config.itemNames.dust, amount = 4 },
             additionalIngredient
         },
         results = results,
@@ -193,14 +193,14 @@ function moltenToPlateRecipe(config)
             { type = "fluid", name = config.itemNames.molten, amount = 400 }
         },
         results = {
-            { name = config.itemNames.plate, amount = 20 },
+            { name = config.itemNames.plate, amount = 4 },
         }
     }
 end
 
 function dustToEnrichedRecipe(config)
     local results = config.additionalResults.dustToEnriched or {}
-    table.insert(results, { name = config.itemNames.enriched, amount = 2 })
+    table.insert(results, { name = config.itemNames.enriched, amount = 8 })
     table.insert(results, { type = "fluid", name = "dirty-water", amount = 50 })
 
     return {
@@ -213,7 +213,7 @@ function dustToEnrichedRecipe(config)
         category = "fluid-filtration",
         energy_required = 11.25,
         ingredients = {
-            { name = config.itemNames.dust, amount = 20 },
+            { name = config.itemNames.dust, amount = 4 },
             { type = "fluid", name = "water", amount = 50 }
         },
         results = results,
@@ -233,11 +233,11 @@ function enrichedToIngotRecipe(config)
         category = "casting",
         energy_required = 18,
         ingredients = {
-            { name = config.itemNames.enriched, amount = 2 },
+            { name = config.itemNames.enriched, amount = 1 },
             additionalIngredient
         },
         results = {
-            { name = config.itemNames.ingot, amount = 6 },
+            { name = config.itemNames.ingot, amount = 1 },
         }
     }
 end
@@ -245,7 +245,7 @@ end
 function dustToPureRecipe(config)
     local additionalIngredient = config.additionalIngredient.dustToPure or { type = "fluid", name = "sulfuric-acid", amount = 5 }
     local results = config.additionalResults.dustToPure or {}
-    table.insert(results, { name = config.itemNames.pure, amount = 1 })
+    table.insert(results, { name = config.itemNames.pure, amount = 6 })
 
     return {
         type = "recipe",
@@ -257,7 +257,7 @@ function dustToPureRecipe(config)
         category = "el_purifier_category",
         energy_required = 5,
         ingredients = {
-            { name = config.itemNames.dust, amount = 20 },
+            { name = config.itemNames.dust, amount = 4 },
             additionalIngredient
         },
         results = results,
@@ -267,7 +267,7 @@ end
 
 function pureToEnrichedRecipe(config)
     local results = config.additionalResults.pureToEnriched or {}
-    table.insert(results, { name = config.itemNames.enriched, amount = 3 })
+    table.insert(results, { name = config.itemNames.enriched, amount = 12 })
     table.insert(results, { type = "fluid", name = "dirty-water", amount = 75 })
 
     return {
@@ -280,7 +280,7 @@ function pureToEnrichedRecipe(config)
         category = "fluid-filtration",
         energy_required = 5,
         ingredients = {
-            { name = config.itemNames.pure, amount = 1 },
+            { name = config.itemNames.pure, amount = 6 },
             { type = "fluid", name = "water", amount = 75 }
         },
         results = results,
@@ -299,10 +299,10 @@ function enrichedToPelletsRecipe(config)
         category = "pulverising",
         energy_required = 5,
         ingredients = {
-            { name = config.itemNames.enriched, amount = 3 }
+            { name = config.itemNames.enriched, amount = 12 }
         },
         results = {
-            { name = config.itemNames.pellets, amount = 4 }
+            { name = config.itemNames.pellets, amount = 16 }
         }
     }
 end
@@ -319,11 +319,11 @@ function pelletsToIngotRecipe(config)
         category = "casting",
         energy_required = 5,
         ingredients = {
-            { name = config.itemNames.pellets, amount = 2 },
+            { name = config.itemNames.pellets, amount = 1 },
             additionalIngredient
         },
         results = {
-            { name = config.itemNames.ingot, amount = 5 }
+            { name = config.itemNames.ingot, amount = 1 }
         }
     }
 end
