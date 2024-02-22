@@ -20,11 +20,11 @@ local tantalumConfig = {
         pure = { icon = "__Tantalite__/graphics/icons/fi-materials-pure-tantalum.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-pellets.png", icon_size = 128 }
     },
+    additionalIngredient = {},
     additionalResults = {
         dustToPure = { { name = "fi-materials-pure-niobium", amount = 1 } },
         dustToPlate = { { name = "niobium-plate", amount = 1 } },
-    },
-    additionalIngredient = {}
+    }
 }
 
 local niobiumConfig = {

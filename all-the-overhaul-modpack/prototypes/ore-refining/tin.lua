@@ -20,13 +20,13 @@ local config = {
         pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pure.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pellets.png", icon_size = 128 }
     },
+    additionalIngredient = {
+        pelletsToIngot = { name = "atom-carbon", amount = 2 }
+    },
     additionalResults = {
         dustToPlate = {
             { name = "bismuth-plate", amount = 1, probability = 0.09 }
         }
-    },
-    additionalIngredient = {
-        pelletsToIngot = { name = "atom-carbon", amount = 2 }
     }
 }
 

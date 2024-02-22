@@ -20,6 +20,10 @@ local config = {
         pure = { icon = "__248k__/ressources/electronic/el_materials/el_materials_pure_copper.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-copper-pellets.png", icon_size = 128, icon_mipmaps = 3 }
     },
+    additionalIngredient = {
+        enrichedToIngot = { type = "fluid", name = "carbon-dioxide", amount = 30 },
+        enrichedToPellets = { type = "fluid", name = "carbon-dioxide", amount = 30 }
+    },
     additionalResults = {
         oreToPlate = {
             { name = "silver-ore", amount = 1, probability = 0.07 },
@@ -42,10 +46,6 @@ local config = {
             { name = "indite-ore", probability = 0.5, amount = 1 },
             { name = "bismuth-ore", amount = 1 },
         }
-    },
-    additionalIngredient = {
-        enrichedToIngot = { type = "fluid", name = "carbon-dioxide", amount = 20 },
-        pelletsToIngot = { type = "fluid", name = "carbon-dioxide", amount = 20 }
     }
 }
 

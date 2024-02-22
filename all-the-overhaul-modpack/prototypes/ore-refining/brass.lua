@@ -10,8 +10,8 @@ local config = {
         ingot = { icon = "__BrassTacks__/graphics/galdoc/icons/brass-ingot.png", icon_size = 64 },
         molten = { icon = "__Cobalt__/graphics/icons/molten-cobalt.png", icon_size = 64, icon_mipmaps = 3 } -- TODO
     },
-    additionalResults = {},
-    additionalIngredient = {}
+    additionalIngredient = {},
+    additionalResults = {}
 }
 
 local _ingotToMoltenRecipe = ingotToMoltenRecipe(config)

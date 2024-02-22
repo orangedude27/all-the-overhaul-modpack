@@ -20,6 +20,9 @@ local config = {
         pure = { icon = "__248k__/ressources/fusion/fu_materials/fu_materials_pure_lead.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-lead-pellets.png", icon_size = 128, icon_mipmaps = 3 }
     },
+    additionalIngredient = {
+        dustToPure = { type = "fluid", name = "oxygen", amount = 4 }
+    },
     additionalResults = {
         dustToPlate = {
             { name = "silver-ore", amount_min = 1, amount_max = 2 },
@@ -31,9 +34,6 @@ local config = {
         pureToEnriched = {
             { name = "silver-ore", amount = 1 }
         }
-    },
-    additionalIngredient = {
-        dustToPure = { type = "fluid", name = "oxygen", amount = 5 }
     }
 }
 
