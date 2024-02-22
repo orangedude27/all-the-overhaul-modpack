@@ -11,6 +11,7 @@ local config = {
         pellets = ""
     },
     icons = {
+        ore = ,
         plate = ,
         dust = ,
         ingot = ,

@@ -1,3 +1,9 @@
+-- Store some exceptions
+local exceptions = {
+    data.raw.recipe["fi_arc_glass_recipe"],
+    data.raw.recipe["fi_cast_glass_recipe"]
+}
+
 -- Remove pure to molen/plate recipes
 local stages = { "el", "fi", "fu", "gr" }
 for _, stage in pairs(stages) do
@@ -9,3 +15,6 @@ for _, stage in pairs(stages) do
 end
 
 removeRecipesByName("fu_lead_recipe")
+
+-- re-add exceptions
+data:extend(exceptions)
