@@ -8,7 +8,7 @@
 - Find the right place in the tech tree for all stages
 - Balance everything with prod modules (choose buildings and modules that are available at a similar time as the recipe)
 - Have a look at Pyroflux recipes
-- Remove old ore to plate recipes
+- ~~Remove old ore to plate recipes~~
 - Add missing icons
 - Add missing labels
 - Add migrations
@@ -17,3 +17,4 @@
 - Cleanup icon categories/orders
 - Have a look at alloying
 - Create new icons
+- Add Platinum and Palladium refinement
