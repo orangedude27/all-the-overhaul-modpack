@@ -3,6 +3,7 @@
 - Balance additional inputs
 - Balance additional results
 - Balance energy usage and amount of buildings required
+- Find the right place in the tech tree for all stages
 - Balance everything with prod modules (choose buildings and modules that are available at a similar time as the recipe)
 - Have a look at Pyroflux recipes
 - Remove old ore to plate recipes
