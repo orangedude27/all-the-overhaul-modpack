@@ -1,2 +1,6 @@
 removeRecipesByPattern("^%a+%-plate%-dust$")
 removeRecipesByPattern("^%a+%-%a+%-industrial%-%a+$")
+removeRecipeByName("tin-plate")
+removeRecipeByName("lead-plate")
+removeRecipeByName("rare-metals-1")
+removeRecipeByName("rare-metals-2")

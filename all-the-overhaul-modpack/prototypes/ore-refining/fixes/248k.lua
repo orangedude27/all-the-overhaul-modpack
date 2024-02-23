@@ -14,7 +14,7 @@ for _, stage in pairs(stages) do
     removeRecipesByPattern("^" .. stage .. "[%-_]%a+[%-_]ingot")
 end
 
-removeRecipesByName("fu_lead_recipe")
+removeRecipeByName("fu_lead_recipe")
 
 -- re-add exceptions
 data:extend(exceptions)

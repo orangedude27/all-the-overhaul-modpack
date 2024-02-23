@@ -1,4 +1,4 @@
-function removeRecipesByName(name)
+function removeRecipeByName(name)
     data.raw.recipe[name] = nil
 
     for _, module in pairs(data.raw.module) do
@@ -54,6 +54,7 @@ require("timeken")
 require("5dim")
 require("bz")
 require("brasstacks")
+require("planetfall")
 
--- Remove all vanilla-ish named plate recipes
---removeRecipesByPattern("^%a+%-plate$")
+-- Remove vanilla plate recipes
+removeRecipeByName("iron-plate")
