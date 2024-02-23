@@ -85,6 +85,13 @@ function createSmallIcon(icon)
     return smallIcon
 end
 
+function createSmallIconRight(icon)
+    local smallIcon = table.deepcopy(icon)
+    smallIcon.scale = 16 / smallIcon.icon_size
+    smallIcon.shift = { 8, -8 }
+    return smallIcon
+end
+
 local productivityModules = {}
 for _, module in pairs(data.raw["module"]) do
     if string.find(module.name, "productivity", 1, true) then

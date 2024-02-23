@@ -21,29 +21,27 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pellets.png", icon_size = 128 }
     },
     additionalResults = {
-        additionalResults = {
-            oreToPlate = {
-                { name = "silver-ore", amount = 1, probability = 0.5 },
-                { name = "bismuth-plate", amount = 1, probability = 0.5 }
-            },
-            dustToPlate = {
-                { name = "silver-ore", amount = 1, probability = 0.5 },
-                { name = "bismuth-plate", amount = 1, probability = 0.5 }
-            },
-            dustToIngot = {
-                { name = "silver-ore", amount = 1, probability = 0.5 },
-                { name = "bismuth-ore", amount = 1, probability = 0.5 }
-            },
-            dustToEnriched = {
-                { name = "silver-ore", amount = 1, probability = 0.5 },
-                { name = "bismuth-ore", amount = 1, probability = 0.5 }
-            },
-            dustToPure = {
-                { name = "bismuth-ore", amount = 1, probability = 0.5 }
-            },
-            pureToEnriched = {
-                { name = "silver-ore", amount = 1, probability = 0.5 }
-            }
+        oreToPlate = {
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-plate", amount = 1, probability = 0.5 }
+        },
+        dustToPlate = {
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-plate", amount = 1, probability = 0.5 }
+        },
+        dustToIngot = {
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
+        },
+        dustToEnriched = {
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
+        },
+        dustToPure = {
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
+        },
+        pureToEnriched = {
+            { name = "silver-ore", amount = 1, probability = 0.5 }
         }
     }
 }
