@@ -1,5 +1,6 @@
 local config = {
     name = "lead",
+    order = "f",
     enableAtStart = true,
     itemNames = {
         ore = "lead-ore",
@@ -51,5 +52,7 @@ local config = {
 }
 
 data:extend(createRefiningData(config))
+
+setSubGroup(config)
 
 return config

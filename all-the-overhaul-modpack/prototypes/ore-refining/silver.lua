@@ -1,5 +1,6 @@
 local config = {
     name = "silver",
+    order = "j",
     itemNames = {
         ore = "silver-ore",
         plate = "silver-plate",
@@ -23,5 +24,7 @@ local config = {
 }
 
 data:extend(createRefiningData(config))
+
+setSubGroup(config)
 
 return config

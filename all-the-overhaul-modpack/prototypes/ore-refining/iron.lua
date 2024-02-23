@@ -1,5 +1,6 @@
 local config = {
     name = "iron",
+    order = "a",
     enableAtStart = true,
     itemNames = {
         ore = "iron-ore",
@@ -41,6 +42,8 @@ local config = {
 }
 
 data:extend(createRefiningData(config))
+
+setSubGroup(config)
 
 -- TODO: They all have the same name, so they will overwrite each other
 --[[

@@ -1,5 +1,6 @@
 local config = {
     name = "nickel",
+    order = "h",
     enableAtStart = true,
     itemNames = {
         ore = "nickel-ore",
@@ -44,5 +45,7 @@ local config = {
 }
 
 data:extend(createRefiningData(config))
+
+setSubGroup(config)
 
 return config

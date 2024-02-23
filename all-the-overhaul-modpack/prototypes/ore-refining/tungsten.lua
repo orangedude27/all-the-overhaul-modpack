@@ -41,4 +41,6 @@ data:extend({
     }
 })
 
+setSubGroup(config)
+
 return config

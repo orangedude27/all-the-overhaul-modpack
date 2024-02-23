@@ -1,8 +1,8 @@
 local config = {
     name = "brass",
+    order = "c",
     enableAtStart = true,
     itemNames = {
-        ore = "copper-ore",
         plate = "brass-plate",
         ingot = "brass-ingot",
         molten = "atom-brass-molten"
@@ -59,5 +59,7 @@ data:extend({
         subgroup = "fluid"
     }
 })
+
+setSubGroup(config)
 
 return config

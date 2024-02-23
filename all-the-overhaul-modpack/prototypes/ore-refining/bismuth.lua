@@ -1,5 +1,6 @@
 local config = {
     name = "bismuth",
+    order = "i",
     itemNames = {
         ore = "bismuth-ore",
         plate = "bismuth-plate",
@@ -23,5 +24,7 @@ local config = {
 }
 
 data:extend(createRefiningData(config))
+
+setSubGroup(config)
 
 return config

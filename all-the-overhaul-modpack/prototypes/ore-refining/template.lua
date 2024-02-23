@@ -1,5 +1,6 @@
 local config = {
     name = "",
+    order = "",
     itemNames = {
         ore = "",
         plate = "",

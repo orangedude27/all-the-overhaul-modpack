@@ -1,5 +1,6 @@
 local config = {
     name = "tin",
+    order = "g",
     enableAtStart = true,
     itemNames = {
         ore = "tin-ore",
@@ -44,5 +45,7 @@ local config = {
 }
 
 data:extend(createRefiningData(config))
+
+setSubGroup(config)
 
 return config

@@ -1,5 +1,7 @@
 local config = {
     name = "aluminum",
+    order = "b",
+    enableAtStart = true,
     itemNames = {
         ore = "aluminum-ore",
         plate = "aluminum-plate",
@@ -57,6 +59,26 @@ local function oreToAluminaRecipe()
             { name = "silica", amount = 1, probability = 0.05 }
         },
         main_product = "alumina",
+        enabled = config.enableAtStart or false
+    }
+    return recipe
+end
+
+local function aluminaToPlateRecipe()
+    local recipe = {
+        type = "recipe",
+        name = "atom-" .. config.name .. "-plate",
+        icons = {
+            config.icons.plate,
+            createSmallIcon(aluminaIcon),
+        },
+        category = "smelting",
+        energy_required = 19.2,
+        ingredients = {
+            { "alumina", 6 }
+        },
+        results = {{ name = config.itemNames.plate, amount = 6 }},
+        enabled = config.enableAtStart or false
     }
     allowProductivity(recipe.name)
     return recipe
@@ -79,12 +101,14 @@ local function dustToAluminaRecipe()
             { name = "alumina", amount = 1 },
             { name = "silica", amount = 1, probability = 0.05 }
         },
-        main_product = "alumina"
+        main_product = "alumina",
+        enabled = false
     }
 end
 
 data:extend({
     oreToAluminaRecipe(),
+    aluminaToPlateRecipe(),
     dustToAluminaRecipe(),
     oreToDustRecipe(config),
     dustToIngotRecipe(config),
@@ -100,6 +124,11 @@ data:extend({
     item(config, "dust")
 })
 
---aluminum-ingot-to-plate
+setSubGroup(config)
+data.raw.item.alumina.subgroup = "aluminum"
+
+log("blubber")
+log(data.raw.item["aluminum-plate"].subgroup)
+log(data.raw.item["alumina"].subgroup)
 
 return config

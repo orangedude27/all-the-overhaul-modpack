@@ -24,4 +24,6 @@ local config = {
 
 data:extend(createRefiningData(config))
 
+setSubGroup(config)
+
 return config

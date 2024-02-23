@@ -3,6 +3,9 @@ config: {
     -- Base name of the material (e.g. "copper")
     name: string,
 
+    -- Order string for the item subgroup (e.g. "a")
+    order: string,
+
     -- Whether to enable the plate recipe at the start of the game
     enableAtStart: boolean,
 
@@ -106,6 +109,27 @@ function allowProductivity(recipeName)
     for _, module in pairs(productivityModules) do
         if (module.limitation) then
             table.insert(module.limitation, recipeName)
+        end
+    end
+end
+
+function setSubGroup(config)
+    if not data.raw["item-subgroup"][config.name] then
+        data:extend({
+            {
+                type = "item-subgroup",
+                name = config.name,
+                group = "resources",
+                order = "0-ore-" .. (config.order or "z")
+            }
+        })
+    else
+        data.raw["item-subgroup"][config.name].group = "resources"
+        data.raw["item-subgroup"][config.name].order = "0-ore-" .. (config.order or "z")
+    end
+    for _, item in pairs(config.itemNames) do
+        if (data.raw.item[item]) then
+            data.raw.item[item].subgroup = config.name
         end
     end
 end
@@ -393,6 +417,5 @@ function item(config, category, stackSize)
         icons = { config.icons[category] },
         order = "a[" .. config.name .. "-" .. category .. "]",
         stack_size = stackSize or 100,
-        subgroup = config.name
     }
 end

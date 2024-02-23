@@ -116,6 +116,9 @@ data:extend({
     }
 })
 
+setSubGroup(tantalumConfig)
+setSubGroup(niobiumConfig)
+
 return {
     tantalum = tantalumConfig,
     niobium = niobiumConfig
