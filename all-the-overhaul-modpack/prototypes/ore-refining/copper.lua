@@ -1,5 +1,6 @@
 local config = {
     name = "copper",
+    enableAtStart = false,
     itemNames = {
         ore = "copper-ore",
         plate = "copper-plate",

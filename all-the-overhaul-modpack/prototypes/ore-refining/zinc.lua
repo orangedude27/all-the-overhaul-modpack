@@ -1,5 +1,6 @@
 local config = {
     name = "zinc",
+    enableAtStart = true,
     itemNames = {
         ore = "zinc-ore",
         plate = "zinc-plate",

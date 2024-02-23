@@ -1,5 +1,6 @@
 local config = {
     name = "lead",
+    enableAtStart = true,
     itemNames = {
         ore = "lead-ore",
         plate = "lead-plate",

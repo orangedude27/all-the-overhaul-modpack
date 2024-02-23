@@ -1,5 +1,6 @@
 local config = {
     name = "tin",
+    enableAtStart = true,
     itemNames = {
         ore = "tin-ore",
         plate = "tin-plate",

@@ -3,6 +3,9 @@ config: {
     -- Base name of the material (e.g. "copper")
     name: string,
 
+    -- Whether to enable the plate recipe at the start of the game
+    enableAtStart: boolean,
+
     -- Names of the indermediate and end result items (e.g. "5d-copper-dust", "se-copper-ingot")
     itemNames: {
         ore: string,
@@ -124,6 +127,7 @@ function oreToPlateRecipe(config)
         },
         results = results,
         main_product = config.itemNames.plate,
+        enabled = config.enableAtStart or false
     }
     allowProductivity(recipe.name)
     return recipe
@@ -142,6 +146,7 @@ function oreToDustRecipe(config)
         results = {
             { name = config.itemNames.dust, amount = 2 },
         },
+        enabled = false
     }
     return recipe
 end
@@ -162,7 +167,8 @@ function dustToPlateRecipe(config)
             { config.itemNames.dust, 18 }
         },
         results = results,
-        main_product = config.itemNames.plate
+        main_product = config.itemNames.plate,
+        enabled = false
     }
     allowProductivity(recipe.name)
     return recipe
@@ -186,7 +192,8 @@ function dustToIngotRecipe(config)
             additionalIngredient
         },
         results = results,
-        main_product = config.itemNames.ingot
+        main_product = config.itemNames.ingot,
+        enabled = false
     }
     allowProductivity(recipe.name)
     return recipe
@@ -207,7 +214,8 @@ function ingotToMoltenRecipe(config)
         },
         results = {
             { type = "fluid", name = config.itemNames.molten, amount = 100 },
-        }
+        },
+        enabled = false
     }
 end
 
@@ -226,7 +234,8 @@ function moltenToPlateRecipe(config)
         },
         results = {
             { name = config.itemNames.plate, amount = 2 },
-        }
+        },
+        enabled = false
     }
 end
 
@@ -248,7 +257,8 @@ function dustToEnrichedRecipe(config)
             { type = "fluid", name = "water", amount = 240 }
         },
         results = results,
-        main_product = config.itemNames.enriched
+        main_product = config.itemNames.enriched,
+        enabled = false
     }
     allowProductivity(recipe.name)
     return recipe
@@ -271,7 +281,8 @@ function enrichedToIngotRecipe(config)
         },
         results = {
             { name = config.itemNames.ingot, amount = 6 },
-        }
+        },
+        enabled = false
     }
     allowProductivity(recipe.name)
     return recipe
@@ -295,7 +306,8 @@ function dustToPureRecipe(config)
             additionalIngredient
         },
         results = results,
-        main_product = config.itemNames.pure
+        main_product = config.itemNames.pure,
+        enabled = false
     }
     allowProductivity(recipe.name)
     return recipe
@@ -319,7 +331,8 @@ function pureToEnrichedRecipe(config)
             { type = "fluid", name = "water", amount = 150 }
         },
         results = results,
-        main_product = config.itemNames.enriched
+        main_product = config.itemNames.enriched,
+        enabled = false
     }
     allowProductivity(recipe.name)
     return recipe
@@ -342,7 +355,8 @@ function enrichedToPelletsRecipe(config)
         },
         results = {
             { name = config.itemNames.pellets, amount = 8 }
-        }
+        },
+        enabled = false
     }
     allowProductivity(recipe.name)
     return recipe
@@ -365,7 +379,8 @@ function pelletsToIngotRecipe(config)
         },
         results = {
             { name = config.itemNames.ingot, amount = 6 }
-        }
+        },
+        enabled = false
     }
     allowProductivity(recipe.name)
     return recipe

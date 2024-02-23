@@ -13,7 +13,7 @@
 - Add missing labels
 - Add migrations
 
-## 1.8.1 
+## 1.8.1
 - Cleanup icon categories/orders
 - Have a look at alloying
 - Create new icons

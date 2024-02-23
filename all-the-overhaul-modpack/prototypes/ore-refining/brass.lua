@@ -1,5 +1,6 @@
 local config = {
     name = "brass",
+    enableAtStart = true,
     itemNames = {
         ore = "copper-ore",
         plate = "brass-plate",
