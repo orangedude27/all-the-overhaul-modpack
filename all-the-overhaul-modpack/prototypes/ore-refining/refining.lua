@@ -102,7 +102,7 @@ end
 
 function oreToPlateRecipe(config)
     local results = config.additionalResults.oreToPlate or {}
-    table.insert(results, { name = config.itemNames.plate, amount = 1 })
+    table.insert(results, { name = config.itemNames.plate, amount = 6 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate",
@@ -111,9 +111,9 @@ function oreToPlateRecipe(config)
             createSmallIcon(config.icons.ore),
         },
         category = "smelting",
-        energy_required = 3.2,
+        energy_required = 19.2,
         ingredients = {
-            { config.itemNames.ore, 2 }
+            { config.itemNames.ore, 12 }
         },
         results = results,
         main_product = config.itemNames.plate,
@@ -296,8 +296,8 @@ end
 
 function pureToEnrichedRecipe(config)
     local results = config.additionalResults.pureToEnriched or {}
-    table.insert(results, { name = config.itemNames.enriched, amount = 2 })
-    table.insert(results, { type = "fluid", name = "dirty-water", amount = 50 })
+    table.insert(results, { name = config.itemNames.enriched, amount = 6 })
+    table.insert(results, { type = "fluid", name = "dirty-water", amount = 150 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enriched-pure",
@@ -306,10 +306,10 @@ function pureToEnrichedRecipe(config)
             createSmallIcon(config.icons.pure)
         },
         category = "fluid-filtration",
-        energy_required = 3.2,
+        energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.pure, amount = 1 },
-            { type = "fluid", name = "water", amount = 50 }
+            { name = config.itemNames.pure, amount = 3 },
+            { type = "fluid", name = "water", amount = 150 }
         },
         results = results,
         main_product = config.itemNames.enriched

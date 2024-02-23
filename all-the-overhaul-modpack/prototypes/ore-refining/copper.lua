@@ -26,25 +26,28 @@ local config = {
     },
     additionalResults = {
         oreToPlate = {
-            { name = "silver-ore", amount = 1, probability = 0.07 },
-            { name = "cobaltite-ore", amount = 1, probability = 0.02 },
-            { name = "bismuth-plate", amount = 1, probability = 0.035 }
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "cobaltite-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-plate", amount = 1, probability = 0.5 }
         },
         dustToPlate = {
-            { name = "silver-ore", amount = 1 },
-            { name = "cobaltite-ore", amount = 1 },
-            { name = "bismuth-plate", amount = 1, probability = 0.2 }
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "cobaltite-ore", amount = 1, probability = 0.1 },
+            { name = "bismuth-plate", amount = 1, probability = 0.5 }
+        },
+        dustToIngot = {
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
         },
         dustToEnriched = {
-            { name = "indite-ore", probability = 0.2, amount = 1 },
-            { name = "bismuth-ore", probability = 0.5, amount = 1 }
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
         },
         dustToPure = {
-            { name = "silver-ore", amount = 1 }
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
         },
         pureToEnriched = {
-            { name = "indite-ore", probability = 0.5, amount = 1 },
-            { name = "bismuth-ore", amount = 1 },
+            { name = "silver-ore", amount = 1, probability = 0.5 }
         }
     }
 }
