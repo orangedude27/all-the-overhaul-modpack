@@ -8,6 +8,7 @@
 - Remove old ore to plate recipes
 - Add missing icons
 - Add missing labels
+- Add migrations
 
 ## 1.8.1 
 - Cleanup icon categories/orders
