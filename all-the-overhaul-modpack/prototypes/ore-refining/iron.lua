@@ -21,17 +21,20 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-iron-pellets.png", icon_size = 128, icon_mipmaps = 3 }
     },
     additionalResults = {
+        oreToPlate = {
+            { name = "manganese-plate", amount = 1, probability = 0.5 }
+        },
         dustToPlate = {
-            { name = "manganese-plate", amount = 1, probability = 0.33 }
+            { name = "manganese-plate", amount = 1, probability = 0.5 }
+        },
+        dustToIngot = {
+            { name = "manganese-ore", amount = 1, probability = 0.5 }
         },
         dustToEnriched = {
-            { name = "manganese-ore", probability = 0.8, amount = 1 }
+            { name = "manganese-ore", amount = 1, probability = 0.5 }
         },
         dustToPure = {
-            { name = "nickel-ore", amount = 1 }
-        },
-        pureToEnriched = {
-            { name = "manganese-ore", amount = 1 }
+            { name = "manganese-ore", amount = 1, probability = 0.5 }
         }
     }
 }

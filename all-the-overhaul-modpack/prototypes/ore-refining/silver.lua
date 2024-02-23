@@ -19,14 +19,6 @@ local config = {
         enriched = { icon = "__bzgold__/graphics/icons/enriched-silver.png", icon_size = 128 },
         pure = { icon = "__Cobalt__/graphics/icons/fi-materials-pure-cobalt.png", icon_size = 64 }, -- TODO
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-pellets.png", icon_size = 128, icon_mipmaps = 3 } -- TODO
-    },
-    additionalResults = {
-        dustToEnriched = {
-        },
-        dustToPure = {
-        },
-        pureToEnriched = {
-        }
     }
 }
 

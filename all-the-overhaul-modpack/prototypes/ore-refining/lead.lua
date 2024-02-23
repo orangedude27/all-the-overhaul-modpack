@@ -24,15 +24,27 @@ local config = {
         dustToPure = { type = "fluid", name = "oxygen", amount = 4 }
     },
     additionalResults = {
+        oreToPlate = {
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-plate", amount = 1, probability = 0.5 }
+        },
         dustToPlate = {
-            { name = "silver-ore", amount_min = 1, amount_max = 2 },
-            { name = "bismuth-plate", amount = 1, probability = 0.16 }
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-plate", amount = 1, probability = 0.5 }
+        },
+        dustToIngot = {
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
+        },
+        dustToEnriched = {
+            { name = "silver-ore", amount = 1, probability = 0.5 },
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
         },
         dustToPure = {
-            { name = "silver-ore", amount = 1 }
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
         },
         pureToEnriched = {
-            { name = "silver-ore", amount = 1 }
+            { name = "silver-ore", amount = 1, probability = 0.5 }
         }
     }
 }

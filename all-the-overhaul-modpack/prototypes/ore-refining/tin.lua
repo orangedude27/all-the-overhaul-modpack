@@ -24,8 +24,20 @@ local config = {
         pelletsToIngot = { name = "atom-carbon", amount = 2 }
     },
     additionalResults = {
+        oreToPlate = {
+            { name = "bismuth-plate", amount = 1, probability = 0.5 }
+        },
         dustToPlate = {
-            { name = "bismuth-plate", amount = 1, probability = 0.09 }
+            { name = "bismuth-plate", amount = 1, probability = 0.5 }
+        },
+        dustToIngot = {
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
+        },
+        dustToEnriched = {
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
+        },
+        dustToPure = {
+            { name = "bismuth-ore", amount = 1, probability = 0.5 }
         }
     }
 }

@@ -21,14 +21,23 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pellets.png", icon_size = 128 }
     },
     additionalResults = {
+        oreToPlate = {
+            { name = "cobaltite-ore", amount = 1, probability = 0.5 }
+        },
         dustToPlate = {
-            { name = "cobaltite-ore", amount = 1 }
+            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
+        },
+        dustToIngot = {
+            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
         },
         dustToEnriched = {
+            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
         },
         dustToPure = {
+            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
         },
         pureToEnriched = {
+            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
         }
     }
 }

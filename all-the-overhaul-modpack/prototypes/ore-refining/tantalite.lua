@@ -21,10 +21,7 @@ local tantalumConfig = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-pellets.png", icon_size = 128 }
     },
     additionalIngredient = {},
-    additionalResults = {
-        dustToPure = { { name = "fi-materials-pure-niobium", amount = 1 } },
-        dustToPlate = { { name = "niobium-plate", amount = 1 } },
-    }
+    additionalResults = {}
 }
 
 local niobiumConfig = {
@@ -49,29 +46,35 @@ local niobiumConfig = {
     additionalIngredient = {}
 }
 
+local _oreToPlateRecipe = oreToPlateRecipe(tantalumConfig)
 local _dustToPlateRecipe = dustToPlateRecipe(tantalumConfig)
 local _dustToIngotRecipe = dustToIngotRecipe(tantalumConfig)
 local _dustToEnrichedRecipe = dustToEnrichedRecipe(tantalumConfig)
 local _dustToPureRecipe = dustToPureRecipe(tantalumConfig)
 
+_oreToPlateRecipe.results = {
+    { name = tantalumConfig.itemNames.plate, amount = 6 },
+    { name = niobiumConfig.itemNames.plate, amount = 6 }
+}
 _dustToPlateRecipe.results = {
-    { name = tantalumConfig.itemNames.plate, amount_min = 7, amount_max = 8 },
-    { name = niobiumConfig.itemNames.plate, amount_min = 7, amount_max = 8 }
+    { name = tantalumConfig.itemNames.plate, amount = 3 },
+    { name = niobiumConfig.itemNames.plate, amount = 3 }
 }
 _dustToIngotRecipe.results = {
-    { name = tantalumConfig.itemNames.ingot, amount = 2 },
-    { name = niobiumConfig.itemNames.ingot, amount = 2 }
+    { name = tantalumConfig.itemNames.ingot, amount = 3 },
+    { name = niobiumConfig.itemNames.ingot, amount = 3 }
 }
 _dustToEnrichedRecipe.results = {
-    { name = tantalumConfig.itemNames.enriched, amount = 1 },
-    { name = niobiumConfig.itemNames.enriched, amount = 1 }
+    { name = tantalumConfig.itemNames.enriched, amount = 3 },
+    { name = niobiumConfig.itemNames.enriched, amount = 3 }
 }
 _dustToPureRecipe.results = {
-    { name = tantalumConfig.itemNames.pure, amount = 1, probability = 0.5 },
-    { name = niobiumConfig.itemNames.pure, amount = 1, probability = 0.5 }
+    { name = tantalumConfig.itemNames.pure, amount_min = 1, amount_max = 2 },
+    { name = niobiumConfig.itemNames.pure, amount_min = 1, amount_max = 2 }
 }
 
 data:extend({
+    _oreToPlateRecipe,
     oreToDustRecipe(tantalumConfig),
     _dustToPlateRecipe,
     _dustToIngotRecipe,
