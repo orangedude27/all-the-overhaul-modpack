@@ -66,3 +66,5 @@ data:extend({
     chromiumNickelRecipe
 })
 ]]--
+
+return config

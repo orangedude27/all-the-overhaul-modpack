@@ -26,3 +26,5 @@ data:extend({
         result_count = 1,
     }
 })
+
+return config

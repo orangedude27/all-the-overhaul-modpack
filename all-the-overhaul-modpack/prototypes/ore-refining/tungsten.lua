@@ -40,3 +40,5 @@ data:extend({
         subgroup = "fluid",
     }
 })
+
+return config

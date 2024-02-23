@@ -7,9 +7,9 @@ local config = {
         molten = "atom-brass-molten"
     },
     icons = {
-        ore = { icon = "__base__/graphics/icons/copper-ore.png", icon_size = 64, icon_mipmaps = 4 },
+        ore = atom.refining.config.copper.icons.ore,
         plate = { icon = "__BrassTacks__/graphics/galdoc/icons/brass-plate.png", icon_size = 64 },
-        dust = { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-copper-dust.png", icon_size = 32, icon_mipmaps = 3 },
+        dust = atom.refining.config.copper.icons.dust,
         ingot = { icon = "__BrassTacks__/graphics/galdoc/icons/brass-ingot.png", icon_size = 64 },
         molten = { icon = "__Cobalt__/graphics/icons/molten-cobalt.png", icon_size = 64, icon_mipmaps = 3 } -- TODO
     },
@@ -22,21 +22,21 @@ _oreToPlateRecipe.ingredients = {
     { "copper-ore", 6 },
     { "zinc-ore", 6 }
 }
-table.insert(_oreToPlateRecipe.icons, createSmallIconRight({ icon = "__BrassTacks__/graphics/icons/zinc-ore.png", icon_size = 64, icon_mipmaps = 4 }))
+table.insert(_oreToPlateRecipe.icons, createSmallIconRight(atom.refining.config.zinc.icons.ore))
 
 local _dustToPlateRecipe = dustToPlateRecipe(config)
 _dustToPlateRecipe.ingredients = {
     { "5d-copper-dust", 9 },
     { "atom-zinc-dust", 9 }
 }
-table.insert(_dustToPlateRecipe.icons, createSmallIconRight({ icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png", icon_size = 32, icon_mipmaps = 3 }))
+table.insert(_dustToPlateRecipe.icons, createSmallIconRight(atom.refining.config.zinc.icons.dust))
 
 local _ingotToMoltenRecipe = ingotToMoltenRecipe(config)
 _ingotToMoltenRecipe.ingredients = {
     { name = "se-copper-ingot", amount = 1 },
     { name = "zinc-ingot", amount = 1 }
 }
-table.insert(_ingotToMoltenRecipe.icons, createSmallIconRight({ icon = "__BrassTacks__/graphics/galdoc/icons/zinc-ingot.png", icon_size = 64 }))
+table.insert(_ingotToMoltenRecipe.icons, createSmallIconRight(atom.refining.config.zinc.icons.ingot))
 
 data:extend({
     _oreToPlateRecipe,
@@ -58,3 +58,5 @@ data:extend({
         subgroup = "fluid"
     }
 })
+
+return config

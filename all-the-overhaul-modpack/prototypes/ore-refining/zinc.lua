@@ -47,3 +47,5 @@ local config = {
 }
 
 data:extend(createRefiningData(config))
+
+return config

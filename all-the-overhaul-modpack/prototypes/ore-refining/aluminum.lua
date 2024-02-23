@@ -37,12 +37,14 @@ local config = {
     }
 }
 
+local aluminaIcon = { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128 }
+
 local function oreToAluminaRecipe()
     local recipe = {
         type = "recipe",
         name = "atom-alumina-ore",
         icons = {
-            { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128 },
+            aluminaIcon,
             createSmallIcon(config.icons.ore),
         },
         category = "smelting",
@@ -65,7 +67,7 @@ local function dustToAluminaRecipe()
         type = "recipe",
         name = "atom-alumina-dust",
         icons = {
-            { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128 },
+            aluminaIcon,
             createSmallIcon(config.icons.dust),
         },
         category = "smelting",
@@ -99,3 +101,5 @@ data:extend({
 })
 
 --aluminum-ingot-to-plate
+
+return config

@@ -105,9 +105,9 @@ data:extend({
         name = "molten-niobium",
         default_temperature = 232,
         max_temperature = 232,
-        base_color = {r=191, g=219, b=233}, -- TODO
-        flow_color = {r=191, g=219, b=233}, -- TODO
-        icons = {{icon = "__Tantalite__/graphics/icons/molten-tantalite.png", icon_size = 64}}, -- TODO
+        base_color = { r = 191, g = 219, b = 233 }, -- TODO
+        flow_color = { r = 191, g = 219, b = 233 }, -- TODO
+        icons = { niobiumConfig.icons.molten },
         order = "a[molten]-a",
         pressure_to_speed_ratio = 0.4,
         flow_to_energy_ratio = 0.59,
@@ -115,3 +115,8 @@ data:extend({
         subgroup = "fluid",
     }
 })
+
+return {
+    tantalum = tantalumConfig,
+    niobium = niobiumConfig
+}
