@@ -1,5 +1,6 @@
 # TODO list
 ## 1.8.0
+- Finish `coal.lua`
 - Balance additional inputs
 - Balance additional results
 - Balance energy usage and amount of buildings required
