@@ -21,7 +21,11 @@ local tantalumConfig = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-pellets.png", icon_size = 128 }
     },
     additionalIngredient = {},
-    additionalResults = {}
+    additionalResults = {},
+    unlockedBy = {
+        oreToDust = "5d-masher-1",
+        dustToPlate = "5d-masher-1"
+    }
 }
 
 local niobiumConfig = {
@@ -43,7 +47,8 @@ local niobiumConfig = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-pellets.png", icon_size = 128 } -- TODO
     },
     additionalResults = {},
-    additionalIngredient = {}
+    additionalIngredient = {},
+    unlockedBy = {}
 }
 
 local _oreToPlateRecipe = oreToPlateRecipe(tantalumConfig)

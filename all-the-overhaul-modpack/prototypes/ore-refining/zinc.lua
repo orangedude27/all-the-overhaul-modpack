@@ -45,6 +45,10 @@ local config = {
         pureToEnriched = {
             { name = "silver-ore", amount = 1, probability = 0.5 }
         }
+    },
+    unlockedBy = {
+        oreToDust = "5d-masher-1",
+        dustToPlate = "5d-masher-1"
     }
 }
 

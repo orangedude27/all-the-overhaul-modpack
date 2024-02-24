@@ -20,6 +20,11 @@ local config = {
         enriched = { icon_size = 64, icon = "__bismuth__/graphics/icons/enriched-bismuth.png", icon_mipmaps = 3 },
         pure = { icon = "__Cobalt__/graphics/icons/enriched-cobalt.png", icon_size = 64, icon_mipmaps = 3 }, -- TODO
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-bismuth-pellets.png", icon_size = 128 }
+    },
+    unlockedBy = {
+        oreToPlate = "bismanol",
+        oreToDust = "5d-masher-1",
+        dustToPlate = "5d-masher-1"
     }
 }
 

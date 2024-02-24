@@ -19,6 +19,10 @@ local config = {
         enriched = { icon = "__Indium__/graphics/icons/enriched-indium.png", icon_size = 64 },
         pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-pure.png", icon_size = 64, icon_mipmaps = 3 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-pellets.png", icon_size = 128 }
+    },
+    unlockedBy = {
+        oreToDust = "indium-processing",
+        dustToPlate = "indium-processing"
     }
 }
 

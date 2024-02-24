@@ -24,6 +24,11 @@ local config = {
         dustToIngot = { name = "atom-carbon", amount = 18 },
         enrichedToIngot = { type = "fluid", name = "sulfuric-acid", amount = 10 },
         pelletsToIngot = { type = "fluid", name = "gas", amount = 30 }
+    },
+    unlockedBy = {
+        oreToPlate = "manganese-smelting",
+        oreToDust = "5d-masher-1",
+        dustToPlate = "5d-masher-1"
     }
 }
 

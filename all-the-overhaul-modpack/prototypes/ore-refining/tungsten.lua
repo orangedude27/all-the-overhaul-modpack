@@ -20,6 +20,10 @@ local config = {
         pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tungsten-pure.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tungsten-pellets.png", icon_size = 128 }
     },
+    unlockedBy = {
+        oreToDust = "tungsten-processing",
+        dustToPlate = "tungsten-processing"
+    }
 }
 
 data:extend(createRefiningData(config))

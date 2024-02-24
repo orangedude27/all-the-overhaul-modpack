@@ -44,7 +44,23 @@ local config = {
         pureToEnriched = {
             { name = "silver-ore", amount = 1, probability = 0.5 }
         }
+    },
+    unlockedBy = {
+        oreToPlate = "",
+        oreToDust = "",
+        dustToPlate = "",
+        dustToIngot = "",
+        ingotToMolten = "",
+        moltenToPlate = "",
+        dustToEnriched = "",
+        enrichedToIngot = "",
+        dustToPure = "",
+        pureToEnriched = "",
+        enrichedToPellets = "",
+        pelletsToIngot = ""
     }
 }
 
 data:extend(createRefiningData(config))
+
+setSubGroup(config)

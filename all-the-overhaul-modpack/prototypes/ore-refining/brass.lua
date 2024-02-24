@@ -15,7 +15,8 @@ local config = {
         molten = { icon = "__Cobalt__/graphics/icons/molten-cobalt.png", icon_size = 64, icon_mipmaps = 3 } -- TODO
     },
     additionalIngredient = {},
-    additionalResults = {}
+    additionalResults = {},
+    unlockedBy = {}
 }
 
 local _oreToPlateRecipe = oreToPlateRecipe(config)

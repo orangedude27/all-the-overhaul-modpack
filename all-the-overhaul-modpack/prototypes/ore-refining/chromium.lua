@@ -20,6 +20,10 @@ local config = {
         pure = { icon = "__Chromium__/graphics/icons/fi-materials-pure-chrome.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-pellets.png", icon_size = 128 }
     },
+    unlockedBy = {
+        oreToDust = "stainless-steel-processing",
+        dustToPlate = "stainless-steel-processing"
+    }
 }
 
 data:extend(createRefiningData(config))

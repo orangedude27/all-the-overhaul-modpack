@@ -58,3 +58,8 @@ require("planetfall")
 
 -- Remove vanilla plate recipes
 removeRecipeByName("iron-plate")
+removeRecipeByName("copper-plate")
+
+-- Trikop
+removeRecipeByName("manganese-plate")
+removeRecipeByName("bismuth-plate")

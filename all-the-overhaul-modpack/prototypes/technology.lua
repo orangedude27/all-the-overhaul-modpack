@@ -38,7 +38,7 @@ util.tech_add_prerequisites("electricity", "manganese-smelting")
 
 util.tech_remove_ingredients("manganese-smelting","automation-science-pack")
 
---lock techs that use Aluminium ceramic behind it.
+--lock techs that use aluminum ceramic behind it.
 util.tech_add_prerequisites("mechanical-engineering", "el_ALK_tech")
 util.tech_add_prerequisites("kr-fluids-chemistry", "el_ALK_tech")
 --lock tech that uses pcb solder behind it.

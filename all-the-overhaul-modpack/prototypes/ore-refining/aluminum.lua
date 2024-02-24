@@ -36,6 +36,9 @@ local config = {
             { name = "alumina", amount = 1, probability = 0.6 },
             { name = "silica", amount = 1, probability = 0.1 }
         }
+    },
+    unlockedBy = {
+        oreToDust = "5d-masher-1"
     }
 }
 
@@ -85,7 +88,7 @@ local function aluminaToPlateRecipe()
 end
 
 local function dustToAluminaRecipe()
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-alumina-dust",
         icons = {
@@ -104,6 +107,8 @@ local function dustToAluminaRecipe()
         main_product = "alumina",
         enabled = false
     }
+    unlockedBy(recipe.name, "5d-masher-1")
+    return recipe
 end
 
 data:extend({

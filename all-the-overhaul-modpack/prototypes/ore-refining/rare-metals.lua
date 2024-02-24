@@ -35,6 +35,10 @@ local config = {
         pureToEnriched = {
             { name = "palladium-powder", amount = 1, probability = 0.6 }
         }
+    },
+    unlockedBy = {
+        oreToDust = "5d-masher-1",
+        dustToPlate = "5d-masher-1"
     }
 }
 

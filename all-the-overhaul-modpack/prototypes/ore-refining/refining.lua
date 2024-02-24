@@ -59,11 +59,28 @@ config: {
         -- Defaults to { name = "quicklime", amount = 1 }
         pelletsToIngot: ProductPrototype
     }
+
+    -- Technology name that unlocks the recipe
+    unlockedBy: {
+        oreToPlate,
+        oreToDust,
+        dustToPlate,
+        dustToIngot,
+        ingotToMolten,
+        moltenToPlate,
+        dustToEnriched,
+        enrichedToIngot,
+        dustToPure,
+        pureToEnriched,
+        enrichedToPellets,
+        pelletsToIngot,
+    }
 }
 --]]
 function createRefiningData(config)
     config.additionalResults = config.additionalResults or {}
     config.additionalIngredient = config.additionalIngredient or {}
+    config.unlockedBy = config.unlockedBy or {}
 
     return {
         oreToPlateRecipe(config),
@@ -134,6 +151,18 @@ function setSubGroup(config)
     end
 end
 
+function unlockedBy(recipe, technology)
+    if not technology then
+        return
+    end
+    for _, effect in pairs(data.raw.technology[technology].effects) do
+        if effect.type == "unlock-recipe" and effect.recipe == recipe then
+            return
+        end
+    end
+    table.insert(data.raw.technology[technology].effects, { type = "unlock-recipe", recipe = recipe })
+end
+
 function oreToPlateRecipe(config)
     local results = config.additionalResults.oreToPlate or {}
     table.insert(results, { name = config.itemNames.plate, amount = 6 })
@@ -154,6 +183,7 @@ function oreToPlateRecipe(config)
         enabled = config.enableAtStart or false
     }
     allowProductivity(recipe.name)
+    unlockedBy(recipe.name, config.unlockedBy.oreToPlate)
     return recipe
 end
 
@@ -172,6 +202,7 @@ function oreToDustRecipe(config)
         },
         enabled = false
     }
+    unlockedBy(recipe.name, config.unlockedBy.oreToDust)
     return recipe
 end
 
@@ -195,6 +226,7 @@ function dustToPlateRecipe(config)
         enabled = false
     }
     allowProductivity(recipe.name)
+    unlockedBy(recipe.name, config.unlockedBy.dustToPlate)
     return recipe
 end
 
@@ -220,11 +252,12 @@ function dustToIngotRecipe(config)
         enabled = false
     }
     allowProductivity(recipe.name)
+    unlockedBy(recipe.name, config.unlockedBy.dustToIngot)
     return recipe
 end
 
 function ingotToMoltenRecipe(config)
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-molten",
         icons = {
@@ -241,10 +274,12 @@ function ingotToMoltenRecipe(config)
         },
         enabled = false
     }
+    unlockedBy(recipe.name, config.unlockedBy.ingotToMolten)
+    return recipe
 end
 
 function moltenToPlateRecipe(config)
-    return {
+    local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate-molten",
         icons = {
@@ -261,6 +296,8 @@ function moltenToPlateRecipe(config)
         },
         enabled = false
     }
+    unlockedBy(recipe.name, config.unlockedBy.moltenToPlate)
+    return recipe
 end
 
 function dustToEnrichedRecipe(config)
@@ -285,6 +322,7 @@ function dustToEnrichedRecipe(config)
         enabled = false
     }
     allowProductivity(recipe.name)
+    unlockedBy(recipe.name, config.unlockedBy.dustToEnriched)
     return recipe
 end
 
@@ -309,6 +347,7 @@ function enrichedToIngotRecipe(config)
         enabled = false
     }
     allowProductivity(recipe.name)
+    unlockedBy(recipe.name, config.unlockedBy.enrichedToIngot)
     return recipe
 end
 
@@ -334,6 +373,7 @@ function dustToPureRecipe(config)
         enabled = false
     }
     allowProductivity(recipe.name)
+    unlockedBy(recipe.name, config.unlockedBy.dustToPure)
     return recipe
 end
 
@@ -359,6 +399,7 @@ function pureToEnrichedRecipe(config)
         enabled = false
     }
     allowProductivity(recipe.name)
+    unlockedBy(recipe.name, config.unlockedBy.pureToEnriched)
     return recipe
 end
 
@@ -383,6 +424,7 @@ function enrichedToPelletsRecipe(config)
         enabled = false
     }
     allowProductivity(recipe.name)
+    unlockedBy(recipe.name, config.unlockedBy.enrichedToPellets)
     return recipe
 end
 
@@ -407,6 +449,7 @@ function pelletsToIngotRecipe(config)
         enabled = false
     }
     allowProductivity(recipe.name)
+    unlockedBy(recipe.name, config.unlockedBy.pelletsToIngot)
     return recipe
 end
 

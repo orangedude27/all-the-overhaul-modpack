@@ -41,6 +41,10 @@ local config = {
         pureToEnriched = {
             { name = "cobaltite-ore", amount = 1, probability = 0.1 }
         }
+    },
+    unlockedBy = {
+        oreToDust = "5d-masher-1",
+        dustToPlate = "5d-masher-1"
     }
 }
 

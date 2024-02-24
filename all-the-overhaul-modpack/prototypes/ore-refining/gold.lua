@@ -19,6 +19,10 @@ local config = {
         enriched = { icon = "__ThemTharHills__/graphics/icons/gold-powder.png", icon_size = 64 },
         pure = { icon = "__248k__/ressources/fission/fi_materials/fi_materials_pure_gold.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-gold-pellets.png", icon_size = 128 }
+    },
+    unlockedBy = {
+        oreToDust = "gold-processing",
+        dustToPlate = "gold-processing"
     }
 }
 
