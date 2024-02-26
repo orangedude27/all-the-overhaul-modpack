@@ -1352,13 +1352,14 @@ Recipe("5d-lab-10"):replace_ingredient("productivity-module-3", { "se-naquium-cu
 -- 01
 Recipe("5d-masher-01"):replace_ingredient("electronic-circuit", { "electric-motor", 2 })
 Recipe("5d-masher-01"):replace_ingredient("steel-plate", { "articulated-mechanism", 5 })
+Recipe("5d-masher-01"):replace_ingredient("lead-plate", { "invar-plate", 2 })
 Recipe("5d-masher-01"):add_ingredient({ "aluminum-plate", 4 })
 Recipe("5d-masher-01"):add_ingredient({ "stone-brick", 4 })
 -- 02
 Recipe("5d-masher-02"):replace_ingredient("steel-plate", { "motorized-articulator", 5 })
 Recipe("5d-masher-02"):replace_ingredient("iron-gear-wheel", { "steel-gear-wheel", 10 })
 Recipe("5d-masher-02"):add_ingredient({ "gearbox", 2 })
-Recipe("5d-masher-02"):add_ingredient({ "tungsten-plate", 4 })
+Recipe("5d-masher-02"):add_ingredient({ "diamond", 8 })
 Recipe("5d-masher-02"):add_ingredient({ "stone-brick", 4 })
 -- 03
 Recipe("5d-masher-03"):replace_ingredient("advanced-circuit", { "processing-unit", 4 })

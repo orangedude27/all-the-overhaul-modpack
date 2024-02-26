@@ -785,18 +785,19 @@ util.tech_add_ingredients("advanced-material-processing-11",{"kr-optimization-te
 -- 01
 data.raw.technology["5d-masher-1"].unit.count = 100
 util.tech_remove_prerequisites("5d-masher-1", {"advanced-material-processing-2"})
-util.tech_add_prerequisites("5d-masher-1",{"automation-science-pack","electricity"})
+util.tech_add_prerequisites("5d-masher-1",{"invar-processing"})
 util.tech_remove_ingredients("5d-masher-1", {"logistic-science-pack","chemical-science-pack"})
+util.tech_add_ingredients("5d-masher-1", {"basic-tech-card"})
 -- 02
 data.raw.technology["5d-masher-2"].unit.count = 200
 util.tech_remove_prerequisites("5d-masher-2", {"advanced-material-processing-3"})
-util.tech_add_prerequisites("5d-masher-2",{"tungsten-processing","mechanical-engineering"})
-util.tech_remove_ingredients("5d-masher-2", {"chemical-science-pack"})
+util.tech_add_prerequisites("5d-masher-2",{"diamond-processing"})
 -- 03
 data.raw.technology["5d-masher-3"].unit.count = 300
 util.tech_remove_prerequisites("5d-masher-3", {"advanced-material-processing-4"})
-util.tech_add_prerequisites("5d-masher-3",{"nitinol-processing", "advanced-electronics-2"})
-util.tech_remove_ingredients("5d-masher-3", {"production-science-pack","se-rocket-science-pack","space-science-pack"})
+util.tech_add_prerequisites("5d-masher-3",{"nitinol-processing", "advanced-electronics-2", "productivity-science-pack"})
+util.tech_remove_ingredients("5d-masher-3", {"production-science-pack", "space-science-pack"})
+util.tech_add_ingredients("5d-masher-3", {"productivity-science-pack"})
 -- 04
 data.raw.technology["5d-masher-4"].unit.count = 400
 util.tech_remove_prerequisites("5d-masher-4", {"production-science-pack","advanced-material-processing-5"})
