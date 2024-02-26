@@ -87,8 +87,8 @@ function createRefiningData(config)
         oreToDustRecipe(config),
         dustToPlateRecipe(config),
         dustToIngotRecipe(config),
-        --ingotToMoltenRecipe(config),
-        ingotToMoltenPyroRecipe(config),
+        ingotToPlateRecipe(config),
+        ingotToMoltenRecipe(config),
         moltenToPlateRecipe(config),
         dustToEnrichedRecipe(config),
         enrichedToIngotRecipe(config),
@@ -164,7 +164,7 @@ function unlockedBy(recipe, technology)
     table.insert(data.raw.technology[technology].effects, { type = "unlock-recipe", recipe = recipe })
 end
 
-function oreToPlateRecipe(config)
+function oreToPlateRecipe(config)-- -50%
     local results = config.additionalResults.oreToPlate or {}
     table.insert(results, { name = config.itemNames.plate, amount = 6 })
     local recipe = {
@@ -181,7 +181,7 @@ function oreToPlateRecipe(config)
         },
         results = results,
         main_product = config.itemNames.plate,
-        enabled = config.enableAtStart or false
+        enabled = true--config.enableAtStart or false
     }
     allowProductivity(recipe.name)
     unlockedBy(recipe.name, config.unlockedBy.oreToPlate)
@@ -207,7 +207,7 @@ function oreToDustRecipe(config)
     return recipe
 end
 
-function dustToPlateRecipe(config)
+function dustToPlateRecipe(config)-- -33%
     local results = config.additionalResults.dustToPlate or {}
     table.insert(results, { name = config.itemNames.plate, amount = 6 })
     local recipe = {
@@ -250,14 +250,39 @@ function dustToIngotRecipe(config)
         },
         results = results,
         main_product = config.itemNames.ingot,
-        enabled = false
+        enabled = true--false
     }
     allowProductivity(recipe.name)
     unlockedBy(recipe.name, config.unlockedBy.dustToIngot)
     return recipe
 end
 
-function ingotToMoltenRecipe(config)
+function ingotToPlateRecipe(config)
+    local additionalIngredient = config.additionalIngredient.dustToIngot or nil
+    local results = config.additionalResults.ingotToPlate or {}
+    table.insert(results, { name = config.itemNames.plate, amount = 6 })
+    local recipe = {
+        type = "recipe",
+        name = "atom-" .. config.name .. "-plate-ingot",
+        icons = {
+            config.icons.plate,
+            createSmallIcon(config.icons.ingot)
+        },
+        category = "casting",
+        energy_required = 9.6,
+        ingredients = {
+            { name = config.itemNames.ingot, amount = 6 },
+            additionalIngredient
+        },
+        results = results,
+        main_product = config.itemNames.plate,
+        enabled = true--false
+    }
+    unlockedBy(recipe.name, config.unlockedBy.ingotToPlate)
+    return recipe
+end
+
+function ingotToMoltenRecipe(config)-- +33%
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-molten",
@@ -266,14 +291,15 @@ function ingotToMoltenRecipe(config)
             createSmallIcon(config.icons.ingot)
         },
         category = "el_arc_furnace_category",
-        energy_required = 1.6,
+        energy_required = 3.2,
         ingredients = {
-            { name = config.itemNames.ingot, amount = 2 }
+            { name = config.itemNames.ingot, amount = 3 },
+            { type = "fluid", name = "se-pyroflux", amount = 0.125 }
         },
         results = {
-            { type = "fluid", name = config.itemNames.molten, amount = 100 },
+            { type = "fluid", name = config.itemNames.molten, amount = 200 },
         },
-        enabled = false
+        enabled = true--false
     }
     unlockedBy(recipe.name, config.unlockedBy.ingotToMolten)
     return recipe
@@ -319,16 +345,16 @@ function moltenToPlateRecipe(config)
         results = {
             { name = config.itemNames.plate, amount = 2 },
         },
-        enabled = false
+        enabled = true--false
     }
     unlockedBy(recipe.name, config.unlockedBy.moltenToPlate)
     return recipe
 end
 
-function dustToEnrichedRecipe(config)
+function dustToEnrichedRecipe(config)-- +50%
     local results = config.additionalResults.dustToEnriched or {}
     table.insert(results, { name = config.itemNames.enriched, amount = 6 })
-    table.insert(results, { type = "fluid", name = "dirty-water", amount = 240 })
+    table.insert(results, { type = "fluid", name = "dirty-water", amount = 480 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enrichment",
@@ -339,12 +365,12 @@ function dustToEnrichedRecipe(config)
         category = "fluid-filtration",
         energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.dust, amount = 6 },
-            { type = "fluid", name = "water", amount = 240 }
+            { name = config.itemNames.dust, amount = 8 },
+            { type = "fluid", name = "water", amount = 480 }
         },
         results = results,
         main_product = config.itemNames.enriched,
-        enabled = false
+        enabled = true--false
     }
     allowProductivity(recipe.name)
     unlockedBy(recipe.name, config.unlockedBy.dustToEnriched)
@@ -369,17 +395,17 @@ function enrichedToIngotRecipe(config)
         results = {
             { name = config.itemNames.ingot, amount = 6 },
         },
-        enabled = false
+        enabled = true--false
     }
     allowProductivity(recipe.name)
     unlockedBy(recipe.name, config.unlockedBy.enrichedToIngot)
     return recipe
 end
 
-function dustToPureRecipe(config)
+function dustToPureRecipe(config)-- +50%
     local additionalIngredient = config.additionalIngredient.dustToPure or { type = "fluid", name = "sulfuric-acid", amount = 4 }
     local results = config.additionalResults.dustToPure or {}
-    table.insert(results, { name = config.itemNames.pure, amount = 3 })
+    table.insert(results, { name = config.itemNames.pure, amount = 6 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-slurry",
@@ -390,22 +416,22 @@ function dustToPureRecipe(config)
         category = "el_purifier_category",
         energy_required = 4.8,
         ingredients = {
-            { name = config.itemNames.dust, amount = 4 },
+            { name = config.itemNames.dust, amount = 8 },
             additionalIngredient
         },
         results = results,
         main_product = config.itemNames.pure,
-        enabled = false
+        enabled = true--false
     }
     allowProductivity(recipe.name)
     unlockedBy(recipe.name, config.unlockedBy.dustToPure)
     return recipe
 end
 
-function pureToEnrichedRecipe(config)
+function pureToEnrichedRecipe(config)-- +50%
     local results = config.additionalResults.pureToEnriched or {}
     table.insert(results, { name = config.itemNames.enriched, amount = 6 })
-    table.insert(results, { type = "fluid", name = "dirty-water", amount = 150 })
+    table.insert(results, { type = "fluid", name = "dirty-water", amount = 480 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enriched-pure",
@@ -416,19 +442,19 @@ function pureToEnrichedRecipe(config)
         category = "fluid-filtration",
         energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.pure, amount = 3 },
-            { type = "fluid", name = "water", amount = 150 }
+            { name = config.itemNames.pure, amount = 4 },
+            { type = "fluid", name = "water", amount = 480 }
         },
         results = results,
         main_product = config.itemNames.enriched,
-        enabled = false
+        enabled = true--false
     }
     allowProductivity(recipe.name)
     unlockedBy(recipe.name, config.unlockedBy.pureToEnriched)
     return recipe
 end
 
-function enrichedToPelletsRecipe(config)
+function enrichedToPelletsRecipe(config)-- +33%
     local additionalIngredient = config.additionalIngredient.enrichedToPellets or { name = "coke", amount = 1 }
     local recipe = {
         type = "recipe",
@@ -446,7 +472,7 @@ function enrichedToPelletsRecipe(config)
         results = {
             { name = config.itemNames.pellets, amount = 8 }
         },
-        enabled = false
+        enabled = true--false
     }
     allowProductivity(recipe.name)
     unlockedBy(recipe.name, config.unlockedBy.enrichedToPellets)
@@ -471,7 +497,7 @@ function pelletsToIngotRecipe(config)
         results = {
             { name = config.itemNames.ingot, amount = 6 }
         },
-        enabled = false
+        enabled = true--false
     }
     allowProductivity(recipe.name)
     unlockedBy(recipe.name, config.unlockedBy.pelletsToIngot)
