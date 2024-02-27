@@ -166,7 +166,7 @@ end
 
 function oreToPlateRecipe(config)-- -50%
     local results = config.additionalResults.oreToPlate or {}
-    table.insert(results, { name = config.itemNames.plate, amount = 6 })
+    table.insert(results, { name = config.itemNames.plate, amount = 3 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate",
@@ -175,13 +175,13 @@ function oreToPlateRecipe(config)-- -50%
             createSmallIcon(config.icons.ore),
         },
         category = "smelting",
-        energy_required = 19.2,
+        energy_required = 9.6,
         ingredients = {
-            { config.itemNames.ore, 12 }
+            { config.itemNames.ore, 6 }
         },
         results = results,
         main_product = config.itemNames.plate,
-        enabled = true--config.enableAtStart or false
+        enabled = config.enableAtStart or false
     }
     allowProductivity(recipe.name)
     unlockedBy(recipe.name, config.unlockedBy.oreToPlate)
@@ -194,7 +194,7 @@ function oreToDustRecipe(config)
         name = "atom-" .. config.name .. "-dust",
         icons = { config.icons.dust },
         category = "mashering",
-        energy_required = 3.2,
+        energy_required = 9.6,
         ingredients = {
             { config.itemNames.ore, 1 }
         },
@@ -207,9 +207,9 @@ function oreToDustRecipe(config)
     return recipe
 end
 
-function dustToPlateRecipe(config)-- -33%
+function dustToPlateRecipe(config)-- -36%
     local results = config.additionalResults.dustToPlate or {}
-    table.insert(results, { name = config.itemNames.plate, amount = 6 })
+    table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 3.84 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate-dust",
@@ -218,9 +218,9 @@ function dustToPlateRecipe(config)-- -33%
             createSmallIcon(config.icons.dust),
         },
         category = "smelting",
-        energy_required = 13.2,
+        energy_required = 9.6,
         ingredients = {
-            { config.itemNames.dust, 18 }
+            { config.itemNames.dust, 12 }
         },
         results = results,
         main_product = config.itemNames.plate,
@@ -257,10 +257,10 @@ function dustToIngotRecipe(config)
     return recipe
 end
 
-function ingotToPlateRecipe(config)
+function ingotToPlateRecipe(config)-- -11%
     local additionalIngredient = config.additionalIngredient.dustToIngot or nil
     local results = config.additionalResults.ingotToPlate or {}
-    table.insert(results, { name = config.itemNames.plate, amount = 6 })
+    table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 5.34 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate-ingot",
@@ -291,13 +291,13 @@ function ingotToMoltenRecipe(config)-- +33%
             createSmallIcon(config.icons.ingot)
         },
         category = "el_arc_furnace_category",
-        energy_required = 3.2,
+        energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.ingot, amount = 3 },
-            { type = "fluid", name = "se-pyroflux", amount = 0.125 }
+            { name = config.itemNames.ingot, amount = 6 },
+            { type = "fluid", name = "se-pyroflux", amount = 0.25 }
         },
         results = {
-            { type = "fluid", name = config.itemNames.molten, amount = 200 },
+            { type = "fluid", name = config.itemNames.molten, amount = 400 },
         },
         enabled = true--false
     }
@@ -314,12 +314,12 @@ function moltenToPlateRecipe(config)
             createSmallIcon(config.icons.molten)
         },
         category = "casting",
-        energy_required = 1.6,
+        energy_required = 9.6,
         ingredients = {
-            { type = "fluid", name = config.itemNames.molten, amount = 100 }
+            { type = "fluid", name = config.itemNames.molten, amount = 300 }
         },
         results = {
-            { name = config.itemNames.plate, amount = 2 },
+            { name = config.itemNames.plate, amount = 6 },
         },
         enabled = true--false
     }
@@ -327,10 +327,10 @@ function moltenToPlateRecipe(config)
     return recipe
 end
 
-function dustToEnrichedRecipe(config)-- +50%
+function dustToEnrichedRecipe(config)
     local results = config.additionalResults.dustToEnriched or {}
     table.insert(results, { name = config.itemNames.enriched, amount = 6 })
-    table.insert(results, { type = "fluid", name = "dirty-water", amount = 480 })
+    table.insert(results, { type = "fluid", name = "dirty-water", amount = 740 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enrichment",
@@ -341,8 +341,8 @@ function dustToEnrichedRecipe(config)-- +50%
         category = "fluid-filtration",
         energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.dust, amount = 8 },
-            { type = "fluid", name = "water", amount = 480 }
+            { name = config.itemNames.dust, amount = 12 },
+            { type = "fluid", name = "water", amount = 740 }
         },
         results = results,
         main_product = config.itemNames.enriched,
@@ -378,7 +378,7 @@ function enrichedToIngotRecipe(config)
     return recipe
 end
 
-function dustToPureRecipe(config)-- +50%
+function dustToPureRecipe(config)
     local additionalIngredient = config.additionalIngredient.dustToPure or { type = "fluid", name = "sulfuric-acid", amount = 4 }
     local results = config.additionalResults.dustToPure or {}
     table.insert(results, { name = config.itemNames.pure, amount = 6 })
@@ -390,9 +390,9 @@ function dustToPureRecipe(config)-- +50%
             createSmallIcon(config.icons.pure),
         },
         category = "el_purifier_category",
-        energy_required = 4.8,
+        energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.dust, amount = 8 },
+            { name = config.itemNames.dust, amount = 12 },
             additionalIngredient
         },
         results = results,
@@ -404,10 +404,10 @@ function dustToPureRecipe(config)-- +50%
     return recipe
 end
 
-function pureToEnrichedRecipe(config)-- +50%
+function pureToEnrichedRecipe(config)
     local results = config.additionalResults.pureToEnriched or {}
     table.insert(results, { name = config.itemNames.enriched, amount = 6 })
-    table.insert(results, { type = "fluid", name = "dirty-water", amount = 480 })
+    table.insert(results, { type = "fluid", name = "dirty-water", amount = 740 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enriched-pure",
@@ -418,8 +418,8 @@ function pureToEnrichedRecipe(config)-- +50%
         category = "fluid-filtration",
         energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.pure, amount = 4 },
-            { type = "fluid", name = "water", amount = 480 }
+            { name = config.itemNames.pure, amount = 6 },
+            { type = "fluid", name = "water", amount = 740 }
         },
         results = results,
         main_product = config.itemNames.enriched,
@@ -430,7 +430,7 @@ function pureToEnrichedRecipe(config)-- +50%
     return recipe
 end
 
-function enrichedToPelletsRecipe(config)-- +33%
+function enrichedToPelletsRecipe(config)
     local additionalIngredient = config.additionalIngredient.enrichedToPellets or { name = "coke", amount = 1 }
     local recipe = {
         type = "recipe",
@@ -446,7 +446,7 @@ function enrichedToPelletsRecipe(config)-- +33%
             additionalIngredient
         },
         results = {
-            { name = config.itemNames.pellets, amount = 8 }
+            { name = config.itemNames.pellets, amount = 6 }
         },
         enabled = true--false
     }

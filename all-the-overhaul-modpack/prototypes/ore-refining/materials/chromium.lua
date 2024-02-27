@@ -21,6 +21,7 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-pellets.png", icon_size = 128 }
     },
     unlockedBy = {
+        oreToPlate = "stainless-steel-processing",
         oreToDust = "stainless-steel-processing",
         dustToPlate = "stainless-steel-processing"
     }
