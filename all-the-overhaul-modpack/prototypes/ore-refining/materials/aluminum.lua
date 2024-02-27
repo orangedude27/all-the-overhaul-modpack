@@ -132,8 +132,4 @@ data:extend({
 setSubGroup(config)
 data.raw.item.alumina.subgroup = "aluminum"
 
-log("blubber")
-log(data.raw.item["aluminum-plate"].subgroup)
-log(data.raw.item["alumina"].subgroup)
-
 return config
