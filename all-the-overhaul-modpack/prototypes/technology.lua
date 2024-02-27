@@ -740,10 +740,6 @@ util.tech_add_ingredients("mini-assembler-10",{"kr-optimization-tech-card","se-b
 
 
 -- Furnace
--- 02
-data.raw.technology["advanced-material-processing-3"].unit.count = 200
-util.tech_add_prerequisites("advanced-material-processing-3","kr-quarry-minerals-extraction")
-util.tech_add_ingredients("advanced-material-processing-3",{"se-rocket-science-pack","space-science-pack"},false)
 -- 03
 data.raw.technology["advanced-material-processing-4"].unit.count = 300
 util.tech_remove_prerequisites("advanced-material-processing-4", {"production-science-pack"})

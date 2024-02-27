@@ -1233,8 +1233,6 @@ table.insert(data.raw["assembling-machine"]["5d-chemical-plant-10"].crafting_cat
 Recipe("5d-electric-furnace-02"):add_ingredient({ "solder", 8 })
 Recipe("5d-electric-furnace-02"):add_ingredient({ "temperature-sensor", 1 })
 Recipe("5d-electric-furnace-02"):add_ingredient({ "hv-power-regulator", 1 })
-Recipe("5d-electric-furnace-02"):add_ingredient({ "imersite-crystal", 1 })
-Recipe("5d-electric-furnace-02"):replace_ingredient("steel-plate", { "nitinol-plate", 9 })
 Recipe("5d-electric-furnace-02"):replace_ingredient("advanced-circuit", { "se-heat-shielding", 10 })
 -- 03
 Recipe("5d-electric-furnace-03"):add_ingredient({ "solder", 8 })
