@@ -54,8 +54,6 @@ local config = {
     },
     unlockedBy = {
         oreToPlate = "copper-processing",
-        oreToDust = "5d-masher-1",
-        dustToPlate = "5d-masher-1"
     }
 }
 

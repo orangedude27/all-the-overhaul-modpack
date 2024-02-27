@@ -203,7 +203,7 @@ function oreToDustRecipe(config)
         },
         enabled = false
     }
-    unlockedBy(recipe.name, config.unlockedBy.oreToDust)
+    unlockedBy(recipe.name, config.unlockedBy.oreToDust or "5d-masher-1")
     return recipe
 end
 
@@ -227,7 +227,7 @@ function dustToPlateRecipe(config)-- -33%
         enabled = false
     }
     allowProductivity(recipe.name)
-    unlockedBy(recipe.name, config.unlockedBy.dustToPlate)
+    unlockedBy(recipe.name, config.unlockedBy.dustToPlate or "5d-masher-1")
     return recipe
 end
 

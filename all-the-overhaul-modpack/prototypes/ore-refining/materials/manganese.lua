@@ -27,8 +27,6 @@ local config = {
     },
     unlockedBy = {
         oreToPlate = "manganese-smelting",
-        oreToDust = "5d-masher-1",
-        dustToPlate = "5d-masher-1"
     }
 }
 

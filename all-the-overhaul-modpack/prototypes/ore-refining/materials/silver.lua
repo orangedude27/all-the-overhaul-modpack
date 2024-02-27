@@ -23,8 +23,6 @@ local config = {
     },
     unlockedBy = {
         oreToPlate = "silver-processing",
-        oreToDust = "5d-masher-1",
-        dustToPlate = "5d-masher-1"
     }
 }
 

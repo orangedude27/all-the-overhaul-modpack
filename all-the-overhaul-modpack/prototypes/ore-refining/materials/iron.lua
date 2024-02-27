@@ -40,8 +40,6 @@ local config = {
         }
     },
     unlockedBy = {
-        oreToDust = "5d-masher-1",
-        dustToPlate = "5d-masher-1"
     }
 }
 
