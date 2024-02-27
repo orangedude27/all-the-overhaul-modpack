@@ -5,7 +5,8 @@ atom.refining = {
     config = {}
 }
 
-require('refining')
+require("technology")
+require("refining")
 
 -- Metals
 local tantalite = require("materials.tantalite")

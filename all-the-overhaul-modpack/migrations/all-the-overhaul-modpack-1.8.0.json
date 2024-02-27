@@ -1,6 +1,5 @@
 {
-    "recipe":
-    [
+    "recipe": [
         ["5d-copper-dust", "atom-copper-dust"],
         ["5d-copper-plate", "atom-copper-plate-dust"],
         ["5d-iron-dust", "atom-iron-dust"],
@@ -27,6 +26,8 @@
         ["tungsten-dust", "atom-tungsten-dust"],
         ["tungsten-plate-dust", "atom-tungsten-plate-dust"],
         ["zinc-plate", "atom-zinc-plate"]
+    ],
+    "technology": [
+        ["se-pyroflux-smelting", "atom-advanced-ore-processing-2"]
     ]
-
 }
