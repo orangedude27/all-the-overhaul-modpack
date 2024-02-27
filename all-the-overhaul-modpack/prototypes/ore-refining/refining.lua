@@ -242,7 +242,7 @@ function dustToIngotRecipe(config)
             config.icons.ingot,
             createSmallIcon(config.icons.dust)
         },
-        category = "casting",
+        category = "smelting",
         energy_required = 9.6,
         ingredients = {
             { name = config.itemNames.dust, amount = 12 },
@@ -268,7 +268,7 @@ function ingotToPlateRecipe(config)
             config.icons.plate,
             createSmallIcon(config.icons.ingot)
         },
-        category = "casting",
+        category = "el_caster_category",
         energy_required = 9.6,
         ingredients = {
             { name = config.itemNames.ingot, amount = 6 },
@@ -337,7 +337,7 @@ function moltenToPlateRecipe(config)
             config.icons.plate,
             createSmallIcon(config.icons.molten)
         },
-        category = "el_caster_category",
+        category = "casting",
         energy_required = 1.6,
         ingredients = {
             { type = "fluid", name = config.itemNames.molten, amount = 100 }
@@ -386,7 +386,7 @@ function enrichedToIngotRecipe(config)
             config.icons.ingot,
             createSmallIcon(config.icons.enriched)
         },
-        category = "casting",
+        category = "smelting",
         energy_required = 9.6,
         ingredients = {
             { name = config.itemNames.enriched, amount = 6 },
@@ -463,7 +463,7 @@ function enrichedToPelletsRecipe(config)-- +33%
             config.icons.pellets,
             createSmallIcon(config.icons.enriched)
         },
-        category = "pulverising",
+        category = "el_caster_category",
         energy_required = 9.6,
         ingredients = {
             { name = config.itemNames.enriched, amount = 6 },
@@ -488,7 +488,7 @@ function pelletsToIngotRecipe(config)
             config.icons.ingot,
             createSmallIcon(config.icons.pellets)
         },
-        category = "casting",
+        category = "smelting",
         energy_required = 9.6,
         ingredients = {
             { name = config.itemNames.pellets, amount = 6 },
