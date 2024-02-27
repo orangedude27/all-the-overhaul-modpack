@@ -305,30 +305,6 @@ function ingotToMoltenRecipe(config)-- +33%
     return recipe
 end
 
-function ingotToMoltenPyroRecipe(config)
-    local recipe = {
-        type = "recipe",
-        name = "atom-" .. config.name .. "-pyro-molten",
-        icons = {
-            config.icons.molten,
-            createSmallIcon(config.icons.ingot)
-        },
-        category = "smelting",
-        energy_required = 1.6,
-        ingredients = {
-            { name = config.itemNames.ingot, amount = 20 },
-            { type = "fluid", name = "se-pyroflux", amount = 4 }
-        },
-        results = {
-            { type = "fluid", name = config.itemNames.molten, amount = 1000 },
-        },
-        enabled = false
-    }
-    unlockedBy(recipe.name, config.unlockedBy.ingotToMoltenPyro)
-    return recipe
-end
-
-
 function moltenToPlateRecipe(config)
     local recipe = {
         type = "recipe",
