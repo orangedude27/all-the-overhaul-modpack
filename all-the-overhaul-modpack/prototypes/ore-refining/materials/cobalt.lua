@@ -23,7 +23,7 @@ local config = {
     unlockedBy = {
         oreToDust = "cobalt-refining",
         dustToPlate = "cobalt-refining",
-        ingotToMoltenPyro = "se-pyroflux-smelting"
+        ingotToMoltenPyro = "atom-advanced-ore-processing-2"
     }
 }
 
