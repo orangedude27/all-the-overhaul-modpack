@@ -1,5 +1,7 @@
 local tantalumConfig = {
     name = "tantalite",
+    order = "r",
+    enableAtStart = true,
     itemNames = {
         ore = "tantalite-ore",
         plate = "tantalum-plate",
@@ -58,24 +60,24 @@ local _dustToEnrichedRecipe = dustToEnrichedRecipe(tantalumConfig)
 local _dustToPureRecipe = dustToPureRecipe(tantalumConfig)
 
 _oreToPlateRecipe.results = {
-    { name = tantalumConfig.itemNames.plate, amount = 6 },
-    { name = niobiumConfig.itemNames.plate, amount = 6 }
+    { name = tantalumConfig.itemNames.plate, amount = 1, probability = 1.5 },
+    { name = niobiumConfig.itemNames.plate, amount = 1, probability = 1.5 }
 }
 _dustToPlateRecipe.results = {
-    { name = tantalumConfig.itemNames.plate, amount = 3 },
-    { name = niobiumConfig.itemNames.plate, amount = 3 }
+    { name = tantalumConfig.itemNames.plate, amount = 2 },
+    { name = niobiumConfig.itemNames.plate, amount = 2 }
 }
 _dustToIngotRecipe.results = {
-    { name = tantalumConfig.itemNames.ingot, amount = 3 },
-    { name = niobiumConfig.itemNames.ingot, amount = 3 }
+    { name = tantalumConfig.itemNames.ingot, amount = 1 },
+    { name = niobiumConfig.itemNames.ingot, amount = 1 }
 }
 _dustToEnrichedRecipe.results = {
     { name = tantalumConfig.itemNames.enriched, amount = 3 },
     { name = niobiumConfig.itemNames.enriched, amount = 3 }
 }
 _dustToPureRecipe.results = {
-    { name = tantalumConfig.itemNames.pure, amount_min = 1, amount_max = 2 },
-    { name = niobiumConfig.itemNames.pure, amount_min = 1, amount_max = 2 }
+    { name = tantalumConfig.itemNames.pure, amount = 3 },
+    { name = niobiumConfig.itemNames.pure, amount = 3 }
 }
 
 data:extend({
@@ -83,6 +85,7 @@ data:extend({
     oreToDustRecipe(tantalumConfig),
     _dustToPlateRecipe,
     _dustToIngotRecipe,
+    ingotToPlateRecipe(tantalumConfig),
     _dustToEnrichedRecipe,
     _dustToPureRecipe,
     ingotToMoltenRecipe(tantalumConfig),
@@ -96,6 +99,7 @@ data:extend({
 })
 
 data:extend({
+    ingotToPlateRecipe(niobiumConfig),
     ingotToMoltenRecipe(niobiumConfig),
     moltenToPlateRecipe(niobiumConfig),
     enrichedToIngotRecipe(niobiumConfig),

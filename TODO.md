@@ -1,12 +1,13 @@
 # TODO list
 ## Breaking changes
 - Old K2 and 248k enrichment setups will break
-- Rare metals with palladium and platinum dust will be downgraded
+- Rare metals recipe with palladium and platinum dust will be downgraded
+- (Copper to ore will break)
 
 ## 1.8.0
 - ~~Finish `coal.lua`~~
-- Balance additional inputs
-- Balance additional results
+- ~~Balance additional inputs~~
+- ~~Balance additional results~~
 - ~~Balance energy usage and amount of buildings required~~
 - ~~Disable all recipes that should not be available at the start and unlock them by technologies~~
 - ~~Find the right place in the tech tree for all stages~~

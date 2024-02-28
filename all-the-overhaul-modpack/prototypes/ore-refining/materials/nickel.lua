@@ -28,18 +28,6 @@ local config = {
         },
         dustToPlate = {
             { name = "cobaltite-ore", amount = 1, probability = 0.1 }
-        },
-        dustToIngot = {
-            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
-        },
-        dustToEnriched = {
-            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
-        },
-        dustToPure = {
-            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
-        },
-        pureToEnriched = {
-            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
         }
     }
 }

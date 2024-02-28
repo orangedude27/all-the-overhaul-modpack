@@ -1,5 +1,6 @@
 local config = {
     name = "manganese",
+    order = "n",
     itemNames = {
         ore = "manganese-ore",
         plate = "manganese-plate",
@@ -21,9 +22,9 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-manganese-pellets.png", icon_size = 128 }
     },
     additionalIngredient = {
-        dustToIngot = { name = "atom-carbon", amount = 18 },
-        enrichedToIngot = { type = "fluid", name = "sulfuric-acid", amount = 10 },
-        pelletsToIngot = { type = "fluid", name = "gas", amount = 30 }
+        dustToIngot = { name = "atom-carbon", amount = 1 },
+        enrichedToIngot = { type = "fluid", name = "sulfuric-acid", amount = 4 },
+        pelletsToIngot = { type = "fluid", name = "gas", amount = 10 }
     },
     unlockedBy = {
         oreToPlate = "manganese-smelting"

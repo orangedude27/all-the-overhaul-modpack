@@ -1,5 +1,6 @@
 local config = {
     name = "coal",
+    order = "m",
     itemNames = {
         ore = "coal",
         dust = "atom-coal-dust",
@@ -21,11 +22,15 @@ dust.fuel_value = "3MJ"
 local carbon = item(config, "plate")
 carbon.name = "atom-carbon"
 carbon.fuel_category = "chemical"
-carbon.fuel_value = "6MJ"
+carbon.fuel_value = "3MJ"
+
+local _dustToPlateRecipe = dustToPlateRecipe(config)
+_dustToPlateRecipe.results[1].amount = 12
+_dustToPlateRecipe.results[1].probability = 1
 
 data:extend({
     oreToDustRecipe(config),
-    dustToPlateRecipe(config),
+    _dustToPlateRecipe,
     dust,
     carbon
 })

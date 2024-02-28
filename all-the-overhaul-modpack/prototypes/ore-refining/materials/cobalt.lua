@@ -1,5 +1,6 @@
 local config = {
     name = "cobalt",
+    order = "s",
     itemNames = {
         ore = "cobaltite-ore",
         plate = "cobalt-plate",

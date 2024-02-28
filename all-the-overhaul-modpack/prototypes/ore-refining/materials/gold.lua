@@ -1,5 +1,6 @@
 local config = {
     name = "gold",
+    order = "l",
     itemNames = {
         ore = "gold-ore",
         plate = "fi_materials_gold",

@@ -1,5 +1,6 @@
 local config = {
     name = "titanium",
+    order = "p",
     itemNames = {
         ore = "titanium-ore",
         plate = "titanium-plate",

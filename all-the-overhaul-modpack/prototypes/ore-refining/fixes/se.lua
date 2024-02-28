@@ -1,5 +1,8 @@
 -- Remove ingot to plate recipes
 removeRecipesByPattern("%-ingot%-to%-plate$")
+removeRecipeByName("se-molten-copper")
+removeRecipeByName("se-molten-iron")
+removeRecipeByName("rare-metals-vulcanite")
 
 -- Allow productivity modules in se-casting-machine
 table.insert(data.raw["assembling-machine"]["se-casting-machine"].allowed_effects, "productivity")

@@ -1,5 +1,6 @@
 local config = {
     name = "tungsten",
+    order = "o",
     itemNames = {
         ore = "tungsten-ore",
         plate = "tungsten-plate",

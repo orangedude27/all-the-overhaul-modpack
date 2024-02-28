@@ -25,16 +25,13 @@ local config = {
     additionalIngredient = {},
     additionalResults = {
         dustToIngot = {
-            { name = "alumina", amount = 1, probability = 0.6 },
-            { name = "silica", amount = 1, probability = 0.1 }
+            { name = "alumina", amount = 1, probability = 0.26 }
         },
         dustToEnriched = {
-            { name = "alumina", amount = 1, probability = 0.6 },
-            { name = "silica", amount = 1, probability = 0.1 }
+            { name = "alumina", amount = 1, probability = 0.26 }
         },
         dustToPure = {
-            { name = "alumina", amount = 1, probability = 0.6 },
-            { name = "silica", amount = 1, probability = 0.1 }
+            { name = "alumina", amount = 1, probability = 0.26 }
         }
     },
     unlockedBy = {}
@@ -100,7 +97,7 @@ local function dustToAluminaRecipe()
         },
         results = {
             { name = "alumina", amount = 1 },
-            { name = "silica", amount = 1, probability = 0.05 }
+            { name = "silica", amount = 1, probability = 0.0167 }
         },
         main_product = "alumina",
         enabled = false
@@ -115,6 +112,7 @@ data:extend({
     dustToAluminaRecipe(),
     oreToDustRecipe(config),
     dustToIngotRecipe(config),
+    ingotToPlateRecipe(config),
     ingotToMoltenRecipe(config),
     moltenToPlateRecipe(config),
     dustToEnrichedRecipe(config),

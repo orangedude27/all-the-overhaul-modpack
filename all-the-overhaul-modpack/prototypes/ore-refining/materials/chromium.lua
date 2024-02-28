@@ -1,5 +1,6 @@
 local config = {
     name = "chromium",
+    order = "t",
     itemNames = {
         ore = "chromite-ore",
         plate = "chromium-plate",

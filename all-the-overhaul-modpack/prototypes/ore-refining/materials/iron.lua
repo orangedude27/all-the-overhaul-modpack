@@ -24,19 +24,13 @@ local config = {
     },
     additionalResults = {
         oreToPlate = {
-            { name = "manganese-plate", amount = 1, probability = 0.5 }
+            { name = "manganese-plate", amount = 1, probability = 0.1 }
         },
         dustToPlate = {
-            { name = "manganese-plate", amount = 1, probability = 0.5 }
+            { name = "manganese-plate", amount = 1, probability = 0.05 }
         },
         dustToIngot = {
-            { name = "manganese-ore", amount = 1, probability = 0.5 }
-        },
-        dustToEnriched = {
-            { name = "manganese-ore", amount = 1, probability = 0.5 }
-        },
-        dustToPure = {
-            { name = "manganese-ore", amount = 1, probability = 0.5 }
+            { name = "manganese-ore", amount = 1, probability = 0.05 }
         }
     }
 }

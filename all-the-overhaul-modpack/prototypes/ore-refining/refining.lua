@@ -56,10 +56,10 @@ config: {
         -- Defaults to { type = "fluid", name = "sulfuric-acid", amount = 4 }
         dustToPure: ProductPrototype
 
-        -- Defaults to { name = "coke", amount = 1 }
+        -- Defaults to nil
         enrichedToIngot: ProductPrototype
 
-        -- Defaults to { name = "coke", amount = 1 }
+        -- Defaults to nil
         enrichedToPellets: ProductPrototype
 
         -- Defaults to { name = "quicklime", amount = 1 }
@@ -276,7 +276,7 @@ function dustToIngotRecipe(config)
 end
 
 function ingotToPlateRecipe(config)-- -11%
-    local additionalIngredient = config.additionalIngredient.dustToIngot or nil
+    local additionalIngredient = config.additionalIngredient.ingotToPlate or nil
     local results = config.additionalResults.ingotToPlate or {}
     table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 5.34 })
     local recipe = {
@@ -348,7 +348,7 @@ end
 function dustToEnrichedRecipe(config)
     local results = config.additionalResults.dustToEnriched or {}
     table.insert(results, { name = config.itemNames.enriched, amount = 6 })
-    table.insert(results, { type = "fluid", name = "dirty-water", amount = 740 })
+    table.insert(results, { type = "fluid", name = "dirty-water", amount = 370 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enrichment",
@@ -360,7 +360,7 @@ function dustToEnrichedRecipe(config)
         energy_required = 4.8,
         ingredients = {
             { name = config.itemNames.dust, amount = 12 },
-            { type = "fluid", name = "water", amount = 740 }
+            { type = "fluid", name = "water", amount = 370 }
         },
         results = results,
         main_product = config.itemNames.enriched,
@@ -372,7 +372,7 @@ function dustToEnrichedRecipe(config)
 end
 
 function enrichedToIngotRecipe(config)
-    local additionalIngredient = config.additionalIngredient.enrichedToIngot or { name = "coke", amount = 1 }
+    local additionalIngredient = config.additionalIngredient.enrichedToIngot or nil
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-ingot-enriched",
@@ -425,7 +425,7 @@ end
 function pureToEnrichedRecipe(config)
     local results = config.additionalResults.pureToEnriched or {}
     table.insert(results, { name = config.itemNames.enriched, amount = 6 })
-    table.insert(results, { type = "fluid", name = "dirty-water", amount = 740 })
+    table.insert(results, { type = "fluid", name = "dirty-water", amount = 370 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-enriched-pure",
@@ -437,7 +437,7 @@ function pureToEnrichedRecipe(config)
         energy_required = 4.8,
         ingredients = {
             { name = config.itemNames.pure, amount = 6 },
-            { type = "fluid", name = "water", amount = 740 }
+            { type = "fluid", name = "water", amount = 370 }
         },
         results = results,
         main_product = config.itemNames.enriched,
@@ -449,7 +449,7 @@ function pureToEnrichedRecipe(config)
 end
 
 function enrichedToPelletsRecipe(config)
-    local additionalIngredient = config.additionalIngredient.enrichedToPellets or { name = "coke", amount = 1 }
+    local additionalIngredient = config.additionalIngredient.enrichedToPellets or nil
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-pellets",

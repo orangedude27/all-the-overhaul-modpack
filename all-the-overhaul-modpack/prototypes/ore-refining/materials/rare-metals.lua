@@ -1,5 +1,7 @@
 local config = {
     name = "rare-metals",
+    order = "k",
+    enableAtStart = true,
     itemNames = {
         ore = "raw-rare-metals",
         plate = "rare-metals",
@@ -22,18 +24,18 @@ local config = {
     },
     additionalResults = {
         dustToIngot = {
-            { name = "platinum-powder", amount = 1, probability = 0.6 },
-            { name = "palladium-powder", amount = 1, probability = 0.6 }
+            { name = "platinum-powder", amount = 1, probability = 0.2 },
+            { name = "palladium-powder", amount = 1, probability = 0.2 }
         },
         dustToEnriched = {
-            { name = "platinum-powder", amount = 1, probability = 0.6 },
-            { name = "palladium-powder", amount = 1, probability = 0.6 }
+            { name = "platinum-powder", amount = 1, probability = 0.3 },
+            { name = "palladium-powder", amount = 1, probability = 0.3 }
         },
         dustToPure = {
-            { name = "platinum-powder", amount = 1, probability = 0.6 }
+            { name = "platinum-powder", amount = 1, probability = 0.3 }
         },
         pureToEnriched = {
-            { name = "palladium-powder", amount = 1, probability = 0.6 }
+            { name = "palladium-powder", amount = 1, probability = 0.3 }
         }
     }
 }

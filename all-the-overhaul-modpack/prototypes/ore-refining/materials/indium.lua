@@ -1,5 +1,6 @@
 local config = {
     name = "indium",
+    order = "q",
     itemNames = {
         ore = "indite-ore",
         plate = "indium-plate",

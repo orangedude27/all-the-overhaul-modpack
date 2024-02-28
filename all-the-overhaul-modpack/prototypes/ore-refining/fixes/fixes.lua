@@ -63,4 +63,5 @@ removeRecipeByName("copper-plate")
 
 -- Trikop
 removeRecipeByName("manganese-plate")
+removeRecipeByName("molten-manganese")
 removeRecipeByName("bismuth-plate")

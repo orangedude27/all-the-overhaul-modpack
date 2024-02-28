@@ -23,23 +23,23 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pellets.png", icon_size = 128 }
     },
     additionalIngredient = {
-        pelletsToIngot = { name = "atom-carbon", amount = 2 }
+        pelletsToIngot = { name = "atom-carbon", amount = 1 }
     },
     additionalResults = {
         oreToPlate = {
-            { name = "bismuth-plate", amount = 1, probability = 0.5 }
+            { name = "bismuth-plate", amount = 1, probability = 0.25 }
         },
         dustToPlate = {
-            { name = "bismuth-plate", amount = 1, probability = 0.5 }
+            { name = "bismuth-plate", amount = 1, probability = 0.125 }
         },
         dustToIngot = {
-            { name = "bismuth-ore", amount = 1, probability = 0.5 }
+            { name = "bismuth-plate", amount = 1, probability = 0.125 }
         },
         dustToEnriched = {
-            { name = "bismuth-ore", amount = 1, probability = 0.5 }
+            { name = "bismuth-plate", amount = 1, probability = 0.125 }
         },
-        dustToPure = {
-            { name = "bismuth-ore", amount = 1, probability = 0.5 }
+        pureToEnriched = {
+            { name = "bismuth-plate", amount = 1, probability = 0.125 }
         }
     }
 }
