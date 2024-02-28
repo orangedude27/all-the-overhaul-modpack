@@ -1,4 +1,10 @@
 --[[
+
+About density
+* Dust has half density. Numbers are doubled.
+* Ingots have 3x density. Numbers are divided by 3.
+
+
 config: {
     -- Base name of the material (e.g. "copper")
     name: string,
@@ -246,7 +252,7 @@ end
 function dustToIngotRecipe(config)
     local additionalIngredient = config.additionalIngredient.dustToIngot or nil
     local results = config.additionalResults.dustToIngot or {}
-    table.insert(results, { name = config.itemNames.ingot, amount = 6 })
+    table.insert(results, { name = config.itemNames.ingot, amount = 2 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-ingot",
@@ -283,7 +289,7 @@ function ingotToPlateRecipe(config)-- -11%
         category = "el_caster_category",
         energy_required = 9.6,
         ingredients = {
-            { name = config.itemNames.ingot, amount = 6 },
+            { name = config.itemNames.ingot, amount = 2 },
             additionalIngredient
         },
         results = results,
@@ -305,7 +311,7 @@ function ingotToMoltenRecipe(config)-- +33%
         category = "el_arc_furnace_category",
         energy_required = 6.4,
         ingredients = {
-            { name = config.itemNames.ingot, amount = 6 },
+            { name = config.itemNames.ingot, amount = 2 },
             { type = "fluid", name = "se-pyroflux", amount = 0.25 }
         },
         results = {
@@ -381,7 +387,7 @@ function enrichedToIngotRecipe(config)
             additionalIngredient
         },
         results = {
-            { name = config.itemNames.ingot, amount = 6 },
+            { name = config.itemNames.ingot, amount = 2 },
         },
         enabled = false
     }
@@ -483,7 +489,7 @@ function pelletsToIngotRecipe(config)
             additionalIngredient
         },
         results = {
-            { name = config.itemNames.ingot, amount = 6 }
+            { name = config.itemNames.ingot, amount = 2 }
         },
         enabled = false
     }
