@@ -16,7 +16,7 @@
 - Create new icons
 - ~~Add missing labels~~
 - ~~Add migrations~~
-- Correct stack sizes
+- ~~Correct stack sizes~~
 
 ## 1.8.1
 - ~~Cleanup icon categories/orders~~
