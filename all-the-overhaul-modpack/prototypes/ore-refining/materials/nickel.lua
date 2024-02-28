@@ -41,8 +41,6 @@ local config = {
         pureToEnriched = {
             { name = "cobaltite-ore", amount = 1, probability = 0.1 }
         }
-    },
-    unlockedBy = {
     }
 }
 

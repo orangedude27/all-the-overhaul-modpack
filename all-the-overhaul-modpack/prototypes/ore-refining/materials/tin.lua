@@ -41,8 +41,6 @@ local config = {
         dustToPure = {
             { name = "bismuth-ore", amount = 1, probability = 0.5 }
         }
-    },
-    unlockedBy = {
     }
 }
 

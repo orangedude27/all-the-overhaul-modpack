@@ -250,10 +250,10 @@ function dustToIngotRecipe(config)
         },
         results = results,
         main_product = config.itemNames.ingot,
-        enabled = true--false
+        enabled = false
     }
     allowProductivity(recipe.name)
-    unlockedBy(recipe.name, config.unlockedBy.dustToIngot)
+    unlockedBy(recipe.name, config.unlockedBy.dustToIngot or "atom-advanced-ore-processing-1")
     return recipe
 end
 
@@ -276,9 +276,9 @@ function ingotToPlateRecipe(config)-- -11%
         },
         results = results,
         main_product = config.itemNames.plate,
-        enabled = true--false
+        enabled = false
     }
-    unlockedBy(recipe.name, config.unlockedBy.ingotToPlate)
+    unlockedBy(recipe.name, config.unlockedBy.ingotToPlate or "atom-advanced-ore-processing-1")
     return recipe
 end
 
@@ -299,9 +299,9 @@ function ingotToMoltenRecipe(config)-- +33%
         results = {
             { type = "fluid", name = config.itemNames.molten, amount = 400 },
         },
-        enabled = true--false
+        enabled = false
     }
-    unlockedBy(recipe.name, config.unlockedBy.ingotToMolten)
+    unlockedBy(recipe.name, config.unlockedBy.ingotToMolten or "atom-advanced-ore-processing-2")
     return recipe
 end
 
@@ -321,9 +321,9 @@ function moltenToPlateRecipe(config)
         results = {
             { name = config.itemNames.plate, amount = 6 },
         },
-        enabled = true--false
+        enabled = false
     }
-    unlockedBy(recipe.name, config.unlockedBy.moltenToPlate)
+    unlockedBy(recipe.name, config.unlockedBy.moltenToPlate or "atom-advanced-ore-processing-2")
     return recipe
 end
 
@@ -346,10 +346,10 @@ function dustToEnrichedRecipe(config)
         },
         results = results,
         main_product = config.itemNames.enriched,
-        enabled = true--false
+        enabled = false
     }
     allowProductivity(recipe.name)
-    unlockedBy(recipe.name, config.unlockedBy.dustToEnriched)
+    unlockedBy(recipe.name, config.unlockedBy.dustToEnriched or "atom-advanced-ore-processing-2")
     return recipe
 end
 
@@ -371,10 +371,10 @@ function enrichedToIngotRecipe(config)
         results = {
             { name = config.itemNames.ingot, amount = 6 },
         },
-        enabled = true--false
+        enabled = false
     }
     allowProductivity(recipe.name)
-    unlockedBy(recipe.name, config.unlockedBy.enrichedToIngot)
+    unlockedBy(recipe.name, config.unlockedBy.enrichedToIngot or "atom-advanced-ore-processing-2")
     return recipe
 end
 
@@ -397,10 +397,10 @@ function dustToPureRecipe(config)
         },
         results = results,
         main_product = config.itemNames.pure,
-        enabled = true--false
+        enabled = false
     }
     allowProductivity(recipe.name)
-    unlockedBy(recipe.name, config.unlockedBy.dustToPure)
+    unlockedBy(recipe.name, config.unlockedBy.dustToPure or "atom-advanced-ore-processing-3")
     return recipe
 end
 
@@ -423,10 +423,10 @@ function pureToEnrichedRecipe(config)
         },
         results = results,
         main_product = config.itemNames.enriched,
-        enabled = true--false
+        enabled = false
     }
     allowProductivity(recipe.name)
-    unlockedBy(recipe.name, config.unlockedBy.pureToEnriched)
+    unlockedBy(recipe.name, config.unlockedBy.pureToEnriched or "atom-advanced-ore-processing-3")
     return recipe
 end
 
@@ -448,10 +448,10 @@ function enrichedToPelletsRecipe(config)
         results = {
             { name = config.itemNames.pellets, amount = 6 }
         },
-        enabled = true--false
+        enabled = false
     }
     allowProductivity(recipe.name)
-    unlockedBy(recipe.name, config.unlockedBy.enrichedToPellets)
+    unlockedBy(recipe.name, config.unlockedBy.enrichedToPellets or "atom-advanced-ore-processing-4")
     return recipe
 end
 
@@ -473,10 +473,10 @@ function pelletsToIngotRecipe(config)
         results = {
             { name = config.itemNames.ingot, amount = 6 }
         },
-        enabled = true--false
+        enabled = false
     }
     allowProductivity(recipe.name)
-    unlockedBy(recipe.name, config.unlockedBy.pelletsToIngot)
+    unlockedBy(recipe.name, config.unlockedBy.pelletsToIngot or "atom-advanced-ore-processing-4")
     return recipe
 end
 

@@ -23,8 +23,7 @@ local config = {
     unlockedBy = {
         oreToPlate = "cobalt-refining",
         oreToDust = "cobalt-refining",
-        dustToPlate = "cobalt-refining",
-        ingotToMolten = "atom-advanced-ore-processing-2"
+        dustToPlate = "cobalt-refining"
     }
 }
 

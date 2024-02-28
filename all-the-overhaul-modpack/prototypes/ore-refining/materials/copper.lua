@@ -53,7 +53,7 @@ local config = {
         }
     },
     unlockedBy = {
-        oreToPlate = "copper-processing",
+        oreToPlate = "copper-processing"
     }
 }
 

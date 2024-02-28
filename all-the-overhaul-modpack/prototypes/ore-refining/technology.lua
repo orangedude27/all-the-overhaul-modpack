@@ -4,9 +4,7 @@ local util = require("data-util")
 local processing1 = table.deepcopy(data.raw.technology["se-pyroflux-smelting"])
 processing1.name = "atom-advanced-ore-processing-1"
 processing1.prerequisites = { "productivity-science-pack" }
-processing1.effects = {
-    { type = "unlock-recipe", recipe = "se-casting-machine" }
-}
+processing1.effects = {}
 processing1.unit = {
     count = 250,
     time = 30,
@@ -21,7 +19,6 @@ processing1.unit = {
 -- Advanced ore processing 2
 local processing2 = table.deepcopy(data.raw.technology["se-pyroflux-smelting"])
 processing2.name = "atom-advanced-ore-processing-2"
-util.remove_recipe_from_effects(processing2.effects, "se-casting-machine")
 processing2.unit = {
     count = 500,
     time = 30,

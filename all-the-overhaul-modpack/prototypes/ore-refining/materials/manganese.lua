@@ -26,7 +26,7 @@ local config = {
         pelletsToIngot = { type = "fluid", name = "gas", amount = 30 }
     },
     unlockedBy = {
-        oreToPlate = "manganese-smelting",
+        oreToPlate = "manganese-smelting"
     }
 }
 

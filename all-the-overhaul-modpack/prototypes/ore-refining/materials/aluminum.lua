@@ -37,8 +37,7 @@ local config = {
             { name = "silica", amount = 1, probability = 0.1 }
         }
     },
-    unlockedBy = {
-    }
+    unlockedBy = {}
 }
 
 local aluminaIcon = { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128 }

@@ -22,7 +22,7 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-pellets.png", icon_size = 128, icon_mipmaps = 3 } -- TODO
     },
     unlockedBy = {
-        oreToPlate = "silver-processing",
+        oreToPlate = "silver-processing"
     }
 }
 

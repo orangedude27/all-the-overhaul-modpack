@@ -20,6 +20,10 @@ local config = {
         pure = { icon = "__Cobalt__/graphics/icons/fi-materials-pure-cobalt.png", icon_size = 64 }, -- TODO
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-titanium-pellets.png", icon_size = 128 }
     },
+    unlockedBy = {
+        oreToDust = "titanium-processing",
+        dustToPlate = "titanium-processing"
+    }
 }
 
 data:extend(createRefiningData(config))

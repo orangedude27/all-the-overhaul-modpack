@@ -38,8 +38,6 @@ local config = {
         dustToPure = {
             { name = "manganese-ore", amount = 1, probability = 0.5 }
         }
-    },
-    unlockedBy = {
     }
 }
 
@@ -47,20 +45,22 @@ data:extend(createRefiningData(config))
 
 setSubGroup(config)
 
--- TODO: They all have the same name, so they will overwrite each other
 --[[
 local manganeseRecipe = ingotToMoltenRecipe(config)
+manganeseRecipe.name = "atom-iron-molten-manganese"
 table.insert(manganeseRecipe.ingredients, { name = "manganese-ingot", amount = 4 })
 table.insert(manganeseRecipe.ingredients, { type = "fluid", name = "se-pyroflux", amount = 10 })
 manganeseRecipe.results[1].amount = 800
 
 local cobaltNickelRecipe = ingotToMoltenRecipe(config)
+cobaltNickelRecipe.name = "atom-iron-molten-cobalt-nickel"
 table.insert(cobaltNickelRecipe.ingredients, { name = "cobalt-ingot", amount = 4 })
 table.insert(cobaltNickelRecipe.ingredients, { name = "nickel-ingot", amount = 4 })
 table.insert(cobaltNickelRecipe.ingredients, { type = "fluid", name = "se-pyroflux", amount = 20 })
 cobaltNickelRecipe.results[1].amount = 1200
 
 local chromiumNickelRecipe = ingotToMoltenRecipe(config)
+chromiumNickelRecipe.name = "atom-iron-molten-chromium-nickel"
 table.insert(chromiumNickelRecipe.ingredients, { name = "chromium-ingot", amount = 4 })
 table.insert(chromiumNickelRecipe.ingredients, { name = "nickel-ingot", amount = 4 })
 table.insert(chromiumNickelRecipe.ingredients, { type = "fluid", name = "se-pyroflux", amount = 20 })

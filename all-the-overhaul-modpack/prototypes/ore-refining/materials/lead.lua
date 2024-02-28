@@ -48,8 +48,6 @@ local config = {
         pureToEnriched = {
             { name = "silver-ore", amount = 1, probability = 0.5 }
         }
-    },
-    unlockedBy = {
     }
 }
 

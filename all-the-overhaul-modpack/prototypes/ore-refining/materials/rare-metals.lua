@@ -35,8 +35,6 @@ local config = {
         pureToEnriched = {
             { name = "palladium-powder", amount = 1, probability = 0.6 }
         }
-    },
-    unlockedBy = {
     }
 }
 

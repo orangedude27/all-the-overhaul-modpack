@@ -22,7 +22,7 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-bismuth-pellets.png", icon_size = 128 }
     },
     unlockedBy = {
-        oreToPlate = "bismanol",
+        oreToPlate = "bismanol"
     }
 }
 
