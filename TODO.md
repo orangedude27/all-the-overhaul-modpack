@@ -18,7 +18,7 @@
 - ~~Add migrations~~
 - ~~Correct stack sizes~~
 - ~~Balance copper to gold recipe~~
-- Fix regular gold refinement
+- ~~Fix regular gold refinement~~
 
 ## 1.8.1
 - ~~Cleanup icon categories/orders~~
