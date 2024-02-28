@@ -196,10 +196,10 @@ function oreToDustRecipe(config)
         category = "mashering",
         energy_required = 9.6,
         ingredients = {
-            { config.itemNames.ore, 1 }
+            { config.itemNames.ore, 6 }
         },
         results = {
-            { name = config.itemNames.dust, amount = 2 },
+            { name = config.itemNames.dust, amount = 12 },
         },
         enabled = false
     }
@@ -291,7 +291,7 @@ function ingotToMoltenRecipe(config)-- +33%
             createSmallIcon(config.icons.ingot)
         },
         category = "el_arc_furnace_category",
-        energy_required = 9.6,
+        energy_required = 6.4,
         ingredients = {
             { name = config.itemNames.ingot, amount = 6 },
             { type = "fluid", name = "se-pyroflux", amount = 0.25 }
@@ -314,7 +314,7 @@ function moltenToPlateRecipe(config)
             createSmallIcon(config.icons.molten)
         },
         category = "casting",
-        energy_required = 9.6,
+        energy_required = 2.4,
         ingredients = {
             { type = "fluid", name = config.itemNames.molten, amount = 300 }
         },
@@ -339,7 +339,7 @@ function dustToEnrichedRecipe(config)
             createSmallIcon(config.icons.dust)
         },
         category = "fluid-filtration",
-        energy_required = 9.6,
+        energy_required = 4.8,
         ingredients = {
             { name = config.itemNames.dust, amount = 12 },
             { type = "fluid", name = "water", amount = 740 }
@@ -416,7 +416,7 @@ function pureToEnrichedRecipe(config)
             createSmallIcon(config.icons.pure)
         },
         category = "fluid-filtration",
-        energy_required = 9.6,
+        energy_required = 4.8,
         ingredients = {
             { name = config.itemNames.pure, amount = 6 },
             { type = "fluid", name = "water", amount = 740 }

@@ -22,3 +22,8 @@ for _, technology in pairs(data.raw.technology) do
     end
 end
 data.raw.technology["se-pyroflux-smelting"] = nil
+
+-- Increase speed for se-casting-machine
+local caster = data.raw["assembling-machine"]["se-casting-machine"]
+caster.crafting_speed = 2
+caster.energy_usage = "200kW"

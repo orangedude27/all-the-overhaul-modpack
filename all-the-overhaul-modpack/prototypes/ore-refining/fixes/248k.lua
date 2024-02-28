@@ -44,10 +44,21 @@ for i = 1, 2 do
     fluidBox.pipe_connections[1].type = "input"
 end
 
--- Allow productivity modules in el_purifier_entity and add a third module slot
-table.insert(data.raw["assembling-machine"]["el_purifier_entity"].allowed_effects, "productivity")
-data.raw["assembling-machine"]["el_purifier_entity"].module_specification.module_slots = 3
+-- Increase speed of el_arc_furnace_entity
+arcFurnace.crafting_speed = 4
+arcFurnace.energy_usage = "1600kW"
 
--- Allow productivity modules in el_caster_entity and add a third module slot
-table.insert(data.raw["assembling-machine"]["el_caster_entity"].allowed_effects, "productivity")
-data.raw["assembling-machine"]["el_caster_entity"].module_specification.module_slots = 3
+-- Allow productivity modules in el_purifier_entity, add a third module slot and increase crafting speed
+local purifier = data.raw["assembling-machine"]["el_purifier_entity"]
+table.insert(purifier.allowed_effects, "productivity")
+purifier.module_specification.module_slots = 3
+purifier.crafting_speed = 4
+purifier.energy_usage = "320kW"
+
+-- Allow productivity modules in el_caster_entity, add a third module slot and increase crafting speed
+local caster = data.raw["assembling-machine"]["el_caster_entity"]
+table.insert(caster, "productivity")
+caster.module_specification.module_slots = 3
+caster.crafting_speed = 4
+caster.energy_usage = "800kW"
+

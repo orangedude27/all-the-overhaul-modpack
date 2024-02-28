@@ -55,6 +55,7 @@ require("5dim")
 require("bz")
 require("brasstacks")
 require("planetfall")
+require("aai")
 
 -- Remove vanilla plate recipes
 removeRecipeByName("iron-plate")
