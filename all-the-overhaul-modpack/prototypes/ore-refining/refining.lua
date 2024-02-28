@@ -152,6 +152,18 @@ function setSubGroup(config)
     end
 end
 
+function setStackSizes(config)
+    for type, item in pairs(config.itemNames) do
+        if data.raw.item[item] then
+            if type == "dust" or type == "plate" then
+                data.raw.item[item].stack_size = 100
+            else
+                data.raw.item[item].stack_size = 50
+            end
+        end
+    end
+end
+
 function unlockedBy(recipe, technology)
     if not technology then
         return
@@ -480,12 +492,12 @@ function pelletsToIngotRecipe(config)
     return recipe
 end
 
-function item(config, category, stackSize)
+function item(config, category)
     return {
         type = "item",
         name = "atom-" .. config.name .. "-" .. category,
         icons = { config.icons[category] },
         order = "a[" .. config.name .. "-" .. category .. "]",
-        stack_size = stackSize or 100,
+        stack_size = 50,
     }
 end

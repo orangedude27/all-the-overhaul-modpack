@@ -63,4 +63,5 @@ local config = {
 
 data:extend(createRefiningData(config))
 
+setStackSizes(config)
 setSubGroup(config)

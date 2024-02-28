@@ -127,6 +127,7 @@ data:extend({
     item(config, "dust")
 })
 
+setStackSizes(config)
 setSubGroup(config)
 data.raw.item.alumina.subgroup = "aluminum"
 

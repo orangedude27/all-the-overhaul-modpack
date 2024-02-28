@@ -30,4 +30,7 @@ data:extend({
     carbon
 })
 
+setStackSizes(config)
+setSubGroup(config)
+
 return config

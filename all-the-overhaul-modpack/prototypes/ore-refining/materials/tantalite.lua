@@ -121,6 +121,8 @@ data:extend({
     }
 })
 
+setStackSizes(tantalumConfig)
+setStackSizes(niobiumConfig)
 setSubGroup(tantalumConfig)
 setSubGroup(niobiumConfig)
 

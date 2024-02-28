@@ -58,6 +58,7 @@ data:extend({
     }
 })
 
+setStackSizes(config)
 setSubGroup(config)
 
 return config
