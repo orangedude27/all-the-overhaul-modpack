@@ -14,7 +14,7 @@
 - ~~Have a look at Pyroflux recipes~~
 - ~~Remove old ore to plate recipes~~
 - Create new icons
-- Add missing labels
+- ~~Add missing labels~~
 - ~~Add migrations~~
 
 ## 1.8.1
