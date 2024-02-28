@@ -32,3 +32,6 @@ atom.refining.config.metals = require("materials.rare-metals")
 
 -- Alloys
 table.insert(atom.refining.config, require("materials.brass"))
+
+-- Others
+atom.refining.config.coal = require("materials.coal")

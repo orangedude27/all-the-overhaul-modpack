@@ -302,23 +302,5 @@ data:extend({
     subgroup = "bob-boards",
     order = "c-b4",
     stack_size = 200
-  },
-  {
-    type = "item",
-    name = "atom-carbon",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-carbon.png",
-    icon_size = 128,
-	fuel_category = "chemical",
-    fuel_value = "3MJ",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "atom-coal-dust",
-    icon = "__all-the-overhaul-modpack__/graphics/icons/atom-coal-dust.png",
-    icon_size = 32,
-	fuel_category = "chemical",
-    fuel_value = "2MJ",
-    stack_size = 100
-  },
+  }
 })

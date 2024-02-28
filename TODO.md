@@ -4,7 +4,7 @@
 - Rare metals with palladium and platinum dust will be downgraded
 
 ## 1.8.0
-- Finish `coal.lua`
+- ~~Finish `coal.lua`~~
 - Balance additional inputs
 - Balance additional results
 - ~~Balance energy usage and amount of buildings required~~
