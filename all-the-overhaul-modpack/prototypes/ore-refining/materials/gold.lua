@@ -21,6 +21,7 @@ local config = {
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-gold-pellets.png", icon_size = 128 }
     },
     unlockedBy = {
+        oreToPlate = "gold-processing",
         oreToDust = "gold-processing",
         dustToPlate = "gold-processing"
     }
