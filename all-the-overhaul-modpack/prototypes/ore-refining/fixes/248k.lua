@@ -48,6 +48,6 @@ end
 table.insert(data.raw["assembling-machine"]["el_purifier_entity"].allowed_effects, "productivity")
 data.raw["assembling-machine"]["el_purifier_entity"].module_specification.module_slots = 3
 
--- Allow productivity modules in el_caster_entity and add a fourth module slot
+-- Allow productivity modules in el_caster_entity and add a third module slot
 table.insert(data.raw["assembling-machine"]["el_caster_entity"].allowed_effects, "productivity")
-data.raw["assembling-machine"]["el_caster_entity"].module_specification.module_slots = 4
+data.raw["assembling-machine"]["el_caster_entity"].module_specification.module_slots = 3
