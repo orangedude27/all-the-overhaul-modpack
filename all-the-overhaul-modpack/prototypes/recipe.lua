@@ -1616,10 +1616,6 @@ Recipe("area-mining-drill"):replace_ingredient("processing-unit", { "advanced-pr
 Recipe("area-mining-drill"):replace_ingredient("motorized-articulator", { "advanced-machining-tool", 10 })
 Recipe("area-mining-drill"):add_ingredient({ "se-aeroframe-pole", 5 })
 
-Recipe("gold-powder"):replace_ingredient("gold-ore", { "atom-gold-dust", 1 })
-Recipe("enriched-gold"):replace_ingredient("gold-ore", { "atom-gold-dust", 9 })
-Recipe("trace-gold-from-copper"):replace_ingredient("copper-ore", { "5d-copper-dust", 3 })
-
 -- 5DIM Military
 Recipe("5d-stone-wall-02"):set_enabled(false)
 Recipe("5d-stone-wall-03"):set_enabled(false)
