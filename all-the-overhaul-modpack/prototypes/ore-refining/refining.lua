@@ -28,6 +28,7 @@ config: {
     },
 
     -- Icon tables (only the large icons, not the small ones in the corner)
+    -- Set the value to false to use the included default icon
     icons: {
         ingot: IconData,
         dust: IconData,
@@ -106,6 +107,29 @@ function createRefiningData(config)
         item(config, "pure"),
         item(config, "pellets")
     }
+end
+
+function createIcon(config, type)
+    config.icons[type] = {
+        icon = "__all-the-overhaul-modpack__/graphics/icons/materials/" .. config.name .. "-" .. type .. ".png",
+        icon_size = type == "molten" and 64 or 128
+    }
+end
+
+function createIcons(config)
+    for type, _ in pairs(config.icons) do
+        if not config.icons[type] then
+            createIcon(config, type)
+        end
+    end
+end
+
+function setItemIcons(config)
+    for type, item in pairs(config.itemNames) do
+        if data.raw[type == "molten" and "fluid" or "item"][item] then
+            data.raw[type == "molten" and "fluid" or "item"][item].icons = { config.icons[type] }
+        end
+    end
 end
 
 function createSmallIcon(icon)

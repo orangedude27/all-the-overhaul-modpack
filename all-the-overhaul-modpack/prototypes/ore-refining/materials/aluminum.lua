@@ -13,14 +13,14 @@ local config = {
         pellets = "atom-aluminum-pellets"
     },
     icons = {
-        ore = { icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, icon_mipmaps = 3},
-        plate = { icon = "__bzaluminum__/graphics/icons/aluminum-plate.png", icon_size = 128, icon_mipmaps = 3 },
-        dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-aluminium-dust.png", icon_size = 32 },
-        ingot = { icon = "__bzaluminum__/graphics/icons/aluminum-ingot.png", icon_size = 128 },
-        molten = { icon = "__bzaluminum__/graphics/icons/molten-aluminum.png", icon_size = 128 },
-        enriched = { icon = "__bzaluminum__/graphics/icons/enriched-aluminum.png", icon_size = 128 },
+        ore = { icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, icon_mipmaps = 3 },
+        plate = false,
+        dust = false,
+        ingot = false,
+        molten = false,
+        enriched = false,
         pure = { icon = "__248k__/ressources/electronic/el_materials/el_materials_pure_aluminum.png", icon_size = 64 },
-        pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-aluminium-pellets.png", icon_size = 128 }
+        pellets = false
     },
     additionalIngredient = {},
     additionalResults = {
@@ -36,6 +36,8 @@ local config = {
     },
     unlockedBy = {}
 }
+
+createIcons(config)
 
 local aluminaIcon = { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128 }
 
@@ -75,7 +77,7 @@ local function aluminaToPlateRecipe()
         ingredients = {
             { "alumina", 6 }
         },
-        results = {{ name = config.itemNames.plate, amount = 6 }},
+        results = { { name = config.itemNames.plate, amount = 6 } },
         enabled = config.enableAtStart or false
     }
     allowProductivity(recipe.name)
@@ -125,6 +127,7 @@ data:extend({
     item(config, "dust")
 })
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 data.raw.item.alumina.subgroup = "aluminum"
