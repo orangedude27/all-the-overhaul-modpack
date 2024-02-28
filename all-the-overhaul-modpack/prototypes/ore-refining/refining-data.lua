@@ -29,6 +29,8 @@ atom.refining.config.chromium = require("materials.chromium")
 atom.refining.config.nickel = require("materials.nickel")
 atom.refining.config.silver = require("materials.silver")
 atom.refining.config.metals = require("materials.rare-metals")
+atom.refining.config.metals = require("materials.platinum")
+atom.refining.config.metals = require("materials.palladium")
 
 -- Alloys
 table.insert(atom.refining.config, require("materials.brass"))

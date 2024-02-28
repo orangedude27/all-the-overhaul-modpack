@@ -25,7 +25,9 @@
         ["titanium-plate-dust", "atom-titanium-plate-dust"],
         ["tungsten-dust", "atom-tungsten-dust"],
         ["tungsten-plate-dust", "atom-tungsten-plate-dust"],
-        ["zinc-plate", "atom-zinc-plate"]
+        ["zinc-plate", "atom-zinc-plate"],
+        ["platinum-ingot", "atom-platinum-ingot"],
+        ["palladium-ingot", "atom-palladium-ingot"]
     ],
     "technology": [
         ["se-pyroflux-smelting", "atom-advanced-ore-processing-2"]

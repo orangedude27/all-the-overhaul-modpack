@@ -2,7 +2,6 @@
 ## Breaking changes
 - Old K2 and 248k enrichment setups will break
 - Rare metals recipe with palladium and platinum dust will be downgraded
-- (Copper to ore will break)
 
 ## 1.8.0
 - ~~Finish `coal.lua`~~
@@ -24,4 +23,4 @@
 ## 1.8.1
 - ~~Cleanup icon categories/orders~~
 - Have a look at alloying
-- Add Platinum and Palladium refinement
+- ~~Add Platinum and Palladium refinement~~
