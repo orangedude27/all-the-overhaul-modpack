@@ -1,7 +1,14 @@
 # TODO list
 ## Breaking changes
-- Old K2 and 248k enrichment setups will break
-- Rare metals recipe with palladium and platinum dust will be downgraded
+- Old K2 and 248k enrichment setups will break.
+  - Ore to plate is roughly the same.
+  - Ore to dust is nerfed.
+  - All other processes for Nauvis ores will break.
+  - Non-Nauvis SE-ores are untouched.
+  - Gold processing from gold ore will break.
+  - Gold processing from copper will not break, but ratios have changed.
+- All raw rare metal to rare metal plate recipes are migrated to a recipe without byproducts.
+  - There are new alternatives for platinum and palladium powder.
 
 ## 1.8.0
 - ~~Finish `coal.lua`~~
