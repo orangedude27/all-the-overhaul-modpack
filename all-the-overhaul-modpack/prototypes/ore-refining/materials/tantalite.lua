@@ -17,8 +17,8 @@ local tantalumConfig = {
         plate = { icon = "__Tantalite__/graphics/icons/tantalum-plate.png", icon_size = 64, icon_mipmaps = 3 },
         dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-dust.png", icon_size = 32 },
         ingot = { icon = "__Tantalite__/graphics/icons/tantalum-ingot.png", icon_size = 64 },
-        molten = { icon = "__Tantalite__/graphics/icons/molten-tantalite.png", icon_size = 64 },
-        enriched = { icon = "__Tantalite__/graphics/icons/enriched-tantalite.png", icon_size = 64 },
+        "molten",
+        "enriched",
         pure = { icon = "__Tantalite__/graphics/icons/fi-materials-pure-tantalum.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tantalite-pellets.png", icon_size = 128 }
     },
@@ -41,7 +41,7 @@ local niobiumConfig = {
         pellets = "atom-niobium-pellets"
     },
     icons = {
-        plate = { icon = "__Tantalite__/graphics/icons/niobium-plate.png", icon_size = 64, icon_mipmaps = 3 },
+        "plate",
         ingot = { icon = "__Tantalite__/graphics/icons/niobium-ingot.png", icon_size = 64 },
         molten = { icon = "__Tantalite__/graphics/icons/molten-tantalite.png", icon_size = 64 }, -- TODO
         enriched = { icon = "__Tantalite__/graphics/icons/enriched-tantalite.png", icon_size = 64 }, -- TODO
@@ -52,6 +52,9 @@ local niobiumConfig = {
     additionalIngredient = {},
     unlockedBy = {}
 }
+
+createIcons(tantalumConfig)
+createIcons(niobiumConfig)
 
 local _oreToPlateRecipe = oreToPlateRecipe(tantalumConfig)
 local _dustToPlateRecipe = dustToPlateRecipe(tantalumConfig)
@@ -125,6 +128,8 @@ data:extend({
     }
 })
 
+setItemIcons(tantalumConfig)
+setItemIcons(niobiumConfig)
 setStackSizes(tantalumConfig)
 setStackSizes(niobiumConfig)
 setSubGroup(tantalumConfig)

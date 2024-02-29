@@ -14,13 +14,13 @@ local config = {
     },
     icons = {
         ore = { icon = "__BrassTacks__/graphics/icons/zinc-ore.png", icon_size = 64, icon_mipmaps = 4 },
-        plate = { icon = "__BrassTacks__/graphics/galdoc/icons/zinc-plate.png", icon_size = 64 },
-        dust = { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-zinc-dust.png", icon_size = 32, icon_mipmaps = 3 },
-        ingot = { icon = "__BrassTacks__/graphics/galdoc/icons/zinc-ingot.png", icon_size = 64 },
-        molten = { icon = "__BrassTacks__/graphics/galdoc/icons/molten-zinc.png", icon_size = 64 },
-        enriched = { icon = "__BrassTacks__/graphics/galdoc/icons/enriched-zinc.png", icon_size = 64 },
+        "plate",
+        "dust",
+        "ingot",
+        "molten",
+        "enriched",
         pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pure.png", icon_size = 64 },
-        pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pellets.png", icon_size = 128 }
+        "pellets"
     },
     additionalResults = {
         oreToPlate = {
@@ -38,8 +38,11 @@ local config = {
     }
 }
 
+createIcons(config)
+
 data:extend(createRefiningData(config))
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 

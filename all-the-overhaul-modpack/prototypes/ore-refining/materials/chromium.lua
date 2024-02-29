@@ -13,11 +13,11 @@ local config = {
     },
     icons = {
         ore = { icon = "__Chromium__/graphics/icons/chromite-ore.png", icon_size = 64, icon_mipmaps = 3 },
-        plate = { icon = "__Chromium__/graphics/icons/chromium-plate.png", icon_size = 64 },
+        "plate",
         dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-dust.png", icon_size = 32, icon_mipmaps = 3 },
         ingot = { icon = "__Chromium__/graphics/icons/chromium-ingot.png", icon_size = 64 },
-        molten = { icon = "__Chromium__/graphics/icons/molten-chromium.png", icon_size = 64 },
-        enriched = { icon = "__Chromium__/graphics/icons/enriched-chromium.png", icon_size = 64 },
+        "molten",
+        "enriched",
         pure = { icon = "__Chromium__/graphics/icons/fi-materials-pure-chrome.png", icon_size = 64 },
         pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-chrome-pellets.png", icon_size = 128 }
     },
@@ -28,8 +28,11 @@ local config = {
     }
 }
 
+createIcons(config)
+
 data:extend(createRefiningData(config))
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 

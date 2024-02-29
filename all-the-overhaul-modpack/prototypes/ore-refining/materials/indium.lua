@@ -13,13 +13,13 @@ local config = {
     },
     icons = {
         ore = { icon = "__Indium__/graphics/icons/indite-ore.png", icon_size = 64 },
-        plate = { icon = "__Indium__/graphics/icons/indium-plate.png", icon_size = 64, icon_mipmaps = 3 },
+        "plate",
         dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-dust.png", icon_size = 32 },
         ingot = { icon = "__Indium__/graphics/icons/indium-ingot.png", icon_size = 64, icon_mipmaps = 3 },
-        molten = { icon = "__Indium__/graphics/icons/molten-indium.png", icon_size = 64, icon_mipmaps = 3 },
-        enriched = { icon = "__Indium__/graphics/icons/enriched-indium.png", icon_size = 64 },
+        "molten",
+        "enriched",
         pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-pure.png", icon_size = 64, icon_mipmaps = 3 },
-        pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-indium-pellets.png", icon_size = 128 }
+        "pellets"
     },
     unlockedBy = {
         oreToDust = "indium-processing",
@@ -27,8 +27,11 @@ local config = {
     }
 }
 
+createIcons(config)
+
 data:extend(createRefiningData(config))
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 

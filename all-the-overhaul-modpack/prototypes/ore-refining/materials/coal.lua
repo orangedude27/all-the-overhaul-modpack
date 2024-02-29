@@ -7,13 +7,15 @@ local config = {
         plate = "atom-carbon"
     },
     icons = {
-        dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-coal-dust.png", icon_size = 32, icon_mipmaps = 3 },
-        plate = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-carbon.png", icon_size = 128 }
+        plate = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-carbon.png", icon_size = 128 },
+        "dust"
     },
     additionalIngredients = {},
     additionalResults = {},
     unlockedBy = {}
 }
+
+createIcons(config)
 
 local dust = item(config, "dust")
 dust.fuel_category = "chemical"
@@ -35,6 +37,7 @@ data:extend({
     carbon
 })
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 

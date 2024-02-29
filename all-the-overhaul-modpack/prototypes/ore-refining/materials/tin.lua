@@ -14,13 +14,13 @@ local config = {
     },
     icons = {
         ore = { icon = "__bztin__/graphics/icons/tin-ore.png", icon_size = 64, icon_mipmaps = 3 },
-        plate = { icon = "__bztin__/graphics/icons/tin-plate.png", icon_size = 128, icon_mipmaps = 3 },
-        dust = { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-tin-dust.png", icon_size = 32 },
-        ingot = { icon = "__bztin__/graphics/icons/tin-ingot.png", icon_size = 128 },
-        molten = { icon = "__bztin__/graphics/icons/molten-tin.png", icon_size = 128 },
-        enriched = { icon = "__bztin__/graphics/icons/enriched-tin.png", icon_size = 128 },
+        "plate",
+        "dust",
+        "ingot",
+        "molten",
+        "enriched",
         pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pure.png", icon_size = 64 },
-        pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pellets.png", icon_size = 128 }
+        "pellets"
     },
     additionalIngredient = {
         pelletsToIngot = { name = "atom-carbon", amount = 1 }
@@ -44,8 +44,11 @@ local config = {
     }
 }
 
+createIcons(config)
+
 data:extend(createRefiningData(config))
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 

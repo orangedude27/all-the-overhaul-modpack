@@ -40,6 +40,8 @@ local config = {
     }
 }
 
+createIcons(config)
+
 data:extend(createRefiningData(config))
 
 data:extend({
@@ -60,6 +62,7 @@ data:extend({
     }
 })
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 

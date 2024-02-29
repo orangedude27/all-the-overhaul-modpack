@@ -8,7 +8,7 @@ local config = {
     },
     icons = {
         dust = { icon = "__bzgold__/graphics/icons/palladium-powder.png", icon_size = 64 },
-        ingot = { icon = "__bzgold__/graphics/icons/palladium-ingot.png", icon_size = 128 },
+        "ingot",
         enriched = { icon = "__Cobalt__/graphics/icons/enriched-cobalt.png", icon_size = 64, icon_mipmaps = 3 } -- TODO
     },
     additionalIngredient = {},
@@ -24,6 +24,8 @@ local config = {
         dustToIngot = "palladium-processing"
     }
 }
+
+createIcons(config)
 
 local _dustToIngotRecipe = dustToIngotRecipe(config)
 _dustToIngotRecipe.results[2].amount = 6
@@ -41,5 +43,6 @@ data:extend({
     item(config, "enriched")
 })
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)

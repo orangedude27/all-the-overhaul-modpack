@@ -28,7 +28,7 @@ config: {
     },
 
     -- Icon tables (only the large icons, not the small ones in the corner)
-    -- Set the value to false to use the included default icon
+    -- Add a string value with the type to let the icon generate with graphics from /graphics/icons/materials/
     icons: {
         ingot: IconData,
         dust: IconData,
@@ -117,17 +117,26 @@ function createIcon(config, type)
 end
 
 function createIcons(config)
-    for type, _ in pairs(config.icons) do
-        if not config.icons[type] then
-            createIcon(config, type)
+    for _, value in pairs(config.icons) do
+        if type(value) == "string" then
+            createIcon(config, value)
         end
     end
 end
 
 function setItemIcons(config)
-    for type, item in pairs(config.itemNames) do
-        if data.raw[type == "molten" and "fluid" or "item"][item] then
-            data.raw[type == "molten" and "fluid" or "item"][item].icons = { config.icons[type] }
+    for type, itemName in pairs(config.itemNames) do
+        local category = type == "molten" and "fluid" or "item"
+        if config.icons[type] and data.raw[category][itemName] then
+            local item = data.raw[category][itemName]
+            local icon = config.icons[type]
+            if item.icon then
+                item.icon = icon.icon
+                item.icon_size = icon.icon_size
+                item.icon_mipmaps = icon.icon_mipmaps
+            else
+                item.icons = { config.icons[type] }
+            end
         end
     end
 end

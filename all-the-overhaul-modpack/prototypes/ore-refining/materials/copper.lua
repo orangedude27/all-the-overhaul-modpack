@@ -14,13 +14,13 @@ local config = {
     },
     icons = {
         ore = { icon = "__base__/graphics/icons/copper-ore.png", icon_size = 64, icon_mipmaps = 4 },
-        plate = { icon = "__base__/graphics/icons/copper-plate.png", icon_size = 64, icon_mipmaps = 3 },
-        dust = { icon = "__OD27_5dim_resources__/graphics/icon/resources/5d-copper-dust.png", icon_size = 32, icon_mipmaps = 3 },
-        ingot = { icon = "__space-exploration-graphics__/graphics/icons/copper-ingot.png", icon_size = 64, icon_mipmaps = 3 },
-        molten = { icon = "__space-exploration-graphics__/graphics/icons/fluid/molten-copper.png", icon_size = 64, icon_mipmaps = 3 },
-        enriched = { icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png", icon_size = 64, icon_mipmaps = 3 },
+        "plate",
+        "dust",
+        "ingot",
+        "molten",
+        "enriched",
         pure = { icon = "__248k__/ressources/electronic/el_materials/el_materials_pure_copper.png", icon_size = 64 },
-        pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-copper-pellets.png", icon_size = 128, icon_mipmaps = 3 }
+        "pellets"
     },
     additionalIngredient = {
         enrichedToIngot = { type = "fluid", name = "carbon-dioxide", amount = 6 },
@@ -53,8 +53,11 @@ local config = {
     }
 }
 
+createIcons(config)
+
 data:extend(createRefiningData(config))
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 

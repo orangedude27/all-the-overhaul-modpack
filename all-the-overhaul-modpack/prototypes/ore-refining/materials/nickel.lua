@@ -15,12 +15,12 @@ local config = {
     icons = {
         ore = { icon = "__IfNickel__/graphics/icons/nickel-ore.png", icon_size = 64, icon_mipmaps = 4 },
         plate = { icon = "__IfNickel__/graphics/icons/nickel-plate.png", icon_size = 64 },
-        dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-dust.png", icon_size = 32, icon_mipmaps = 3 },
-        ingot = { icon = "__IfNickel__/graphics/icons/nickel-ingot.png", icon_size = 64 },
-        molten = { icon = "__IfNickel__/graphics/icons/molten-nickel.png", icon_size = 64 },
-        enriched = { icon = "__IfNickel__/graphics/icons/enriched-nickel.png", icon_size = 64 },
+        "dust",
+        "ingot",
+        "molten",
+        "enriched",
         pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pure.png", icon_size = 64 },
-        pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pellets.png", icon_size = 128 }
+        "pellets"
     },
     additionalResults = {
         oreToPlate = {
@@ -32,8 +32,11 @@ local config = {
     }
 }
 
+createIcons(config)
+
 data:extend(createRefiningData(config))
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 

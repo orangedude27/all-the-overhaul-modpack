@@ -13,13 +13,13 @@ local config = {
     },
     icons = {
         ore = { icon = "__bztitanium__/graphics/icons/titanium-ore.png", icon_size = 64, icon_mipmaps = 3 },
-        plate = { icon = "__bztitanium__/graphics/icons/titanium-plate.png", icon_size = 64, icon_mipmaps = 3 },
-        dust = { icon = "__bztitanium__/graphics/icons/titanium-powder.png", icon_size = 64 },
+        "plate",
+        "dust",
         ingot = { icon = "__bztitanium__/graphics/icons/titanium-ingot.png", icon_size = 128 },
-        molten = { icon = "__bztitanium__/graphics/icons/molten-titanium.png", icon_size = 128 },
-        enriched = { icon = "__bztitanium__/graphics/icons/enriched-titanium.png", icon_size = 64, icon_mipmaps = 3 },
-        pure = { icon = "__Cobalt__/graphics/icons/fi-materials-pure-cobalt.png", icon_size = 64 }, -- TODO
-        pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-titanium-pellets.png", icon_size = 128 }
+        "molten",
+        "enriched",
+        "pure",
+        "pellets"
     },
     unlockedBy = {
         oreToDust = "titanium-processing",
@@ -27,8 +27,11 @@ local config = {
     }
 }
 
+createIcons(config)
+
 data:extend(createRefiningData(config))
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 

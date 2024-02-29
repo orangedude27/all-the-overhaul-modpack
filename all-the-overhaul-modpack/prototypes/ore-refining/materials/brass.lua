@@ -9,15 +9,17 @@ local config = {
     },
     icons = {
         ore = atom.refining.config.copper.icons.ore,
-        plate = { icon = "__BrassTacks__/graphics/galdoc/icons/brass-plate.png", icon_size = 64 },
         dust = atom.refining.config.copper.icons.dust,
-        ingot = { icon = "__BrassTacks__/graphics/galdoc/icons/brass-ingot.png", icon_size = 64 },
+        "plate",
+        "ingot",
         molten = { icon = "__Cobalt__/graphics/icons/molten-cobalt.png", icon_size = 64, icon_mipmaps = 3 } -- TODO
     },
     additionalIngredient = {},
     additionalResults = {},
     unlockedBy = {}
 }
+
+createIcons(config)
 
 local _oreToPlateRecipe = oreToPlateRecipe(config)
 _oreToPlateRecipe.ingredients = {
@@ -61,6 +63,7 @@ data:extend({
     }
 })
 
+setItemIcons(config)
 setStackSizes(config)
 setSubGroup(config)
 
