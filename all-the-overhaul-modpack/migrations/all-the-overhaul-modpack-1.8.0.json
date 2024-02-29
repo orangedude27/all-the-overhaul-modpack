@@ -7,7 +7,7 @@
         ["alumina", "atom-alumina-ore"],
         ["aluminum-plate", "atom-aluminum-plate"],
         ["atom-aluminium-dust", "atom-aluminum-dust"],
-        ["atom-aluminium-plate-dust", "atom-aluminum-plate-dust"],
+        ["atom-aluminium-plate-dust", "atom-alumina-dust"],
         ["atom-chrome-dust", "atom-chromium-dust"],
         ["atom-chrome-plate-dust", "atom-chromium-plate-dust"],
         ["atom-indium-dust-alt", "atom-indium-dust"],
@@ -27,9 +27,17 @@
         ["tungsten-plate-dust", "atom-tungsten-plate-dust"],
         ["zinc-plate", "atom-zinc-plate"],
         ["platinum-ingot", "atom-platinum-ingot"],
-        ["palladium-ingot", "atom-palladium-ingot"]
+        ["palladium-ingot", "atom-palladium-ingot"],
+        ["copper-plate", "atom-copper-plate"],
+        ["bismuth-plate", "atom-bismuth-plate"],
+        ["manganese-plate", "atom-manganese-plate"]
     ],
     "technology": [
         ["se-pyroflux-smelting", "atom-advanced-ore-processing-2"]
+    ],
+    "item": [
+        ["atom-aluminium-dust", "atom-aluminum-dust"],
+        ["atom-chrome-dust", "atom-chromium-dust"],
+        ["gold-powder", "atom-gold-dust"]
     ]
 }
