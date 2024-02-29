@@ -20,6 +20,7 @@
         ["rare-metals", "atom-rare-metals-plate"],
         ["rare-metals-1", "atom-rare-metals-plate"],
         ["silver-plate", "atom-silver-plate"],
+        ["gold-plate", "atom-gold-plate-dust"],
         ["tantalite-smelting", "atom-tantalite-plate"],
         ["tin-plate", "atom-tin-plate"],
         ["titanium-plate-dust", "atom-titanium-plate-dust"],
