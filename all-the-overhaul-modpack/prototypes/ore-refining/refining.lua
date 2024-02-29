@@ -260,7 +260,8 @@ end
 
 function dustToPlateRecipe(config)-- -36%
     local results = config.additionalResults.dustToPlate or {}
-    table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 3.84 })
+    table.insert(results, { name = config.itemNames.plate, amount = 3 })
+    table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 0.84 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate-dust",
@@ -311,7 +312,8 @@ end
 function ingotToPlateRecipe(config)-- -11%
     local additionalIngredient = config.additionalIngredient.ingotToPlate or nil
     local results = config.additionalResults.ingotToPlate or {}
-    table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 5.34 })
+    table.insert(results, { name = config.itemNames.plate, amount = 5 })
+    table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 0.34 })
     local recipe = {
         type = "recipe",
         name = "atom-" .. config.name .. "-plate-ingot",

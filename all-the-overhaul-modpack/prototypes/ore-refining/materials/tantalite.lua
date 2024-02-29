@@ -63,8 +63,8 @@ local _dustToEnrichedRecipe = dustToEnrichedRecipe(tantalumConfig)
 local _dustToPureRecipe = dustToPureRecipe(tantalumConfig)
 
 _oreToPlateRecipe.results = {
-    { name = tantalumConfig.itemNames.plate, amount = 1, probability = 1.5 },
-    { name = niobiumConfig.itemNames.plate, amount = 1, probability = 1.5 }
+    { name = tantalumConfig.itemNames.plate, amount_min = 1, amount_max = 2 },
+    { name = niobiumConfig.itemNames.plate, amount_min = 1, amount_max = 2 }
 }
 _dustToPlateRecipe.results = {
     { name = tantalumConfig.itemNames.plate, amount = 2 },
