@@ -2,6 +2,7 @@ local config = {
     name = "palladium",
     order = "v",
     itemNames = {
+        ore = "raw-rare-metals",
         dust = "palladium-powder",
         ingot = "palladium-ingot",
         enriched = "atom-palladium-enriched"
@@ -21,11 +22,35 @@ local config = {
         }
     },
     unlockedBy = {
+        oreToDust = "palladium-processing",
         dustToIngot = "palladium-processing"
     }
 }
 
 createIcons(config)
+
+-- Raw rare metals to palladium powder
+local _oreToDustRecipe = {
+    type = "recipe",
+    name = "atom-" .. config.name .. "-dust",
+    icons = {
+        config.icons.dust,
+        createSmallIcon(atom.refining.config.metals.icons.ore),
+    },
+    category = "core-fragment-processing",
+    energy_required = 9.6,
+    ingredients = {
+        { config.itemNames.ore, 6 },
+        { type = "fluid", name = "aqua-regia", amount = 3 }
+    },
+    results = {
+        { name = config.itemNames.dust, amount = 6 },
+        { type = "fluid", name = "depleted-acid", amount = 3 }
+    },
+    main_product = config.itemNames.dust,
+    enabled = false
+}
+unlockedBy(_oreToDustRecipe.name, config.unlockedBy.oreToDust)
 
 local _dustToIngotRecipe = dustToIngotRecipe(config)
 _dustToIngotRecipe.results[2].amount = 6
@@ -37,6 +62,7 @@ local _enrichedToIngotRecipe = enrichedToIngotRecipe(config)
 _enrichedToIngotRecipe.results[1].amount = 6
 
 data:extend({
+    _oreToDustRecipe,
     _dustToIngotRecipe,
     _dustToEnrichedRecipe,
     _enrichedToIngotRecipe,
