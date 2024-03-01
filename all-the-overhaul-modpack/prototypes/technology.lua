@@ -166,6 +166,8 @@ util.tech_add_ingredients("mantle_extractor",
 "production-science-pack","utility-science-pack","advanced-tech-card","se-astronomic-science-pack-4","se-energy-science-pack-4",
 "se-material-science-pack-4","matter-tech-card"},false)
 
+util.tech_remove_prerequisites("fu_TIM_tech", {"fu_stage_tech"})
+
 -- 248K research balance
 -- Hide Fusion Tech by 248K
 bobmods.lib.tech.hide("fu_stage_tech")
