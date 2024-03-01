@@ -9,6 +9,7 @@
   - Gold processing from copper will not break, but ratios have changed.
 - All raw rare metal to rare metal plate recipes are migrated to a recipe without byproducts.
   - There are new alternatives for platinum and palladium powder.
+- Masher mk1 and mk2 and furnace mk2 ingredients have changed.
 
 ## 1.8.0
 - ~~Finish `coal.lua`~~
