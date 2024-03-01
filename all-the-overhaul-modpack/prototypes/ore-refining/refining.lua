@@ -322,7 +322,7 @@ function ingotToPlateRecipe(config)-- -11%
             createSmallIcon(config.icons.ingot)
         },
         category = "el_caster_category",
-        energy_required = 9.6,
+        energy_required = 4.8,
         ingredients = {
             { name = config.itemNames.ingot, amount = 2 },
             additionalIngredient
