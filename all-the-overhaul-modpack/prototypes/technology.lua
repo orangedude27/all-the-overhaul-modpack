@@ -1111,7 +1111,7 @@ util.tech_lock_recipes("t0-electrolysis-plant", { "kr-electrolysis-plant" })
 -- Change research or Drills
 util.tech_remove_prerequisites("kr-electric-mining-drill-mk3", {"se-dynamic-emitter", "kr-advanced-tech-card", "se-heavy-composite"})
 util.tech_add_prerequisites("kr-electric-mining-drill-mk3",{"kr-electric-mining-drill-mk2", "kr-optimization-tech-card"})
-util.tech_remove_ingredients("kr-electric-mining-drill-mk3", {"production-science-pack", "utility-science-pack", "se-energy-science-pack-4", "se-material-science-pack-3", "kr-advanced-tech-card"})
+util.tech_remove_ingredients("kr-electric-mining-drill-mk3", {"production-science-pack", "utility-science-pack", "se-energy-science-pack-4", "se-material-science-pack-3", "advanced-tech-card"})
 util.tech_add_ingredients("kr-electric-mining-drill-mk3",{"kr-optimization-tech-card"},false)
 
 util.tech_remove_prerequisites("area-mining-drill", {"production-science-pack", "kr-electric-mining-drill-mk2"})
