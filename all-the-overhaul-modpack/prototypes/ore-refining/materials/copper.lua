@@ -28,14 +28,14 @@ local config = {
     },
     additionalResults = {
         oreToPlate = {
-            { name = "silver-ore", amount = 1, probability = 0.05 },
+            { name = "silver-ore", amount = 1, probability = 0.1 },
             { name = "cobaltite-ore", amount = 1, probability = 0.5 },
             { name = "bismuth-plate", amount = 1, probability = 0.05 }
         },
         dustToPlate = {
-            { name = "silver-ore", amount = 1, probability = 0.125 },
+            { name = "silver-ore", amount = 1, probability = 0.25 },
             { name = "cobaltite-ore", amount = 1, probability = 0.1 },
-            { name = "bismuth-plate", amount = 1, probability = 0.125 }
+            { name = "bismuth-plate", amount = 1, probability = 0.3125 }
         },
         dustToIngot = {
             { name = "silver-ore", amount = 1, probability = 0.33 },
