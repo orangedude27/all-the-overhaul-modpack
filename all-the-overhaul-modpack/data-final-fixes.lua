@@ -95,3 +95,7 @@ for _, ammo in pairs(data.raw.ammo) do
     end
     ::continue::
 end
+
+-- processing-electronics is removed by bzgold
+data.raw.recipe["fu_burn_processing-electronics_recipe"] = nil
+data.raw.recipe["kr-vc-processing-electronics"] = nil
