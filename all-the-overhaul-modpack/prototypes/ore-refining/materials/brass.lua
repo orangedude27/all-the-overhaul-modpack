@@ -38,7 +38,7 @@ _ingotToPlateRecipe.ingredients = {
     { name = "se-copper-ingot", amount = 1 },
     { name = "zinc-ingot", amount = 1 }
 }
-table.insert(_dustToPlateRecipe.icons, createSmallIconRight(atom.refining.config.zinc.icons.ingot))
+table.insert(_ingotToPlateRecipe.icons, createSmallIconRight(atom.refining.config.zinc.icons.ingot))
 
 local _ingotToMoltenRecipe = ingotToMoltenRecipe(config)
 _ingotToMoltenRecipe.ingredients = {
