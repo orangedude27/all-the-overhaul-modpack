@@ -112,7 +112,7 @@ end
 function createIcon(config, type)
     config.icons[type] = {
         icon = "__all-the-overhaul-modpack__/graphics/icons/materials/" .. config.name .. "-" .. type .. ".png",
-        icon_size = type == "molten" and 64 or 128
+        icon_size = 128
     }
 end
 
