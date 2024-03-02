@@ -4,13 +4,13 @@ local config = {
     enableAtStart = true,
     itemNames = {
         plate = "brass-plate",
-        ingot = "brass-ingot",
         molten = "atom-brass-molten"
     },
     icons = {
         ore = atom.refining.config.copper.icons.ore,
         dust = atom.refining.config.copper.icons.dust,
-        "plate", "ingot", "molten"
+        ingot = atom.refining.config.copper.icons.ingot,
+        "plate", "molten"
     },
     additionalIngredient = {},
     additionalResults = {},
@@ -33,6 +33,13 @@ _dustToPlateRecipe.ingredients = {
 }
 table.insert(_dustToPlateRecipe.icons, createSmallIconRight(atom.refining.config.zinc.icons.dust))
 
+local _ingotToPlateRecipe = ingotToPlateRecipe(config)
+_ingotToPlateRecipe.ingredients = {
+    { name = "se-copper-ingot", amount = 1 },
+    { name = "zinc-ingot", amount = 1 }
+}
+table.insert(_dustToPlateRecipe.icons, createSmallIconRight(atom.refining.config.zinc.icons.ingot))
+
 local _ingotToMoltenRecipe = ingotToMoltenRecipe(config)
 _ingotToMoltenRecipe.ingredients = {
     { name = "se-copper-ingot", amount = 1 },
@@ -43,6 +50,7 @@ table.insert(_ingotToMoltenRecipe.icons, createSmallIconRight(atom.refining.conf
 data:extend({
     _oreToPlateRecipe,
     _dustToPlateRecipe,
+    _ingotToPlateRecipe,
     _ingotToMoltenRecipe,
     moltenToPlateRecipe(config),
     {
