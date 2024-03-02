@@ -14,13 +14,9 @@ local config = {
     },
     icons = {
         ore = { icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png", icon_size = 64, icon_mipmaps = 4 },
+        "pure",
         plate = { icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png", icon_size = 64 },
-        dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-dust.png", icon_size = 32 }, -- TODO
-        ingot = { icon = "__Cobalt__/graphics/icons/cobalt-ingot.png", icon_size = 64, icon_mipmaps = 3 }, -- TODO
-        molten = { icon = "__Cobalt__/graphics/icons/molten-cobalt.png", icon_size = 64, icon_mipmaps = 3 }, -- TODO
-        enriched = { icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png", icon_size = 64, icon_mipmaps = 4 },
-        pure = { icon = "__Cobalt__/graphics/icons/fi-materials-pure-cobalt.png", icon_size = 64 }, -- TODO
-        pellets = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-pellets.png", icon_size = 128, icon_mipmaps = 3 } -- TODO
+        "dust", "ingot", "molten", "enriched", "pellets"
     }
 }
 

@@ -14,13 +14,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__bzlead__/graphics/icons/lead-ore.png", icon_size = 64, icon_mipmaps = 3 },
-        "plate",
-        "dust",
-        "ingot",
-        "molten",
-        "enriched",
-        "pure",
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalIngredient = {
         dustToPure = { type = "fluid", name = "oxygen", amount = 4 }

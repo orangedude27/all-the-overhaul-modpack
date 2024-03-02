@@ -14,8 +14,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, icon_mipmaps = 3 },
-        pure = { icon = "__248k__/ressources/electronic/el_materials/el_materials_pure_aluminum.png", icon_size = 64 },
-        "plate", "dust", "ingot", "molten", "enriched", "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalIngredient = {},
     additionalResults = {

@@ -13,13 +13,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__manganese__/graphics/icons/manganese-ore.png", icon_size = 64, icon_mipmaps = 4 },
-        "plate",
-        "dust",
-        "ingot",
-        "molten",
-        "enriched",
-        pure = { icon = "__Cobalt__/graphics/icons/fi-materials-pure-cobalt.png", icon_size = 64 }, -- TODO
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalIngredient = {
         dustToIngot = { name = "atom-carbon", amount = 1 },

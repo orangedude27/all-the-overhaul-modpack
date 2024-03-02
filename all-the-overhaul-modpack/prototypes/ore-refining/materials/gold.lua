@@ -13,13 +13,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__ThemTharHills__/graphics/icons/gold-ore.png", icon_size = 64, icon_mipmaps = 4 },
-        "plate",
-        "dust",
-        "ingot",
-        "molten",
-        enriched = { icon = "__ThemTharHills__/graphics/icons/gold-powder.png", icon_size = 64 },
-        "pure",
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {
         oreToPlate = "gold-processing",

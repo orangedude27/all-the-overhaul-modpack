@@ -15,12 +15,7 @@ local config = {
     icons = {
         ore = { icon = "__IfNickel__/graphics/icons/nickel-ore.png", icon_size = 64, icon_mipmaps = 4 },
         plate = { icon = "__IfNickel__/graphics/icons/nickel-plate.png", icon_size = 64 },
-        "dust",
-        "ingot",
-        "molten",
-        "enriched",
-        pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-nickel-pure.png", icon_size = 64 },
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalResults = {
         oreToPlate = {

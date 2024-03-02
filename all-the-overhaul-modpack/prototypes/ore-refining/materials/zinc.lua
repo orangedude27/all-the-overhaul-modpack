@@ -14,13 +14,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__BrassTacks__/graphics/icons/zinc-ore.png", icon_size = 64, icon_mipmaps = 4 },
-        "plate",
-        "dust",
-        "ingot",
-        "molten",
-        "enriched",
-        pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-zinc-pure.png", icon_size = 64 },
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalResults = {
         oreToPlate = {

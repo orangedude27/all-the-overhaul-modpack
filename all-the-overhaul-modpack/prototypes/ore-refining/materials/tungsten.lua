@@ -13,13 +13,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__bztungsten__/graphics/icons/tungsten-ore.png", icon_size = 64, icon_mipmaps = 3 },
-        "plate",
-        dust = { icon = "__bztungsten__/graphics/icons/tungsten-powder.png", icon_size = 64, icon_mipmaps = 3 },
-        "ingot",
-        molten = { icon = "__bztungsten__/graphics/icons/molten-tungsten.png", icon_size = 128 },
-        "enriched",
-        pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tungsten-pure.png", icon_size = 64 },
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {
         oreToDust = "tungsten-processing",

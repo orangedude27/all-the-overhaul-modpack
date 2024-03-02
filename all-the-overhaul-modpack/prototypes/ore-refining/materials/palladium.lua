@@ -9,8 +9,7 @@ local config = {
     },
     icons = {
         dust = { icon = "__bzgold__/graphics/icons/palladium-powder.png", icon_size = 64 },
-        "ingot",
-        enriched = { icon = "__Cobalt__/graphics/icons/enriched-cobalt.png", icon_size = 64, icon_mipmaps = 3 } -- TODO
+        "ingot", "enriched"
     },
     additionalIngredient = {},
     additionalResults = {

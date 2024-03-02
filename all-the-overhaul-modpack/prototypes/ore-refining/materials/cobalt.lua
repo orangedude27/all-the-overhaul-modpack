@@ -13,13 +13,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__Cobalt__/graphics/icons/cobaltite-ore.png", icon_size = 64 },
-        "plate",
-        dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-cobalt-dust.png", icon_size = 32 },
-        ingot = { icon = "__Cobalt__/graphics/icons/cobalt-ingot.png", icon_size = 64, icon_mipmaps = 3 },
-        "molten",
-        "enriched",
-        pure = { icon = "__Cobalt__/graphics/icons/fi-materials-pure-cobalt.png", icon_size = 64 },
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {
         oreToPlate = "cobalt-refining",

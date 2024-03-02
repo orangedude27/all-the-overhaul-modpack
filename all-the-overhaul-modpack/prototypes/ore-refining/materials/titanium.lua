@@ -13,13 +13,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__bztitanium__/graphics/icons/titanium-ore.png", icon_size = 64, icon_mipmaps = 3 },
-        "plate",
-        "dust",
-        ingot = { icon = "__bztitanium__/graphics/icons/titanium-ingot.png", icon_size = 128 },
-        "molten",
-        "enriched",
-        "pure",
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {
         oreToDust = "titanium-processing",

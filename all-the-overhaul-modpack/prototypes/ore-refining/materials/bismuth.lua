@@ -13,13 +13,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__bismuth__/graphics/icons/bismuth-ore.png", icon_size = 64, icon_mipmaps = 3 },
-        "plate",
-        "dust",
-        "ingot",
-        "molten",
-        enriched = { icon_size = 64, icon = "__bismuth__/graphics/icons/enriched-bismuth.png", icon_mipmaps = 3 },
-        pure = { icon = "__Cobalt__/graphics/icons/enriched-cobalt.png", icon_size = 64, icon_mipmaps = 3 }, -- TODO
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {
         oreToPlate = "bismanol"

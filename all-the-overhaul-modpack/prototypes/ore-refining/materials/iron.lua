@@ -14,13 +14,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__base__/graphics/icons/iron-ore.png", icon_size = 64, icon_mipmaps = 4 },
-        "plate",
-        "dust",
-        "ingot",
-        "molten",
-        "enriched",
-        pure = { icon = "__248k__/ressources/electronic/el_materials/el_materials_pure_iron.png", icon_size = 64 },
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalResults = {
         oreToPlate = {

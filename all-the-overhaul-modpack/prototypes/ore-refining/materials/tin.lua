@@ -14,13 +14,7 @@ local config = {
     },
     icons = {
         ore = { icon = "__bztin__/graphics/icons/tin-ore.png", icon_size = 64, icon_mipmaps = 3 },
-        "plate",
-        "dust",
-        "ingot",
-        "molten",
-        "enriched",
-        pure = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-tin-pure.png", icon_size = 64 },
-        "pellets"
+        "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalIngredient = {
         pelletsToIngot = { name = "atom-carbon", amount = 1 }

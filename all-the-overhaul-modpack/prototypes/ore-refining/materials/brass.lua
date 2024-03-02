@@ -10,9 +10,7 @@ local config = {
     icons = {
         ore = atom.refining.config.copper.icons.ore,
         dust = atom.refining.config.copper.icons.dust,
-        "plate",
-        "ingot",
-        molten = { icon = "__Cobalt__/graphics/icons/molten-cobalt.png", icon_size = 64, icon_mipmaps = 3 } -- TODO
+        "plate", "ingot", "molten"
     },
     additionalIngredient = {},
     additionalResults = {},
