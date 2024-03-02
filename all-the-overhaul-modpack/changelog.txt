@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.8
+Date: 3.1.2024
+  Bug Fixes:
+    - Fixed some Startup Errors
+    - Fixed issue with the Material Science and Mk3 electric miners: https://discord.com/channels/1174743568590590053/1207374972016787496
+    - Fixed issue with the Titanium Metal Composite: https://discord.com/channels/1174743568590590053/1210984846017699860
+---------------------------------------------------------------------------------------------------
 Version: 1.7.7
 Date: 1.21.2024
   Bug Fixes:
