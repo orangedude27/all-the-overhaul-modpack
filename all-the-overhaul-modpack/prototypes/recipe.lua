@@ -1,10 +1,10 @@
 local atom_util = require("data-util")
 local Recipe = require('__stdlib__/stdlib/data/recipe')
 --LDS 248k Recipe fix
-util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "titanium-plate", 8, false)
-util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "diamond", 4, false)
-util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "zirconia", 20, false)
-util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "carbon-fiber", 20, false)
+atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "titanium-plate", 8, false)
+atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "diamond", 4, false)
+atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "zirconia", 20, false)
+atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "carbon-fiber", 20, false)
 data.raw.recipe["fi_low-density-structure_recipe"].category = "crafting"
 --Adjust basic electronic components to require more ingredients
 atom_util.replace_or_add_ingredient("basic-electronic-components", "copper-cable", "copper-cable", 5, false)
