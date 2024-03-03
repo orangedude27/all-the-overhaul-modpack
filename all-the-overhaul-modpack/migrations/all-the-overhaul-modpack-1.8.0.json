@@ -31,7 +31,8 @@
         ["palladium-ingot", "atom-palladium-ingot"],
         ["copper-plate", "atom-copper-plate"],
         ["bismuth-plate", "atom-bismuth-plate"],
-        ["manganese-plate", "atom-manganese-plate"]
+        ["manganese-plate", "atom-manganese-plate"],
+        ["chromium-plate", "atom-chromium-plate"]
     ],
     "technology": [
         ["se-pyroflux-smelting", "atom-advanced-ore-processing-2"]
