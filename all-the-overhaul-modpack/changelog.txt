@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.0
+Date: 3.4.2024
+  Changes:
+    - Ore prosessing got an entire rework and redesign.
+    - 6 New Tiers of Ore processing, balanced for early and late game production.
+    - New icons for all metals, and intermediate processes, Thanks @BlackATM
+    - Masher mk1 and mk2 and furnace mk2 ingredients have changed.
+  Bug Fixes:
+    - Fixed issues with LDS from 248k being, broken: https://discord.com/channels/1174743568590590053/1208832078456819732
+  Notes:
+    - Old K2 and 248k enrichment setups will break.
+      - Ore to plate is roughly the same.
+      - Ore to dust is nerfed.
+      - All other processes for Nauvis ores will break.
+      - Non-Nauvis SE-ores are untouched.
+      - Gold processing from gold ore will break.
+      - Gold processing from copper will not break, but ratios have changed.
+    - All raw rare metal to rare metal plate recipes are migrated to a recipe without byproducts.
+      - There are new alternatives for platinum and palladium powder.
+---------------------------------------------------------------------------------------------------
+=======
 Version: 1.7.8
 Date: 3.1.2024
   Bug Fixes:

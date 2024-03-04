@@ -1,0 +1,11 @@
+{
+    "item":
+    [
+        ["lead-dust", "atom-lead-dust"]
+    ],
+    "recipe": 
+    [
+        ["lead-dust","atom-lead-dust"]
+    ]
+
+}

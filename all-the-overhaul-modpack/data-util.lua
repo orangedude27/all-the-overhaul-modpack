@@ -1046,6 +1046,18 @@ function data_util.recipe_set_result_count(recipe_name, count)
   end
 end
 
+function data_util.recipe_replace_result(recipe_name, old_result, new_result, amount)
+  local recipe = data.raw.recipe[recipe_name]
+  if recipe and recipe.results then
+      for _, result in pairs(recipe.results) do
+          if result.name == old_result then
+            result.name = new_result
+            result.amount = amount
+          end
+      end
+  end
+end
+
 function data_util.recipe_set_time(recipe_name, time)
   local recipe = data.raw.recipe[recipe_name]
   if recipe then

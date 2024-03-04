@@ -7,6 +7,8 @@ require("prototypes/common-final")
 require("prototypes/recipe")
 require("prototypes/technology")
 require("prototypes/sorting/sorter")
+require("prototypes/ore-refining/refining-data")
+require("prototypes/ore-refining/refining-fixes")
 
 
 data.raw["item"]["fu_tech_sign_item"].icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-2.png"
@@ -95,6 +97,8 @@ for _, ammo in pairs(data.raw.ammo) do
     end
     ::continue::
 end
+
+table.insert(data.raw["assembling-machine"]["fu_ingot_entity"].crafting_categories, "casting")
 
 -- processing-electronics is removed by bzgold
 data.raw.recipe["fu_burn_processing-electronics_recipe"] = nil

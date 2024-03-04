@@ -97,7 +97,6 @@ for _, item in pairs(data.raw.tool) do
     end
 end
 
-data.raw.item["processing-electronics"].localised_name = "Advanced CPU"
 data.raw.item["fu_materials_carbon_fiber"].localised_name = "Graphite fiber"
 data.raw.item["fu_materials_KFK"].localised_name = "Graphite fiber reinforced plastic"
 data.raw.item["el_lithium_item"].localised_name = "Lithium crystal"

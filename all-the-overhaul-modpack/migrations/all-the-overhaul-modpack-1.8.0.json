@@ -1,0 +1,46 @@
+{
+    "recipe": [
+        ["5d-copper-dust", "atom-copper-dust"],
+        ["5d-copper-plate", "atom-copper-plate-dust"],
+        ["5d-iron-dust", "atom-iron-dust"],
+        ["5d-iron-plate", "atom-iron-plate-dust"],
+        ["alumina", "atom-alumina-ore"],
+        ["aluminum-plate", "atom-aluminum-plate"],
+        ["atom-aluminium-dust", "atom-aluminum-dust"],
+        ["atom-aluminium-plate-dust", "atom-alumina-dust"],
+        ["atom-chrome-dust", "atom-chromium-dust"],
+        ["atom-chrome-plate-dust", "atom-chromium-plate-dust"],
+        ["atom-indium-dust-alt", "atom-indium-dust"],
+        ["brass-plate", "atom-brass-plate"],
+        ["brass-ingot", "atom-brass-ingot"],
+        ["iron-plate", "atom-iron-plate"],
+        ["lead-plate", "atom-lead-plate"],
+        ["lead-dust", "atom-lead-dust"],
+        ["lead-plate-dust", "atom-lead-plate-dust"],
+        ["nickel-plate", "atom-nickel-plate"],
+        ["rare-metals", "atom-rare-metals-plate"],
+        ["rare-metals-1", "atom-rare-metals-plate"],
+        ["silver-plate", "atom-silver-plate"],
+        ["gold-plate", "atom-gold-plate-dust"],
+        ["tantalite-smelting", "atom-tantalite-plate"],
+        ["tin-plate", "atom-tin-plate"],
+        ["titanium-plate-dust", "atom-titanium-plate-dust"],
+        ["tungsten-dust", "atom-tungsten-dust"],
+        ["tungsten-plate-dust", "atom-tungsten-plate-dust"],
+        ["zinc-plate", "atom-zinc-plate"],
+        ["platinum-ingot", "atom-platinum-ingot"],
+        ["palladium-ingot", "atom-palladium-ingot"],
+        ["copper-plate", "atom-copper-plate"],
+        ["bismuth-plate", "atom-bismuth-plate"],
+        ["manganese-plate", "atom-manganese-plate"],
+        ["chromium-plate", "atom-chromium-plate"]
+    ],
+    "technology": [
+        ["se-pyroflux-smelting", "atom-advanced-ore-processing-2"]
+    ],
+    "item": [
+        ["atom-aluminium-dust", "atom-aluminum-dust"],
+        ["atom-chrome-dust", "atom-chromium-dust"],
+        ["gold-powder", "atom-gold-dust"]
+    ]
+}

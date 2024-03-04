@@ -12,6 +12,10 @@ end
 
 Test(true)
 
+function string.starts(String,Start)
+    return string.sub(String,1,string.len(Start))==Start
+end
+
 --call all needed scripts
 flib = require('__flib__.data-util')
 require("prototypes/imersium-wall")
@@ -25,3 +29,5 @@ if mods["RampantArsenal"] then
 end
 require("prototypes/items")
 require("prototypes/entities/machines")
+
+require("prototypes/ore-refining/refining-data")

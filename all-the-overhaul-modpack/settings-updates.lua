@@ -53,6 +53,10 @@ local function change_setting(setting_name, value, hide)
   end
 end
 
+--boblibrary
+if mods["boblibrary"] then
+  change_setting("bobmods-library-recipe-cleanup", false)
+end
 --248k
 if mods["248k"] then
   change_setting("el_solar_power_output", "80kW (normal)")
@@ -394,4 +398,8 @@ if mods["Load-Furn-2"] then
 end
 if mods["BrimStuff"] then
   change_setting("brimstuff-greenhouse", false)
+end
+--5Dim's
+if mods["OD27_5dim_resources"] then
+  change_setting("5d-industrial-furnace", false)
 end
