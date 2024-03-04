@@ -19,6 +19,7 @@ Date: 3.4.2024
     - All raw rare metal to rare metal plate recipes are migrated to a recipe without byproducts.
       - There are new alternatives for platinum and palladium powder.
 ---------------------------------------------------------------------------------------------------
+=======
 Version: 1.7.8
 Date: 3.1.2024
   Bug Fixes:

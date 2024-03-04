@@ -98,7 +98,6 @@ for _, ammo in pairs(data.raw.ammo) do
     ::continue::
 end
 
-
 table.insert(data.raw["assembling-machine"]["fu_ingot_entity"].crafting_categories, "casting")
 
 -- processing-electronics is removed by bzgold
