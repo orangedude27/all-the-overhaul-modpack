@@ -15,6 +15,7 @@
         ["brass-ingot", "atom-brass-ingot"],
         ["iron-plate", "atom-iron-plate"],
         ["lead-plate", "atom-lead-plate"],
+        ["lead-dust", "atom-lead-dust"],
         ["lead-plate-dust", "atom-lead-plate-dust"],
         ["nickel-plate", "atom-nickel-plate"],
         ["rare-metals", "atom-rare-metals-plate"],
