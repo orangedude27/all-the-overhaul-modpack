@@ -536,7 +536,7 @@ end
 function item(config, category)
     return {
         type = "item",
-        name = "atom-" .. config.name .. "-" .. category,
+        name = config.itemNames[category],
         icons = { config.icons[category] },
         order = "a[" .. config.name .. "-" .. category .. "]",
         stack_size = 50,
