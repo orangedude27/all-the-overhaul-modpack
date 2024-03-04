@@ -1,3 +1,5 @@
+local util = require("data-util")
+
 -- Store some exceptions
 local exceptions = {
     data.raw.recipe["fi_arc_glass_recipe"],
@@ -16,6 +18,7 @@ for _, stage in pairs(stages) do
 end
 
 removeRecipeByName("fu_lead_recipe")
+removeRecipeByName("fi_crushed_coal_recipe")
 
 -- re-add exceptions
 for _, recipe in pairs(exceptions) do
@@ -62,3 +65,6 @@ caster.module_specification.module_slots = 3
 caster.crafting_speed = 4
 caster.energy_usage = "800kW"
 
+-- Use atom-coal-dust instead of fi_crushed_coal_item
+util.find_and_replace_ingredients({["fi_crushed_coal_item"] = "atom-coal-dust"})
+util.find_and_replace_results({["fi_crushed_coal_item"] = "atom-coal-dust"})

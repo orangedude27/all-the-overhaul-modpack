@@ -1154,6 +1154,21 @@ function data_util.find_and_replace_ingredients(replacements)
   end
 end
 
+-- Input: {["replace-from"] = "replace-to"}
+function data_util.find_and_replace_results(replacements)
+  for _, recipe in pairs(data.raw.recipe) do
+    if recipe.results then find_and_replace_ingredients_sub(recipe.results, replacements) end
+    if recipe.normal and recipe.normal.results then
+      find_and_replace_ingredients_sub(recipe.normal.results,
+              replacements)
+    end
+    if recipe.expensive and recipe.expensive.results then
+      find_and_replace_ingredients_sub(
+              recipe.expensive.results, replacements)
+    end
+  end
+end
+
 --[[
 recipe-core fragment
 result-bismuth not chance
