@@ -26,9 +26,9 @@
 - ~~Correct stack sizes~~
 - ~~Balance copper to gold recipe~~
 - ~~Fix regular gold refinement~~
-- Create new icons
-
-## 1.8.1
+- ~~Create new icons~~
 - ~~Cleanup icon categories/orders~~
 - ~~Add Platinum and Palladium refinement~~
+
+## 1.8.1
 - Have a look at alloying
