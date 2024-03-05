@@ -18,7 +18,6 @@ for _, stage in pairs(stages) do
 end
 
 removeRecipeByName("fu_lead_recipe")
-removeRecipeByName("fi_crushed_coal_recipe")
 
 -- re-add exceptions
 for _, recipe in pairs(exceptions) do
@@ -68,3 +67,7 @@ caster.energy_usage = "800kW"
 -- Use atom-coal-dust instead of fi_crushed_coal_item
 util.find_and_replace_ingredients({["fi_crushed_coal_item"] = "atom-coal-dust"})
 util.find_and_replace_results({["fi_crushed_coal_item"] = "atom-coal-dust"})
+
+-- Use atom-stone-dust instead of fi_crushed_stone_item
+util.find_and_replace_ingredients({["fi_crushed_stone_item"] = "atom-stone-dust"})
+util.find_and_replace_results({["fi_crushed_stone_item"] = "atom-stone-dust"})
