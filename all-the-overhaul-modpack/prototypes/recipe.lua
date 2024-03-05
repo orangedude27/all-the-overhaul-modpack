@@ -1590,7 +1590,7 @@ data:extend({
             {type="fluid", name="fi_strong_acid", amount=50},
         },
         results = {
-            {type="fluid", name="depleted-acid", amount=50},
+			data.raw.fluid["depleted-acid"] and {type="fluid", name="depleted-acid", amount=50} or nil,
             {type="item", name="gr_materials_circuit", amount=1},
         },
 		main_product = "gr_materials_circuit",
