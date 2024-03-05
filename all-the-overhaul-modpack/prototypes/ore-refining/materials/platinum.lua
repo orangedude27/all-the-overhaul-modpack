@@ -44,7 +44,7 @@ local _oreToDustRecipe = {
     },
     results = {
         { name = config.itemNames.dust, amount = 6 },
-        { type = "fluid", name = "depleted-acid", amount = 3 }
+        data.raw.fluid["depleted-acid"] and { type = "fluid", name = "depleted-acid", amount = 3 } or nil
     },
     main_product = config.itemNames.dust,
     enabled = false

@@ -23,7 +23,7 @@ copperToGold.results = {
     { name = atom.refining.config.nickel.itemNames.ore, amount = 1, probability = 0.125 },
     { name = atom.refining.config.silver.itemNames.ore, amount = 1, probability = 0.1 },
     { name = "platinum-powder", amount = 1, probability = 0.02 },
-    { type = "fluid", name = "depleted-acid", amount = 3 }
+    data.raw.fluid["depleted-acid"] and { type = "fluid", name = "depleted-acid", amount = 3 } or nil
 }
 copperToGold.energy_required = 1
 util.recipe_replace_result("depleted-acid-treatment", "gold-powder", "atom-gold-dust", 1)
