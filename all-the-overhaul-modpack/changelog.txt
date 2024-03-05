@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.2
+Date: 3.5.2024
+  Changes:
+    - Tweaked graphite recipes to align with other process interactions
+---------------------------------------------------------------------------------------------------
 Version: 1.8.1
-Date: 3.1.2024
+Date: 3.5.2024
   Changes:
     - Migrated Crushed Stone and Coal to ATOm varients.
   Bug Fixes:
