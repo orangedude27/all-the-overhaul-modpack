@@ -1,3 +1,5 @@
+local util = require("data-util")
+
 -- Store some exceptions
 local exceptions = {
     data.raw.recipe["fi_arc_glass_recipe"],
@@ -62,3 +64,10 @@ caster.module_specification.module_slots = 3
 caster.crafting_speed = 4
 caster.energy_usage = "800kW"
 
+-- Use atom-coal-dust instead of fi_crushed_coal_item
+util.find_and_replace_ingredients({["fi_crushed_coal_item"] = "atom-coal-dust"})
+util.find_and_replace_results({["fi_crushed_coal_item"] = "atom-coal-dust"})
+
+-- Use atom-stone-dust instead of fi_crushed_stone_item
+util.find_and_replace_ingredients({["fi_crushed_stone_item"] = "atom-stone-dust"})
+util.find_and_replace_results({["fi_crushed_stone_item"] = "atom-stone-dust"})

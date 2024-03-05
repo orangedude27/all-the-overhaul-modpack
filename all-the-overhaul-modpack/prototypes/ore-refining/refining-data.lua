@@ -37,3 +37,4 @@ table.insert(atom.refining.config, require("materials.brass"))
 
 -- Others
 atom.refining.config.coal = require("materials.coal")
+atom.refining.config.stone = require("materials.stone")
