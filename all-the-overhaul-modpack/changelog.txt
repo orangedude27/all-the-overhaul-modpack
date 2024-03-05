@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.1
+Date: 3.1.2024
+  Changes:
+    - Migrated Crushed Stone and Coal to ATOm varients.
+  Bug Fixes:
+    - Startup Issues with BrimStuff waste treatment: https://discord.com/channels/1174743568590590053/1214575575004483664
+---------------------------------------------------------------------------------------------------
 Version: 1.8.0
 Date: 3.4.2024
   Changes:
