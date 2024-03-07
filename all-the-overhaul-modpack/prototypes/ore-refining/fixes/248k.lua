@@ -9,7 +9,8 @@ local exceptions = {
 -- Remove pure to molen/plate recipes
 local stages = { "el", "fi", "fu", "gr" }
 for _, stage in pairs(stages) do
-    removeRecipesByPattern("^" .. stage .. "[%-_]arc[%-_]")
+    removeRecipesByPattern("^" .. stage .. "[%-_]arc[%-_]pure[%-_]")
+    removeRecipesByPattern("^" .. stage .. "[%-_]arc[%-_]glass[%-_]")
     removeRecipesByPattern("^" .. stage .. "[%-_]cast[%-_]")
     removeRecipesByPattern("^" .. stage .. "[%-_]purify[%-_]")
     removeRecipesByPattern("^" .. stage .. "[%-_]pure[%-_]")
