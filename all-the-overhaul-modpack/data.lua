@@ -1,33 +1,6 @@
---this is example of function setup with comments, learn to use comments people
+require("_data")
 
---- Checks if true
---- @param check  #What to check
-local function Test(check)
-    if check then
-        log("True PIG")
-    else
-        log("false PIG")
-    end
-end
+atom = atom or {}
 
-Test(true)
-
-function string.starts(String,Start)
-    return string.sub(String,1,string.len(Start))==Start
-end
-
---call all needed scripts
-flib = require('__flib__.data-util')
-require("prototypes/imersium-wall")
-require("prototypes/common")
-require("prototypes/pipes")
-if mods["Bio_Industries"] then
-    require("prototypes/bio-industries")
-end
-if mods["RampantArsenal"] then
-    require("prototypes/rampant-arsenal")
-end
-require("prototypes/items")
-require("prototypes/entities/machines")
-
-require("prototypes/ore-refining/refining-data")
+require("util.util")
+require("content.data")
