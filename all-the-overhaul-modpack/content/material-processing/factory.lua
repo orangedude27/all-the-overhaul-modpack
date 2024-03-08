@@ -325,6 +325,9 @@ atom.processing.create = function(config)
         end,
 
         item = function(category)
+            if atom.stage ~= "data" then
+                return data.raw.item[config.itemNames[category]]
+            end
             return {
                 type = "item",
                 name = config.itemNames[category],
