@@ -190,6 +190,9 @@ end
 -- Set default stack sizes
 -- Dust and plate get 100, the rest 50
 processing.setStackSizes = function(config)
+    if atom.stage ~= "data" then
+        return
+    end
     for type, item in pairs(config.itemNames) do
         if data.raw.item[item] then
             if type == "dust" or type == "plate" then
