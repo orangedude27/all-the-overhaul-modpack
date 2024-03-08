@@ -1,0 +1,7 @@
+atom.util.recipe.removeByNamePattern("^enriched%-%a+$")
+atom.util.recipe.removeByNamePattern("^enriched%-%a+%-plate$")
+atom.util.recipe.removeByNamePattern("^%a+%-ingot%-to%-plate$")
+atom.util.recipe.removeByName("tantalite-smelting")
+atom.util.recipe.removeByName("tantalite-ingot")
+atom.util.recipe.removeByName("molten-tantalite")
+atom.util.recipe.removeByName("chromium-plate")
