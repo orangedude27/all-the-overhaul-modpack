@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.4
+Date: 3.7.2024
+  Changes:
+    - Added Zirconium Processing tree (This is still likely need tweaks): https://discord.com/channels/1174743568590590053/1214924500899074139, https://discord.com/channels/1174743568590590053/1215242462881390634
+  Bug Fixes:
+    - Fixed issue with industrial glass and crystals: https://discord.com/channels/1174743568590590053/1214924500899074139, 
+      https://discord.com/channels/1174743568590590053/1174903449155010580/1215419571536793642, 
+      https://discord.com/channels/1174743568590590053/1214850355951829013
+---------------------------------------------------------------------------------------------------
 Version: 1.8.3
 Date: 3.7.2024
   Bug Fixes:
