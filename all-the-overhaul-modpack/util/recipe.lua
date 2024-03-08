@@ -84,5 +84,46 @@ atom.util.recipe = {
                 end
             end
         end
+    end,
+
+    -- Finds recipes by an item being used either as an ingredient or a result
+    -- @param itemName string The name of the item
+    -- @return table A list of recipe names
+    findByItem = function(itemName)
+        local function containsItem(table)
+            for _, ingredient in pairs(table) do
+                if ingredient.name == itemName or ingredient[1] == itemName then
+                    return true
+                end
+            end
+            return false
+        end
+        local result = {}
+        for _, recipe in pairs(data.raw.recipe) do
+            local match = false
+            if recipe.result == itemName
+                    or recipe.results and containsItem(recipe.results)
+                    or recipe.ingredients and containsItem(recipe.ingredients)
+                    or recipe.normal and recipe.normal.result == itemName
+                    or recipe.normal and recipe.normal.results and containsItem(recipe.normal.results)
+                    or recipe.normal and recipe.normal.ingredients and containsItem(recipe.normal.ingredients)
+                    or recipe.expensive and recipe.expensive.result == itemName
+                    or recipe.expensive and recipe.expensive.results and containsItem(recipe.expensive.results)
+                    or recipe.expensive and recipe.expensive.ingredients and containsItem(recipe.expensive.ingredients)
+            then
+                table.insert(result, recipe.name)
+                match = true
+            end
+        end
+        return result
+    end,
+
+    -- Removes recipes by an item being used either as an ingredient or a result
+    -- @param itemName string The name of the item
+    removeByItem = function(itemName)
+        local recipes = atom.util.recipe.findByItem(itemName)
+        for _, recipe in pairs(recipes) do
+            atom.util.recipe.removeByName(recipe)
+        end
     end
 }

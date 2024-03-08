@@ -9,6 +9,7 @@ atom.util.recipe.removeByName("lead-dust")
 atom.util.recipe.removeByName("rare-metals-1")
 atom.util.recipe.removeByName("rare-metals-2")
 atom.util.recipe.removeByName("tungsten-dust")
+atom.util.recipe.removeByName("tungsten-plate")
 atom.util.recipe.removeByName("alumina")
 atom.util.recipe.removeByName("aluminum-plate")
 atom.util.recipe.removeByName("aluminum-ingot")
@@ -25,3 +26,7 @@ atom.util.recipe.removeByName("platinum-ingot")
 atom.util.recipe.removeByName("palladium-ingot")
 atom.util.recipe.removeByName("graphite-5d")
 atom.util.recipe.removeByName("zirconium-ingot")
+
+atom.util.item.removeByName("tungsten-powder")
+
+-- TODO: Add a replacement for tungsten-carbide-casting to the new processing
