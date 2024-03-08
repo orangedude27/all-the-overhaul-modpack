@@ -28,3 +28,4 @@ require("materials.brass")
 -- Others
 require("materials.coal")
 require("materials.stone")
+require("materials.zirconium")

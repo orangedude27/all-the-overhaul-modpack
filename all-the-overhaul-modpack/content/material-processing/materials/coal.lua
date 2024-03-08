@@ -35,5 +35,4 @@ data:extend({
 })
 
 atom.processing.util.finalizeConfig(config)
-
 atom.processing.materials.coal = config
