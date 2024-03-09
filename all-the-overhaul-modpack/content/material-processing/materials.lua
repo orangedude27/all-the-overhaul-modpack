@@ -21,6 +21,7 @@ require("materials.silver")
 require("materials.rare-metals")
 require("materials.platinum")
 require("materials.palladium")
+require("materials.neodymium")
 
 -- Alloys
 require("materials.brass")
