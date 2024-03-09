@@ -1,3 +1,5 @@
+local Recipe = atom.util.Recipe
+
 local config = atom.processing.util.prepareConfig({
     name = "brass",
     order = "c",
@@ -19,38 +21,38 @@ local create = atom.processing.create(config)
 local zinc = atom.processing.materials.zinc
 
 local function addSmallIconRight(recipe, icon)
-    table.insert(recipe.icons, atom.util.icon.createSmallIcon(icon, "top-right"))
+    table.insert(recipe.prototype.icons, atom.util.icon.createSmallIcon(icon, "top-right"))
 end
 
 local oreToPlateRecipe = create.oreToPlateRecipe()
-oreToPlateRecipe.ingredients = {
+oreToPlateRecipe.prototype.ingredients = {
     { "copper-ore", 3 },
     { "zinc-ore", 3 }
 }
 addSmallIconRight(oreToPlateRecipe, atom.util.icon.createSmallIcon(zinc.icons.ore))
 
 local dustToPlateRecipe = create.dustToPlateRecipe()
-dustToPlateRecipe.ingredients = {
+dustToPlateRecipe.prototype.ingredients = {
     { "5d-copper-dust", 6 },
     { "atom-zinc-dust", 6 }
 }
 addSmallIconRight(dustToPlateRecipe, atom.util.icon.createSmallIcon(zinc.icons.dust))
 
 local ingotToPlateRecipe = create.ingotToPlateRecipe()
-ingotToPlateRecipe.ingredients = {
+ingotToPlateRecipe.prototype.ingredients = {
     { name = "se-copper-ingot", amount = 1 },
     { name = "zinc-ingot", amount = 1 }
 }
 addSmallIconRight(ingotToPlateRecipe, atom.util.icon.createSmallIcon(zinc.icons.ingot))
 
 local ingotToMoltenRecipe = create.ingotToMoltenRecipe()
-ingotToMoltenRecipe.ingredients = {
+ingotToMoltenRecipe.prototype.ingredients = {
     { name = "se-copper-ingot", amount = 1 },
     { name = "zinc-ingot", amount = 1 }
 }
 addSmallIconRight(ingotToMoltenRecipe, atom.util.icon.createSmallIcon(zinc.icons.ingot))
 
-data:extend({
+atom.util.applyAll({
     oreToPlateRecipe,
     dustToPlateRecipe,
     ingotToPlateRecipe,

@@ -1,3 +1,5 @@
+local Recipe = atom.util.Recipe
+
 local config = atom.processing.util.prepareConfig({
     name = "aluminum",
     order = "b",
@@ -31,7 +33,7 @@ local config = atom.processing.util.prepareConfig({
     },
 })
 
-local oreToAluminaRecipe = {
+local oreToAluminaRecipe = Recipe({
     type = "recipe",
     name = "atom-alumina-ore",
     icons = {
@@ -49,9 +51,9 @@ local oreToAluminaRecipe = {
     },
     main_product = config.itemNames.alumina,
     enabled = config.enableAtStart or false
-}
+})
 
-local aluminaToPlateRecipe = {
+local aluminaToPlateRecipe = Recipe({
     type = "recipe",
     name = "atom-" .. config.name .. "-plate",
     icons = {
@@ -65,10 +67,10 @@ local aluminaToPlateRecipe = {
     },
     results = { { name = config.itemNames.plate, amount = 6 } },
     enabled = config.enableAtStart or false
-}
+})
+aluminaToPlateRecipe.allowProductivity()
 
-
-local dustToAluminaRecipe = {
+local dustToAluminaRecipe = Recipe({
     type = "recipe",
     name = "atom-alumina-dust",
     icons = {
@@ -86,11 +88,12 @@ local dustToAluminaRecipe = {
     },
     main_product = config.itemNames.alumina,
     enabled = false
-}
+})
+dustToAluminaRecipe.unlockedByTechnology("5d-masher-1")
 
 local create = atom.processing.create(config)
 
-data:extend({
+atom.util.applyAll({
     oreToAluminaRecipe,
     aluminaToPlateRecipe,
     dustToAluminaRecipe,
@@ -108,9 +111,6 @@ data:extend({
     create.item("pellets"),
     create.item("dust")
 })
-
-atom.util.recipe.allowProductivity(aluminaToPlateRecipe.name)
-atom.util.recipe.unlockedByTechnology(dustToAluminaRecipe.name, "5d-masher-1")
 
 atom.processing.util.finalizeConfig(config)
 

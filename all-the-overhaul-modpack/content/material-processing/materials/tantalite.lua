@@ -45,28 +45,28 @@ local dustToIngotRecipe = createTantalum.dustToIngotRecipe()
 local dustToEnrichedRecipe = createTantalum.dustToEnrichedRecipe()
 local dustToPureRecipe = createTantalum.dustToPureRecipe()
 
-oreToPlateRecipe.results = {
+oreToPlateRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.plate, amount_min = 1, amount_max = 2 },
     { name = niobiumConfig.itemNames.plate, amount_min = 1, amount_max = 2 }
 }
-dustToPlateRecipe.results = {
+dustToPlateRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.plate, amount = 2 },
     { name = niobiumConfig.itemNames.plate, amount = 2 }
 }
-dustToIngotRecipe.results = {
+dustToIngotRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.ingot, amount = 1 },
     { name = niobiumConfig.itemNames.ingot, amount = 1 }
 }
-dustToEnrichedRecipe.results = {
+dustToEnrichedRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.enriched, amount = 3 },
     { name = niobiumConfig.itemNames.enriched, amount = 3 }
 }
-dustToPureRecipe.results = {
+dustToPureRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.pure, amount = 3 },
     { name = niobiumConfig.itemNames.pure, amount = 3 }
 }
 
-data:extend({
+atom.util.applyAll({
     oreToPlateRecipe,
     createTantalum.oreToDustRecipe(),
     dustToPlateRecipe,
@@ -86,7 +86,7 @@ data:extend({
 
 local createNiobium = atom.processing.create(niobiumConfig)
 
-data:extend({
+atom.util.applyAll({
     createNiobium.ingotToPlateRecipe(),
     createNiobium.ingotToMoltenRecipe(),
     createNiobium.moltenToPlateRecipe(),

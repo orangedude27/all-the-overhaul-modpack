@@ -1,3 +1,5 @@
+local Recipe = atom.util.Recipe
+
 local config = atom.processing.util.prepareConfig({
     name = "stone",
     order = "w",
@@ -14,7 +16,7 @@ local config = atom.processing.util.prepareConfig({
     unlockedBy = {}
 })
 
-local dustToSandRecipe = {
+local dustToSandRecipe = Recipe({
     type = "recipe",
     name = "atom-" .. config.name .. "-sand",
     icons = { config.icons.sand },
@@ -27,17 +29,16 @@ local dustToSandRecipe = {
         { name = config.itemNames.sand, amount = 10 },
     },
     enabled = false
-}
+})
+dustToSandRecipe.unlockedByTechnology("5d-masher-1")
 
 local create = atom.processing.create(config)
 
-data:extend({
+atom.util.applyAll({
     dustToSandRecipe,
     create.oreToDustRecipe(),
     create.item("dust")
 })
-
-atom.util.recipe.unlockedByTechnology(dustToSandRecipe.name, "5d-masher-1")
 
 atom.processing.util.setItemIcons(config)
 atom.processing.util.setSubGroup(config)

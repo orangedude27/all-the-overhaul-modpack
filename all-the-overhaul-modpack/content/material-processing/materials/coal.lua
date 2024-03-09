@@ -24,10 +24,10 @@ carbon.fuel_category = "chemical"
 carbon.fuel_value = "3MJ"
 
 local dustToPlateRecipe = create.dustToPlateRecipe()
-dustToPlateRecipe.results[1].amount = 12
-dustToPlateRecipe.results[1].probability = 1
+dustToPlateRecipe.prototype.results[1].amount = 12
+dustToPlateRecipe.prototype.results[1].probability = 1
 
-data:extend({
+atom.util.applyAll({
     create.oreToDustRecipe(),
     dustToPlateRecipe,
     dust,

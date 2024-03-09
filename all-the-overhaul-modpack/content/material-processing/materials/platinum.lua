@@ -1,3 +1,5 @@
+local Recipe = atom.util.Recipe
+
 local config = atom.processing.util.prepareConfig({
     name = "platinum",
     order = "u",
@@ -28,7 +30,7 @@ local config = atom.processing.util.prepareConfig({
 local create = atom.processing.create(config)
 
 -- Raw rare metals to platinum powder
-local oreToDustRecipe = {
+local oreToDustRecipe = Recipe({
     type = "recipe",
     name = "atom-" .. config.name .. "-dust",
     icons = {
@@ -47,26 +49,25 @@ local oreToDustRecipe = {
     },
     main_product = config.itemNames.dust,
     enabled = false
-}
+})
+oreToDustRecipe.unlockedByTechnology(config.unlockedBy.oreToDust)
 
 local dustToIngotRecipe = create.dustToIngotRecipe()
-dustToIngotRecipe.results[2].amount = 6
+dustToIngotRecipe.prototype.results[2].amount = 6
 
 local dustToEnrichedRecipe = create.dustToEnrichedRecipe()
-dustToEnrichedRecipe.ingredients[1].amount = 10
+dustToEnrichedRecipe.prototype.ingredients[1].amount = 10
 
 local enrichedToIngotRecipe = create.enrichedToIngotRecipe()
-enrichedToIngotRecipe.results[1].amount = 6
+enrichedToIngotRecipe.prototype.results[1].amount = 6
 
-data:extend({
+atom.util.applyAll({
     oreToDustRecipe,
     dustToIngotRecipe,
     dustToEnrichedRecipe,
     enrichedToIngotRecipe,
     create.item("enriched")
 })
-
-atom.util.recipe.unlockedByTechnology(oreToDustRecipe.name, config.unlockedBy.oreToDust)
 
 atom.processing.util.finalizeConfig(config)
 

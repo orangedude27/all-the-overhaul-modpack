@@ -25,7 +25,7 @@ local config = atom.processing.util.prepareConfig({
 
 local create = atom.processing.create(config)
 
-data:extend({
+atom.util.applyAll({
     create.oreToDustRecipe(),
     create.dustToIngotRecipe(),
     create.ingotToPlateRecipe(),

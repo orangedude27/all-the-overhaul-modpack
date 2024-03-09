@@ -118,7 +118,7 @@ end
 -- @return The instantiated factory (see factory.lua)
 processing.createDefaultData = function(config)
     local create = atom.processing.create(config)
-    data:extend({
+    atom.util.applyAll({
         create.oreToPlateRecipe(),
         create.oreToDustRecipe(),
         create.dustToPlateRecipe(),

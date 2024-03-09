@@ -1,3 +1,5 @@
+local Recipe = atom.util.Recipe
+
 -- Factory to create recipes and icons for a given material
 -- Uses the config as described in util.lua
 atom.processing.create = function(config)
@@ -6,7 +8,7 @@ atom.processing.create = function(config)
             -- -50%
             local results = config.additionalResults.oreToPlate or {}
             table.insert(results, { name = config.itemNames.plate, amount = 3 })
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate",
                 icons = {
@@ -21,14 +23,14 @@ atom.processing.create = function(config)
                 results = results,
                 main_product = config.itemNames.plate,
                 enabled = config.enableAtStart or false
-            }
-            atom.util.recipe.allowProductivity(recipe.name)
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.oreToPlate)
+            })
+            recipe.allowProductivity()
+            recipe.unlockedByTechnology(config.unlockedBy.oreToPlate)
             return recipe
         end,
 
         oreToDustRecipe = function()
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-dust",
                 icons = { config.icons.dust },
@@ -41,8 +43,8 @@ atom.processing.create = function(config)
                     { name = config.itemNames.dust, amount = 12 },
                 },
                 enabled = false
-            }
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.oreToDust or "5d-masher-1")
+            })
+            recipe.unlockedByTechnology(config.unlockedBy.oreToDust or "5d-masher-1")
             return recipe
         end,
 
@@ -51,7 +53,7 @@ atom.processing.create = function(config)
             local results = config.additionalResults.dustToPlate or {}
             table.insert(results, { name = config.itemNames.plate, amount = 3 })
             table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 0.84 })
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate-dust",
                 icons = {
@@ -66,9 +68,9 @@ atom.processing.create = function(config)
                 results = results,
                 main_product = config.itemNames.plate,
                 enabled = false
-            }
-            atom.util.recipe.allowProductivity(recipe.name)
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.dustToPlate or "5d-masher-1")
+            })
+            recipe.allowProductivity()
+            recipe.unlockedByTechnology(config.unlockedBy.dustToPlate or "5d-masher-1")
             return recipe
         end,
 
@@ -76,7 +78,7 @@ atom.processing.create = function(config)
             local additionalIngredient = config.additionalIngredient.dustToIngot or nil
             local results = config.additionalResults.dustToIngot or {}
             table.insert(results, { name = config.itemNames.ingot, amount = 2 })
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-ingot",
                 icons = {
@@ -92,9 +94,9 @@ atom.processing.create = function(config)
                 results = results,
                 main_product = config.itemNames.ingot,
                 enabled = false
-            }
-            atom.util.recipe.allowProductivity(recipe.name)
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.dustToIngot or "atom-advanced-ore-processing-1")
+            })
+            recipe.allowProductivity()
+            recipe.unlockedByTechnology(config.unlockedBy.dustToIngot or "atom-advanced-ore-processing-1")
             return recipe
         end,
 
@@ -104,7 +106,7 @@ atom.processing.create = function(config)
             local results = config.additionalResults.ingotToPlate or {}
             table.insert(results, { name = config.itemNames.plate, amount = 5 })
             table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 0.34 })
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate-ingot",
                 icons = {
@@ -120,14 +122,14 @@ atom.processing.create = function(config)
                 results = results,
                 main_product = config.itemNames.plate,
                 enabled = false
-            }
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.ingotToPlate or "atom-advanced-ore-processing-1")
+            })
+            recipe.unlockedByTechnology(config.unlockedBy.ingotToPlate or "atom-advanced-ore-processing-1")
             return recipe
         end,
 
         ingotToMoltenRecipe = function()
             -- +33%
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-molten",
                 icons = {
@@ -144,13 +146,13 @@ atom.processing.create = function(config)
                     { type = "fluid", name = config.itemNames.molten, amount = 400 },
                 },
                 enabled = false
-            }
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.ingotToMolten or "atom-advanced-ore-processing-2")
+            })
+            recipe.unlockedByTechnology(config.unlockedBy.ingotToMolten or "atom-advanced-ore-processing-2")
             return recipe
         end,
 
         moltenToPlateRecipe = function()
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate-molten",
                 icons = {
@@ -166,8 +168,8 @@ atom.processing.create = function(config)
                     { name = config.itemNames.plate, amount = 6 },
                 },
                 enabled = false
-            }
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.moltenToPlate or "atom-advanced-ore-processing-2")
+            })
+            recipe.unlockedByTechnology(config.unlockedBy.moltenToPlate or "atom-advanced-ore-processing-2")
             return recipe
         end,
 
@@ -175,7 +177,7 @@ atom.processing.create = function(config)
             local results = config.additionalResults.dustToEnriched or {}
             table.insert(results, { name = config.itemNames.enriched, amount = 6 })
             table.insert(results, { type = "fluid", name = "dirty-water", amount = 370 })
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-enrichment",
                 icons = {
@@ -191,15 +193,15 @@ atom.processing.create = function(config)
                 results = results,
                 main_product = config.itemNames.enriched,
                 enabled = false
-            }
-            atom.util.recipe.allowProductivity(recipe.name)
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.dustToEnriched or "atom-advanced-ore-processing-2")
+            })
+            recipe.allowProductivity()
+            recipe.unlockedByTechnology(config.unlockedBy.dustToEnriched or "atom-advanced-ore-processing-2")
             return recipe
         end,
 
         enrichedToIngotRecipe = function()
             local additionalIngredient = config.additionalIngredient.enrichedToIngot or nil
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-ingot-enriched",
                 icons = {
@@ -216,9 +218,9 @@ atom.processing.create = function(config)
                     { name = config.itemNames.ingot, amount = 2 },
                 },
                 enabled = false
-            }
-            atom.util.recipe.allowProductivity(recipe.name)
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.enrichedToIngot or "atom-advanced-ore-processing-2")
+            })
+            recipe.allowProductivity()
+            recipe.unlockedByTechnology(config.unlockedBy.enrichedToIngot or "atom-advanced-ore-processing-2")
             return recipe
         end,
 
@@ -226,7 +228,7 @@ atom.processing.create = function(config)
             local additionalIngredient = config.additionalIngredient.dustToPure or { type = "fluid", name = "sulfuric-acid", amount = 4 }
             local results = config.additionalResults.dustToPure or {}
             table.insert(results, { name = config.itemNames.pure, amount = 6 })
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-slurry",
                 icons = {
@@ -242,9 +244,9 @@ atom.processing.create = function(config)
                 results = results,
                 main_product = config.itemNames.pure,
                 enabled = false
-            }
-            atom.util.recipe.allowProductivity(recipe.name)
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.dustToPure or "atom-advanced-ore-processing-3")
+            })
+            recipe.allowProductivity()
+            recipe.unlockedByTechnology(config.unlockedBy.dustToPure or "atom-advanced-ore-processing-3")
             return recipe
         end,
 
@@ -252,7 +254,7 @@ atom.processing.create = function(config)
             local results = config.additionalResults.pureToEnriched or {}
             table.insert(results, { name = config.itemNames.enriched, amount = 6 })
             table.insert(results, { type = "fluid", name = "dirty-water", amount = 370 })
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-enriched-pure",
                 icons = {
@@ -268,15 +270,15 @@ atom.processing.create = function(config)
                 results = results,
                 main_product = config.itemNames.enriched,
                 enabled = false
-            }
-            atom.util.recipe.allowProductivity(recipe.name)
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.pureToEnriched or "atom-advanced-ore-processing-3")
+            })
+            recipe.allowProductivity()
+            recipe.unlockedByTechnology(config.unlockedBy.pureToEnriched or "atom-advanced-ore-processing-3")
             return recipe
         end,
 
         enrichedToPelletsRecipe = function()
             local additionalIngredient = config.additionalIngredient.enrichedToPellets or nil
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-pellets",
                 icons = {
@@ -293,15 +295,15 @@ atom.processing.create = function(config)
                     { name = config.itemNames.pellets, amount = 6 }
                 },
                 enabled = false
-            }
-            atom.util.recipe.allowProductivity(recipe.name)
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.enrichedToPellets or "atom-advanced-ore-processing-4")
+            })
+            recipe.allowProductivity()
+            recipe.unlockedByTechnology(config.unlockedBy.enrichedToPellets or "atom-advanced-ore-processing-4")
             return recipe
         end,
 
         pelletsToIngotRecipe = function()
             local additionalIngredient = config.additionalIngredient.pelletsToIngot or { name = "quicklime", amount = 1 }
-            local recipe = {
+            local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-ingot-pellets",
                 icons = {
@@ -318,9 +320,9 @@ atom.processing.create = function(config)
                     { name = config.itemNames.ingot, amount = 2 }
                 },
                 enabled = false
-            }
-            atom.util.recipe.allowProductivity(recipe.name)
-            atom.util.recipe.unlockedByTechnology(recipe.name, config.unlockedBy.pelletsToIngot or "atom-advanced-ore-processing-4")
+            })
+            recipe.allowProductivity()
+            recipe.unlockedByTechnology(config.unlockedBy.pelletsToIngot or "atom-advanced-ore-processing-4")
             return recipe
         end,
 
