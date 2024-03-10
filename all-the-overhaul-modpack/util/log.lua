@@ -1,23 +1,24 @@
-local function logLevel(level, value)
-    if type(value) == "table" then
-        log(level .. ": " .. serpent.block(value))
-    else
-        log(level .. ": " .. value)
+local function logLevel(level, ...)
+    local args = table.pack(...)
+    local result = level .. ":"
+    for i = 1, args.n do
+        result = result .. " " .. (type(args[i]) == "table" and serpent.block(args[i]) or args[i])
     end
+    log(result)
 end
 
 atom.util.log = {
-    debug = function(value)
+    debug = function(...)
         if atom.debug then
-            logLevel("DEBUG", value)
+            logLevel("DEBUG", ...)
         end
     end,
 
-    error = function(value)
-        logLevel("ERROR", value)
+    error = function(...)
+        logLevel("ERROR", ...)
     end,
 
-    info = function(value)
-        logLevel("INFO", value)
+    info = function(...)
+        logLevel("INFO", ...)
     end
 }

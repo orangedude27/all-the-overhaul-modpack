@@ -41,7 +41,7 @@ atom.util.recipe.replaceResult("fi_crushed_stone_item", "atom-stone-dust")
 local fi_purify_stone_recipe = atom.util.Recipe("el_purify_stone_acidic_recipe")
 fi_purify_stone_recipe.replaceResult("el_materials_pure_iron", "5d-iron-dust", 3)
 fi_purify_stone_recipe.replaceResult("el_materials_pure_copper", "5d-copper-dust", 3)
-fi_purify_stone_recipe.replaceResult("el_dirty_water", "dirty-water", 3)
+fi_purify_stone_recipe.replaceResult("el_dirty_water", "dirty-water", 40)
 
 -- Remove dirty water and rich water since it competes with the ATOM ore refining process
 atom.util.item.removeByName("el_dirty_water")

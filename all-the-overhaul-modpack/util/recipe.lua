@@ -133,7 +133,7 @@ atom.util.recipe = {
 -- Pass a recipe name or a recipe table to get a Recipe object
 -- @param value string|table The name of the recipe or the recipe table
 function atom.util.Recipe(value)
-    local recipeName
+    local recipeName -- Don't use this in functions as the actual name might change
     local recipe
 
     if type(value) == "string" then
@@ -240,7 +240,7 @@ function atom.util.Recipe(value)
         allowProductivity = function()
             for _, module in pairs(productivityModules) do
                 if (module.limitation) then
-                    table.insert(module.limitation, recipeName)
+                    table.insert(module.limitation, recipe.name)
                 end
             end
         end,
@@ -253,11 +253,11 @@ function atom.util.Recipe(value)
                 return
             end
             for _, effect in pairs(data.raw.technology[technologyName].effects) do
-                if effect.type == "unlock-recipe" and effect.recipe == recipeName then
+                if effect.type == "unlock-recipe" and effect.recipe == recipe.name then
                     return
                 end
             end
-            table.insert(data.raw.technology[technologyName].effects, { type = "unlock-recipe", recipe = recipeName })
+            table.insert(data.raw.technology[technologyName].effects, { type = "unlock-recipe", recipe = recipe.name })
         end,
     }
 end

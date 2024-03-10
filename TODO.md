@@ -5,7 +5,7 @@
 - ~~Add Zirconium to ore processing (https://discord.com/channels/1174743568590590053/1215242462881390634)~~
   - ~~Idea: Just add dust. The rest stays normal.~~
   - ~~Remove enriched/pure zircon~~ I incorperated the enriched into the final phase of the zirconium processing
-- Balance dirty water treatment (https://discord.com/channels/1174743568590590053/1215242462881390634)
+- ~~Balance dirty water treatment (https://discord.com/channels/1174743568590590053/1215242462881390634)~~
 - ~~Remove empty technologies (https://discord.com/channels/1174743568590590053/1215242462881390634)~~
 - Add balancing changes from https://discord.com/channels/1174743568590590053/1204040791916421181
 - Balance core fragment processing (https://discord.com/channels/1174743568590590053/1204040791916421181)
@@ -22,3 +22,9 @@
 - Tweak colors of lead
   - Ingot has the wrong color
   - Overall the colors don't remind of the old lead look and don't fit the ore color
+- Properly integrate Bio industries
+  - The wood recipes are far worse than the K2 ones. There is no reason to use them.
+- Improve turret balance
+  - Big turrets are OP
+  - Small turrets are useless
+  - Maybe add a different mod for warfare?

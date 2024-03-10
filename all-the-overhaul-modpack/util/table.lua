@@ -10,3 +10,12 @@ function table.contains(table, value)
     end
     return false
 end
+
+-- Assigns all values from source to target
+-- @param target table The table to assign to
+-- @param source table The table to assign from
+function table.assign(target, source)
+    for k, v in pairs(source) do
+        target[k] = v
+    end
+end
