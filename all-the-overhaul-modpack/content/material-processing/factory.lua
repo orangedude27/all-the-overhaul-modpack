@@ -21,6 +21,7 @@ atom.processing.create = function(config)
                     { config.itemNames.ore, 6 }
                 },
                 results = results,
+                subgroup = config.subgroup,
                 main_product = config.itemNames.plate,
                 enabled = config.enableAtStart or false
             })
@@ -42,6 +43,7 @@ atom.processing.create = function(config)
                 results = {
                     { name = config.itemNames.dust, amount = 12 },
                 },
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.unlockedByTechnology(config.unlockedBy.oreToDust or "5d-masher-1")
@@ -67,6 +69,7 @@ atom.processing.create = function(config)
                 },
                 results = results,
                 main_product = config.itemNames.plate,
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.allowProductivity()
@@ -93,6 +96,7 @@ atom.processing.create = function(config)
                 },
                 results = results,
                 main_product = config.itemNames.ingot,
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.allowProductivity()
@@ -121,6 +125,7 @@ atom.processing.create = function(config)
                 },
                 results = results,
                 main_product = config.itemNames.plate,
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.unlockedByTechnology(config.unlockedBy.ingotToPlate or "atom-advanced-ore-processing-1")
@@ -145,6 +150,7 @@ atom.processing.create = function(config)
                 results = {
                     { type = "fluid", name = config.itemNames.molten, amount = 400 },
                 },
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.unlockedByTechnology(config.unlockedBy.ingotToMolten or "atom-advanced-ore-processing-2")
@@ -167,6 +173,7 @@ atom.processing.create = function(config)
                 results = {
                     { name = config.itemNames.plate, amount = 6 },
                 },
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.unlockedByTechnology(config.unlockedBy.moltenToPlate or "atom-advanced-ore-processing-2")
@@ -192,6 +199,7 @@ atom.processing.create = function(config)
                 },
                 results = results,
                 main_product = config.itemNames.enriched,
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.allowProductivity()
@@ -217,6 +225,7 @@ atom.processing.create = function(config)
                 results = {
                     { name = config.itemNames.ingot, amount = 2 },
                 },
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.allowProductivity()
@@ -243,6 +252,7 @@ atom.processing.create = function(config)
                 },
                 results = results,
                 main_product = config.itemNames.pure,
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.allowProductivity()
@@ -269,6 +279,7 @@ atom.processing.create = function(config)
                 },
                 results = results,
                 main_product = config.itemNames.enriched,
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.allowProductivity()
@@ -294,6 +305,7 @@ atom.processing.create = function(config)
                 results = {
                     { name = config.itemNames.pellets, amount = 6 }
                 },
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.allowProductivity()
@@ -319,6 +331,7 @@ atom.processing.create = function(config)
                 results = {
                     { name = config.itemNames.ingot, amount = 2 }
                 },
+                subgroup = config.subgroup,
                 enabled = false
             })
             recipe.allowProductivity()

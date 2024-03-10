@@ -109,6 +109,7 @@ processing.prepareConfig = function(config)
     config.additionalResults = config.additionalResults or {}
     config.additionalIngredient = config.additionalIngredient or {}
     config.unlockedBy = config.unlockedBy or {}
+    config.subgroup = config.subgroup or ""
     createDefaultIcons()
 
     return config
