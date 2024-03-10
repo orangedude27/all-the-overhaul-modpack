@@ -5,6 +5,8 @@ for _, module in pairs(data.raw["module"]) do
     end
 end
 
+-- Utility function for multiple recipes
+-- See atom.util.Recipe for function for a single recipe
 atom.util.recipe = {
     -- Removes a recipe by name together with all its dependencies
     -- @param name string The name of the recipe
@@ -102,10 +104,32 @@ atom.util.recipe = {
             atom.util.log.debug("  " .. recipe)
             atom.util.recipe.removeByName(recipe)
         end
+    end,
+
+    -- Replaces an existing ingredient by name with a new ingredient on all recipes
+    -- @param old string The name of the existing ingredient
+    -- @param new string The name of the new ingredient
+    -- @param amount? number The amount of the new ingredient (keeps the old value if not set)
+    -- @param expensiveAmount? number The amount of the new ingredient for the expensive recipe (uses amount if not set)
+    replaceIngredient = function(old, new, amount, expensiveAmount)
+        for _, recipe in pairs(data.raw.recipe) do
+            atom.util.Recipe(recipe).replaceIngredient(old, new, amount, expensiveAmount)
+        end
+    end,
+
+    -- Replaces an existing result by name with a new result on all recipes
+    -- @param old string The name of the existing result
+    -- @param new string The name of the new result
+    -- @param amount? number The amount of the new result (keeps the old value if not set)
+    -- @param expensiveAmount? number The amount of the new result for the expensive recipe (uses amount if not set)
+    replaceResult = function(old, new, amount, expensiveAmount)
+        for _, recipe in pairs(data.raw.recipe) do
+            atom.util.Recipe(recipe).replaceResult(old, new, amount, expensiveAmount)
+        end
     end
 }
 
--- Utility class for recipes
+-- Utility class for a single recipe
 -- Pass a recipe name or a recipe table to get a Recipe object
 -- @param value string|table The name of the recipe or the recipe table
 function atom.util.Recipe(value)
@@ -134,15 +158,45 @@ function atom.util.Recipe(value)
             data:extend({ recipe })
         end,
 
+        -- Replaces an existing ingredient by name with a new ingredient
+        -- @param old string The name of the existing ingredient
+        -- @param new string The name of the new ingredient
+        -- @param amount number The amount of the new ingredient
+        -- @param expensiveAmount? number The amount of the new ingredient for the expensive recipe
+        replaceIngredient = function(old, new, amount, expensiveAmount)
+            local function table(table, amount)
+                for _, result in pairs(table.ingredients) do
+                    if result.name == old then
+                        result.name = new
+                        result.amount = amount or result.amount
+                    elseif result[1] == old then
+                        result[1] = new
+                        result[2] = amount or result[2]
+                    end
+                end
+            end
+            if recipe.ingredients then
+                table(recipe, amount)
+            end
+            if recipe.normal and recipe.normal.ingredients then
+                table(recipe.normal, amount)
+            end
+            if recipe.expensive and recipe.expensive.ingredients then
+                table(recipe.expensive, expensiveAmount or amount)
+            end
+        end,
+
         -- Replaces an existing result by name with a new result
         -- @param old string The name of the existing result
         -- @param new string The name of the new result
-        -- @param amount number The amount of the new result
-        -- @param expensiveAmount? number The amount of the new result for the expensive recipe
+        -- @param amount? number The amount of the new result (keeps the old value if not set)
+        -- @param expensiveAmount? number The amount of the new result for the expensive recipe (uses amount if not set)
         replaceResult = function(old, new, amount, expensiveAmount)
             local function flat(table, amount)
-                table.result = new
-                table.result_count = amount
+                if table.result == old then
+                    table.result = new
+                    table.result_count = amount or table.result_count
+                end
                 if table.main_product == old then
                     table.main_product = new
                 end
@@ -151,10 +205,10 @@ function atom.util.Recipe(value)
                 for _, result in pairs(table.results) do
                     if result.name == old then
                         result.name = new
-                        result.amount = amount
+                        result.amount = amount or result.amount
                     elseif result[1] == old then
                         result[1] = new
-                        result[2] = amount
+                        result[2] = amount or result[2]
                     end
                 end
                 if table.main_product == old then

@@ -1,5 +1,3 @@
-local util = require("_data-util")
-
 -- Advanced ore processing 1
 local processing1 = table.deepcopy(data.raw.technology["se-pyroflux-smelting"])
 processing1.name = "atom-advanced-ore-processing-1"
