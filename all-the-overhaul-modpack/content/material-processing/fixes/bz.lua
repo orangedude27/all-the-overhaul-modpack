@@ -26,6 +26,7 @@ atom.util.recipe.removeByName("platinum-ingot")
 atom.util.recipe.removeByName("palladium-ingot")
 atom.util.recipe.removeByName("graphite-5d")
 atom.util.recipe.removeByName("zirconia")
+atom.util.recipe.removeByName("enriched-zirconia-smelting")
 atom.util.item.removeByName("tungsten-powder")
 
 -- TODO: Add a replacement for tungsten-carbide-casting to the new processing
