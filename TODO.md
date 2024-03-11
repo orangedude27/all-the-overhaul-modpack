@@ -1,10 +1,10 @@
 # TODO list
 ## High priority
 - Check problem with Jetpack giving additional slots while flying (https://discord.com/channels/1174743568590590053/1214557218628960256)
-- Normal pipes can be placed both on water and in space (https://discord.com/channels/1174743568590590053/1212060319506235424)
-- Add Zirconium to ore processing (https://discord.com/channels/1174743568590590053/1215242462881390634)
-  - Idea: Just add dust. The rest stays normal.
-  - Remove enriched/pure zircon
+- ~~Normal pipes can be placed both on water and in space (https://discord.com/channels/1174743568590590053/1212060319506235424)~~
+- ~~Add Zirconium to ore processing (https://discord.com/channels/1174743568590590053/1215242462881390634)~~
+  - ~~Idea: Just add dust. The rest stays normal.~~
+  - ~~Remove enriched/pure zircon~~ I incorperated the enriched into the final phase of the zirconium processing
 - Balance dirty water treatment (https://discord.com/channels/1174743568590590053/1215242462881390634)
 - ~~Remove empty technologies (https://discord.com/channels/1174743568590590053/1215242462881390634)~~
 - Add balancing changes from https://discord.com/channels/1174743568590590053/1204040791916421181
