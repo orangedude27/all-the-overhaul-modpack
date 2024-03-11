@@ -1,5 +1,6 @@
 {
     "recipe": [
-        ["ato-biomass-growing", "atom-biomass-growing"]
+        ["ato-biomass-growing", "atom-biomass-growing"],
+        ["zirconia", "atom-zirconium-plate"]
     ]
 }
