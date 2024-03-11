@@ -2,7 +2,6 @@ local data_util = {}
 local debug = false
 data_util.mod_name = "all-the-overhaul-modpack"
 data_util.mod_path = "__" .. data_util.mod_name .. "__"
-data_util.str_gsub = string.gsub
 
 data_util.char_to_multiplier = {
   m = 0.001,
@@ -913,31 +912,6 @@ function data_util.allow_productivity(recipe_name)
   end
 end
 
----Replaces string
----@param str #What to replace
----@param what  string #File that is replaced
----@param with string #File to replace with
-function data_util.replace(str, what, with)
-  what = data_util.str_gsub(what, "[%(%)%.%+%-%*%?%[%]%^%$%%]", "%%%1") -- escape pattern
-  with = data_util.str_gsub(with, "[%%]", "%%%%")                       -- escape replacement
-  return data_util.str_gsub(str, what, with)
-end
-
---- Replaces files with new ones
----@param subject  #What to replace
----@param what  string #File that is replaced
----@param with string #File to replace with
-function data_util.replace_filenames_recursive(subject, what, with)
-  if subject.filename then
-    subject.filename = data_util.replace(subject.filename, what, with)
-  end
-  for _, sub in pairs(subject) do
-    if (type(sub) == "table") then
-      data_util.replace_filenames_recursive(sub, what, with)
-    end
-  end
-end
-
 --- No idea, somthing to do with high resolution
 function data_util.auto_sr_hr(hr_version)
   local sr_version = table.deepcopy(hr_version)
@@ -956,8 +930,8 @@ function data_util.auto_sr_hr(hr_version)
   if hr_version.y then
     sr_version.y = math.floor(hr_version.y / 2)
   end
-  sr_version.filename = data_util.replace(sr_version.filename, "/hr/", "/sr/")
-  sr_version.filename = data_util.replace(sr_version.filename, "/hr-", "/")
+  sr_version.filename = string.replace(sr_version.filename, "/hr/", "/sr/")
+  sr_version.filename = string.replace(sr_version.filename, "/hr-", "/")
   sr_version.hr_version = hr_version
   return sr_version
 end
