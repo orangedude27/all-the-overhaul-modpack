@@ -55,3 +55,16 @@ data.raw.technology["fi_purifier_tech"] = nil
 data.raw.technology["fi_purifier_2_tech"] = nil
 data.raw.technology["fi_caster_tech"] = nil
 data.raw.technology["fi_flourite_tech"] = nil
+
+-- Merge 248k lithium into K2 lithium
+local lithium248k = data.raw.technology["el_lithium_tech"]
+local lithiumK2 = data.raw.technology["kr-lithium-processing"]
+atom.util.technology.replacePrerequisite("kr-lithium-processing", "kr-advanced-chemistry")
+table.assign(lithium248k.effects, lithiumK2.effects)
+table.assign(lithium248k, {
+    icon = lithiumK2.icon,
+    icon_size = lithiumK2.icon_size,
+    icon_mipmaps = lithiumK2.icon_mipmaps,
+})
+data.raw.technology["kr-lithium-processing"] = nil
+atom.util.item.removeByName("el_lithium_item")

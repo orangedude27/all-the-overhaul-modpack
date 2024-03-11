@@ -99,6 +99,3 @@ end
 
 data.raw.item["fu_materials_carbon_fiber"].localised_name = "Graphite fiber"
 data.raw.item["fu_materials_KFK"].localised_name = "Graphite fiber reinforced plastic"
-data.raw.item["el_lithium_item"].localised_name = "Lithium crystal"
-data.raw.fluid["el_dirty_water"].localised_name = "Cloudy water"
-data.raw.item["fi_materials_dirty_solution"].localised_name = "Cloudy water container"

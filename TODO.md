@@ -9,7 +9,7 @@
 - ~~Remove empty technologies (https://discord.com/channels/1174743568590590053/1215242462881390634)~~
 - Add balancing changes from https://discord.com/channels/1174743568590590053/1204040791916421181
 - Balance core fragment processing (https://discord.com/channels/1174743568590590053/1204040791916421181)
-- Remove Lithium crystal since it has no use anymore (https://discord.com/channels/1174743568590590053/1174903449155010580/1216267818010673202)
+- ~~Remove Lithium crystal since it has no use anymore (https://discord.com/channels/1174743568590590053/1174903449155010580/1216267818010673202)~~
 - Remove molten to ingot recipes (they have no use and the icons are broken)
 
 ## Low priority

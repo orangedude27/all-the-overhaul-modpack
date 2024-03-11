@@ -16,6 +16,12 @@ end
 -- @param source table The table to assign from
 function table.assign(target, source)
     for k, v in pairs(source) do
-        target[k] = v
+        if type(k) == "number" then
+            if (v ~= nil) then
+                table.insert(target, v)
+            end
+        else
+            target[k] = v
+        end
     end
 end
