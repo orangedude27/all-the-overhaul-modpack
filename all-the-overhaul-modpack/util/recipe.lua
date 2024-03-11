@@ -245,19 +245,22 @@ function atom.util.Recipe(value)
             end
         end,
 
-        -- Adds a recipe to a technology
-        -- @param recipeName string The name of the recipe
-        -- @param technology string The name of the technology
-        unlockedByTechnology = function(technologyName)
-            if not technologyName then
+        -- Adds the recipe to a technology
+        -- @param technology string|table The name of the technology or the technology table
+        unlockedByTechnology = function(technology)
+            if not technology then
                 return
             end
-            for _, effect in pairs(data.raw.technology[technologyName].effects) do
+            technology = type(technology) == "table" and technology or data.raw.technology[technology]
+            if (not technology.effects) then
+                technology.effects = {}
+            end
+            for _, effect in pairs(technology.effects) do
                 if effect.type == "unlock-recipe" and effect.recipe == recipe.name then
                     return
                 end
             end
-            table.insert(data.raw.technology[technologyName].effects, { type = "unlock-recipe", recipe = recipe.name })
+            table.insert(technology.effects, { type = "unlock-recipe", recipe = recipe.name })
         end,
     }
 end

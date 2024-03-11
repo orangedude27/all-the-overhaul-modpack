@@ -59,32 +59,7 @@ util.tech_add_prerequisites("speed-module-2","fi_modules_1_tech")
 util.tech_add_prerequisites("effectivity-module-2","fi_modules_1_tech")
 util.tech_add_ingredients("bi-tech-bio-farming",{"logistic-science-pack"},false)
 
---Add new technologys
-data:extend {
-    {
-        type = "technology",
-        name = "imersium-walls",
-        icon = "__base__/graphics/technology/stone-wall.png",
-        icon_size = 256,
-        order = "a",
-        prerequisites = { "steel-walls", "military-science-pack" },
-        unit = {
-            count = 400,
-            ingredients = {
-                { "space-science-pack",         1 },
-                { "se-material-science-pack-1", 1 },
-                { "military-science-pack",      1 },
-            },
-            time = 40
-        }
-    }
-}
-
 --Lock recipies behind tech
-util.tech_lock_recipes("imersium-walls", { "imersium-wall" })
-
-util.tech_lock_recipes("military-science-pack", { "ato-biomass-growing" })
-
 util.tech_lock_recipes("optics", { "light-buoy" })
 
 if data.raw.recipe["laser-turret"] then util.tech_lock_recipes("laser-turret", { "sw-electric-turret" }) end
