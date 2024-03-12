@@ -10,7 +10,7 @@
 - Add balancing changes from https://discord.com/channels/1174743568590590053/1204040791916421181
 - Balance core fragment processing (https://discord.com/channels/1174743568590590053/1204040791916421181)
 - ~~Remove Lithium crystal since it has no use anymore (https://discord.com/channels/1174743568590590053/1174903449155010580/1216267818010673202)~~
-- Remove molten to ingot recipes (they have no use and the icons are broken)
+- ~~Remove molten to ingot recipes (they have no use and the icons are broken)~~
 
 ## Low priority
 - Check compatibility with "Realistic fusion power" (https://discord.com/channels/1174743568590590053/1213528601996304455)
@@ -31,3 +31,4 @@
 - The early biomatter recipe uses ingredients that are unavailable when the recipe is unlocked.
   - In addition, it should be less extreme as it currently is.
 - The additional repair packs are useless because they have no additional durability
+- Add a replacement for tungsten-carbide-casting to the new processing
