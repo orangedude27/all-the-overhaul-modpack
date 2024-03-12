@@ -158,12 +158,18 @@ function atom.util.Recipe(value)
             data:extend({ recipe })
         end,
 
-        -- Replaces an existing ingredient by name with a new ingredient
+        -- Replaces an existing ingredient by name with a new ingredient or adjusts the amount
         -- @param old string The name of the existing ingredient
-        -- @param new string The name of the new ingredient
-        -- @param amount number The amount of the new ingredient
+        -- @param new? string The name of the new ingredient
+        -- @param amount? number The amount of the new ingredient
         -- @param expensiveAmount? number The amount of the new ingredient for the expensive recipe
         replaceIngredient = function(old, new, amount, expensiveAmount)
+            if type(new) == "number" then
+                expensiveAmount = amount
+                amount = new
+                new = old
+            end
+
             local function table(table, amount)
                 for _, result in pairs(table.ingredients) do
                     if result.name == old then
@@ -183,6 +189,29 @@ function atom.util.Recipe(value)
             end
             if recipe.expensive and recipe.expensive.ingredients then
                 table(recipe.expensive, expensiveAmount or amount)
+            end
+        end,
+
+        -- Removes an existing ingredient by name
+        -- @param ingredientName string The name of the ingredient
+        removeIngredient = function(ingredientName)
+            local function table(table)
+                for i, result in pairs(table.ingredients) do
+                    if result.name == ingredientName then
+                        table.ingredients[i] = nil
+                    elseif result[1] == ingredientName then
+                        table.ingredients[i] = nil
+                    end
+                end
+            end
+            if recipe.ingredients then
+                table(recipe)
+            end
+            if recipe.normal and recipe.normal.ingredients then
+                table(recipe.normal)
+            end
+            if recipe.expensive and recipe.expensive.ingredients then
+                table(recipe.expensive)
             end
         end,
 

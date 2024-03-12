@@ -1,3 +1,7 @@
 require("5dim")
 require("248k")
 require("k2")
+require("bz")
+require("se")
+require("timeken")
+require("lazing-around")
