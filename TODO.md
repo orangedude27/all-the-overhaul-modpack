@@ -28,5 +28,6 @@
   - Big turrets are OP
   - Small turrets are useless
   - Maybe add a different mod for warfare?
-- The early biomatter recipe needs ingredients that are available when the recipe is unlocked.
+- The early biomatter recipe uses ingredients that are unavailable when the recipe is unlocked.
   - In addition, it should be less extreme as it currently is.
+- The additional repair packs are useless because they have no additional durability
