@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.6
+Date: 3.11.2024
+  Bug Fixes:
+    - Fixed mod update breaking pipes: https://discord.com/channels/1174743568590590053/1216725481416822784
+    - Fixed issue where pipes can be placed on water/space platform
+  Changes:
+    - Merged Lithium technologies: https://discord.com/channels/1174743568590590053/1174903449155010580/1216267818010673202
+    - Balance dirty water treatment: https://discord.com/channels/1174743568590590053/1215242462881390634
+    - Imersium refactor
+    - Biomatter Refactor
+---------------------------------------------------------------------------------------------------
 Version: 1.8.5
 Date: 3.10.2024
   Bug Fixes:
