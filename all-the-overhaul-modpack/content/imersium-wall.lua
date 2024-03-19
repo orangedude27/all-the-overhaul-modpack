@@ -71,7 +71,7 @@ replaceFilenames(entity.pictures, "stone-wall", "imersium-wall")
 
 local technology = {
     type = "technology",
-    name = "imersium-walls",
+    name = item.name,
     icons = { icon },
     order = "a",
     prerequisites = { "steel-walls", "military-science-pack" },
@@ -90,9 +90,9 @@ local recipe = atom.util.Recipe({
     type = "recipe",
     name = item.name,
     category = "bioprocessing",
-    enabled = false,
     energy_required = 1,
     normal = {
+        enabled = false,
         ingredients = {
             { "steel-wall", 1 },
             { "imersium-plate", 5 }
@@ -100,6 +100,7 @@ local recipe = atom.util.Recipe({
         results = { { type = "item", name = item.name, amount = 1 } }
     },
     expensive = {
+        enabled = false,
         ingredients = {
             { "concrete-wall", 1 },
             { "imersium-plate", 10 }
@@ -115,4 +116,3 @@ atom.util.applyAll({
     recipe,
     technology
 })
-
