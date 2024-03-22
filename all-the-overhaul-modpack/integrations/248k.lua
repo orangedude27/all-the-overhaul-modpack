@@ -96,3 +96,7 @@ atom.util.Recipe("se-space-radiator-2").addIngredient("fi_materials_neodym", 15)
 
 -- Adjust quantum processor recipe
 atom.util.Recipe("se-quantum-processor").replaceIngredient("processing-unit", "gr_materials_circuit", 4)
+
+-- Change localized name of a few items that have similar names
+data.raw.recipe["fu_carbon_fiber_recipe"].localised_name = "Graphite fiber"
+data.raw.recipe["fu_KFK_recipe"].localised_name = "Graphite fiber reinforced plastic"

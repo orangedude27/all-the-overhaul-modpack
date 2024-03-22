@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.8
+Date: xx.xx.2024
+  Changes:
+    - Blank tech card recipe with silver is nerfed to better align it with the regular recipe (result count is reduced from 10 to 5)
+---------------------------------------------------------------------------------------------------
 Version: 1.8.7
 Date: 3.13.2024
   Changes:

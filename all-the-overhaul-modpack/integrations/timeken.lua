@@ -14,3 +14,6 @@ table.assign(data["raw"].recipe["low-quality-advanced-circuit"], {
         { amount = 2, name = "se-scrap", probability = 0.25 }
     }
 })
+
+-- Hand crafting fix
+data.raw.recipe["bronze-spring"].allow_as_intermediate = false

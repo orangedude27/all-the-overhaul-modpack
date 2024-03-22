@@ -60,3 +60,6 @@ data.raw.recipe["se-core-fragment-omni"].results = {
     { amount = 6, name = "mineral-water", type = "fluid" },
     { amount = 4, name = "se-pyroflux", type = "fluid" },
 }
+
+-- Remove the alternative singularity card
+atom.util.recipe.removeByName("singularity-tech-card-alt")

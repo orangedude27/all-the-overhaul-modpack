@@ -158,6 +158,13 @@ function atom.util.Recipe(value)
             data:extend({ recipe })
         end,
 
+        -- Assigns data to the recipe
+        -- Shorthand for table.assign(recipe.prototype, data)
+        -- @param data table The data to assign
+        assign = function(data)
+            table.assign(recipe, data)
+        end,
+
         -- Adds an ingredient to the recipe
         -- @param ingredientName string The name of the ingredient
         -- @param amount number The amount of the ingredient

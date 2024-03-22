@@ -24,7 +24,6 @@ atom.util.item = {
             removeFilter("rocket-silo")
         end
 
-
         data.raw.item[name] = nil
         data.raw.fluid[name] = nil
     end
