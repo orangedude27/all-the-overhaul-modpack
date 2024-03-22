@@ -68,3 +68,31 @@ table.assign(lithium248k, {
 })
 data.raw.technology["kr-lithium-processing"] = nil
 atom.util.item.removeByName("el_lithium_item")
+
+-- Adjust low density structure recipe
+local lds = atom.util.Recipe("fi_low-density-structure_recipe")
+lds.addIngredient("titanium-plate", 8)
+lds.addIngredient("diamond", 4)
+lds.addIngredient("zirconia", 20)
+lds.addIngredient("carbon-fiber", 20)
+lds.prototype.category = "crafting"
+
+-- Energy crystal usage
+atom.util.Recipe("productivity-module").addIngredient("el_energy_crystal_item", 10)
+atom.util.Recipe("productivity-module-2").addIngredient("el_energy_crystal_item", 10)
+atom.util.Recipe("big-battery-equipment").addIngredient("el_energy_crystal_item", 4)
+atom.util.Recipe("se-rtg-equipment").addIngredient("el_energy_crystal_item", 4)
+atom.util.Recipe("big-solar-panel-equipment").addIngredient("el_energy_crystal_item", 4)
+
+-- Refined crystal usage
+atom.util.Recipe("productivity-module-3").replaceIngredient("mlcc", "fu_materials_refined_crystal", 4)
+atom.util.Recipe("big-battery-mk2-equipment").addIngredient("fu_materials_refined_crystal", 4)
+atom.util.Recipe("big-imersite-solar-panel-equipment").addIngredient("fu_materials_refined_crystal", 4)
+
+-- Neodymium usage
+atom.util.Recipe("se-space-hypercooler").addIngredient("fi_materials_neodym", 15)
+atom.util.Recipe("se-space-radiator").addIngredient("fi_materials_neodym", 15)
+atom.util.Recipe("se-space-radiator-2").addIngredient("fi_materials_neodym", 15)
+
+-- Adjust quantum processor recipe
+atom.util.Recipe("se-quantum-processor").replaceIngredient("processing-unit", "gr_materials_circuit", 4)

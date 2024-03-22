@@ -1,39 +1,5 @@
 local atom_util = require("_data-util")
 local Recipe = require('__stdlib__/stdlib/data/recipe')
---LDS 248k Recipe fix
-atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "titanium-plate", 8, false)
-atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "diamond", 4, false)
-atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "zirconia", 20, false)
-atom_util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "carbon-fiber", 20, false)
-data.raw.recipe["fi_low-density-structure_recipe"].category = "crafting"
---Adjust basic electronic components to require more ingredients
-atom_util.replace_or_add_ingredient("basic-electronic-components", "copper-cable", "copper-cable", 5, false)
-atom_util.replace_or_add_ingredient("basic-electronic-components", "graphite", "graphite", 5, false)
---Adjust Electronic circuits recipies to use less electronic components
-atom_util.replace_or_add_ingredient("electronic-circuit", "basic-electronic-components", "basic-electronic-components", 2,
-    false)
-atom_util.replace_or_add_ingredient("electronic-circuit-silver", "basic-electronic-components", "silver-wire", 4, false)
---Add Mysterious energy crystals to Prod 1
-atom_util.replace_or_add_ingredient("productivity-module", "glass", "el_energy_crystal_item", 10, false)
---Adjust Artificial energy crystals to be use more.
-atom_util.replace_or_add_ingredient("big-battery-equipment", nil, "fi_energy_crystal_item", 4, false)
-atom_util.replace_or_add_ingredient("se-rtg-equipment", nil, "fi_energy_crystal_item", 4, false)
-atom_util.replace_or_add_ingredient("big-solar-panel-equipment", nil, "fi_energy_crystal_item", 4, false)
-atom_util.replace_or_add_ingredient("productivity-module-2", "glass", "fi_energy_crystal_item", 10, false)
---Adjust Refined Crystals to be used more
-atom_util.replace_or_add_ingredient("productivity-module-3", "mlcc", "fu_materials_refined_crystal", 4, false)
-atom_util.replace_or_add_ingredient("big-battery-mk2-equipment", nil, "fu_materials_refined_crystal", 4, false)
-atom_util.replace_or_add_ingredient("big-imersite-solar-panel-equipment", nil, "fu_materials_refined_crystal", 4, false)
---Adding Neodymium to some recipes
-atom_util.replace_or_add_ingredient("se-space-hypercooler", nil, "fi_materials_neodym", 15, false)
-atom_util.replace_or_add_ingredient("se-space-radiator", nil, "fi_materials_neodym", 15, false)
-atom_util.replace_or_add_ingredient("se-space-radiator-2", nil, "fi_materials_neodym", 15, false)
---Adjust 248k recipes to be better balanced
-atom_util.replace_or_add_ingredient("steel-plate", "iron-plate", "iron-plate", 10, false)
-atom_util.replace_or_add_ingredient("el_purify_iron_recipe", "iron-ore", "iron-ore", 13, false)
-atom_util.replace_or_add_ingredient("el_purify_copper_recipe", "copper-ore", "copper-ore", 13, false)
---Changed quantum processors to use hcp instead of blue curcuits
-atom_util.replace_or_add_ingredient("se-quantum-processor","processing-unit","gr_materials_circuit", 4 ,false)
 
 --Disable wooden rails and rail conversions
 bobmods.lib.recipe.hide("bi-rail-wood")
@@ -74,7 +40,6 @@ data.raw.recipe["blank-tech-card-silver"].results = { {"blank-tech-card", 10} }
 bobmods.lib.recipe.hide("singularity-tech-card-alt")
 
 -- recipese
-bobmods.lib.recipe.add_ingredient("fast-road", { "road", 10 })
 bobmods.lib.recipe.add_ingredient("rail", { "concrete", 2 })
 
 if mods["big_power_poles_patched"] then
