@@ -170,7 +170,10 @@ function atom.util.Recipe(value)
         -- @param amount number The amount of the ingredient
         -- @param expensiveAmount? number The amount of the ingredient for the expensive recipe (uses amount if not set)
         addIngredient = function(ingredientName, amount, expensiveAmount)
-            local ingredientType = data.raw.item[ingredientName] and "item" or data.raw.fluid[ingredientName] and "fluid" or nil
+            local ingredientType = data.raw.item[ingredientName] and "item"
+                    or data.raw.module[ingredientName] and "item"
+                    or data.raw.fluid[ingredientName] and "fluid"
+                    or nil
             if not ingredientType then
                 atom.util.log.error("Unknown ingredient: " .. ingredientName)
                 return
