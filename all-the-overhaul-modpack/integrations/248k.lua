@@ -102,3 +102,44 @@ data.raw.recipe["fu_carbon_fiber_recipe"].localised_name = "Graphite fiber"
 data.raw.recipe["fu_KFK_recipe"].localised_name = "Graphite fiber reinforced plastic"
 data.raw.item["fu_tech_sign_item"].localised_name = "Broad fusion catalogue"
 data.raw.technology["fu_energy_tech"].localised_name = "Fusion catalogue 2"
+
+-- Remove HCP circuit
+atom.util.item.removeByName("fi_materials_hcp")
+
+-- Adjust T-Lab recipe
+table.assign(data.raw.recipe["fu_lab_recipe"], {
+    category = "space-manufacturing",
+    ingredients = {
+        {"5d-lab-10", 10},
+        {"kr-singularity-lab", 1},
+        {"energy-control-unit",50},
+        {"se-space-radiator-2",10},
+        {"se-space-hypercooler",4},
+        {"gr_materials_circuit",100},
+        {"fu_materials_energy_charged_crystal",50},
+        {"fu_materials_KFK", 100},
+        {"fu_materials_TIM", 100},
+        {"fu_materials_magnet", 50},
+        {"ai-core", 50},
+        {"se-naquium-processor", 20},
+        {"se-heavy-composite",50},
+        {"se-dynamic-emitter",50},
+        {"se-nanomaterial",50},
+        {"se-naquium-plate",300},
+        {"se-naquium-tessaract",5},
+        { type = "fluid", name = "se-space-coolant-supercooled", amount = 2000},
+    }
+})
+
+data:extend({
+    -- Integrate tritium from 248k with K2
+    {
+        type = "recipe",
+        name = "248k-krastorio2-tritium",
+        category = "chemistry",
+        energy_required = 1,
+        ingredients = {{type="fluid", name="fu_tritium", amount=3}},
+        result = "tritium",
+        enabled = true
+    }
+})

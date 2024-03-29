@@ -250,43 +250,6 @@ util.tech_add_ingredients("se-energy-science-pack-1",{"kr-optimization-tech-card
 util.tech_add_ingredients("se-material-science-pack-1",{"kr-optimization-tech-card"},false)
 
 
--- HCP circuit
-bobmods.lib.tech.hide("gr_circuit_tech")
-util.tech_remove_prerequisites("gr_plasma_cube_tech", {"gr_circuit_tech"})
-util.tech_add_prerequisites("gr_plasma_cube_tech","gr_stage_tech")
-
-util.tech_remove_prerequisites("gr_circuit_tech", {"gr_stage_tech"})
-
-data:extend({
-	{
-        type = "technology",
-        name = "hcp-circuit",
-        effects = {
-            {type = "unlock-recipe", recipe = "hcp-circuit"},
-			{type = "unlock-recipe", recipe = "pcb-recipe"},
-			{type = "unlock-recipe", recipe = "hcp-board"},
-        },
-		icon = "__248k__/ressources/techs/gr_circuit_tech.png",
-        icon_size = 128,
-        prerequisites = {"se-superconductive-cable"},
-        unit = {
-            count = 300,
-			time = 30,
-            ingredients = {
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"chemical-science-pack", 1},
-				{"se-rocket-science-pack", 1},
-				{"space-science-pack", 1},
-				{"production-science-pack", 1},
-				{"utility-science-pack", 1},
-				{"se-material-science-pack-3", 1},
-				{"se-energy-science-pack-3", 1},
-            },
-        },
-    },
-})
-
 util.tech_remove_prerequisites("kr-battery-mk3-equipment", {"se-superconductive-cable"})
 util.tech_add_prerequisites("kr-battery-mk3-equipment","hcp-circuit")
 

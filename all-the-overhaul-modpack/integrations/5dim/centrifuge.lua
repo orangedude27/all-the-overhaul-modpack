@@ -71,6 +71,9 @@ Recipe("5d-centrifuge-10"):replace_ingredient("iron-gear-wheel", { "imersium-gea
 Recipe("5d-centrifuge-10"):replace_ingredient("processing-unit", { "gr_materials_circuit", 80 })
 Recipe("5d-centrifuge-10"):replace_ingredient("productivity-module-2", { "se-naquium-cube", 1 })
 
+-- Advanced centrifuge
+atom.util.Recipe("k11-advanced-centrifuge").replaceIngredient("centrifuge", "5d-centrifuge-03", 2)
+
 
 -- Technologies
 

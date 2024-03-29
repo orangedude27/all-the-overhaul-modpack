@@ -106,6 +106,9 @@ recipe10:replace_ingredient("pipe", { "brass-pipe", 10 })
 recipe10:replace_ingredient("tungsten-carbide", { "se-naquium-cube", 1 })
 recipe10:replace_ingredient("productivity-module-3", { "se-bioscrubber", 10 })
 
+-- K2
+atom.util.Recipe("kr-advanced-chemical-plant").addIngredient("5d-chemical-plant-04", 1)
+
 
 -- Technologies
 

@@ -66,6 +66,22 @@ recipe10:replace_ingredient("low-density-structure", { "se-heavy-assembly", 10 }
 recipe10:replace_ingredient("processing-unit", { "gr_materials_circuit", 20 })
 recipe10:replace_ingredient("tungsten-carbide", { "se-naquium-cube", 1 })
 
+-- K2
+local advancedAssembler = atom.util.Recipe("kr-advanced-assembling-machine")
+advancedAssembler.replaceIngredient("assembling-machine-3", "5d-assembling-machine-06", 2)
+advancedAssembler.replaceIngredient("electric-furnace", "5d-electric-furnace-03", 2)
+
+-- SE
+table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-04"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-05"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-06"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-07"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-08"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-09"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-10"].crafting_categories, "crafting-or-electromagnetics")
+
 
 -- Technologies
 
