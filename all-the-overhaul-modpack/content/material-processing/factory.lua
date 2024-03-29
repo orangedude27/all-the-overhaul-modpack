@@ -53,7 +53,8 @@ atom.processing.create = function(config)
         dustToPlateRecipe = function()
             -- -36%
             local results = config.additionalResults.dustToPlate or {}
-            table.insert(results, { name = config.itemNames.plate, amount = 4 })
+            table.insert(results, { name = config.itemNames.plate, amount = 3 })
+            table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 0.84 })
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate-dust",
@@ -90,7 +91,7 @@ atom.processing.create = function(config)
                 category = "smelting",
                 energy_required = 9.6,
                 ingredients = {
-                    { name = config.itemNames.dust, amount = 16 },
+                    { name = config.itemNames.dust, amount = 12 },
                     additionalIngredient
                 },
                 results = results,
@@ -107,7 +108,8 @@ atom.processing.create = function(config)
             -- -11%
             local additionalIngredient = config.additionalIngredient.ingotToPlate or nil
             local results = config.additionalResults.ingotToPlate or {}
-            table.insert(results, { name = config.itemNames.plate, amount = 4 })
+            table.insert(results, { name = config.itemNames.plate, amount = 5 })
+            table.insert(results, { name = config.itemNames.plate, amount = 1, probability = 0.34 })
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate-ingot",
@@ -118,7 +120,7 @@ atom.processing.create = function(config)
                 category = "el_caster_category",
                 energy_required = 4.8,
                 ingredients = {
-                    { name = config.itemNames.ingot, amount = 1 },
+                    { name = config.itemNames.ingot, amount = 2 },
                     additionalIngredient
                 },
                 results = results,
@@ -178,29 +180,6 @@ atom.processing.create = function(config)
             return recipe
         end,
 
-        moltenToIngotRecipe = function()
-            local recipe = Recipe({
-                type = "recipe",
-                name = "atom-" .. config.name .. "-ingot-molten",
-                icons = {
-                    config.icons.ingot,
-                    atom.util.icon.createSmallIcon(config.icons.molten)
-                },
-                category = "casting",
-                energy_required = 2.4,
-                ingredients = {
-                    { type = "fluid", name = config.itemNames.molten, amount = 300 }
-                },
-                results = {
-                    { name = config.itemNames.ingot, amount = 1 },
-                },
-                subgroup = config.subgroup,
-                enabled = false
-            })
-            recipe.unlockedByTechnology(config.unlockedBy.moltenToPlate or "atom-advanced-ore-processing-2")
-            return recipe
-        end,
-
         dustToEnrichedRecipe = function()
             local results = config.additionalResults.dustToEnriched or {}
             table.insert(results, { name = config.itemNames.enriched, amount = 6 })
@@ -215,7 +194,7 @@ atom.processing.create = function(config)
                 category = "fluid-filtration",
                 energy_required = 4.8,
                 ingredients = {
-                    { name = config.itemNames.dust, amount = 16 },
+                    { name = config.itemNames.dust, amount = 12 },
                     { type = "fluid", name = "water", amount = 370 }
                 },
                 results = results,
@@ -254,31 +233,6 @@ atom.processing.create = function(config)
             return recipe
         end,
 
-        enrichedToMoltenRecipe = function()
-            -- +33%
-            local recipe = Recipe({
-                type = "recipe",
-                name = "atom-" .. config.name .. "-enriched-molten",
-                icons = {
-                    config.icons.molten,
-                    atom.util.icon.createSmallIcon(config.icons.ingot)
-                },
-                category = "el_arc_furnace_category",
-                energy_required = 6.4,
-                ingredients = {
-                    { name = config.itemNames.enriched, amount = 3 },
-                    { type = "fluid", name = "se-pyroflux", amount = 0.25 }
-                },
-                results = {
-                    { type = "fluid", name = config.itemNames.molten, amount = 400 },
-                },
-                subgroup = config.subgroup,
-                enabled = false
-            })
-            recipe.unlockedByTechnology(config.unlockedBy.ingotToMolten or "atom-advanced-ore-processing-2")
-            return recipe
-        end,
-
         dustToPureRecipe = function()
             local additionalIngredient = config.additionalIngredient.dustToPure or { type = "fluid", name = "sulfuric-acid", amount = 4 }
             local results = config.additionalResults.dustToPure or {}
@@ -308,8 +262,7 @@ atom.processing.create = function(config)
 
         pureToEnrichedRecipe = function()
             local results = config.additionalResults.pureToEnriched or {}
-            table.insert(results, { name = config.itemNames.enriched, amount = 4 })
-            table.insert(results, { name = config.itemNames.enriched, amount = 1, probability = 0.50 })
+            table.insert(results, { name = config.itemNames.enriched, amount = 6 })
             table.insert(results, { type = "fluid", name = "dirty-water", amount = 370 })
             local recipe = Recipe({
                 type = "recipe",
@@ -346,15 +299,13 @@ atom.processing.create = function(config)
                 category = "el_caster_category",
                 energy_required = 9.6,
                 ingredients = {
-                    { name = config.itemNames.enriched, amount = 7 },
+                    { name = config.itemNames.enriched, amount = 6 },
                     additionalIngredient
                 },
                 results = {
-                    { name = config.itemNames.pellets, amount = 6 },
-                    { name = config.itemNames.pellets, amount = 1, probability = 0.222 }
+                    { name = config.itemNames.pellets, amount = 6 }
                 },
                 subgroup = config.subgroup,
-                main_product = config.itemNames.pellets,
                 enabled = false
             })
             recipe.allowProductivity()
@@ -385,31 +336,6 @@ atom.processing.create = function(config)
             })
             recipe.allowProductivity()
             recipe.unlockedByTechnology(config.unlockedBy.pelletsToIngot or "atom-advanced-ore-processing-4")
-            return recipe
-        end,
-
-        pelletsToMoltenRecipe = function()
-            -- +33%
-            local recipe = Recipe({
-                type = "recipe",
-                name = "atom-" .. config.name .. "-pellets-molten",
-                icons = {
-                    config.icons.molten,
-                    atom.util.icon.createSmallIcon(config.icons.ingot)
-                },
-                category = "el_arc_furnace_category",
-                energy_required = 6.4,
-                ingredients = {
-                    { name = config.itemNames.pellets, amount = 2 },
-                    { type = "fluid", name = "se-pyroflux", amount = 0.25 }
-                },
-                results = {
-                    { type = "fluid", name = config.itemNames.molten, amount = 300 },
-                },
-                subgroup = config.subgroup,
-                enabled = false
-            })
-            recipe.unlockedByTechnology(config.unlockedBy.ingotToMolten or "atom-advanced-ore-processing-2")
             return recipe
         end,
 
