@@ -27,3 +27,6 @@ copperToGold.results = {
 }
 copperToGold.energy_required = 1
 util.recipe_replace_result("depleted-acid-treatment", "gold-powder", "atom-gold-dust", 1)
+
+util.tech_add_prerequisites("micron-tolerance-instruments", {"micron-tolerance-manufacturing", "gyroscope", "spectroscopy"})
+util.tech_add_prerequisites("kr-quarry-minerals-extraction", {"space-science-pack"})

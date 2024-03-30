@@ -31,4 +31,8 @@ atom.util.recipe.removeByName("molten-zirconium")
 atom.util.recipe.removeByName("molten-titanium")
 atom.util.item.removeByName("tungsten-powder")
 
+local util = require("_data-util")
+
+util.tech_add_prerequisites("cobalt-chemistry", "cobalt-refining")
+
 -- TODO: Add a replacement for tungsten-carbide-casting to the new processing
