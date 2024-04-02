@@ -1,5 +1,17 @@
 local util = require("_data-util")
 
+-- Entities
+data.raw["lab"]["5d-lab-03"].module_specification = {
+    module_slots = 3, module_info_icon_shift = { 0, 0.8 }, module_info_icon_scale = 0.5
+}
+
+-- SE
+for i = 4, 10 do
+    local lab_name = "5d-lab-" .. (i < 10 and "0" or "") .. i
+    data.raw.lab[lab_name].se_allow_in_space = true
+end
+
+
 -- Recipes
 
 local Recipe = require('__stdlib__/stdlib/data/recipe')

@@ -1,0 +1,1 @@
+require("248k.burner")

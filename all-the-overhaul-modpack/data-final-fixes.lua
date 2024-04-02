@@ -31,3 +31,5 @@ data:extend({
 -- Final balancing
 atom.util.Recipe("steel-plate").replaceIngredient("iron-plate", 10)
 atom.util.Recipe("rail").addIngredient("concrete", 2)
+
+require("integrations.final")
