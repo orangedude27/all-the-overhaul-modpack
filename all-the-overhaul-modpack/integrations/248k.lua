@@ -47,6 +47,8 @@ fi_purify_stone_recipe.replaceResult("el_dirty_water", "dirty-water", 40)
 atom.util.item.removeByName("el_dirty_water")
 atom.util.item.removeByName("fi_materials_flourite")
 atom.util.item.removeByName("fi_dirty_water")
+atom.util.Technology("nuclear-waste-extraction").removePrerequisite("rich-water-filtration")
+data.raw.technology["rich-water-filtration"] = nil
 
 -- Remove Fluorite, Advanced ore purification and Advanced metal casting technologies
 atom.util.technology.replacePrerequisite("fi_purifier_2_tech", "fi_glass_tech")

@@ -6,7 +6,7 @@ for _, module in pairs(data.raw["module"]) do
 end
 
 -- Utility function for multiple recipes
--- See atom.util.Recipe for function for a single recipe
+-- See atom.util.Recipe for functions for a single recipe
 atom.util.recipe = {
     -- Removes a recipe by name together with all its dependencies
     -- @param name string The name of the recipe
