@@ -1,5 +1,9 @@
 {
     "technology": [
         ["imersium-walls", "imersium-wall"]
+    ],
+    "item": [
+        ["uranium-fuel-cell", "thorium-fuel"],
+        ["used-up-uranium-fuel-cell", "fi_used_basic_thorium_fuel_item"]
     ]
 }

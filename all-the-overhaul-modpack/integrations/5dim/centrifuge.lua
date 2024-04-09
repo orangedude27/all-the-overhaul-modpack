@@ -2,8 +2,11 @@
 
 local Recipe = require('__stdlib__/stdlib/data/recipe')
 
+local mk1Recipe = atom.util.Recipe(data.raw["recipe"]["centrifuge"])
+mk1Recipe.replaceIngredient("processing-unit", "advanced-circuit")
+
 -- 02
-Recipe("5d-centrifuge-02"):add_ingredient({ "imersite-crystal", 10 })
+Recipe("5d-centrifuge-02"):add_ingredient({ "cobalt-electromagnet", 10 })
 Recipe("5d-centrifuge-02"):add_ingredient({ "bearing", 20 })
 Recipe("5d-centrifuge-02"):replace_ingredient("steel-plate", { "se-heat-shielding", 40 })
 Recipe("5d-centrifuge-02"):replace_ingredient("advanced-circuit", { "processing-unit", 40 })
@@ -79,10 +82,15 @@ atom.util.Recipe("k11-advanced-centrifuge").replaceIngredient("centrifuge", "5d-
 
 local util = require("_data-util")
 
+local mk1Tech = atom.util.Technology("se-centrifuge")
+mk1Tech.removeIngredient("se-rocket-science-pack")
+mk1Tech.addIngredient("productivity-science-pack", 1)
+mk1Tech.replacePrerequisite("advanced-electronics-2", "productivity-science-pack")
+
 -- 02
 data.raw.technology["5d-centrifuge-1"].unit.count = 200
 util.tech_remove_prerequisites("5d-centrifuge-1", {"production-science-pack"})
-util.tech_add_prerequisites("5d-centrifuge-1","kr-quarry-minerals-extraction")
+util.tech_add_prerequisites("5d-centrifuge-1","cobalt-electromagnet")
 util.tech_add_ingredients("5d-centrifuge-1",{"space-science-pack"},false)
 -- 03
 data.raw.technology["5d-centrifuge-2"].unit.count = 300
