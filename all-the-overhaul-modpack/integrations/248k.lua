@@ -133,6 +133,9 @@ table.assign(data.raw.recipe["fu_lab_recipe"], {
     }
 })
 
+-- Make fuel categories of burner generator match vanilla boiler
+data.raw["burner-generator"]["el_burner_entity"].burner.fuel_categories = data.raw.boiler["boiler"].energy_source.fuel_categories
+
 data:extend({
     -- Integrate tritium from 248k with K2
     {
