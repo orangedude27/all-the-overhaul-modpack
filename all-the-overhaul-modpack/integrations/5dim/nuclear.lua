@@ -25,6 +25,8 @@ mk1Entity.neighbour_bonus = 0.25
 mk1Entity.energy_source.fuel_categories = { "nuclear", "nuclear-advanced" }
 mk1Entity.energy_source.fuel_inventory_size = 2
 mk1Entity.energy_source.burnt_inventory_size = 2
+mk1Entity.working_light_picture.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/reactor-lights-color.png"
+mk1Entity.working_light_picture.hr_version.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/hr-reactor-lights-color.png"
 
 atom.util.Recipe("nuclear-reactor").replaceIngredient("processing-unit", "advanced-circuit")
 
@@ -68,3 +70,5 @@ mk2Entity.neighbour_bonus = 1
 mk2Entity.energy_source.fuel_categories = { "nuclear", "nuclear-advanced", "nuclear-high-energy" }
 mk2Entity.energy_source.fuel_inventory_size = 3
 mk2Entity.energy_source.burnt_inventory_size = 3
+mk2Entity.working_light_picture.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/reactor-lights-color.png"
+mk2Entity.working_light_picture.hr_version.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/hr-reactor-lights-color.png"

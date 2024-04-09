@@ -24,6 +24,7 @@ data.raw["fuel-category"]["fi_pure_fuel"] = nil
 local thoriumItem = data.raw.item["fi_basic_thorium_fuel_item"]
 thoriumItem.fuel_value = "10GJ"
 thoriumItem.fuel_category = "nuclear"
+thoriumItem.fuel_glow_color = { r = 0.85, g = 0.85, b = 0.85, a = 1 }
 
 local thoriumRecipe = atom.util.Recipe("fi_basic_thorium_fuel_recipe")
 thoriumRecipe.removeIngredient("uranium-238")
@@ -79,6 +80,7 @@ solutionRecipe.prototype.results[1].catalyst_amount = 20
 local uranium233Item = data.raw.item["fi_advanced_thorium_fuel_item"]
 uranium233Item.fuel_value = "20GJ"
 uranium233Item.fuel_category = "nuclear-advanced"
+uranium233Item.fuel_glow_color = { r = 0.67, g = 0.90, b = 0.69, a = 1 }
 
 local uranium233Recipe = atom.util.Recipe("fi_advanced_thorium_fuel_recipe")
 uranium233Recipe.prototype.result_count = 4
@@ -121,6 +123,7 @@ data:extend({
 local uranium235Item = data.raw.item["fi_basic_fuel_item"]
 uranium235Item.fuel_value = "40GJ"
 uranium235Item.fuel_category = "nuclear-advanced"
+uranium235Item.fuel_glow_color = { r = 0.50, g = 0.95, b = 0.55, a = 1 }
 
 local uranium235Recipe = atom.util.Recipe("fi_basic_fuel_recipe")
 uranium235Recipe.prototype.energy_required = 50
@@ -164,6 +167,7 @@ nuclearCraftingTech.addIngredient("space-science-pack")
 local plutonium239Item = data.raw.item["fi_advanced_fuel_item"]
 plutonium239Item.fuel_value = "80GJ"
 plutonium239Item.fuel_category = "nuclear-high-energy"
+plutonium239Item.fuel_glow_color = { r = 0.57, g = 0.91, b = 1, a = 1 }
 
 local plutonium239Recipe = atom.util.Recipe("fi_advanced_fuel_recipe")
 plutonium239Recipe.prototype.result_count = 5
@@ -209,6 +213,7 @@ data:extend({
 local highEnergyItem = data.raw.item["fi_pure_fuel_item"]
 highEnergyItem.fuel_value = "160GJ"
 highEnergyItem.fuel_category = "nuclear-high-energy"
+highEnergyItem.fuel_glow_color = { r = 0.91, g = 0.86, b = 0.62, a = 1 }
 
 local highEnergyRecipe = atom.util.Recipe("fi_pure_fuel_recipe")
 highEnergyRecipe.prototype.result_count = 5
