@@ -260,8 +260,9 @@ data:extend({
 atom.util.technology.replacePrerequisite("fi_energy_tech", "nuclear-power")
 data.raw.technology["fi_energy_tech"] = nil
 atom.util.recipe.replaceIngredient("uranium-fuel-cell", "fi_basic_thorium_fuel_item")
-atom.util.item.removeByName("uranium-fuel-cell")
-atom.util.item.removeByName("used-up-uranium-fuel-cell")
+-- Keep the items for the menu simulations and just remove the recipes
+atom.util.recipe.removeByItem("uranium-fuel-cell")
+atom.util.recipe.removeByItem("used-up-uranium-fuel-cell")
 
 for item, _ in pairs(data.raw.item) do
     if item.fuel_category == "fi_basic_fuel" then
