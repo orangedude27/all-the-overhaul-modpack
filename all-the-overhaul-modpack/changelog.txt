@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.9
+Date: 4.10.2024
+  Bug fixes:
+    - Add missing recipe migration for merge lithium variants (LithiumFix was a mandatory dependency but not marked as such. Now it's obsolete).
+---------------------------------------------------------------------------------------------------
 Version: 1.8.8
 Date: 4.10.2024
   Bug fixes:
