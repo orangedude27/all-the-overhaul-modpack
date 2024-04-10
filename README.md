@@ -22,3 +22,4 @@ Utility/library code.
 
 - Please use comments. Especially for functions. See also: https://github.com/LuaLS/lua-language-server/wiki/Annotations
 - Don't let files grow too much. Put stuff in separate files to keep things findable.
+- Try not to use external utility libraries. Rather use our own utility code. Add missing functions yourself.
