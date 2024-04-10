@@ -4,7 +4,7 @@ for _, stage in pairs(stages) do
     atom.util.recipe.removeByNamePattern("^" .. stage .. "[%-_]arc[%-_]pure[%-_]")
     atom.util.recipe.removeByNamePattern("^" .. stage .. "[%-_]cast[%-_]", { "fi_cast_glass_recipe" })
     atom.util.recipe.removeByNamePattern("^" .. stage .. "[%-_]purify[%-_]", { "el_purify_stone_acidic_recipe" })
-    atom.util.recipe.removeByNamePattern("^" .. stage .. "[%-_]pure[%-_]")
+    atom.util.recipe.removeByNamePattern("^" .. stage .. "[%-_]pure[%-_]", { "fi_pure_fuel_recipe", "fi_pure_fuel_recycle_recipe" })
     atom.util.recipe.removeByNamePattern("^" .. stage .. "[%-_]%a+[%-_]plate")
     atom.util.recipe.removeByNamePattern("^" .. stage .. "[%-_]%a+[%-_]ingot")
 end
