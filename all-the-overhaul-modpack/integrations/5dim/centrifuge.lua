@@ -89,43 +89,43 @@ mk1Tech.replacePrerequisite("advanced-electronics-2", "productivity-science-pack
 
 -- 02
 data.raw.technology["5d-centrifuge-1"].unit.count = 200
-util.tech_remove_prerequisites("5d-centrifuge-1", {"production-science-pack"})
-util.tech_add_prerequisites("5d-centrifuge-1","cobalt-electromagnet")
-util.tech_add_ingredients("5d-centrifuge-1",{"space-science-pack"},false)
+util.tech_remove_prerequisites("5d-centrifuge-1", { "production-science-pack" })
+util.tech_add_prerequisites("5d-centrifuge-1", "cobalt-electromagnet")
+util.tech_add_ingredients("5d-centrifuge-1", { "space-science-pack" }, false)
 -- 03
 data.raw.technology["5d-centrifuge-2"].unit.count = 300
-util.tech_add_prerequisites("5d-centrifuge-2","kr-optimization-tech-card")
-util.tech_add_ingredients("5d-centrifuge-2",{"space-science-pack","kr-optimization-tech-card"},false)
+util.tech_add_prerequisites("5d-centrifuge-2", "kr-optimization-tech-card")
+util.tech_add_ingredients("5d-centrifuge-2", { "space-science-pack", "kr-optimization-tech-card" }, false)
 -- 04
 data.raw.technology["5d-centrifuge-3"].unit.count = 400
-util.tech_add_prerequisites("5d-centrifuge-3",{"se-heavy-girder","se-energy-science-pack-1"})
-util.tech_add_ingredients("5d-centrifuge-3",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
+util.tech_add_prerequisites("5d-centrifuge-3", { "se-heavy-girder", "se-energy-science-pack-1" })
+util.tech_add_ingredients("5d-centrifuge-3", { "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" }, false)
 -- 05
 data.raw.technology["5d-centrifuge-4"].unit.count = 500
-util.tech_add_prerequisites("5d-centrifuge-4","fu_TIM_tech")
-util.tech_add_ingredients("5d-centrifuge-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1","fusion-science-pack-1"},false)
+util.tech_add_prerequisites("5d-centrifuge-4", "fu_TIM_tech")
+util.tech_add_ingredients("5d-centrifuge-4", { "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1", "fusion-science-pack-1" }, false)
 -- 06
 data.raw.technology["5d-centrifuge-5"].unit.count = 600
-util.tech_remove_prerequisites("5d-centrifuge-5", {"production-science-pack"})
-util.tech_add_prerequisites("5d-centrifuge-5",{"se-aeroframe-scaffold","se-heavy-bearing","se-energy-science-pack-2","space-fusion-science-pack-2"})
-util.tech_add_ingredients("5d-centrifuge-5",{"production-science-pack","utility-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-energy-science-pack-2","fusion-science-pack-2","se-astronomic-science-pack-2"},false)
+util.tech_remove_prerequisites("5d-centrifuge-5", { "production-science-pack" })
+util.tech_add_prerequisites("5d-centrifuge-5", { "se-aeroframe-scaffold", "se-heavy-bearing", "se-energy-science-pack-2", "space-fusion-science-pack-2" })
+util.tech_add_ingredients("5d-centrifuge-5", { "production-science-pack", "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "fusion-science-pack-2", "se-astronomic-science-pack-2" }, false)
 -- 07
 data.raw.technology["5d-centrifuge-6"].unit.count = 700
-util.tech_add_prerequisites("5d-centrifuge-6",{"se-aeroframe-bulkhead","se-material-science-pack-3","se-energy-science-pack-3","space-fusion-science-pack-3"})
-util.tech_remove_ingredients("5d-centrifuge-6", {"se-material-science-pack-1"})
-util.tech_add_ingredients("5d-centrifuge-6",{"utility-science-pack","kr-optimization-tech-card","se-material-science-pack-3","se-energy-science-pack-3","fusion-science-pack-3","se-astronomic-science-pack-3"},false)
+util.tech_add_prerequisites("5d-centrifuge-6", { "se-aeroframe-bulkhead", "se-material-science-pack-3", "se-energy-science-pack-3", "space-fusion-science-pack-3" })
+util.tech_remove_ingredients("5d-centrifuge-6", { "se-material-science-pack-1" })
+util.tech_add_ingredients("5d-centrifuge-6", { "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "fusion-science-pack-3", "se-astronomic-science-pack-3" }, false)
 -- 08
 data.raw.technology["5d-centrifuge-7"].unit.count = 800
-util.tech_remove_prerequisites("5d-centrifuge-7", {"utility-science-pack"})
-util.tech_add_prerequisites("5d-centrifuge-7",{"kr-ai-core","hcp-circuit"})
-util.tech_remove_ingredients("5d-centrifuge-7", {"se-material-science-pack-2"})
-util.tech_add_ingredients("5d-centrifuge-7",{"se-rocket-science-pack","space-science-pack","kr-optimization-tech-card","se-material-science-pack-3","se-biological-science-pack-3","se-energy-science-pack-3","fusion-science-pack-3","se-astronomic-science-pack-3"},false)
+util.tech_remove_prerequisites("5d-centrifuge-7", { "utility-science-pack" })
+util.tech_add_prerequisites("5d-centrifuge-7", { "kr-ai-core", "hcp-circuit" })
+util.tech_remove_ingredients("5d-centrifuge-7", { "se-material-science-pack-2" })
+util.tech_add_ingredients("5d-centrifuge-7", { "se-rocket-science-pack", "space-science-pack", "kr-optimization-tech-card", "se-material-science-pack-3", "se-biological-science-pack-3", "se-energy-science-pack-3", "fusion-science-pack-3", "se-astronomic-science-pack-3" }, false)
 -- 09
 data.raw.technology["5d-centrifuge-8"].unit.count = 900
-util.tech_remove_ingredients("5d-centrifuge-8", {"se-material-science-pack-3"})
-util.tech_add_prerequisites("5d-centrifuge-8",{"se-nanomaterial","space-fusion-science-pack-4","se-heavy-assembly"})
-util.tech_add_ingredients("5d-centrifuge-8",{"kr-optimization-tech-card","se-material-science-pack-4","se-biological-science-pack-4","se-energy-science-pack-4","se-astronomic-science-pack-4","fusion-science-pack-4"},false)
+util.tech_remove_ingredients("5d-centrifuge-8", { "se-material-science-pack-3" })
+util.tech_add_prerequisites("5d-centrifuge-8", { "se-nanomaterial", "space-fusion-science-pack-4", "se-heavy-assembly" })
+util.tech_add_ingredients("5d-centrifuge-8", { "kr-optimization-tech-card", "se-material-science-pack-4", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "fusion-science-pack-4" }, false)
 -- 10
 data.raw.technology["5d-centrifuge-9"].unit.count = 1000
-util.tech_add_prerequisites("5d-centrifuge-9","se-naquium-cube")
-util.tech_add_ingredients("5d-centrifuge-9",{"kr-optimization-tech-card","se-biological-science-pack-4","se-energy-science-pack-4","se-astronomic-science-pack-4","fusion-science-pack-4","se-deep-space-science-pack-1"},false)
+util.tech_add_prerequisites("5d-centrifuge-9", "se-naquium-cube")
+util.tech_add_ingredients("5d-centrifuge-9", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "fusion-science-pack-4", "se-deep-space-science-pack-1" }, false)

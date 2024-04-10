@@ -52,9 +52,9 @@ data:extend({
         unit = {
             count = "250",
             ingredients = {
-                { "chemical-science-pack",   1 },
+                { "chemical-science-pack", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
+                { "logistic-science-pack", 1 },
                 { "productivity-science-pack", 1 }
             },
             time = 30
@@ -107,9 +107,9 @@ data:extend({
         unit = {
             count = "250",
             ingredients = {
-                { "chemical-science-pack",   1 },
+                { "chemical-science-pack", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
+                { "logistic-science-pack", 1 },
                 { "productivity-science-pack", 1 },
                 { "se-rocket-science-pack", 1 }
             },
@@ -195,9 +195,9 @@ data:extend({
         unit = {
             count = "250",
             ingredients = {
-                { "chemical-science-pack",   1 },
+                { "chemical-science-pack", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
+                { "logistic-science-pack", 1 },
                 { "productivity-science-pack", 1 },
                 { "se-rocket-science-pack", 1 },
                 { "space-science-pack", 1 },
@@ -241,9 +241,9 @@ data:extend({
         unit = {
             count = "250",
             ingredients = {
-                { "chemical-science-pack",   1 },
+                { "chemical-science-pack", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
+                { "logistic-science-pack", 1 },
                 { "productivity-science-pack", 1 },
                 { "se-rocket-science-pack", 1 },
                 { "space-science-pack", 1 },

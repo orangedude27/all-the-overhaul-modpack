@@ -85,10 +85,12 @@ end
 ---@return boolean
 local function Sort(recipe, group)
     util.debuglog("PIG:GROUP:" .. group)
-    for name, SubOrder in pairs(GroupSubOrder[group]) do --GroupSubOrder.name is what to look for in recipe name GroupSubOrder.SubOrder is what order the subgroup will be in
+    for name, SubOrder in pairs(GroupSubOrder[group]) do
+        --GroupSubOrder.name is what to look for in recipe name GroupSubOrder.SubOrder is what order the subgroup will be in
         if recipe.name == name and not InBlacklist(recipe.name, group) then
             util.debuglog("PIG name Found " .. recipe.name)
-            for lookat, replacewith in pairs(ReplaceSubgroupDirectName) do --if exact match to name in replace table, use that sub instead
+            for lookat, replacewith in pairs(ReplaceSubgroupDirectName) do
+                --if exact match to name in replace table, use that sub instead
                 if recipe.name == lookat then
                     SetGroupSubOrder(recipe.name, replacewith.name, group, replacewith.order, SubOrder)
                     util.debuglog("PIG Found lookat:" .. recipe.name)
@@ -102,12 +104,13 @@ local function Sort(recipe, group)
         if util.find_string_plain(recipe.name, name) then
             for find, order in pairs(GroupRecipeOrder[group]) do
                 if util.find_string_plain(recipe.name, find) and not InBlacklist(recipe.name, group) then
-                    for lookat, replacewith in pairs(ReplaceSubgroup) do --checks table to see if the key contains pattern of both name and find, if so replace sub with value
+                    for lookat, replacewith in pairs(ReplaceSubgroup) do
+                        --checks table to see if the key contains pattern of both name and find, if so replace sub with value
                         if util.find_string_plain(lookat, name) and util.find_string_plain(lookat, find) then
                             util.debuglog("PIG:found:name:" ..
-                                recipe.name ..
-                                ":name:" .. name .. ":group:" .. group .. ":order:" ..
-                                order .. ":sub:" .. SubOrder .. ":find:" .. find)
+                                    recipe.name ..
+                                    ":name:" .. name .. ":group:" .. group .. ":order:" ..
+                                    order .. ":sub:" .. SubOrder .. ":find:" .. find)
                             SetGroupSubOrder(recipe.name, replacewith, group, order, SubOrder)
                             return true
                         end
@@ -115,8 +118,8 @@ local function Sort(recipe, group)
                 end
                 if util.find_string_plain(recipe.name, find) and not InBlacklist(recipe.name, group) then
                     util.debuglog("PIG:found:recipe:" ..
-                        recipe.name .. ":name:" ..
-                        name .. ":group:" .. group .. ":order:" .. order .. ":sub:" .. SubOrder .. ":find:" .. find)
+                            recipe.name .. ":name:" ..
+                            name .. ":group:" .. group .. ":order:" .. order .. ":sub:" .. SubOrder .. ":find:" .. find)
                     SetGroupSubOrder(recipe.name, name, group, order, SubOrder)
                     return true
                 end
@@ -133,7 +136,9 @@ local function ChangeSubgroupAndGroup()
             --if recipe name matches what we are looking for
             if not SortDirectly(recipe) then
                 for _, Group in pairs(GroupSortOrder) do
-                    if Sort(recipe, Group) then break end
+                    if Sort(recipe, Group) then
+                        break
+                    end
                 end
             end
         end

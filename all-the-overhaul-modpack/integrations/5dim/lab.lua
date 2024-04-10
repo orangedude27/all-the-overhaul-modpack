@@ -92,54 +92,54 @@ bobmods.lib.recipe.add_new_ingredient("gr_charger_recipe", { "kr-stabilizer-char
 -- Technologies
 
 -- 02
-util.tech_remove_prerequisites("5d-lab-1", {"engine"})
-util.tech_add_prerequisites("5d-lab-1",{"zirconia-processing"})
+util.tech_remove_prerequisites("5d-lab-1", { "engine" })
+util.tech_add_prerequisites("5d-lab-1", { "zirconia-processing" })
 -- 03
 data.raw.technology["5d-lab-2"].unit.count = 300
-util.tech_add_prerequisites("5d-lab-2",{"nitinol-processing", "advanced-electronics-2", "scanner"})
-util.tech_add_ingredients("5d-lab-2",{"chemical-science-pack"},false)
+util.tech_add_prerequisites("5d-lab-2", { "nitinol-processing", "advanced-electronics-2", "scanner" })
+util.tech_add_ingredients("5d-lab-2", { "chemical-science-pack" }, false)
 -- 04
 data.raw.technology["5d-lab-3"].unit.count = 400
-util.tech_remove_prerequisites("5d-lab-3", {"chemical-science-pack","5d-lab-2"})
-util.tech_add_prerequisites("5d-lab-3","kr-optimization-tech-card")
-util.tech_add_ingredients("5d-lab-3",{"se-rocket-science-pack","space-science-pack","kr-optimization-tech-card"},false)
+util.tech_remove_prerequisites("5d-lab-3", { "chemical-science-pack", "5d-lab-2" })
+util.tech_add_prerequisites("5d-lab-3", "kr-optimization-tech-card")
+util.tech_add_ingredients("5d-lab-3", { "se-rocket-science-pack", "space-science-pack", "kr-optimization-tech-card" }, false)
 -- 05
 data.raw.technology["5d-lab-4"].unit.count = 500
-util.tech_add_prerequisites("5d-lab-4",{"se-heavy-girder","se-energy-science-pack-1"})
-util.tech_add_ingredients("5d-lab-4",{"se-rocket-science-pack","space-science-pack","utility-science-pack","production-science-pack","kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
+util.tech_add_prerequisites("5d-lab-4", { "se-heavy-girder", "se-energy-science-pack-1" })
+util.tech_add_ingredients("5d-lab-4", { "se-rocket-science-pack", "space-science-pack", "utility-science-pack", "production-science-pack", "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" }, false)
 -- 06
 data.raw.technology["5d-lab-5"].unit.count = 600
-util.tech_remove_prerequisites("5d-lab-5", {"production-science-pack"})
-util.tech_add_prerequisites("5d-lab-5",{"se-aeroframe-scaffold","se-material-science-pack-2","se-energy-science-pack-2"})
-util.tech_add_ingredients("5d-lab-5",{"utility-science-pack","kr-optimization-tech-card","se-material-science-pack-2","se-energy-science-pack-2","se-astronomic-science-pack-2"},false)
+util.tech_remove_prerequisites("5d-lab-5", { "production-science-pack" })
+util.tech_add_prerequisites("5d-lab-5", { "se-aeroframe-scaffold", "se-material-science-pack-2", "se-energy-science-pack-2" })
+util.tech_add_ingredients("5d-lab-5", { "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "se-astronomic-science-pack-2" }, false)
 -- 07
 data.raw.technology["5d-lab-6"].unit.count = 700
-util.tech_add_prerequisites("5d-lab-6",{"se-aeroframe-bulkhead","se-material-science-pack-3","se-energy-science-pack-3"})
-util.tech_remove_ingredients("5d-lab-6", {"se-material-science-pack-1"})
-util.tech_add_ingredients("5d-lab-6",{"kr-optimization-tech-card","se-material-science-pack-3","se-energy-science-pack-3","se-astronomic-science-pack-3"},false)
+util.tech_add_prerequisites("5d-lab-6", { "se-aeroframe-bulkhead", "se-material-science-pack-3", "se-energy-science-pack-3" })
+util.tech_remove_ingredients("5d-lab-6", { "se-material-science-pack-1" })
+util.tech_add_ingredients("5d-lab-6", { "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
 -- 08
 data.raw.technology["5d-lab-7"].unit.count = 800
-util.tech_remove_prerequisites("5d-lab-7", {"utility-science-pack"})
-util.tech_add_prerequisites("5d-lab-7",{"kr-ai-core","hcp-circuit"})
-util.tech_remove_ingredients("5d-lab-7", {"se-material-science-pack-2"})
-util.tech_add_ingredients("5d-lab-7",{"kr-optimization-tech-card","se-biological-science-pack-3","se-material-science-pack-3","se-energy-science-pack-3","se-astronomic-science-pack-3"},false)
+util.tech_remove_prerequisites("5d-lab-7", { "utility-science-pack" })
+util.tech_add_prerequisites("5d-lab-7", { "kr-ai-core", "hcp-circuit" })
+util.tech_remove_ingredients("5d-lab-7", { "se-material-science-pack-2" })
+util.tech_add_ingredients("5d-lab-7", { "kr-optimization-tech-card", "se-biological-science-pack-3", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
 -- 09
 data.raw.technology["5d-lab-8"].unit.count = 900
-util.tech_add_prerequisites("5d-lab-8",{"se-nanomaterial","se-heavy-assembly"})
-util.tech_remove_ingredients("5d-lab-8", {"se-material-science-pack-3"})
-util.tech_add_ingredients("5d-lab-8",{"kr-optimization-tech-card","se-biological-science-pack-4","se-material-science-pack-4","se-energy-science-pack-4","se-astronomic-science-pack-4"},false)
+util.tech_add_prerequisites("5d-lab-8", { "se-nanomaterial", "se-heavy-assembly" })
+util.tech_remove_ingredients("5d-lab-8", { "se-material-science-pack-3" })
+util.tech_add_ingredients("5d-lab-8", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-material-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4" }, false)
 -- 10
 data.raw.technology["5d-lab-9"].unit.count = 1000
-util.tech_add_prerequisites("5d-lab-9","se-naquium-cube")
-util.tech_add_ingredients("5d-lab-9",{"kr-optimization-tech-card","se-biological-science-pack-4","se-energy-science-pack-4","se-astronomic-science-pack-4","se-deep-space-science-pack-1"},false)
+util.tech_add_prerequisites("5d-lab-9", "se-naquium-cube")
+util.tech_add_ingredients("5d-lab-9", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "se-deep-space-science-pack-1" }, false)
 
 -- SE
-util.tech_add_prerequisites("se-space-science-lab","5d-lab-3")
-util.tech_add_prerequisites("se-nexus","5d-lab-9")
+util.tech_add_prerequisites("se-space-science-lab", "5d-lab-3")
+util.tech_add_prerequisites("se-nexus", "5d-lab-9")
 
 -- 248K
-util.tech_add_prerequisites("gr_lab_tech","5d-lab-9")
+util.tech_add_prerequisites("gr_lab_tech", "5d-lab-9")
 
 -- K2
-util.tech_add_prerequisites("kr-advanced-lab","5d-lab-2")
-util.tech_add_prerequisites("kr-singularity-lab","5d-lab-8")
+util.tech_add_prerequisites("kr-advanced-lab", "5d-lab-2")
+util.tech_add_prerequisites("kr-singularity-lab", "5d-lab-8")

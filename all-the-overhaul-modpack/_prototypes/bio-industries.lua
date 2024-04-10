@@ -60,8 +60,7 @@ data:extend({
         allow_decomposition = false,
         energy_required = 10,
         emissions_multiplier = 0.25,
-        ingredients =
-        {
+        ingredients = {
             { type = "fluid", name = "water", amount = 50 },
         },
         results = { { type = "item", name = "bi-purified-air", amount = 1, probability = 0 } },
@@ -74,11 +73,11 @@ data:extend({
         name = "pollution_create_module_1",
         enabled = false,
         ingredients = {
-            { "effectivity-module",    1 },
-            { "electronic-circuit",    10 },
-            { "pcb-solder",            10 },
+            { "effectivity-module", 1 },
+            { "electronic-circuit", 10 },
+            { "pcb-solder", 10 },
             { "electronic-components", 10 },
-            { "biomass",               10 },
+            { "biomass", 10 },
         },
         energy_required = 10,
         result = "pollution_create_module_1",
@@ -108,9 +107,9 @@ data:extend({
         unit = {
             count = 50,
             ingredients = {
-                { "basic-tech-card",         1 },
+                { "basic-tech-card", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
+                { "logistic-science-pack", 1 },
             },
             time = 30,
         },

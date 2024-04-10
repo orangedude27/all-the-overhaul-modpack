@@ -15,9 +15,9 @@ Recipe("mini-assembler-4"):add_ingredient({ "solder", 5 })
 Recipe("mini-assembler-4"):add_ingredient({ "hv-power-regulator", 1 })
 Recipe("mini-assembler-4"):add_ingredient({ "imersium-gear-wheel", 4 })
 Recipe("mini-assembler-4"):add_ingredient({ "processing-unit", 2 })
-Recipe("mini-assembler-4"):replace_ingredient("assembling-machine-3", {"mini-assembler-3", 1})
-Recipe("mini-assembler-4"):replace_ingredient("steel-plate", {"nitinol-plate", 9})
-Recipe("mini-assembler-4"):replace_ingredient("productivity-module", {"cermet", 1})
+Recipe("mini-assembler-4"):replace_ingredient("assembling-machine-3", { "mini-assembler-3", 1 })
+Recipe("mini-assembler-4"):replace_ingredient("steel-plate", { "nitinol-plate", 9 })
+Recipe("mini-assembler-4"):replace_ingredient("productivity-module", { "cermet", 1 })
 -- 05
 Recipe("mini-assembler-5"):add_ingredient({ "solder", 5 })
 Recipe("mini-assembler-5"):add_ingredient({ "hv-power-regulator", 1 })
@@ -69,16 +69,16 @@ Recipe("mini-assembler-10"):replace_ingredient("low-density-structure", { "se-he
 Recipe("mini-assembler-10"):replace_ingredient("processing-unit", { "gr_materials_circuit", 10 })
 Recipe("mini-assembler-10"):replace_ingredient("tungsten-carbide", { "se-naquium-cube", 1 })
 
-data.raw["assembling-machine"]["mini-assembler-1"].crafting_categories = {"electronics"}
-data.raw["assembling-machine"]["mini-assembler-2"].crafting_categories = {"electronics", "electronics-machine"}
-data.raw["assembling-machine"]["mini-assembler-3"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
-data.raw["assembling-machine"]["mini-assembler-4"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
-data.raw["assembling-machine"]["mini-assembler-5"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
-data.raw["assembling-machine"]["mini-assembler-6"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
-data.raw["assembling-machine"]["mini-assembler-7"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
-data.raw["assembling-machine"]["mini-assembler-8"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
-data.raw["assembling-machine"]["mini-assembler-9"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
-data.raw["assembling-machine"]["mini-assembler-10"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-1"].crafting_categories = { "electronics" }
+data.raw["assembling-machine"]["mini-assembler-2"].crafting_categories = { "electronics", "electronics-machine" }
+data.raw["assembling-machine"]["mini-assembler-3"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
+data.raw["assembling-machine"]["mini-assembler-4"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
+data.raw["assembling-machine"]["mini-assembler-5"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
+data.raw["assembling-machine"]["mini-assembler-6"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
+data.raw["assembling-machine"]["mini-assembler-7"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
+data.raw["assembling-machine"]["mini-assembler-8"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
+data.raw["assembling-machine"]["mini-assembler-9"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
+data.raw["assembling-machine"]["mini-assembler-10"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
 
 -- Set crafting categories for selected recipes
 Recipe("basic-electronic-components"):change_category("electronics")

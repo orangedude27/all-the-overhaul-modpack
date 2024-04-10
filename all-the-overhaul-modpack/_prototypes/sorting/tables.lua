@@ -3,8 +3,7 @@
 
 --beacons DONE
 local BeaconsBlacklist = { "base" }
-local BeaconsSubOrder =
-{
+local BeaconsSubOrder = {
     ["beacon"] = "[d]",
     ["fi_modules"] = "[f]",
     ["speed"] = "[a]",
@@ -16,8 +15,7 @@ local BeaconsSubOrder =
     ["fi_ki_circuit"] = "[dc]",
     ["fu_ki_circuit"] = "[dd]",
 }
-local BeaconsRecipeOrder =
-{
+local BeaconsRecipeOrder = {
     ["module"] = "[a]",
     ["compact"] = "[b]",
     ["wide"] = "[b]",
@@ -26,8 +24,7 @@ local BeaconsRecipeOrder =
 }
 --circuits
 local CircuitBlacklist = { "aeroframe", "data", "recycle", "cybersyn" }
-local CircuitSubOrder =
-{
+local CircuitSubOrder = {
     ["combinator"] = "[e]",
     ["buoy"] = "[d]",
     ["lamp"] = "[g]",
@@ -35,8 +32,7 @@ local CircuitSubOrder =
     ["speaker"] = "[e]",
     ["nixie-tube"] = "[h]",
 }
-local CircuitRecipeOrder =
-{
+local CircuitRecipeOrder = {
     ["constant"] = "[a]",
     ["decider"] = "[a]",
     ["arithmetic"] = "[a]",
@@ -63,8 +59,7 @@ local CircuitRecipeOrder =
 }
 --space
 local SpaceBlacklist = { "science", "recycle", "ore", "data", "scrapping" }
-local SpaceSubOrder =
-{
+local SpaceSubOrder = {
     ["spaceship"] = "[c]",
     ["silo"] = "[b]",
     ["pad"] = "[a]",
@@ -72,8 +67,7 @@ local SpaceSubOrder =
     ["capsul"] = "[e]",
     ["probe"] = "[d]",
 }
-local SpaceRecipeOrder =
-{
+local SpaceRecipeOrder = {
     ["tank"] = "[c]",
     ["engine"] = "[d]",
     ["floor"] = "[b]",
@@ -89,15 +83,14 @@ local SpaceRecipeOrder =
     ["gps"] = "[f]",
 }
 --ammo
-local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", "fuel", "artillery-turret", "heavy-rocket-launcher", "rocket-", "turret"}
-local AmmoSubOrder =
-{
+local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", "fuel", "artillery-turret", "heavy-rocket-launcher", "rocket-", "turret" }
+local AmmoSubOrder = {
     ["anti-material"] = "[a]",
     ["railgun"] = "[d]",
     ["artillery"] = "[c]",
     ["biter"] = "[f]",
     ["spitter"] = "[f]",
-    ["rifle"] = "[a]",["light"] = "[a]",
+    ["rifle"] = "[a]", ["light"] = "[a]",
     ["virus"] = "[a]",
     ["explosive"] = "[e]",
     ["dart"] = "[a]",
@@ -119,8 +112,7 @@ local AmmoSubOrder =
     ["urani"] = "[a]",
     ["rocket"] = "[a]",
 }
-local AmmoRecipeOrder =
-{
+local AmmoRecipeOrder = {
     ["magazine"] = "[z]",
     ["recipe"] = "[z]",
     ["cluster"] = "[z]",
@@ -143,9 +135,8 @@ local AmmoRecipeOrder =
     ["rocket"] = "[b]"
 }
 --tiles
-local TilesBlacklist = { "se-matter-fusion-dirty", "fu_fusion_card_2_recipe", "catalogue", "science-pack"}
-local TilesSubOrder =
-{
+local TilesBlacklist = { "se-matter-fusion-dirty", "fu_fusion_card_2_recipe", "catalogue", "science-pack" }
+local TilesSubOrder = {
     ["text"] = "[e]",
     ["landfill"] = "[g]",
     ["concrete"] = "[a]",
@@ -157,8 +148,7 @@ local TilesSubOrder =
     ["particle"] = "[z]",
     ["fusion"] = "[z]",
 }
-local TilesRecipeOrder =
-{
+local TilesRecipeOrder = {
     ["plate"] = "[a]",
     ["plating"] = "[a]",
     ["scaffold"] = "[a]",
@@ -196,9 +186,8 @@ local TilesRecipeOrder =
 }
 --transport
 local TransportBlacklist = { "turret", "shell", "laboratory", "battery", "belt", "lifesupport", "card", "scrapping",
-    "rocket", "fiber", "fuel", "fi_robo_port_recipe", "el_tank_recipe", "roboport" }
-local TransportSubOrder =
-{
+                             "rocket", "fiber", "fuel", "fi_robo_port_recipe", "el_tank_recipe", "roboport" }
+local TransportSubOrder = {
     ["spidertron"] = "[g]",
     ["rail"] = "[a]",
     ["locomotive"] = "[b]",
@@ -222,8 +211,7 @@ local TransportSubOrder =
     ["additional"] = "[g]",
     ["bridge_base"] = "[a]",
 }
-local TransportRecipeOrder =
-{
+local TransportRecipeOrder = {
     ["equipment"] = "[a]",
     ["dock"] = "[a]",
     ["interface"] = "[a]",
@@ -246,9 +234,8 @@ local TransportRecipeOrder =
 }
 --power
 local PowerBlacklist = { "equipment", "oxygen", "star", "lead", "gr_charger_recipe", "fu_boiler_recipe", "robo",
-    "el_charger_recipe", "bi-bio-reactor", "stelar", "tokamak", "plasma", "dect" }
-local PowerSubOrder =
-{
+                         "el_charger_recipe", "bi-bio-reactor", "stelar", "tokamak", "plasma", "dect" }
+local PowerSubOrder = {
     ["solar"] = "[d]",
     ["accumulator"] = "[d]",
     ["pole"] = "[a]",
@@ -266,8 +253,7 @@ local PowerSubOrder =
     ["pressurizer"] = "[d]",
     ["intergalactic"] = "[d]",
 }
-local PowerRecipeOrder =
-{
+local PowerRecipeOrder = {
     ["wooden"] = "[c]",
     ["small"] = "[a]",
     ["alpha"] = "[b]",
@@ -293,9 +279,8 @@ local PowerRecipeOrder =
     ["transceiver"] = "[c]",
 }
 --combat
-local CombatBlacklist = { "data", "delivery", "turret", "pylon"}
-local CombatSubOrder =
-{
+local CombatBlacklist = { "data", "delivery", "turret", "pylon" }
+local CombatSubOrder = {
     ["cliff"] = "[q]",
     ["artillery-t"] = "[at]",
     ["wall"] = "f",
@@ -313,8 +298,7 @@ local CombatSubOrder =
     ["land-mine"] = "[z]"
 
 }
-local CombatRecipeOrder =
-{
+local CombatRecipeOrder = {
     ["stone"] = "a",
     ["concrete"] = "b",
     ["steel"] = "c",
@@ -342,9 +326,8 @@ local CombatRecipeOrder =
 }
 --production
 local ProductionBlacklist = { "head", "coal", "sulfur", "kerosene", "fi_refinery_basic_recipe", "fu_drill_recipe",
-    "crystal", "equipment", "cube", "card", "chromium", "salt", "dirty-water", "brass"}
-local ProductionSubOrder =
-{
+                              "crystal", "equipment", "cube", "card", "chromium", "salt", "dirty-water", "brass" }
+local ProductionSubOrder = {
     ["assembling"] = "[a]",
     ["mini-assembler"] = "[b]",
     ["drill"] = "[e]",
@@ -371,8 +354,7 @@ local ProductionSubOrder =
     ["greenhouse"] = "[z]",
     ["lab"] = "[g]",
 }
-local ProductionRecipeOrder =
-{
+local ProductionRecipeOrder = {
     ["space"] = "[d]",
     ["mk2"] = "[c]",
     ["area"] = "[d]",
@@ -428,8 +410,7 @@ local ProductionRecipeOrder =
 
 --logistics
 local LogisticsBlacklist = { "equipment", "companion", "substrate", "combinator" }
-local LogisticsSubOrder =
-{
+local LogisticsSubOrder = {
     ["underground-belt"] = "[f]",
     ["floating-belt"] = "[j]",
     ["floating-inserter"] = "[j]",
@@ -445,8 +426,7 @@ local LogisticsSubOrder =
     ["robo"] = "[n]",
     ["aai-loader"] = "[a]",
 }
-local LogisticsRecipeOrder =
-{
+local LogisticsRecipeOrder = {
     ["steel"] = "[a]",
     ["iron"] = "[i]",
     ["wood"] = "[h]",
@@ -479,9 +459,8 @@ local LogisticsRecipeOrder =
 }
 --resources
 local ResourceBlacklist = { "landfill", "matter", "text", "stream", "formatting", "cannon", "machine", "inserter",
-    "alloy", "nitinol", "sludge", "shotgun", "fence", "crusher", "battery", "solar", "bi-cokery", "probe", "science", "dect", "repair", "combinator", "masher"}
-local ResourceSubOrder =
-{
+                            "alloy", "nitinol", "sludge", "shotgun", "fence", "crusher", "battery", "solar", "bi-cokery", "probe", "science", "dect", "repair", "combinator", "masher" }
+local ResourceSubOrder = {
     ["coal"] = "[m]",
     ["iron"] = "[a]",
     ["steel"] = "[a]",
@@ -526,8 +505,7 @@ local ResourceSubOrder =
 
 }
 
-local ResourceRecipeOrder =
-{
+local ResourceRecipeOrder = {
     ["core"] = "[a]",
     ["ore"] = "[b]",
     ["flak"] = "[b]",
@@ -571,9 +549,8 @@ local ResourceRecipeOrder =
     ["synthe"] = "[y]",
 }
 --manufactoring (intermediat-products)
-local ManufactoringBlacklist = {"filtration", "ki", "dect","equipment", "data"}
-local ManufactoringSubOrder =
-{
+local ManufactoringBlacklist = { "filtration", "ki", "dect", "equipment", "data" }
+local ManufactoringSubOrder = {
     ["upgrade"] = "[y]",
     ["board"] = "[y]",
     ["circuit"] = "[a]",
@@ -593,8 +570,7 @@ local ManufactoringSubOrder =
     --["fu"] = "[y]",
     --["gr"] = "[y]",
 }
-local ManufactoringRecipeOrder =
-{
+local ManufactoringRecipeOrder = {
     ["recipe"] = "[y]",
     ["phenolic"] = "[y]",
     ["fibreglass"] = "[y]",
@@ -641,9 +617,8 @@ local ManufactoringRecipeOrder =
 }
 --fluids
 local FluidBlacklist = { "biter", "purify", "equipment", "train", "water-recipe", "se-matter-fusion-dirty",
-    "se-dirty-water-filtration-holmium", "se-dirty-water-filtration-iridium", "oil-refinery"}
-local FluidSubOrder =
-{
+                         "se-dirty-water-filtration-holmium", "se-dirty-water-filtration-iridium", "oil-refinery" }
+local FluidSubOrder = {
     ["sulfur"] = "[a]",
     ["kerosene"] = "[a]",
     ["gas"] = "[a]",
@@ -677,8 +652,7 @@ local FluidSubOrder =
     ["activator"] = "[a]",
     ["ferric"] = "[a]",
 }
-local FluidRecipeOrder =
-{
+local FluidRecipeOrder = {
     ["bi"] = "[a]",
     ["refinery"] = "[a]",
     ["reforming"] = "[b]",
@@ -714,10 +688,9 @@ local FluidRecipeOrder =
     ["antimatter"] = "[a]",
 }
 --science
-local ScienceDataBlacklist = {"basic", "blank", "research", "storage", "empty", "equipment", "card", "data"}
+local ScienceDataBlacklist = { "basic", "blank", "research", "storage", "empty", "equipment", "card", "data" }
 --first string to look for and what order to set the subgroup
-local ScienceDataSubOrder =
-{
+local ScienceDataSubOrder = {
     ["se-simulation"] = "[a]",
     ["astronomic-catalogue"] = "[ab]",
     ["biological-catalogue"] = "[b]",
@@ -740,8 +713,7 @@ local ScienceDataSubOrder =
     ["deep-space-science"] = "[zb]",
 }
 --second string to look for and what order to set the item
-local ScienceDataRecipeOrder =
-{
+local ScienceDataRecipeOrder = {
     ["sign"] = "[z]",
     ["test"] = "[z]",
     ["astro"] = "[a]",
@@ -765,11 +737,10 @@ local ScienceDataRecipeOrder =
 }
 
 --science
-local ScienceBlacklist = {"gravit", "infrared", "micro", "electromagnetic", "shielding",
-    "monopole", "basic", "blank", "optimization", "singularity", "advanced"}
+local ScienceBlacklist = { "gravit", "infrared", "micro", "electromagnetic", "shielding",
+                           "monopole", "basic", "blank", "optimization", "singularity", "advanced" }
 --first string to look for and what order to set the subgroup
-local ScienceSubOrder =
-{
+local ScienceSubOrder = {
     ["science-pack"] = "[a]",
     ["pack"] = "[b]",
     ["tech"] = "[b]",
@@ -777,8 +748,7 @@ local ScienceSubOrder =
     ["gr_"] = "[b]"
 }
 --second string to look for and what order to set the item
-local ScienceRecipeOrder =
-{
+local ScienceRecipeOrder = {
     ["blue"] = "[b]",
     ["green"] = "[b]",
     ["white"] = "[b]",
@@ -800,9 +770,8 @@ local ScienceRecipeOrder =
     ["data"] = "[z]"
 }
 
-local PipesBlacklist = {"shelter", "science", "data", "cable"}
-local PipesSubOrder =
-{
+local PipesBlacklist = { "shelter", "science", "data", "cable" }
+local PipesSubOrder = {
     ["storage"] = "[s]",
     ["pump"] = "[pz]",
     ["duct"] = "[d]",
@@ -815,8 +784,7 @@ local PipesSubOrder =
     ["swivel-joint"] = "[z]"
 }
 
-local PipesRecipeOrder =
-{
+local PipesRecipeOrder = {
     ["junction"] = "[j]",
     ["fluid"] = "[a]",
     ["tank"] = "[a]",
@@ -829,9 +797,8 @@ local PipesRecipeOrder =
     ["top-up"] = "[z]"
 }
 
-local EquipmentBlacklist = { "data", "heat", "lab", "facility", "projector", "pistol", "ammo", "magazine", "shell", "launcher", "mine", "gun"}
-local EquipmentSubOrder =
-{
+local EquipmentBlacklist = { "data", "heat", "lab", "facility", "projector", "pistol", "ammo", "magazine", "shell", "launcher", "mine", "gun" }
+local EquipmentSubOrder = {
     ["armor"] = "[a]",
     ["suit"] = "[a]",
     ["battery-equipment"] = "[c]",
@@ -854,8 +821,7 @@ local EquipmentSubOrder =
     ["materials"] = "[n]",
 }
 
-local EquipmentRecipeOrder =
-{
+local EquipmentRecipeOrder = {
     ["light"] = "[aa]",
     ["heavy"] = "[ab]",
     ["modular"] = "[ac]",
@@ -871,12 +837,11 @@ local EquipmentRecipeOrder =
     ["rampant"] = "[j]",
     ["defense"] = "[j]",
     ["equipment"] = "[a]",
-    ["power"] = "[ad]", 
+    ["power"] = "[ad]",
 }
 
 local TurretBlacklist = {}
-local TurretSubOrder =
-{
+local TurretSubOrder = {
     ["artillery-turret"] = "[k]",
     ["flamethrower-turret"] = "[j]",
     ["glaser-turret-sniper"] = "[i]",
@@ -890,8 +855,7 @@ local TurretSubOrder =
     ["gun-turret"] = "[a]",
 }
 
-local TurretRecipeOrder =
-{
+local TurretRecipeOrder = {
     ["turret-1"] = "[c]",
     ["turret-0"] = "[b]",
     ["turret"] = "[a]"
@@ -958,8 +922,8 @@ GroupRecipeOrder = {
     ["turret"] = TurretRecipeOrder,
 }
 --this sorts the recipes into these groups in this order
-GroupSortOrder = {"equipment", "fluids", "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "scienceData",
-    "science", "turret", "combat", "production", "logistics", "pipes", "resources", "intermediate-products" }
+GroupSortOrder = { "equipment", "fluids", "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "scienceData",
+                   "science", "turret", "combat", "production", "logistics", "pipes", "resources", "intermediate-products" }
 
 -- This allows for the conversion of odd group names to become the more common variant
 ReplaceSubgroup = {
@@ -1002,8 +966,7 @@ ReplaceSubgroup = {
 }
 
 --ADDD ORDER TO MEEE!!
-ReplaceSubgroupDirectName =
-{
+ReplaceSubgroupDirectName = {
     ["satellite"] = { name = "probe", order = "[a]" },
     ["rail-signal"] = { name = "rail-signal", order = "[b]" },
     ["rail-chain-signal"] = { name = "rail-signal", order = "[b]" },
@@ -1025,13 +988,12 @@ ReplaceSubgroupDirectName =
 }
 
 --ADD ORDER TO ME!!!
-SortDirectTable =
-{
-    ["immolator"] = { name = "spidertron", order = "[a]"},
-    ["spidertron-builder"] = { name = "spidertron", order = "[a]"},
-    ["spidertronmk2"] = { name = "spidertron", order = "[a]"},
-    ["spidertronmk3"] = { name = "spidertron", order = "[a]"},
-    ["spidertron-remote"] = { name = "spidertron", order = "[a]"},
+SortDirectTable = {
+    ["immolator"] = { name = "spidertron", order = "[a]" },
+    ["spidertron-builder"] = { name = "spidertron", order = "[a]" },
+    ["spidertronmk2"] = { name = "spidertron", order = "[a]" },
+    ["spidertronmk3"] = { name = "spidertron", order = "[a]" },
+    ["spidertron-remote"] = { name = "spidertron", order = "[a]" },
     ["vehicle-roboport"] = { name = "train", order = "[a]" },
     ["fi_equipment_player_reactor_recipe"] = { name = "rtg", order = "a2" },
     ["fi_equipment_player_shield_recipe"] = { name = "shield", order = "s" },
@@ -1221,29 +1183,29 @@ SortDirectTable =
     ["energy-control-unit"] = { name = "electro", order = "a" },
     ["bp-charged-lithium-sulfur-battery"] = { name = "battery", order = "a" },
     ["lithium-sulfur-battery"] = { name = "battery", order = "a" },
-    ["fluid-level-indicator"] = { name = "pipe", order = "a"},
-    ["fluid-level-indicator-straight"] = { name = "pipe", order = "a"},
-    ["bi-wood-pipe"] = { name = "pipe", order = "a"},
-    ["fast-one-mk1 recipe"] = { name = "locomotive", order = "a"},
-    ["fast-one-mk2 recipe"] = { name = "locomotive", order = "a"},
-    ["fast-one-mk3 recipe"] = { name = "locomotive", order = "a"},
-    ["manual-color-module"] = { name = "train", order = "a"},
-    ["ltn-port"] = { name = "port", order = "[a]"},
-    ["ironclad"] = { name = "vehicle", order = "[a]"},
-    ["energy-absorber"] = { name = "shield", order = "[a]"},
-    ["battery-equipment"] = { name = "battery-equipment", order = "[c]"},
-    ["battery-mk2-equipment"] = { name = "battery-equipment", order = "[c]"},
-    ["battery-mk3-equipment"] = { name = "battery-equipment", order = "[c]"},
-    ["big-battery-equipment"] = { name = "battery-equipment", order = "[c]"},
-    ["big-battery-mk2-equipment"] = { name = "battery-equipment", order = "[c]"},
-    ["big-battery-mk3-equipment"] = { name = "battery-equipment", order = "[c]"},
-    ["crafting_combinator:crafting-combinator"] = { name = "combinator", order = "[i]"},
-    ["crafting_combinator:recipe-combinator"] = { name = "combinator", order = "[i]"},
-    ["cuw"] = { name = "copper", order = "[z]"},
-    ["matter-tech-card"] = { name = "matter-science", order = "[m]"},
-    ["basic-tech-card"] = { name = "science-pack", order = "[a]"},
-    ["rocket-control-unit"] = { name = "rocket-part", order = "[a]"},
-    ["kr-rocket-turret"] = { name = "artillery-turret", order = "[a]"},
-    ["kr-railgun-turret"] = { name = "artillery-turret", order = "[a]"}
+    ["fluid-level-indicator"] = { name = "pipe", order = "a" },
+    ["fluid-level-indicator-straight"] = { name = "pipe", order = "a" },
+    ["bi-wood-pipe"] = { name = "pipe", order = "a" },
+    ["fast-one-mk1 recipe"] = { name = "locomotive", order = "a" },
+    ["fast-one-mk2 recipe"] = { name = "locomotive", order = "a" },
+    ["fast-one-mk3 recipe"] = { name = "locomotive", order = "a" },
+    ["manual-color-module"] = { name = "train", order = "a" },
+    ["ltn-port"] = { name = "port", order = "[a]" },
+    ["ironclad"] = { name = "vehicle", order = "[a]" },
+    ["energy-absorber"] = { name = "shield", order = "[a]" },
+    ["battery-equipment"] = { name = "battery-equipment", order = "[c]" },
+    ["battery-mk2-equipment"] = { name = "battery-equipment", order = "[c]" },
+    ["battery-mk3-equipment"] = { name = "battery-equipment", order = "[c]" },
+    ["big-battery-equipment"] = { name = "battery-equipment", order = "[c]" },
+    ["big-battery-mk2-equipment"] = { name = "battery-equipment", order = "[c]" },
+    ["big-battery-mk3-equipment"] = { name = "battery-equipment", order = "[c]" },
+    ["crafting_combinator:crafting-combinator"] = { name = "combinator", order = "[i]" },
+    ["crafting_combinator:recipe-combinator"] = { name = "combinator", order = "[i]" },
+    ["cuw"] = { name = "copper", order = "[z]" },
+    ["matter-tech-card"] = { name = "matter-science", order = "[m]" },
+    ["basic-tech-card"] = { name = "science-pack", order = "[a]" },
+    ["rocket-control-unit"] = { name = "rocket-part", order = "[a]" },
+    ["kr-rocket-turret"] = { name = "artillery-turret", order = "[a]" },
+    ["kr-railgun-turret"] = { name = "artillery-turret", order = "[a]" }
     --[""] = { name = "", order = ""},
 }

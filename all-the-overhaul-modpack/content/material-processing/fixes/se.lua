@@ -1,5 +1,5 @@
 -- Remove ingot to plate recipes
-atom.util.recipe.removeByNamePattern("%-ingot%-to%-plate$", {"se-iridium-ingot-to-plate", "se-holmium-ingot-to-plate", "se-beryllium-ingot-to-plate", "se-naquium-ingot-to-plate"})
+atom.util.recipe.removeByNamePattern("%-ingot%-to%-plate$", { "se-iridium-ingot-to-plate", "se-holmium-ingot-to-plate", "se-beryllium-ingot-to-plate", "se-naquium-ingot-to-plate" })
 atom.util.recipe.removeByName("se-molten-copper")
 atom.util.recipe.removeByName("se-molten-iron")
 atom.util.recipe.removeByName("rare-metals-vulcanite")

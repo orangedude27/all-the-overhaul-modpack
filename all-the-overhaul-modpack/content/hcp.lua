@@ -14,12 +14,11 @@ data:extend({
         category = "electronics-machine",
         energy_required = 10,
         enabled = false,
-        ingredients =
-        {
-            {"gr_materials_pcb", 1},
-            {"se-holmium-plate", 1},
-            {"tin-plate", 2},
-            {type="fluid", name="ferric-chloride-solution", amount=5}
+        ingredients = {
+            { "gr_materials_pcb", 1 },
+            { "se-holmium-plate", 1 },
+            { "tin-plate", 2 },
+            { type = "fluid", name = "ferric-chloride-solution", amount = 5 }
         },
         result = "hcp-board",
         allow_decomposition = false
@@ -31,15 +30,15 @@ data:extend({
         energy_required = 1,
         enabled = false,
         ingredients = {
-            {type="item", name="se-superconductive-cable", amount=2},
-            {type="item", name="advanced-electronic-components", amount=3},
-            {type="item", name="electronic-components", amount=2},
-            {type="item", name="hcp-board", amount=1},
-            {type="fluid", name="fi_strong_acid", amount=50},
+            { type = "item", name = "se-superconductive-cable", amount = 2 },
+            { type = "item", name = "advanced-electronic-components", amount = 3 },
+            { type = "item", name = "electronic-components", amount = 2 },
+            { type = "item", name = "hcp-board", amount = 1 },
+            { type = "fluid", name = "fi_strong_acid", amount = 50 },
         },
         results = {
-            data.raw.fluid["depleted-acid"] and {type="fluid", name="depleted-acid", amount=50} or nil,
-            {type="item", name="gr_materials_circuit", amount=1},
+            data.raw.fluid["depleted-acid"] and { type = "fluid", name = "depleted-acid", amount = 50 } or nil,
+            { type = "item", name = "gr_materials_circuit", amount = 1 },
         },
         main_product = "gr_materials_circuit",
         allow_decomposition = false
@@ -51,13 +50,13 @@ data:extend({
         energy_required = 2,
         enabled = false,
         ingredients = {
-            {type="fluid", name="se-vitalic-acid", amount=4},
-            {type="item", name="fi_materials_glass_fiber", amount=1},
-            {type="item", name="fu_materials_carbon_fiber", amount=1},
-            {type="item", name="plastic-bar", amount=4},
+            { type = "fluid", name = "se-vitalic-acid", amount = 4 },
+            { type = "item", name = "fi_materials_glass_fiber", amount = 1 },
+            { type = "item", name = "fu_materials_carbon_fiber", amount = 1 },
+            { type = "item", name = "plastic-bar", amount = 4 },
         },
         results = {
-            {type="item", name="gr_materials_pcb", amount=6},
+            { type = "item", name = "gr_materials_pcb", amount = 6 },
         },
         allow_decomposition = false
     },
@@ -65,26 +64,26 @@ data:extend({
         type = "technology",
         name = "hcp-circuit",
         effects = {
-            {type = "unlock-recipe", recipe = "hcp-circuit"},
-            {type = "unlock-recipe", recipe = "pcb-recipe"},
-            {type = "unlock-recipe", recipe = "hcp-board"},
+            { type = "unlock-recipe", recipe = "hcp-circuit" },
+            { type = "unlock-recipe", recipe = "pcb-recipe" },
+            { type = "unlock-recipe", recipe = "hcp-board" },
         },
         icon = "__248k__/ressources/techs/gr_circuit_tech.png",
         icon_size = 128,
-        prerequisites = {"se-superconductive-cable"},
+        prerequisites = { "se-superconductive-cable" },
         unit = {
             count = 300,
             time = 30,
             ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack", 1},
-                {"chemical-science-pack", 1},
-                {"se-rocket-science-pack", 1},
-                {"space-science-pack", 1},
-                {"production-science-pack", 1},
-                {"utility-science-pack", 1},
-                {"se-material-science-pack-3", 1},
-                {"se-energy-science-pack-3", 1},
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack", 1 },
+                { "chemical-science-pack", 1 },
+                { "se-rocket-science-pack", 1 },
+                { "space-science-pack", 1 },
+                { "production-science-pack", 1 },
+                { "utility-science-pack", 1 },
+                { "se-material-science-pack-3", 1 },
+                { "se-energy-science-pack-3", 1 },
             },
         },
     }

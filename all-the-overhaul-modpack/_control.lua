@@ -32,18 +32,18 @@ script.on_event(defines.events.on_cutscene_cancelled, PlayerCreated)
 
 EASY_MILITARY = {
     { "armor-piercing-rifle-magazine", 4000 },
-    { "gun-turret",                    20 },
-    { "concrete-wall",                 1000 }
+    { "gun-turret", 20 },
+    { "concrete-wall", 1000 }
 }
 
 EASY_AUTOMATION = {
-    { "assembling-machine-1",  20 },
+    { "assembling-machine-1", 20 },
     { "electric-mining-drill", 20 },
-    { "solar-panel",           100 },
-    { "accumulator",           100 },
-    { "substation",            20 },
-    { "inserter",              50 },
-    { "transport-belt",        200 },
-    { "underground-belt",      50 },
-    { "splitter",              50 }
+    { "solar-panel", 100 },
+    { "accumulator", 100 },
+    { "substation", 20 },
+    { "inserter", 50 },
+    { "transport-belt", 200 },
+    { "underground-belt", 50 },
+    { "splitter", 50 }
 }

@@ -10,8 +10,8 @@ local function create_equipment_category(name_category)
 end
 
 local arr_equipments = { "active-defense-equipment", "battery-equipment", "belt-immunity-equipment",
-    "energy-shield-equipment", "generator-equipment", "movement-bonus-equipment", "night-vision-equipment",
-    "roboport-equipment", "solar-panel-equipment" }
+                         "energy-shield-equipment", "generator-equipment", "movement-bonus-equipment", "night-vision-equipment",
+                         "roboport-equipment", "solar-panel-equipment" }
 
 local function add_category_to_equipment(name_equipment, name_category)
     if data.raw["equipment-category"][name_category] ~= nil then

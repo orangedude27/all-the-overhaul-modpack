@@ -7,7 +7,7 @@ local function bob_pipepictures(pipe_type)
             height = 80,
             hr_version = {
                 filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-straight-vertical-single.png",
+                        pipe_type .. "/hr-pipe-straight-vertical-single.png",
                 priority = "extra-high",
                 width = 160,
                 height = 160,
@@ -34,7 +34,7 @@ local function bob_pipepictures(pipe_type)
             height = 64,
             hr_version = {
                 filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-straight-vertical-window.png",
+                        pipe_type .. "/hr-pipe-straight-vertical-window.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,
@@ -48,7 +48,7 @@ local function bob_pipepictures(pipe_type)
             height = 64,
             hr_version = {
                 filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-straight-horizontal-window.png",
+                        pipe_type .. "/hr-pipe-straight-horizontal-window.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,
@@ -239,13 +239,13 @@ local function bob_pipepictures(pipe_type)
         },
         horizontal_window_background = {
             filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                pipe_type .. "/pipe-horizontal-window-background.png",
+                    pipe_type .. "/pipe-horizontal-window-background.png",
             priority = "extra-high",
             width = 64,
             height = 64,
             hr_version = {
                 filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-horizontal-window-background.png",
+                        pipe_type .. "/hr-pipe-horizontal-window-background.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,
@@ -259,7 +259,7 @@ local function bob_pipepictures(pipe_type)
             height = 64,
             hr_version = {
                 filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-vertical-window-background.png",
+                        pipe_type .. "/hr-pipe-vertical-window-background.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,
@@ -645,7 +645,7 @@ data:extend({
         enabled = false,
         ingredients = {
             { "bolted-flange", 1 },
-            { "brass-plate",   5 },
+            { "brass-plate", 5 },
         },
         result = "brass-pipe",
     },
@@ -655,11 +655,11 @@ data:extend({
         name = "brass-pipe-to-ground",
         enabled = false,
         ingredients = {
-            { "brass-pipe",    20 },
-            { "brass-plate",   2 },
+            { "brass-pipe", 20 },
+            { "brass-plate", 2 },
             { "bismuth-plate", 2 },
-            { "lead-plate",    1 },
-            { "tin-plate",     1 },
+            { "lead-plate", 1 },
+            { "tin-plate", 1 },
         },
         result_count = 2,
         result = "brass-pipe-to-ground",
@@ -687,9 +687,9 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "basic-tech-card",         1 },
+                { "basic-tech-card", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
+                { "logistic-science-pack", 1 },
             },
             time = 30,
         },
