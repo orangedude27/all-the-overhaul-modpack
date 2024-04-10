@@ -69,6 +69,8 @@ table.assign(lithium248k, {
     icon_mipmaps = lithiumK2.icon_mipmaps,
 })
 data.raw.technology["kr-lithium-processing"] = nil
+atom.util.recipe.replaceIngredient("el_lithium_item", "lithium")
+atom.util.recipe.replaceResult("el_lithium_item", "lithium")
 atom.util.item.removeByName("el_lithium_item")
 
 -- Adjust low density structure recipe
