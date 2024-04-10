@@ -3,7 +3,7 @@
 ## High priority
 
 - Sort icons for recipes and items
-- Fix error with mod Transport Drones (https://discord.com/channels/1174743568590590053/1221228607641485464)
+~~- Fix error with mod Transport Drones (https://discord.com/channels/1174743568590590053/1221228607641485464)~~
 - Fix missing prerequisites for technologies (https://discord.com/channels/1174743568590590053/1218289286344868000)
 - Balance medpacks (https://discord.com/channels/1174743568590590053/1220624844220141630)
 - Fix handcrafting of wooden underground pipes (https://discord.com/channels/1174743568590590053/1219277139975737354)
