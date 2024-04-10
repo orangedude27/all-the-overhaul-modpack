@@ -1,8 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.8
-Date: xx.xx.2024
+Date: 10.04.2024
+  Bug fixes:
+    - Fix imersium wall being available at the start
+    - Add missing recipes and technology prerequisites: https://discord.com/channels/1174743568590590053/1223300008653361244
+    - Fix fuel categories for bio boiler and burner generator
+    - Remove empty technology "Rich water filtration"
   Changes:
     - Blank tech card recipe with silver is nerfed to better align it with the regular recipe (result count is reduced from 10 to 5)
+    - New balancing of core fragment processing results: https://discord.com/channels/1174743568590590053/1204040791916421181
+    - Nuclear energy is rebalanced now starting with productivity science
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.7
 Date: 3.13.2024
