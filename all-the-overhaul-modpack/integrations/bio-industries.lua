@@ -7,6 +7,10 @@ atom.util.recipe.removeByName("bi-plastic-2")
 -- Make fuel categories of bio boiler match vanilla boiler
 data.raw.boiler["bi-bio-boiler"].energy_source.fuel_categories = data.raw.boiler["boiler"].energy_source.fuel_categories
 
+-- Fix handcrafting wooden pipe to ground
+data.raw.recipe["bi-wood-pipe"].normal.allow_as_intermediate = true
+data.raw.recipe["bi-wood-pipe"].expensive.allow_as_intermediate = true
+
 -- K2
 table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-farm")
 table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-greenhouse")
