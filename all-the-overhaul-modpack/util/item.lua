@@ -26,5 +26,6 @@ atom.util.item = {
 
         data.raw.item[name] = nil
         data.raw.fluid[name] = nil
+        data.raw.capsule[name] = nil
     end
 }
