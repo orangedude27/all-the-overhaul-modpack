@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.10
+Date: 4.12.2024
+  Bug fixes:
+    - Fix error with big power poles patched: https://discord.com/channels/1174743568590590053/1227668649419083777
+    - Fix errors in menu simulations
+    - Fix error with mod Transport Drones: https://discord.com/channels/1174743568590590053/1221228607641485464
+    - Fix handcrafting wooden pipe to ground: https://discord.com/channels/1174743568590590053/1219277139975737354
+    - Fix electrolysis plant and filtration plant mk 1 converts to mk2 on pickup: https://discord.com/channels/1174743568590590053/1228186769967546429
+    - Fix error with mod Ghost on water: https://discord.com/channels/1174743568590590053/1228335795262459936
+  Changes:
+    - Remove healing capsule when playing with mod Rampant Arsenal: https://discord.com/channels/1174743568590590053/1220624844220141630
+---------------------------------------------------------------------------------------------------
 Version: 1.8.9
 Date: 4.10.2024
   Bug fixes:
