@@ -110,6 +110,7 @@ table.assign(t0_kr_electrolysis_plant, {
         },
     }
 })
+t0_kr_electrolysis_plant.minable.result = "t0-electrolysis-plant"
 data:extend({ t0_kr_electrolysis_plant })
 
 -- MK2
@@ -221,6 +222,7 @@ table.assign(t2_kr_electrolysis_plant, {
         },
     }
 })
+t2_kr_electrolysis_plant.minable.result = "t2-electrolysis-plant"
 data:extend({ t2_kr_electrolysis_plant })
 data.raw["assembling-machine"]["kr-electrolysis-plant"].next_upgrade = "t2-electrolysis-plant"
 
@@ -332,6 +334,7 @@ table.assign(t3_kr_electrolysis_plant, {
         },
     }
 })
+t3_kr_electrolysis_plant.minable.result = "t3-electrolysis-plant"
 data:extend({ t3_kr_electrolysis_plant })
 
 

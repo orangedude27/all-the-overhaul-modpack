@@ -134,6 +134,7 @@ table.assign(t0_kr_filtration_plant, {
         },
     }
 })
+t0_kr_filtration_plant.minable.result = "t0-filtration-plant"
 data:extend({ t0_kr_filtration_plant })
 
 -- MK2
@@ -268,6 +269,7 @@ table.assign(t2_kr_filtration_plant, {
         },
     }
 })
+t2_kr_filtration_plant.minable.result = "t2-filtration-plant"
 data:extend({ t2_kr_filtration_plant })
 data.raw["assembling-machine"]["kr-filtration-plant"].next_upgrade = "t2-filtration-plant"
 
@@ -402,6 +404,7 @@ table.assign(t3_kr_filtration_plant, {
         },
     }
 })
+t3_kr_filtration_plant.minable.result = "t3-filtration-plant"
 data:extend({ t3_kr_filtration_plant })
 
 
