@@ -358,6 +358,7 @@ if mods["RPGsystem"] then
 end
 
 if mods["mini-machines"] then
+    change_setting("mini-assembler", true)
     change_setting("mini-furnace", false)
     change_setting("mini-miner", false)
     change_setting("mini-chemplant", false)
