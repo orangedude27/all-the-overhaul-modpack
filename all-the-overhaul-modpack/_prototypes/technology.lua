@@ -108,9 +108,8 @@ end
 util.tech_remove_prerequisites("fu_TIM_tech", { "fu_stage_tech" })
 
 -- 248K research balance
--- Hide Fusion Tech by 248K
-bobmods.lib.tech.hide("fu_stage_tech")
-bobmods.lib.tech.hide("fu_energy_tech")
+-- Remove Fusion Tech by 248K
+data.raw.technology["fu_stage_tech"] = nil
 -- Lock recipe
 util.tech_lock_recipes("fu_activator_tech", { "248k-krastorio2-tritium" })
 
