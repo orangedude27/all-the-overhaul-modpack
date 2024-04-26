@@ -29,13 +29,16 @@ local config = atom.processing.util.prepareConfig({
             { name = "bismuth-plate", amount = 1, probability = 0.125 }
         },
         dustToIngot = {
-            { name = "silver-ore", amount = 1, probability = 1.66 }
+            { name = "silver-ore", amount = 1 },
+            { name = "silver-ore", amount = 1, probability = 0.66 }
         },
         dustToEnriched = {
-            { name = "silver-ore", amount = 1, probability = 2.5 }
+            { name = "silver-ore", amount = 2 },
+            { name = "silver-ore", amount = 1, probability = 0.5 }
         },
         pureToEnriched = {
-            { name = "silver-ore", amount = 1, probability = 2.5 }
+            { name = "silver-ore", amount = 2 },
+            { name = "silver-ore", amount = 1, probability = 0.5 }
         }
     }
 })
