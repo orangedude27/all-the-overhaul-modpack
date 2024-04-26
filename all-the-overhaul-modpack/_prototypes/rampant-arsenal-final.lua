@@ -97,12 +97,14 @@ bobmods.lib.recipe.add_ingredient("mending-wall-rampant-arsenal", { "concrete-wa
 
 
 -- hide technologies
-local i = 1
-while i <= 18 do
-    krastorio.technologies.disable("physical-projectile-damage-" .. i, true)
-    krastorio.technologies.disable("energy-weapons-damage-" .. i, true)
-    krastorio.technologies.disable("stronger-explosives-" .. i, true)
-    i = i + 1
+if settings.startup["rampant-arsenal-hideVanillaDamageTechnologies"].value then
+    local i = 1
+    while i <= 18 do
+        krastorio.technologies.disable("physical-projectile-damage-" .. i, true)
+        krastorio.technologies.disable("energy-weapons-damage-" .. i, true)
+        krastorio.technologies.disable("stronger-explosives-" .. i, true)
+        i = i + 1
+    end
 end
 
 -- rampant-arsenal-technology-bullet-damage-
