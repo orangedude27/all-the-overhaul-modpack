@@ -71,12 +71,14 @@ for _, ammo in pairs(data.raw.ammo) do
             else
                 if type(ammo.ammo_type.action) == "table" then
                     for _, action in pairs(ammo.ammo_type.action) do
-                        if type(action.action_delivery) == "table" then
+                        if action.action_delivery and action.action_delivery[1] then
                             for _, action_delivery in pairs(action.action_delivery) do
                                 if action_delivery.max_range then
                                     action_delivery.max_range = 79
                                 end
                             end
+                        elseif action.action_delivery and action.action_delivery.max_range then
+                            action.action_delivery.max_range = 79
                         end
                     end
                 end
