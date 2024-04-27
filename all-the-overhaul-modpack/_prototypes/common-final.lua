@@ -113,7 +113,7 @@ equipment.add_category_to_equipment("big-solar-panel-equipment", "solar-equipmen
 equipment.add_category_to_equipment("imersite-solar-panel-equipment", "solar-equipment")
 equipment.add_category_to_equipment("big-imersite-solar-panel-equipment", "solar-equipment")
 
-local arr_categories_for_transport = { "solar-equipmen", "transport-shield", "battery-equipment", "defense-equipment",
+local arr_categories_for_transport = { "solar-equipment", "transport-shield", "battery-equipment", "defense-equipment",
                                        "generator-equipment" }
 -- locomotives grid
 data.raw["movement-bonus-equipment"]["el_train_equipment_accelerator_item"].movement_bonus = 0.25
