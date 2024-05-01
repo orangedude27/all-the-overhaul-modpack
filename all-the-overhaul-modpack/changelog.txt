@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.11
+Date: 5.1.2024
+  Bug fixes:
+    - Force mini assemblers to be enabled in the settings: https://discord.com/channels/1174743568590590053/1230254179960754297
+    - Remove fu_stage_tech instead of hiding it: https://discord.com/channels/1174743568590590053/1231717014268153886
+    - Fix silver byproduct amounts for lead (percentages above 100% always result to 1)
+    - Fix ammo range error: https://discord.com/channels/1174743568590590053/1228421088485048381, https://mods.factorio.com/mod/all-the-overhaul-modpack/discussion/65e1033a698ac3ac3881f734
+    - Rampant Arsenal: Only hide damage techs if setting is enabled: https://discord.com/channels/1174743568590590053/1231837711825113153
+    - Fix a typo in the code: https://discord.com/channels/1174743568590590053/1233895074228732065
+---------------------------------------------------------------------------------------------------
 Version: 1.8.10
 Date: 4.12.2024
   Bug fixes:
