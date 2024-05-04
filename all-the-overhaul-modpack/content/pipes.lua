@@ -604,10 +604,6 @@ data:extend({
     },
 })
 
--- data.raw.pipe["kr-steel-pipe"].next_upgrade = "brass-pipe"
--- data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].next_upgrade = "brass-pipe-to-ground"
-
-
 data:extend({
     {
         type = "item-subgroup",
