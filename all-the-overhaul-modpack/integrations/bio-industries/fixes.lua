@@ -15,3 +15,11 @@ data.raw.recipe["bi-wood-pipe"].expensive.allow_as_intermediate = true
 table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-farm")
 table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-greenhouse")
 table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "growing")
+
+-- Adjust bio garden
+local bioGarden = data.raw["assembling-machine"]["bi-bio-garden"]
+bioGarden.allowed_effects = { "pollution", "consumption" }
+bioGarden.module_specification.module_info_icon_shift = {
+    0,
+    0.8
+}
