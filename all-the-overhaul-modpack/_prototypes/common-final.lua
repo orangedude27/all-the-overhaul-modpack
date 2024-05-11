@@ -11,25 +11,6 @@ data.raw["fluid-wagon"]["space-fluid-wagon"].capacity = 50000
 data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"].capacity = 75000
 data.raw["fluid-wagon"]["gr_magnet_tanker_entity"].capacity = 100000
 
--- repairs pack
-local _durability = 300
-local _stack_size = 200
-data.raw["repair-tool"]["copper-repair-pack"].durability = _durability
-data.raw["repair-tool"]["copper-repair-pack"].speed = 3
-data.raw["repair-tool"]["copper-repair-pack"].stack_size = _stack_size
-
-data.raw["repair-tool"]["steel-repair-pack"].durability = _durability
-data.raw["repair-tool"]["steel-repair-pack"].speed = 4
-data.raw["repair-tool"]["steel-repair-pack"].stack_size = _stack_size
-
-data.raw["repair-tool"]["field-repair-pack"].durability = _durability
-data.raw["repair-tool"]["field-repair-pack"].speed = 5
-data.raw["repair-tool"]["field-repair-pack"].stack_size = _stack_size
-
-data.raw["repair-tool"]["multitool-repair-pack"].durability = _durability
-data.raw["repair-tool"]["multitool-repair-pack"].speed = 6
-data.raw["repair-tool"]["multitool-repair-pack"].stack_size = _stack_size
-
 -- bz foundry
 local allowed_effects = { "speed", "productivity", "consumption", "pollution" }
 local module_specification = {
