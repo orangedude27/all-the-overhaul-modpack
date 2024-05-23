@@ -63,3 +63,6 @@ data.raw.recipe["se-core-fragment-omni"].results = {
 
 -- Remove the alternative singularity card
 atom.util.recipe.removeByName("singularity-tech-card-alt")
+
+-- Balance recipe for delivery canon capsule
+data.raw.recipe["se-delivery-cannon-capsule"].result_count = 2
