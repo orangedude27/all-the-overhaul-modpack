@@ -53,6 +53,12 @@ function atom.util.Technology(value)
             table.assign(technology, data)
         end,
 
+        -- Adds a prerequisite to the technology
+        -- @param prerequisite string The name of the prerequisite
+        addPrerequisite = function(prerequisite)
+            table.insert(technology.prerequisites, prerequisite)
+        end,
+
         -- Replaces a prerequisite in a technology
         -- @param name string The name of the technology
         -- @param old string The name of the old prerequisite
