@@ -3,13 +3,17 @@
 atom.util.technology = {
     -- Replaces a prerequisite in all technologies
     -- @param old string The name of the old prerequisite
-    -- @param new string The name of the new prerequisite
-    replacePrerequisite = function(old, new)
+    -- @param new string The name(s) of the new prerequisite
+    replacePrerequisite = function(old, ...)
+        local new = table.pack(...)
         for _, tech in pairs(data.raw.technology) do
             if tech.prerequisites then
                 for i, prerequisite in pairs(tech.prerequisites) do
                     if prerequisite == old then
-                        tech.prerequisites[i] = new
+                        tech.prerequisites[i] = nil
+                        for j = 1, new.n do
+                            table.insert(tech.prerequisites, new[j])
+                        end
                     end
                 end
             end

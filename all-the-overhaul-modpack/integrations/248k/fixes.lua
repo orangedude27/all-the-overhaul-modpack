@@ -1,3 +1,5 @@
+require("solar")
+
 -- Add ingoing pipe connection to the arc furnace for Pyroflux
 local arcFurnace = data.raw["assembling-machine"]["el_arc_furnace_entity"]
 for i = 1, 2 do

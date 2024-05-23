@@ -1,5 +1,5 @@
-require("k2.dirty-water")
-require("k2.biomass")
+require("dirty-water")
+require("biomass")
 
 data:extend({
     -- Fix coke recipe
@@ -29,3 +29,7 @@ miningDrill3.addIngredient("fu_materials_KFK", 6)
 miningDrill3.addIngredient("processing-unit", 5)
 
 data.raw.fluid["hydrogen"].fuel_value = "150kJ"
+
+-- Balance solar
+-- Set both in data and final-fixes because of 248k/scripts/krastorio2/overhaul.lua and solar productivity mod using data-updates phase
+data.raw["solar-panel"]["kr-advanced-solar-panel"].production = "300kW"
