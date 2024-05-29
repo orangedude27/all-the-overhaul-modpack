@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.12
+Date: 5.28.2024
+  Bug fixes:
+    - Replace wooden rails with normal rails in all recipes: https://discord.com/channels/1174743568590590053/1241445391963132005
+  Changes:
+    - Set diesel train sounds to vanilla locomotive because the diesel train sounds are annoying
+    - Refactoring of Pipes and Bio Indistires code
+    - Refactored Repair packs to make them more useful
+    - balancing to the delivery cannon capsule
+---------------------------------------------------------------------------------------------------
 Version: 1.8.11
 Date: 5.1.2024
   Bug fixes:
