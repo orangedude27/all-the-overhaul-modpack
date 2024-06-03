@@ -9,6 +9,10 @@ local nuclearFissionTech = atom.util.Technology("fi_energy_tech")
 nuclearFissionTech.removeIngredient("se-rocket-science-pack")
 nuclearFissionTech.addIngredient("productivity-science-pack", 1)
 
+-- Fix Train Nuclear Equipment
+local trainGeneratorRecipe = atom.util.Recipe("fi_train_equipment_generator_recipe")
+trainGeneratorRecipe.replaceIngredient("fi_solid_reactor_item", "5d-nuclear-reactor-02")
+
 -- Fuel categories
 data.raw["fuel-category"]["fi_advanced_fuel"].name = "nuclear-advanced"
 data.raw["fuel-category"]["fi_pure_fuel"].name = "nuclear-high-energy"
