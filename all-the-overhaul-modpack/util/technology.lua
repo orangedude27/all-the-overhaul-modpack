@@ -138,5 +138,19 @@ function atom.util.Technology(value)
                 end
             end
         end,
+
+        -- Checks technology for containing science packs
+        hasIngredient = function(ingredientName)
+            local function apply(_table)
+                for i, result in pairs(_table.unit.ingredients) do
+                    if result.name ==ingredientName then
+                        return true
+                    else
+                        return false
+                    end
+                end
+            end
+        end,
+
     }
 end

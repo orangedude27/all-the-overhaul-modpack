@@ -324,3 +324,15 @@ util.tech_add_ingredients("area-mining-drill", { "utility-science-pack", "se-mat
 
 util.tech_remove_prerequisites("se-processing-iridium", { "area-mining-drill" })
 util.tech_add_prerequisites("se-processing-iridium", { "kr-electric-mining-drill-mk3" })
+
+-- Use Purple Tech Cards
+
+for _, technology in pairs(data.raw.technology) do
+    if (technology.hasIngredient("automation-science-pack") 
+        and technology.hasIngredient("se-rocket-science-pack")
+        and technology.hasIngredient("chemical-science-pack")
+        and technology.hasIngredient("space-science-pack")) then
+            technology.addIngredient("productivity-science-pack")
+        end
+        
+end
