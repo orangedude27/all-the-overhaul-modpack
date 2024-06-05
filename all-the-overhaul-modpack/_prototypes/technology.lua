@@ -107,11 +107,21 @@ end
 
 util.tech_remove_prerequisites("fu_TIM_tech", { "fu_stage_tech" })
 
+-- Vanilla Changes
+data.raw.technology["nuclear-fuel-reprocessing"] = nil
+
 -- 248K research balance
 -- Remove Fusion Tech by 248K
 data.raw.technology["fu_stage_tech"] = nil
 -- Lock recipe
 util.tech_lock_recipes("fu_activator_tech", { "248k-krastorio2-tritium" })
+util.tech_add_prerequisites("el_ki_sup_2_tech", "space-science-pack")
+util.tech_add_prerequisites("fi_ki_eff_1_tech", "production-science-pack")
+util.tech_add_prerequisites("mini-assembler-3", "production-science-pack")
+util.tech_add_prerequisites("electric-foundry", "production-science-pack")
+util.tech_add_prerequisites("robot-attrition-explosion-safety", "utility-science-pack")
+
+util.tech_add_ingredients("inserter-capacity-bonus-4", {"production-science-pack"}, false)
 
 -- Research line
 -- Fusion science pack 1 

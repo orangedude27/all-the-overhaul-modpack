@@ -23,7 +23,7 @@ local BeaconsRecipeOrder = {
     ["fluid"] = "[d]"
 }
 --circuits
-local CircuitBlacklist = { "aeroframe", "data", "recycle", "cybersyn" }
+local CircuitBlacklist = { "aeroframe", "data", "recycle", "cybersyn", "house" }
 local CircuitSubOrder = {
     ["combinator"] = "[e]",
     ["buoy"] = "[d]",
@@ -31,6 +31,8 @@ local CircuitSubOrder = {
     ["signal"] = "[f]",
     ["speaker"] = "[e]",
     ["nixie-tube"] = "[h]",
+    ["green-wire"] = "[a]",
+    ["red-wire"] = "[a]"
 }
 local CircuitRecipeOrder = {
     ["constant"] = "[a]",
@@ -967,6 +969,8 @@ ReplaceSubgroup = {
 
 --ADDD ORDER TO MEEE!!
 ReplaceSubgroupDirectName = {
+    ["green-wire"] = { name = "signal-wire", order = "[a]" },
+    ["red-wire"] = { name = "signal-wire", order = "[a]" },
     ["satellite"] = { name = "probe", order = "[a]" },
     ["rail-signal"] = { name = "rail-signal", order = "[b]" },
     ["rail-chain-signal"] = { name = "rail-signal", order = "[b]" },
@@ -1206,6 +1210,6 @@ SortDirectTable = {
     ["basic-tech-card"] = { name = "science-pack", order = "[a]" },
     ["rocket-control-unit"] = { name = "rocket-part", order = "[a]" },
     ["kr-rocket-turret"] = { name = "artillery-turret", order = "[a]" },
-    ["kr-railgun-turret"] = { name = "artillery-turret", order = "[a]" }
+    ["kr-railgun-turret"] = { name = "artillery-turret", order = "[a]" },
     --[""] = { name = "", order = ""},
 }
