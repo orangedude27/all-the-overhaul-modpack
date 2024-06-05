@@ -10,7 +10,7 @@ newInput = {
   pipe_covers = data.raw["assembling-machine"]["laser-mill"].fluid_boxes[1].pipe_covers,
   base_area = 10,
   base_level = -1,
-  pipe_connections = {{ type = "input", position = { -2, -2 }}},
+  pipe_connections = {{ type = "input", position = { -2, 0 }}},
   secondary_draw_orders = { north = -1, east = -1, west = -1 }
 }
 table.insert(data.raw["assembling-machine"]["laser-mill"].fluid_boxes, newInput)
