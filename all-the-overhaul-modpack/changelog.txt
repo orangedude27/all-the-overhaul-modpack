@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.13
+Date: 6.4.2024
+  Bug fixes:
+    - FIxed the signal wires' sorting locations: https://discord.com/channels/1174743568590590053/1245361274926268456
+    - Fixed some Research Pre-requisites: https://discord.com/channels/1174743568590590053/1244061704049000468
+    - Replaced the 248k reactor with the vanilla reactor for some recipes: https://discord.com/channels/1174743568590590053/1245094441438548018
+  Changes:
+    - Added additional fluid input to the lasing mill and reverted change to red circuit's ingredient list (added helium back to it) BREAKING CHANGE! https://discord.com/channels/1174743568590590053/1246464505136021564
+    - Fixed some sorting issues with the gates / walls
+---------------------------------------------------------------------------------------------------
 Version: 1.8.12
 Date: 5.28.2024
   Bug fixes:
