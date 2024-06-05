@@ -285,7 +285,7 @@ local CombatBlacklist = { "data", "delivery", "turret", "pylon" }
 local CombatSubOrder = {
     ["cliff"] = "[q]",
     ["artillery-t"] = "[at]",
-    ["wall"] = "f",
+    ["wall"] = "e",
     ["gate"] = "f",
     ["repair"] = "[ra]",
     ["tool"] = "f",
@@ -325,6 +325,7 @@ local CombatRecipeOrder = {
     ["radar-1"] = "[c]",
     ["radar-0"] = "[b]",
     ["radar"] = "[a]",
+    ["5d"] = "[b]"
 }
 --production
 local ProductionBlacklist = { "head", "coal", "sulfur", "kerosene", "fi_refinery_basic_recipe", "fu_drill_recipe",
@@ -985,7 +986,7 @@ ReplaceSubgroupDirectName = {
     ["steam-engine"] = { name = "turbine", order = "[a]" },
     ["kr-energy-storage"] = { name = "accumulator", order = "[a]" },
     ["boiler"] = { name = "reactor", order = "[a]" },
-    ["gate"] = { name = "wall", order = "[a]" },
+    ["gate"] = { name = "gate", order = "[a]" },
     ["aai-loader"] = { name = "loader", order = "[a]" },
     ["floating-belt"] = { name = "floating", order = "[a]" },
     ["floating-inserter"] = { name = "floating", order = "[a]" },
