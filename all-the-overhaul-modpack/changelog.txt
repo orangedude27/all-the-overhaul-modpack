@@ -16,7 +16,7 @@ Date: 6.5.2024
 Version: 1.8.13
 Date: 6.4.2024
   Bug fixes:
-    - FIxed the signal wires' sorting locations: https://discord.com/channels/1174743568590590053/1245361274926268456
+    - Fixed the signal wires' sorting locations: https://discord.com/channels/1174743568590590053/1245361274926268456
     - Fixed some Research Pre-requisites: https://discord.com/channels/1174743568590590053/1244061704049000468
     - Replaced the 248k reactor with the vanilla reactor for some recipes: https://discord.com/channels/1174743568590590053/1245094441438548018
   Changes:
