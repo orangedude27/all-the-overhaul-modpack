@@ -1,9 +1,4 @@
--- Recipe balancing
-
--- Fixes Advanced circuit (the recipe uses two fluids but the building only supports one)
--- atom.util.Recipe("advanced-circuit-in-laser-mill").removeIngredient("helium")
-
--- data.raw["assembling-machine"]["laser-mill"].fluid_boxes[1].pipe_connections = {{ type = "input", position = { 1, -2 }}}
+-- Add second fluid box to laser-mill to enable recipes with two fluids (one being helium)
 newInput = {
   production_type = "input",
   pipe_picture = data.raw["assembling-machine"]["laser-mill"].fluid_boxes[1].pipe_picture,
