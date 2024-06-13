@@ -115,7 +115,7 @@ mk5Tech.unit = {
     },
     time = 60
 }
-data.extend({ mk5Tech })
+data:extend({ mk5Tech })
 
 -- Set new effect description
 for level = 1, 5 do
