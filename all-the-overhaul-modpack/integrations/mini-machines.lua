@@ -81,6 +81,7 @@ data.raw["assembling-machine"]["mini-assembler-9"].crafting_categories = { "elec
 data.raw["assembling-machine"]["mini-assembler-10"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
 
 -- Set crafting categories for selected recipes
+Recipe("aluminum-cable"):change_category("electronics")
 Recipe("basic-electronic-components"):change_category("electronics")
 Recipe("basic-electronic-components-silver"):change_category("electronics")
 Recipe("automation-core"):change_category("electronics")
