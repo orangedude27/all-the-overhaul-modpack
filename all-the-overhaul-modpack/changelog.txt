@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.15
+Date: 6.13.2024
+  Bug fixes:
+    - Remove hydrofluoric acid and replace it with acidic water in remaining recipes: https://discord.com/channels/1174743568590590053/1247275038881615882
+  Changes:
+    - Balance solar panels and solar productivity: https://discord.com/channels/1174743568590590053/1233085579101737151
+    - Use purple tech cards more: https://discord.com/channels/1174743568590590053/1242953953822642216
+    - Allow aluminum cable in electronics assemblers: https://discord.com/channels/1174743568590590053/1243594844819947611
+---------------------------------------------------------------------------------------------------
 Version: 1.8.14
 Date: 6.5.2024
   Bug fixes:
