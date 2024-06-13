@@ -162,3 +162,7 @@ dieselTrain.working_sound = vanillaLocomotive.working_sound
 dieselTrain.mined_sound = vanillaLocomotive.mined_sound
 dieselTrain.sound_minimum_speed = vanillaLocomotive.sound_minimum_speed
 dieselTrain.sound_scaling_ratio = vanillaLocomotive.sound_scaling_ratio
+
+-- Remove hydrofluoric acid
+atom.util.recipe.replaceIngredient("fi_strong_acid", "el_acidic_water")
+atom.util.item.removeByName("fi_strong_acid")
