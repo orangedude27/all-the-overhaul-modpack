@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.16
+Date: 6.17.2024
+  Bug fixes:
+    - Cleanup unused recipes
+    - Improve prerequisites of some technologies
+  Changes:
+    - Laser mill: Add additional pipe connection for second fluid input
+    - Use catalyst mechanic for dirty water
+    - Rename "productivity science pack" to "Productivity tech card"
+---------------------------------------------------------------------------------------------------
 Version: 1.8.15
 Date: 6.13.2024
   Bug fixes:
