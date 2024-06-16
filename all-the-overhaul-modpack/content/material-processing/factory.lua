@@ -183,7 +183,7 @@ atom.processing.create = function(config)
         dustToEnrichedRecipe = function()
             local results = config.additionalResults.dustToEnriched or {}
             table.insert(results, { name = config.itemNames.enriched, amount = 6 })
-            table.insert(results, { type = "fluid", name = "dirty-water", amount = 370 })
+            table.insert(results, { type = "fluid", name = "dirty-water", amount = 333, catalyst_amount = 333 })
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-enrichment",
@@ -263,7 +263,7 @@ atom.processing.create = function(config)
         pureToEnrichedRecipe = function()
             local results = config.additionalResults.pureToEnriched or {}
             table.insert(results, { name = config.itemNames.enriched, amount = 6 })
-            table.insert(results, { type = "fluid", name = "dirty-water", amount = 370 })
+            table.insert(results, { type = "fluid", name = "dirty-water", amount = 333, catalyst_amount = 333 })
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-enriched-pure",
