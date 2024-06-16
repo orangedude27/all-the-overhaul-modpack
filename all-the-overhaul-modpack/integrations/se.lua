@@ -66,3 +66,6 @@ atom.util.recipe.removeByName("singularity-tech-card-alt")
 
 -- Balance recipe for delivery canon capsule
 data.raw.recipe["se-delivery-cannon-capsule"].result_count = 2
+
+-- Move adaptive armour 3 to a better position in the tech tree
+atom.util.Technology("se-adaptive-armour-3").replacePrerequisite("space-science-pack", "kr-lithium-sulfur-battery")

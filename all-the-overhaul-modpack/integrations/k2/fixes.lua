@@ -33,3 +33,16 @@ data.raw.fluid["hydrogen"].fuel_value = "150kJ"
 -- Balance solar
 -- Set both in data and final-fixes because of 248k/scripts/krastorio2/overhaul.lua and solar productivity mod using data-updates phase
 data.raw["solar-panel"]["kr-advanced-solar-panel"].production = "300kW"
+
+-- Move lithium sufur battery to a better position in the tech tree
+local batteryTech = atom.util.Technology("kr-lithium-sulfur-battery")
+batteryTech.prototype.prerequisites = { "space-science-pack" }
+batteryTech.removeIngredient("production-science-pack")
+batteryTech.removeIngredient("utility-science-pack")
+
+-- Fix prerequisites for military 5
+atom.util.Technology("kr-military-5").replacePrerequisite("kr-lithium-sulfur-battery", "utility-science-pack")
+
+-- Fix prerequisites for robot battery
+local robotBatteryTech = atom.util.Technology("kr-robot-battery")
+robotBatteryTech.addPrerequisite("production-science-pack", "utility-science-pack")
