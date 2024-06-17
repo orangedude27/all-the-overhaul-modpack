@@ -45,4 +45,5 @@ atom.util.Technology("kr-military-5").replacePrerequisite("kr-lithium-sulfur-bat
 
 -- Fix prerequisites for robot battery
 local robotBatteryTech = atom.util.Technology("kr-robot-battery")
-robotBatteryTech.addPrerequisite("production-science-pack", "utility-science-pack")
+robotBatteryTech.addPrerequisite("production-science-pack")
+robotBatteryTech.addPrerequisite("utility-science-pack")

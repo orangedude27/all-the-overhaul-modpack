@@ -32,4 +32,8 @@ data:extend({
 atom.util.Recipe("steel-plate").replaceIngredient("iron-plate", 10)
 atom.util.Recipe("rail").addIngredient("concrete", 2)
 
+-- Fix prerequisites for artillery shell techs
+atom.util.Technology("artillery-shell-range-1").addPrerequisite("utility-science-pack")
+atom.util.Technology("artillery-shell-speed-1").addPrerequisite("utility-science-pack")
+
 require("integrations.final")

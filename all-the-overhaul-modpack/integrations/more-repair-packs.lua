@@ -16,5 +16,3 @@ nextRepairPack("copper-repair-pack")
 nextRepairPack("steel-repair-pack")
 nextRepairPack("field-repair-pack")
 nextRepairPack("multitool-repair-pack")
-
-atom.util.log.debug(data.raw["repair-tool"])
