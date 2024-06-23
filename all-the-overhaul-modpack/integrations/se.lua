@@ -69,3 +69,15 @@ data.raw.recipe["se-delivery-cannon-capsule"].result_count = 2
 
 -- Move adaptive armour 3 to a better position in the tech tree
 atom.util.Technology("se-adaptive-armour-3").replacePrerequisite("space-science-pack", "kr-lithium-sulfur-battery")
+
+-- Remove iron and airtight seal from solid rocket fuel recipes to be consistent with other recipes and other fuels
+local rocketFuelRecipes = {
+    "rocket-fuel-with-ammonia",
+    "rocket-fuel-with-hydrogen-chloride",
+    "se-vulcanite-rocket-fuel",
+    "rocket-fuel"
+}
+for _, recipeName in pairs(rocketFuelRecipes) do
+    atom.util.Recipe(recipeName).removeIngredient("iron-plate")
+    atom.util.Recipe(recipeName).removeIngredient("airtight-seal")
+end
