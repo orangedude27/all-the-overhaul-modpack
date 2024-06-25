@@ -56,3 +56,13 @@ data:extend({
 table.insert(data.raw.technology["bi-tech-coal-processing-1"].effects, { type = "unlock-recipe", recipe = "raw-graphite-coke" })
 table.insert(data.raw.technology["bi-tech-coal-processing-1"].effects, { type = "unlock-recipe", recipe = "raw-graphite-charcoal" })
 table.insert(data.raw.technology["bi-tech-coal-processing-1"].effects, { type = "unlock-recipe", recipe = "raw-graphite-coal" })
+
+-- Add silver landfill
+local silverLandfill = atom.util.Recipe(table.deepcopy(data.raw.recipe["landfill-iron-ore"]))
+silverLandfill.prototype.name = "landfill-silver-ore"
+silverLandfill.prototype.order = "z-b-silver-ore"
+silverLandfill.prototype.icons[2] = table.deepcopy(atom.processing.materials.silver.icons.ore)
+silverLandfill.prototype.icons[2].scale = 0.17
+silverLandfill.replaceIngredient("iron-ore", "silver-ore")
+silverLandfill.unlockedByTechnology("se-recycling-facility")
+silverLandfill.apply()
