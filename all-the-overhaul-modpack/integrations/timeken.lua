@@ -17,3 +17,8 @@ table.assign(data["raw"].recipe["low-quality-advanced-circuit"], {
 
 -- Hand crafting fix
 data.raw.recipe["bronze-spring"].allow_as_intermediate = false
+
+-- Balance (normal) solder with indium
+local solder = atom.util.Recipe("indium-pcb-solder")
+solder.replaceIngredient("tin-plate", 4)
+solder.replaceResult("pcb-solder", 8)

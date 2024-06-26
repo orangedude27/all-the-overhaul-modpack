@@ -250,10 +250,15 @@ function atom.util.Recipe(value)
 
         -- Replaces an existing result by name with a new result
         -- @param old string The name of the existing result
-        -- @param new string The name of the new result
+        -- @param new? string The name of the new result
         -- @param amount? number The amount of the new result (keeps the old value if not set)
         -- @param expensiveAmount? number The amount of the new result for the expensive recipe (uses amount if not set)
         replaceResult = function(old, new, amount, expensiveAmount)
+            if type(new) == "number" then
+                expensiveAmount = amount
+                amount = new
+                new = old
+            end
             local function flat(table, amount)
                 if table.result == old then
                     table.result = new

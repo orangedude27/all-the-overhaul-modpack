@@ -20,7 +20,13 @@ pcbSolder.assign({
     localised_name = "Lead Free Solder",
     allow_as_intermediate = false
 })
-
-data.raw.technology["pcb-solder"].localised_name = "Lead free solder"
 atom.util.item.removeByName("pcb-solder")
 
+atom.util.Technology("fast-inserter").removePrerequisite("pcb-solder")
+atom.util.Technology("logistic-science-pack").removePrerequisite("pcb-solder")
+local pcbSolderTech = atom.util.Technology("pcb-solder")
+pcbSolderTech.assign({
+    localised_name = "Lead free solder",
+    prerequisites = { "chemical-science-pack" }
+})
+pcbSolderTech.addIngredient("chemical-science-pack")
