@@ -130,53 +130,53 @@ atom.processing.create = function(config)
             return recipe
         end,
 
-        ingotToMoltenRecipe = function()
-            -- +33%
-            local recipe = Recipe({
-                type = "recipe",
-                name = "atom-" .. config.name .. "-molten",
-                icons = {
-                    config.icons.molten,
-                    atom.util.icon.createSmallIcon(config.icons.ingot)
-                },
-                category = "el_arc_furnace_category",
-                energy_required = 6.4,
-                ingredients = {
-                    { name = config.itemNames.ingot, amount = 2 },
-                    { type = "fluid", name = "se-pyroflux", amount = 0.25 }
-                },
-                results = {
-                    { type = "fluid", name = config.itemNames.molten, amount = 400 },
-                },
-                subgroup = config.subgroup,
-                enabled = false
-            })
-            recipe.unlockedByTechnology(config.unlockedBy.ingotToMolten or "atom-advanced-ore-processing-2")
-            return recipe
-        end,
+        -- ingotToMoltenRecipe = function()
+        --     -- +33%
+        --     local recipe = Recipe({
+        --         type = "recipe",
+        --         name = "atom-" .. config.name .. "-molten",
+        --         icons = {
+        --             config.icons.molten,
+        --             atom.util.icon.createSmallIcon(config.icons.ingot)
+        --         },
+        --         category = "el_arc_furnace_category",
+        --         energy_required = 6.4,
+        --         ingredients = {
+        --             { name = config.itemNames.ingot, amount = 2 },
+        --             { type = "fluid", name = "se-pyroflux", amount = 0.25 }
+        --         },
+        --         results = {
+        --             { type = "fluid", name = config.itemNames.molten, amount = 400 },
+        --         },
+        --         subgroup = config.subgroup,
+        --         enabled = false
+        --     })
+        --     recipe.unlockedByTechnology(config.unlockedBy.ingotToMolten or "atom-advanced-ore-processing-2")
+        --     return recipe
+        -- end,
 
-        moltenToPlateRecipe = function()
-            local recipe = Recipe({
-                type = "recipe",
-                name = "atom-" .. config.name .. "-plate-molten",
-                icons = {
-                    config.icons.plate,
-                    atom.util.icon.createSmallIcon(config.icons.molten)
-                },
-                category = "casting",
-                energy_required = 2.4,
-                ingredients = {
-                    { type = "fluid", name = config.itemNames.molten, amount = 300 }
-                },
-                results = {
-                    { name = config.itemNames.plate, amount = 6 },
-                },
-                subgroup = config.subgroup,
-                enabled = false
-            })
-            recipe.unlockedByTechnology(config.unlockedBy.moltenToPlate or "atom-advanced-ore-processing-2")
-            return recipe
-        end,
+        -- moltenToPlateRecipe = function()
+        --     local recipe = Recipe({
+        --         type = "recipe",
+        --         name = "atom-" .. config.name .. "-plate-molten",
+        --         icons = {
+        --             config.icons.plate,
+        --             atom.util.icon.createSmallIcon(config.icons.molten)
+        --         },
+        --         category = "casting",
+        --         energy_required = 2.4,
+        --         ingredients = {
+        --             { type = "fluid", name = config.itemNames.molten, amount = 300 }
+        --         },
+        --         results = {
+        --             { name = config.itemNames.plate, amount = 6 },
+        --         },
+        --         subgroup = config.subgroup,
+        --         enabled = false
+        --     })
+        --     recipe.unlockedByTechnology(config.unlockedBy.moltenToPlate or "atom-advanced-ore-processing-2")
+        --     return recipe
+        -- end,
 
         moltenToIngotRecipe = function()
             local recipe = Recipe({
@@ -261,7 +261,7 @@ atom.processing.create = function(config)
                 name = "atom-" .. config.name .. "-enriched-molten",
                 icons = {
                     config.icons.molten,
-                    atom.util.icon.createSmallIcon(config.icons.ingot)
+                    atom.util.icon.createSmallIcon(config.icons.enriched)
                 },
                 category = "el_arc_furnace_category",
                 energy_required = 6.4,
@@ -395,7 +395,7 @@ atom.processing.create = function(config)
                 name = "atom-" .. config.name .. "-pellets-molten",
                 icons = {
                     config.icons.molten,
-                    atom.util.icon.createSmallIcon(config.icons.ingot)
+                    atom.util.icon.createSmallIcon(config.icons.pellets)
                 },
                 category = "el_arc_furnace_category",
                 energy_required = 6.4,

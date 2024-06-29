@@ -74,8 +74,9 @@ atom.util.applyAll({
     createTantalum.ingotToPlateRecipe(),
     dustToEnrichedRecipe,
     dustToPureRecipe,
-    createTantalum.ingotToMoltenRecipe(),
-    createTantalum.moltenToPlateRecipe(),
+    createTantalum.pelletsToMoltenRecipe(),
+    createTantalum.enrichedToMoltenRecipe(),
+    createTantalum.moltenToIngotRecipe(),
     createTantalum.enrichedToIngotRecipe(),
     createTantalum.pureToEnrichedRecipe(),
     createTantalum.enrichedToPelletsRecipe(),
@@ -88,8 +89,9 @@ local createNiobium = atom.processing.create(niobiumConfig)
 
 atom.util.applyAll({
     createNiobium.ingotToPlateRecipe(),
-    createNiobium.ingotToMoltenRecipe(),
-    createNiobium.moltenToPlateRecipe(),
+    createNiobium.pelletsToMoltenRecipe(),
+    createNiobium.enrichedToMoltenRecipe(),
+    createNiobium.moltenToIngotRecipe(),
     createNiobium.enrichedToIngotRecipe(),
     createNiobium.pureToEnrichedRecipe(),
     createNiobium.enrichedToPelletsRecipe(),

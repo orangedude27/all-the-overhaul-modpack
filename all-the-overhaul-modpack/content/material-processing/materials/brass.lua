@@ -45,19 +45,17 @@ ingotToPlateRecipe.prototype.ingredients = {
 }
 addSmallIconRight(ingotToPlateRecipe, atom.util.icon.createSmallIcon(zinc.icons.ingot))
 
-local ingotToMoltenRecipe = create.ingotToMoltenRecipe()
-ingotToMoltenRecipe.prototype.ingredients = {
-    { name = "se-copper-ingot", amount = 1 },
-    { name = "zinc-ingot", amount = 1 }
-}
-addSmallIconRight(ingotToMoltenRecipe, atom.util.icon.createSmallIcon(zinc.icons.ingot))
+-- local ingotToMoltenRecipe = create.ingotToMoltenRecipe()
+-- ingotToMoltenRecipe.prototype.ingredients = {
+--     { name = "se-copper-ingot", amount = 1 },
+--     { name = "zinc-ingot", amount = 1 }
+-- }
+-- addSmallIconRight(ingotToMoltenRecipe, atom.util.icon.createSmallIcon(zinc.icons.ingot))
 
 atom.util.applyAll({
     oreToPlateRecipe,
     dustToPlateRecipe,
     ingotToPlateRecipe,
-    ingotToMoltenRecipe,
-    create.moltenToPlateRecipe(),
     {
         type = "fluid",
         name = "atom-" .. config.name .. "-molten",
