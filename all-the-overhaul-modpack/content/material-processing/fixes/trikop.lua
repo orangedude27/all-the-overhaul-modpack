@@ -1,4 +1,6 @@
 atom.util.recipe.removeByName("manganese-plate")
 atom.util.recipe.removeByName("molten-manganese")
 atom.util.recipe.removeByName("bismuth-plate")
+atom.util.recipe.removeByName("bismuth-ingot")
 atom.util.recipe.removeByName("molten-bismuth")
+atom.util.recipe.removeByName("manganese-ingot")
