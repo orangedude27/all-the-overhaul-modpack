@@ -18,6 +18,12 @@ local config = atom.processing.util.prepareConfig({
     unlockedBy = {
         oreToDust = "titanium-processing",
         dustToPlate = "titanium-processing"
+    },
+    energy = {
+        oreToPlate = 14.4,
+        dustToPlate = 14.4,
+        moltenToIngot = 100,
+        ingotToPlate = 5
     }
 })
 

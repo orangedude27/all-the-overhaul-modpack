@@ -35,6 +35,12 @@ local config = atom.processing.util.prepareConfig({
         pureToEnriched = {
             { name = "bismuth-plate", amount = 1, probability = 0.125 }
         }
+    },
+    energy = {
+        oreToPlate = 14.4,
+        dustToPlate = 14.4,
+        moltenToIngot = 18.75,
+        ingotToPlate = 3.75
     }
 })
 

@@ -19,6 +19,12 @@ local config = atom.processing.util.prepareConfig({
         oreToPlate = "cobalt-refining",
         oreToDust = "cobalt-refining",
         dustToPlate = "cobalt-refining"
+    },
+    energy = {
+        oreToPlate = 14.4,
+        dustToPlate = 14.4,
+        moltenToIngot = 18.75,
+        ingotToPlate = 3.75
     }
 })
 

@@ -44,6 +44,13 @@ local config = atom.processing.util.prepareConfig({
     },
     unlockedBy = {
         oreToPlate = "copper-processing"
+    },
+    energy = {
+        oreToPlate = 10.2,
+        dustToPlate = 10.2,
+        moltenToIngot = 25,
+        ingotToPlate = 1.25
+
     }
 })
 

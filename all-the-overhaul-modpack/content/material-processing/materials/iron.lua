@@ -26,6 +26,12 @@ local config = atom.processing.util.prepareConfig({
         dustToIngot = {
             { name = "manganese-ore", amount = 1, probability = 0.05 }
         }
+    },
+    energy = {
+        oreToPlate = 9.6,
+        dustToPlate = 9.6,
+        moltenToIngot = 25,
+        ingotToPlate = 2.5
     }
 })
 

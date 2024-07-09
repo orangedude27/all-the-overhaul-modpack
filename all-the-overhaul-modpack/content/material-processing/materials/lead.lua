@@ -40,6 +40,12 @@ local config = atom.processing.util.prepareConfig({
             { name = "silver-ore", amount = 2 },
             { name = "silver-ore", amount = 1, probability = 0.5 }
         }
+    },
+    energy = {
+        oreToPlate = 10.5,
+        dustToPlate = 10.5,
+        moltenToIngot = 25,
+        ingotToPlate = 5
     }
 })
 

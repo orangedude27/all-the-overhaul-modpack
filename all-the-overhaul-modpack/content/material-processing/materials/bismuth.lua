@@ -17,6 +17,12 @@ local config = atom.processing.util.prepareConfig({
     },
     unlockedBy = {
         oreToPlate = "bismanol"
+    },
+    energy = {
+        oreToPlate = 4.8,
+        dustToPlate = 4.8,
+        moltenToIngot = 25,
+        ingotToPlate = 5
     }
 })
 

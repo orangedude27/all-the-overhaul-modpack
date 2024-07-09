@@ -19,6 +19,12 @@ local tantalumConfig = atom.processing.util.prepareConfig({
     unlockedBy = {
         oreToDust = "5d-masher-1",
         dustToPlate = "5d-masher-1"
+    },
+    energy = {
+        oreToPlate = 14.4,
+        dustToPlate = 14.4,
+        moltenToIngot = 20,
+        ingotToPlate = 3.75
     }
 })
 
@@ -34,6 +40,10 @@ local niobiumConfig = atom.processing.util.prepareConfig({
     },
     icons = {
         "pure", "plate", "ingot", "molten", "enriched", "pellets"
+    },
+    energy = {
+        moltenToIngot = 20,
+        ingotToPlate = 3.75
     }
 })
 

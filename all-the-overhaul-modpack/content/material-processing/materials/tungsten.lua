@@ -19,6 +19,10 @@ local config = atom.processing.util.prepareConfig({
         oreToPlate = "tungsten-processing",
         oreToDust = "tungsten-processing",
         dustToPlate = "tungsten-processing"
+    },
+    energy = {
+        oreToPlate = 14.4,
+        dustToPlate = 14.4
     }
 })
 
