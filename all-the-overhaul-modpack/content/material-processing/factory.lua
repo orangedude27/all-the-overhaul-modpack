@@ -237,7 +237,7 @@ atom.processing.create = function(config)
 
         enrichedToIngotRecipe = function()
             local additionalIngredient = config.additionalIngredient.enrichedToIngot or nil
-            local energy = (config.energy or config.energy.enrichedToIngot) or 24
+            local energy = (config.energy and config.energy.enrichedToIngot) or 24
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-ingot-enriched",
@@ -264,7 +264,7 @@ atom.processing.create = function(config)
 
         enrichedToMoltenRecipe = function()
             -- +33%
-            local energy = (config.energy or config.energy.enrichedToMolten) or 6.4
+            local energy = (config.energy and config.energy.enrichedToMolten) or 6.4
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-enriched-molten",
