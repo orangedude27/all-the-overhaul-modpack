@@ -16,7 +16,7 @@ local config = atom.processing.util.prepareConfig({
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {
-        oreToPlate = "silver-processing,"
+        oreToPlate = "silver-processing",
     },
     energy = {
         oreToPlate = 4.8,
