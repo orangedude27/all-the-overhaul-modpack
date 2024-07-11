@@ -19,12 +19,6 @@ local config = atom.processing.util.prepareConfig({
         oreToDust = "titanium-processing",
         dustToPlate = "titanium-processing"
     },
-    energy = {
-        oreToPlate = 14.4,
-        dustToPlate = 14.4,
-        moltenToIngot = 100,
-        ingotToPlate = 5
-    },
     effectiveness = 4,
     hardness = 8
 })

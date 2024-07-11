@@ -20,12 +20,8 @@ local tantalumConfig = atom.processing.util.prepareConfig({
         oreToDust = "5d-masher-1",
         dustToPlate = "5d-masher-1"
     },
-    energy = {
-        oreToPlate = 14.4,
-        dustToPlate = 14.4,
-        moltenToIngot = 20,
-        ingotToPlate = 3.75
-    }
+    effectiveness = 3,
+    hardness = 8
 })
 
 local niobiumConfig = atom.processing.util.prepareConfig({

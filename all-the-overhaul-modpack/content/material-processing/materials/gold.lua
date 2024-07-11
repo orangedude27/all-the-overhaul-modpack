@@ -21,7 +21,7 @@ local config = atom.processing.util.prepareConfig({
         dustToPlate = "gold-processing"
     },
     effectiveness = 2,
-    hardness = 3s
+    hardness = 3
 })
 
 atom.processing.util.createDefaultData(config)
