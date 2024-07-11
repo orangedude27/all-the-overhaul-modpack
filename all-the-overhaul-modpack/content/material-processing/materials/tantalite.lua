@@ -41,10 +41,8 @@ local niobiumConfig = atom.processing.util.prepareConfig({
     icons = {
         "pure", "plate", "ingot", "molten", "enriched", "pellets"
     },
-    energy = {
-        moltenToIngot = 20,
-        ingotToPlate = 3.75
-    }
+    effectiveness = 3,
+    hardness = 8
 })
 
 local createTantalum = atom.processing.create(tantalumConfig)

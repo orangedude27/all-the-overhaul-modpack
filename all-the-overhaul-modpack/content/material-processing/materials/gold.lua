@@ -19,7 +19,9 @@ local config = atom.processing.util.prepareConfig({
         oreToPlate = "gold-processing",
         oreToDust = "gold-processing",
         dustToPlate = "gold-processing"
-    }
+    },
+    effectiveness = 2,
+    hardness = 3s
 })
 
 atom.processing.util.createDefaultData(config)

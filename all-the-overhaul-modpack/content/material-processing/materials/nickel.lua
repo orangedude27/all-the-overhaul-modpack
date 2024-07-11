@@ -24,7 +24,9 @@ local config = atom.processing.util.prepareConfig({
         dustToPlate = {
             { name = "cobaltite-ore", amount = 1, probability = 0.1 }
         }
-    }
+    },
+    effectiveness = 2,
+    hardness = 3
 })
 
 atom.processing.util.createDefaultData(config)

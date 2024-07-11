@@ -31,6 +31,8 @@ local config = atom.processing.util.prepareConfig({
             { name = "alumina", amount = 1, probability = 0.26 }
         }
     },
+    effectiveness = 2,
+    hardness = 3
 })
 
 local oreToAluminaRecipe = Recipe({

@@ -23,12 +23,8 @@ local config = atom.processing.util.prepareConfig({
     unlockedBy = {
         oreToPlate = "manganese-smelting"
     },
-    energy = {
-        oreToPlate = 4.8,
-        dustToPlate = 4.8,
-        moltenToIngot = 25,
-        ingotToPlate = 5
-    }
+    effectiveness = 2,
+    hardness = 5
 })
 
 atom.processing.util.createDefaultData(config)

@@ -27,12 +27,8 @@ local config = atom.processing.util.prepareConfig({
             { name = "manganese-ore", amount = 1, probability = 0.05 }
         }
     },
-    energy = {
-        oreToPlate = 9.6,
-        dustToPlate = 9.6,
-        moltenToIngot = 25,
-        ingotToPlate = 2.5
-    }
+    effectiveness = 2,
+    hardness = 5
 })
 
 atom.processing.util.createDefaultData(config)

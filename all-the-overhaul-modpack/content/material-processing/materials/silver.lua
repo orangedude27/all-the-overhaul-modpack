@@ -23,7 +23,9 @@ local config = atom.processing.util.prepareConfig({
         dustToPlate = 4.8,
         moltenToIngot = 25,
         ingotToPlate = 5
-    }
+    },
+    effectiveness = 3,
+    hardness = 3
 })
 
 atom.processing.util.createDefaultData(config)

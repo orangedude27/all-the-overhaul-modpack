@@ -3,6 +3,153 @@ local Recipe = atom.util.Recipe
 -- Factory to create recipes and icons for a given material
 -- Uses the config as described in util.lua
 atom.processing.create = function(config)
+    local energys = {
+        hardness3 = {
+            oreToPlate = 6,
+            oreToDust = 8,
+            dustToPlate = 10,
+            dustToIngot = 28,
+            dustToEnriched = 3,
+            enrichedToMolten = 10,
+            moltenToIngot = 20,
+            dustToPure = 5,
+            pureToEnriched = 3,
+            enrichedToPellets = 25,
+            pelletsToMolten = 3.5
+        },
+        hardness5 = {
+            oreToPlate = 10,
+            oreToDust = 12,
+            dustToPlate = 8,
+            dustToIngot = 22,
+            dustToEnriched = 3,
+            enrichedToMolten = 8,
+            moltenToIngot = 20,
+            dustToPure = 4,
+            pureToEnriched = 3,
+            enrichedToPellets = 20,
+            pelletsToMolten = 3.5
+        },
+        hardness8 = {
+            oreToPlate = 16,
+            oreToDust = 12,
+            dustToPlate = 8,
+            dustToIngot = 22,
+            dustToEnriched = 3,
+            enrichedToMolten = 8,
+            moltenToIngot = 20,
+            dustToPure = 3,
+            pureToEnriched = 3,
+            enrichedToPellets = 11,
+            pelletsToMolten = 3.5
+        }
+    }
+    local ratios = {
+        effectivenes2 = {
+            oreToPlate = {
+                ingredients = 6,
+                results = 3
+            },
+            dustToPlate = {
+                ingredients = 12,
+                results = 4
+            },
+            dustToEnriched = {
+                ingredients = 16,
+                results = 6
+            },
+            enrichedToMolten = {
+                ingredients = 3,
+                results = 160
+            },
+            dustToPure = {
+                ingredients = 12,
+                pure = 6
+            },
+            pureToEnriched = {
+                ingredients = 12,
+                results = 9
+            },
+            enrichedToPellets = {
+                ingredients = 7,
+                results = 6
+            },
+            pelletsToMolten = {
+                ingredients = 2,
+                molten = 180
+            }
+        },
+        effectivenes3 = {
+            oreToPlate = {
+                ingredients = 6,
+                results = 2
+            },
+            dustToPlate = {
+                ingredients = 18,
+                results = 4
+            },
+            dustToEnriched = {
+                ingredients = 16,
+                results = 4
+            },
+            enrichedToMolten = {
+                ingredients = 3,
+                results = 160
+            },
+            dustToPure = {
+                ingredients = 12,
+                pure = 4
+            },
+            pureToEnriched = {
+                ingredients = 12,
+                results = 6
+            },
+            enrichedToPellets = {
+                ingredients = 7,
+                results = 4
+            },
+            pelletsToMolten = {
+                ingredients = 2,
+                molten = 120
+            }
+        },
+        effectivenes4 = {
+            oreToPlate = {
+                ingredients = 8,
+                results = 2
+            },
+            dustToPlate = {
+                ingredients = 12,
+                results = 2
+            },
+            dustToEnriched = {
+                ingredients = 16,
+                results = 3
+            },
+            enrichedToMolten = {
+                ingredients = 3,
+                results = 160
+            },
+            dustToPure = {
+                ingredients = 12,
+                pure = 3
+            },
+            pureToEnriched = {
+                ingredients = 24,
+                results = 9
+            },
+            enrichedToPellets = {
+                ingredients = 7,
+                results = 3
+            },
+            pelletsToMolten = {
+                ingredients = 2,
+                molten = 90
+            }
+        }
+    }
+
+
     local create = {
         oreToPlateRecipe = function()
             -- -50%

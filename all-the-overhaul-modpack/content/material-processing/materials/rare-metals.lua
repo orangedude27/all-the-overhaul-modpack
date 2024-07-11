@@ -17,7 +17,9 @@ local config = atom.processing.util.prepareConfig({
         "pure",
         plate = { icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png", icon_size = 64 },
         "dust", "ingot", "molten", "enriched", "pellets"
-    }
+    },
+    effectiveness = 3,
+    hardness = 5
 })
 
 local create = atom.processing.util.createDefaultData(config)
