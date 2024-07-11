@@ -16,6 +16,7 @@ local config = atom.processing.util.prepareConfig({
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {
+        oreToPlate = "indium-processing",
         oreToDust = "indium-processing",
         dustToPlate = "indium-processing"
     },

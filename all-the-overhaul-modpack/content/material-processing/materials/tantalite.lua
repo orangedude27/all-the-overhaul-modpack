@@ -57,6 +57,9 @@ dustToPlateRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.plate, amount = 2 },
     { name = niobiumConfig.itemNames.plate, amount = 2 }
 }
+dustToIngotRecipe.prototype.ingredients = {
+    {name = tantalumConfig.itemNames.dust, amount = 60}
+}
 dustToIngotRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.ingot, amount = 1 },
     { name = niobiumConfig.itemNames.ingot, amount = 1 }
