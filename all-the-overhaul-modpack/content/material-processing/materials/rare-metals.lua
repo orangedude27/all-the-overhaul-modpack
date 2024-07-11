@@ -18,6 +18,9 @@ local config = atom.processing.util.prepareConfig({
         plate = { icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png", icon_size = 64 },
         "dust", "ingot", "molten", "enriched", "pellets"
     },
+    additionalIngredient = {
+        dustToPure = { type = "fluid", name = "hydrogen-chloride", amount = 4 }
+    },
     effectiveness = 3,
     hardness = 5
 })

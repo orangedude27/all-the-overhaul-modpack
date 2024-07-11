@@ -15,6 +15,9 @@ local config = atom.processing.util.prepareConfig({
         ore = { icon = "__bztitanium__/graphics/icons/titanium-ore.png", icon_size = 64, icon_mipmaps = 3 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
+    additionalIngredient = {
+        dustToPure = { type = "fluid", name = "hydrogen-chloride", amount = 4 }
+    },
     unlockedBy = {
         oreToDust = "titanium-processing",
         dustToPlate = "titanium-processing"

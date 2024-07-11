@@ -70,7 +70,8 @@ dustToEnrichedRecipe.prototype.results = {
 }
 dustToPureRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.pure, amount = 3 },
-    { name = niobiumConfig.itemNames.pure, amount = 3 }
+    { name = niobiumConfig.itemNames.pure, amount = 3 },
+    { type = "fluid", name = "hydrogen-chloride", amount = 4 }
 }
 
 atom.util.applyAll({
