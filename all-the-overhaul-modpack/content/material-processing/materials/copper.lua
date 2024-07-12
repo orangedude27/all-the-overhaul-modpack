@@ -44,7 +44,9 @@ local config = atom.processing.util.prepareConfig({
     },
     unlockedBy = {
         oreToPlate = "copper-processing"
-    }
+    },
+    effectiveness = 2,
+    hardness = 3
 })
 
 atom.processing.util.createDefaultData(config)

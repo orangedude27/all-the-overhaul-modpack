@@ -35,7 +35,9 @@ local config = atom.processing.util.prepareConfig({
         pureToEnriched = {
             { name = "bismuth-plate", amount = 1, probability = 0.125 }
         }
-    }
+    },
+    effectiveness = 3,
+    hardness = 3
 })
 
 atom.processing.util.createDefaultData(config)

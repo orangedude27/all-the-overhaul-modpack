@@ -19,7 +19,9 @@ local config = atom.processing.util.prepareConfig({
         oreToPlate = "cobalt-refining",
         oreToDust = "cobalt-refining",
         dustToPlate = "cobalt-refining"
-    }
+    },
+    effectiveness = 3,
+    hardness = 5
 })
 
 atom.processing.util.createDefaultData(config)

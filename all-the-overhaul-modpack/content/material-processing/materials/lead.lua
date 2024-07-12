@@ -40,7 +40,9 @@ local config = atom.processing.util.prepareConfig({
             { name = "silver-ore", amount = 2 },
             { name = "silver-ore", amount = 1, probability = 0.5 }
         }
-    }
+    },
+    effectiveness = 3,
+    hardness = 3
 })
 
 atom.processing.util.createDefaultData(config)

@@ -15,10 +15,18 @@ local config = atom.processing.util.prepareConfig({
         ore = { icon = "__Indium__/graphics/icons/indite-ore.png", icon_size = 64 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
+    additionalIngredient = {
+        dustToPure = {
+            type = "fluid", name = "hydrogen-chloride", amount = 4
+        }
+    },
     unlockedBy = {
+        oreToPlate = "indium-processing",
         oreToDust = "indium-processing",
         dustToPlate = "indium-processing"
-    }
+    },
+    effectiveness = 2,
+    hardness = 5
 })
 
 atom.processing.util.createDefaultData(config)

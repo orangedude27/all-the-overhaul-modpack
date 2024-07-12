@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.17
+Date: 7.6.2024
+  Bug fixes:
+    - Improve prerequisites of some technologies
+  Changes:
+    - Rename gold powder to enriched gold
+    - Remove iron and airtight seal from solid rocket fuel recipes to be consistent with other recipes and other fuels
+    - Add silver landfill
+    - Balance solder
+---------------------------------------------------------------------------------------------------
 Version: 1.8.16
 Date: 6.17.2024
   Bug fixes:

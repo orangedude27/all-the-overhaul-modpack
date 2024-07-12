@@ -15,11 +15,18 @@ local config = atom.processing.util.prepareConfig({
         ore = { icon = "__ThemTharHills__/graphics/icons/gold-ore.png", icon_size = 64, icon_mipmaps = 4 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
+    additionalIngredient = {
+        dustToPure = {
+            type = "fluid", name = "chlorine", amount = 4
+        }
+    },
     unlockedBy = {
         oreToPlate = "gold-processing",
         oreToDust = "gold-processing",
         dustToPlate = "gold-processing"
-    }
+    },
+    effectiveness = 2,
+    hardness = 3
 })
 
 atom.processing.util.createDefaultData(config)

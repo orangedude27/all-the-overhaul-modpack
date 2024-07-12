@@ -15,11 +15,16 @@ local config = atom.processing.util.prepareConfig({
         ore = { icon = "__bztungsten__/graphics/icons/tungsten-ore.png", icon_size = 64, icon_mipmaps = 3 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
+    additionalIngredient = {
+        dustToPure = { type = "fluid", name = "ammonia", amount = 4 }
+    },
     unlockedBy = {
         oreToPlate = "tungsten-processing",
         oreToDust = "tungsten-processing",
         dustToPlate = "tungsten-processing"
-    }
+    },
+    effectiveness = 3,
+    hardness = 5
 })
 
 atom.processing.util.createDefaultData(config)

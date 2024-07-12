@@ -26,7 +26,9 @@ local config = atom.processing.util.prepareConfig({
         dustToIngot = {
             { name = "manganese-ore", amount = 1, probability = 0.05 }
         }
-    }
+    },
+    effectiveness = 2,
+    hardness = 5
 })
 
 atom.processing.util.createDefaultData(config)

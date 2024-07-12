@@ -17,7 +17,9 @@ local config = atom.processing.util.prepareConfig({
     },
     unlockedBy = {
         oreToPlate = "bismanol"
-    }
+    },
+    effectiveness = 2,
+    hardness = 3
 })
 
 atom.processing.util.createDefaultData(config)

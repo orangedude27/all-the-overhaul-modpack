@@ -16,10 +16,15 @@ local tantalumConfig = atom.processing.util.prepareConfig({
         ore = { icon = "__Tantalite__/graphics/icons/tantalite-ore.png", icon_size = 64, icon_mipmaps = 3 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
+    additionalIngredient = {
+        dustToPure = { type = "fluid", name = "hydrogen-chloride", amount = 4}
+    },
     unlockedBy = {
         oreToDust = "5d-masher-1",
         dustToPlate = "5d-masher-1"
-    }
+    },
+    effectiveness = 3,
+    hardness = 8
 })
 
 local niobiumConfig = atom.processing.util.prepareConfig({
@@ -34,7 +39,9 @@ local niobiumConfig = atom.processing.util.prepareConfig({
     },
     icons = {
         "pure", "plate", "ingot", "molten", "enriched", "pellets"
-    }
+    },
+    effectiveness = 3,
+    hardness = 8
 })
 
 local createTantalum = atom.processing.create(tantalumConfig)
@@ -53,13 +60,17 @@ dustToPlateRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.plate, amount = 2 },
     { name = niobiumConfig.itemNames.plate, amount = 2 }
 }
+dustToIngotRecipe.prototype.ingredients = {
+    {name = tantalumConfig.itemNames.dust, amount = 60}
+}
 dustToIngotRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.ingot, amount = 1 },
     { name = niobiumConfig.itemNames.ingot, amount = 1 }
 }
 dustToEnrichedRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.enriched, amount = 3 },
-    { name = niobiumConfig.itemNames.enriched, amount = 3 }
+    { name = niobiumConfig.itemNames.enriched, amount = 3 },
+    { type = "fluid", name = "dirty-water", amount = 333, catalyst_amount = 333 }
 }
 dustToPureRecipe.prototype.results = {
     { name = tantalumConfig.itemNames.pure, amount = 3 },

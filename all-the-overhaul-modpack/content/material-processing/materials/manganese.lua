@@ -22,7 +22,9 @@ local config = atom.processing.util.prepareConfig({
     },
     unlockedBy = {
         oreToPlate = "manganese-smelting"
-    }
+    },
+    effectiveness = 2,
+    hardness = 5
 })
 
 atom.processing.util.createDefaultData(config)

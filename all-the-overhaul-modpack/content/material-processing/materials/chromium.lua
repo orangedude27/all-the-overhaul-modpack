@@ -19,7 +19,9 @@ local config = atom.processing.util.prepareConfig({
         oreToPlate = "stainless-steel-processing",
         oreToDust = "stainless-steel-processing",
         dustToPlate = "stainless-steel-processing"
-    }
+    },
+    effectiveness = 3,
+    hardness = 5
 })
 
 atom.processing.util.createDefaultData(config)

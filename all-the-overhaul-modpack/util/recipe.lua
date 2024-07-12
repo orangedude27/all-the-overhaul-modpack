@@ -329,5 +329,16 @@ function atom.util.Recipe(value)
             end
             table.insert(technology.effects, { type = "unlock-recipe", recipe = recipe.name })
         end,
+
+        -- Change crafting-category
+        -- @param category
+        changeCraftingCategory = function(category)
+            if not category then
+                return
+            end
+            recipe.category = category
+            
+            
+        end,
     }
 end
