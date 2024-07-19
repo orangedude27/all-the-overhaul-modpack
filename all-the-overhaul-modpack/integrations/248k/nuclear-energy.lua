@@ -280,3 +280,4 @@ end
 
 data.raw.reactor["fi_solid_reactor_entity"].energy_source.fuel_categories = { "nuclear", "nuclear-advanced", "nuclear-high-energy" }
 data.raw.locomotive["gr_magnet_train_pre_entity"].burner.fuel_categories = { "nuclear", "nuclear-advanced", "nuclear-high-energy" }
+data.raw["assembling-machine"]["fi_crafter_entity"].energy_source.fuel_categories = { "nuclear" }

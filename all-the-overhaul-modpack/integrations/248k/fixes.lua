@@ -166,3 +166,7 @@ dieselTrain.sound_scaling_ratio = vanillaLocomotive.sound_scaling_ratio
 -- Remove hydrofluoric acid
 atom.util.recipe.replaceIngredient("fi_strong_acid", "el_acidic_water")
 atom.util.item.removeByName("fi_strong_acid")
+
+-- Balance Nuclear assembling machine to compete with Assembling machine mk3
+local nuclearAssembler = data.raw["assembling-machine"]["fi_crafter_entity"]
+nuclearAssembler.module_specification.module_slots = 5
