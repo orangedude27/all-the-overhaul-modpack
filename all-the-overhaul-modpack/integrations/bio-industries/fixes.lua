@@ -24,3 +24,6 @@ bioGarden.module_specification.module_info_icon_shift = {
     0,
     0.8
 }
+
+-- Remove unused organic plastic technology
+data.raw.technology["bi-tech-organic-plastic"] = nil
