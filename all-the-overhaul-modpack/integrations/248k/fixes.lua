@@ -76,12 +76,18 @@ atom.util.recipe.replaceResult("el_lithium_item", "lithium")
 atom.util.item.removeByName("el_lithium_item")
 
 -- Adjust low density structure recipe
-local lds = atom.util.Recipe("fi_low-density-structure_recipe")
-lds.addIngredient("titanium-plate", 8)
-lds.addIngredient("diamond", 4)
-lds.addIngredient("zirconia", 20)
-lds.addIngredient("carbon-fiber", 20)
-lds.prototype.category = "crafting"
+local lds = data.raw.recipe["fi_low-density-structure_recipe"]
+lds.ingredients = {
+    { "titanium-plate", 4 },
+    { "niobium-plate", 10 },
+    { "carbon-fiber", 10 },
+    { "bismuth-glass", 4 },
+    { "el_materials_ALK", 5 },
+    { "chromel-r-fabric", 5 },
+    { type = "fluid", name = "helium", amount = 20 }
+}
+lds.result_count = 2
+lds.category = "laser-milling-exclusive"
 
 -- Energy crystal usage
 atom.util.Recipe("productivity-module").addIngredient("el_energy_crystal_item", 10)

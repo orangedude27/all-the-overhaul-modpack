@@ -1,5 +1,3 @@
--- Recipe balancing
-
 -- Low quality advanced circuit
 table.assign(data["raw"].recipe["low-quality-advanced-circuit"], {
     ingredients = {
@@ -22,3 +20,6 @@ data.raw.recipe["bronze-spring"].allow_as_intermediate = false
 local solder = atom.util.Recipe("indium-pcb-solder")
 solder.replaceIngredient("tin-plate", 4)
 solder.replaceResult("pcb-solder", 8)
+
+-- Chromel-R fabric uses more chromium
+atom.util.Recipe("chromel-r-fabric").replaceIngredient("chromium-plate", 4)
