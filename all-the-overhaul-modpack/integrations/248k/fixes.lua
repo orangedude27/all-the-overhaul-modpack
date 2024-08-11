@@ -88,6 +88,7 @@ lds.ingredients = {
 }
 lds.result_count = 2
 lds.category = "laser-milling-exclusive"
+atom.util.Recipe(lds).allowProductivity()
 
 -- Energy crystal usage
 atom.util.Recipe("productivity-module").addIngredient("el_energy_crystal_item", 10)
