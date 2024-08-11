@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.18
+Date: 8.11.2024
+  Bug fixes:
+    - Fix and balance nuclear assembling machine (it now competes with assembler mk3)
+    - Remove unused organic plastic technology: https://discord.com/channels/1174743568590590053/1262609043386536017
+  Changes:
+    - Balance LDS recipe with Chromel-R: https://discord.com/channels/1174743568590590053/1262551739538604082
+    - Chromel-R fabric uses twice as much chromium
+---------------------------------------------------------------------------------------------------
 Version: 1.8.17
 Date: 7.6.2024
   Bug fixes:
