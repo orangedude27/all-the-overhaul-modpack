@@ -86,7 +86,7 @@ util.tech_add_ingredients("5d-oil-refinery-1", { "chemical-science-pack" }, fals
 data.raw.technology["5d-oil-refinery-2"].unit.count = 300
 util.tech_remove_prerequisites("5d-oil-refinery-2", { "production-science-pack" })
 util.tech_add_prerequisites("5d-oil-refinery-2", "kr-optimization-tech-card")
-util.tech_remove_ingredients("5d-oil-refinery-2", { "production-science-pack" })
+util.tech_remove_ingredients("5d-oil-refinery-2", { "basic-tech-card", "production-science-pack" })
 util.tech_add_ingredients("5d-oil-refinery-2", { "chemical-science-pack", "se-rocket-science-pack", "space-science-pack", "kr-optimization-tech-card" }, false)
 -- 04
 data.raw.technology["5d-oil-refinery-3"].unit.count = 400
