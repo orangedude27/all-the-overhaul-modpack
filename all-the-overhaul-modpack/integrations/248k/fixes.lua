@@ -177,3 +177,5 @@ atom.util.item.removeByName("fi_strong_acid")
 -- Balance Nuclear assembling machine to compete with Assembling machine mk3
 local nuclearAssembler = data.raw["assembling-machine"]["fi_crafter_entity"]
 nuclearAssembler.module_specification.module_slots = 5
+nuclearAssembler.energy_source.fuel_inventory_size = 1
+nuclearAssembler.energy_source.burnt_inventory_size = 1
