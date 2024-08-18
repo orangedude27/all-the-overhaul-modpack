@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.19
+Date: 8.18.2024
+  Changes:
+    - Adjust fuel inventory size of the nuclear assembler
+    - Remove basic tech card from chemical plant and oil refinery mk3
+    - Balance Nuclear Locomotive (weeeeeeeeeeeee)
+---------------------------------------------------------------------------------------------------
 Version: 1.8.18
 Date: 8.11.2024
   Bug fixes:
