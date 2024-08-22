@@ -1,0 +1,7 @@
+require("trains/fuel")
+require("trains/equipment")
+require("trains/locomotives")
+require("trains/sound")
+require("trains/wagons")
+require("trains/technology")
+require("trains/recipes")

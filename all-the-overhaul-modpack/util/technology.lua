@@ -57,10 +57,24 @@ function atom.util.Technology(value)
             table.assign(technology, data)
         end,
 
+        -- Sets the prerequisite for the technology
+        -- @param prerequisites table The names of the prerequisites
+        setPrerequisites = function(prerequisites)
+            technology.prerequisites = prerequisites
+        end,
+
         -- Adds a prerequisite to the technology
         -- @param prerequisite string The name of the prerequisite
         addPrerequisite = function(prerequisite)
             table.insert(technology.prerequisites, prerequisite)
+        end,
+
+        -- Adds multiple prerequisites to the technology
+        -- @param prerequisites table The names of the prerequisite
+        addPrerequisites = function(prerequisites)
+            for _, prerequisite in pairs(prerequisites) do
+                table.insert(technology.prerequisites, prerequisite)
+            end
         end,
 
         -- Replaces a prerequisite in a technology
@@ -75,9 +89,15 @@ function atom.util.Technology(value)
             end
         end,
 
+        -- Removes a prerequisite from the technology
+        -- @param prerequisite string The name of the prerequisite
         removePrerequisite = function(prerequisite)
+            local _prerequisite = prerequisite
+            if (type(prerequisite) == "table" and prerequisite.prototype) then
+                _prerequisite = prerequisite.prototype.name
+            end
             for i, techPrerequisite in pairs(technology.prerequisites) do
-                if techPrerequisite == prerequisite then
+                if techPrerequisite == _prerequisite then
                     table.remove(technology.prerequisites, i)
                     return
                 end

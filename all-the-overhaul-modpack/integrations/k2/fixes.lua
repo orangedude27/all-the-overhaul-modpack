@@ -47,11 +47,3 @@ atom.util.Technology("kr-military-5").replacePrerequisite("kr-lithium-sulfur-bat
 local robotBatteryTech = atom.util.Technology("kr-robot-battery")
 robotBatteryTech.addPrerequisite("production-science-pack")
 robotBatteryTech.addPrerequisite("utility-science-pack")
-
--- Balance Nuclear Locomotive because it's a downgrade from the Diesel Train
-local nuclearLoc = data.raw.locomotive["kr-nuclear-locomotive"]
-nuclearLoc.weight = 4000
-nuclearLoc.max_speed = 1.30
-nuclearLoc.max_power = "3.2MW"
-nuclearLoc.burner.effectivity = 0.5
-nuclearLoc.burner.fuel_categories = { "vehicle-fuel", "el_train_fuel", "nuclear" }

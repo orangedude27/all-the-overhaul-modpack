@@ -160,16 +160,6 @@ data:extend({
     }
 })
 
--- Set diesel train sounds to vanilla locomotive because the diesel train sounds are annoying
-local dieselTrain = data.raw.locomotive["el_diesel_train_entity"]
-local vanillaLocomotive = data.raw.locomotive["locomotive"]
-dieselTrain.open_sound = vanillaLocomotive.open_sound
-dieselTrain.close_sound = vanillaLocomotive.close_sound
-dieselTrain.working_sound = vanillaLocomotive.working_sound
-dieselTrain.mined_sound = vanillaLocomotive.mined_sound
-dieselTrain.sound_minimum_speed = vanillaLocomotive.sound_minimum_speed
-dieselTrain.sound_scaling_ratio = vanillaLocomotive.sound_scaling_ratio
-
 -- Remove hydrofluoric acid
 atom.util.recipe.replaceIngredient("fi_strong_acid", "el_acidic_water")
 atom.util.item.removeByName("fi_strong_acid")

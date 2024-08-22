@@ -46,7 +46,6 @@
         "se-flow-control-bridge",
         "se-landfill-le",
         "se-recycling-extras",
-        "se-space-trains",
         "SE248kfix",
         "shield-projector",
         "solar-productivity",
@@ -65,6 +64,7 @@
         "OD27_5dim_resources",
         "OD27_5dim_battlefield",
         "advanced-centrifuge",
+        "DoubleWagons",
         "! bobassembly",
         "! OD27_5dim_module",
         "! 5dim_module",
@@ -78,6 +78,7 @@
         "? RampantArsenal",
         "? qol_by_morality",
         "? Load-Furn-2",
-        "? WireShortcuts"
+        "? WireShortcuts",
+        "? se-space-trains"
     ]
 }

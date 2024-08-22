@@ -404,3 +404,7 @@ end
 if mods["OD27_5dim_resources"] then
     change_setting("5d-industrial-furnace", false)
 end
+--Black Wagons
+if mods["DoubleWagons"] then
+    change_setting("double-cargo-capacity", false)
+end

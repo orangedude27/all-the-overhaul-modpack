@@ -42,10 +42,6 @@ equipment.create_equipment_category("defense-equipment")
 equipment.create_equipment_category("transport-shield")
 equipment.create_equipment_category("battery-equipment")
 equipment.create_equipment_category("solar-equipment")
-equipment.create_grid("kr-nuclear-locomotive-grid")
-equipment.create_grid("space-locomotive-grid")
-equipment.create_grid("gr_magnet_train_pre_grid")
-equipment.create_grid("gr_magnet_train_grid")
 equipment.create_grid("kr-advanced-tank-grid")
 
 data.raw["assembling-machine"]["kr-research-server"].ingredient_count = 20
