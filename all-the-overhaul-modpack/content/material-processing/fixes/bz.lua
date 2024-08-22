@@ -27,12 +27,11 @@ atom.util.recipe.removeByName("palladium-ingot")
 atom.util.recipe.removeByName("graphite-5d")
 atom.util.recipe.removeByName("zirconia")
 atom.util.recipe.removeByName("enriched-zirconia-smelting")
-atom.util.recipe.removeByName("molten-zirconium")
 atom.util.recipe.removeByName("molten-titanium")
+
 atom.util.item.removeByName("tungsten-powder")
+atom.util.item.removeByName("molten-zirconium")
 
-local util = require("_data-util")
-
-util.tech_add_prerequisites("cobalt-chemistry", "cobalt-refining")
+atom.util.Technology("cobalt-chemistry").addPrerequisite("cobalt-refining")
 
 -- TODO: Add a replacement for tungsten-carbide-casting to the new processing
