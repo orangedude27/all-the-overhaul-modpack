@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.20
+Date: 8.22.2024
+  Bug fixes:
+    - Fixed some locales and cleanup of unused fluids
+  Changes:
+    - Trains overhaul:
+      Trains now have a reworked progression
+      A new tier of wagons have been added
+      Space Trains are now optional and can be removed since they only provide aesthetics
+      Otherwise Space Trains are similar to Nuclear Locomotive with Black wagons
+      Progression comes from locomotives and better fuels they support
+---------------------------------------------------------------------------------------------------
 Version: 1.8.19
 Date: 8.18.2024
   Changes:
