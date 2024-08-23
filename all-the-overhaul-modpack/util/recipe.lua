@@ -77,7 +77,6 @@ atom.util.recipe = {
         end
         local result = {}
         for _, recipe in pairs(data.raw.recipe) do
-            local match = false
             if recipe.result == itemName
                     or recipe.results and containsItem(recipe.results)
                     or recipe.ingredients and containsItem(recipe.ingredients)
@@ -89,7 +88,6 @@ atom.util.recipe = {
                     or recipe.expensive and recipe.expensive.ingredients and containsItem(recipe.expensive.ingredients)
             then
                 table.insert(result, recipe.name)
-                match = true
             end
         end
         return result
