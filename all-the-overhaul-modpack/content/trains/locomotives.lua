@@ -12,7 +12,7 @@ table.assign(data.raw.locomotive["locomotive"], {
 table.assign(data.raw.locomotive["locomotive"].burner, {
     effectivity = 0.7,
     fuel_categories = { "chemical", "vehicle-fuel" },
-    fuel_inventory_size = settings.startup["atom-reduced-train-fuel-slots"].value and 1 or 3
+    fuel_inventory_size = 3
 })
 
 -- Diesel Train
@@ -29,7 +29,7 @@ table.assign(data.raw.locomotive["el_diesel_train_entity"], {
 table.assign(data.raw.locomotive["el_diesel_train_entity"].burner, {
     effectivity = 0.8,
     fuel_categories = { "vehicle-fuel", "el_train_fuel" },
-    fuel_inventory_size = settings.startup["atom-reduced-train-fuel-slots"].value and 1 or 2
+    fuel_inventory_size = 2
 })
 
 -- Nuclear Locomotive
@@ -47,8 +47,8 @@ table.assign(data.raw.locomotive["kr-nuclear-locomotive"], {
 table.assign(data.raw.locomotive["kr-nuclear-locomotive"].burner, {
     effectivity = 0.9,
     fuel_categories = { "vehicle-fuel", "el_train_fuel", "nuclear" },
-    fuel_inventory_size = 1,
-    burnt_inventory_size = 1
+    fuel_inventory_size = 2,
+    burnt_inventory_size = 2
 })
 
 -- EM Suspension Train 1

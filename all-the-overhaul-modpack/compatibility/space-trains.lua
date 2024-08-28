@@ -9,14 +9,10 @@ if mods["se-space-trains"] then
         air_resistance = 0.0025,
         reversing_power_modifier = 1.0,
         equipment_grid = "space-locomotive-grid",
-        max_health = 2000
+        max_health = 2000,
+        fuel_inventory_size = 2,
+        burnt_inventory_size = 2
     })
-    if (settings.startup["atom-reduced-train-fuel-slots"].value) then
-        table.assign(data.raw.locomotive["space-locomotive"].burner, {
-            fuel_inventory_size = 1,
-            burnt_inventory_size = 1
-        })
-    end
 
     -- Equal to Black Cargo Wagon
     table.assign(data.raw["cargo-wagon"]["space-cargo-wagon"], {
