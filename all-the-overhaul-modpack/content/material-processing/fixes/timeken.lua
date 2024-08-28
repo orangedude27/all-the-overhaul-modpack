@@ -4,6 +4,7 @@ atom.util.recipe.removeByNamePattern("^%a+%-ingot%-to%-plate$")
 atom.util.recipe.removeByName("tantalite-smelting")
 atom.util.recipe.removeByName("tantalite-ingot")
 atom.util.recipe.removeByName("chromium-plate")
+atom.util.recipe.removeByName("molten-cobalt")
 
 atom.util.item.removeByName("fi-arc-pure-chrome")
 atom.util.item.removeByName("fi-arc-pure-cobalt")
