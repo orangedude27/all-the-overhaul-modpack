@@ -19,12 +19,5 @@ data:extend({
         setting_type = "startup",
         default_value = true,
         order = "aac"
-    },
-    {
-        type = "bool-setting",
-        name = "atom-reduced-train-fuel-slots",
-        setting_type = "startup",
-        default_value = false,
-        order = "aad"
     }
 })
