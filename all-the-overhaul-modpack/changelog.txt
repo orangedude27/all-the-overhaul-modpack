@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.21
+Date: 8.31.2024
+  Bug fixes:
+    - Remove molten cobalt that is not from the ATOM material processing
+  Changes:
+    - Add Thorium landfill: https://discord.com/channels/1174743568590590053/1276579574242611281
+    - Dredgeworks compatibility: Add Seafloor Drills mk2 and mk3
+    - Trains overhaul: Go back to at least 2 fuel slots for trains
+---------------------------------------------------------------------------------------------------
 Version: 1.8.20
 Date: 8.22.2024
   Bug fixes:
