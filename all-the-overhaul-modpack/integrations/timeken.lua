@@ -36,4 +36,5 @@ thoriumLandfill.apply()
 -- Alternative glass recipe uses smelters and allows productivity
 local glass = atom.util.Recipe("soda-lime-glass")
 glass.prototype.category = "smelting"
+glass.prototype.always_show_made_in = true
 glass.allowProductivity()
