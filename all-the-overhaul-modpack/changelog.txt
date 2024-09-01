@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.22
+Date: 9.1.2024
+  Bug fixes:
+    - Fix crash for when the mod Dredgeworks is not active
+  Changes:
+    - Alternative glass recipe uses smelters and allows productivity (breaking change!)
+---------------------------------------------------------------------------------------------------
 Version: 1.8.21
 Date: 8.31.2024
   Bug fixes:
