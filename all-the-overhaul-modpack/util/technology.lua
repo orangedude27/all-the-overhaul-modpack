@@ -66,14 +66,18 @@ function atom.util.Technology(value)
         -- Adds a prerequisite to the technology
         -- @param prerequisite string The name of the prerequisite
         addPrerequisite = function(prerequisite)
-            table.insert(technology.prerequisites, prerequisite)
+            if (not table.contains(technology.prerequisites, prerequisite)) then
+                table.insert(technology.prerequisites, prerequisite)
+            end
         end,
 
         -- Adds multiple prerequisites to the technology
         -- @param prerequisites table The names of the prerequisite
         addPrerequisites = function(prerequisites)
             for _, prerequisite in pairs(prerequisites) do
-                table.insert(technology.prerequisites, prerequisite)
+                if (not table.contains(technology.prerequisites, prerequisite)) then
+                    table.insert(technology.prerequisites, prerequisite)
+                end
             end
         end,
 
