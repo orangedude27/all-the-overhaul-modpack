@@ -1,19 +1,19 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.23
 Date: 9.2.2024
-  Bug fixes:
+  Bug Fixes:
     - Fix compatibility with "Quallity of life by morality"
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.22
 Date: 9.1.2024
-  Bug fixes:
+  Bug Fixes:
     - Fix crash for when the mod Dredgeworks is not active
   Changes:
     - Alternative glass recipe uses smelters and allows productivity (breaking change!)
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.21
 Date: 8.31.2024
-  Bug fixes:
+  Bug Fixes:
     - Remove molten cobalt that is not from the ATOM material processing
   Changes:
     - Add Thorium landfill: https://discord.com/channels/1174743568590590053/1276579574242611281
@@ -22,7 +22,7 @@ Date: 8.31.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.20
 Date: 8.22.2024
-  Bug fixes:
+  Bug Fixes:
     - Fixed some locales and cleanup of unused fluids
   Changes:
     - Trains overhaul:
@@ -41,7 +41,7 @@ Date: 8.18.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.18
 Date: 8.11.2024
-  Bug fixes:
+  Bug Fixes:
     - Fix and balance nuclear assembling machine (it now competes with assembler mk3)
     - Remove unused organic plastic technology: https://discord.com/channels/1174743568590590053/1262609043386536017
   Changes:
@@ -50,7 +50,7 @@ Date: 8.11.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.17
 Date: 7.6.2024
-  Bug fixes:
+  Bug Fixes:
     - Improve prerequisites of some technologies
   Changes:
     - Rename gold powder to enriched gold
@@ -60,7 +60,7 @@ Date: 7.6.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.16
 Date: 6.17.2024
-  Bug fixes:
+  Bug Fixes:
     - Cleanup unused recipes
     - Improve prerequisites of some technologies
   Changes:
@@ -70,7 +70,7 @@ Date: 6.17.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.15
 Date: 6.13.2024
-  Bug fixes:
+  Bug Fixes:
     - Remove hydrofluoric acid and replace it with acidic water in remaining recipes: https://discord.com/channels/1174743568590590053/1247275038881615882
   Changes:
     - Balance solar panels and solar productivity: https://discord.com/channels/1174743568590590053/1233085579101737151
@@ -79,12 +79,12 @@ Date: 6.13.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.14
 Date: 6.5.2024
-  Bug fixes:
+  Bug Fixes:
     - Fixed issue with ladder mill blinds being incorrect
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.13
 Date: 6.4.2024
-  Bug fixes:
+  Bug Fixes:
     - Fixed the signal wires' sorting locations: https://discord.com/channels/1174743568590590053/1245361274926268456
     - Fixed some Research Pre-requisites: https://discord.com/channels/1174743568590590053/1244061704049000468
     - Replaced the 248k reactor with the vanilla reactor for some recipes: https://discord.com/channels/1174743568590590053/1245094441438548018
@@ -94,7 +94,7 @@ Date: 6.4.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.12
 Date: 5.28.2024
-  Bug fixes:
+  Bug Fixes:
     - Replace wooden rails with normal rails in all recipes: https://discord.com/channels/1174743568590590053/1241445391963132005
   Changes:
     - Set diesel train sounds to vanilla locomotive because the diesel train sounds are annoying
@@ -104,7 +104,7 @@ Date: 5.28.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.11
 Date: 5.1.2024
-  Bug fixes:
+  Bug Fixes:
     - Force mini assemblers to be enabled in the settings: https://discord.com/channels/1174743568590590053/1230254179960754297
     - Remove fu_stage_tech instead of hiding it: https://discord.com/channels/1174743568590590053/1231717014268153886
     - Fix silver byproduct amounts for lead (percentages above 100% always result to 1)
@@ -114,7 +114,7 @@ Date: 5.1.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.10
 Date: 4.12.2024
-  Bug fixes:
+  Bug Fixes:
     - Fix error with big power poles patched: https://discord.com/channels/1174743568590590053/1227668649419083777
     - Fix errors in menu simulations
     - Fix error with mod Transport Drones: https://discord.com/channels/1174743568590590053/1221228607641485464
@@ -126,12 +126,12 @@ Date: 4.12.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.9
 Date: 4.10.2024
-  Bug fixes:
+  Bug Fixes:
     - Add missing recipe migration for merge lithium variants (LithiumFix was a mandatory dependency but not marked as such. Now it's obsolete).
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.8
 Date: 4.10.2024
-  Bug fixes:
+  Bug Fixes:
     - Fix imersium wall being available at the start
     - Add missing recipes and technology prerequisites: https://discord.com/channels/1174743568590590053/1223300008653361244
     - Fix fuel categories for bio boiler and burner generator
