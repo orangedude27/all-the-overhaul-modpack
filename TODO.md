@@ -2,7 +2,7 @@
 
 - Sort icons for recipes and items
 - Have a look at alloying (mix in other metals to reduce the amount needed of the main metal)
-- 5Dim's labs are probably not a good addition (https://discord.com/channels/1174743568590590053/1192685170210385961)
+~~- 5Dim's labs are probably not a good addition (https://discord.com/channels/1174743568590590053/1192685170210385961)~~
 - Revisit QoL/smaller mods that are currently a mandatory dependency for
   ATOM (https://discord.com/channels/1174743568590590053/1215765362533204019)
 - Tweak colors of lead
