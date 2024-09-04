@@ -41,6 +41,13 @@ function atom.util.Technology(value)
         return nil
     end
 
+    local function prerequisiteName(prerequisite)
+        if type(prerequisite) == "table" and prerequisite.prototype then
+            return prerequisite.prototype.name
+        end
+        return prerequisite
+    end
+
     return {
         -- The technology data
         prototype = technology,
@@ -66,8 +73,9 @@ function atom.util.Technology(value)
         -- Adds a prerequisite to the technology
         -- @param prerequisite string The name of the prerequisite
         addPrerequisite = function(prerequisite)
-            if (not table.contains(technology.prerequisites, prerequisite)) then
-                table.insert(technology.prerequisites, prerequisite)
+            local _prerequisite = prerequisiteName(prerequisite)
+            if (not table.contains(technology.prerequisites, _prerequisite)) then
+                table.insert(technology.prerequisites, _prerequisite)
             end
         end,
 
@@ -75,8 +83,9 @@ function atom.util.Technology(value)
         -- @param prerequisites table The names of the prerequisite
         addPrerequisites = function(prerequisites)
             for _, prerequisite in pairs(prerequisites) do
-                if (not table.contains(technology.prerequisites, prerequisite)) then
-                    table.insert(technology.prerequisites, prerequisite)
+                local _prerequisite = prerequisiteName(prerequisite)
+                if (not table.contains(technology.prerequisites, _prerequisite)) then
+                    table.insert(technology.prerequisites, _prerequisite)
                 end
             end
         end,
@@ -86,9 +95,11 @@ function atom.util.Technology(value)
         -- @param old string The name of the old prerequisite
         -- @param new string The name of the new prerequisite
         replacePrerequisite = function(old, new)
+            local _old = prerequisiteName(old)
+            local _new = prerequisiteName(new)
             for i, prerequisite in pairs(technology.prerequisites) do
-                if prerequisite == old then
-                    technology.prerequisites[i] = new
+                if prerequisite == _old then
+                    technology.prerequisites[i] = _new
                 end
             end
         end,
@@ -96,10 +107,7 @@ function atom.util.Technology(value)
         -- Removes a prerequisite from the technology
         -- @param prerequisite string The name of the prerequisite
         removePrerequisite = function(prerequisite)
-            local _prerequisite = prerequisite
-            if (type(prerequisite) == "table" and prerequisite.prototype) then
-                _prerequisite = prerequisite.prototype.name
-            end
+            local _prerequisite = prerequisiteName(prerequisite)
             for i, techPrerequisite in pairs(technology.prerequisites) do
                 if techPrerequisite == _prerequisite then
                     table.remove(technology.prerequisites, i)

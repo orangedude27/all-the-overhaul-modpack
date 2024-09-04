@@ -123,8 +123,7 @@ atom.util.item.removeByName("fi_materials_hcp")
 table.assign(data.raw.recipe["fu_lab_recipe"], {
     category = "space-manufacturing",
     ingredients = {
-        { "5d-lab-10", 10 },
-        { "kr-singularity-lab", 1 },
+        { "kr-singularity-lab", 2 },
         { "energy-control-unit", 50 },
         { "se-space-radiator-2", 10 },
         { "se-space-hypercooler", 4 },
@@ -143,6 +142,18 @@ table.assign(data.raw.recipe["fu_lab_recipe"], {
         { type = "fluid", name = "se-space-coolant-supercooled", amount = 2000 },
     }
 })
+
+-- Reset S-Lab inputs
+data.raw.lab["gr_lab_entity"].inputs = {
+    "se-rocket-science-pack",
+    "gr_materials_red_pack_item",
+    "gr_materials_green_pack_item",
+    "gr_materials_blue_pack_item",
+    "gr_materials_purple_pack_item",
+    "gr_materials_yellow_pack_item",
+    "gr_materials_grey_pack_item",
+    "gr_materials_white_pack_item"
+}
 
 -- Make fuel categories of burner generator match vanilla boiler
 data.raw["burner-generator"]["el_burner_entity"].burner.fuel_categories = data.raw.boiler["boiler"].energy_source.fuel_categories

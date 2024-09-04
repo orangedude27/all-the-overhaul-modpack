@@ -216,7 +216,6 @@ data.raw.technology["fu_hydrogen_3_tech"].unit.count = 1000
 -- Delete unusing research line
 util.tech_remove_prerequisites("kr-imersium-processing", { "fu_crystal_tech" })
 -- Add usage for Optimization card
-util.tech_add_ingredients("se-space-science-lab", { "kr-optimization-tech-card" }, false)
 util.tech_add_ingredients("se-astronomic-science-pack-1", { "kr-optimization-tech-card" }, false)
 util.tech_add_ingredients("se-biological-science-pack-1", { "kr-optimization-tech-card" }, false)
 util.tech_add_ingredients("se-energy-science-pack-1", { "kr-optimization-tech-card" }, false)
