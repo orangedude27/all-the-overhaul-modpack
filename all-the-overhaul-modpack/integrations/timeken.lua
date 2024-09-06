@@ -43,3 +43,7 @@ glass.allowProductivity()
 local stainlessSteel = atom.util.Recipe("stainless-steel-plate")
 stainlessSteel.replaceIngredient("steel-plate", 7)
 stainlessSteel.replaceIngredient("chromium-plate", 2)
+
+-- Balance glass
+local sodaLimeGlass = atom.util.Recipe("soda-lime-glass")
+sodaLimeGlass.replaceIngredient("sodium-carbonate", 5)

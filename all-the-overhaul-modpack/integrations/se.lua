@@ -81,3 +81,8 @@ for _, recipeName in pairs(rocketFuelRecipes) do
     atom.util.Recipe(recipeName).removeIngredient("iron-plate")
     atom.util.Recipe(recipeName).removeIngredient("airtight-seal")
 end
+
+-- Balance glass
+local glassVulcanite = atom.util.Recipe("se-glass-vulcanite")
+glassVulcanite.replaceIngredient("sand", "quartz")
+glassVulcanite.replaceResult("glass", 21)

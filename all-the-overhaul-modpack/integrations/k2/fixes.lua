@@ -52,10 +52,3 @@ robotBatteryTech.addPrerequisite("utility-science-pack")
 local glass = atom.util.Recipe("glass")
 glass.replaceIngredient("sand", "quartz")
 glass.replaceResult("glass", 7)
-
-local glassVulcanite = atom.util.Recipe("se-glass-vulcanite")
-glassVulcanite.replaceIngredient("sand", "quartz")
-glassVulcanite.replaceResult("glass", 21)
-
-local sodaLimeGlass = atom.util.Recipe("soda-lime-glass")
-sodaLimeGlass.replaceIngredient("sodium-carbonate", 5)
