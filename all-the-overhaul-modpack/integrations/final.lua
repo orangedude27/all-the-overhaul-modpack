@@ -30,3 +30,6 @@ for _, technology in pairs(data.raw.technology) do
         atom.util.Technology(technology).addIngredient("productivity-science-pack")
     end
 end
+
+-- Remove crushed manganese
+atom.util.item.removeByName("crushed-manganese")

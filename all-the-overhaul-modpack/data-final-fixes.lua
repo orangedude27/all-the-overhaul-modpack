@@ -28,10 +28,6 @@ data:extend({
     }
 })
 
--- Final balancing
-atom.util.Recipe("steel-plate").replaceIngredient("iron-plate", 10)
-atom.util.Recipe("rail").addIngredient("concrete", 2)
-
 -- Fix prerequisites for artillery shell techs
 atom.util.Technology("artillery-shell-range-1").addPrerequisite("utility-science-pack")
 atom.util.Technology("artillery-shell-speed-1").addPrerequisite("utility-science-pack")
@@ -102,5 +98,16 @@ table.insert(lab6.inputs, "se-deep-space-science-pack-4")
 
 local lab7 = data.raw["lab"]["fu_lab_entity-spaced"]
 lab7.inputs = lab6.inputs
+
+-- Balance steel
+local steel = atom.util.Recipe("steel-plate")
+steel.replaceIngredient("iron-plate", 10)
+steel.replaceIngredient("graphite", 3)
+steel.replaceIngredient("quicklime", 2)
+steel.replaceIngredient("crushed-manganese", "manganese-plate")
+steel.replaceResult("steel-plate", 6)
+
+-- Final balancing
+atom.util.Recipe("rail").addIngredient("concrete", 2)
 
 require("integrations.final")
