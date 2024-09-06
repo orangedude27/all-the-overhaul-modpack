@@ -1,3 +1,9 @@
+-- Entities
+
+local entity03 = data.raw["assembling-machine"]["assembling-machine-3"]
+entity03.next_upgrade = "5d-assembling-machine-04"
+
+
 -- Recipes
 
 local Recipe = require('__stdlib__/stdlib/data/recipe')
