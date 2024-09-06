@@ -119,8 +119,8 @@ if mods["bismuth"] then
     change_setting("bismuth-reduce-pcb-solder", "Default (reccomended)")
     change_setting("bismuth-disable-bismuthinite-ore", false)
     change_setting("bismuth-disable-bismuth-as-smelting-byproduct", false)
-    change_setting("bismuth-contain-bismuth", 8129)
-    change_setting("bismuth-contain-sulfur", 1871)
+    change_setting("bismuth-contain-bismuth", 9065)
+    change_setting("bismuth-contain-sulfur", 935)
 end
 --bzcarbon
 if mods["bzcarbon"] then
