@@ -38,3 +38,8 @@ local glass = atom.util.Recipe("soda-lime-glass")
 glass.prototype.category = "smelting"
 glass.prototype.always_show_made_in = true
 glass.allowProductivity()
+
+-- Balance stainless steel
+local stainlessSteel = atom.util.Recipe("stainless-steel-plate")
+stainlessSteel.replaceIngredient("steel-plate", 7)
+stainlessSteel.replaceIngredient("chromium-plate", 2)
