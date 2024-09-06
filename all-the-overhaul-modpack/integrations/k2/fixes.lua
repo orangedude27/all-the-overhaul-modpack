@@ -47,3 +47,15 @@ atom.util.Technology("kr-military-5").replacePrerequisite("kr-lithium-sulfur-bat
 local robotBatteryTech = atom.util.Technology("kr-robot-battery")
 robotBatteryTech.addPrerequisite("production-science-pack")
 robotBatteryTech.addPrerequisite("utility-science-pack")
+
+-- Balance glass
+local glass = atom.util.Recipe("glass")
+glass.replaceIngredient("sand", "quartz")
+glass.replaceResult("glass", 7)
+
+local glassVulcanite = atom.util.Recipe("se-glass-vulcanite")
+glassVulcanite.replaceIngredient("sand", "quartz")
+glassVulcanite.replaceResult("glass", 21)
+
+local sodaLimeGlass = atom.util.Recipe("soda-lime-glass")
+sodaLimeGlass.replaceIngredient("sodium-carbonate", 5)
