@@ -4,3 +4,6 @@ areaDrill.replaceIngredient("advanced-gearbox", "elite-gearbox", 4)
 areaDrill.replaceIngredient("processing-unit", "advanced-processing-unit", 5)
 areaDrill.replaceIngredient("motorized-articulator", "advanced-machining-tool", 10)
 areaDrill.addIngredient("se-aeroframe-pole", 5)
+
+-- Balance motor
+atom.util.Recipe("motor").replaceIngredient("aluminum-plate", 2)
