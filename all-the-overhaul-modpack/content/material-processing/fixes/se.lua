@@ -6,6 +6,8 @@ atom.util.recipe.removeByName("se-copper-ingot")
 atom.util.recipe.removeByName("se-iron-ingot")
 atom.util.recipe.removeByName("rare-metals-vulcanite")
 
+atom.util.item.removeByName("se-steel-ingot")
+
 -- Allow productivity modules in se-casting-machine
 table.insert(data.raw["assembling-machine"]["se-casting-machine"].allowed_effects, "productivity")
 
