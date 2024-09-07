@@ -41,9 +41,9 @@ lab0.inputs = {
 
 local lab1 = data.raw["lab"]["lab"]
 lab1.inputs = table.deepcopy(lab0.inputs)
-table.insert(lab1.inputs, 1, "logistic-science-pack")
-table.insert(lab1.inputs, 1, "military-science-pack")
-table.insert(lab1.inputs, 1, "chemical-science-pack")
+table.insert(lab1.inputs, "logistic-science-pack")
+table.insert(lab1.inputs, "military-science-pack")
+table.insert(lab1.inputs, "chemical-science-pack")
 
 local lab2 = data.raw["lab"]["5d-lab-02"]
 lab2.inputs = table.deepcopy(lab1.inputs)
@@ -51,7 +51,7 @@ table.insert(lab2.inputs, "se-rocket-science-pack")
 table.insert(lab2.inputs, "productivity-science-pack")
 
 local lab3 = data.raw["lab"]["5d-lab-03"]
-lab3.inputs = lab2.inputs
+lab3.inputs = table.deepcopy(lab2.inputs)
 
 local lab4 = data.raw["lab"]["biusart-lab"]
 lab4.inputs = table.deepcopy(lab3.inputs)

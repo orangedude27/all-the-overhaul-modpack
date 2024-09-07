@@ -14,22 +14,14 @@ local spaceCollisionMask = {
 data.raw["lab"]["burner-lab"].researching_speed = 0.75
 
 local entity1 = data.raw["lab"]["lab"]
-entity1.inputs = table.deepcopy(data.raw.lab["5d-lab-02"].inputs)
-table.insert(entity1.inputs, 1, "basic-tech-card")
 entity1.researching_speed = 1
 entity1.module_specification.module_slots = 1
 
 local entity2 = data.raw["lab"]["5d-lab-02"]
-table.insert(entity2.inputs, 1, "basic-tech-card")
-table.insert(entity2.inputs, "se-rocket-science-pack")
-table.insert(entity2.inputs, "productivity-science-pack")
 entity2.researching_speed = 1.5
 entity2.module_specification.module_slots = 2
 
 local entity3 = data.raw["lab"]["5d-lab-03"]
-table.insert(entity3.inputs, 1, "basic-tech-card")
-table.insert(entity3.inputs, "se-rocket-science-pack")
-table.insert(entity3.inputs, "productivity-science-pack")
 entity3.researching_speed = 2
 entity3.module_specification.module_slots = 3
 entity3.next_upgrade = nil
@@ -41,20 +33,14 @@ entity4.module_specification.module_slots = 4
 local entity5 = data.raw["lab"]["se-space-science-lab"]
 entity5.researching_speed = 5
 entity5.module_specification.module_slots = 5
-table.insert(entity5.inputs, "fusion-science-pack-1")
-table.insert(entity5.inputs, "fusion-science-pack-2")
-table.insert(entity5.inputs, "fusion-science-pack-3")
-table.insert(entity5.inputs, "fusion-science-pack-4")
 
 local entity6 = data.raw["lab"]["kr-singularity-lab"]
 entity6.researching_speed = 10
 entity6.module_specification.module_slots = 6
-entity6.inputs = table.deepcopy(entity5.inputs)
 
 local entity7 = data.raw["lab"]["fu_lab_entity"]
 entity7.researching_speed = 20
 entity7.module_specification.module_slots = 8
-entity7.inputs = table.deepcopy(entity6.inputs)
 entity7.se_allow_in_space = true
 entity7.collision_mask = data.raw["lab"]["se-space-science-lab"].collision_mask
 
