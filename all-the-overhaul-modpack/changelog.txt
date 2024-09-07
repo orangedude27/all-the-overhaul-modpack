@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.24
+Date: 9.7.2024
+  Breaking Changes:
+    - Re-balance labs and remove 5Dim's labs mk4-10
+    - Balance steel plates and remove crushed manganese (10 iron, 3 graphite, 3 coke, 2 quicklime and 1 manganese to 6 steel; was 10 iron, 4 graphite, 3 coke, 1 quicklime and 1 crushed manganese to 5 steel)
+    - Glass now uses quartz instead of sand and the resulting amount of glass is reduced to 7 (was 8)
+  Changes:
+    - Remove unused steel ingot
+    - Balance stainless steel (replaced 1 steel with 1 additional chromium)
+    - The amount of sulfur from bismuth is halved
+    - The amount of sodium carbonate in soda lime glass is halved
+    - Single-cylinder engine now uses 2 aluminum (was 1)
+  Bug Fixes:
+    - Next upgrade of assembler mk3 is now assembler mk4 (was nuclear assembler)
+---------------------------------------------------------------------------------------------------
 Version: 1.8.23
 Date: 9.2.2024
   Bug Fixes:
