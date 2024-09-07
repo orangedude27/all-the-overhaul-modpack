@@ -2,28 +2,30 @@
 Version: 1.8.23
 Date: 9.2.2024
   Bug Fixes:
-    - Fix compatibility with "Quallity of life by morality"
+    - Fix compatibility with "Quality of life by morality"
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.22
 Date: 9.1.2024
+  Breaking Changes:
+    - Alternative glass recipe uses smelters and allows productivity
   Bug Fixes:
     - Fix crash for when the mod Dredgeworks is not active
-  Changes:
-    - Alternative glass recipe uses smelters and allows productivity (breaking change!)
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.21
 Date: 8.31.2024
-  Bug Fixes:
-    - Remove molten cobalt that is not from the ATOM material processing
+  Mod Changes:
+    - Dredgeworks added as optional dependency
   Changes:
     - Add Thorium landfill: https://discord.com/channels/1174743568590590053/1276579574242611281
     - Dredgeworks compatibility: Add Seafloor Drills mk2 and mk3
     - Trains overhaul: Go back to at least 2 fuel slots for trains
+  Bug Fixes:
+    - Remove molten cobalt that is not from the ATOM material processing
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.20
 Date: 8.22.2024
-  Bug Fixes:
-    - Fixed some locales and cleanup of unused fluids
+  Mod Changes:
+    - SE Space Trains is now optional
   Changes:
     - Trains overhaul:
       Trains now have a reworked progression
@@ -31,6 +33,8 @@ Date: 8.22.2024
       Space Trains are now optional and can be removed since they only provide aesthetics
       Otherwise Space Trains are similar to Nuclear Locomotive with Black wagons
       Progression comes from locomotives and better fuels they support
+  Bug Fixes:
+    - Fixed some locales and cleanup of unused fluids
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.19
 Date: 8.18.2024
@@ -41,41 +45,41 @@ Date: 8.18.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.18
 Date: 8.11.2024
-  Bug Fixes:
-    - Fix and balance nuclear assembling machine (it now competes with assembler mk3)
-    - Remove unused organic plastic technology: https://discord.com/channels/1174743568590590053/1262609043386536017
   Changes:
     - Balance LDS recipe with Chromel-R: https://discord.com/channels/1174743568590590053/1262551739538604082
     - Chromel-R fabric uses twice as much chromium
+  Bug Fixes:
+    - Fix and balance nuclear assembling machine (it now competes with assembler mk3)
+    - Remove unused organic plastic technology: https://discord.com/channels/1174743568590590053/1262609043386536017
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.17
 Date: 7.6.2024
-  Bug Fixes:
-    - Improve prerequisites of some technologies
   Changes:
     - Rename gold powder to enriched gold
     - Remove iron and airtight seal from solid rocket fuel recipes to be consistent with other recipes and other fuels
     - Add silver landfill
     - Balance solder
+  Bug Fixes:
+    - Improve prerequisites of some technologies
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.16
 Date: 6.17.2024
-  Bug Fixes:
-    - Cleanup unused recipes
-    - Improve prerequisites of some technologies
   Changes:
     - Laser mill: Add additional pipe connection for second fluid input
     - Use catalyst mechanic for dirty water
     - Rename "productivity science pack" to "Productivity tech card"
+  Bug Fixes:
+    - Cleanup unused recipes
+    - Improve prerequisites of some technologies
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.15
 Date: 6.13.2024
-  Bug Fixes:
-    - Remove hydrofluoric acid and replace it with acidic water in remaining recipes: https://discord.com/channels/1174743568590590053/1247275038881615882
   Changes:
     - Balance solar panels and solar productivity: https://discord.com/channels/1174743568590590053/1233085579101737151
     - Use purple tech cards more: https://discord.com/channels/1174743568590590053/1242953953822642216
     - Allow aluminum cable in electronics assemblers: https://discord.com/channels/1174743568590590053/1243594844819947611
+  Bug Fixes:
+    - Remove hydrofluoric acid and replace it with acidic water in remaining recipes: https://discord.com/channels/1174743568590590053/1247275038881615882
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.14
 Date: 6.5.2024
@@ -84,23 +88,24 @@ Date: 6.5.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.13
 Date: 6.4.2024
+  Breaking Changes:
+    - Added additional fluid input to the lasing mill and reverted change to red circuit's ingredient list (added helium back to it): https://discord.com/channels/1174743568590590053/1246464505136021564
+  Changes:
+    - Fixed some sorting issues with the gates / walls
   Bug Fixes:
     - Fixed the signal wires' sorting locations: https://discord.com/channels/1174743568590590053/1245361274926268456
     - Fixed some Research Pre-requisites: https://discord.com/channels/1174743568590590053/1244061704049000468
     - Replaced the 248k reactor with the vanilla reactor for some recipes: https://discord.com/channels/1174743568590590053/1245094441438548018
-  Changes:
-    - Added additional fluid input to the lasing mill and reverted change to red circuit's ingredient list (added helium back to it) BREAKING CHANGE! https://discord.com/channels/1174743568590590053/1246464505136021564
-    - Fixed some sorting issues with the gates / walls
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.12
 Date: 5.28.2024
-  Bug Fixes:
-    - Replace wooden rails with normal rails in all recipes: https://discord.com/channels/1174743568590590053/1241445391963132005
   Changes:
     - Set diesel train sounds to vanilla locomotive because the diesel train sounds are annoying
     - Refactoring of Pipes and Bio Indistires code
     - Refactored Repair packs to make them more useful
     - balancing to the delivery cannon capsule
+  Bug Fixes:
+    - Replace wooden rails with normal rails in all recipes: https://discord.com/channels/1174743568590590053/1241445391963132005
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.11
 Date: 5.1.2024
@@ -114,6 +119,8 @@ Date: 5.1.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.10
 Date: 4.12.2024
+  Changes:
+    - Remove healing capsule when playing with mod Rampant Arsenal: https://discord.com/channels/1174743568590590053/1220624844220141630
   Bug Fixes:
     - Fix error with big power poles patched: https://discord.com/channels/1174743568590590053/1227668649419083777
     - Fix errors in menu simulations
@@ -121,8 +128,6 @@ Date: 4.12.2024
     - Fix handcrafting wooden pipe to ground: https://discord.com/channels/1174743568590590053/1219277139975737354
     - Fix electrolysis plant and filtration plant mk 1 converts to mk2 on pickup: https://discord.com/channels/1174743568590590053/1228186769967546429
     - Fix error with mod Ghost on water: https://discord.com/channels/1174743568590590053/1228335795262459936
-  Changes:
-    - Remove healing capsule when playing with mod Rampant Arsenal: https://discord.com/channels/1174743568590590053/1220624844220141630
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.9
 Date: 4.10.2024
@@ -131,15 +136,15 @@ Date: 4.10.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.8
 Date: 4.10.2024
+  Changes:
+    - Blank tech card recipe with silver is nerfed to better align it with the regular recipe (result count is reduced from 10 to 5)
+    - New balancing of core fragment processing results: https://discord.com/channels/1174743568590590053/1204040791916421181
+    - Nuclear energy is rebalanced now starting with productivity science
   Bug Fixes:
     - Fix imersium wall being available at the start
     - Add missing recipes and technology prerequisites: https://discord.com/channels/1174743568590590053/1223300008653361244
     - Fix fuel categories for bio boiler and burner generator
     - Remove empty technology "Rich water filtration"
-  Changes:
-    - Blank tech card recipe with silver is nerfed to better align it with the regular recipe (result count is reduced from 10 to 5)
-    - New balancing of core fragment processing results: https://discord.com/channels/1174743568590590053/1204040791916421181
-    - Nuclear energy is rebalanced now starting with productivity science
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.7
 Date: 3.13.2024
@@ -149,24 +154,29 @@ Date: 3.13.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.6
 Date: 3.11.2024
-  Bug Fixes:
-    - Fixed mod update breaking pipes: https://discord.com/channels/1174743568590590053/1216725481416822784
-    - Fixed issue where pipes can be placed on water/space platform
+  Mod Changes:
+    - Wire Shortcuts is now optional
   Changes:
     - Merged Lithium technologies: https://discord.com/channels/1174743568590590053/1174903449155010580/1216267818010673202
     - Balance dirty water treatment: https://discord.com/channels/1174743568590590053/1215242462881390634
     - Imersium refactor
     - Biomatter Refactor
+  Bug Fixes:
+    - Fixed mod update breaking pipes: https://discord.com/channels/1174743568590590053/1216725481416822784
+    - Fixed issue where pipes can be placed on water/space platform
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.5
 Date: 3.10.2024
-  Bug Fixes:
-    - Remove empty technologies: https://discord.com/channels/1174743568590590053/1215242462881390634
-    - Material processing: Restrict certain code to the data phase: https://discord.com/channels/1174743568590590053/1215557790249127966
+  Mod Changes:
+    - 5Dim's ores is now incompatible
+    - 5Dim's modules is now incompatible
   Changes:
     - Added NeoDymium Processing Line
     - Made Tweaks / Fixes to Zirconium
     - Internal Mod restructuring
+  Bug Fixes:
+    - Remove empty technologies: https://discord.com/channels/1174743568590590053/1215242462881390634
+    - Material processing: Restrict certain code to the data phase: https://discord.com/channels/1174743568590590053/1215557790249127966
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.4
 Date: 3.7.2024
@@ -196,7 +206,7 @@ Date: 3.5.2024
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.0
 Date: 3.4.2024
-  Changes:
+  Breaking Changes:
     - Ore prosessing got an entire rework and redesign. (Thanks @cacklingfiend for helping drive this home!)
     - 6 New Tiers of Ore processing, balanced for early and late game production. (Thanks @cacklingfiend for helping drive this home!)
     - New icons for all metals, and intermediate processes, (Thanks @blackatm)
