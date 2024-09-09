@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.26
+Date: 9.9.2024
+  Changes:
+    - Add recipe for potassium nitrate with sand
+  Bug Fixes:
+    - Add glass recipe with sand again because quartz needs glass to get started
+---------------------------------------------------------------------------------------------------
 Version: 1.8.25
 Date: 9.8.2024
   Bug Fixes:
