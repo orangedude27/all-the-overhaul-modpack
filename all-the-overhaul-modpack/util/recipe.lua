@@ -327,5 +327,45 @@ function atom.util.Recipe(value)
             end
             table.insert(technology.effects, { type = "unlock-recipe", recipe = recipe.name })
         end,
+
+        -- Adds an icon to the recipe, replacing any existing icons.
+        -- @param icon IconData The icon to add
+        setIcon = function(icon)
+            local usesDifficulty = recipe.normal and recipe.normal.icons or recipe.expensive and recipe.expensive.icons
+            if (usesDifficulty) then
+                if (recipe.normal) then
+                    recipe.normal.icons = { icon }
+                end
+                if (recipe.expensive) then
+                    recipe.expensive.icons = { icon }
+                end
+            else
+                recipe.icons = { icon }
+            end
+        end,
+
+        -- Adds a small version of given icon to the recipe. Uses atom.util.icon.createSmallIcon.
+        -- @param icon IconData The icon to create a small version of
+        -- @param position string The position of the small icon. Allowed values: "top-left", "top-right", "bottom-left", "bottom-right". Defaults to "top-left".
+        addSmallIcon = function(icon, position)
+            local smallIcon = atom.util.icon.createSmallIcon(icon, position)
+            local function addIcon(_table)
+                if (_table.icons) then
+                    table.insert(_table.icons, smallIcon)
+                elseif (_table.icon) then
+                    _table.icons = {
+                        { icon = _table.icon, icon_size = _table.icon_size, icon_mipmaps = _table.icon_mipmaps },
+                        smallIcon
+                    }
+                end
+            end
+            addIcon(recipe)
+            if (recipe.normal) then
+                addIcon(recipe.normal)
+            end
+            if (recipe.expensive) then
+                addIcon(recipe.expensive)
+            end
+        end
     }
 end
