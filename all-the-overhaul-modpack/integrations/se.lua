@@ -85,4 +85,5 @@ end
 -- Balance glass
 local glassVulcanite = atom.util.Recipe("se-glass-vulcanite")
 glassVulcanite.replaceIngredient("sand", "quartz")
+glassVulcanite.replaceIngredient("se-pyroflux", 1)
 glassVulcanite.replaceResult("glass", 21)
