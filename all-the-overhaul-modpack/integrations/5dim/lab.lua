@@ -1,15 +1,5 @@
 local util = require("_data-util")
 
-local spaceCollisionMask = {
-    "water-tile",
-    "ground-tile",
-    "item-layer",
-    "object-layer",
-    "player-layer",
-    spaceship_collision_layer -- not spaceship
-}
-
-
 -- Entities
 data.raw["lab"]["burner-lab"].researching_speed = 0.75
 
