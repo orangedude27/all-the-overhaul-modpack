@@ -1,3 +1,15 @@
+-- Undo shitty ingredient multiplication
+local update = {
+    "wood", "bi-woodpulp",
+    "bi-seed", "seedling", "water",
+}
+for _, recipe in pairs(data.raw.recipe) do
+    if recipe.mod == "Bio_Industries" then
+        krastorio.recipes.multiplyIngredients(recipe.name, update, 0.25)
+        krastorio.recipes.multiplyProducts(recipe.name, update, 0.25)
+    end
+end
+
 -- Disable wooden rails and rail conversions
 atom.util.recipe.replaceIngredient("bi-rail-wood", "rail")
 atom.util.recipe.removeByName("bi-rail-wood")
