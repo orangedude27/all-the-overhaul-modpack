@@ -1,4 +1,4 @@
-if (mods["dredgeworks"]) then
+if mods["dredgeworks"] then
     function createSmallItemIcon()
         return atom.util.icon.createSmallIcon({ icon = "__base__/graphics/icons/fluid/water.png", icon_size = 64, icon_mipmaps = 4 }, "bottom-left")
     end
