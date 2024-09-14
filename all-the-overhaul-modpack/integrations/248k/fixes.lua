@@ -180,3 +180,9 @@ local nuclearAssembler = data.raw["assembling-machine"]["fi_crafter_entity"]
 nuclearAssembler.module_specification.module_slots = 5
 nuclearAssembler.energy_source.fuel_inventory_size = 1
 nuclearAssembler.energy_source.burnt_inventory_size = 1
+
+-- Reduce energy usage of advanced roboport to sane values
+data.raw["roboport"]["fi_robo_port_entity"].energy_usage = "200KW"
+data.raw["roboport"]["fi_robo_port_entity"].energy_source.input_flow_limit = "8MW"
+data.raw["roboport"]["fi_robo_charger_entity"].energy_usage = "100KW"
+data.raw["roboport"]["fi_robo_charger_entity"].energy_source.input_flow_limit = "8MW"
