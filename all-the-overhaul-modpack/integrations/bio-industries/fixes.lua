@@ -39,3 +39,5 @@ bioGarden.module_specification.module_info_icon_shift = {
 
 -- Remove unused organic plastic technology
 data.raw.technology["bi-tech-organic-plastic"] = nil
+
+require("turret")
