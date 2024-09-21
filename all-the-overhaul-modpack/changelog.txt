@@ -17,7 +17,6 @@ Date: 9.21.2024
     - Reduce amount of Pyroflux used by glass recipe
     - Reduce energy usage of advanced roboport to sane values
     - Reduce wood usage in recipes from Bio Industries (it multiplies everything by 4 when K2 is active)
-    - Improve integration of mod
     - There is now a startup setting to remove the laser artillery from K2 in order to gain up to 10 UPS back
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.26
