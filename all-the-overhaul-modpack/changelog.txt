@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.27
+Date: 9.21.2024
+  Mod Changes:
+    - Underwater pipes added as optional dependency and added some tweaks
+  Breaking Changes:
+    - Turret overhaul
+      - Dart turrets are now actually useful
+      - Turrets from 5Dim's now have 3 to 5 tiers instead of 10
+      - Small and big turrets have been removed and migrated to normal turrets
+      - Sniper turrets have been migrated to normal turrets and are now actual sniper turrets, so you need to re-add sniper turrets
+      - Turrets are now balanced to handle >90% evolution with vanilla biters when you reach space
+      - Existing turret production will break
+      - "Physical projectile damage" technology now applies to all ammo including dart ammo
+      - Please give us feedback about the balancing of turret and damage progression on our Discord server
+  Changes:
+    - Reduce amount of Pyroflux used by glass recipe
+    - Reduce energy usage of advanced roboport to sane values
+    - Reduce wood usage in recipes from Bio Industries (it multiplies everything by 4 when K2 is active)
+    - Improve integration of mod
+    - There is now a startup setting to remove the laser artillery from K2 in order to gain up to 10 UPS back
+---------------------------------------------------------------------------------------------------
 Version: 1.8.26
 Date: 9.9.2024
   Changes:
