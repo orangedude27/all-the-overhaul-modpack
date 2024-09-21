@@ -1,7 +1,7 @@
 -- Entities
 
 local turret = data.raw["ammo-turret"]["bi-dart-turret"]
-turret.attack_parameters.cooldown = 5
+turret.attack_parameters.cooldown = 7.5
 turret.attack_parameters.range = 15
 
 local ammo1 = data.raw["ammo"]["bi-dart-magazine-basic"]
@@ -74,3 +74,12 @@ local tech3 = {
     order = "a-d-a"
 }
 data:extend({ tech3 })
+
+-- Damage upgrade count for dart ammo (was removed by SE)
+local turretDamageBonus = { 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.3, 0.4, 0.4, 0.4, 0.4, 0.5, 0.5, 0.5, 0.5, 0.6, 0.6 }
+for i = 1, 18 do
+    table.insert(
+            data.raw.technology["physical-projectile-damage-" .. i].effects,
+            { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = turretDamageBonus[i] }
+    )
+end

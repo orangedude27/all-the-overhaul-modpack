@@ -87,3 +87,17 @@ local glassVulcanite = atom.util.Recipe("se-glass-vulcanite")
 glassVulcanite.replaceIngredient("sand", "quartz")
 glassVulcanite.replaceIngredient("se-pyroflux", 1)
 glassVulcanite.replaceResult("glass", 21)
+
+-- Fix modifiers for "physical projectile damage" that SE overrides
+local turretDamageBonus = { 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.3, 0.4, 0.4, 0.4, 0.4, 0.5, 0.5, 0.5, 0.5, 0.6, 0.6 }
+for i = 1, 18 do
+    local tech = data.raw.technology["physical-projectile-damage-" .. i]
+    for j, effect in pairs(tech.effects) do
+        if (effect.turret_id) then
+            tech.effects[j] = nil
+        end
+        if (effect.ammo_category) then
+            effect.modifier = turretDamageBonus[i]
+        end
+    end
+end

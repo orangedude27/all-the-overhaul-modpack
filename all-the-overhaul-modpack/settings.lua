@@ -19,5 +19,12 @@ data:extend({
         setting_type = "startup",
         default_value = true,
         order = "aac"
+    },
+    {
+        type = "bool-setting",
+        name = "atom-disable-laser-artillery",
+        setting_type = "startup",
+        default_value = false,
+        order = "aad"
     }
 })

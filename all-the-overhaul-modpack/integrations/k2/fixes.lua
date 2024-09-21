@@ -65,3 +65,41 @@ glassQuartz.addSmallIcon({ icon = "__Krastorio2Assets__/icons/items-with-variati
 glassQuartz.allowProductivity()
 glassQuartz.unlockedByTechnology("silica-processing")
 glassQuartz.apply()
+
+-- Balance turrets
+local railgunEntity = data.raw["ammo-turret"]["kr-railgun-turret"]
+railgunEntity.attack_parameters.min_range = 25
+railgunEntity.attack_parameters.range = 75
+railgunEntity.attack_parameters.cooldown = 90
+
+-- Balance ammo
+local imersiteAmmo = atom.util.Recipe("imersite-rifle-magazine")
+imersiteAmmo.replaceIngredient("imersite-crystal", 1)
+imersiteAmmo.addIngredient("invar-plate", 1)
+imersiteAmmo.addIngredient("tungsten-plate", 1)
+
+local imersiteAMRAmmo = atom.util.Recipe("imersite-anti-material-rifle-magazine")
+imersiteAMRAmmo.replaceIngredient("imersite-crystal", 1)
+imersiteAMRAmmo.addIngredient("invar-plate", 2)
+imersiteAMRAmmo.addIngredient("tungsten-plate", 2)
+
+local railgunAmmo = atom.util.Recipe("basic-railgun-shell")
+railgunAmmo.replaceResult("basic-railgun-shell", 2)
+
+local explosiveRailgunAmmo = atom.util.Recipe("explosion-railgun-shell")
+explosiveRailgunAmmo.replaceIngredient("basic-railgun-shell", 2)
+explosiveRailgunAmmo.replaceResult("explosion-railgun-shell", 2)
+
+-- Remove laser artillery. See setting description for an explanation.
+if settings.startup["atom-disable-laser-artillery"].value then
+    local nameArtillery = "kr-laser-artillery-turret"
+    atom.util.item.removeByName(nameArtillery)
+    data.raw["electric-turret"][nameArtillery] = nil
+    data.raw.technology[nameArtillery] = nil
+
+    local nameAntimatterAmmo = "kr-antimatter-ammo"
+    atom.util.item.removeByName(nameAntimatterAmmo)
+    data.raw.technology[nameAntimatterAmmo] = nil
+
+    data.raw["research-achievement"]["destroyer-of-worlds"] = nil
+end
