@@ -14,7 +14,7 @@ function createAlloy(mainMetal, secondaryMetal)
             atom.util.icon.createSmallIcon(secondaryMetal.icons.ingot, "top-right")
         },
         category = "el_arc_furnace_category",
-        energy_required = 6.4,
+        energy_required = 16,
         ingredients = {
             { name = mainMetal.itemNames.ingot, amount = 4 },
             { name = secondaryMetal.itemNames.ingot, amount = 1 },
