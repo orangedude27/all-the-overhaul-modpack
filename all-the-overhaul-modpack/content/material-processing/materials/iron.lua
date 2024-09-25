@@ -33,31 +33,3 @@ atom.processing.util.createDefaultData(config)
 atom.processing.util.finalizeConfig(config)
 
 atom.processing.materials.iron = config
-
---[[
-local manganeseRecipe = ingotToMoltenRecipe(config)
-manganeseRecipe.name = "atom-iron-molten-manganese"
-table.insert(manganeseRecipe.ingredients, { name = "manganese-ingot", amount = 4 })
-table.insert(manganeseRecipe.ingredients, { type = "fluid", name = "se-pyroflux", amount = 10 })
-manganeseRecipe.results[1].amount = 800
-
-local cobaltNickelRecipe = ingotToMoltenRecipe(config)
-cobaltNickelRecipe.name = "atom-iron-molten-cobalt-nickel"
-table.insert(cobaltNickelRecipe.ingredients, { name = "cobalt-ingot", amount = 4 })
-table.insert(cobaltNickelRecipe.ingredients, { name = "nickel-ingot", amount = 4 })
-table.insert(cobaltNickelRecipe.ingredients, { type = "fluid", name = "se-pyroflux", amount = 20 })
-cobaltNickelRecipe.results[1].amount = 1200
-
-local chromiumNickelRecipe = ingotToMoltenRecipe(config)
-chromiumNickelRecipe.name = "atom-iron-molten-chromium-nickel"
-table.insert(chromiumNickelRecipe.ingredients, { name = "chromium-ingot", amount = 4 })
-table.insert(chromiumNickelRecipe.ingredients, { name = "nickel-ingot", amount = 4 })
-table.insert(chromiumNickelRecipe.ingredients, { type = "fluid", name = "se-pyroflux", amount = 20 })
-chromiumNickelRecipe.results[1].amount = 1200
-
-data:extend({
-    manganeseRecipe,
-    cobaltNickelRecipe,
-    chromiumNickelRecipe
-})
-]]--
