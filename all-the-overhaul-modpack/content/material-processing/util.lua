@@ -158,6 +158,7 @@ processing.setItemIcons = function(config)
                 item.icon = icon.icon
                 item.icon_size = icon.icon_size
                 item.icon_mipmaps = icon.icon_mipmaps
+                item.icons = nil
             else
                 item.icons = { config.icons[type] }
             end
