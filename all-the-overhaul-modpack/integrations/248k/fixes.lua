@@ -33,12 +33,6 @@ data.raw.technology["fu_lead_ingot_tech"] = nil
 data.raw.technology["fu_titan_ingot_tech"] = nil
 data.raw.technology["fu_neodym_ingot_tech"] = nil
 
--- Replace dust from 248k with ATOM dust
-atom.util.recipe.replaceIngredient("fi_crushed_coal_item", "atom-coal-dust")
-atom.util.recipe.replaceResult("fi_crushed_coal_item", "atom-coal-dust")
-atom.util.recipe.replaceIngredient("fi_crushed_stone_item", "atom-stone-dust")
-atom.util.recipe.replaceResult("fi_crushed_stone_item", "atom-stone-dust")
-
 -- Fix stone to energy crystal recipe to get energy crystal production starting
 local fi_purify_stone_recipe = atom.util.Recipe("el_purify_stone_acidic_recipe")
 fi_purify_stone_recipe.replaceResult("el_materials_pure_iron", "5d-iron-dust", 3)

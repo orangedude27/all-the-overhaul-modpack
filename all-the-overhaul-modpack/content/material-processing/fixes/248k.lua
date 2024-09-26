@@ -1,3 +1,9 @@
+-- Replace dust from 248k with ATOM dust
+atom.util.recipe.replaceIngredient("fi_crushed_coal_item", "atom-coal-dust")
+atom.util.recipe.replaceResult("fi_crushed_coal_item", "atom-coal-dust")
+atom.util.recipe.replaceIngredient("fi_crushed_stone_item", "atom-stone-dust")
+atom.util.recipe.replaceResult("fi_crushed_stone_item", "atom-stone-dust")
+
 -- Remove pure to molen/plate recipes
 local stages = { "el", "fi", "fu", "gr" }
 for _, stage in pairs(stages) do
