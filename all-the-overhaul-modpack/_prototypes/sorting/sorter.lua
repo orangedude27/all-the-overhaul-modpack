@@ -130,15 +130,13 @@ end
 
 ---Checks to see if recipe with string in name is in group and subgroup and sets if not
 local function ChangeSubgroupAndGroup()
-    if settings.startup["atom-enable-sorting"].value == true then
-        for _, recipe in pairs(data.raw.recipe) do
-            util.debuglog("PIG:recipe:" .. recipe.name)
-            --if recipe name matches what we are looking for
-            if not SortDirectly(recipe) then
-                for _, Group in pairs(GroupSortOrder) do
-                    if Sort(recipe, Group) then
-                        break
-                    end
+    for _, recipe in pairs(data.raw.recipe) do
+        util.debuglog("PIG:recipe:" .. recipe.name)
+        --if recipe name matches what we are looking for
+        if not SortDirectly(recipe) then
+            for _, Group in pairs(GroupSortOrder) do
+                if Sort(recipe, Group) then
+                    break
                 end
             end
         end
