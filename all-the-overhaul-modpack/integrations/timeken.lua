@@ -47,3 +47,6 @@ stainlessSteel.replaceIngredient("chromium-plate", 2)
 -- Balance glass
 local sodaLimeGlass = atom.util.Recipe("soda-lime-glass")
 sodaLimeGlass.replaceIngredient("sodium-carbonate", 5)
+
+-- Remove long handed inserter recycling
+atom.util.recipe.removeByName("se-recycle-long-handed-inserter")
