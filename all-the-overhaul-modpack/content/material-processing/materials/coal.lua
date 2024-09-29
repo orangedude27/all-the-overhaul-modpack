@@ -3,11 +3,9 @@ local config = atom.processing.util.prepareConfig({
     order = "m",
     itemNames = {
         ore = "coal",
-        dust = "atom-coal-dust",
-        plate = "atom-carbon"
+        dust = "atom-coal-dust"
     },
     icons = {
-        plate = { icon = "__all-the-overhaul-modpack__/graphics/icons/atom-carbon.png", icon_size = 128 },
         "dust"
     }
 })
@@ -18,20 +16,9 @@ local dust = create.item("dust")
 dust.fuel_category = "chemical"
 dust.fuel_value = "3MJ"
 
-local carbon = create.item("plate")
-carbon.name = "atom-carbon"
-carbon.fuel_category = "chemical"
-carbon.fuel_value = "3MJ"
-
-local dustToPlateRecipe = create.dustToPlateRecipe()
-dustToPlateRecipe.prototype.results[1].amount = 12
-dustToPlateRecipe.prototype.results[1].probability = 1
-
 atom.util.applyAll({
     create.oreToDustRecipe(),
-    dustToPlateRecipe,
-    dust,
-    carbon
+    dust
 })
 
 atom.processing.util.finalizeConfig(config)

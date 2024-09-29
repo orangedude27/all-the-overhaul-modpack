@@ -17,7 +17,7 @@ local config = atom.processing.util.prepareConfig({
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalIngredient = {
-        pelletsToIngot = { name = "atom-carbon", amount = 1 }
+        pelletsToIngot = { name = "graphite", amount = 1 }
     },
     additionalResults = {
         oreToPlate = {
