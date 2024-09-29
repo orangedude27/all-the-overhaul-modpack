@@ -1,4 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.29
+Date: ?
+  Mod Changes:
+    - "Fluid Must Flow" has been removed from the dependencies
+    - "Flow Control" has been removed from the dependencies
+    - "Space Exploration CME Combinator" has been removed from the dependencies
+    - "Space Exploration Recycling Extras" has been removed from the dependencies
+  Breaking Changes:
+    - Coke overhaul
+      - There are now 3 tiers for the cokery
+      - The old cokery is migrated to Cokery MK 2 because of compatibility
+      - Carbon and charcoal have been removed
+      - Breaking: Recipes using carbon now use coke instead (breaking manganese and tin setups with the pellet recipes)
+      - Breaking: The basic recipes for coke and phenol are now processed by the cokery (was furnace) and are locked behind the corresponding technology
+      - Breaking: Ash is now created in the furnace (was cokery)
+      - There is a new recipe to convert wood into coal
+      - There are new recipes for better coke production
+      - More recipes and the cokery allow productivity modules
+    - The recipe to recycle long handed inserters has been removed
+  Changes:
+    - The startup setting "Enable sorting" has been removed because the game wouldn't start with it disabled
+  Bug Fixes:
+    - Nodule scrapping now has the correct subgroup
+---------------------------------------------------------------------------------------------------
 Version: 1.8.28
 Date: 9.26.2024
   Changes:

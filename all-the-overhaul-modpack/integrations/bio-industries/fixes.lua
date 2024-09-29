@@ -1,4 +1,5 @@
 -- Undo shitty ingredient multiplication
+-- Don't put anything wood related above this code
 local update = {
     "wood", "bi-woodpulp",
     "bi-seed", "seedling", "water",
@@ -9,6 +10,9 @@ for _, recipe in pairs(data.raw.recipe) do
         krastorio.recipes.multiplyProducts(recipe.name, update, 0.25)
     end
 end
+
+require("turret")
+require("cokery-fixes")
 
 -- Disable wooden rails and rail conversions
 atom.util.recipe.replaceIngredient("bi-rail-wood", "rail")
@@ -39,5 +43,3 @@ bioGarden.module_specification.module_info_icon_shift = {
 
 -- Remove unused organic plastic technology
 data.raw.technology["bi-tech-organic-plastic"] = nil
-
-require("turret")

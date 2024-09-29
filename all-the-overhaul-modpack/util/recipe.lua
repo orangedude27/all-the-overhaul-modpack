@@ -366,6 +366,12 @@ function atom.util.Recipe(value)
             if (recipe.expensive) then
                 addIcon(recipe.expensive)
             end
+        end,
+
+        clone = function(name)
+            local clone = table.deepcopy(recipe)
+            clone.name = name
+            return atom.util.Recipe(clone)
         end
     }
 end

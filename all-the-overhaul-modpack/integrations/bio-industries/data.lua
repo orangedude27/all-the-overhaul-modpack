@@ -1,4 +1,5 @@
 require("modules")
+require("cokery")
 
 -- Clean Air 0
 local cleanAir0 = atom.util.Recipe({
