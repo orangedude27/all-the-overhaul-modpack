@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.29
-Date: ?
+Date: 10.1.2024
   Mod Changes:
     - "Fluid Must Flow" has been removed from the dependencies
     - "Flow Control" has been removed from the dependencies
@@ -11,7 +11,7 @@ Date: ?
       - There are now 3 tiers for the cokery
       - The old cokery is migrated to Cokery MK 2 because of compatibility
       - Carbon and charcoal have been removed
-      - Breaking: Recipes using carbon now use coke instead (breaking manganese and tin setups with the pellet recipes)
+      - Breaking: Recipes using carbon now use coke instead (breaking manganese and tin setups)
       - Breaking: The basic recipes for coke and phenol are now processed by the cokery (was furnace) and are locked behind the corresponding technology
       - Breaking: Ash is now created in the furnace (was cokery)
       - There is a new recipe to convert wood into coal
