@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.30
+Date: 10.2.2024
+  Changes:
+    - Increase copper from core mining from 4 to 5: https://discord.com/channels/1174743568590590053/1280816980764393473
+  Bug Fixes:
+    - Fix crash when "Enable waste treatment" from BrimStuff is enabled: https://discord.com/channels/1174743568590590053/1290871879065800795
+---------------------------------------------------------------------------------------------------
 Version: 1.8.29
 Date: 10.1.2024
   Mod Changes:
