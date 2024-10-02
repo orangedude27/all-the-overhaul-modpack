@@ -21,9 +21,9 @@ motorRecipe.expensive.results[1].amount = 1
 -- Results per 20 core fragments
 data.raw.recipe["se-core-fragment-omni"].results = {
     -- High yield
+    { amount = 5, name = "copper-ore" },
     { amount = 4, name = "stone" },
     { amount = 4, name = "iron-ore" },
-    { amount = 4, name = "copper-ore" },
     { amount = 4, name = "tin-ore" },
     { amount = 4, name = "lead-ore" },
     { amount = 4, name = "flake-graphite" },
