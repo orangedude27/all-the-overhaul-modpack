@@ -1022,7 +1022,6 @@ SortDirectTable = {
     ["se-core-miner"] = { name = "drill", order = "[z]" },
     ["fuel-processor"] = { name = "furnace", order = "[z]" },
     ["se-space-hypercooler"] = { name = "radiator", order = "[a]" },
-    ["bi-cokery"] = { name = "cokery", order = "[z]" },
     ["bi-bio-reactor"] = { name = "refinery", order = "[z]" },
     ["se-pulveriser"] = { name = "crusher", order = "[a]" },
     ["se-nexus"] = { name = "laboratory", order = "[a]" },

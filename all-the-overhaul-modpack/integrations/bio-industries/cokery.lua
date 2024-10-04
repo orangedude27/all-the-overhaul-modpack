@@ -108,6 +108,7 @@ recipe1.prototype.localised_name = nil
 recipe1.prototype.localised_description = nil
 recipe1.prototype.icons = entity1.icons
 recipe1.prototype.subgroup = "cokery"
+recipe1.prototype.order = "[z]"
 recipe1.replaceIngredient("steel-plate", "iron-beam", 10, 12)
 recipe1.addIngredient("stone-brick", 10, 12)
 
