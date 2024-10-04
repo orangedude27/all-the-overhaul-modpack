@@ -399,6 +399,7 @@ if mods["Load-Furn-2"] then
 end
 if mods["BrimStuff"] then
     change_setting("brimstuff-greenhouse", false)
+    change_setting("brimstuff-waste-treatment", false, false)
 end
 --5Dim's
 if mods["OD27_5dim_resources"] then
