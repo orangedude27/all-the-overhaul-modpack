@@ -25,7 +25,10 @@ data.raw.recipe["synthetic-graphite"].energy_required = 24
 
 
 -- Adjust technologies
-atom.util.Technology("foundry").removeRecipe("coke")
+local foundryTech = atom.util.Technology("foundry")
+if (foundryTech) then
+    foundryTech.removeRecipe("coke")
+end
 
 local steelTech = atom.util.Technology("steel-processing")
 steelTech.replacePrerequisite("automation-science-pack", "cokery-1")
