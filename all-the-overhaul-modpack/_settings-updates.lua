@@ -402,6 +402,7 @@ if mods["BrimStuff"] then
     change_setting("brimstuff-waste-treatment", false, false)
     change_setting("brimstuff-krastorio-filter-hell", false)
     change_setting("brimstuff-toluene-from-coke", false)
+    change_setting("brimstuff-clobber-bz-chemical-plant", false, false)
 end
 --5Dim's
 if mods["OD27_5dim_resources"] then
