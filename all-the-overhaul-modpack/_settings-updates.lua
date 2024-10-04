@@ -400,6 +400,7 @@ end
 if mods["BrimStuff"] then
     change_setting("brimstuff-greenhouse", false)
     change_setting("brimstuff-waste-treatment", false, false)
+    change_setting("brimstuff-krastorio-filter-hell", false)
 end
 --5Dim's
 if mods["OD27_5dim_resources"] then
