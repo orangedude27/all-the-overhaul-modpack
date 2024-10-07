@@ -174,5 +174,33 @@ function atom.util.Technology(value)
                 end
             end
         end,
+
+        -- Adds a small version of given icon to the technology. Uses atom.util.icon.createSmallTechIcon.
+        -- @param icon IconData The icon to create a small version of
+        -- @param position string The position of the small icon. Allowed values: "top-left", "top-right", "bottom-left", "bottom-right". Defaults to "top-left".
+        createSmallIcon = function(icon, position)
+            local smallIcon = atom.util.icon.createSmallTechIcon(icon, position)
+            if (technology.icons) then
+                table.insert(technology.icons, smallIcon)
+            elseif (technology.icon) then
+                technology.icons = {
+                    { icon = technology.icon, icon_size = technology.icon_size, icon_mipmaps = technology.icon_mipmaps },
+                    smallIcon
+                }
+            end
+        end,
+
+        -- Clones the technology
+        -- @param name string The name of the new technology
+        -- @param clear? boolean If true, removes all effects and prerequisites from the technology (default false)
+        clone = function(name, clear)
+            local clone = table.deepcopy(technology)
+            clone.name = name
+            if (clear) then
+                clone.prerequisites = {}
+                clone.effects = {}
+            end
+            return atom.util.Technology(clone)
+        end
     }
 end
