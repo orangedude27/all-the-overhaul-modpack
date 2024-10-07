@@ -51,6 +51,7 @@ entity1.ingredient_count = nil
 local entity2 = table.deepcopy(entity1)
 entity2.icons[1].icon = "__all-the-overhaul-modpack__/graphics/icons/cokery-2.png"
 entity2.animation.layers[2].tint = { r = 0.82, g = 0.08, b = 0, a = 1 }
+entity2.minable.result = "bi-cokery-2"
 table.insert(entity2.allowed_effects, "productivity")
 table.assign(entity2, {
     name = "bi-cokery-2",
@@ -75,6 +76,7 @@ entity3.animation.layers[2].tint = { r = 0, g = 0.57, b = 0.74, a = 1 }
 entity3.next_upgrade = nil
 entity3.module_specification.module_slots = 4
 entity3.energy_source.emissions_per_minute = 20
+entity3.minable.result = "bi-cokery-3"
 table.assign(entity3, {
     name = "bi-cokery-3",
     crafting_speed = 4,
