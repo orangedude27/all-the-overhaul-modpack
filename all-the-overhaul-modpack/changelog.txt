@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.32
+Date: 10.8.2024
+  Changes:
+    - Add alternative recipe for gold from copper with rare metals: https://discord.com/channels/1174743568590590053/1280816980764393473
+  Bug Fixes:
+    - Fixed vehicle roboport not allowed in wagons
+    - Fixed cokery MK2 and MK3 being mined to MK1: https://discord.com/channels/1174743568590590053/1292796481006211072
+---------------------------------------------------------------------------------------------------
 Version: 1.8.31
 Date: 10.2.2024
   Changes:
