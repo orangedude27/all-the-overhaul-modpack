@@ -13,5 +13,9 @@ require("fixes.bio")
 require("fixes.trikop")
 
 -- Remove vanilla plate recipes
-atom.util.recipe.removeByName("iron-plate")
 atom.util.recipe.removeByName("copper-plate")
+
+-- The iron plate recipe is used by a menu simulation script, so we just hide it
+local ironRecipe = data.raw.recipe["iron-plate"]
+ironRecipe.enabled = false
+ironRecipe.hidden = true
