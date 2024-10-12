@@ -17,49 +17,77 @@ motorRecipe.expensive.ingredients = {
 motorRecipe.normal.results[1].amount = 1
 motorRecipe.expensive.results[1].amount = 1
 
+-- Core fragment processing and scrap recycling use the same numbers for balancing reasons
+local function resourceYield(factor)
+    factor = factor or 1
+
+    local function f(result)
+        if (not result.amount) then
+            result.amount = 1
+        end
+        result.probability = result.probability * factor
+        if (result.probability >= 1) then
+            result.amount = math.floor(result.probability)
+            result.probability = result.probability - result.amount
+        end
+        if (result.probability <= 0) then
+            result.probability = nil
+        end
+        return result
+    end
+
+    return {
+        -- High yield
+        f({ probability = 0.25, name = "copper-ore" }),
+        f({ probability = 0.2, name = "stone" }),
+        f({ probability = 0.2, name = "iron-ore" }),
+        f({ probability = 0.2, name = "tin-ore" }),
+        f({ probability = 0.2, name = "lead-ore" }),
+        f({ probability = 0.2, name = "flake-graphite" }),
+
+        -- Medium yield
+        f({ probability = 0.1, name = "coal" }),
+        f({ probability = 0.1, name = "zircon" }),
+        f({ probability = 0.1, name = "aluminum-ore" }),
+        f({ probability = 0.1, name = "zinc-ore" }),
+        f({ probability = 0.1, name = "nickel-ore" }),
+        f({ probability = 0.1, name = "bismuth-ore" }),
+        f({ probability = 0.1, name = "tungsten-ore" }),
+
+        -- Low yield
+        f({ probability = 0.05, name = "indite-ore" }),
+        f({ probability = 0.05, name = "tantalite-ore" }),
+        f({ probability = 0.05, name = "chromite-ore" }),
+        f({ probability = 0.05, name = "manganese-ore" }),
+        f({ probability = 0.05, name = "limestone" }),
+        f({ probability = 0.05, name = "raw-rare-metals" }),
+        f({ probability = 0.05, name = "silver-ore" }),
+
+        -- Rare
+        f({ probability = 0.025, name = "uranium-ore" }),
+        f({ probability = 0.025, name = "gold-ore" }),
+        f({ probability = 0.025, name = "titanium-ore" }),
+        f({ probability = 0.025, name = "thorium-ore" }),
+        f({ probability = 0.025, name = "cobaltite-ore" }),
+
+        -- Fluids
+        f({ probability = 1.6, name = "crude-oil", type = "fluid" })
+    }
+end
+
 -- Core fragment processing
 -- Results per 20 core fragments
-data.raw.recipe["se-core-fragment-omni"].results = {
-    -- High yield
-    { amount = 5, name = "copper-ore" },
-    { amount = 4, name = "stone" },
-    { amount = 4, name = "iron-ore" },
-    { amount = 4, name = "tin-ore" },
-    { amount = 4, name = "lead-ore" },
-    { amount = 4, name = "flake-graphite" },
+data.raw.recipe["se-core-fragment-omni"].results = table.assign(
+        resourceYield(20), {
+            { amount = 16, name = "gas", type = "fluid" },
+            { amount = 12, name = "water", type = "fluid" },
+            { amount = 6, name = "mineral-water", type = "fluid" },
+            { amount = 4, name = "se-pyroflux", type = "fluid" },
+        })
 
-    -- Medium yield
-    { amount = 2, name = "coal" },
-    { amount = 2, name = "zircon" },
-    { amount = 2, name = "aluminum-ore" },
-    { amount = 2, name = "zinc-ore" },
-    { amount = 2, name = "nickel-ore" },
-    { amount = 2, name = "bismuth-ore" },
-    { amount = 2, name = "tungsten-ore" },
-
-    -- Low yield
-    { amount = 1, name = "indite-ore" },
-    { amount = 1, name = "tantalite-ore" },
-    { amount = 1, name = "chromite-ore" },
-    { amount = 1, name = "manganese-ore" },
-    { amount = 1, name = "limestone" },
-    { amount = 1, name = "raw-rare-metals" },
-    { amount = 1, name = "silver-ore" },
-
-    -- Rare
-    { probability = 0.5, amount = 1, name = "uranium-ore" },
-    { probability = 0.5, amount = 1, name = "gold-ore" },
-    { probability = 0.5, amount = 1, name = "titanium-ore" },
-    { probability = 0.5, amount = 1, name = "thorium-ore" },
-    { probability = 0.5, amount = 1, name = "cobaltite-ore" },
-
-    -- Fluids
-    { amount = 32, name = "crude-oil", type = "fluid" },
-    { amount = 16, name = "gas", type = "fluid" },
-    { amount = 12, name = "water", type = "fluid" },
-    { amount = 6, name = "mineral-water", type = "fluid" },
-    { amount = 4, name = "se-pyroflux", type = "fluid" },
-}
+-- Scrap recycling
+-- Results per 1 scrap
+data.raw.recipe["se-scrap-recycling"].results = resourceYield(0.2)
 
 -- Remove the alternative singularity card
 atom.util.recipe.removeByName("singularity-tech-card-alt")

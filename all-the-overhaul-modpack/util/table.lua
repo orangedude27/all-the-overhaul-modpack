@@ -24,4 +24,5 @@ function table.assign(target, source)
             target[k] = v
         end
     end
+    return target
 end
