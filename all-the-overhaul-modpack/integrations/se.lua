@@ -69,9 +69,6 @@ local function resourceYield(factor)
         f({ probability = 0.025, name = "titanium-ore" }),
         f({ probability = 0.025, name = "thorium-ore" }),
         f({ probability = 0.025, name = "cobaltite-ore" }),
-
-        -- Fluids
-        f({ probability = 1.6, name = "crude-oil", type = "fluid" })
     }
 end
 
@@ -79,15 +76,19 @@ end
 -- Results per 20 core fragments
 data.raw.recipe["se-core-fragment-omni"].results = table.assign(
         resourceYield(20), {
+            { amount = 32, name = "crude-oil", type = "fluid" },
             { amount = 16, name = "gas", type = "fluid" },
             { amount = 12, name = "water", type = "fluid" },
             { amount = 6, name = "mineral-water", type = "fluid" },
-            { amount = 4, name = "se-pyroflux", type = "fluid" },
+            { amount = 4, name = "se-pyroflux", type = "fluid" }
         })
 
 -- Scrap recycling
 -- Results per 1 scrap
-data.raw.recipe["se-scrap-recycling"].results = resourceYield(0.2)
+data.raw.recipe["se-scrap-recycling"].results = table.assign(
+        resourceYield(0.2), {
+            { amount = 1, probability = 0.32, name = "heavy-oil", type = "fluid" }
+        })
 
 -- Remove the alternative singularity card
 atom.util.recipe.removeByName("singularity-tech-card-alt")
