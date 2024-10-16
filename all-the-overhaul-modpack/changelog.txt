@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.33
+Date: 10.16.2024
+  Changes:
+    - Core fragment processing and scrap recycling now use the same results and numbers with a factor
+    - Add second tier for graphite processing
+  Bug Fixes:
+    - Fix a crash due to a simulation script that uses a recipe removed by ATOM
+---------------------------------------------------------------------------------------------------
 Version: 1.8.32
 Date: 10.8.2024
   Changes:
