@@ -143,6 +143,9 @@ function atom.util.Recipe(value)
     end
 
     if not recipe then
+        if recipeName == nil then
+            recipeName = "N/A"
+        end
         atom.util.log.debug("Recipe not found: " .. recipeName)
         return nil
     end
@@ -317,15 +320,17 @@ function atom.util.Recipe(value)
                 return
             end
             technology = type(technology) == "table" and technology or data.raw.technology[technology]
-            if (not technology.effects) then
-                technology.effects = {}
-            end
-            for _, effect in pairs(technology.effects) do
-                if effect.type == "unlock-recipe" and effect.recipe == recipe.name then
-                    return
+            if (technology ~= nil) then
+                if (not technology.effects) then
+                    technology.effects = {}
                 end
+                for _, effect in pairs(technology.effects) do
+                    if effect.type == "unlock-recipe" and effect.recipe == recipe.name then
+                        return
+                    end
+                end
+                table.insert(technology.effects, { type = "unlock-recipe", recipe = recipe.name })
             end
-            table.insert(technology.effects, { type = "unlock-recipe", recipe = recipe.name })
         end,
 
         -- Adds an icon to the recipe, replacing any existing icons.

@@ -39,22 +39,26 @@ dirtyWaterRecipe("dirty-water-filtration-silver", "atom-silver-dust", 0.1, "atom
 dirtyWaterRecipe("dirty-water-filtration-titanium", "titanium-dust", 0.1)
 
 -- Set subgroup for SE advanced filtration
-data.raw.recipe["se-dirty-water-filtration-holmium"].subgroup = "water"
-data.raw.recipe["se-dirty-water-filtration-iridium"].subgroup = "water"
+if mods["space-exploration"] then
+    data.raw.recipe["se-dirty-water-filtration-holmium"].subgroup = "water"
+    data.raw.recipe["se-dirty-water-filtration-iridium"].subgroup = "water"
+end
 
--- Add recipe for stone dust to dirty water
-local stoneRecipe = atom.util.Recipe(table.deepcopy(data.raw.recipe["el_purify_stone_acidic_recipe"]))
-table.assign(stoneRecipe.prototype, {
-    name = "atom-dirty-water-stone-dust",
-    ingredients = {
-        { type = "fluid", name = "water", amount = 100, catalyst_amount = 100 },
-        { type = "item", name = "atom-stone-dust", amount = 4 },
-        { type = "fluid", name = "el_acidic_water", amount = 1 }
-    },
-    results = { { type = "fluid", name = "dirty-water", amount = 100, catalyst_amount = 100 } },
-    main_product = "dirty-water",
-    icons = { { icon = data.raw.fluid["dirty-water"].icon, icon_size = data.raw.fluid["dirty-water"].icon_size } },
-    subgroup = "water"
-})
-stoneRecipe.apply()
-stoneRecipe.unlockedByTechnology("kr-enriched-ores")
+if mods["248k"] then
+    -- Add recipe for stone dust to dirty water
+    local stoneRecipe = atom.util.Recipe(table.deepcopy(data.raw.recipe["el_purify_stone_acidic_recipe"]))
+    table.assign(stoneRecipe.prototype, {
+        name = "atom-dirty-water-stone-dust",
+        ingredients = {
+            { type = "fluid", name = "water", amount = 100, catalyst_amount = 100 },
+            { type = "item", name = "atom-stone-dust", amount = 4 },
+            { type = "fluid", name = "el_acidic_water", amount = 1 }
+        },
+        results = { { type = "fluid", name = "dirty-water", amount = 100, catalyst_amount = 100 } },
+        main_product = "dirty-water",
+        icons = { { icon = data.raw.fluid["dirty-water"].icon, icon_size = data.raw.fluid["dirty-water"].icon_size } },
+        subgroup = "water"
+    })
+    stoneRecipe.apply()
+    stoneRecipe.unlockedByTechnology("kr-enriched-ores")
+end

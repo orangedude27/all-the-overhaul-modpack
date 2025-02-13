@@ -12,18 +12,20 @@ for _, technology in pairs(data.raw.technology) do
     local hasChemical = false
     local hasSpace = false
     local hasProductivity = false
-    for _, ingredient in pairs(technology.unit.ingredients) do
-        if isIngredient(ingredient, "se-rocket-science-pack") then
-            hasRocket = true
-        end
-        if isIngredient(ingredient, "chemical-science-pack") then
-            hasChemical = true
-        end
-        if isIngredient(ingredient, "space-science-pack") then
-            hasSpace = true
-        end
-        if isIngredient(ingredient, "productivity-science-pack") then
-            hasProductivity = true
+    if technology.unit then
+        for _, ingredient in pairs(technology.unit.ingredients) do
+            if isIngredient(ingredient, "se-rocket-science-pack") then
+                hasRocket = true
+            end
+            if isIngredient(ingredient, "chemical-science-pack") then
+                hasChemical = true
+            end
+            if isIngredient(ingredient, "space-science-pack") then
+                hasSpace = true
+            end
+            if isIngredient(ingredient, "productivity-science-pack") then
+                hasProductivity = true
+            end
         end
     end
     if hasChemical and hasRocket and hasSpace and not hasProductivity then

@@ -1,10 +1,12 @@
-data.raw.locomotive["locomotive"].working_sound.sound.volume = 0.25
+data.raw.locomotive["locomotive"].working_sound.main_sounds[1].sound.volume = 0.25
 local defaultWorkingSound = table.deepcopy(data.raw.locomotive["locomotive"].working_sound)
 
 local function setDefaultSounds(loc, min, scaling)
-    loc.working_sound = table.deepcopy(defaultWorkingSound)
-    loc.sound_minimum_speed = min or 0.5
-    loc.sound_scaling_ratio = scaling or 0.35
+    if loc ~= nil and min ~= nil and scaling ~= nil then
+        loc.working_sound = table.deepcopy(defaultWorkingSound)
+        loc.sound_minimum_speed = min or 0.5
+        loc.sound_scaling_ratio = scaling or 0.35
+    end
 end
 
 setDefaultSounds(data.raw.locomotive["el_diesel_train_entity"])

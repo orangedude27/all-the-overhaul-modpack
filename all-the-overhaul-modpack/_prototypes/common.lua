@@ -1,27 +1,29 @@
 local equipment = require("_functions/equipment")
 
--- 248k assemblings
-local fluid_boxes = {
-    {
-        production_type = "input",
-        pipe_picture = assemblerkpipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = -1,
-        pipe_connections = { { type = "input", position = { 0, -2 } } },
-        secondary_draw_orders = { north = -1 },
-    },
-    {
-        production_type = "output",
-        pipe_picture = assemblerkpipepictures(),
-        pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 1,
-        pipe_connections = { { type = "output", position = { 0, 2 } } },
-        secondary_draw_orders = { north = -1 },
-    },
-    off_when_no_fluid_recipe = true,
-}
+if mods["248k"] then
+    -- 248k assemblings
+    local fluid_boxes = {
+        {
+            production_type = "input",
+            pipe_picture = assemblerkpipepictures(),
+            pipe_covers = pipecoverspictures(),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = { { type = "input", position = { 0, -2 } } },
+            secondary_draw_orders = { north = -1 },
+        },
+        {
+            production_type = "output",
+            pipe_picture = assemblerkpipepictures(),
+            pipe_covers = pipecoverspictures(),
+            base_area = 10,
+            base_level = 1,
+            pipe_connections = { { type = "output", position = { 0, 2 } } },
+            secondary_draw_orders = { north = -1 },
+        },
+        off_when_no_fluid_recipe = true,
+    }
+end
 
 local crafting_categories = {
     "basic-crafting",
@@ -31,11 +33,13 @@ local crafting_categories = {
     "smelting-crafting",
 }
 
-data.raw["assembling-machine"]["fi_crafter_entity"].fluid_boxes = fluid_boxes
-data.raw["assembling-machine"]["gr_crafter_entity"].fluid_boxes = fluid_boxes
+if mods["248k"] then
+    data.raw["assembling-machine"]["fi_crafter_entity"].fluid_boxes = fluid_boxes
+    data.raw["assembling-machine"]["gr_crafter_entity"].fluid_boxes = fluid_boxes
 
-data.raw["assembling-machine"]["fi_crafter_entity"].crafting_categories = crafting_categories
-data.raw["assembling-machine"]["gr_crafter_entity"].crafting_categories = crafting_categories
+    data.raw["assembling-machine"]["fi_crafter_entity"].crafting_categories = crafting_categories
+    data.raw["assembling-machine"]["gr_crafter_entity"].crafting_categories = crafting_categories
+end
 
 equipment.create_equipment_category("generator-equipment")
 equipment.create_equipment_category("defense-equipment")
@@ -44,9 +48,14 @@ equipment.create_equipment_category("battery-equipment")
 equipment.create_equipment_category("solar-equipment")
 equipment.create_grid("kr-advanced-tank-grid")
 
-data.raw["assembling-machine"]["kr-research-server"].ingredient_count = 20
-data.raw["assembling-machine"]["el_purifier_entity"].ingredient_count = 20
-data.raw["assembling-machine"]["fu_magnet_entity"].ingredient_count = 3
+if mods["Krastorio2"] then
+    data.raw["assembling-machine"]["kr-research-server"].ingredient_count = 20
+end
+
+if mods["248k"] then
+    data.raw["assembling-machine"]["el_purifier_entity"].ingredient_count = 20
+    data.raw["assembling-machine"]["fu_magnet_entity"].ingredient_count = 3
+end
 
 ---Adjust grid size
 ---@param grid_name string
@@ -89,5 +98,7 @@ for _, item in pairs(data.raw.tool) do
     end
 end
 
-data.raw.item["fu_materials_carbon_fiber"].localised_name = "Graphite fiber"
-data.raw.item["fu_materials_KFK"].localised_name = "Graphite fiber reinforced plastic"
+if mods["248k"] then
+    data.raw.item["fu_materials_carbon_fiber"].localised_name = "Graphite fiber"
+    data.raw.item["fu_materials_KFK"].localised_name = "Graphite fiber reinforced plastic"
+end
