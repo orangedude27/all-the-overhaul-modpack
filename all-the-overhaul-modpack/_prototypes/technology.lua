@@ -1,5 +1,4 @@
 local util = require("_data-util")
-local Tech = require('__jalm__/stdlib/data/technology')
 
 --Adjust technologie prerequisites
 log("Adjusting Tech PIG")
@@ -44,16 +43,11 @@ util.tech_add_prerequisites("mechanical-engineering", "el_ALK_tech")
 util.tech_add_prerequisites("kr-fluids-chemistry", "el_ALK_tech")
 --lock tech that uses pcb solder behind it.
 util.tech_add_prerequisites("fast-inserter", "pcb-solder")
-if mods["Bio_Industries"] then
-    --Remove gas boiler from gas extraction tech
-    local gas = data.raw.technology["gas-extraction"].effects
-    util.remove_recipe_from_effects(gas, "gas-boiler")
-end
-if mods["248k"] and mods["space-exploration"] then
-    --change 248k energy tech prerequisite to energy 1 science, as it is needed to unlock ki2 cubes, witch are needed for energy 2 science
-    data.raw.technology["fu_energy_tech"].prerequisites = { "se-energy-science-pack-1" }
-end
-
+--Remove gas boiler from gas extraction tech
+local gas = data.raw.technology["gas-extraction"].effects
+util.remove_recipe_from_effects(gas, "gas-boiler")
+--change 248k energy tech prerequisite to energy 1 science, as it is needed to unlock ki2 cubes, witch are needed for energy 2 science
+data.raw.technology["fu_energy_tech"].prerequisites = { "se-energy-science-pack-1" }
 --adds advanced chemistry as a prereq to needed techs
 util.tech_add_prerequisites("graphene", "kr-advanced-chemistry")
 util.tech_add_prerequisites("carbon-fiber", "kr-advanced-chemistry")
@@ -62,7 +56,7 @@ util.tech_add_prerequisites("se-rocket-launch-pad", "nitinol-processing")
 --add 
 util.tech_add_prerequisites("productivity-module-2", "fi_modules_1_tech")
 util.tech_add_prerequisites("speed-module-2", "fi_modules_1_tech")
-util.tech_add_prerequisites("effectivity-module-2", "fi_modules_1_tech")
+util.tech_add_prerequisites("efficiency-module-2", "fi_modules_1_tech")
 util.tech_add_ingredients("bi-tech-bio-farming", { "logistic-science-pack" }, false)
 
 --Lock recipies behind tech
@@ -112,6 +106,7 @@ if mods['Load-Furn-2'] then
 end
 
 util.tech_remove_prerequisites("fu_TIM_tech", { "fu_stage_tech" })
+util.tech_remove_prerequisites("fu_KFK_tech", { "fu_stage_tech" })
 
 -- Vanilla Changes
 data.raw.technology["nuclear-fuel-reprocessing"] = nil
@@ -215,13 +210,10 @@ if mods["RampantArsenal"] then
     util.tech_add_ingredients("rampant-arsenal-technology-generator-equipment-3", { "se-energy-science-pack-4", "fusion-science-pack-4" }, false)
 end
 
-if mods["248k"] then
-    -- Change count
-    data.raw.technology["fu_hydrogen_1_tech"].unit.count = 600
-    data.raw.technology["fu_hydrogen_2_tech"].unit.count = 800
-    data.raw.technology["fu_hydrogen_3_tech"].unit.count = 1000
-end
-
+-- Change count
+data.raw.technology["fu_hydrogen_1_tech"].unit.count = 600
+data.raw.technology["fu_hydrogen_2_tech"].unit.count = 800
+data.raw.technology["fu_hydrogen_3_tech"].unit.count = 1000
 -- Delete unusing research line
 util.tech_remove_prerequisites("kr-imersium-processing", { "fu_crystal_tech" })
 -- Add usage for Optimization card
@@ -249,43 +241,37 @@ util.tech_remove_prerequisites("fusion-reactor-equipment", { "se-superconductive
 util.tech_add_prerequisites("fusion-reactor-equipment", "hcp-circuit")
 
 -- Electronic machine
--- TODO: We need to find a new way to hide this particular research
--- bobmods.lib.tech.hide("mini-basic")
-
-if mods["mini-machines"] then
-    -- 01
-    data.raw.technology["mini-assembler-1"].unit.count = 30
-    util.tech_remove_prerequisites("mini-assembler-1", { "mini-basic" })
-    -- 02
-    data.raw.technology["mini-assembler-2"].unit.count = 50
-    -- 03
-    data.raw.technology["mini-assembler-3"].unit.count = 100
-    if mods["OD27_5dim_core"] then
-        -- 04
-        data.raw.technology["mini-assembler-4"].unit.count = 200
-        util.tech_add_ingredients("mini-assembler-4", { "space-science-pack", "kr-optimization-tech-card" }, false)
-        -- 05
-        data.raw.technology["mini-assembler-5"].unit.count = 300
-        util.tech_add_ingredients("mini-assembler-5", { "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" }, false)
-        -- 06
-        data.raw.technology["mini-assembler-6"].unit.count = 400
-        util.tech_remove_ingredients("mini-assembler-6", { "se-material-science-pack-1" })
-        util.tech_add_ingredients("mini-assembler-6", { "utility-science-pack", "production-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "se-astronomic-science-pack-2" }, false)
-        -- 07
-        data.raw.technology["mini-assembler-7"].unit.count = 500
-        util.tech_remove_ingredients("mini-assembler-7", { "se-material-science-pack-2" })
-        util.tech_add_ingredients("mini-assembler-7", { "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
-        -- 08
-        data.raw.technology["mini-assembler-8"].unit.count = 600
-        util.tech_add_ingredients("mini-assembler-8", { "kr-optimization-tech-card", "se-biological-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
-        -- 09
-        data.raw.technology["mini-assembler-9"].unit.count = 700
-        util.tech_add_ingredients("mini-assembler-9", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4" }, false)
-        -- 10
-        data.raw.technology["mini-assembler-10"].unit.count = 800
-        util.tech_add_ingredients("mini-assembler-10", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "se-deep-space-science-pack-1" }, false)
-    end
-end
+bobmods.lib.tech.hide("mini-basic")
+-- 01
+data.raw.technology["mini-assembler-1"].unit.count = 30
+util.tech_remove_prerequisites("mini-assembler-1", { "mini-basic" })
+-- 02
+data.raw.technology["mini-assembler-2"].unit.count = 50
+-- 03
+data.raw.technology["mini-assembler-3"].unit.count = 100
+-- 04
+data.raw.technology["mini-assembler-4"].unit.count = 200
+util.tech_add_ingredients("mini-assembler-4", { "space-science-pack", "kr-optimization-tech-card" }, false)
+-- 05
+data.raw.technology["mini-assembler-5"].unit.count = 300
+util.tech_add_ingredients("mini-assembler-5", { "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" }, false)
+-- 06
+data.raw.technology["mini-assembler-6"].unit.count = 400
+util.tech_remove_ingredients("mini-assembler-6", { "se-material-science-pack-1" })
+util.tech_add_ingredients("mini-assembler-6", { "utility-science-pack", "production-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "se-astronomic-science-pack-2" }, false)
+-- 07
+data.raw.technology["mini-assembler-7"].unit.count = 500
+util.tech_remove_ingredients("mini-assembler-7", { "se-material-science-pack-2" })
+util.tech_add_ingredients("mini-assembler-7", { "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
+-- 08
+data.raw.technology["mini-assembler-8"].unit.count = 600
+util.tech_add_ingredients("mini-assembler-8", { "kr-optimization-tech-card", "se-biological-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
+-- 09
+data.raw.technology["mini-assembler-9"].unit.count = 700
+util.tech_add_ingredients("mini-assembler-9", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4" }, false)
+-- 10
+data.raw.technology["mini-assembler-10"].unit.count = 800
+util.tech_add_ingredients("mini-assembler-10", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "se-deep-space-science-pack-1" }, false)
 
 data:extend({
     {
@@ -294,7 +280,7 @@ data:extend({
         effects = {
             { type = "unlock-recipe", recipe = "fu_lab_recipe" },
         },
-        icon = "__248k__/ressources/techs/fu_lab_tech.png",
+        icon = "__248k-Redux-graphics__/ressources/techs/fu_lab_tech.png",
         icon_size = 128,
         prerequisites = { "se-deep-space-science-pack-4" },
         unit = {
@@ -319,23 +305,21 @@ data:extend({
     },
 })
 
-if mods["Krastorio2"] then
-    -- K2 technologies
-    util.tech_lock_recipes("kr-fluids-chemistry", { "t0-filtration-plant" })
-    util.tech_lock_recipes("kr-fluids-chemistry", { "t0-electrolysis-plant" })
+-- K2 technologies
+util.tech_lock_recipes("kr-fluids-chemistry", { "t0-filtration-plant" })
+util.tech_lock_recipes("kr-fluids-chemistry", { "t0-electrolysis-plant" })
 
-    util.tech_lock_recipes("t0-filtration-plant", { "kr-filtration-plant" })
-    util.tech_lock_recipes("t0-electrolysis-plant", { "kr-electrolysis-plant" })
+util.tech_lock_recipes("t0-filtration-plant", { "kr-filtration-plant" })
+util.tech_lock_recipes("t0-electrolysis-plant", { "kr-electrolysis-plant" })
 
-    -- Change research or Drills
-    data.raw.technology["kr-electric-mining-drill-mk3"].prerequisites = { "kr-electric-mining-drill-mk2", "kr-optimization-tech-card" }
-    util.tech_remove_ingredients("kr-electric-mining-drill-mk3", { "production-science-pack", "utility-science-pack", "se-energy-science-pack-4", "se-material-science-pack-3", "advanced-tech-card" })
-    util.tech_add_ingredients("kr-electric-mining-drill-mk3", { "kr-optimization-tech-card" }, false)
+-- Change research or Drills
+data.raw.technology["kr-electric-mining-drill-mk3"].prerequisites = { "kr-electric-mining-drill-mk2", "kr-optimization-tech-card" }
+util.tech_remove_ingredients("kr-electric-mining-drill-mk3", { "production-science-pack", "utility-science-pack", "se-energy-science-pack-4", "se-material-science-pack-3", "kr-advanced-tech-card" })
+util.tech_add_ingredients("kr-electric-mining-drill-mk3", { "kr-optimization-tech-card" }, false)
 
-    util.tech_remove_prerequisites("area-mining-drill", { "production-science-pack", "kr-electric-mining-drill-mk2" })
-    util.tech_add_prerequisites("area-mining-drill", { "se-heavy-bearing", "mining-drill-mk3", "se-aeroframe-pole" })
-    util.tech_add_ingredients("area-mining-drill", { "utility-science-pack", "se-material-science-pack-2", "se-astronomic-science-pack-1" }, false)
+util.tech_remove_prerequisites("area-mining-drill", { "production-science-pack", "kr-electric-mining-drill-mk2" })
+util.tech_add_prerequisites("area-mining-drill", { "se-heavy-bearing", "mining-drill-mk3", "se-aeroframe-pole" })
+util.tech_add_ingredients("area-mining-drill", { "utility-science-pack", "se-material-science-pack-2", "se-astronomic-science-pack-1" }, false)
 
-    util.tech_remove_prerequisites("se-processing-iridium", { "area-mining-drill" })
-    util.tech_add_prerequisites("se-processing-iridium", { "kr-electric-mining-drill-mk3" })
-end
+util.tech_remove_prerequisites("se-processing-iridium", { "area-mining-drill" })
+util.tech_add_prerequisites("se-processing-iridium", { "kr-electric-mining-drill-mk3" })

@@ -16,8 +16,8 @@ function createAlloy(mainMetal, secondaryMetal)
         category = "el_arc_furnace_category",
         energy_required = 16,
         ingredients = {
-            { name = mainMetal.itemNames.ingot, amount = 4 },
-            { name = secondaryMetal.itemNames.ingot, amount = 1 },
+            { type = "item", name = mainMetal.itemNames.ingot, amount = 4 },
+            { type = "item", name = secondaryMetal.itemNames.ingot, amount = 1 },
             { type = "fluid", name = "se-pyroflux", amount = 0.625 }
         },
         results = {

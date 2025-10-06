@@ -8,10 +8,8 @@ require("_prototypes/recipe")
 require("_prototypes/technology")
 require("_prototypes/sorting/sorter")
 
-if mods["248k"] then
-    data.raw["item"]["fu_tech_sign_item"].icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-2.png"
-    data.raw["item"]["fu_tech_sign_item"].icon_size = 128
-end
+data.raw["item"]["fu_tech_sign_item"].icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-2.png"
+data.raw["item"]["fu_tech_sign_item"].icon_size = 128
 
 for _, ammo in pairs(data.raw.ammo) do
     if type(ammo.ammo_type) == "table" then
@@ -38,16 +36,4 @@ for _, ammo in pairs(data.raw.ammo) do
     :: continue ::
 end
 
-if mods["248k"] then
-    table.insert(data.raw["assembling-machine"]["fu_ingot_entity"].crafting_categories, "casting")
-end
-
--- processing-electronics is removed by bzgold
-if mods["bzgold"] then
-    if mods["248k"] then
-        data.raw.recipe["fu_burn_processing-electronics_recipe"] = nil
-    end
-    if mods["Krastorio2"] then
-        data.raw.recipe["kr-vc-processing-electronics"] = nil
-    end
-end
+table.insert(data.raw["assembling-machine"]["fu_ingot_entity"].crafting_categories, "casting")

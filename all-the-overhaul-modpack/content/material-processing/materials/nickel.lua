@@ -13,16 +13,16 @@ local config = atom.processing.util.prepareConfig({
         pellets = "atom-nickel-pellets"
     },
     icons = {
-        ore = { icon = "__IfNickel__/graphics/icons/nickel-ore.png", icon_size = 64, icon_mipmaps = 4 },
-        plate = { icon = "__IfNickel__/graphics/icons/nickel-plate.png", icon_size = 64 },
+        ore = { icon = "__IfNickel-Updated__/graphics/icons/nickel-ore.png", icon_size = 64, icon_mipmaps = 4 },
+        plate = { icon = "__IfNickel-Updated__/graphics/icons/nickel-plate.png", icon_size = 64 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalResults = {
         oreToPlate = {
-            { name = "cobaltite-ore", amount = 1, probability = 0.5 }
+            { type = "item", name = "cobaltite-ore", amount = 1, probability = 0.5 }
         },
         dustToPlate = {
-            { name = "cobaltite-ore", amount = 1, probability = 0.1 }
+            { type = "item", name = "cobaltite-ore", amount = 1, probability = 0.1 }
         }
     }
 })

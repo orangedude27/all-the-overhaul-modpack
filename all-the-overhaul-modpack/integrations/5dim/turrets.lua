@@ -41,7 +41,7 @@ for i = 1, 5 do
     local gunSniper = data.raw["ammo-turret"]["5d-gun-turret-sniper-0" .. i]
     gunSniper.max_health = 250 * (1 + (i - 1) * gunHpBonus)
     gunSniper.attack_parameters.cooldown = 120
-    gunSniper.attack_parameters.ammo_category = "anti-material-rifle-ammo"
+    gunSniper.attack_parameters.ammo_category = "kr-anti-materiel-rifle-ammo"
     gunSniper.attack_parameters.damage_modifier = 4 * gunDamageModifier[i]
     gunSniper.attack_parameters.ammo_consumption_modifier = 1
     gunSniper.attack_parameters.rotate_penalty = 20
@@ -123,7 +123,9 @@ data.raw["fluid-turret"]["5d-flamethrower-turret-03"].next_upgrade = nil
 
 -- Recipes
 
-atom.util.Recipe("laser-turret").removeIngredient("gyroscope")
+local gyroscope_name = data.raw.item["gyroscope"] and "gyroscope" or "gyro"
+
+atom.util.Recipe("laser-turret").removeIngredient(gyroscope_name)
 
 for i = 1, 5 do
     local nameGun = i == 1 and "gun-turret" or ("5d-gun-turret-0" .. i)
@@ -140,7 +142,7 @@ for i = 1, 5 do
     sniperRecipe.removeIngredient("iron-gear-wheel")
 
     local laserRecipe = atom.util.Recipe(nameLaser)
-    laserRecipe.replaceIngredient("battery", "gyroscope", 1)
+    laserRecipe.replaceIngredient("battery", gyroscope_name, 1)
     laserRecipe.replaceIngredient("electronic-circuit", "hv-power-regulator", 1)
     laserRecipe.replaceIngredient("steel-plate", "carbon-dioxide-laser", 1)
 end
@@ -150,7 +152,7 @@ for i = 1, 3 do
     local nameBurner = i == 1 and "flamethrower-turret" or ("5d-flamethrower-turret-0" .. i)
 
     local laserSniperRecipe = atom.util.Recipe(nameLaserSniper)
-    laserSniperRecipe.replaceIngredient("battery", "gyroscope", 1)
+    laserSniperRecipe.replaceIngredient("battery", gyroscope_name, 1)
     laserSniperRecipe.replaceIngredient("electronic-circuit", "hv-power-regulator", 1)
     laserSniperRecipe.replaceIngredient("steel-plate", "carbon-dioxide-laser", 1)
     laserSniperRecipe.addIngredient("advanced-machining-tool", 5)
@@ -168,48 +170,48 @@ gunRecipe1.addIngredient("steel-plate", 8)
 local gunRecipe2 = atom.util.Recipe("5d-gun-turret-02")
 gunRecipe2.addIngredient("titanium-plate", 8)
 gunRecipe2.addIngredient("hardened-hull", 4)
-gunRecipe2.addIngredient("steel-gear-wheel", 2)
+gunRecipe2.addIngredient("kr-steel-gear-wheel", 2)
 
 local gunRecipe3 = atom.util.Recipe("5d-gun-turret-03")
 gunRecipe3.addIngredient("nitinol-plate", 8)
 gunRecipe3.addIngredient("zirconium-plate", 4)
-gunRecipe3.addIngredient("steel-gear-wheel", 2)
+gunRecipe3.addIngredient("kr-steel-gear-wheel", 2)
 
 local gunRecipe4 = atom.util.Recipe("5d-gun-turret-04")
-gunRecipe4.addIngredient("imersium-plate", 8)
+gunRecipe4.addIngredient("kr-imersium-plate", 8)
 gunRecipe4.addIngredient("zirconium-plate", 4)
-gunRecipe4.addIngredient("imersium-gear-wheel", 2)
+gunRecipe4.addIngredient("kr-imersium-gear-wheel", 2)
 
 local gunRecipe5 = atom.util.Recipe("5d-gun-turret-05")
 gunRecipe5.addIngredient("se-iridium-plate", 8)
 gunRecipe5.addIngredient("zirconium-plate", 4)
-gunRecipe5.addIngredient("imersium-gear-wheel", 2)
+gunRecipe5.addIngredient("kr-imersium-gear-wheel", 2)
 
 local sniperRecipe1 = atom.util.Recipe("5d-gun-turret-sniper-01")
 sniperRecipe1.addIngredient("tungsten-plate", 16)
-sniperRecipe1.addIngredient("steel-gear-wheel", 4)
+sniperRecipe1.addIngredient("kr-steel-gear-wheel", 4)
 sniperRecipe1.addIngredient("turret-base", 1)
 
 local sniperRecipe2 = atom.util.Recipe("5d-gun-turret-sniper-02")
 sniperRecipe2.addIngredient("nitinol-plate", 16)
 sniperRecipe2.addIngredient("zirconium-plate", 4)
-sniperRecipe2.addIngredient("steel-gear-wheel", 4)
+sniperRecipe2.addIngredient("kr-steel-gear-wheel", 4)
 
 local sniperRecipe3 = atom.util.Recipe("5d-gun-turret-sniper-03")
 sniperRecipe3.addIngredient("nitinol-plate", 16)
-sniperRecipe3.addIngredient("imersium-gear-wheel", 4)
+sniperRecipe3.addIngredient("kr-imersium-gear-wheel", 4)
 sniperRecipe3.addIngredient("cobalt-carbide", 4)
 sniperRecipe3.replaceIngredient("electronic-circuit", "advanced-circuit")
 
 local sniperRecipe4 = atom.util.Recipe("5d-gun-turret-sniper-04")
 sniperRecipe4.addIngredient("se-iridium-plate", 16)
-sniperRecipe4.addIngredient("imersium-gear-wheel", 4)
-sniperRecipe4.addIngredient("imersium-beam", 4)
+sniperRecipe4.addIngredient("kr-imersium-gear-wheel", 4)
+sniperRecipe4.addIngredient("kr-imersium-beam", 4)
 sniperRecipe4.replaceIngredient("electronic-circuit", "advanced-circuit")
 
 local sniperRecipe5 = atom.util.Recipe("5d-gun-turret-sniper-05")
 sniperRecipe5.addIngredient("se-iridium-plate", 16)
-sniperRecipe5.addIngredient("imersium-gear-wheel", 4)
+sniperRecipe5.addIngredient("kr-imersium-gear-wheel", 4)
 sniperRecipe5.addIngredient("se-heavy-girder", 4)
 sniperRecipe5.replaceIngredient("electronic-circuit", "processing-unit")
 
@@ -227,13 +229,13 @@ laserRecipe3.addIngredient("motorized-articulator", 5)
 
 local laserRecipe4 = atom.util.Recipe("5d-laser-turret-04")
 laserRecipe4.addIngredient("se-iridium-plate", 20)
-laserRecipe4.addIngredient("imersium-beam", 5)
+laserRecipe4.addIngredient("kr-imersium-beam", 5)
 laserRecipe4.addIngredient("motorized-articulator", 5)
 
 local laserRecipe5 = atom.util.Recipe("5d-laser-turret-05")
 laserRecipe5.addIngredient("se-holmium-cable", 4)
 laserRecipe5.addIngredient("se-iridium-plate", 20)
-laserRecipe5.addIngredient("imersium-beam", 5)
+laserRecipe5.addIngredient("kr-imersium-beam", 5)
 laserRecipe5.addIngredient("motorized-articulator", 5)
 
 local laserSniperRecipe1 = atom.util.Recipe("5d-laser-turret-sniper-01")
@@ -264,7 +266,7 @@ local burnerRecipe3 = atom.util.Recipe("5d-flamethrower-turret-03")
 burnerRecipe3.replaceIngredient("engine-unit", "advanced-multi-cylinder-engine", 5)
 burnerRecipe3.replaceIngredient("advanced-circuit", "invar-plate", 10)
 burnerRecipe3.addIngredient("brass-pipe", 10)
-burnerRecipe3.addIngredient("imersium-plate", 20)
+burnerRecipe3.addIngredient("kr-imersium-plate", 20)
 burnerRecipe3.addIngredient("cobalt-carbide", 5)
 
 
@@ -298,7 +300,7 @@ end
 data.raw.technology["5d-flamethrower-turrets-3"] = nil
 
 local gunTech1 = atom.util.Technology("gun-turret")
-gunTech1.prototype.icon = "__OD27_5dim_battlefield__/graphics/icon/gun-turret/normal/gun-turret-normal-01.png"
+gunTech1.prototype.icon = "__5dim_battlefield__/graphics/icon/gun-turret/normal/gun-turret-normal-01.png"
 gunTech1.prototype.icon_size = 64
 gunTech1.prototype.unit.count = 75
 gunTech1.addPrerequisite("steel-processing")
@@ -309,7 +311,7 @@ gunTech1.addIngredient("logistic-science-pack")
 local gunTech2 = atom.util.Technology("gun-turret-2")
 gunTech2.addPrerequisite("titanium-processing")
 gunTech2.addPrerequisite("military-science-pack")
-gunTech2.removeIngredient("basic-tech-card")
+gunTech2.removeIngredient("kr-basic-tech-card")
 gunTech2.addIngredient("logistic-science-pack")
 gunTech2.addIngredient("military-science-pack")
 gunTech2.addIngredient("chemical-science-pack")
@@ -317,7 +319,7 @@ gunTech2.addIngredient("chemical-science-pack")
 local gunTech3 = atom.util.Technology("gun-turret-3")
 gunTech3.addPrerequisite("nitinol-processing")
 gunTech3.addPrerequisite("productivity-science-pack")
-gunTech3.removeIngredient("basic-tech-card")
+gunTech3.removeIngredient("kr-basic-tech-card")
 gunTech3.addIngredient("logistic-science-pack")
 gunTech3.addIngredient("military-science-pack")
 gunTech3.addIngredient("chemical-science-pack")
@@ -327,7 +329,7 @@ gunTech3.addIngredient("se-rocket-science-pack")
 local gunTech4 = atom.util.Technology("gun-turret-4")
 gunTech4.removePrerequisite("logistic-science-pack")
 gunTech4.addPrerequisite("kr-imersium-processing")
-gunTech4.removeIngredient("basic-tech-card")
+gunTech4.removeIngredient("kr-basic-tech-card")
 gunTech4.addIngredient("military-science-pack")
 gunTech4.addIngredient("productivity-science-pack")
 gunTech4.addIngredient("se-rocket-science-pack")
@@ -335,7 +337,7 @@ gunTech4.addIngredient("space-science-pack")
 
 local gunTech5 = atom.util.Technology("gun-turret-5")
 gunTech5.addPrerequisite("se-processing-iridium")
-gunTech5.removeIngredient("basic-tech-card")
+gunTech5.removeIngredient("kr-basic-tech-card")
 gunTech5.addIngredient("military-science-pack")
 gunTech5.addIngredient("production-science-pack")
 
@@ -346,20 +348,16 @@ sniperTech1.removeIngredient("se-rocket-science-pack")
 local sniperTech2 = atom.util.Technology("5d-gun-turret-sniper-2")
 sniperTech2.addPrerequisite("nitinol-processing")
 sniperTech2.addPrerequisite("productivity-science-pack")
-sniperTech2.addIngredient("chemical-science-pack")
 sniperTech2.addIngredient("productivity-science-pack")
 
 local sniperTech3 = atom.util.Technology("5d-gun-turret-sniper-3")
 sniperTech3.addPrerequisite("kr-imersium-processing")
 sniperTech3.addPrerequisite("cobalt-carbide")
-sniperTech3.addIngredient("chemical-science-pack")
 sniperTech3.addIngredient("productivity-science-pack")
-sniperTech3.addIngredient("space-science-pack")
 
 local sniperTech4 = atom.util.Technology("5d-gun-turret-sniper-4")
 sniperTech4.addPrerequisite("se-processing-iridium")
 sniperTech4.addIngredient("productivity-science-pack")
-sniperTech4.addIngredient("space-science-pack")
 sniperTech4.addIngredient("production-science-pack")
 
 local sniperTech5 = atom.util.Technology("5d-gun-turret-sniper-5")
@@ -368,7 +366,7 @@ sniperTech5.addIngredient("production-science-pack")
 sniperTech5.addIngredient("se-material-science-pack-1")
 
 local laserTech1 = atom.util.Technology("laser-turret")
-laserTech1.prototype.icon = "__OD27_5dim_battlefield__/graphics/icon/laser-turret/normal/laser-turret-normal-01.png"
+laserTech1.prototype.icon = "__5dim_battlefield__/graphics/icon/laser-turret/normal/laser-turret-normal-01.png"
 laserTech1.prototype.icon_size = 64
 
 local laserTech2 = atom.util.Technology("laser-turret-2")
@@ -401,23 +399,20 @@ local laserSniperTech1 = atom.util.Technology("5d-laser-turret-sniper-1")
 laserSniperTech1.prototype.unit.count = 600
 laserSniperTech1.replacePrerequisite("5d-laser-turret-big-5", "laser-turret-3")
 laserSniperTech1.addIngredient("productivity-science-pack")
-laserSniperTech1.addIngredient("space-science-pack")
 
 local laserSniperTech2 = atom.util.Technology("5d-laser-turret-sniper-2")
 laserSniperTech2.addPrerequisite("se-heavy-girder")
 laserSniperTech2.addPrerequisite("se-energy-science-pack-1")
 laserSniperTech2.addIngredient("productivity-science-pack")
-laserSniperTech2.addIngredient("space-science-pack")
 laserSniperTech2.addIngredient("se-energy-science-pack-1")
 
 local laserSniperTech3 = atom.util.Technology("5d-laser-turret-sniper-3")
 laserSniperTech3.addPrerequisite("se-superconductive-cable")
 laserSniperTech3.addIngredient("productivity-science-pack")
-laserSniperTech3.addIngredient("space-science-pack")
 laserSniperTech3.addIngredient("se-energy-science-pack-3")
 
 local burnerTech1 = atom.util.Technology("flamethrower")
-burnerTech1.prototype.icon = "__OD27_5dim_battlefield__/graphics/icon/flamethrower-turret/flamethrower-turret-icon-01.png"
+burnerTech1.prototype.icon = "__5dim_battlefield__/graphics/icon/flamethrower-turret/flamethrower-turret-icon-01.png"
 burnerTech1.prototype.icon_size = 64
 burnerTech1.prototype.unit.count = 100
 

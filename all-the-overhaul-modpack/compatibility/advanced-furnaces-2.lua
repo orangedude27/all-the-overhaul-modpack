@@ -19,7 +19,7 @@ if mods['Load-Furn-2'] then
 
     local mk4 = atom.util.Recipe("furnace-pro-04")
     mk4.addIngredient("temperature-sensor", 1)
-    mk4.addIngredient("imersium-plate", 10)
+    mk4.addIngredient("kr-imersium-plate", 10)
 
     local mk5 = atom.util.Recipe("furnace-pro-05")
     mk5.addIngredient("temperature-sensor", 1)

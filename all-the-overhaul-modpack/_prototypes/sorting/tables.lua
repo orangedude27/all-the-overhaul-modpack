@@ -162,7 +162,7 @@ local TilesRecipeOrder = {
     ["balanced"] = "[a]",
     ["2"] = "[a]",
     ["silica"] = "[a]",
-    ["sand"] = "[a]",
+    ["kr-sand"] = "[a]",
     ["ore"] = "[a]",
     ["graphite"] = "[a]",
     ["zircon"] = "[a]",
@@ -329,7 +329,7 @@ local CombatRecipeOrder = {
 }
 --production
 local ProductionBlacklist = { "head", "coal", "sulfur", "kerosene", "fi_refinery_basic_recipe", "fu_drill_recipe",
-                              "crystal", "equipment", "cube", "card", "chromium", "salt", "dirty-water", "brass" }
+                              "crystal", "equipment", "cube", "card", "chromium", "salt", "kr-dirty-water", "brass" }
 local ProductionSubOrder = {
     ["assembling"] = "[a]",
     ["mini-assembler"] = "[b]",
@@ -473,7 +473,7 @@ local ResourceSubOrder = {
     ["bronze"] = "[b]",
     ["uranium"] = "[o]",
     ["rare"] = "[p]",
-    ["lithium"] = "[w]",
+    ["kr-lithium"] = "[w]",
     ["bismuth"] = "[f]",
     ["gold"] = "[q]",
     ["lead"] = "[d]",
@@ -589,7 +589,7 @@ local ManufactoringRecipeOrder = {
     ["tinned"] = "[y]",
     ["insulated"] = "[y]",
     ["naquium"] = "[y]",
-    ["lithium"] = "[y]",
+    ["kr-lithium"] = "[y]",
     ["sulfur"] = "[y]",
     ["charged"] = "[y]",
     ["nickel"] = "[y]",
@@ -621,7 +621,7 @@ local ManufactoringRecipeOrder = {
 }
 --fluids
 local FluidBlacklist = { "biter", "purify", "equipment", "train", "water-recipe", "se-matter-fusion-dirty",
-                         "se-dirty-water-filtration-holmium", "se-dirty-water-filtration-iridium", "oil-refinery" }
+                         "se-kr-dirty-water-filtration-holmium", "se-kr-dirty-water-filtration-iridium", "oil-refinery" }
 local FluidSubOrder = {
     ["sulfur"] = "[a]",
     ["kerosene"] = "[a]",
@@ -629,11 +629,11 @@ local FluidSubOrder = {
     ["methan"] = "[a]",
     ["nitric"] = "[a]",
     ["plastic"] = "[a]",
-    ["biomass"] = "[a]",
+    ["kr-biomass"] = "[a]",
     ["cellulose"] = "[a]",
     ["strong"] = "[a]",
     ["vinyl"] = "[a]",
-    ["hydrogen"] = "[a]",
+    ["kr-hydrogen"] = "[a]",
     ["epoxy"] = "[a]",
     ["formaldehyde"] = "[a]",
     ["liquefaction"] = "[a]",
@@ -661,7 +661,7 @@ local FluidRecipeOrder = {
     ["refinery"] = "[a]",
     ["reforming"] = "[b]",
     ["acid"] = "[c]",
-    ["growing"] = "[a]",
+    ["kr-growing"] = "[a]",
     ["crack"] = "[a]",
     ["chloride"] = "[a]",
     ["coal"] = "[a]",
@@ -674,7 +674,7 @@ local FluidRecipeOrder = {
     ["seperation"] = "[a]",
     ["kr"] = "[a]",
     ["heavy"] = "[a]",
-    ["lithium"] = "[a]",
+    ["kr-lithium"] = "[a]",
     ["vent"] = "[a]",
     ["fluid"] = "[a]",
     ["recipe"] = "[a]",
@@ -994,6 +994,8 @@ ReplaceSubgroupDirectName = {
 }
 
 --ADD ORDER TO ME!!!
+
+-- Error: subgroup burner doesn't exist
 SortDirectTable = {
     ["immolator"] = { name = "spidertron", order = "[a]" },
     ["spidertron-builder"] = { name = "spidertron", order = "[a]" },
@@ -1005,7 +1007,7 @@ SortDirectTable = {
     ["fi_equipment_player_shield_recipe"] = { name = "shield", order = "s" },
     ["el_tank_recipe"] = { name = "storage", order = "[a]" },
     ["se-supercharger"] = { name = "robo", order = "[d]" },
-    ["fi_castor_recipe"] = { name = "burner", order = "[a]" },
+    --["fi_castor_recipe"] = { name = "burner", order = "[a]" },
     ["el_burner_recipe"] = { name = "generator", order = "[a]" },
     ["el_burner_kerosene_recipe"] = { name = "generator", order = "[a]" },
     ["burner-turbine"] = { name = "generator", order = "[a]" },
@@ -1032,7 +1034,7 @@ SortDirectTable = {
     ["kr-research-server"] = { name = "computer", order = "[a]" },
     ["kr-matter-assembler"] = { name = "plant", order = "[z]" },
     ["kr-atmospheric-condenser"] = { name = "filtration", order = "[a]" },
-    ["kr-air-purifier"] = { name = "burner", order = "[a]" },
+    --["kr-air-purifier"] = { name = "burner", order = "[a]" },
     ["el_caster_recipe"] = { name = "furnace", order = "[f]" },
     ["fu_ingot_recipe"] = { name = "furnace", order = "[f]" },
     ["bi-bio-farm"] = { name = "greenhouse", order = "[a]" },
@@ -1073,7 +1075,7 @@ SortDirectTable = {
     ["se-broken-data-scrapping"] = { name = "recycle", order = "[a]" },
     ["se-cargo-pod-scrapping"] = { name = "recycle", order = "[a]" },
     ["se-scrap-decontamination"] = { name = "recycle", order = "[a]" },
-    ["se-scrap-recycling"] = { name = "recycle", order = "[a]" },
+    ["se-scrap-hard-recycling"] = { name = "recycle", order = "[a]" },
     ["fu_pure_ore_recipe"] = { name = "lead", order = "[a]" },
     ["fi_ki_cpu_memory_circuit_recipe"] = { name = "pack", order = "[a]" },
     ["fu_ki_cpu_memory_circuit_recipe"] = { name = "pack", order = "[a]" },
@@ -1103,12 +1105,12 @@ SortDirectTable = {
     ["bi-wooden-fence"] = { name = "wall", order = "[a]" },
     ["fi_solid_1_recipe"] = { name = "fuel", order = "[a]" },
     ["fi_solid_2_recipe"] = { name = "fuel", order = "[a]" },
-    ["dirty-water-filtration-1"] = { name = "iron", order = "[z]" },
-    ["dirty-water-filtration-2"] = { name = "copper", order = "[z]" },
-    ["dirty-water-filtration-3"] = { name = "rare", order = "[z]" },
+    ["kr-filter-iron-ore-from-dirty-water"] = { name = "iron", order = "[z]" },
+    ["kr-filter-copper-ore-from-dirty-water"] = { name = "copper", order = "[z]" },
+    ["kr-filter-rare-metal-ore-from-dirty-water"] = { name = "rare", order = "[z]" },
     ["bismanol"] = { name = "bismuth", order = "[z]" },
     ["mangalloy"] = { name = "manganese", order = "[z]" },
-    ["bi-acid"] = { name = "biomass", order = "[z]" },
+    ["bi-acid"] = { name = "kr-biomass", order = "[z]" },
     ["bi-purified-air-1"] = { name = "seed", order = "[z]" },
     ["bi-purified-air-2"] = { name = "seed", order = "[z]" },
     ["burner-mining-drill"] = { name = "drill", order = "[a]" },
@@ -1133,7 +1135,7 @@ SortDirectTable = {
     ["carbon-fiber"] = { name = "beam", order = "a" },
     ["nanotubes"] = { name = "beam", order = "a" },
     ["crucible"] = { name = "beam", order = "a" },
-    ["ai-core"] = { name = "beam", order = "a" },
+    ["kr-ai-core"] = { name = "beam", order = "a" },
     ["silicon-wafer"] = { name = "beam", order = "a" },
     ["solar-cell"] = { name = "beam", order = "a" },
     ["cermet"] = { name = "beam", order = "a" },
@@ -1185,7 +1187,7 @@ SortDirectTable = {
     ["matter-stabilizer"] = { name = "fuel", order = "a" },
     ["se-kr-charge-basic-stabilizer"] = { name = "fuel", order = "a" },
     ["charge-stabilizer"] = { name = "fuel", order = "a" },
-    ["energy-control-unit"] = { name = "electro", order = "a" },
+    ["kr-energy-control-unit"] = { name = "electro", order = "a" },
     ["bp-charged-lithium-sulfur-battery"] = { name = "battery", order = "a" },
     ["lithium-sulfur-battery"] = { name = "battery", order = "a" },
     ["fluid-level-indicator"] = { name = "pipe", order = "a" },
@@ -1207,8 +1209,8 @@ SortDirectTable = {
     ["crafting_combinator:crafting-combinator"] = { name = "combinator", order = "[i]" },
     ["crafting_combinator:recipe-combinator"] = { name = "combinator", order = "[i]" },
     ["cuw"] = { name = "copper", order = "[z]" },
-    ["matter-tech-card"] = { name = "matter-science", order = "[m]" },
-    ["basic-tech-card"] = { name = "science-pack", order = "[a]" },
+    ["kr-matter-tech-card"] = { name = "matter-science", order = "[m]" },
+    ["kr-basic-tech-card"] = { name = "science-pack", order = "[a]" },
     ["rocket-control-unit"] = { name = "rocket-part", order = "[a]" },
     ["kr-rocket-turret"] = { name = "artillery-turret", order = "[a]" },
     ["kr-railgun-turret"] = { name = "artillery-turret", order = "[a]" },

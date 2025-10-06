@@ -16,7 +16,7 @@ local config = atom.processing.util.prepareConfig({
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalIngredient = {
-        dustToIngot = { name = "graphite", amount = 1 },
+        dustToIngot = { type = "item", name = "graphite", amount = 1 },
         enrichedToIngot = { type = "fluid", name = "sulfuric-acid", amount = 4 },
         pelletsToIngot = { type = "fluid", name = "gas", amount = 10 }
     },

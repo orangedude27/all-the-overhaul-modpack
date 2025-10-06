@@ -27,11 +27,12 @@ for _, technology in pairs(data.raw.technology) do
                 hasProductivity = true
             end
         end
-    end
-    if hasChemical and hasRocket and hasSpace and not hasProductivity then
-        atom.util.Technology(technology).addIngredient("productivity-science-pack")
+        if hasChemical and hasRocket and hasSpace and not hasProductivity then
+            atom.util.Technology(technology).addIngredient("productivity-science-pack")
+        end
     end
 end
 
 -- Remove crushed manganese
+atom.util.Recipe("mangalloy").removeIngredient("crushed-manganese")
 atom.util.item.removeByName("crushed-manganese")

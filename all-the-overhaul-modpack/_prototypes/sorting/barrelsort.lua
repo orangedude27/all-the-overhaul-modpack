@@ -16,19 +16,17 @@ data:extend(
             }
         })
 
--- for _, fluid in pairs(data.raw.fluid) do
---     if data.raw.recipe["empty-" .. fluid.name .. "-barrel"] then
---         data.raw.recipe["empty-" .. fluid.name .. "-barrel"]["itemgroup"] = "barreling"
---         data.raw.recipe["empty-" .. fluid.name .. "-barrel"]["subgroup"] = "barreling"
-
---         data.raw.recipe["fill-" .. fluid.name .. "-barrel"]["itemgroup"] = "barreling"
---         data.raw.recipe["fill-" .. fluid.name .. "-barrel"]["subgroup"] = "barreling"
---     end
---     if data.raw.item[fluid.name .. "-barrel"] then
---         data.raw.item[fluid.name .. "-barrel"]["itemgroup"] = "barreling"
---         data.raw.item[fluid.name .. "-barrel"]["subgroup"] = "barreling"
-
---         data.raw.item[fluid.name .. "-barrel"]["itemgroup"] = "barreling"
---         data.raw.item[fluid.name .. "-barrel"]["subgroup"] = "barreling"
---     end
--- end
+for _, fluid in pairs(data.raw.fluid) do
+    if data.raw.recipe["empty-" .. fluid.name .. "-barrel"] then
+        data.raw.recipe["empty-" .. fluid.name .. "-barrel"]["itemgroup"] = "barreling"
+        data.raw.recipe["empty-" .. fluid.name .. "-barrel"]["subgroup"] = "barreling"
+    end
+    if data.raw.recipe["fill-" .. fluid.name .. "-barrel"] then
+        data.raw.recipe["fill-" .. fluid.name .. "-barrel"]["itemgroup"] = "barreling"
+        data.raw.recipe["fill-" .. fluid.name .. "-barrel"]["subgroup"] = "barreling"
+    end
+    if data.raw.item[fluid.name .. "-barrel"] then
+        data.raw.item[fluid.name .. "-barrel"]["itemgroup"] = "barreling"
+        data.raw.item[fluid.name .. "-barrel"]["subgroup"] = "barreling"
+    end
+end

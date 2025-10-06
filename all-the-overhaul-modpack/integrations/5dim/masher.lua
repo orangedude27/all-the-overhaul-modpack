@@ -1,6 +1,6 @@
 -- Recipes
 
-local Recipe = require('__stdlib__/stdlib/data/recipe')
+local Recipe = require('__jalm__/stdlib/data/recipe')
 
 local recipe01 = Recipe("5d-masher-01")
 local recipe02 = Recipe("5d-masher-02")
@@ -20,68 +20,68 @@ recipe01:add_ingredient({ "aluminum-plate", 4 })
 recipe01:add_ingredient({ "stone-brick", 4 })
 
 recipe02:replace_ingredient("steel-plate", { "motorized-articulator", 5 })
-recipe02:replace_ingredient("iron-gear-wheel", { "steel-gear-wheel", 10 })
+recipe02:replace_ingredient("iron-gear-wheel", { "kr-steel-gear-wheel", 10 })
 recipe02:add_ingredient({ "gearbox", 2 })
 recipe02:add_ingredient({ "diamond", 8 })
 recipe02:add_ingredient({ "stone-brick", 4 })
 
 recipe03:replace_ingredient("advanced-circuit", { "processing-unit", 4 })
 recipe03:replace_ingredient("steel-plate", { "motorized-articulator", 5 })
-recipe03:replace_ingredient("iron-gear-wheel", { "steel-gear-wheel", 10 })
+recipe03:replace_ingredient("iron-gear-wheel", { "kr-steel-gear-wheel", 10 })
 recipe03:add_ingredient({ "advanced-gearbox", 2 })
 recipe03:add_ingredient({ "nitinol-plate", 4 })
 recipe03:add_ingredient({ "concrete", 4 })
 
 recipe04:replace_ingredient("advanced-circuit", { "advanced-processing-unit", 4 })
 recipe04:replace_ingredient("steel-plate", { "complex-joint", 5 })
-recipe04:replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+recipe04:replace_ingredient("iron-gear-wheel", { "kr-imersium-gear-wheel", 10 })
 recipe04:add_ingredient({ "advanced-gearbox", 2 })
-recipe04:add_ingredient({ "imersium-plate", 4 })
+recipe04:add_ingredient({ "kr-imersium-plate", 4 })
 recipe04:add_ingredient({ "concrete", 4 })
 
 recipe05:replace_ingredient("advanced-circuit", { "advanced-processing-unit", 4 })
 recipe05:replace_ingredient("steel-plate", { "complex-joint", 5 })
-recipe05:replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+recipe05:replace_ingredient("iron-gear-wheel", { "kr-imersium-gear-wheel", 10 })
 recipe05:replace_ingredient("speed-module", { "advanced-gearbox", 2 })
 recipe05:add_ingredient({ "se-heavy-girder", 4 })
 recipe05:add_ingredient({ "concrete", 4 })
 
 recipe06:replace_ingredient("advanced-circuit", { "advanced-processing-unit", 4 })
 recipe06:replace_ingredient("steel-plate", { "se-aeroframe-scaffold", 5 })
-recipe06:replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+recipe06:replace_ingredient("iron-gear-wheel", { "kr-imersium-gear-wheel", 10 })
 recipe06:replace_ingredient("productivity-module", { "elite-gearbox", 2 })
 recipe06:add_ingredient({ "se-heavy-girder", 4 })
 recipe06:add_ingredient({ "concrete", 4 })
 
 recipe07:replace_ingredient("processing-unit", { "advanced-processing-unit", 4 })
 recipe07:replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 5 })
-recipe07:replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+recipe07:replace_ingredient("iron-gear-wheel", { "kr-imersium-gear-wheel", 10 })
 recipe07:replace_ingredient("speed-module-2", { "elite-gearbox", 2 })
 recipe07:add_ingredient({ "se-heavy-girder", 4 })
 recipe07:add_ingredient({ "concrete", 4 })
 
 recipe08:replace_ingredient("processing-unit", { "gr_materials_circuit", 4 })
 recipe08:replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 5 })
-recipe08:replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+recipe08:replace_ingredient("iron-gear-wheel", { "kr-imersium-gear-wheel", 10 })
 recipe08:replace_ingredient("productivity-module-2", { "elite-gearbox", 2 })
-recipe08:add_ingredient({ "ai-core", 1 })
+recipe08:add_ingredient({ "kr-ai-core", 1 })
 recipe08:add_ingredient({ "se-heavy-girder", 4 })
 recipe08:add_ingredient({ "concrete", 4 })
 
 recipe09:replace_ingredient("processing-unit", { "gr_materials_circuit", 4 })
 recipe09:replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 5 })
-recipe09:replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+recipe09:replace_ingredient("iron-gear-wheel", { "kr-imersium-gear-wheel", 10 })
 recipe09:replace_ingredient("speed-module-3", { "se-heavy-assembly", 2 })
 recipe09:replace_ingredient("low-density-structure", { "se-nanomaterial", 4 })
-recipe09:add_ingredient({ "ai-core", 1 })
+recipe09:add_ingredient({ "kr-ai-core", 1 })
 recipe09:add_ingredient({ "concrete", 4 })
 
 recipe10:replace_ingredient("processing-unit", { "gr_materials_circuit", 4 })
 recipe10:replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 5 })
-recipe10:replace_ingredient("iron-gear-wheel", { "imersium-gear-wheel", 10 })
+recipe10:replace_ingredient("iron-gear-wheel", { "kr-imersium-gear-wheel", 10 })
 recipe10:replace_ingredient("productivity-module-3", { "se-heavy-assembly", 2 })
 recipe10:replace_ingredient("low-density-structure", { "se-nanomaterial", 4 })
-recipe10:add_ingredient({ "ai-core", 1 })
+recipe10:add_ingredient({ "kr-ai-core", 1 })
 recipe10:add_ingredient({ "se-naquium-cube", 1 })
 
 
@@ -94,7 +94,7 @@ data.raw.technology["5d-masher-1"].unit.count = 100
 util.tech_remove_prerequisites("5d-masher-1", { "advanced-material-processing-2" })
 util.tech_add_prerequisites("5d-masher-1", { "invar-processing" })
 util.tech_remove_ingredients("5d-masher-1", { "logistic-science-pack", "chemical-science-pack" })
-util.tech_add_ingredients("5d-masher-1", { "basic-tech-card" })
+util.tech_add_ingredients("5d-masher-1", { "kr-basic-tech-card" })
 -- 02
 data.raw.technology["5d-masher-2"].unit.count = 200
 util.tech_remove_prerequisites("5d-masher-2", { "advanced-material-processing-3" })
@@ -102,7 +102,7 @@ util.tech_add_prerequisites("5d-masher-2", { "diamond-processing" })
 -- 03
 data.raw.technology["5d-masher-3"].unit.count = 300
 util.tech_remove_prerequisites("5d-masher-3", { "advanced-material-processing-4" })
-util.tech_add_prerequisites("5d-masher-3", { "nitinol-processing", "advanced-electronics-2", "productivity-science-pack" })
+util.tech_add_prerequisites("5d-masher-3", { "nitinol-processing", "processing-unit", "productivity-science-pack" })
 util.tech_remove_ingredients("5d-masher-3", { "production-science-pack", "space-science-pack" })
 util.tech_add_ingredients("5d-masher-3", { "productivity-science-pack" })
 -- 04

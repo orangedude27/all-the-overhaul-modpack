@@ -1,30 +1,25 @@
 local equipment = require("_functions/equipment")
 local futil = require("util")
 
-if mods["Krastorio2"] then
-    -- 1 tech ki
-    krastorio.technologies.removePrerequisite("el_ki_sup_1_tech", "fi_ki_eff_1_tech")
-    krastorio.technologies.removePrerequisite("el_ki_sup_1_tech", "el_ki_eff_1_tech")
-    krastorio.technologies.addPrerequisite("el_ki_sup_1_tech", "fi_ki_tech")
-    krastorio.technologies.removeResearchUnitIngredient("el_ki_sup_1_tech", "chemical-science-pack")
-    krastorio.technologies.removeResearchUnitIngredient("el_ki_sup_1_tech", "production-science-pack")
-    krastorio.technologies.addResearchUnitIngredient("el_ki_sup_1_tech", "chemical-science-pack", 1)
-    krastorio.technologies.addResearchUnitIngredient("el_ki_sup_1_tech", "se-rocket-science-pack", 1)
-    krastorio.technologies.setResearchUnitCount("el_ki_sup_1_tech", 2000)
-    -- 2 tech ki
-    krastorio.technologies.removePrerequisite("el_ki_sup_2_tech", "fu_ki_eff_1_tech")
-    krastorio.technologies.removePrerequisite("el_ki_sup_2_tech", "fi_ki_eff_2_tech")
-    krastorio.technologies.removePrerequisite("el_ki_sup_2_tech", "el_ki_eff_2_tech")
-    krastorio.technologies.removeResearchUnitIngredient("el_ki_sup_2_tech", "production-science-pack")
-    krastorio.technologies.removeResearchUnitIngredient("el_ki_sup_2_tech", "se-energy-science-pack-1")
-    krastorio.technologies.removeResearchUnitIngredient("el_ki_sup_2_tech", "se-material-science-pack-3")
-    krastorio.technologies.setResearchUnitCount("el_ki_sup_2_tech", 2000)
-end
+-- 1 tech ki
+atom.util.Technology("el_ki_sup_1_tech").removePrerequisite("fi_ki_eff_1_tech")
+atom.util.Technology("el_ki_sup_1_tech").removePrerequisite("el_ki_eff_1_tech")
+atom.util.Technology("el_ki_sup_1_tech").addPrerequisite("fi_ki_tech")
+atom.util.Technology("el_ki_sup_1_tech").removeIngredient("production-science-pack")
+atom.util.Technology("el_ki_sup_1_tech").addIngredient("se-rocket-science-pack")
+data.raw.technology["el_ki_sup_1_tech"].unit.count = 2000
 
-if mods["bismuth"] then
-    if settings.startup["bismuth-disable-bismuth-as-smelting-byproduct"].value == true then
-        data.raw["resource"]["bismuth-ore"].minable.required_fluid = "water"
-    end
+-- 2 tech ki
+atom.util.Technology("el_ki_sup_2_tech").removePrerequisite("fu_ki_eff_1_tech")
+atom.util.Technology("el_ki_sup_2_tech").removePrerequisite("fi_ki_eff_2_tech")
+atom.util.Technology("el_ki_sup_2_tech").removePrerequisite("el_ki_eff_2_tech")
+atom.util.Technology("el_ki_sup_2_tech").removeIngredient("production-science-pack")
+atom.util.Technology("el_ki_sup_2_tech").removeIngredient("se-energy-science-pack-1")
+atom.util.Technology("el_ki_sup_2_tech").removeIngredient("se-material-science-pack-3")
+data.raw.technology["el_ki_sup_2_tech"].unit.count = 2000
+
+if settings.startup["bismuth-disable-bismuth-as-smelting-byproduct"].value == true then
+    data.raw["resource"]["bismuth-ore"].minable.required_fluid = "water"
 end
 
 equipment.add_category_to_equipment("small-portable-generator", "generator-equipment")
@@ -70,20 +65,18 @@ equipment.add_category_to_equipment("big-battery-mk3-equipment", "battery-equipm
 equipment.add_category_to_equipment("solar-panel-equipment", "solar-equipment")
 equipment.add_category_to_equipment("big-solar-panel-equipment", "solar-equipment")
 equipment.add_category_to_equipment("imersite-solar-panel-equipment", "solar-equipment")
-equipment.add_category_to_equipment("big-imersite-solar-panel-equipment", "solar-equipment")
+equipment.add_category_to_equipment("kr-big-superior-solar-panel-equipment", "solar-equipment")
 
 local arr_categories_for_transport = { "solar-equipment", "transport-shield", "battery-equipment", "defense-equipment",
                                        "generator-equipment" }
 
 -- car
-if mods["Krastorio2"] then
-    data.raw["car"]["car"].consumption = "500kW"
-    data.raw["equipment-grid"]["kr-car-grid"].width = 6
-    data.raw["equipment-grid"]["kr-car-grid"].height = 6
-    equipment.clear_categories_from_grid("kr-car-grid")
-    equipment.add_category_to_grid("kr-car-grid", "vehicle-motor")
-    equipment.add_categories_to_grid("kr-car-grid", arr_categories_for_transport)
-end
+data.raw["car"]["car"].consumption = "500kW"
+data.raw["equipment-grid"]["kr-car-grid"].width = 6
+data.raw["equipment-grid"]["kr-car-grid"].height = 6
+equipment.clear_categories_from_grid("kr-car-grid")
+equipment.add_category_to_grid("kr-car-grid", "vehicle-motor")
+equipment.add_categories_to_grid("kr-car-grid", arr_categories_for_transport)
 
 if mods["RampantArsenal"] then
     -- advanced car rampant arsenal
@@ -102,16 +95,13 @@ if mods["RampantArsenal"] then
     equipment.add_category_to_grid("nuclear-car-grid-rampant-arsenal", "vehicle-motor")
     equipment.add_categories_to_grid("nuclear-car-grid-rampant-arsenal", arr_categories_for_transport)
 end
-
-if mods["Krastorio2"] then
-    -- tank
-    data.raw["car"]["tank"].consumption = "1000kW"
-    data.raw["equipment-grid"]["kr-tank-grid-2"].width = 12
-    data.raw["equipment-grid"]["kr-tank-grid-2"].height = 12
-    equipment.clear_categories_from_grid("kr-tank-grid-2")
-    equipment.add_category_to_grid("kr-tank-grid-2", "vehicle-motor")
-    equipment.add_categories_to_grid("kr-tank-grid-2", arr_categories_for_transport)
-end
+-- tank
+data.raw["car"]["tank"].consumption = "1000kW"
+data.raw["equipment-grid"]["kr-tank-grid-2"].width = 12
+data.raw["equipment-grid"]["kr-tank-grid-2"].height = 12
+equipment.clear_categories_from_grid("kr-tank-grid-2")
+equipment.add_category_to_grid("kr-tank-grid-2", "vehicle-motor")
+equipment.add_categories_to_grid("kr-tank-grid-2", arr_categories_for_transport)
 
 if mods["RampantArsenal"] then
     -- advanced tank rampant arsenal
@@ -130,22 +120,17 @@ if mods["RampantArsenal"] then
     equipment.add_category_to_grid("nuclear-tank-grid-rampant-arsenal", "vehicle-motor")
     equipment.add_categories_to_grid("nuclear-tank-grid-rampant-arsenal", arr_categories_for_transport)
 end
+-- kr advanced tank
+data.raw["car"]["kr-advanced-tank"].consumption = "15000kW"
+data.raw["equipment-grid"]["kr-advanced-tank-grid"].width = 18
+data.raw["equipment-grid"]["kr-advanced-tank-grid"].height = 18
+data.raw["car"]["kr-advanced-tank"].equipment_grid = "kr-advanced-tank-grid"
+equipment.clear_categories_from_grid("kr-advanced-tank-grid")
+equipment.add_category_to_grid("kr-advanced-tank-grid", "vehicle-motor")
+equipment.add_categories_to_grid("kr-advanced-tank-grid", arr_categories_for_transport)
 
-if mods["Krastorio2"] then
-    -- kr advanced tank
-    data.raw["car"]["kr-advanced-tank"].consumption = "15000kW"
-    data.raw["equipment-grid"]["kr-advanced-tank-grid"].width = 18
-    data.raw["equipment-grid"]["kr-advanced-tank-grid"].height = 18
-    data.raw["car"]["kr-advanced-tank"].equipment_grid = "kr-advanced-tank-grid"
-    equipment.clear_categories_from_grid("kr-advanced-tank-grid")
-    equipment.add_category_to_grid("kr-advanced-tank-grid", "vehicle-motor")
-    equipment.add_categories_to_grid("kr-advanced-tank-grid", arr_categories_for_transport)
-end
-
-if mods["mini-machines"] and mods["OD27_5dim_core"] then
-    for i = 1, 10 do
-        data.raw["assembling-machine"]["mini-assembler-" .. i].crafting_speed = data.raw["assembling-machine"]["mini-assembler-" .. i].crafting_speed * 2
-        data.raw["assembling-machine"]["mini-assembler-" .. i].energy_source.emissions_per_minute["pollution"] = data.raw["assembling-machine"]["mini-assembler-" .. i].energy_source.emissions_per_minute["pollution"] / 2
-        data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage = (futil.parse_energy(data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage) / 2) .. "J"
-    end
+for i = 1, 10 do
+    data.raw["assembling-machine"]["mini-assembler-" .. i].crafting_speed = data.raw["assembling-machine"]["mini-assembler-" .. i].crafting_speed * 2
+    data.raw["assembling-machine"]["mini-assembler-" .. i].energy_source.emissions_per_minute.pollution = data.raw["assembling-machine"]["mini-assembler-" .. i].energy_source.emissions_per_minute.pollution / 2
+    data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage = (futil.parse_energy(data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage) / 2) .. "J"
 end

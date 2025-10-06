@@ -26,7 +26,7 @@ local dustToPlateRecipe = atom.util.Recipe({
     category = "smelting",
     energy_required = 9.6,
     ingredients = {
-        { config.itemNames.dust, 12 },
+        { type = "item", name = config.itemNames.dust, amount = 12 },
         { type = "fluid", name = "se-pyroflux", amount = 0.25 }
     },
     results = {

@@ -1,10 +1,10 @@
 -- Change bismuth ammo to output rifle magazines
 atom.util.Recipe("rifle-magazine-bismuth").assign({
-    results = { { "rifle-magazine", 1 } },
-    main_product = "rifle-magazine"
+    results = { { type = "item", name = "kr-rifle-magazine", amount = 1 } },
+    main_product = "kr-rifle-magazine"
 })
 atom.util.Recipe("pistol-magazine-bismuth").assign({
-    results = { { "firearm-magazine", 1 } },
+    results = { { type = "item", name = "firearm-magazine", amount = 1 } },
     main_product = "firearm-magazine"
 })
 

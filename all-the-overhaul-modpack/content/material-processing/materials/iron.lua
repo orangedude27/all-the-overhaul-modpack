@@ -8,7 +8,7 @@ local config = atom.processing.util.prepareConfig({
         dust = "5d-iron-dust",
         ingot = "se-iron-ingot",
         molten = "se-molten-iron",
-        enriched = "enriched-iron",
+        enriched = "kr-enriched-iron",
         pure = "el_materials_pure_iron",
         pellets = "atom-iron-pellets"
     },
@@ -18,13 +18,13 @@ local config = atom.processing.util.prepareConfig({
     },
     additionalResults = {
         oreToPlate = {
-            { name = "manganese-plate", amount = 1, probability = 0.1 }
+            { type = "item", name = "manganese-plate", amount = 1, probability = 0.1 }
         },
         dustToPlate = {
-            { name = "manganese-plate", amount = 1, probability = 0.05 }
+            { type = "item", name = "manganese-plate", amount = 1, probability = 0.05 }
         },
         dustToIngot = {
-            { name = "manganese-ore", amount = 1, probability = 0.05 }
+            { type = "item", name = "manganese-ore", amount = 1, probability = 0.05 }
         }
     }
 })

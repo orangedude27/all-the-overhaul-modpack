@@ -33,5 +33,6 @@ atom.util.item.removeByName("tungsten-powder")
 atom.util.item.removeByName("molten-zirconium")
 
 atom.util.Technology("cobalt-chemistry").addPrerequisite("cobalt-refining")
+atom.util.Technology("kr-enriched-ores").removeRecipe("enriched-alumina")
 
 -- TODO: Add a replacement for tungsten-carbide-casting to the new processing

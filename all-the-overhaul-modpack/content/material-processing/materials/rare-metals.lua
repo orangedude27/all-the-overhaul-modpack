@@ -3,19 +3,19 @@ local config = atom.processing.util.prepareConfig({
     order = "k",
     enableAtStart = true,
     itemNames = {
-        ore = "raw-rare-metals",
-        plate = "rare-metals",
+        ore = "kr-rare-metal-ore",
+        plate = "kr-rare-metals",
         dust = "atom-rare-metals-dust",
         ingot = "atom-rare-metals-ingot",
         molten = "atom-rare-metals-molten",
-        enriched = "enriched-rare-metals",
+        enriched = "kr-enriched-rare-metals",
         pure = "atom-rare-metals-pure",
         pellets = "atom-rare-metals-pellets"
     },
     icons = {
-        ore = { icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png", icon_size = 64, icon_mipmaps = 4 },
+        ore = { icon = "__Krastorio2Assets__/icons/resources/rare-metal-ore.png", icon_size = 64, icon_mipmaps = 4 },
         "pure",
-        plate = { icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png", icon_size = 64 },
+        plate = { icon = "__Krastorio2Assets__/icons/items/rare-metals.png", icon_size = 64 },
         "dust", "ingot", "molten", "enriched", "pellets"
     }
 })

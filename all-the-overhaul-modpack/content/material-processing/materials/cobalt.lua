@@ -12,7 +12,7 @@ local config = atom.processing.util.prepareConfig({
         pellets = "atom-cobalt-pellets"
     },
     icons = {
-        ore = { icon = "__Cobalt__/graphics/icons/cobaltite-ore.png", icon_size = 64 },
+        ore = { icon = "__MetalsForYou2-snogard__/graphics/icons/cobaltite-ore.png", icon_size = 64 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {

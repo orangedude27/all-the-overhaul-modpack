@@ -1,0 +1,14 @@
+{
+    "entity": [
+        ["deep-rare-metals", "deep-kr-rare-metal-ore"]
+    ],
+    "item": [
+        ["gyroscope", "gyro"]
+    ],
+    "recipe": [
+        ["gyroscope", "gyro"]
+    ],
+    "technology": [
+        ["gyroscope", "gyro"]
+    ]
+}

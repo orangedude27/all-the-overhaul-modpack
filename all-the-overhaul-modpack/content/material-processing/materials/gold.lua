@@ -12,7 +12,7 @@ local config = atom.processing.util.prepareConfig({
         pellets = "atom-gold-pellets"
     },
     icons = {
-        ore = { icon = "__ThemTharHills__/graphics/icons/gold-ore.png", icon_size = 64, icon_mipmaps = 4 },
+        ore = { icon = "__ThemTharHills-Updated__/graphics/icons/gold-ore.png", icon_size = 64, icon_mipmaps = 4 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {

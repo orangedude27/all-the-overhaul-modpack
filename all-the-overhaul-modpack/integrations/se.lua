@@ -1,27 +1,23 @@
 -- Recipe balancing
 
 -- Electric motor with rare metals
-local motorRecipe = data["raw"].recipe["rare-metal-electric-motor"]
-motorRecipe.normal.ingredients = {
-    { "iron-gear-wheel", 1 },
-    { "iron-plate", 1 },
-    { "aluminum-cable", 1 },
-    { "rare-metals", 1 }
+local motorRecipe = data["raw"].recipe["se-kr-rare-metal-electric-motor"]
+motorRecipe.ingredients = {
+    { type = "item", name = "iron-gear-wheel", amount = 1 },
+    { type = "item", name = "iron-plate", amount = 1 },
+    { type = "item", name = "aluminum-cable", amount = 1 },
+    { type = "item", name = "kr-rare-metals", amount = 1 }
 }
-motorRecipe.expensive.ingredients = {
-    { "iron-gear-wheel", 1 },
-    { "iron-plate", 1 },
-    { "aluminum-cable", 1 },
-    { "rare-metals", 3 }
-}
-motorRecipe.normal.results[1].amount = 1
-motorRecipe.expensive.results[1].amount = 1
+motorRecipe.results[1].amount = 1
 
 -- Core fragment processing and scrap recycling use the same numbers for balancing reasons
 local function resourceYield(factor)
     factor = factor or 1
 
     local function f(result)
+        if (not result.type) then
+            result.type = "item"
+        end
         if (not result.amount) then
             result.amount = 1
         end
@@ -60,7 +56,7 @@ local function resourceYield(factor)
         f({ probability = 0.05, name = "chromite-ore" }),
         f({ probability = 0.05, name = "manganese-ore" }),
         f({ probability = 0.05, name = "limestone" }),
-        f({ probability = 0.05, name = "raw-rare-metals" }),
+        f({ probability = 0.05, name = "kr-rare-metal-ore" }),
         f({ probability = 0.05, name = "silver-ore" }),
 
         -- Rare
@@ -79,13 +75,13 @@ data.raw.recipe["se-core-fragment-omni"].results = table.assign(
             { amount = 32, name = "crude-oil", type = "fluid" },
             { amount = 16, name = "gas", type = "fluid" },
             { amount = 12, name = "water", type = "fluid" },
-            { amount = 6, name = "mineral-water", type = "fluid" },
+            { amount = 6, name = "kr-mineral-water", type = "fluid" },
             { amount = 4, name = "se-pyroflux", type = "fluid" }
         })
 
 -- Scrap recycling
 -- Results per 1 scrap
-data.raw.recipe["se-scrap-recycling"].results = table.assign(
+data.raw.recipe["se-scrap-hard-recycling"].results = table.assign(
         resourceYield(0.2), {
             { amount = 1, probability = 0.32, name = "heavy-oil", type = "fluid" }
         })
@@ -94,15 +90,15 @@ data.raw.recipe["se-scrap-recycling"].results = table.assign(
 atom.util.recipe.removeByName("singularity-tech-card-alt")
 
 -- Balance recipe for delivery canon capsule
-data.raw.recipe["se-delivery-cannon-capsule"].result_count = 2
+data.raw.recipe["se-delivery-cannon-capsule"].results[1].amount = 2
 
 -- Move adaptive armour 3 to a better position in the tech tree
 atom.util.Technology("se-adaptive-armour-3").replacePrerequisite("space-science-pack", "kr-lithium-sulfur-battery")
 
 -- Remove iron and airtight seal from solid rocket fuel recipes to be consistent with other recipes and other fuels
 local rocketFuelRecipes = {
-    "rocket-fuel-with-ammonia",
-    "rocket-fuel-with-hydrogen-chloride",
+    "kr-rocket-fuel-with-ammonia",
+    "kr-rocket-fuel-with-hydrogen-chloride",
     "se-vulcanite-rocket-fuel",
     "rocket-fuel"
 }
@@ -113,19 +109,18 @@ end
 
 -- Balance glass
 local glassVulcanite = atom.util.Recipe("se-glass-vulcanite")
-glassVulcanite.replaceIngredient("sand", "quartz")
+glassVulcanite.replaceIngredient("kr-sand", "kr-quartz")
 glassVulcanite.replaceIngredient("se-pyroflux", 1)
 glassVulcanite.replaceResult("glass", 21)
 
 -- Fix modifiers for "physical projectile damage" that SE overrides
 local turretDamageBonus = { 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.3, 0.4, 0.4, 0.4, 0.4, 0.5, 0.5, 0.5, 0.5, 0.6, 0.6 }
-for i = 1, 18 do
+for i = 18, 1, -1 do
     local tech = data.raw.technology["physical-projectile-damage-" .. i]
     for j, effect in pairs(tech.effects) do
         if (effect.turret_id) then
-            tech.effects[j] = nil
-        end
-        if (effect.ammo_category) then
+            table.remove(tech.effects, j)
+        elseif (effect.ammo_category) then
             effect.modifier = turretDamageBonus[i]
         end
     end

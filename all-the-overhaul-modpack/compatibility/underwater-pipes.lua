@@ -1,9 +1,9 @@
 if (mods["underwater-pipes"] and mods["dredgeworks"]) then
 	-- Reset ingredients to original values
 	data.raw.recipe["underwater-pipe"].ingredients = {
-		{"pipe", 2},
-		{"steel-plate", 5},
-		{"concrete", 20},
+		{type="item", name="pipe", amount=2},
+		{type="item", name="steel-plate", amount=5},
+		{type="item", name="concrete", amount=20},
 	}
 
 	-- Amount of pipes for underground pipes should equal max length

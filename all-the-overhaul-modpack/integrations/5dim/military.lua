@@ -2,7 +2,7 @@
 
 -- Recipes
 
-local Recipe = require('__stdlib__/stdlib/data/recipe')
+local Recipe = require('__jalm__/stdlib/data/recipe')
 
 for i = 2, 10 do
     Recipe("5d-stone-wall-" .. string.format("%02d", i)):set_enabled(false)

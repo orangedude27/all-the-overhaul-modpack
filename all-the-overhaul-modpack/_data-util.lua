@@ -63,79 +63,17 @@ function data_util.debuglog(message)
 end
 
 ---Not sure what this does
-function data_util.result_to_results(recipe_section)
-    if not recipe_section.result then
-        return
-    end
-    local result_count = recipe_section.result_count or 1
-    if type(recipe_section.result) == "string" then
-        recipe_section.results = { { type = "item", name = recipe_section.result, amount = result_count } }
-    elseif recipe_section.result.name then
-        recipe_section.results = { recipe_section.result }
-    elseif recipe_section.result[1] then
-        result_count = recipe_section.result[2] or result_count
-        recipe_section.results = { { type = "item", name = recipe_section.result[1], amount = result_count } }
-    end
-    recipe_section.result = nil
-end
-
----Not sure what this does
 function data_util.conditional_modify(prototype)
     if data.raw[prototype.type] and data.raw[prototype.type][prototype.name] then
         local raw = data.raw[prototype.type][prototype.name]
 
-        -- update to new spec
-        if not raw.normal then
-            raw.normal = {
-                enabled = raw.enabled,
-                energy_required = raw.energy_required,
-                requester_paste_multiplier = raw.requester_paste_multiplier,
-                hidden = raw.hidden,
-                ingredients = raw.ingredients,
-                results = raw.results,
-                result = raw.result,
-                result_count = raw.result_count,
-            }
-            raw.enabled = nil
-            raw.energy_required = nil
-            raw.requester_paste_multiplier = nil
-            raw.hidden = nil
-            raw.ingredients = nil
-            raw.results = nil
-            raw.result = nil
-            raw.result_count = nil
-        end
-        if not raw.expensive then
-            raw.expensive = table.deepcopy(raw.normal)
-        end
-        if not raw.normal.results and raw.normal.result then
-            data_util.result_to_results(raw.normal)
-        end
-        if not raw.expensive.results and raw.expensive.result then
-            data_util.result_to_results(raw.expensive)
-        end
-
         for key, property in pairs(prototype) do
             if key == "ingredients" then
-                raw.normal.ingredients = table.deepcopy(property)
-                raw.expensive.ingredients = table.deepcopy(property)
+                raw.ingredients = table.deepcopy(property)
             elseif key == "results" then
-                raw.normal.results = table.deepcopy(property)
-                raw.expensive.results = table.deepcopy(property)
-            elseif key ~= "normal" and key ~= "expensive" then
+                raw.results = table.deepcopy(property)
+            else
                 raw[key] = property
-            end
-        end
-
-        if prototype.normal then
-            for key, property in pairs(prototype.normal) do
-                raw.normal[key] = property
-            end
-        end
-
-        if prototype.expensive then
-            for key, property in pairs(prototype.expensive) do
-                raw.expensive[key] = property
             end
         end
     end
@@ -177,12 +115,6 @@ function data_util.replace_or_add_ingredient(recipe, old, new, amount, is_fluid)
     if recipe.ingredients then
         data_util.replace_or_add_ingredient_sub(recipe, old, new, amount, is_fluid)
     end
-    if recipe.normal and recipe.normal.ingredients then
-        data_util.replace_or_add_ingredient_sub(recipe.normal, old, new, amount, is_fluid)
-    end
-    if recipe.expensive and recipe.expensive.ingredients and recipe.expensive.ingredients ~= (recipe.normal and recipe.normal.ingredients) then
-        data_util.replace_or_add_ingredient_sub(recipe.expensive, old, new, amount, is_fluid)
-    end
 end
 
 ---Makes recipe hidden
@@ -192,12 +124,6 @@ function data_util.disable_recipe(recipe_name)
         type = "recipe",
         name = recipe_name,
         enabled = false,
-        normal = {
-            enabled = false
-        },
-        expensive = {
-            enabled = false
-        }
     })
 end
 

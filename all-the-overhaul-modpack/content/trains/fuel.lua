@@ -21,19 +21,19 @@ table.assign(data.raw.item["rocket-fuel"], {
 
 -- Vehicle Fuel
 
-table.assign(data.raw.item["fuel"], {
+table.assign(data.raw.item["kr-fuel"], {
     fuel_acceleration_multiplier = 1.0,
     fuel_top_speed_multiplier = 1.0,
     fuel_emissions_multiplier = 1.0
 })
 
-table.assign(data.raw.item["bio-fuel"], {
+table.assign(data.raw.item["kr-biofuel"], {
     fuel_acceleration_multiplier = 1.0,
     fuel_top_speed_multiplier = 1.0,
     fuel_emissions_multiplier = 0.5
 })
 
-table.assign(data.raw.item["advanced-fuel"], {
+table.assign(data.raw.item["kr-advanced-fuel"], {
     fuel_acceleration_multiplier = 1.125,
     fuel_top_speed_multiplier = 1.125,
     fuel_emissions_multiplier = 1.5

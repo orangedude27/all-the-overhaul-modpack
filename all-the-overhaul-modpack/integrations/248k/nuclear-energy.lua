@@ -36,7 +36,7 @@ data:extend({
     {
         name = "thorium-fuel",
         type = "technology",
-        icon = "__248k__/ressources/fission/fi_fuel/fi_fuel_basic_thorium_item.png",
+        icon = "__248k-Redux-graphics__/ressources/fission/fi_fuel/fi_fuel_basic_thorium_item.png",
         icon_size = 64,
         prerequisites = { "se-centrifuge" },
         effects = {
@@ -50,7 +50,7 @@ data:extend({
             }
         },
         unit = {
-            count = "250",
+            count = 250,
             ingredients = {
                 { "chemical-science-pack", 1 },
                 { "automation-science-pack", 1 },
@@ -73,7 +73,8 @@ purifierTech.prototype.unit.count = 250
 
 local solutionRecipe = atom.util.Recipe("fi_solution_recipe")
 solutionRecipe.replaceIngredient("fi_strong_acid", "el_acidic_water")
-solutionRecipe.prototype.results[1].catalyst_amount = 20
+solutionRecipe.prototype.results[1].ignored_by_productivity = 20
+solutionRecipe.prototype.results[1].ignored_by_stats = 20
 
 
 -- Uranium-233 fuel rods
@@ -83,7 +84,7 @@ uranium233Item.fuel_category = "nuclear-advanced"
 uranium233Item.fuel_glow_color = { r = 0.67, g = 0.90, b = 0.69, a = 1 }
 
 local uranium233Recipe = atom.util.Recipe("fi_advanced_thorium_fuel_recipe")
-uranium233Recipe.prototype.result_count = 4
+uranium233Recipe.prototype.results[1].amount = 4
 uranium233Recipe.replaceIngredient("el_materials_ALK", "lead-plate", 10)
 uranium233Recipe.addIngredient("zircaloy-4", 10)
 
@@ -91,7 +92,7 @@ data:extend({
     {
         name = "uranium233-fuel",
         type = "technology",
-        icon = "__248k__/ressources/fission/fi_fuel/fi_fuel_advanced_thorium_item.png",
+        icon = "__248k-Redux-graphics__/ressources/fission/fi_fuel/fi_fuel_advanced_thorium_item.png",
         icon_size = 64,
         prerequisites = { "se-rocket-science-pack", "thorium-fuel", "fi_advanced_purifier_tech" },
         effects = {
@@ -105,7 +106,7 @@ data:extend({
             }
         },
         unit = {
-            count = "250",
+            count = 250,
             ingredients = {
                 { "chemical-science-pack", 1 },
                 { "automation-science-pack", 1 },
@@ -127,14 +128,14 @@ uranium235Item.fuel_glow_color = { r = 0.50, g = 0.95, b = 0.55, a = 1 }
 
 local uranium235Recipe = atom.util.Recipe("fi_basic_fuel_recipe")
 uranium235Recipe.prototype.energy_required = 50
-uranium235Recipe.prototype.result_count = 5
+uranium235Recipe.prototype.results[1].amount = 5
 uranium235Recipe.replaceIngredient("el_materials_ALK", "lead-plate", 10)
 uranium235Recipe.addIngredient("zircaloy-4", 10)
 
 local uranium235Tech = atom.util.Technology("fi_refining_tech")
 uranium235Tech.assign({
     name = "uranium235-fuel",
-    icon = "__248k__/ressources/fission/fi_fuel/fi_fuel_basic_item.png",
+    icon = "__248k-Redux-graphics__/ressources/fission/fi_fuel/fi_fuel_basic_item.png",
     icon_size = 64,
     prerequisites = { "5d-nuclear-reactor", "uranium233-fuel" },
     effects = {
@@ -170,7 +171,7 @@ plutonium239Item.fuel_category = "nuclear-high-energy"
 plutonium239Item.fuel_glow_color = { r = 0.57, g = 0.91, b = 1, a = 1 }
 
 local plutonium239Recipe = atom.util.Recipe("fi_advanced_fuel_recipe")
-plutonium239Recipe.prototype.result_count = 5
+plutonium239Recipe.prototype.results[1].amount = 5
 plutonium239Recipe.prototype.energy_required = 75
 plutonium239Recipe.replaceIngredient("el_materials_ALK", "lead-plate", 10)
 plutonium239Recipe.addIngredient("zircaloy-4", 10)
@@ -179,7 +180,7 @@ data:extend({
     {
         name = "plutonium239-fuel",
         type = "technology",
-        icon = "__248k__/ressources/fission/fi_fuel/fi_fuel_advanced_item.png",
+        icon = "__248k-Redux-graphics__/ressources/fission/fi_fuel/fi_fuel_advanced_item.png",
         icon_size = 64,
         prerequisites = { "uranium235-fuel", "kr-optimization-tech-card" },
         effects = {
@@ -193,7 +194,7 @@ data:extend({
             }
         },
         unit = {
-            count = "250",
+            count = 250,
             ingredients = {
                 { "chemical-science-pack", 1 },
                 { "automation-science-pack", 1 },
@@ -216,7 +217,7 @@ highEnergyItem.fuel_category = "nuclear-high-energy"
 highEnergyItem.fuel_glow_color = { r = 0.91, g = 0.86, b = 0.62, a = 1 }
 
 local highEnergyRecipe = atom.util.Recipe("fi_pure_fuel_recipe")
-highEnergyRecipe.prototype.result_count = 5
+highEnergyRecipe.prototype.results[1].amount = 5
 highEnergyRecipe.prototype.energy_required = 100
 highEnergyRecipe.replaceIngredient("el_materials_ALK", "lead-plate", 10)
 highEnergyRecipe.addIngredient("zircaloy-4", 10)
@@ -225,7 +226,7 @@ data:extend({
     {
         name = "high-energy-fuel",
         type = "technology",
-        icon = "__248k__/ressources/fission/fi_fuel/fi_fuel_pure_item.png",
+        icon = "__248k-Redux-graphics__/ressources/fission/fi_fuel/fi_fuel_pure_item.png",
         icon_size = 64,
         prerequisites = { "plutonium239-fuel", "se-energy-science-pack-1" },
         effects = {
@@ -239,7 +240,7 @@ data:extend({
             }
         },
         unit = {
-            count = "250",
+            count = 250,
             ingredients = {
                 { "chemical-science-pack", 1 },
                 { "automation-science-pack", 1 },

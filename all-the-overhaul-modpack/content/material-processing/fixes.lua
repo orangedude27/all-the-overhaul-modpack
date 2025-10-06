@@ -1,38 +1,16 @@
 require("materials")
 
-if mods["248k"] then
-    require("fixes.248k")
-end
-if mods["Krastorio2"] then
-    require("fixes.k2")
-end
-if mods["space-exploration"] then
-    require("fixes.se")
-end
-if mods["timeken"] then
-    require("fixes.timeken")
-end
-if mods["OD27_5dim_core"] then
-    require("fixes.5dim")
-end
-if mods["248k"] then
-    require("fixes.bz")
-end
-if mods["BrassTacks"] then
-    require("fixes.brasstacks")
-end
-if mods["planetfall"] then
-    require("fixes.planetfall")
-end
-if mods["aai"] then
-    require("fixes.aai")
-end
-if mods["Bio_Industries"] then
-    require("fixes.bio")
-end
-if mods["trikop"] then
-    require("fixes.trikop")
-end
+require("fixes.248k")
+require("fixes.k2")
+require("fixes.se")
+require("fixes.timeken")
+require("fixes.5dim")
+require("fixes.bz")
+require("fixes.brasstacks")
+require("fixes.planetfall")
+require("fixes.aai")
+require("fixes.bio")
+require("fixes.trikop")
 
 -- Remove vanilla plate recipes
 atom.util.recipe.removeByName("copper-plate")

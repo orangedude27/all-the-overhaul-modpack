@@ -24,8 +24,8 @@ local entity = {
     stack_size = 200,
     default_request_amount = 10,
     effect = {
-        pollution = { bonus = 1 },
-        consumption = { bonus = -0.4 },
+        pollution = 1,
+        consumption = -0.4,
     },
     beacon_tint = {
         primary = { r = 0.4, g = 0.3, b = 0.2 },
@@ -40,14 +40,14 @@ local recipe = {
     name = "pollution_create_module_1",
     enabled = false,
     ingredients = {
-        { "effectivity-module", 1 },
-        { "electronic-circuit", 10 },
-        { "pcb-solder", 10 },
-        { "electronic-components", 10 },
-        { "biomass", 10 },
+        { type = "item", name = "efficiency-module", amount = 1 },
+        { type = "item", name = "electronic-circuit", amount = 10 },
+        { type = "item", name = "pcb-solder", amount = 10 },
+        { type = "item", name = "kr-electronic-components", amount = 10 },
+        { type = "item", name = "kr-biomass", amount = 10 },
     },
     energy_required = 10,
-    result = "pollution_create_module_1",
+    results = {{type="item", name="pollution_create_module_1", amount=1}},
 }
 
 local technology = {
@@ -66,7 +66,7 @@ local technology = {
     unit = {
         count = 50,
         ingredients = {
-            { "basic-tech-card", 1 },
+            { "kr-basic-tech-card", 1 },
             { "automation-science-pack", 1 },
             { "logistic-science-pack", 1 },
         },

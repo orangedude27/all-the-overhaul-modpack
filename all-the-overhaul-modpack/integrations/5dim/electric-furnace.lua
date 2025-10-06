@@ -5,7 +5,7 @@ data.raw["assembling-machine"]["5d-electric-furnace-02"].crafting_speed = 3
 
 -- Recipes
 
-local Recipe = require('__stdlib__/stdlib/data/recipe')
+local Recipe = require('__jalm__/stdlib/data/recipe')
 
 local recipe02 = Recipe("5d-electric-furnace-02")
 local recipe03 = Recipe("5d-electric-furnace-03")
@@ -26,7 +26,7 @@ recipe03:add_ingredient({ "solder", 8 })
 recipe03:add_ingredient({ "temperature-sensor", 1 })
 recipe03:add_ingredient({ "hv-power-regulator", 1 })
 recipe03:add_ingredient({ "el_energy_crystal_charged_item", 1 })
-recipe03:replace_ingredient("steel-plate", { "imersium-plate", 9 })
+recipe03:replace_ingredient("steel-plate", { "kr-imersium-plate", 9 })
 recipe03:replace_ingredient("advanced-circuit", { "se-heat-shielding", 10 })
 
 recipe04:add_ingredient({ "solder", 8 })
@@ -62,7 +62,7 @@ recipe07:replace_ingredient("advanced-circuit", { "se-heat-shielding", 10 })
 
 recipe08:add_ingredient({ "solder", 8 })
 recipe08:add_ingredient({ "temperature-sensor", 1 })
-recipe08:add_ingredient({ "ai-core", 1 })
+recipe08:add_ingredient({ "kr-ai-core", 1 })
 recipe08:add_ingredient({ "fu_materials_energy_charged_crystal", 1 })
 recipe08:replace_ingredient("productivity-module-2", { "fu_materials_TIM", 5 })
 recipe08:replace_ingredient("steel-plate", { "se-aeroframe-bulkhead", 10 })
@@ -70,7 +70,7 @@ recipe08:replace_ingredient("low-density-structure", { "se-heat-shielding", 10 }
 
 recipe09:add_ingredient({ "solder", 8 })
 recipe09:add_ingredient({ "temperature-sensor", 1 })
-recipe09:add_ingredient({ "ai-core", 1 })
+recipe09:add_ingredient({ "kr-ai-core", 1 })
 recipe09:add_ingredient({ "fu_materials_energy_charged_crystal", 1 })
 recipe09:replace_ingredient("speed-module-3", { "se-nanomaterial", 5 })
 recipe09:replace_ingredient("steel-plate", { "se-heavy-assembly", 10 })
@@ -78,7 +78,7 @@ recipe09:replace_ingredient("low-density-structure", { "se-heat-shielding", 10 }
 
 recipe10:add_ingredient({ "solder", 8 })
 recipe10:add_ingredient({ "temperature-sensor", 1 })
-recipe10:add_ingredient({ "ai-core", 1 })
+recipe10:add_ingredient({ "kr-ai-core", 1 })
 recipe10:add_ingredient({ "se-naquium-cube", 1 })
 recipe10:replace_ingredient("productivity-module-3", { "se-nanomaterial", 5 })
 recipe10:replace_ingredient("steel-plate", { "se-heavy-assembly", 10 })

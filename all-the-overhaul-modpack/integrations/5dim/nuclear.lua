@@ -1,5 +1,5 @@
 -- Only use nuclear reactor mk2 and remove the rest
-local Recipe = require("__stdlib__/stdlib/data/recipe")
+local Recipe = require("__jalm__/stdlib/data/recipe")
 for i = 2, 10 do
     Recipe("5d-steam-turbine-" .. string.format("%02d", i)):set_enabled(false)
     Recipe("5d-heat-exchanger-" .. string.format("%02d", i)):set_enabled(false)
@@ -25,8 +25,7 @@ mk1Entity.neighbour_bonus = 0.25
 mk1Entity.energy_source.fuel_categories = { "nuclear", "nuclear-advanced" }
 mk1Entity.energy_source.fuel_inventory_size = 2
 mk1Entity.energy_source.burnt_inventory_size = 2
-mk1Entity.working_light_picture.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/reactor-lights-color.png"
-mk1Entity.working_light_picture.hr_version.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/hr-reactor-lights-color.png"
+mk1Entity.working_light_picture.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/hr-reactor-lights-color.png"
 
 atom.util.Recipe("nuclear-reactor").replaceIngredient("processing-unit", "advanced-circuit")
 
@@ -43,7 +42,7 @@ atom.util.Recipe(data.raw.recipe["heat-exchanger"]).replaceIngredient("self-regu
 atom.util.Recipe(data.raw.recipe["steam-turbine"]).replaceIngredient("self-regulating-valve", "invar-valve")
 
 -- Adjust technology for uranium processing
-atom.util.Technology("uranium-processing").replacePrerequisite("advanced-electronics-2", "5d-nuclear-reactor-01")
+atom.util.Technology("uranium-processing").replacePrerequisite("processing-unit", "5d-nuclear-reactor-01")
 
 
 -- Adjust reactor mk2
@@ -70,5 +69,4 @@ mk2Entity.neighbour_bonus = 1
 mk2Entity.energy_source.fuel_categories = { "nuclear", "nuclear-advanced", "nuclear-high-energy" }
 mk2Entity.energy_source.fuel_inventory_size = 3
 mk2Entity.energy_source.burnt_inventory_size = 3
-mk2Entity.working_light_picture.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/reactor-lights-color.png"
-mk2Entity.working_light_picture.hr_version.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/hr-reactor-lights-color.png"
+mk2Entity.working_light_picture.filename = "__all-the-overhaul-modpack__/graphics/entity/nuclear-reactor/hr-reactor-lights-color.png"

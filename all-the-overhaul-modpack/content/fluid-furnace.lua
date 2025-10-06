@@ -3,16 +3,14 @@ table.assign(entity, {
     name = "fluid-furnace",
     energy_source = {
         type = "fluid",
-        emissions_per_minute = 3,
+        emissions_per_minute = { pollution = 3 },
         burns_fluid = true,
         scale_fluid_usage = true,
         fluid_box = {
-            base_area = 1,
-            height = 2,
-            base_level = -1,
+            volume = 200,
             pipe_connections = {
-                { type = "input-output", position = { 1.5, 0.5 } },
-                { type = "input-output", position = { -1.5, 0.5 } },
+                { flow_direction = "input-output", direction = defines.direction.east, position = { 0.5, 0.5 } },
+                { flow_direction = "input-output", direction = defines.direction.west, position = { -0.5, 0.5 } },
             },
             pipe_covers = pipecoverspictures(),
             pipe_picture = assembler2pipepictures(),
@@ -52,10 +50,10 @@ local recipe = {
     energy_required = 2,
     enabled = false,
     ingredients = {
-        { "steel-furnace", 1 },
-        { "pipe", 2 },
+        { type = "item", name = "steel-furnace", amount = 1 },
+        { type = "item", name = "pipe", amount = 2 },
     },
-    result = "fluid-furnace",
+    results = {{type="item", name="fluid-furnace", amount=1}},
 }
 
 local technology = {

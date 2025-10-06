@@ -8,6 +8,7 @@ local function change_setting(setting_name, value, hide)
         if setting then
 
             if setting_type == "bool-setting" then
+                setting.hidden = true
                 setting.forced_value = value
             end
 
@@ -58,7 +59,7 @@ if mods["boblibrary"] then
     change_setting("bobmods-library-recipe-cleanup", false)
 end
 --248k
-if mods["248k"] then
+if mods["248k-Redux"] then
     change_setting("el_solar_power_output", "80kW (normal)")
     change_setting("el_burner_power_output", "1.2MW (low)")
     change_setting("el_water_generator_power_output", "3MW (low)")
@@ -95,7 +96,7 @@ if mods["balanced-waterfill"] then
     change_setting("balanced-waterfill-biterspeed-setting", false)
 end
 --BioIndustries
-if mods["Bio_Industries"] then
+if mods["Bio_Industries_2"] then
     change_setting("BI_Solar_Additions", false)
     change_setting("BI_Bio_Cannon", false)
     change_setting("BI_Easy_Bio_Gardens", false)
@@ -110,8 +111,9 @@ if mods["Bio_Industries"] then
     change_setting("BI_Game_Tweaks_Production_Science", false)
 end
 --BrassTacks
-if mods["BrassTacks"] then
+if mods["BrassTacks-Updated"] then
     change_setting("brasstacks-experimental-intermediates", true)
+    change_setting("brasstacks-gyro-override", true)
     change_setting("brasstacks-starting-items", true)
 end
 --bismuth
@@ -185,7 +187,7 @@ if mods["bztungsten"] then
     change_setting("bztungsten-more-intermediates", "cuw")
     change_setting("bztungsten-avoid-military", "yes")
     change_setting("bztungsten-se-sintering", true)
-    change_setting("bztungsten-mining-fluid-k2", "mineral-water")
+    change_setting("bztungsten-mining-fluid-k2", "kr-mineral-water")
     change_setting("bztungsten-mining-fluid-amount-k2", 1)
 end
 --bzzirconium
@@ -229,7 +231,7 @@ if mods["companion-drones-rebalanced"] then
     change_setting("start-companions-has-shield", false)
 end
 --IfNickel
-if mods["IfNickel"] then
+if mods["IfNickel-Updated"] then
     change_setting("ifnickel-experimental-intermediates", true)
 end
 --k2
@@ -397,7 +399,7 @@ if mods["Load-Furn-2"] then
     change_setting("cool", false)
     change_setting("load-furn-energy", 2)
 end
-if mods["BrimStuff"] then
+if mods["BrimStuff-Updated"] then
     change_setting("brimstuff-greenhouse", false)
     change_setting("brimstuff-waste-treatment", false, false)
     change_setting("brimstuff-krastorio-filter-hell", false)
@@ -405,7 +407,7 @@ if mods["BrimStuff"] then
     change_setting("brimstuff-clobber-bz-chemical-plant", false, false)
 end
 --5Dim's
-if mods["OD27_5dim_resources"] then
+if mods["5dim_resources"] then
     change_setting("5d-industrial-furnace", false)
 end
 --Black Wagons

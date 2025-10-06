@@ -1,7 +1,0 @@
-{
-    "item": [
-        ["fi_crushed_coal_item", "atom-coal-dust"],
-        ["fi_crushed_stone_item", "atom-stone-dust"],
-        ["stone-crushed", "atom-stone-dust"]
-    ]
-}

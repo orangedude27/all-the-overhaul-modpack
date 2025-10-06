@@ -9,13 +9,13 @@ local recipe = atom.util.Recipe({
     ingredients = {
         { type = "fluid", name = "petroleum-gas", amount = 1000 },
         { type = "fluid", name = "oxygen", amount = 1000 },
-        { "stone", 100 },
-        { "wood", 100 },
-        { "coke", 100 },
-        { "raw-fish", 5 }
+        { type = "item", name = "stone", amount = 100 },
+        { type = "item", name = "wood", amount = 100 },
+        { type = "item", name = "coke", amount = 100 },
+        { type = "item", name = "raw-fish", amount = 5 }
     },
     results = {
-        { type = "item", name = "biomass", amount = 5 },
+        { type = "item", name = "kr-biomass", amount = 5 },
     }
 })
 recipe.unlockedByTechnology("military-science-pack")

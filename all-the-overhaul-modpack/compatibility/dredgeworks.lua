@@ -33,7 +33,7 @@ if mods["dredgeworks"] then
     table.assign(drill2, {
         name = "seafloor-drill-mk2",
         minable = { mining_time = 0.5, result = "seafloor-drill-mk2" },
-        collision_mask = { 'ground-tile', 'object-layer' },
+        collision_mask = { layers = { ['ground_tile'] = true, ['object'] = true }},
         fast_replaceable_group = "seafloor-drill",
         next_upgrade = "seafloor-drill-mk3",
         icons = {
@@ -59,11 +59,10 @@ if mods["dredgeworks"] then
             enabled = false,
             energy_required = 1,
             ingredients = {
-                { "flotation-platform", 4 },
-                { "kr-electric-mining-drill-mk2", 1 }
+                { type = "item", name = "flotation-platform", amount = 4 },
+                { type = "item", name = "kr-electric-mining-drill-mk2", amount = 1 }
             },
-            result = "seafloor-drill-mk2",
-            result_count = 1
+            results = {{type="item", name="seafloor-drill-mk2", amount=1}},
         },
         {
             type = "technology",
@@ -94,7 +93,7 @@ if mods["dredgeworks"] then
     table.assign(drill3, {
         name = "seafloor-drill-mk3",
         minable = { mining_time = 0.5, result = "seafloor-drill-mk3" },
-        collision_mask = { 'ground-tile', 'object-layer' },
+        collision_mask = { layers = { ['ground_tile'] = true, ['object'] = true }},
         fast_replaceable_group = "seafloor-drill",
         next_upgrade = nil,
         icons = {
@@ -120,11 +119,10 @@ if mods["dredgeworks"] then
             enabled = false,
             energy_required = 1,
             ingredients = {
-                { "flotation-platform", 4 },
-                { "kr-electric-mining-drill-mk3", 1 }
+                { type = "item", name = "flotation-platform", amount = 4 },
+                { type = "item", name = "kr-electric-mining-drill-mk3", amount = 1 }
             },
-            result = "seafloor-drill-mk3",
-            result_count = 1
+            results = {{type="item", name="seafloor-drill-mk3", amount=1}},
         },
         {
             type = "technology",

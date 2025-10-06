@@ -9,7 +9,7 @@ local config = atom.processing.util.prepareConfig({
         ingot = "fu_materials_neodym_ingot",
     },
     icons = {
-        plate = { icon = "__248k__/ressources/fission/fi_materials/fi_materials_neodym.png", icon_size = 64 },
+        plate = { icon = "__248k-Redux-graphics__/ressources/fission/fi_materials/fi_materials_neodym.png", icon_size = 64 },
         "dust", "ingot"
     },
     unlockedBy = {
@@ -31,11 +31,11 @@ local rareToDustRecipe = Recipe({
     category = "chemistry",
     energy_required = 4.8,
     ingredients = {
-        { atom.processing.materials.rareMetals.itemNames.dust, 3 },
+        { type = "item", name = atom.processing.materials.rareMetals.itemNames.dust, amount = 3 },
         { type = "fluid", name = "aqua-regia", amount = 1 }
     },
     results = {
-        { name = config.itemNames.dust, amount = 2 },
+        { type = "item", name = config.itemNames.dust, amount = 2 },
         data.raw.fluid["depleted-acid"] and { type = "fluid", name = "depleted-acid", amount = 1 } or nil
     },
     main_product = config.itemNames.dust,

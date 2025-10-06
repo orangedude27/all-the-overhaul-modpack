@@ -10,7 +10,7 @@ atom.util.technology = {
             if tech.prerequisites then
                 for i, prerequisite in pairs(tech.prerequisites) do
                     if prerequisite == old then
-                        tech.prerequisites[i] = nil
+                        table.remove(tech.prerequisites, i)
                         for j = 1, new.n do
                             table.insert(tech.prerequisites, new[j])
                         end
@@ -127,12 +127,6 @@ function atom.util.Technology(value)
             if technology.unit then
                 apply(technology, amount or 1)
             end
-            if technology.normal then
-                apply(technology.normal, amount or 1)
-            end
-            if technology.expensive then
-                apply(technology.expensive, expensiveAmount or amount or 1)
-            end
         end,
 
         -- Removes an existing ingredient by name
@@ -141,20 +135,12 @@ function atom.util.Technology(value)
             local function apply(_table)
                 for i, result in pairs(_table.unit.ingredients) do
                     if result.name == ingredientName then
-                        _table.unit.ingredients[i] = nil
-                    elseif result[1] == ingredientName then
-                        _table.unit.ingredients[i] = nil
+                        table.remove(_table.unit.ingredients, i)
                     end
                 end
             end
             if technology.unit then
                 apply(technology)
-            end
-            if technology.normal then
-                apply(technology.normal)
-            end
-            if technology.expensive then
-                apply(technology.expensive)
             end
         end,
 

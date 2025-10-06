@@ -1,15 +1,15 @@
 -- Low quality advanced circuit
 table.assign(data["raw"].recipe["low-quality-advanced-circuit"], {
     ingredients = {
-        { "copper-cable", 4 },
-        { "electronic-circuit", 4 },
-        { "solder", 6 },
-        { "electronic-components", 3 },
-        { "circuit-board", 1 }
+        { type = "item", name = "copper-cable", amount = 4 },
+        { type = "item", name = "electronic-circuit", amount = 4 },
+        { type = "item", name = "solder", amount = 6 },
+        { type = "item", name = "kr-electronic-components", amount = 3 },
+        { type = "item", name = "circuit-board", amount = 1 }
     },
     results = {
-        { amount = 2, name = "advanced-circuit", probability = 0.75 },
-        { amount = 2, name = "se-scrap", probability = 0.25 }
+        { type = "item", amount = 2, name = "advanced-circuit", probability = 0.75 },
+        { type = "item", amount = 2, name = "se-scrap", probability = 0.25 }
     }
 })
 
@@ -28,7 +28,7 @@ atom.util.Recipe("chromel-r-fabric").replaceIngredient("chromium-plate", 4)
 local thoriumLandfill = atom.util.Recipe(table.deepcopy(data.raw.recipe["landfill-iron-ore"]))
 thoriumLandfill.prototype.name = "landfill-thorium-ore"
 thoriumLandfill.prototype.order = "z-b-thorium-ore"
-thoriumLandfill.prototype.icons[2] = { icon = "__Tantalite__/graphics/icons/thorium-ore.png", icon_size = 64, icon_mipmaps = 3, scale = 0.17 }
+thoriumLandfill.prototype.icons[2] = { icon = "__MetalsForYou2-snogard__/graphics/icons/thorium-ore.png", icon_size = 64, icon_mipmaps = 3, scale = 0.17 }
 thoriumLandfill.replaceIngredient("iron-ore", "thorium-ore")
 thoriumLandfill.unlockedByTechnology("se-recycling-facility")
 thoriumLandfill.apply()

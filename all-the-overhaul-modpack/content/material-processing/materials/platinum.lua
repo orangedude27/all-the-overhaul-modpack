@@ -4,7 +4,7 @@ local config = atom.processing.util.prepareConfig({
     name = "platinum",
     order = "u",
     itemNames = {
-        ore = "raw-rare-metals",
+        ore = "kr-rare-metal-ore",
         dust = "platinum-powder",
         ingot = "platinum-ingot",
         enriched = "atom-platinum-enriched"
@@ -15,10 +15,10 @@ local config = atom.processing.util.prepareConfig({
     },
     additionalResults = {
         dustToIngot = {
-            { name = "sulfur", amount = 1, probability = 0.4 }
+            { type = "item", name = "sulfur", amount = 1, probability = 0.4 }
         },
         dustToEnriched = {
-            { name = "sulfur", amount = 1, probability = 0.16 }
+            { type = "item", name = "sulfur", amount = 1, probability = 0.16 }
         }
     },
     unlockedBy = {
@@ -40,11 +40,11 @@ local oreToDustRecipe = Recipe({
     category = "core-fragment-processing",
     energy_required = 9.6,
     ingredients = {
-        { config.itemNames.ore, 6 },
+        { type = "item", name = config.itemNames.ore, amount = 6 },
         { type = "fluid", name = "aqua-regia", amount = 3 }
     },
     results = {
-        { name = config.itemNames.dust, amount = 6 },
+        { type = "item", name = config.itemNames.dust, amount = 6 },
         data.raw.fluid["depleted-acid"] and { type = "fluid", name = "depleted-acid", amount = 3 } or nil
     },
     main_product = config.itemNames.dust,

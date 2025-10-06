@@ -5,6 +5,3 @@ bec.replaceIngredient("graphite", 5)
 
 atom.util.Recipe("electronic-circuit").replaceIngredient("basic-electronic-components", 2)
 atom.util.Recipe("electronic-circuit-in-laser-mill").replaceIngredient("basic-electronic-components", 2)
-
--- Add usage for Fenolic Board
-atom.util.Recipe("circuit-board").addIngredient("phenolic-board", 1)

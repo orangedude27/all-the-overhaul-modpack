@@ -89,24 +89,14 @@ local technology = {
 local recipe = atom.util.Recipe({
     type = "recipe",
     name = item.name,
-    category = "bioprocessing",
+    category = "kr-bioprocessing",
     energy_required = 1,
-    normal = {
-        enabled = false,
-        ingredients = {
-            { "steel-wall", 1 },
-            { "imersium-plate", 5 }
-        },
-        results = { { type = "item", name = item.name, amount = 1 } }
+    enabled = false,
+    ingredients = {
+        { type = "item", name = "steel-wall", amount = 1 },
+        { type = "item", name = "kr-imersium-plate", amount = 5 }
     },
-    expensive = {
-        enabled = false,
-        ingredients = {
-            { "concrete-wall", 1 },
-            { "imersium-plate", 10 }
-        },
-        results = { { type = "item", name = item.name, amount = 1 } }
-    }
+    results = { { type = "item", name = item.name, amount = 1 } }
 })
 recipe.unlockedByTechnology(technology)
 

@@ -13,7 +13,7 @@ local tantalumConfig = atom.processing.util.prepareConfig({
         pellets = "atom-tantalite-pellets"
     },
     icons = {
-        ore = { icon = "__Tantalite__/graphics/icons/tantalite-ore.png", icon_size = 64, icon_mipmaps = 3 },
+        ore = { icon = "__MetalsForYou2-snogard__/graphics/icons/tantalite-ore.png", icon_size = 64, icon_mipmaps = 3 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {
@@ -46,24 +46,24 @@ local dustToEnrichedRecipe = createTantalum.dustToEnrichedRecipe()
 local dustToPureRecipe = createTantalum.dustToPureRecipe()
 
 oreToPlateRecipe.prototype.results = {
-    { name = tantalumConfig.itemNames.plate, amount_min = 1, amount_max = 2 },
-    { name = niobiumConfig.itemNames.plate, amount_min = 1, amount_max = 2 }
+    { type = "item", name = tantalumConfig.itemNames.plate, amount_min = 1, amount_max = 2 },
+    { type = "item", name = niobiumConfig.itemNames.plate, amount_min = 1, amount_max = 2 }
 }
 dustToPlateRecipe.prototype.results = {
-    { name = tantalumConfig.itemNames.plate, amount = 2 },
-    { name = niobiumConfig.itemNames.plate, amount = 2 }
+    { type = "item", name = tantalumConfig.itemNames.plate, amount = 2 },
+    { type = "item", name = niobiumConfig.itemNames.plate, amount = 2 }
 }
 dustToIngotRecipe.prototype.results = {
-    { name = tantalumConfig.itemNames.ingot, amount = 1 },
-    { name = niobiumConfig.itemNames.ingot, amount = 1 }
+    { type = "item", name = tantalumConfig.itemNames.ingot, amount = 1 },
+    { type = "item", name = niobiumConfig.itemNames.ingot, amount = 1 }
 }
 dustToEnrichedRecipe.prototype.results = {
-    { name = tantalumConfig.itemNames.enriched, amount = 3 },
-    { name = niobiumConfig.itemNames.enriched, amount = 3 }
+    { type = "item", name = tantalumConfig.itemNames.enriched, amount = 3 },
+    { type = "item", name = niobiumConfig.itemNames.enriched, amount = 3 }
 }
 dustToPureRecipe.prototype.results = {
-    { name = tantalumConfig.itemNames.pure, amount = 3 },
-    { name = niobiumConfig.itemNames.pure, amount = 3 }
+    { type = "item", name = tantalumConfig.itemNames.pure, amount = 3 },
+    { type = "item", name = niobiumConfig.itemNames.pure, amount = 3 }
 }
 
 atom.util.applyAll({

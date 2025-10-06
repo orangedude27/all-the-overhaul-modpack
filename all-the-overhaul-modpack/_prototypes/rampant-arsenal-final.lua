@@ -1,3 +1,5 @@
+local gyroscope_name = data.raw.item["gyroscope"] and "gyroscope" or "gyro"
+
 bobmods.lib.recipe.remove_ingredient("bio-magazine-ammo-rampant-arsenal", "piercing-rounds-magazine")
 bobmods.lib.recipe.add_ingredient("bio-magazine-ammo-rampant-arsenal", { "armor-piercing-rifle-magazine", 1 })
 bobmods.lib.recipe.remove_ingredient("bio-magazine-ammo-rampant-arsenal", "copper-plate")
@@ -49,11 +51,11 @@ bobmods.lib.recipe.add_ingredient("incendiary-rocket-ammo-rampant-arsenal", { "t
 
 bobmods.lib.recipe.remove_ingredient("gun-item-rampant-arsenal", "steel-plate")
 bobmods.lib.recipe.add_ingredient("gun-item-rampant-arsenal", { "engine-unit", 5 })
-bobmods.lib.recipe.add_ingredient("gunitem-rampant-arsenal", { "steel-beam", 4 })
-bobmods.lib.recipe.add_ingredient("gun-item-rampant-arsenal", { "steel-gear-wheel", 4 })
-bobmods.lib.recipe.add_ingredient("gun-item-rampant-arsenal", { "steel-gear-wheel", 4 })
+bobmods.lib.recipe.add_ingredient("gunitem-rampant-arsenal", { "kr-steel-beam", 4 })
+bobmods.lib.recipe.add_ingredient("gun-item-rampant-arsenal", { "kr-steel-gear-wheel", 4 })
+bobmods.lib.recipe.add_ingredient("gun-item-rampant-arsenal", { "kr-steel-gear-wheel", 4 })
 bobmods.lib.recipe.add_ingredient("gun-item-rampant-arsenal", { "cuw", 4 })
-bobmods.lib.recipe.add_ingredient("gun-item-rampant-arsenal", { "gyroscope", 5 })
+bobmods.lib.recipe.add_ingredient("gun-item-rampant-arsenal", { gyroscope_name, 5 })
 bobmods.lib.recipe.add_ingredient("gun-item-rampant-arsenal", { "motorized-articulator", 5 })
 
 bobmods.lib.recipe.add_ingredient("shotgun-ammo-turret-rampant-arsenal", { "flywheel", 1 })
@@ -70,26 +72,26 @@ bobmods.lib.recipe.add_ingredient("acid-cannon-rampant-arsenal", { "lead-plate",
 
 bobmods.lib.recipe.add_ingredient("lightning-item-rampant-arsenal", { "motorized-articulator", 5 })
 bobmods.lib.recipe.add_ingredient("lightning-item-rampant-arsenal", { "ti-sapphire", 1 })
-bobmods.lib.recipe.add_ingredient("lightning-item-rampant-arsenal", { "gyroscope", 5 })
+bobmods.lib.recipe.add_ingredient("lightning-item-rampant-arsenal", { gyroscope_name, 5 })
 
-bobmods.lib.recipe.add_ingredient("advanced-laser-item-rampant-arsenal", { "gyroscope", 5 })
+bobmods.lib.recipe.add_ingredient("advanced-laser-item-rampant-arsenal", { gyroscope_name, 5 })
 
-bobmods.lib.recipe.add_ingredient("cannon-item-rampant-arsenal", { "gyroscope", 5 })
+bobmods.lib.recipe.add_ingredient("cannon-item-rampant-arsenal", { gyroscope_name, 5 })
 bobmods.lib.recipe.add_ingredient("cannon-item-rampant-arsenal", { "motorized-articulator", 5 })
 
-bobmods.lib.recipe.add_ingredient("rapid-cannon-item-rampant-arsenal", { "gyroscope", 5 })
+bobmods.lib.recipe.add_ingredient("rapid-cannon-item-rampant-arsenal", { gyroscope_name, 5 })
 bobmods.lib.recipe.add_ingredient("rapid-cannon-item-rampant-arsenal", { "motorized-articulator", 5 })
 
-bobmods.lib.recipe.add_ingredient("rocket-item-rampant-arsenal", { "gyroscope", 5 })
+bobmods.lib.recipe.add_ingredient("rocket-item-rampant-arsenal", { gyroscope_name, 5 })
 bobmods.lib.recipe.add_ingredient("rocket-item-rampant-arsenal", { "motorized-articulator", 5 })
 
-bobmods.lib.recipe.add_ingredient("rapid-rocket-item-rampant-arsenal", { "gyroscope", 5 })
+bobmods.lib.recipe.add_ingredient("rapid-rocket-item-rampant-arsenal", { gyroscope_name, 5 })
 bobmods.lib.recipe.add_ingredient("rapid-rocket-item-rampant-arsenal", { "motorized-articulator", 5 })
 
-bobmods.lib.recipe.add_ingredient("capsule-item-rampant-arsenal", { "gyroscope", 5 })
+bobmods.lib.recipe.add_ingredient("capsule-item-rampant-arsenal", { gyroscope_name, 5 })
 bobmods.lib.recipe.add_ingredient("capsule-item-rampant-arsenal", { "motorized-articulator", 5 })
 
-bobmods.lib.recipe.add_ingredient("light-artillery-turret-gun-rampant-arsenal", { "gyroscope", 5 })
+bobmods.lib.recipe.add_ingredient("light-artillery-turret-gun-rampant-arsenal", { gyroscope_name, 5 })
 bobmods.lib.recipe.add_ingredient("light-artillery-turret-gun-rampant-arsenal", { "motorized-articulator", 5 })
 
 bobmods.lib.recipe.remove_ingredient("mending-wall-rampant-arsenal", "stone-wall")
@@ -110,96 +112,96 @@ end
 -- rampant-arsenal-technology-bullet-damage-
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-1", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.2 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.2 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.2 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-2", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.2 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.2 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.2 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-3", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.3 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.3 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.3 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-4", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.3 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.3 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.3 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-5", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.3 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.3 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.3 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-6", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.5 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-7", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.5 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-8", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.5 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-9", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.5 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-10", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "anti-material-rifle-ammo", modifier = 0.5 },
+    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 
 -- rampant-arsenal-technology-bullet-speed-
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-1", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.1 },
-    { type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.1 },
+    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.1 },
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.1 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-2", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.2 },
-    { type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.2 },
+    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 },
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.2 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-3", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.2 },
-    { type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.2 },
+    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 },
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.2 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-4", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.3 },
-    { type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.3 },
+    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 },
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.3 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-5", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.4 },
-    { type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.4 },
+    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.4 },
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.4 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-6", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.4 },
     { type = "gun-speed", ammo_category = "railgun-shell", modifier = 0.4 },
-    { type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 0.4 },
+    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.4 },
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.4 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-7", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 1 },
     { type = "gun-speed", ammo_category = "railgun-shell", modifier = 1 },
-    { type = "gun-speed", ammo_category = "anti-material-rifle-ammo", modifier = 1 },
+    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 1 },
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 1 }
 })
 

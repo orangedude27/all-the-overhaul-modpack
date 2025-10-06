@@ -17,23 +17,23 @@ local config = atom.processing.util.prepareConfig({
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalIngredient = {
-        pelletsToIngot = { name = "graphite", amount = 1 }
+        pelletsToIngot = { type = "item", name = "graphite", amount = 1 }
     },
     additionalResults = {
         oreToPlate = {
-            { name = "bismuth-plate", amount = 1, probability = 0.25 }
+            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.25 }
         },
         dustToPlate = {
-            { name = "bismuth-plate", amount = 1, probability = 0.125 }
+            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.125 }
         },
         dustToIngot = {
-            { name = "bismuth-plate", amount = 1, probability = 0.125 }
+            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.125 }
         },
         dustToEnriched = {
-            { name = "bismuth-plate", amount = 1, probability = 0.125 }
+            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.125 }
         },
         pureToEnriched = {
-            { name = "bismuth-plate", amount = 1, probability = 0.125 }
+            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.125 }
         }
     }
 })

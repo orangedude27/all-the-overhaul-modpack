@@ -15,18 +15,14 @@ end
 -- @param target table The table to assign to
 -- @param source table The table to assign from
 function table.assign(target, source)
-    if target ~= nil then
-        for k, v in pairs(source) do
-            if type(k) == "number" then
-                if (v ~= nil) then
-                    table.insert(target, v)
-                end
-            else
-                target[k] = v
+    for k, v in pairs(source) do
+        if type(k) == "number" then
+            if (v ~= nil) then
+                table.insert(target, v)
             end
+        else
+            target[k] = v
         end
-        return target
-    else
-        return nil
     end
+    return target
 end

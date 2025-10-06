@@ -26,29 +26,29 @@ end
 
 local oreToPlateRecipe = create.oreToPlateRecipe()
 oreToPlateRecipe.prototype.ingredients = {
-    { "copper-ore", 3 },
-    { "zinc-ore", 3 }
+    { type = "item", name = "copper-ore", amount = 3 },
+    { type = "item", name = "zinc-ore", amount = 3 }
 }
 addSmallIconRight(oreToPlateRecipe, atom.util.icon.createSmallIcon(zinc.icons.ore))
 
 local dustToPlateRecipe = create.dustToPlateRecipe()
 dustToPlateRecipe.prototype.ingredients = {
-    { "5d-copper-dust", 6 },
-    { "atom-zinc-dust", 6 }
+    { type = "item", name = "5d-copper-dust", amount = 6 },
+    { type = "item", name = "atom-zinc-dust", amount = 6 }
 }
 addSmallIconRight(dustToPlateRecipe, atom.util.icon.createSmallIcon(zinc.icons.dust))
 
 local ingotToPlateRecipe = create.ingotToPlateRecipe()
 ingotToPlateRecipe.prototype.ingredients = {
-    { name = "se-copper-ingot", amount = 1 },
-    { name = "zinc-ingot", amount = 1 }
+    { type = "item", name = "se-copper-ingot", amount = 1 },
+    { type = "item", name = "zinc-ingot", amount = 1 }
 }
 addSmallIconRight(ingotToPlateRecipe, atom.util.icon.createSmallIcon(zinc.icons.ingot))
 
 local ingotToMoltenRecipe = create.ingotToMoltenRecipe()
 ingotToMoltenRecipe.prototype.ingredients = {
-    { name = "se-copper-ingot", amount = 1 },
-    { name = "zinc-ingot", amount = 1 }
+    { type = "item", name = "se-copper-ingot", amount = 1 },
+    { type = "item", name = "zinc-ingot", amount = 1 }
 }
 addSmallIconRight(ingotToMoltenRecipe, atom.util.icon.createSmallIcon(zinc.icons.ingot))
 

@@ -6,12 +6,12 @@ local config = atom.processing.util.prepareConfig({
     itemNames = {
         ore = "stone",
         dust = "atom-stone-dust",
-        sand = "sand"
+        sand = "kr-sand"
     },
     icons = {
         ore = { icon = "__base__/graphics/icons/stone.png", icon_size = 64, icon_mipmaps = 4 },
         "dust",
-        sand = { icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png", icon_size = 64, icon_mipmaps = 4 }
+        sand = { icon = "__Krastorio2Assets__/icons/items/sand.png", icon_size = 64, icon_mipmaps = 4 }
     },
     unlockedBy = {}
 })
@@ -23,10 +23,10 @@ local dustToSandRecipe = Recipe({
     category = "mashering",
     energy_required = 3.2,
     ingredients = {
-        { config.itemNames.dust, 4 }
+        { type = "item", name = config.itemNames.dust, amount = 4 }
     },
     results = {
-        { name = config.itemNames.sand, amount = 10 },
+        { type = "item", name = config.itemNames.sand, amount = 10 },
     },
     enabled = false
 })

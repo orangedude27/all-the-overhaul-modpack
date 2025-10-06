@@ -39,7 +39,7 @@ local coalProcessing1 = atom.util.Technology("bi-tech-coal-processing-1")
 coalProcessing1.prototype.level = nil
 coalProcessing1.prototype.max_level = nil
 coalProcessing1.prototype.icons = {
-    { icon = "__Bio_Industries__/graphics/icons/ash_64.png", icon_size = 64 }
+    { icon = "__Bio_Industries_2__/graphics/icons/ash.png", icon_size = 64 }
 }
 coalProcessing1.removeRecipe("bi-cokery")
 
