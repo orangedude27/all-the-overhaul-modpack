@@ -30,13 +30,11 @@ util.tech_add_prerequisites("gimbaled-thruster", "mechanical-engineering-2")
 
 util.tech_remove_prerequisites("manganese-smelting", { "automation-science-pack" })
 util.tech_remove_prerequisites("steel-processing", { "manganese-smelting" })
-util.tech_remove_prerequisites("electricity", { "bismanol" })
 
 util.tech_add_prerequisites("steel-processing", "automation-science-pack")
-util.tech_add_prerequisites("manganese-smelting", "bismanol")
-util.tech_add_prerequisites("electricity", "manganese-smelting")
 
 util.tech_remove_ingredients("manganese-smelting", "automation-science-pack")
+util.tech_remove_ingredients("bismanol", "automation-science-pack")
 
 --lock techs that use aluminum ceramic behind it.
 util.tech_add_prerequisites("mechanical-engineering", "el_ALK_tech")
