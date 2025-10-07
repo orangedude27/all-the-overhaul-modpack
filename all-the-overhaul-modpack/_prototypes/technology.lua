@@ -58,7 +58,7 @@ util.tech_add_prerequisites("efficiency-module-2", "fi_modules_1_tech")
 util.tech_add_ingredients("bi-tech-bio-farming", { "logistic-science-pack" }, false)
 
 --Lock recipies behind tech
-util.tech_lock_recipes("optics", { "light-buoy" })
+util.tech_lock_recipes("lamp", { "light-buoy" })
 
 if data.raw.recipe["laser-turret"] then
     util.tech_lock_recipes("laser-turret", { "sw-electric-turret" })
