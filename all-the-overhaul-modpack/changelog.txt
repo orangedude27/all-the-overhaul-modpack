@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 08.10.2025
+  Bug Fixes:
+    - Rename optics => lamp
+    - Fix pipes
+    - Mark mini-machines as mandatory
+    - bzfoundry: Fix for when refractory recipes is on
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 07.10.2025
   Features:
