@@ -2,7 +2,7 @@ local function bob_pipepictures(pipe_type)
     return {
         straight_vertical_single = {
             filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-straight-vertical-single.png",
+                pipe_type .. "/hr-pipe-straight-vertical-single.png",
             priority = "extra-high",
             width = 160,
             height = 160,
@@ -17,7 +17,7 @@ local function bob_pipepictures(pipe_type)
         },
         straight_vertical_window = {
             filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-straight-vertical-window.png",
+                pipe_type .. "/hr-pipe-straight-vertical-window.png",
             priority = "extra-high",
             width = 128,
             height = 128,
@@ -25,7 +25,7 @@ local function bob_pipepictures(pipe_type)
         },
         straight_horizontal_window = {
             filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-straight-horizontal-window.png",
+                pipe_type .. "/hr-pipe-straight-horizontal-window.png",
             priority = "extra-high",
             width = 128,
             height = 128,
@@ -131,7 +131,7 @@ local function bob_pipepictures(pipe_type)
         },
         horizontal_window_background = {
             filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-horizontal-window-background.png",
+                pipe_type .. "/hr-pipe-horizontal-window-background.png",
             priority = "extra-high",
             width = 128,
             height = 128,
@@ -139,7 +139,7 @@ local function bob_pipepictures(pipe_type)
         },
         vertical_window_background = {
             filename = "__all-the-overhaul-modpack__/graphics/pipe-" ..
-                    pipe_type .. "/hr-pipe-vertical-window-background.png",
+                pipe_type .. "/hr-pipe-vertical-window-background.png",
             priority = "extra-high",
             width = 128,
             height = 128,
@@ -319,12 +319,14 @@ data:extend({
         selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
         fluid_box = {
             volume = 150,
+            pipe_covers = bob_pipecoverspictures("brass"),
             pipe_connections = {
                 { direction = defines.direction.north, position = { 0, 0 } },
-                { direction = defines.direction.east, position = { 0, 0 } },
+                { direction = defines.direction.east,  position = { 0, 0 } },
                 { direction = defines.direction.south, position = { 0, 0 } },
-                { direction = defines.direction.west, position = { 0, 0 } },
+                { direction = defines.direction.west,  position = { 0, 0 } }
             },
+            hide_connection_info = true
         },
         pictures = bob_pipepictures("brass"),
         working_sound = {
@@ -363,17 +365,15 @@ data:extend({
             volume = 150,
             pipe_covers = bob_pipecoverspictures("brass"),
             pipe_connections = {
-                {
-                    direction = defines.direction.west,
-                    position = { 0, 0 }
-                },
+                { direction = defines.direction.north, position = { 0, 0 } },
                 {
                     connection_type = "underground",
-                    direction = defines.direction.east,
+                    direction = defines.direction.south,
                     position = { 0, 0 },
-                    max_underground_distance = 60,
-                },
+                    max_underground_distance = 60
+                }
             },
+            hide_connection_info = true
         },
         underground_sprite = {
             filename = "__core__/graphics/arrows/underground-lines.png",
@@ -431,9 +431,9 @@ data:extend({
         enabled = false,
         ingredients = {
             { type = "item", name = "bolted-flange", amount = 1 },
-            { type = "item", name = "brass-plate", amount = 5 },
+            { type = "item", name = "brass-plate",   amount = 5 },
         },
-        results = {{type="item", name="brass-pipe", amount=1}},
+        results = { { type = "item", name = "brass-pipe", amount = 1 } },
     },
 
     {
@@ -441,13 +441,13 @@ data:extend({
         name = "brass-pipe-to-ground",
         enabled = false,
         ingredients = {
-            { type = "item", name = "brass-pipe", amount = 20 },
-            { type = "item", name = "brass-plate", amount = 2 },
+            { type = "item", name = "brass-pipe",    amount = 20 },
+            { type = "item", name = "brass-plate",   amount = 2 },
             { type = "item", name = "bismuth-plate", amount = 2 },
-            { type = "item", name = "lead-plate", amount = 1 },
-            { type = "item", name = "tin-plate", amount = 1 },
+            { type = "item", name = "lead-plate",    amount = 1 },
+            { type = "item", name = "tin-plate",     amount = 1 },
         },
-        results = {{type="item", name="brass-pipe-to-ground", amount=2}},
+        results = { { type = "item", name = "brass-pipe-to-ground", amount = 2 } },
     },
 })
 
@@ -472,9 +472,9 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "kr-basic-tech-card", 1 },
+                { "kr-basic-tech-card",      1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack", 1 },
+                { "logistic-science-pack",   1 },
             },
             time = 30,
         },
