@@ -103,7 +103,7 @@ if settings.startup["rampant-arsenal-hideVanillaDamageTechnologies"].value then
     local i = 1
     while i <= 18 do
         krastorio.technologies.disable("physical-projectile-damage-" .. i, true)
-        krastorio.technologies.disable("energy-weapons-damage-" .. i, true)
+        krastorio.technologies.disable("laser-weapons-damage-" .. i, true)
         krastorio.technologies.disable("stronger-explosives-" .. i, true)
         i = i + 1
     end
@@ -205,28 +205,28 @@ krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-7", {
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 1 }
 })
 
--- rampant-arsenal-technology-energy-weapons-damage
-krastorio.technologies.addEffects("rampant-arsenal-technology-energy-weapons-damage-5", {
+-- rampant-arsenal-technology-laser-weapons-damage
+krastorio.technologies.addEffects("rampant-arsenal-technology-laser-weapons-damage-5", {
     { type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "electric", modifier = 0.5 },
 })
-krastorio.technologies.addEffects("rampant-arsenal-technology-energy-weapons-damage-6", {
+krastorio.technologies.addEffects("rampant-arsenal-technology-laser-weapons-damage-6", {
     { type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "electric", modifier = 0.5 },
 })
-krastorio.technologies.addEffects("rampant-arsenal-technology-energy-weapons-damage-7", {
+krastorio.technologies.addEffects("rampant-arsenal-technology-laser-weapons-damage-7", {
     { type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "electric", modifier = 0.5 },
 })
-krastorio.technologies.addEffects("rampant-arsenal-technology-energy-weapons-damage-8", {
+krastorio.technologies.addEffects("rampant-arsenal-technology-laser-weapons-damage-8", {
     { type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "electric", modifier = 0.5 },
 })
-krastorio.technologies.addEffects("rampant-arsenal-technology-energy-weapons-damage-9", {
+krastorio.technologies.addEffects("rampant-arsenal-technology-laser-weapons-damage-9", {
     { type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "electric", modifier = 0.5 },
 })
-krastorio.technologies.addEffects("rampant-arsenal-technology-energy-weapons-damage-10", {
+krastorio.technologies.addEffects("rampant-arsenal-technology-laser-weapons-damage-10", {
     { type = "ammo-damage", ammo_category = "impulse-rifle", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "electric", modifier = 0.5 },
 })

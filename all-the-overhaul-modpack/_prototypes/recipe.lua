@@ -2,8 +2,8 @@ local atom_util = require("_data-util")
 local Recipe = require('__jalm__/stdlib/data/recipe')
 
 -- Fix Portable fusion reactor recipe
-bobmods.lib.recipe.remove_ingredient("fusion-reactor-equipment", "se-fusion-test-data")
-bobmods.lib.recipe.add_new_ingredient("fusion-reactor-equipment", { "fusion-stable-data", 50 })
+bobmods.lib.recipe.remove_ingredient("fission-reactor-equipment", "se-fusion-test-data")
+bobmods.lib.recipe.add_new_ingredient("fission-reactor-equipment", { "fusion-stable-data", 50 })
 if mods["RampantArsenal"] then
     -- Portable Fusion Reactor MK2
     bobmods.lib.recipe.add_new_ingredient("mk3-generator-rampant-arsenal", { "fusion-speed-data", 50 })

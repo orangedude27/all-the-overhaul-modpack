@@ -142,22 +142,22 @@ util.tech_add_ingredients("fu_crystal_tech", { "fusion-science-pack-1" }, false)
 util.tech_add_ingredients("fu_upgrade_tech", { "fusion-science-pack-1" }, false)
 
 -- Fusion science pack 2
-util.tech_remove_prerequisites("fusion-reactor-equipment", { "se-energy-science-pack-4" })
+util.tech_remove_prerequisites("fission-reactor-equipment", { "se-energy-science-pack-4" })
 
 util.tech_add_prerequisites("fu_robo_tech", "space-fusion-science-pack-2")
 util.tech_add_prerequisites("fi_modules_3_tech", "space-fusion-science-pack-2")
 util.tech_add_prerequisites("kr-imersite-solar-panel-equipment", "space-fusion-science-pack-2")
-util.tech_add_prerequisites("fusion-reactor-equipment", "space-fusion-science-pack-2")
+util.tech_add_prerequisites("fission-reactor-equipment", "space-fusion-science-pack-2")
 util.tech_add_prerequisites("se-space-material-fabricator", "space-fusion-science-pack-2")
 util.tech_add_prerequisites("kr-fusion-energy", "space-fusion-science-pack-2")
 util.tech_add_prerequisites("fu_hydrogen_1_tech", "space-fusion-science-pack-2")
 
-util.tech_remove_ingredients("fusion-reactor-equipment", "se-energy-science-pack-4")
+util.tech_remove_ingredients("fission-reactor-equipment", "se-energy-science-pack-4")
 
 util.tech_add_ingredients("fu_robo_tech", { "fusion-science-pack-2" }, false)
 util.tech_add_ingredients("fi_modules_3_tech", { "fusion-science-pack-2" }, false)
 util.tech_add_ingredients("kr-imersite-solar-panel-equipment", { "fusion-science-pack-2" }, false)
-util.tech_add_ingredients("fusion-reactor-equipment", { "fusion-science-pack-2", "se-energy-science-pack-3" }, false)
+util.tech_add_ingredients("fission-reactor-equipment", { "fusion-science-pack-2", "se-energy-science-pack-3" }, false)
 util.tech_add_ingredients("kr-matter-tech-card", { "fusion-science-pack-2" }, false)
 util.tech_add_ingredients("se-material-catalogue-1", { "fusion-science-pack-2" }, false)
 util.tech_add_ingredients("se-space-material-fabricator", { "fusion-science-pack-2" }, false)
@@ -235,8 +235,8 @@ util.tech_add_prerequisites("se-big-turbine", "hcp-circuit")
 util.tech_remove_prerequisites("se-energy-beaming", { "se-superconductive-cable" })
 util.tech_add_prerequisites("se-energy-beaming", "hcp-circuit")
 
-util.tech_remove_prerequisites("fusion-reactor-equipment", { "se-superconductive-cable" })
-util.tech_add_prerequisites("fusion-reactor-equipment", "hcp-circuit")
+util.tech_remove_prerequisites("fission-reactor-equipment", { "se-superconductive-cable" })
+util.tech_add_prerequisites("fission-reactor-equipment", "hcp-circuit")
 
 -- Electronic machine
 bobmods.lib.tech.hide("mini-basic")

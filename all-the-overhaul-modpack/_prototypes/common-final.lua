@@ -29,7 +29,7 @@ equipment.add_category_to_equipment("se-rtg-equipment-2", "generator-equipment")
 equipment.add_category_to_equipment("mk3-generator-rampant-arsenal", "generator-equipment")
 equipment.add_category_to_equipment("nuclear-generator-rampant-arsenal", "generator-equipment")
 equipment.add_category_to_equipment("nuclear-reactor-equipment", "generator-equipment")
-equipment.add_category_to_equipment("fusion-reactor-equipment", "generator-equipment")
+equipment.add_category_to_equipment("fission-reactor-equipment", "generator-equipment")
 equipment.add_category_to_equipment("antimatter-reactor-equipment", "generator-equipment")
 
 equipment.add_category_to_equipment("personal-submachine-laser-defense-mk1-equipment", "defense-equipment")
