@@ -179,3 +179,6 @@ data.raw["roboport"]["fi_robo_port_entity"].energy_usage = "200kW"
 data.raw["roboport"]["fi_robo_port_entity"].energy_source.input_flow_limit = "8MW"
 data.raw["roboport"]["fi_robo_charger_entity"].energy_usage = "100kW"
 data.raw["roboport"]["fi_robo_charger_entity"].energy_source.input_flow_limit = "8MW"
+
+-- Replace 248k lithium with K2 lithium
+atom.util.recipe.replaceIngredient("el_lithium_item")

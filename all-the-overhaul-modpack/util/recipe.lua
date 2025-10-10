@@ -5,11 +5,11 @@ for _, module in pairs(data.raw["module"]) do
     end
 end
 
--- Utility function for multiple recipes
--- See atom.util.Recipe for functions for a single recipe
+--- Utility function for multiple recipes
+--- See atom.util.Recipe for functions for a single recipe
 atom.util.recipe = {
-    -- Removes a recipe by name together with all its dependencies
-    -- @param name string The name of the recipe
+    --- Removes a recipe by name together with all its dependencies
+    --- @param name string The name of the recipe
     removeByName = function(name)
         data.raw.recipe[name] = nil
 
@@ -24,9 +24,9 @@ atom.util.recipe = {
         end
     end,
 
-    -- Removes all recipes that match a pattern together with all their dependencies
-    -- @param pattern string The pattern to match (see https://www.lua.org/manual/5.2/manual.html#6.4.1)
-    -- @param exceptions? table A list of recipes to keep
+    --- Removes all recipes that match a pattern together with all their dependencies
+    --- @param pattern string The pattern to match (see https://www.lua.org/manual/5.2/manual.html#6.4.1)
+    --- @param exceptions? table A list of recipes to keep
     removeByNamePattern = function(pattern, exceptions)
         exceptions = exceptions or {}
         for key, _ in pairs(data.raw.recipe) do
@@ -45,9 +45,9 @@ atom.util.recipe = {
         end
     end,
 
-    -- Finds recipes by an item being used either as an ingredient or a result
-    -- @param itemName string The name of the item
-    -- @return table A list of recipe names
+    --- Finds recipes by an item being used either as an ingredient or a result
+    --- @param itemName string The name of the item
+    --- @return table A list of recipe names
     findByItem = function(itemName)
         local function containsItem(table)
             for _, ingredient in pairs(table) do
@@ -68,8 +68,8 @@ atom.util.recipe = {
         return result
     end,
 
-    -- Removes recipes by an item being used either as an ingredient or a result
-    -- @param itemName string The name of the item
+    --- Removes recipes by an item being used either as an ingredient or a result
+    --- @param itemName string The name of the item
     removeByItem = function(itemName)
         atom.util.log.debug("Removing recipes using item " .. itemName)
         local recipes = atom.util.recipe.findByItem(itemName)
@@ -79,20 +79,20 @@ atom.util.recipe = {
         end
     end,
 
-    -- Replaces an existing ingredient by name with a new ingredient on all recipes
-    -- @param old string The name of the existing ingredient
-    -- @param new string The name of the new ingredient
-    -- @param amount? number The amount of the new ingredient (keeps the old value if not set)
+    --- Replaces an existing ingredient by name with a new ingredient on all recipes
+    --- @param old string The name of the existing ingredient
+    --- @param new string The name of the new ingredient
+    --- @param amount? number The amount of the new ingredient (keeps the old value if not set)
     replaceIngredient = function(old, new, amount)
         for _, recipe in pairs(data.raw.recipe) do
             atom.util.Recipe(recipe).replaceIngredient(old, new, amount)
         end
     end,
 
-    -- Replaces an existing result by name with a new result on all recipes
-    -- @param old string The name of the existing result
-    -- @param new string The name of the new result
-    -- @param amount? number The amount of the new result (keeps the old value if not set)
+    --- Replaces an existing result by name with a new result on all recipes
+    --- @param old string The name of the existing result
+    --- @param new string The name of the new result
+    --- @param amount? number The amount of the new result (keeps the old value if not set)
     replaceResult = function(old, new, amount)
         for _, recipe in pairs(data.raw.recipe) do
             atom.util.Recipe(recipe).replaceResult(old, new, amount)
@@ -100,9 +100,9 @@ atom.util.recipe = {
     end
 }
 
--- Utility class for a single recipe
--- Pass a recipe name or a recipe table to get a Recipe object
--- @param value string|table The name of the recipe or the recipe table
+--- Utility class for a single recipe
+--- Pass a recipe name or a recipe table to get a Recipe object
+--- @param value string|table The name of the recipe or the recipe table
 function atom.util.Recipe(value)
     local recipeName -- Don't use this in functions as the actual name might change
     local recipe
@@ -121,24 +121,24 @@ function atom.util.Recipe(value)
     end
 
     return {
-        -- The recipe data
+        --- The recipe data
         prototype = recipe,
 
-        -- Applies the recipe to the game
+        --- Applies the recipe to the game
         apply = function()
             data:extend({ recipe })
         end,
 
-        -- Assigns data to the recipe
-        -- Shorthand for table.assign(recipe.prototype, data)
-        -- @param data table The data to assign
+        --- Assigns data to the recipe
+        --- Shorthand for table.assign(recipe.prototype, data)
+        --- @param data table The data to assign
         assign = function(data)
             table.assign(recipe, data)
         end,
 
-        -- Adds an ingredient to the recipe
-        -- @param ingredientName string The name of the ingredient
-        -- @param amount number The amount of the ingredient
+        --- Adds an ingredient to the recipe
+        --- @param ingredientName string The name of the ingredient
+        --- @param amount number The amount of the ingredient
         addIngredient = function(ingredientName, amount)
             local ingredientType = data.raw.item[ingredientName] and "item"
                     or data.raw.module[ingredientName] and "item"
@@ -156,9 +156,9 @@ function atom.util.Recipe(value)
             end
         end,
 
-        -- Replaces an existing ingredient by name with a new ingredient or adjusts the amount
-        -- @param old string The name of the existing ingredient
-        -- @param new? string The name of the new ingredient
+        --- Replaces an existing ingredient by name with a new ingredient or adjusts the amount
+        --- @param old string The name of the existing ingredient
+        --- @param new? string The name of the new ingredient
         -- @param amount? number The amount of the new ingredient
         replaceIngredient = function(old, new, amount)
             if type(new) == "number" then

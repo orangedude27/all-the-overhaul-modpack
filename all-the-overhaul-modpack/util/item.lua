@@ -1,12 +1,12 @@
 atom.util.item = {
-    -- Removes an item by name together with all its dependencies
-    -- @param name string The name of the item
+    --- Removes an item by name together with all its dependencies
+    --- @param name string The name of the item
     removeByName = function(name)
         local isFluid = data.raw.fluid[name] ~= nil
         atom.util.recipe.removeByItem(name)
 
-        -- Remove filters from fluid_boxes
-        -- See https://lua-api.factorio.com/latest/types/FluidBox.html#filter
+        --- Remove filters from fluid_boxes
+        --- See https://lua-api.factorio.com/latest/types/FluidBox.html#filter
         if (isFluid) then
             local function removeFilter(category)
                 for _, entity in pairs(data.raw[category]) do

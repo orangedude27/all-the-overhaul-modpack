@@ -1,9 +1,9 @@
--- Utility function for multiple technologies
--- See atom.util.Technology for functions for a single recipe
+--- Utility function for multiple technologies
+--- See atom.util.Technology for functions for a single recipe
 atom.util.technology = {
-    -- Replaces a prerequisite in all technologies
-    -- @param old string The name of the old prerequisite
-    -- @param new string The name(s) of the new prerequisite
+    --- Replaces a prerequisite in all technologies
+    --- @param old string The name of the old prerequisite
+    --- @param new string The name(s) of the new prerequisite
     replacePrerequisite = function(old, ...)
         local new = table.pack(...)
         for _, tech in pairs(data.raw.technology) do
@@ -21,9 +21,9 @@ atom.util.technology = {
     end
 }
 
--- Utility class for a single technology
--- Pass a technology name or a technology table to get a Technology object
--- @param value string|table The name of the technology or the technology table
+--- Utility class for a single technology
+--- Pass a technology name or a technology table to get a Technology object
+--- @param value string|table The name of the technology or the technology table
 function atom.util.Technology(value)
     local technologyName -- Don't use this in functions as the actual name might change
     local technology
@@ -49,29 +49,29 @@ function atom.util.Technology(value)
     end
 
     return {
-        -- The technology data
+        --- The technology data
         prototype = technology,
 
-        -- Applies the technology to the game
+        --- Applies the technology to the game
         apply = function()
             data:extend({ technology })
         end,
 
-        -- Assigns data to the technology
-        -- Shorthand for table.assign(technology.prototype, data)
-        -- @param data table The data to assign
+        --- Assigns data to the technology
+        --- Shorthand for table.assign(technology.prototype, data)
+        --- @param data table The data to assign
         assign = function(data)
             table.assign(technology, data)
         end,
 
-        -- Sets the prerequisite for the technology
-        -- @param prerequisites table The names of the prerequisites
+        --- Sets the prerequisite for the technology
+        --- @param prerequisites table The names of the prerequisites
         setPrerequisites = function(prerequisites)
             technology.prerequisites = prerequisites
         end,
 
-        -- Adds a prerequisite to the technology
-        -- @param prerequisite string The name of the prerequisite
+        --- Adds a prerequisite to the technology
+        --- @param prerequisite string The name of the prerequisite
         addPrerequisite = function(prerequisite)
             local _prerequisite = prerequisiteName(prerequisite)
             if (not table.contains(technology.prerequisites, _prerequisite)) then
@@ -79,8 +79,8 @@ function atom.util.Technology(value)
             end
         end,
 
-        -- Adds multiple prerequisites to the technology
-        -- @param prerequisites table The names of the prerequisite
+        --- Adds multiple prerequisites to the technology
+        --- @param prerequisites table The names of the prerequisite
         addPrerequisites = function(prerequisites)
             for _, prerequisite in pairs(prerequisites) do
                 local _prerequisite = prerequisiteName(prerequisite)
@@ -90,10 +90,10 @@ function atom.util.Technology(value)
             end
         end,
 
-        -- Replaces a prerequisite in a technology
-        -- @param name string The name of the technology
-        -- @param old string The name of the old prerequisite
-        -- @param new string The name of the new prerequisite
+        --- Replaces a prerequisite in a technology
+        --- @param name string The name of the technology
+        --- @param old string The name of the old prerequisite
+        --- @param new string The name of the new prerequisite
         replacePrerequisite = function(old, new)
             local _old = prerequisiteName(old)
             local _new = prerequisiteName(new)
@@ -104,8 +104,8 @@ function atom.util.Technology(value)
             end
         end,
 
-        -- Removes a prerequisite from the technology
-        -- @param prerequisite string The name of the prerequisite
+        --- Removes a prerequisite from the technology
+        --- @param prerequisite string The name of the prerequisite
         removePrerequisite = function(prerequisite)
             local _prerequisite = prerequisiteName(prerequisite)
             for i, techPrerequisite in pairs(technology.prerequisites) do
@@ -116,10 +116,10 @@ function atom.util.Technology(value)
             end
         end,
 
-        -- Adds an ingredient to the technology
-        -- @param ingredientName string The name of the ingredient
-        -- @param amount? number The amount of the ingredient (default 1)
-        -- @param expensiveAmount? number The amount of the ingredient for the expensive recipe (uses amount if not set)
+        --- Adds an ingredient to the technology
+        --- @param ingredientName string The name of the ingredient
+        --- @param amount? number The amount of the ingredient (default 1)
+        --- @param expensiveAmount? number The amount of the ingredient for the expensive recipe (uses amount if not set)
         addIngredient = function(ingredientName, amount, expensiveAmount)
             local function apply(_table, amount)
                 table.insert(_table.unit.ingredients, { ingredientName, amount })
@@ -129,8 +129,8 @@ function atom.util.Technology(value)
             end
         end,
 
-        -- Removes an existing ingredient by name
-        -- @param ingredientName string The name of the ingredient
+        --- Removes an existing ingredient by name
+        --- @param ingredientName string The name of the ingredient
         removeIngredient = function(ingredientName)
             local function apply(_table)
                 for i, result in pairs(_table.unit.ingredients) do
