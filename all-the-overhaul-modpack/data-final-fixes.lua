@@ -122,3 +122,5 @@ steel.replaceResult("steel-plate", 6)
 atom.util.Recipe("rail").addIngredient("concrete", 2)
 
 require("integrations.final")
+
+require("2-fixes")
