@@ -13,7 +13,7 @@ local tantalumConfig = atom.processing.util.prepareConfig({
         pellets = "atom-tantalite-pellets"
     },
     icons = {
-        ore = { icon = "__MetalsForYou2-snogard__/graphics/icons/tantalite-ore.png", icon_size = 64, icon_mipmaps = 3 },
+        ore = { icon = "__Tantalite2__/graphics/icons/tantalite-ore.png", icon_size = 64, icon_mipmaps = 3 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {

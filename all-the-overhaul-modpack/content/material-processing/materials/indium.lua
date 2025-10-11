@@ -12,7 +12,7 @@ local config = atom.processing.util.prepareConfig({
         pellets = "atom-indium-pellets"
     },
     icons = {
-        ore = { icon = "__MetalsForYou2-snogard__/graphics/icons/indite-ore.png", icon_size = 64 },
+        ore = { icon = "__Indium2__/graphics/icons/indite-ore.png", icon_size = 64 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {

@@ -5,7 +5,7 @@ data:extend({
     -- Fix coke recipe
     {
         type = "recipe",
-        name = "coke",
+        name = "kr-coke",
         category = "smelting",
         energy_required = 16,
         enabled = false,
@@ -14,7 +14,7 @@ data:extend({
             { type = "item", name = "coal", amount = 6 },
             { type = "item", name = "wood", amount = 6 },
         },
-        results = {{type="item", name="coke", amount=6}},
+        results = {{type="item", name="kr-coke", amount=6}},
     }
 })
 

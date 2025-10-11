@@ -36,10 +36,9 @@
         "Krastorio2Assets",
         "LasingAround-Updated",
         "manganese",
-        "MetalsForYou2-snogard",
+        "MetalsForYou2",
         "? nach0_248k_k2_compat_patch",
         "se-landfill-le",
-        "? SE248kfix",
         "shield-projector",
         "solar-productivity",
         "MDbobelectronics2",
@@ -70,11 +69,12 @@
         "? se-space-trains",
         "? dredgeworks",
         "? underwater-pipes",
-        "! bobassembly",
         "! 5dim_module",
         "! 5dim_ores",
-        "! quality",
+        "! bobassembly",
         "! elevated-rails",
+        "! MetalsForYou2-snogard",
+        "! quality",
         "! space-age"
     ]
 }

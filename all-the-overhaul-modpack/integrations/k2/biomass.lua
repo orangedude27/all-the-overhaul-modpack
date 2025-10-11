@@ -8,10 +8,10 @@ local recipe = atom.util.Recipe({
     energy_required = 100,
     ingredients = {
         { type = "fluid", name = "petroleum-gas", amount = 1000 },
-        { type = "fluid", name = "oxygen", amount = 1000 },
+        { type = "fluid", name = "kr-oxygen", amount = 1000 },
         { type = "item", name = "stone", amount = 100 },
         { type = "item", name = "wood", amount = 100 },
-        { type = "item", name = "coke", amount = 100 },
+        { type = "item", name = "kr-coke", amount = 100 },
         { type = "item", name = "raw-fish", amount = 5 }
     },
     results = {

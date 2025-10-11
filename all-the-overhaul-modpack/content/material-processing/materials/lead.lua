@@ -17,7 +17,7 @@ local config = atom.processing.util.prepareConfig({
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     additionalIngredient = {
-        dustToPure = { type = "fluid", name = "oxygen", amount = 4 }
+        dustToPure = { type = "fluid", name = "kr-oxygen", amount = 4 }
     },
     additionalResults = {
         oreToPlate = {

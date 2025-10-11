@@ -1,5 +1,5 @@
 -- Adjust recipes for usage in cokery
-local cokeRecipe = atom.util.Recipe("coke")
+local cokeRecipe = atom.util.Recipe("kr-coke")
 cokeRecipe.prototype.category = "biofarm-mod-smelting"
 cokeRecipe.prototype.allow_as_intermediate = false
 cokeRecipe.prototype.allow_intermediates = false
@@ -27,12 +27,12 @@ data.raw.recipe["synthetic-graphite"].energy_required = 24
 -- Adjust technologies
 local foundryTech = atom.util.Technology("foundry")
 if (foundryTech) then
-    foundryTech.removeRecipe("coke")
+    foundryTech.removeRecipe("kr-coke")
 end
 
 local steelTech = atom.util.Technology("steel-processing")
 steelTech.replacePrerequisite("automation-science-pack", "cokery-1")
-steelTech.removeRecipe("coke")
+steelTech.removeRecipe("kr-coke")
 steelTech.removeRecipe("phenol")
 
 local coalProcessing1 = atom.util.Technology("bi-tech-coal-processing-1")

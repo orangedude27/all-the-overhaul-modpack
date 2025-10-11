@@ -28,7 +28,7 @@ atom.util.Recipe("chromel-r-fabric").replaceIngredient("chromium-plate", 4)
 local thoriumLandfill = atom.util.Recipe(table.deepcopy(data.raw.recipe["landfill-iron-ore"]))
 thoriumLandfill.prototype.name = "landfill-thorium-ore"
 thoriumLandfill.prototype.order = "z-b-thorium-ore"
-thoriumLandfill.prototype.icons[2] = { icon = "__MetalsForYou2-snogard__/graphics/icons/thorium-ore.png", icon_size = 64, icon_mipmaps = 3, scale = 0.17 }
+thoriumLandfill.prototype.icons[2] = { icon = "__Tantalite2__/graphics/icons/thorium-ore.png", icon_size = 64, icon_mipmaps = 3, scale = 0.17 }
 thoriumLandfill.replaceIngredient("iron-ore", "thorium-ore")
 thoriumLandfill.unlockedByTechnology("se-recycling-facility")
 thoriumLandfill.apply()

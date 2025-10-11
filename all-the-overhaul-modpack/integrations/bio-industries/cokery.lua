@@ -186,7 +186,7 @@ local coalDustToCokeRecipe = atom.util.Recipe({
         { type = "item", name = "atom-coal-dust", amount = 3 }
     },
     results = {
-        { type = "item", name = "coke", amount = 1 }
+        { type = "item", name = "kr-coke", amount = 1 }
     },
     subgroup = "coal",
     allow_as_intermediate = false
@@ -199,7 +199,7 @@ local coalDustToRawGraphiteRecipe = atom.util.Recipe({
     type = "recipe",
     name = "coal-dust-to-raw-graphite",
     icons = {
-        { icon = "__MetalsForYou2-snogard__/graphics/icons/raw-graphite.png", icon_size = 128 },
+        { icon = "__Nylon2__/graphics/icons/raw-graphite.png", icon_size = 128 },
         atom.util.icon.createSmallIcon(atom.processing.materials.coal.icons.dust)
     },
     category = "biofarm-mod-smelting",
@@ -234,7 +234,7 @@ local tech1 = {
         },
         {
             type = "unlock-recipe",
-            recipe = "coke"
+            recipe = "kr-coke"
         },
         {
             type = "unlock-recipe",
