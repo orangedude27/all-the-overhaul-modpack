@@ -1021,7 +1021,7 @@ SortDirectTable = {
     ["offshore-pump"] = { name = "pumpjack", order = "[a]" },
     ["gas-extractor"] = { name = "pumpjack", order = "[a]" },
     ["oil_rig"] = { name = "pumpjack", order = "[a]" },
-    ["se-core-miner"] = { name = "drill", order = "[z]" },
+    ["se-core-miner-drill"] = { name = "drill", order = "[z]" },
     ["fuel-processor"] = { name = "furnace", order = "[z]" },
     ["se-space-hypercooler"] = { name = "radiator", order = "[a]" },
     ["bi-bio-reactor"] = { name = "refinery", order = "[z]" },
