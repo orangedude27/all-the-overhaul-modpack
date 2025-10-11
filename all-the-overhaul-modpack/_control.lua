@@ -31,7 +31,7 @@ end
 script.on_event(defines.events.on_cutscene_cancelled, PlayerCreated)
 
 EASY_MILITARY = {
-    { "armor-piercing-rifle-magazine", 4000 },
+    { "kr-armor-piercing-rifle-magazine", 4000 },
     { "gun-turret", 20 },
     { "concrete-wall", 1000 }
 }

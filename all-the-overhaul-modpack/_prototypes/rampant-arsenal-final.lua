@@ -1,19 +1,19 @@
 local gyroscope_name = data.raw.item["gyroscope"] and "gyroscope" or "gyro"
 
 bobmods.lib.recipe.remove_ingredient("bio-magazine-ammo-rampant-arsenal", "piercing-rounds-magazine")
-bobmods.lib.recipe.add_ingredient("bio-magazine-ammo-rampant-arsenal", { "armor-piercing-rifle-magazine", 1 })
+bobmods.lib.recipe.add_ingredient("bio-magazine-ammo-rampant-arsenal", { "kr-armor-piercing-rifle-magazine", 1 })
 bobmods.lib.recipe.remove_ingredient("bio-magazine-ammo-rampant-arsenal", "copper-plate")
 bobmods.lib.recipe.add_ingredient("bio-magazine-ammo-rampant-arsenal", { "titanium-plate", 1 })
 bobmods.lib.recipe.add_ingredient("bio-magazine-ammo-rampant-arsenal", { "zirconium-plate", 1 })
 
 bobmods.lib.recipe.remove_ingredient("he-magazine-ammo-rampant-arsenal", "piercing-rounds-magazine")
-bobmods.lib.recipe.add_ingredient("he-magazine-ammo-rampant-arsenal", { "armor-piercing-rifle-magazine", 1 })
+bobmods.lib.recipe.add_ingredient("he-magazine-ammo-rampant-arsenal", { "kr-armor-piercing-rifle-magazine", 1 })
 bobmods.lib.recipe.remove_ingredient("he-magazine-ammo-rampant-arsenal", "copper-plate")
 bobmods.lib.recipe.add_ingredient("he-magazine-ammo-rampant-arsenal", { "titanium-plate", 1 })
 bobmods.lib.recipe.add_ingredient("he-magazine-ammo-rampant-arsenal", { "zirconium-plate", 1 })
 
 bobmods.lib.recipe.remove_ingredient("incendiary-magazine-ammo-rampant-arsenal", "piercing-rounds-magazine")
-bobmods.lib.recipe.add_ingredient("incendiary-magazine-ammo-rampant-arsenal", { "armor-piercing-rifle-magazine", 1 })
+bobmods.lib.recipe.add_ingredient("incendiary-magazine-ammo-rampant-arsenal", { "kr-armor-piercing-rifle-magazine", 1 })
 bobmods.lib.recipe.remove_ingredient("incendiary-magazine-ammo-rampant-arsenal", "copper-plate")
 bobmods.lib.recipe.add_ingredient("incendiary-magazine-ammo-rampant-arsenal", { "titanium-plate", 1 })
 bobmods.lib.recipe.add_ingredient("incendiary-magazine-ammo-rampant-arsenal", { "zirconium-plate", 1 })
