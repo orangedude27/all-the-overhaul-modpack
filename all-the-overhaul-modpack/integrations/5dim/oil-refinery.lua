@@ -15,7 +15,7 @@ local recipe10 = Recipe("5d-oil-refinery-10")
 recipe02:add_ingredient({ "advanced-multi-cylinder-engine", 4 })
 recipe02:replace_ingredient("steel-plate", { "tungsten-plate", 15 })
 recipe02:replace_ingredient("iron-gear-wheel", { "kr-steel-gear-wheel", 10 })
-recipe02:replace_ingredient("electronic-circuit", { "glass", 15 })
+recipe02:replace_ingredient("electronic-circuit", { "kr-glass", 15 })
 
 recipe03:add_ingredient({ "advanced-multi-cylinder-engine", 6 })
 recipe03:replace_ingredient("steel-plate", { "kr-imersium-beam", 15 })

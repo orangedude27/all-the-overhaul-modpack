@@ -48,17 +48,17 @@ robotBatteryTech.addPrerequisite("production-science-pack")
 robotBatteryTech.addPrerequisite("utility-science-pack")
 
 -- Balance glass
-local glass = atom.util.Recipe("glass")
+local glass = atom.util.Recipe("kr-glass")
 glass.replaceIngredient("kr-sand", 20)
-glass.replaceResult("glass", 5)
+glass.replaceResult("kr-glass", 5)
 glass.setIcon({ icon = "__Krastorio2Assets__/icons/items/glass.png", icon_size = 64, icon_mipmaps = 4 })
 glass.addSmallIcon({ icon = "__Krastorio2Assets__/icons/items/sand.png", icon_size = 64, icon_mipmaps = 4 })
 
 -- Add a glass recipe with quartz instead of sand
-local glassQuartz = atom.util.Recipe(table.deepcopy(data.raw.recipe["glass"]))
+local glassQuartz = atom.util.Recipe(table.deepcopy(data.raw.recipe["kr-glass"]))
 glassQuartz.prototype.name = "glass-quartz"
 glassQuartz.replaceIngredient("kr-sand", "kr-quartz", 12)
-glassQuartz.replaceResult("glass", 7)
+glassQuartz.replaceResult("kr-glass", 7)
 glassQuartz.setIcon({ icon = "__Krastorio2Assets__/icons/items/glass.png", icon_size = 64, icon_mipmaps = 4 })
 glassQuartz.addSmallIcon({ icon = "__Krastorio2Assets__/icons/items/quartz.png", icon_size = 64 })
 glassQuartz.allowProductivity()

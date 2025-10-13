@@ -242,7 +242,7 @@ data:extend({
             { type = "item", name = "kr-automation-core", amount = 3 },
             { type = "item", name = "flow-controller", amount = 5 },
             { type = "item", name = "copper-plate", amount = 10 },
-            { type = "item", name = "glass", amount = 10 },
+            { type = "item", name = "kr-glass", amount = 10 },
             { type = "item", name = "graphite", amount = 10 },
             { type = "item", name = "el_materials_ALK", amount = 10 },
         },
@@ -256,7 +256,7 @@ data:extend({
         ingredients = {
             { type = "item", name = "kr-imersium-beam", amount = 20 },
             { type = "item", name = "advanced-multi-cylinder-engine", amount = 10 },
-            { type = "item", name = "glass", amount = 10 },
+            { type = "item", name = "kr-glass", amount = 10 },
             { type = "item", name = "kr-electrolysis-plant", amount = 1 },
             { type = "item", name = "kr-steel-pipe", amount = 10 },
             { type = "item", name = "kr-rare-metals", amount = 20 },
@@ -274,7 +274,7 @@ data:extend({
         ingredients = {
             { type = "item", name = "se-heavy-girder", amount = 20 },
             { type = "item", name = "advanced-multi-cylinder-engine", amount = 20 },
-            { type = "item", name = "glass", amount = 10 },
+            { type = "item", name = "kr-glass", amount = 10 },
             { type = "item", name = "t2-electrolysis-plant", amount = 1 },
             { type = "item", name = "brass-pipe", amount = 10 },
             { type = "item", name = "se-holmium-plate", amount = 20 },

@@ -44,7 +44,7 @@ end
 -- Recipes
 
 local recipe2 = atom.util.Recipe("5d-lab-02")
-recipe2.replaceIngredient("transport-belt", "glass", 10)
+recipe2.replaceIngredient("transport-belt", "kr-glass", 10)
 recipe2.replaceIngredient("bakelite", "zircaloy-4", 10)
 
 local recipe3 = atom.util.Recipe("5d-lab-03")

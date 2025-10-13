@@ -111,7 +111,7 @@ end
 local glassVulcanite = atom.util.Recipe("se-glass-vulcanite")
 glassVulcanite.replaceIngredient("kr-sand", "kr-quartz")
 glassVulcanite.replaceIngredient("se-pyroflux", 1)
-glassVulcanite.replaceResult("glass", 21)
+glassVulcanite.replaceResult("kr-glass", 21)
 
 -- Fix modifiers for "physical projectile damage" that SE overrides
 local turretDamageBonus = { 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.3, 0.4, 0.4, 0.4, 0.4, 0.5, 0.5, 0.5, 0.5, 0.6, 0.6 }

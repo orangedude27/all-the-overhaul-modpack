@@ -276,7 +276,7 @@ data:extend({
             { type = "item", name = "kr-automation-core", amount = 3 },
             { type = "item", name = "flow-controller", amount = 5 },
             { type = "item", name = "basic-chemical-plant", amount = 1 },
-            { type = "item", name = "glass", amount = 10 },
+            { type = "item", name = "kr-glass", amount = 10 },
             { type = "item", name = "el_materials_ALK", amount = 10 },
         },
         results = {{type="item", name="t0-filtration-plant", amount=1}},
@@ -289,7 +289,7 @@ data:extend({
         ingredients = {
             { type = "item", name = "kr-imersium-beam", amount = 20 },
             { type = "item", name = "advanced-multi-cylinder-engine", amount = 10 },
-            { type = "item", name = "glass", amount = 10 },
+            { type = "item", name = "kr-glass", amount = 10 },
             { type = "item", name = "kr-filtration-plant", amount = 1 },
             { type = "item", name = "kr-steel-pipe", amount = 10 },
             { type = "item", name = "kr-imersium-plate", amount = 20 },
@@ -306,7 +306,7 @@ data:extend({
         ingredients = {
             { type = "item", name = "se-heavy-girder", amount = 20 },
             { type = "item", name = "advanced-multi-cylinder-engine", amount = 20 },
-            { type = "item", name = "glass", amount = 10 },
+            { type = "item", name = "kr-glass", amount = 10 },
             { type = "item", name = "t2-filtration-plant", amount = 1 },
             { type = "item", name = "brass-pipe", amount = 10 },
             { type = "item", name = "se-iridium-plate", amount = 20 },
