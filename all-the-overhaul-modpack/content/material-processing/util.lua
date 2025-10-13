@@ -62,7 +62,7 @@ config: {
         -- Defaults to nil
         enrichedToPellets: ProductPrototype
 
-        -- Defaults to { name = "quicklime", amount = 1 }
+        -- Defaults to { type = "item", name = "quicklime", amount = 1 }
         pelletsToIngot: ProductPrototype
     }
 
