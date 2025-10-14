@@ -132,15 +132,12 @@ function atom.util.Technology(value)
         --- Removes an existing ingredient by name
         --- @param ingredientName string The name of the ingredient
         removeIngredient = function(ingredientName)
-            local function apply(_table)
-                for i, result in pairs(_table.unit.ingredients) do
-                    if result.name == ingredientName then
-                        table.remove(_table.unit.ingredients, i)
+            if technology.unit then
+                for i, result in pairs(technology.unit.ingredients) do
+                    if result[1] == ingredientName then
+                        table.remove(technology.unit.ingredients, i)
                     end
                 end
-            end
-            if technology.unit then
-                apply(technology)
             end
         end,
 

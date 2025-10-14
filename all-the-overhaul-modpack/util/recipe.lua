@@ -83,6 +83,16 @@ atom.util.recipe = {
     --- @param old string The name of the existing ingredient
     --- @param new string The name of the new ingredient
     --- @param amount? number The amount of the new ingredient (keeps the old value if not set)
+    removeIngredient = function(name)
+        for _, recipe in pairs(data.raw.recipe) do
+            atom.util.Recipe(recipe).removeIngredient(name)
+        end
+    end,
+
+    --- Replaces an existing ingredient by name with a new ingredient on all recipes
+    --- @param old string The name of the existing ingredient
+    --- @param new string The name of the new ingredient
+    --- @param amount? number The amount of the new ingredient (keeps the old value if not set)
     replaceIngredient = function(old, new, amount)
         for _, recipe in pairs(data.raw.recipe) do
             atom.util.Recipe(recipe).replaceIngredient(old, new, amount)
@@ -138,7 +148,7 @@ function atom.util.Recipe(value)
 
         --- Adds an ingredient to the recipe
         --- @param ingredientName string The name of the ingredient
-        --- @param amount number The amount of the ingredient
+        --- @param amount number The amount of the ingredient (default: 1)
         addIngredient = function(ingredientName, amount)
             local ingredientType = data.raw.item[ingredientName] and "item"
                     or data.raw.module[ingredientName] and "item"
@@ -148,11 +158,8 @@ function atom.util.Recipe(value)
                 atom.util.log.error("Unknown ingredient: " .. ingredientName)
                 return
             end
-            local function apply(ingredients, amount)
-                table.insert(ingredients, { name = ingredientName, amount = amount, type = ingredientType })
-            end
             if recipe.ingredients then
-                apply(recipe.ingredients, amount)
+                table.insert(recipe.ingredients, { name = ingredientName, amount = amount or 1, type = ingredientType })
             end
         end,
 
