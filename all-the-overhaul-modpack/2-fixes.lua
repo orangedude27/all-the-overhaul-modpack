@@ -118,7 +118,9 @@ filtration_plant_2.addIngredient("tungsten-carbide", 5)
 
 -- Foundry
 local foundry = Recipe("foundry")
-foundry.replaceIngredient("crucible", "stone-brick", 20)
+if foundry then
+    foundry.replaceIngredient("crucible", "stone-brick", 20)
+end
 
 -- Atmospheric condenser
 Recipe("kr-atmospheric-condenser").replaceIngredient("advanced-multi-cylinder-engine", 2)
