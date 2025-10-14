@@ -11,6 +11,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate",
+                localised_name = { "item-name." .. config.itemNames.plate },
                 icons = {
                     config.icons.plate,
                     atom.util.icon.createSmallIcon(config.icons.ore),
@@ -34,6 +35,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-dust",
+                localised_name = { "item-name." .. config.itemNames.dust },
                 icons = { config.icons.dust },
                 category = "mashering",
                 energy_required = 9.6,
@@ -58,6 +60,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate-dust",
+                localised_name = { "item-name." .. config.itemNames.plate },
                 icons = {
                     config.icons.plate,
                     atom.util.icon.createSmallIcon(config.icons.dust),
@@ -84,6 +87,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-ingot",
+                localised_name = { "item-name." .. config.itemNames.ingot },
                 icons = {
                     config.icons.ingot,
                     atom.util.icon.createSmallIcon(config.icons.dust)
@@ -113,6 +117,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate-ingot",
+                localised_name = { "item-name." .. config.itemNames.plate },
                 icons = {
                     config.icons.plate,
                     atom.util.icon.createSmallIcon(config.icons.ingot)
@@ -137,6 +142,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-molten",
+                localised_name = { "item-name." .. config.itemNames.molten },
                 icons = {
                     config.icons.molten,
                     atom.util.icon.createSmallIcon(config.icons.ingot)
@@ -161,6 +167,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-plate-molten",
+                localised_name = { "item-name." .. config.itemNames.plate },
                 icons = {
                     config.icons.plate,
                     atom.util.icon.createSmallIcon(config.icons.molten)
@@ -187,6 +194,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-enrichment",
+                localised_name = { "item-name." .. config.itemNames.enriched },
                 icons = {
                     config.icons.enriched,
                     atom.util.icon.createSmallIcon(config.icons.dust)
@@ -212,6 +220,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-ingot-enriched",
+                localised_name = { "item-name." .. config.itemNames.ingot },
                 icons = {
                     config.icons.ingot,
                     atom.util.icon.createSmallIcon(config.icons.enriched)
@@ -240,6 +249,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-slurry",
+                localised_name = { "item-name." .. config.itemNames.pure },
                 icons = {
                     config.icons.dust,
                     atom.util.icon.createSmallIcon(config.icons.pure),
@@ -267,6 +277,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-enriched-pure",
+                localised_name = { "item-name." .. config.itemNames.enriched },
                 icons = {
                     config.icons.enriched,
                     atom.util.icon.createSmallIcon(config.icons.pure)
@@ -292,6 +303,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-pellets",
+                localised_name = { "item-name." .. config.itemNames.pellets },
                 icons = {
                     config.icons.pellets,
                     atom.util.icon.createSmallIcon(config.icons.enriched)
@@ -318,6 +330,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-ingot-pellets",
+                localised_name = { "item-name." .. config.itemNames.ingot },
                 icons = {
                     config.icons.ingot,
                     atom.util.icon.createSmallIcon(config.icons.pellets)
