@@ -1,103 +1,150 @@
-local Recipe = require('__jalm__/stdlib/data/recipe')
+local Recipe_old = require('__jalm__/stdlib/data/recipe')
 
 -- 01
-Recipe("mini-assembler-1"):replace_ingredient("burner-assembling-machine", { "kr-automation-core", 3 })
-Recipe("mini-assembler-1"):replace_ingredient("articulated-mechanism", { "articulated-mechanism", 2 })
--- 02
--- Nothing
--- 03
-Recipe("mini-assembler-3"):remove_ingredient("advanced-gearbox", true)
-Recipe("mini-assembler-3"):remove_ingredient("complex-joint", true)
-Recipe("mini-assembler-3"):remove_ingredient("advanced-machining-tool", true)
-Recipe("mini-assembler-3"):replace_ingredient("steel-plate", { "automation-core-3", 1 })
--- 04
-Recipe("mini-assembler-4"):add_ingredient({ "solder", 5 })
-Recipe("mini-assembler-4"):add_ingredient({ "hv-power-regulator", 1 })
-Recipe("mini-assembler-4"):add_ingredient({ "kr-imersium-gear-wheel", 4 })
-Recipe("mini-assembler-4"):add_ingredient({ "processing-unit", 2 })
-Recipe("mini-assembler-4"):replace_ingredient("assembling-machine-3", { "mini-assembler-3", 1 })
-Recipe("mini-assembler-4"):replace_ingredient("steel-plate", { "nitinol-plate", 9 })
-Recipe("mini-assembler-4"):replace_ingredient("productivity-module", { "cermet", 1 })
--- 05
-Recipe("mini-assembler-5"):add_ingredient({ "solder", 5 })
-Recipe("mini-assembler-5"):add_ingredient({ "hv-power-regulator", 1 })
-Recipe("mini-assembler-5"):replace_ingredient("titanium-plate", { "se-heavy-girder", 2 })
-Recipe("mini-assembler-5"):replace_ingredient("iron-gear-wheel", { "kr-imersium-gear-wheel", 4 })
-Recipe("mini-assembler-5"):replace_ingredient("steel-plate", { "cermet", 1 })
-Recipe("mini-assembler-5"):replace_ingredient("speed-module-2", { "processing-unit", 5 })
-Recipe("mini-assembler-5"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
--- 06
-Recipe("mini-assembler-6"):add_ingredient({ "solder", 5 })
-Recipe("mini-assembler-6"):add_ingredient({ "hv-power-regulator", 1 })
-Recipe("mini-assembler-6"):replace_ingredient("titanium-plate", { "kr-imersium-beam", 2 })
-Recipe("mini-assembler-6"):replace_ingredient("iron-gear-wheel", { "se-heavy-bearing", 2 })
-Recipe("mini-assembler-6"):replace_ingredient("steel-plate", { "se-aeroframe-scaffold", 5 })
-Recipe("mini-assembler-6"):replace_ingredient("productivity-module-2", { "advanced-processing-unit", 5 })
-Recipe("mini-assembler-6"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
--- 07
-Recipe("mini-assembler-7"):add_ingredient({ "solder", 5 })
-Recipe("mini-assembler-7"):add_ingredient({ "hv-power-regulator", 1 })
-Recipe("mini-assembler-7"):add_ingredient({ "se-heavy-bearing", 2 })
-Recipe("mini-assembler-7"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
-Recipe("mini-assembler-7"):replace_ingredient("titanium-plate", { "kr-imersium-beam", 2 })
-Recipe("mini-assembler-7"):replace_ingredient("speed-module-3", { "advanced-processing-unit", 5 })
-Recipe("mini-assembler-7"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
--- 08
-Recipe("mini-assembler-8"):add_ingredient({ "solder", 5 })
-Recipe("mini-assembler-8"):add_ingredient({ "kr-ai-core", 1 })
-Recipe("mini-assembler-8"):add_ingredient({ "se-heavy-bearing", 2 })
-Recipe("mini-assembler-8"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
-Recipe("mini-assembler-8"):replace_ingredient("titanium-plate", { "kr-imersium-beam", 2 })
-Recipe("mini-assembler-8"):replace_ingredient("productivity-module-3", { "gr_materials_circuit", 5 })
-Recipe("mini-assembler-8"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
--- 09
-Recipe("mini-assembler-9"):add_ingredient({ "solder", 5 })
-Recipe("mini-assembler-9"):add_ingredient({ "kr-ai-core", 1 })
-Recipe("mini-assembler-9"):add_ingredient({ "se-heavy-bearing", 2 })
-Recipe("mini-assembler-9"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
-Recipe("mini-assembler-9"):replace_ingredient("speed-module-3", { "se-nanomaterial", 5 })
-Recipe("mini-assembler-9"):replace_ingredient("low-density-structure", { "se-heavy-assembly", 2 })
-Recipe("mini-assembler-9"):replace_ingredient("processing-unit", { "gr_materials_circuit", 10 })
-Recipe("mini-assembler-9"):replace_ingredient("tungsten-carbide", { "cobalt-carbide", 2 })
--- 10
-Recipe("mini-assembler-10"):add_ingredient({ "solder", 5 })
-Recipe("mini-assembler-10"):add_ingredient({ "kr-ai-core", 1 })
-Recipe("mini-assembler-10"):add_ingredient({ "se-heavy-bearing", 2 })
-Recipe("mini-assembler-10"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
-Recipe("mini-assembler-10"):replace_ingredient("productivity-module-3", { "se-nanomaterial", 5 })
-Recipe("mini-assembler-10"):replace_ingredient("low-density-structure", { "se-heavy-assembly", 2 })
-Recipe("mini-assembler-10"):replace_ingredient("processing-unit", { "gr_materials_circuit", 10 })
-Recipe("mini-assembler-10"):replace_ingredient("tungsten-carbide", { "se-naquium-cube", 1 })
+local assembler1 = data.raw.recipe["mini-assembler-1"]
+assembler1.crafting_categories = { "electronics" }
+assembler1.ingredients = {
+    { type = "item", name = "electric-motor", amount = 2 },
+    { type = "item", name = "articulated-mechanism", amount = 2 },
+    { type = "item", name = "kr-automation-core", amount = 3 },
+    { type = "item", name = "aluminum-plate", amount = 4 }
+}
 
-data.raw["assembling-machine"]["mini-assembler-1"].crafting_categories = { "electronics" }
-data.raw["assembling-machine"]["mini-assembler-2"].crafting_categories = { "electronics", "electronics-machine" }
-data.raw["assembling-machine"]["mini-assembler-3"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
-data.raw["assembling-machine"]["mini-assembler-4"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
-data.raw["assembling-machine"]["mini-assembler-5"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
-data.raw["assembling-machine"]["mini-assembler-6"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
-data.raw["assembling-machine"]["mini-assembler-7"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
-data.raw["assembling-machine"]["mini-assembler-8"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
-data.raw["assembling-machine"]["mini-assembler-9"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
-data.raw["assembling-machine"]["mini-assembler-10"].crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
+-- 02
+local assembler2 = data.raw.recipe["mini-assembler-2"]
+assembler2.crafting_categories = { "electronics", "electronics-machine" }
+assembler2.ingredients = {
+    { type = "item", name = "mini-assembler-1", amount = 1 },
+    { type = "item", name = "solder", amount = 5 },
+    { type = "item", name = "automation-core-2", amount = 1 },
+    { type = "item", name = "silver-brazing-alloy", amount = 5 },
+}
+
+-- 03
+local assembler3 = data.raw.recipe["mini-assembler-3"]
+assembler3.crafting_categories = { "electronics", "electronics-machine", "crafting-or-electromagnetics" }
+assembler3.ingredients = {
+    { type = "item", name = "mini-assembler-2", amount = 1 },
+    { type = "item", name = "solder", amount = 8 },
+    { type = "item", name = "hv-power-regulator", amount = 1 },
+    { type = "item", name = "automation-core-3", amount = 1 },
+    { type = "item", name = "concrete", amount = 8 }
+}
+
+-- 04
+local assembler4 = data.raw.recipe["mini-assembler-4"]
+assembler4.crafting_categories = table.deepcopy(assembler3.crafting_categories)
+assembler4.ingredients = {
+    { type = "item", name = "mini-assembler-3", amount = 1 },
+    { type = "item", name = "solder", amount = 5 },
+    { type = "item", name = "hv-power-regulator", amount = 1 },
+    { type = "item", name = "kr-imersium-gear-wheel", amount = 4 },
+    { type = "item", name = "cermet", amount = 1 },
+    { type = "item", name = "nitinol-plate", amount = 9 },
+    { type = "item", name = "processing-unit", amount = 2 }
+}
+
+-- 05
+local assembler5 = data.raw.recipe["mini-assembler-5"]
+assembler5.crafting_categories = table.deepcopy(assembler4.crafting_categories)
+assembler5.ingredients = {
+    { type = "item", name = "mini-assembler-4", amount = 1 },
+    { type = "item", name = "solder", amount = 5 },
+    { type = "item", name = "hv-power-regulator", amount = 1 },
+    { type = "item", name = "cermet", amount = 1 },
+    { type = "item", name = "processing-unit", amount = 5 },
+    { type = "item", name = "cobalt-carbide", amount = 2 }
+}
+
+-- 06
+local assembler6 = data.raw.recipe["mini-assembler-6"]
+assembler6.crafting_categories = table.deepcopy(assembler5.crafting_categories)
+assembler6.ingredients = {
+    { type = "item", name = "mini-assembler-5", amount = 1 },
+    { type = "item", name = "solder", amount = 5 },
+    { type = "item", name = "hv-power-regulator", amount = 1 },
+    { type = "item", name = "cobalt-carbide", amount = 2 },
+    { type = "item", name = "se-aeroframe-scaffold", amount = 5 },
+    { type = "item", name = "advanced-processing-unit", amount = 5 }
+}
+
+-- 07
+local assembler7 = data.raw.recipe["mini-assembler-7"]
+assembler7.crafting_categories = table.deepcopy(assembler6.crafting_categories)
+assembler7.ingredients = {
+    { type = "item", name = "mini-assembler-6", amount = 1 },
+    { type = "item", name = "solder", amount = 5 },
+    { type = "item", name = "hv-power-regulator", amount = 1 },
+    { type = "item", name = "cobalt-carbide", amount = 2 },
+    { type = "item", name = "advanced-processing-unit", amount = 5 },
+    { type = "item", name = "se-heavy-bearing", amount = 2 },
+    { type = "item", name = "se-aeroframe-bulkhead", amount = 5 },
+    { type = "item", name = "steel-plate", amount = 6 }
+}
+
+-- 08
+local assembler8 = data.raw.recipe["mini-assembler-8"]
+assembler8.crafting_categories = table.deepcopy(assembler7.crafting_categories)
+assembler8.ingredients = {
+    { type = "item", name = "mini-assembler-7", amount = 1 },
+    { type = "item", name = "solder", amount = 5 },
+    { type = "item", name = "se-heavy-bearing", amount = 2 },
+    { type = "item", name = "se-aeroframe-bulkhead", amount = 5 },
+    { type = "item", name = "steel-plate", amount = 6 },
+    { type = "item", name = "cobalt-carbide", amount = 2 },
+    { type = "item", name = "kr-ai-core", amount = 1 },
+    { type = "item", name = "gr_materials_circuit", amount = 5 }
+}
+
+-- 09
+local assembler9 = data.raw.recipe["mini-assembler-9"]
+assembler9.crafting_categories = table.deepcopy(assembler8.crafting_categories)
+assembler9.ingredients = {
+    { type = "item", name = "mini-assembler-8", amount = 1 },
+    { type = "item", name = "solder", amount = 5 },
+    { type = "item", name = "cobalt-carbide", amount = 2 },
+    { type = "item", name = "se-aeroframe-bulkhead", amount = 5 },
+    { type = "item", name = "se-heavy-bearing", amount = 2 },
+    { type = "item", name = "gr_materials_circuit", amount = 10 },
+    { type = "item", name = "kr-ai-core", amount = 1 },
+    { type = "item", name = "se-nanomaterial", amount = 5 },
+    { type = "item", name = "se-heavy-assembly", amount = 2 }
+}
+
+-- 10
+local assembler10 = data.raw.recipe["mini-assembler-10"]
+assembler10.crafting_categories = table.deepcopy(assembler9.crafting_categories)
+assembler10.ingredients = {
+    { type = "item", name = "mini-assembler-9", amount = 1 },
+    { type = "item", name = "solder", amount = 5 },
+    { type = "item", name = "se-aeroframe-bulkhead", amount = 5 },
+    { type = "item", name = "se-heavy-bearing", amount = 2 },
+    { type = "item", name = "gr_materials_circuit", amount = 10 },
+    { type = "item", name = "kr-ai-core", amount = 1 },
+    { type = "item", name = "se-nanomaterial", amount = 5 },
+    { type = "item", name = "se-heavy-assembly", amount = 2 },
+    { type = "item", name = "se-naquium-cube", amount = 1 }
+}
+
 
 -- Set crafting categories for selected recipes
-Recipe("aluminum-cable"):change_category("electronics")
-Recipe("basic-electronic-components"):change_category("electronics")
-Recipe("basic-electronic-components-silver"):change_category("electronics")
-Recipe("kr-automation-core"):change_category("electronics")
-Recipe("kr-blank-tech-card"):change_category("electronics")
-Recipe("kr-electronic-components"):change_category("electronics-machine")
-Recipe("advanced-electronic-components"):change_category("electronics-machine")
-Recipe("gold-wire"):change_category("electronics-machine")
-Recipe("integrated-circuit"):change_category("electronics-machine")
-Recipe("tantalum-capacitor"):change_category("electronics-machine")
-Recipe("temperature-sensor"):change_category("electronics-machine")
-Recipe("mlcc"):change_category("electronics-machine")
-Recipe("nickel-electromagnet"):change_category("electronics-machine")
-Recipe("optical-fiber"):change_category("electronics-machine")
-Recipe("silver-wire"):change_category("electronics-machine")
-Recipe("tinned-cable"):change_category("electronics-machine")
-Recipe("advanced-cable"):change_category("electronics-machine")
-Recipe("advanced-processing-unit"):change_category("electronics-machine")
-Recipe("advanced-cable"):change_category("electronics-machine")
-Recipe("advanced-processing-unit"):change_category("electronics-machine")
+Recipe_old("aluminum-cable"):change_category("electronics")
+Recipe_old("basic-electronic-components"):change_category("electronics")
+Recipe_old("basic-electronic-components-silver"):change_category("electronics")
+Recipe_old("kr-automation-core"):change_category("electronics")
+Recipe_old("kr-blank-tech-card"):change_category("electronics")
+Recipe_old("kr-electronic-components"):change_category("electronics-machine")
+Recipe_old("advanced-electronic-components"):change_category("electronics-machine")
+Recipe_old("gold-wire"):change_category("electronics-machine")
+Recipe_old("integrated-circuit"):change_category("electronics-machine")
+Recipe_old("tantalum-capacitor"):change_category("electronics-machine")
+Recipe_old("temperature-sensor"):change_category("electronics-machine")
+Recipe_old("mlcc"):change_category("electronics-machine")
+Recipe_old("nickel-electromagnet"):change_category("electronics-machine")
+Recipe_old("optical-fiber"):change_category("electronics-machine")
+Recipe_old("silver-wire"):change_category("electronics-machine")
+Recipe_old("tinned-cable"):change_category("electronics-machine")
+Recipe_old("advanced-cable"):change_category("electronics-machine")
+Recipe_old("advanced-processing-unit"):change_category("electronics-machine")
+Recipe_old("advanced-cable"):change_category("electronics-machine")
+Recipe_old("advanced-processing-unit"):change_category("electronics-machine")

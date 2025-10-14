@@ -1,3 +1,8 @@
+local hcp_circuit_results = {{ type = "item", name = "gr_materials_circuit", amount = 1 }}
+if data.raw.fluid["depleted-acid"] then
+    table.insert(hcp_circuit_results, { type = "fluid", name = "depleted-acid", amount = 50 })
+end
+
 data:extend({
     {
         type = "item",
@@ -37,8 +42,7 @@ data:extend({
             { type = "fluid", name = "fi_strong_acid", amount = 50 },
         },
         results = {
-            data.raw.fluid["depleted-acid"] and { type = "fluid", name = "depleted-acid", amount = 50 } or nil,
-            { type = "item", name = "gr_materials_circuit", amount = 1 },
+            { type = "item", name = "gr_materials_circuit", amount = 1 }
         },
         main_product = "gr_materials_circuit",
         allow_decomposition = false
@@ -56,7 +60,7 @@ data:extend({
             { type = "item", name = "plastic-bar", amount = 4 },
         },
         results = {
-            { type = "item", name = "gr_materials_pcb", amount = 6 },
+            { type = "item", name = "gr_materials_pcb", amount = 6 }
         },
         allow_decomposition = false
     },
