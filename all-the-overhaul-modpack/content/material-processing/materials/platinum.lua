@@ -33,6 +33,7 @@ local create = atom.processing.create(config)
 local oreToDustRecipe = Recipe({
     type = "recipe",
     name = "atom-" .. config.name .. "-dust",
+    localised_name = { "item-name." .. config.itemNames.dust },
     icons = {
         config.icons.dust,
         atom.util.icon.createSmallIcon(atom.processing.materials.rareMetals.icons.ore),

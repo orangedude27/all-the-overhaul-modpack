@@ -19,6 +19,7 @@ local config = atom.processing.util.prepareConfig({
 local dustToSandRecipe = Recipe({
     type = "recipe",
     name = "atom-" .. config.name .. "-sand",
+    localised_name = { "item-name." .. config.itemNames.sand },
     icons = { config.icons.sand },
     category = "mashering",
     energy_required = 3.2,

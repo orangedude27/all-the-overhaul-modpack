@@ -19,6 +19,7 @@ oreToDustRecipe.allowProductivity()
 local dustToPlateRecipe = atom.util.Recipe({
     type = "recipe",
     name = "atom-" .. config.name .. "-plate-dust",
+    localised_name = { "item-name." .. config.itemNames.dust },
     icons = {
         config.icons.plate,
         atom.util.icon.createSmallIcon(config.icons.dust),

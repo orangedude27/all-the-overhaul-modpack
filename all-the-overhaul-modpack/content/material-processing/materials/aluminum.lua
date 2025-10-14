@@ -36,6 +36,7 @@ local config = atom.processing.util.prepareConfig({
 local oreToAluminaRecipe = Recipe({
     type = "recipe",
     name = "atom-alumina-ore",
+    localised_name = { "item-name." .. config.itemNames.alumina },
     icons = {
         config.icons.alumina,
         atom.util.icon.createSmallIcon(config.icons.ore),
@@ -56,6 +57,7 @@ local oreToAluminaRecipe = Recipe({
 local aluminaToPlateRecipe = Recipe({
     type = "recipe",
     name = "atom-" .. config.name .. "-plate",
+    localised_name = { "item-name." .. config.itemNames.plate },
     icons = {
         config.icons.plate,
         atom.util.icon.createSmallIcon(config.icons.alumina),
@@ -73,6 +75,7 @@ aluminaToPlateRecipe.allowProductivity()
 local dustToAluminaRecipe = Recipe({
     type = "recipe",
     name = "atom-alumina-dust",
+    localised_name = { "item-name." .. config.itemNames.alumina },
     icons = {
         config.icons.alumina,
         atom.util.icon.createSmallIcon(config.icons.dust),
