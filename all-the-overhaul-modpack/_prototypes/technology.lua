@@ -64,8 +64,6 @@ if data.raw.recipe["laser-turret"] then
     util.tech_lock_recipes("laser-turret", { "sw-electric-turret" })
 end
 
-util.recipe_require_tech("bismuth-plate", "bismanol")
-
 util.tech_lock_recipes("el_purifier_tech", { "ato-bismuth-sorting" })
 
 -- Fix research line of Advanced Furnaces 2
