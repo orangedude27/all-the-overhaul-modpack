@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 16.10.2025
+  Bug Fixes:
+    - Fix recipe names
+    - Remove FARL compatibility
+    - Fix more recipe ingredients
+    - Increase pump speed to be inbetween 1.1 and 2.0 vanilla speed
+    - Revert K2 steel pipes to be normal pipes again
+    - Fix offshore pump requiring energy
+    - Fix some technologies
+---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 14.10.2025
   Bug Fixes:
