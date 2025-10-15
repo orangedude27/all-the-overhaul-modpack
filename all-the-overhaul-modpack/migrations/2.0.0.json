@@ -1,6 +1,7 @@
 {
     "entity": [
-        ["deep-rare-metals", "deep-kr-rare-metal-ore"]
+        ["deep-rare-metals", "deep-kr-rare-metal-ore"],
+        ["kr-legacy-steel-pipe-to-ground", "kr-steel-pipe-to-ground"]
     ],
     "item": [
         ["gyroscope", "gyro"]
