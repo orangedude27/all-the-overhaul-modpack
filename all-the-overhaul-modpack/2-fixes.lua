@@ -1,6 +1,7 @@
 -- Fixes for 2.0 where the source of the difference to 1.1 is either not clear or there are breaking changes in another mod
 
 local Recipe = atom.util.Recipe
+local Technology = atom.util.Technology
 
 -- Circuit board
 Recipe("circuit-board").addIngredient("phenolic-board")
@@ -85,6 +86,9 @@ assembling_machine_1.removeIngredient("lead-plate")
 -- Assembling machine 2
 Recipe("assembling-machine-2").removeIngredient("el_materials_ALK")
 
+-- Assembling machine 3
+Recipe("assembling-machine-3").replaceIngredient("titanium-plate", "hv-power-regulator", 1)
+
 -- Lab 1
 local lab_1 = Recipe("lab")
 lab_1.removeIngredient("aluminum-cable")
@@ -133,6 +137,54 @@ Recipe("gimbaled-thruster").removeIngredient("temperature-sensor")
 
 -- Radar
 Recipe("radar").replaceIngredient("basic-circuit-board", "kr-automation-core", 4)
+
+-- Rocket control unit
+local rocket_control_unit = Recipe("rocket-control-unit")
+rocket_control_unit.replaceIngredient("advanced-circuit", 5)
+rocket_control_unit.replaceIngredient("gyro", "tracker")
+rocket_control_unit.addIngredient("kr-glass", 5)
+
+-- Low density structure
+Recipe("low-density-structure").removeIngredient("titanium-plate")
+Recipe("low-density-structure-in-orbit").removeIngredient("titanium-plate")
+Recipe("low-density-structure-nanotubes").removeIngredient("titanium-plate")
+Recipe("low-density-structure-nanotubes-in-orbit").removeIngredient("titanium-plate")
+
+-- Gyroscope
+Recipe("gyro").removeIngredient("xenon")
+
+-- Cargo pod
+Recipe("se-cargo-rocket-cargo-pod").replaceIngredient("motorized-articulator", "fast-inserter")
+
+-- Pump speed kind of break old games so we choose something inbetween
+data.raw["pump"]["pump"].pumping_speed = 100
+data.raw["pump"]["kr-steel-pump"].pumping_speed = 200
+
+-- K2 steel pipes using a separate category breaks old games and breaks underground distance progression
+data.raw["pipe"]["kr-steel-pipe"].fluid_box.pipe_connections[1].connection_category = nil
+data.raw["pipe"]["kr-steel-pipe"].fluid_box.pipe_connections[2].connection_category = nil
+data.raw["pipe"]["kr-steel-pipe"].fluid_box.pipe_connections[3].connection_category = nil
+data.raw["pipe"]["kr-steel-pipe"].fluid_box.pipe_connections[4].connection_category = nil
+data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].fluid_box.pipe_connections[1].connection_category = nil
+data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].fluid_box.pipe_connections[2].connection_category = nil
+
+-- Offshore pump doesn't use energy
+data.raw["offshore-pump"]["offshore-pump"].energy_source = { type = "void" }
+
+-- Technologies
+local greenhouse = Technology("kr-greenhouse")
+greenhouse.replacePrerequisite("steam-power", "basic-fluid-handling")
+greenhouse.addPrerequisite("kr-stone-processing")
+greenhouse.addPrerequisite("automation-science-pack")
+greenhouse.addIngredient("automation-science-pack")
+
+local basic_fluid_handling = Technology("basic-fluid-handling")
+basic_fluid_handling.setPrerequisites({ "electricity" })
+basic_fluid_handling.removeIngredient("automation-science-pack")
+
+Technology("steam-power").addIngredient("kr-basic-tech-card")
+
+Technology("basic-chemistry").addPrerequisite("automation-science-pack")
 
 -- Remove new stuff
 atom.util.recipe.removeByName("electronic-circuit-wood")
