@@ -3,6 +3,7 @@
 local recipe = atom.util.Recipe({
     type = "recipe",
     name = "atom-biomass-growing",
+    localised_name = { "item-name.kr-biomass" },
     category = "chemistry",
     enabled = true,
     energy_required = 100,
