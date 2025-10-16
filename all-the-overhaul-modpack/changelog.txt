@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.8
+Date: 16.10.2025
+  Bug Fixes:
+    - Fix more recipe ingredients
+    - Revert K2 pollution filter crafting category change
+    - Pump speeds are settled at 4800/s and 9600/s (1200/s vanilla 2.0 pump; 12000/s and 18000/s 1.1 pump speeds)
+    - Revert fluid box changes of the biolab
+---------------------------------------------------------------------------------------------------
 Version: 2.0.7
 Date: 16.10.2025
   Bug Fixes:
