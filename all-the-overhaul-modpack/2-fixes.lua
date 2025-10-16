@@ -156,9 +156,28 @@ Recipe("gyro").removeIngredient("xenon")
 -- Cargo pod
 Recipe("se-cargo-rocket-cargo-pod").replaceIngredient("motorized-articulator", "fast-inserter")
 
+-- Biter research data
+Recipe("kr-biter-research-data").replaceIngredient("kr-coke", "gunpowder", 10)
+
+-- Solar panel
+Recipe("solar-panel").removeIngredient("kr-iron-beam")
+
+-- Solar cell
+Recipe("solar-cell").replaceIngredient("silicon-wafer", "kr-silicon")
+
+-- Biomatter
+Recipe("kr-biomass").removeIngredient("kr-biomass")
+
+-- Fullerenes
+data.raw.recipe["fullerenes"].category = "chemistry"
+
+-- Pollution filter
+data.raw["recipe"]["kr-pollution-filter"].category = "crafting"
+data.raw["recipe"]["kr-restore-used-pollution-filter"].category = "crafting-with-fluid"
+
 -- Pump speed kind of break old games so we choose something inbetween
-data.raw["pump"]["pump"].pumping_speed = 100
-data.raw["pump"]["kr-steel-pump"].pumping_speed = 200
+data.raw["pump"]["pump"].pumping_speed = 80
+data.raw["pump"]["kr-steel-pump"].pumping_speed = 160
 
 -- K2 steel pipes using a separate category breaks old games and breaks underground distance progression
 data.raw["pipe"]["kr-steel-pipe"].fluid_box.pipe_connections[1].connection_category = nil
@@ -170,6 +189,14 @@ data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].fluid_box.pipe_connections
 
 -- Offshore pump doesn't use energy
 data.raw["offshore-pump"]["offshore-pump"].energy_source = { type = "void" }
+
+-- Revert fluid box changes of the bio lab
+local biolab_fluidboxes = data.raw["assembling-machine"]["kr-bio-lab"].fluid_boxes
+biolab_fluidboxes[2].pipe_connections = {
+    { flow_direction = "input-output", direction = defines.direction.east, position = { 3, 0 } },
+    { flow_direction = "input-output", direction = defines.direction.west, position = { -3, 0 } },
+}
+biolab_fluidboxes[3] = nil
 
 -- Technologies
 local greenhouse = Technology("kr-greenhouse")
