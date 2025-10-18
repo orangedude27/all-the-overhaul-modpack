@@ -121,11 +121,8 @@ function atom.util.Technology(value)
         --- @param amount? number The amount of the ingredient (default 1)
         --- @param expensiveAmount? number The amount of the ingredient for the expensive recipe (uses amount if not set)
         addIngredient = function(ingredientName, amount, expensiveAmount)
-            local function apply(_table, amount)
-                table.insert(_table.unit.ingredients, { ingredientName, amount })
-            end
             if technology.unit then
-                apply(technology, amount or 1)
+                table.insert(technology.unit.ingredients, { ingredientName, amount or 1 })
             end
         end,
 

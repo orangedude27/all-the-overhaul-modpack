@@ -222,6 +222,10 @@ data.raw.technology["bismanol"].ignore_tech_cost_multiplier = true
 data.raw.technology["electricity"].ignore_tech_cost_multiplier = true
 data.raw.technology["fuel-processing"].ignore_tech_cost_multiplier = true
 
+data.raw.technology["automation"].ignore_tech_cost_multiplier = false
+data.raw.technology["mini-assembler-1"].ignore_tech_cost_multiplier = false
+data.raw.technology["electronics"].ignore_tech_cost_multiplier = false
+
 Technology("basic-chemistry").addPrerequisite("automation-science-pack")
 Technology("basic-logistics").addPrerequisite("burner-mechanics")
 Technology("titanium-processing").addPrerequisite("lubricant")
@@ -230,6 +234,12 @@ Technology("mangalloy").addPrerequisite("automation-science-pack")
 Technology("landfill").addPrerequisite("automation-science-pack")
 Technology("worker-robots-speed-2").addPrerequisite("chemical-science-pack")
 Technology("fu_KFK_tech").addPrerequisite("se-rocket-science-pack")
+
+Technology("tined-cable").addIngredient("kr-basic-tech-card")
+Technology("el_ALK_tech").addIngredient("kr-basic-tech-card")
+Technology("el_arc_furnace_tech").addIngredient("kr-basic-tech-card")
+Technology("el_caster_tech").addIngredient("kr-basic-tech-card")
+Technology("el_purifier_tech").addIngredient("kr-basic-tech-card")
 
 -- Remove new stuff
 atom.util.recipe.removeByName("electronic-circuit-wood")
