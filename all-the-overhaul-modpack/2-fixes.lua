@@ -202,16 +202,34 @@ biolab_fluidboxes[3] = nil
 local greenhouse = Technology("kr-greenhouse")
 greenhouse.replacePrerequisite("steam-power", "basic-fluid-handling")
 greenhouse.addPrerequisite("kr-stone-processing")
-greenhouse.addPrerequisite("automation-science-pack")
-greenhouse.addIngredient("automation-science-pack")
+greenhouse.removePrerequisite("automation-science-pack")
 
 local basic_fluid_handling = Technology("basic-fluid-handling")
 basic_fluid_handling.setPrerequisites({ "electricity" })
 basic_fluid_handling.removeIngredient("automation-science-pack")
+basic_fluid_handling.prototype.ignore_tech_cost_multiplier = true
 
-Technology("steam-power").addIngredient("kr-basic-tech-card")
+local steam_power = Technology("steam-power")
+steam_power.addIngredient("kr-basic-tech-card")
+steam_power.addPrerequisite("automation-science-pack")
+steam_power.prototype.ignore_tech_cost_multiplier = false
+
+local manganese_smelting = data.raw.technology["manganese-smelting"]
+manganese_smelting.unit = nil
+manganese_smelting.research_trigger = { type = "mine-entity", entity = "manganese-ore" }
+
+data.raw.technology["bismanol"].ignore_tech_cost_multiplier = true
+data.raw.technology["electricity"].ignore_tech_cost_multiplier = true
+data.raw.technology["fuel-processing"].ignore_tech_cost_multiplier = true
 
 Technology("basic-chemistry").addPrerequisite("automation-science-pack")
+Technology("basic-logistics").addPrerequisite("burner-mechanics")
+Technology("titanium-processing").addPrerequisite("lubricant")
+Technology("military").addPrerequisite("copper-processing")
+Technology("mangalloy").addPrerequisite("automation-science-pack")
+Technology("landfill").addPrerequisite("automation-science-pack")
+Technology("worker-robots-speed-2").addPrerequisite("chemical-science-pack")
+Technology("fu_KFK_tech").addPrerequisite("se-rocket-science-pack")
 
 -- Remove new stuff
 atom.util.recipe.removeByName("electronic-circuit-wood")
