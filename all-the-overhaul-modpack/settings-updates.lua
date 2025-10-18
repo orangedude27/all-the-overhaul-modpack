@@ -232,33 +232,9 @@ if mods["IfNickel-Updated"] then
 end
 --k2
 if mods["Krastorio2"] then
-    change_setting("kr-stack-size", "No changes")
-    change_setting("kr-long-hands", 1)
-    change_setting("kr-bonus-inventory", 0)
-    change_setting("kr-cargo-wagon-bonus", 0)
-    change_setting("kr-bonus-items", true)
     change_setting("kr-loaders", true, false)
     change_setting("kr-containers", false)
-    change_setting("kr-tech-multiplier-everywhere", false)
-    change_setting("kr-automation-science-pack-recipe", "Krastorio 2")
-    change_setting("kr-logistic-science-pack-recipe", "Krastorio 2")
-    change_setting("kr-military-science-pack-recipe", "Krastorio 2")
-    change_setting("kr-chemical-science-pack-recipe", "Krastorio 2")
-    change_setting("kr-production-science-pack-recipe", "Krastorio 2")
-    change_setting("kr-utility-science-pack-recipe", "Krastorio 2")
-    change_setting("kr-rebalance-vehicles&fuels", true)
-    change_setting("kr-rebalance-radar", true)
-    change_setting("kr-rebalance-fuels", true)
-    change_setting("kr-electric-poles-changes", true)
-    change_setting("kr-damage-and-ammo", true)
-    change_setting("kr-pipes-and-belts-changes", true)
-    change_setting("kr-more-realistic-weapon", true)
-    change_setting("kr-more-realistic-weapon-auto-aim", true)
     change_setting("kr-finite-oil", true)
-    change_setting("kr-peaceful-mode", false)
-    change_setting("kr-infinite-technology", true)
-    change_setting("kr-spidertron-exoskeleton", false)
-    change_setting("kr-fix-laser-artillery-turret", true)
 end
 --wide chest
 if mods["WideChests"] then
