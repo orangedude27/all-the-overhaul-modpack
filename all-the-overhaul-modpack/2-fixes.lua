@@ -235,7 +235,7 @@ Technology("landfill").addPrerequisite("automation-science-pack")
 Technology("worker-robots-speed-2").addPrerequisite("chemical-science-pack")
 Technology("fu_KFK_tech").addPrerequisite("se-rocket-science-pack")
 
-Technology("tined-cable").addIngredient("kr-basic-tech-card")
+Technology("tinned-cable").addIngredient("kr-basic-tech-card")
 Technology("el_ALK_tech").addIngredient("kr-basic-tech-card")
 Technology("el_arc_furnace_tech").addIngredient("kr-basic-tech-card")
 Technology("el_caster_tech").addIngredient("kr-basic-tech-card")
