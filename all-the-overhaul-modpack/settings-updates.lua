@@ -139,10 +139,6 @@ if mods["bzchlorine"] then
     change_setting("bzchlorine-early-salt", "both")
     change_setting("bzchlorine-more-intermediates", "yes")
 end
---bzfoundry
-if mods["bzfoundry"] then
-    change_setting("bzfoundry-minimal", true, false)
-end
 --bzgas
 if mods["bzgas"] then
     change_setting("bzgas-more-intermediates", "phenol")
@@ -301,7 +297,7 @@ if mods["RampantFixed"] then
     change_setting("rampantFixed--undergroundAttack", false)
     change_setting("rampantFixed--removeBloodParticles", true)
 end
---rampent-evolution
+--rampant-evolution
 if mods["RampantEvolution"] then
     change_setting("rampant-evolution--displayEvolutionMsg", true)
     change_setting("rampant-evolution-evolutionPerHiveKilled", 0)
@@ -401,7 +397,6 @@ if mods["Load-Furn-2"] then
 end
 if mods["BrimStuff-Updated"] then
     change_setting("brimstuff-greenhouse", false)
-    change_setting("brimstuff-waste-treatment", false, false)
     change_setting("brimstuff-krastorio-filter-hell", false)
     change_setting("brimstuff-toluene-from-coke", false)
     change_setting("brimstuff-clobber-bz-chemical-plant", false, false)
@@ -416,4 +411,5 @@ if mods["DoubleWagons"] then
 end
 
 --Adjustable-Inventory-Size
+data.raw["bool-setting"]["ais-inventorysize-enabled"].default_value = true
 data.raw["int-setting"]["inventorysize"].default_value = 90
