@@ -1,6 +1,6 @@
 {
     "name": "all-the-overhaul-modpack",
-    "version": "2.0.9",
+    "version": "2.0.10",
     "title": "All The Overhauls Modpack",
     "author": "Orangedude27, Sportacus, cackling fiend, BLackATM",
     "factorio_version": "2.0",
@@ -86,6 +86,8 @@
         "! bzlead",
         "! bzsilicon",
         "! bztin",
-        "! bztungsten"
+        "! bztitanium",
+        "! bztungsten",
+        "! bzzirconium"
     ]
 }
