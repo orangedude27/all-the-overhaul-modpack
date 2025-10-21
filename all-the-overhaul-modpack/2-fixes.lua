@@ -76,6 +76,10 @@ Recipe("construction-robot").replaceIngredient("electronic-circuit", 2)
 -- Processing unit
 Recipe("processing-unit").replaceIngredient("advanced-electronic-components", 2)
 Recipe("processing-unit-in-laser-mill").replaceIngredient("advanced-electronic-components", 2)
+Recipe("processing-unit").removeIngredient("solder")
+Recipe("processing-unit").replaceIngredient("solder", 6)
+Recipe("processing-unit-in-laser-mill").removeIngredient("solder")
+Recipe("processing-unit-in-laser-mill").replaceIngredient("solder", 6)
 
 -- Assembling machine 1
 local assembling_machine_1 = Recipe("assembling-machine-1")
@@ -167,6 +171,12 @@ Recipe("solar-cell").replaceIngredient("silicon-wafer", "kr-silicon")
 
 -- Biomatter
 Recipe("kr-biomass").removeIngredient("kr-biomass")
+
+-- Advanced circuit
+Recipe("advanced-circuit").removeIngredient("solder")
+Recipe("advanced-circuit").replaceIngredient("solder", 4)
+Recipe("advanced-circuit-in-laser-mill").removeIngredient("solder")
+Recipe("advanced-circuit-in-laser-mill").replaceIngredient("solder", 4)
 
 -- Fullerenes
 data.raw.recipe["fullerenes"].category = "chemistry"

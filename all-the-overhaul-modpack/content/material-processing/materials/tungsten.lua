@@ -12,7 +12,7 @@ local config = atom.processing.util.prepareConfig({
         pellets = "atom-tungsten-pellets"
     },
     icons = {
-        ore = { icon = "__bztungsten__/graphics/icons/tungsten-ore.png", icon_size = 64, icon_mipmaps = 3 },
+        ore = { icon = "__bztungsten2__/graphics/icons/tungsten-ore.png", icon_size = 64, icon_mipmaps = 3 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
     },
     unlockedBy = {

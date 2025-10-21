@@ -7,7 +7,7 @@ local config = atom.processing.util.prepareConfig({
     },
     icons = {
         "dust",
-        plate = { icon = "__bzcarbon__/graphics/icons/graphite.png", icon_size = 128 },
+        plate = { icon = "__bzcarbon2__/graphics/icons/graphite.png", icon_size = 128 },
     }
 })
 

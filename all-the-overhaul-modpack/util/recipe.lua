@@ -151,9 +151,9 @@ function atom.util.Recipe(value)
         --- @param amount number The amount of the ingredient (default: 1)
         addIngredient = function(ingredientName, amount)
             local ingredientType = data.raw.item[ingredientName] and "item"
-                    or data.raw.module[ingredientName] and "item"
-                    or data.raw.fluid[ingredientName] and "fluid"
-                    or nil
+                or data.raw.module[ingredientName] and "item"
+                or data.raw.fluid[ingredientName] and "fluid"
+                or nil
             if not ingredientType then
                 atom.util.log.error("Unknown ingredient: " .. ingredientName)
                 return
@@ -188,15 +188,12 @@ function atom.util.Recipe(value)
         -- Removes an existing ingredient by name
         -- @param ingredientName string The name of the ingredient
         removeIngredient = function(ingredientName)
-            local function apply(_table)
-                for i, result in pairs(_table.ingredients) do
+            if recipe.ingredients then
+                for i, result in pairs(recipe.ingredients) do
                     if result.name == ingredientName then
-                        table.remove(_table.ingredients, i)
+                        table.remove(recipe.ingredients, i)
                     end
                 end
-            end
-            if recipe.ingredients then
-                apply(recipe)
             end
         end,
 

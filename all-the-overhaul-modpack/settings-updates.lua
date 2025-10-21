@@ -125,7 +125,7 @@ if mods["bismuth"] then
     change_setting("bismuth-contain-sulfur", 935)
 end
 --bzcarbon
-if mods["bzcarbon"] then
+if mods["bzcarbon2"] then
     change_setting("bzcarbon-enable-fullerenes", "yes")
     change_setting("bzcarbon-enable-carbon-black", "no")
     change_setting("bzcarbon-enable-rough-diamond", "no")
@@ -134,18 +134,18 @@ if mods["bzcarbon"] then
     change_setting("bzcarbon-enable-carbon-fiber", "yes")
 end
 --bzchlorine
-if mods["bzchlorine"] then
+if mods["bzchlorine2"] then
     change_setting("bzchlorine-salt", false)
     change_setting("bzchlorine-early-salt", "both")
     change_setting("bzchlorine-more-intermediates", "yes")
 end
 --bzgas
-if mods["bzgas"] then
+if mods["bzgas2"] then
     change_setting("bzgas-more-intermediates", "phenol")
     change_setting("bzgas-handcraft", true)
 end
 --bzgold
-if mods["bzgold"] then
+if mods["bzgold2"] then
     change_setting("bzgold-byproduct", true)
     change_setting("bzgold-platinum", true)
     change_setting("bzgold-silver", true)
@@ -153,33 +153,27 @@ if mods["bzgold"] then
     change_setting("bzgold-catalysis", true)
 end
 --bzlead
-if mods["bzlead"] then
-    change_setting("bzlead-byproduct", true)
-    change_setting("bzlead-more-entities", "no")
-    change_setting("bzlead-more-ammo", "no")
-end
---bzlead
-if mods["bzlead"] then
+if mods["bzlead2"] then
     change_setting("bzlead-byproduct", true)
     change_setting("bzlead-more-entities", "no")
     change_setting("bzlead-more-ammo", "no")
 end
 --bzsilicon
-if mods["bzsilicon"] then
+if mods["bzsilicon2"] then
     change_setting("bzsilicon-more-intermediates", "no")
     change_setting("bzsilicon-bio-crushed-stone", false)
 end
 --bztin
-if mods["bztin"] then
+if mods["bztin2"] then
     change_setting("bztin-more-intermediates", "bronze")
 end
 --bztitanium
-if mods["bztitanium"] then
+if mods["bztitanium2"] then
     change_setting("bztitanium-mining-fluid", "lubricant")
     change_setting("bztitanium-mining-fluid-amount", 3)
 end
 --bztungsten
-if mods["bztungsten"] then
+if mods["bztungsten2"] then
     change_setting("bztungsten-more-intermediates", "cuw")
     change_setting("bztungsten-avoid-military", "yes")
     change_setting("bztungsten-se-sintering", true)
@@ -187,7 +181,7 @@ if mods["bztungsten"] then
     change_setting("bztungsten-mining-fluid-amount-k2", 1)
 end
 --bzzirconium
-if mods["bzzirconium"] then
+if mods["bzzirconium2"] then
     change_setting("bzzirconium-byproduct", true)
     change_setting("bzzirconium-enable-intermediates", "yes")
     change_setting("bzzirconium-early", true)

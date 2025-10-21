@@ -16,9 +16,9 @@ local config = atom.processing.util.prepareConfig({
         alumina = "alumina"
     },
     icons = {
-        ore = { icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, icon_mipmaps = 3 },
+        ore = { icon = "__bzaluminum2__/graphics/icons/aluminum-ore.png", icon_size = 64, icon_mipmaps = 3 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets",
-        alumina = { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128 }
+        alumina = { icon = "__bzaluminum2__/graphics/icons/alumina.png", icon_size = 128 }
     },
     additionalResults = {
         dustToIngot = {

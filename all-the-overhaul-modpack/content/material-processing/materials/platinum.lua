@@ -10,7 +10,7 @@ local config = atom.processing.util.prepareConfig({
         enriched = "atom-platinum-enriched"
     },
     icons = {
-        dust = { icon = "__bzgold__/graphics/icons/platinum-powder.png", icon_size = 64 },
+        dust = { icon = "__bzgold2__/graphics/icons/platinum-powder.png", icon_size = 64 },
         "ingot", "enriched"
     },
     additionalResults = {
