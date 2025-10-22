@@ -1,9 +1,11 @@
 -- Change bismuth ammo to output rifle magazines
-atom.util.Recipe("rifle-magazine-bismuth").assign({
-    localised_name = { "item-name.kr-rifle-magazine" },
-    results = { { type = "item", name = "kr-rifle-magazine", amount = 1 } },
-    main_product = "kr-rifle-magazine"
-})
+if settings.startup["kr-realistic-weapons"].value then
+    atom.util.Recipe("rifle-magazine-bismuth").assign({
+        localised_name = { "item-name.kr-rifle-magazine" },
+        results = { { type = "item", name = "kr-rifle-magazine", amount = 1 } },
+        main_product = "kr-rifle-magazine"
+    })
+end
 atom.util.Recipe("pistol-magazine-bismuth").assign({
     results = { { type = "item", name = "firearm-magazine", amount = 1 } },
     main_product = "firearm-magazine"
