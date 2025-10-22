@@ -178,6 +178,9 @@ Recipe("advanced-circuit").replaceIngredient("solder", 4)
 Recipe("advanced-circuit-in-laser-mill").removeIngredient("solder")
 Recipe("advanced-circuit-in-laser-mill").replaceIngredient("solder", 4)
 
+-- Phenolic board stone
+Recipe("phenolic-board-stone").replaceResult("phenolic-board", 2)
+
 -- Fullerenes
 data.raw.recipe["fullerenes"].category = "chemistry"
 
@@ -250,6 +253,8 @@ Technology("el_ALK_tech").addIngredient("kr-basic-tech-card")
 Technology("el_arc_furnace_tech").addIngredient("kr-basic-tech-card")
 Technology("el_caster_tech").addIngredient("kr-basic-tech-card")
 Technology("el_purifier_tech").addIngredient("kr-basic-tech-card")
+
+Technology("lamp").addPrerequisite("automation-science-pack")
 
 -- Remove new stuff
 atom.util.recipe.removeByName("electronic-circuit-wood")
