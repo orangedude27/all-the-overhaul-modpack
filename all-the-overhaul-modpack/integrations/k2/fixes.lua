@@ -72,15 +72,17 @@ railgunEntity.attack_parameters.range = 75
 railgunEntity.attack_parameters.cooldown = 90
 
 -- Balance ammo
-local imersiteAmmo = atom.util.Recipe("kr-imersite-rifle-magazine")
-imersiteAmmo.replaceIngredient("kr-imersite-crystal", 1)
-imersiteAmmo.addIngredient("invar-plate", 1)
-imersiteAmmo.addIngredient("tungsten-plate", 1)
+if settings.startup["kr-realistic-weapons"].value then
+    local imersiteAmmo = atom.util.Recipe("kr-imersite-rifle-magazine")
+    imersiteAmmo.replaceIngredient("kr-imersite-crystal", 1)
+    imersiteAmmo.addIngredient("invar-plate", 1)
+    imersiteAmmo.addIngredient("tungsten-plate", 1)
 
-local imersiteAMRAmmo = atom.util.Recipe("kr-imersite-anti-materiel-rifle-magazine")
-imersiteAMRAmmo.replaceIngredient("kr-imersite-crystal", 1)
-imersiteAMRAmmo.addIngredient("invar-plate", 2)
-imersiteAMRAmmo.addIngredient("tungsten-plate", 2)
+    local imersiteAMRAmmo = atom.util.Recipe("kr-imersite-anti-materiel-rifle-magazine")
+    imersiteAMRAmmo.replaceIngredient("kr-imersite-crystal", 1)
+    imersiteAMRAmmo.addIngredient("invar-plate", 2)
+    imersiteAMRAmmo.addIngredient("tungsten-plate", 2)
+end
 
 local railgunAmmo = atom.util.Recipe("kr-basic-railgun-shell")
 railgunAmmo.replaceResult("kr-basic-railgun-shell", 2)

@@ -41,7 +41,9 @@ for i = 1, 5 do
     local gunSniper = data.raw["ammo-turret"]["5d-gun-turret-sniper-0" .. i]
     gunSniper.max_health = 250 * (1 + (i - 1) * gunHpBonus)
     gunSniper.attack_parameters.cooldown = 120
-    gunSniper.attack_parameters.ammo_category = "kr-anti-materiel-rifle-ammo"
+    if settings.startup["kr-realistic-weapons"].value then
+        gunSniper.attack_parameters.ammo_category = "kr-anti-materiel-rifle-ammo"
+    end
     gunSniper.attack_parameters.damage_modifier = 4 * gunDamageModifier[i]
     gunSniper.attack_parameters.ammo_consumption_modifier = 1
     gunSniper.attack_parameters.rotate_penalty = 20

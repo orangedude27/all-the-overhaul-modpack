@@ -109,99 +109,100 @@ if settings.startup["rampant-arsenal-hideVanillaDamageTechnologies"].value then
     end
 end
 
+local realistic = settings.startup["kr-realistic-weapons"].value
 -- rampant-arsenal-technology-bullet-damage-
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-1", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.2 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 } or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.2 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-2", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.2 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 }or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.2 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-3", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.3 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 } or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.3 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-4", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.3 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 } or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.3 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-5", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.3 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 } or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.3 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-6", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 } or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-7", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 } or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-8", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 } or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-9", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 } or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-damage-10", {
     { type = "ammo-damage", ammo_category = "pistol-ammo", modifier = 0.5 },
     { type = "ammo-damage", ammo_category = "railgun-shell", modifier = 0.5 },
-    { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 },
+    realistic and { type = "ammo-damage", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.5 } or nil,
     { type = "ammo-damage", ammo_category = "Bio_Turret_Ammo", modifier = 0.5 }
 })
 
 -- rampant-arsenal-technology-bullet-speed-
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-1", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.1 },
-    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.1 },
+    realistic and { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.1 } or nil,
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.1 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-2", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.2 },
-    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 },
+    realistic and { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 } or nil,
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.2 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-3", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.2 },
-    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 },
+    realistic and { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.2 } or nil,
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.2 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-4", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.3 },
-    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 },
+    realistic and { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.3 } or nil,
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.3 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-5", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.4 },
-    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.4 },
+    realistic and { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.4 } or nil,
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.4 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-6", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 0.4 },
     { type = "gun-speed", ammo_category = "railgun-shell", modifier = 0.4 },
-    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.4 },
+    realistic and { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 0.4 } or nil,
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 0.4 }
 })
 krastorio.technologies.addEffects("rampant-arsenal-technology-bullet-speed-7", {
     { type = "gun-speed", ammo_category = "pistol-ammo", modifier = 1 },
     { type = "gun-speed", ammo_category = "railgun-shell", modifier = 1 },
-    { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 1 },
+    realistic and { type = "gun-speed", ammo_category = "kr-anti-materiel-rifle-ammo", modifier = 1 } or nil,
     { type = "gun-speed", ammo_category = "Bio_Turret_Ammo", modifier = 1 }
 })
 
