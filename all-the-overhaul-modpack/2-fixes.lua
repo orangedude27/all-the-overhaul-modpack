@@ -173,10 +173,10 @@ Recipe("solar-cell").replaceIngredient("silicon-wafer", "kr-silicon")
 Recipe("kr-biomass").removeIngredient("kr-biomass")
 
 -- Advanced circuit
-Recipe("advanced-circuit").removeIngredient("solder")
 Recipe("advanced-circuit").replaceIngredient("solder", 4)
-Recipe("advanced-circuit-in-laser-mill").removeIngredient("solder")
+Recipe("advanced-circuit").replaceIngredient("kr-electronic-components", 2)
 Recipe("advanced-circuit-in-laser-mill").replaceIngredient("solder", 4)
+Recipe("advanced-circuit-in-laser-mill").replaceIngredient("kr-electronic-components", 2)
 
 -- Phenolic board stone
 Recipe("phenolic-board-stone").replaceResult("phenolic-board", 2)
