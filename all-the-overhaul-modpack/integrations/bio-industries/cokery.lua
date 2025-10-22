@@ -1,7 +1,7 @@
 -- Entities
 
 local entity1 = data.raw["assembling-machine"]["bi-cokery"]
-local layer1 = entity1.graphics_set.animation
+local layer1 = entity1.graphics_set.animation.layers[1]
 local layer2 = table.deepcopy(layer1)
 table.assign(layer2, {
     filename = "__all-the-overhaul-modpack__/graphics/entity/cokery/cokery_sheet_mask.png",
