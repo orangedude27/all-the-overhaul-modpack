@@ -18,8 +18,8 @@ local config = atom.processing.util.prepareConfig({
     },
     unlockedBy = {
         oreToPlate = "zirconia-processing",
-        oreToDust = "zirconia-processing",
-        dustToIngot = "zirconia-processing",
+        oreToDust = "zirconium-processing",
+        dustToIngot = "zirconium-processing",
     }
 })
 

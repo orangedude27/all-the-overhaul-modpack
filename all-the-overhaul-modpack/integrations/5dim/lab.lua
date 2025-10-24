@@ -67,7 +67,7 @@ atom.util.Recipe("gr_charger_recipe").addIngredient("kr-stabilizer-charging-stat
 -- Technologies
 
 local tech2 = atom.util.Technology("5d-lab-1")
-tech2.replacePrerequisite("engine", "zirconia-processing")
+tech2.replacePrerequisite("engine", "zirconium-processing")
 
 local tech3 = atom.util.Technology("5d-lab-2")
 tech3.addPrerequisite("nitinol-processing")

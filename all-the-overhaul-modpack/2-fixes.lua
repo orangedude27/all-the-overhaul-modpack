@@ -262,3 +262,9 @@ atom.util.recipe.removeIngredient("silicone")
 atom.util.item.removeByName("silicone")
 atom.util.recipe.removeIngredient("zirconium-sponge")
 atom.util.item.removeByName("zirconium-sponge")
+
+-- Fix Ziroconia (zirconium-processing in 2.0) processing tech
+local zirco_tech = Technology("zirconium-processing")
+zirco_tech.addRecipe("zirconium-tungstate")
+zirco_tech.addRecipe("zircaloy-4")
+Technology("zirconia-processing").removeRecipe("zirconium-tungstate")
