@@ -17,9 +17,7 @@ local config = atom.processing.util.prepareConfig({
         enriched = { icon = "__bzzirconium2__/graphics/icons/enriched-zircon.png", icon_size = 128 }
     },
     unlockedBy = {
-        oreToPlate = "zirconia-processing",
-        oreToDust = "zirconium-processing",
-        dustToIngot = "zirconium-processing",
+        oreToPlate = "zirconia-processing"
     }
 })
 
