@@ -133,4 +133,5 @@ for i = 1, 10 do
     data.raw["assembling-machine"]["mini-assembler-" .. i].crafting_speed = data.raw["assembling-machine"]["mini-assembler-" .. i].crafting_speed * 2
     data.raw["assembling-machine"]["mini-assembler-" .. i].energy_source.emissions_per_minute.pollution = data.raw["assembling-machine"]["mini-assembler-" .. i].energy_source.emissions_per_minute.pollution / 2
     data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage = (futil.parse_energy(data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage) / 2) .. "J"
+    data.raw["assembling-machine"]["mini-assembler-" .. i].localised_name = { "mini-name.mini-machine", {"", tostring(i) }}
 end
