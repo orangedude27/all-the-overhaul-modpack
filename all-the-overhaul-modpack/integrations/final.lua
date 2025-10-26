@@ -1,3 +1,4 @@
+require("mini-machines-final")
 require("248k.final")
 
 -- Use purple tech cards more
