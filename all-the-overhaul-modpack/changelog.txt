@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.11
+Date: 01.11.2025
+  Bug Fixes:
+    - Fix for crash when realistic weapons was disabled in Krastorio 2 settings
+    - Fix cokery graphics
+    - Correct recipe phenolic-board-stone
+    - Correct recipe for advanced circuit
+    - Fix zirconium processing tech proceeding the zirconia processing tech
+    - Move zirconium crushing to masher tech
+    - Fix mini machines being usable on non-electronic recipes
+    - Fix mini machine naming
+---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 21.10.2025
   Changes:
