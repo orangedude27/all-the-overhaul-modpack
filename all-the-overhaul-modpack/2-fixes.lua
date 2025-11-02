@@ -230,6 +230,14 @@ local manganese_smelting = data.raw.technology["manganese-smelting"]
 manganese_smelting.unit = nil
 manganese_smelting.research_trigger = { type = "mine-entity", entity = "manganese-ore" }
 
+local valves = Technology("valves")
+valves.removePrerequisite("logistic-science-pack")
+valves.addPrerequisites({ "invar-processing", "electronics" })
+
+local silica_processing = Technology("silica-processing")
+silica_processing.replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
+silica_processing.addIngredient("logistic-science-pack")
+
 data.raw.technology["bismanol"].ignore_tech_cost_multiplier = true
 data.raw.technology["electricity"].ignore_tech_cost_multiplier = true
 data.raw.technology["fuel-processing"].ignore_tech_cost_multiplier = true
@@ -246,8 +254,12 @@ Technology("mangalloy").addPrerequisite("automation-science-pack")
 Technology("landfill").addPrerequisite("automation-science-pack")
 Technology("worker-robots-speed-2").addPrerequisite("chemical-science-pack")
 Technology("fu_KFK_tech").addPrerequisite("se-rocket-science-pack")
-
 Technology("lamp").addPrerequisite("automation-science-pack")
+Technology("kr-mineral-water-gathering").replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
+Technology("sulfur-processing").replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
+Technology("toluene-production").replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
+Technology("microporous-material").addPrerequisite("logistic-science-pack")
+Technology("logistic-science-pack").addPrerequisite("kr-fluids-chemistry")
 
 -- Remove new stuff
 atom.util.recipe.removeByName("electronic-circuit-wood")
