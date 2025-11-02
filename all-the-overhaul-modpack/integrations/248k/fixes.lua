@@ -177,3 +177,6 @@ data.raw["roboport"]["fi_robo_port_entity"].energy_usage = "200kW"
 data.raw["roboport"]["fi_robo_port_entity"].energy_source.input_flow_limit = "8MW"
 data.raw["roboport"]["fi_robo_charger_entity"].energy_usage = "100kW"
 data.raw["roboport"]["fi_robo_charger_entity"].energy_source.input_flow_limit = "8MW"
+
+-- Add hardened hull to metal casting prerequisites (I didn't find the reason why data stage doesn't work)
+atom.util.Technology("el_caster_tech").addPrerequisite("hardened-hull")
