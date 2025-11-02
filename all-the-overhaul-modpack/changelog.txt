@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.12
+Date: 02.11.2025
+  Changes:
+    - Add a setting for basic tech cards (https://discord.com/channels/1174743568590590053/1429279779634417684/1429449569175080960)
+    - Merge arc furnace and metal casting technologies
+  Bug Fixes:
+    - Fix Bio Industries item multiplication
+    - Fix some recipe names
+    - Fix prerequisites around fluid chemistry
+    - Add bismuth smelting trigger technology (https://discord.com/channels/1174743568590590053/1429279779634417684/1429294122845339799)
+    - Add Cokery 1 as prerequisite to Bakelite (https://discord.com/channels/1174743568590590053/1429279779634417684/1429299020077076630)
+    - Add steel processing to ore purification prerequisites and remove electronics technology stage (https://discord.com/channels/1174743568590590053/1429279779634417684/1429503614639935558)
+    - Add hardened hull to metal casting prerequisites
+    - Move hydrogen chloride from salt to sulfur processing (https://discord.com/channels/1174743568590590053/1429279779634417684/1429503892831600771)
+    - Chemical plant mk1 requires tungsten so we move it further down (https://discord.com/channels/1174743568590590053/1429279779634417684/1429505298405654568)
+    - Change tech icon of oil processing back to vanilla
+    - Remove AAI glass recipe
+---------------------------------------------------------------------------------------------------
 Version: 2.0.11
 Date: 01.11.2025
   Changes:
