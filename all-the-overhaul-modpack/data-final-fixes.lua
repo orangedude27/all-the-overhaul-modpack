@@ -54,7 +54,9 @@ lab3.inputs = table.deepcopy(lab2.inputs)
 
 local lab4 = data.raw["lab"]["kr-advanced-lab"]
 lab4.inputs = table.deepcopy(lab3.inputs)
-table.remove(lab4.inputs, 1)
+if settings.startup["atom-basic-tech-card-mode"].value ~= "all" then
+    table.remove(lab4.inputs, 1)
+end
 table.insert(lab4.inputs, "space-science-pack")
 table.insert(lab4.inputs, "production-science-pack")
 table.insert(lab4.inputs, "utility-science-pack")

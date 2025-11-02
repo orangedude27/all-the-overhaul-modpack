@@ -130,9 +130,10 @@ function atom.util.Technology(value)
         --- @param ingredientName string The name of the ingredient
         removeIngredient = function(ingredientName)
             if technology.unit then
-                for i, result in pairs(technology.unit.ingredients) do
-                    if result[1] == ingredientName then
+                for i, ingredient in pairs(technology.unit.ingredients) do
+                    if ingredient[1] == ingredientName then
                         table.remove(technology.unit.ingredients, i)
+                        break
                     end
                 end
             end
