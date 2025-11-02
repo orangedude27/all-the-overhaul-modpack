@@ -23,3 +23,7 @@ silverLandfill.apply()
 
 -- Bakelite requires phenol which is unlocked with Cokery 1
 atom.util.Technology("bakelite").addPrerequisite("cokery-1")
+
+-- Hydrogen chloride from salt requires sulfuric acid
+atom.util.Technology("kr-fluids-chemistry").removeRecipe("hydrogen-chloride-salt")
+atom.util.Technology("sulfur-processing").addRecipe("hydrogen-chloride-salt")
