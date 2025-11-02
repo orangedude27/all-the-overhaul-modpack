@@ -142,7 +142,7 @@ atom.processing.create = function(config)
             local recipe = Recipe({
                 type = "recipe",
                 name = "atom-" .. config.name .. "-molten",
-                localised_name = { "item-name." .. config.itemNames.molten },
+                localised_name = { "fluid-name." .. config.itemNames.molten },
                 icons = {
                     config.icons.molten,
                     atom.util.icon.createSmallIcon(config.icons.ingot)
