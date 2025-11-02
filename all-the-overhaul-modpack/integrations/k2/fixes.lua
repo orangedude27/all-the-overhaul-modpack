@@ -57,6 +57,7 @@ glass.addSmallIcon({ icon = "__Krastorio2Assets__/icons/items/sand.png", icon_si
 -- Add a glass recipe with quartz instead of sand
 local glassQuartz = atom.util.Recipe(table.deepcopy(data.raw.recipe["kr-glass"]))
 glassQuartz.prototype.name = "glass-quartz"
+glassQuartz.prototype.localised_name = { "item-name.glass" }
 glassQuartz.replaceIngredient("kr-sand", "kr-quartz", 12)
 glassQuartz.replaceResult("kr-glass", 7)
 glassQuartz.setIcon({ icon = "__Krastorio2Assets__/icons/items/glass.png", icon_size = 64, icon_mipmaps = 4 })
