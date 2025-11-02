@@ -64,9 +64,7 @@ table.assign(lithium248k, {
     icon_mipmaps = lithiumK2.icon_mipmaps,
 })
 data.raw.technology["kr-lithium-processing"] = nil
-atom.util.recipe.replaceIngredient("el_lithium_item", "kr-lithium")
-atom.util.recipe.replaceResult("el_lithium_item", "kr-lithium")
-atom.util.item.removeByName("el_lithium_item")
+atom.util.item.migrate("el_lithium_item", "kr-lithium")
 
 -- Adjust low density structure recipe
 local lds = data.raw.recipe["fi_low-density-structure_recipe"]
@@ -179,6 +177,3 @@ data.raw["roboport"]["fi_robo_port_entity"].energy_usage = "200kW"
 data.raw["roboport"]["fi_robo_port_entity"].energy_source.input_flow_limit = "8MW"
 data.raw["roboport"]["fi_robo_charger_entity"].energy_usage = "100kW"
 data.raw["roboport"]["fi_robo_charger_entity"].energy_source.input_flow_limit = "8MW"
-
--- Replace 248k lithium with K2 lithium
-atom.util.item.migrate("el_lithium_item", "kr-lithium")
