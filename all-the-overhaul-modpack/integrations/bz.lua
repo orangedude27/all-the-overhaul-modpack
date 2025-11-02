@@ -17,3 +17,9 @@ silverLandfill.prototype.icons[2].scale = 0.17
 silverLandfill.replaceIngredient("iron-ore", "silver-ore")
 silverLandfill.unlockedByTechnology("se-recycling-facility")
 silverLandfill.apply()
+
+
+-- Technologies
+
+-- Bakelite requires phenol which is unlocked with Cokery 1
+atom.util.Technology("bakelite").addPrerequisite("cokery-1")
