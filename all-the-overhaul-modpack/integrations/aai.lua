@@ -13,3 +13,6 @@ for i = 1, 6 do
     local name = i == 1 and "toolbelt" or "toolbelt-" .. i
     data.raw.technology[name].effects[1].modifier = 10
 end
+
+-- Remove AAI glass recipe that has no use
+data.raw.recipe["glass"] = nil
