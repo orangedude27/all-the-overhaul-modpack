@@ -9,4 +9,7 @@ orePurification.replacePrerequisite("el_stage_tech", "electronics")
 orePurification.removePrerequisite("logistic-science-pack")
 data.raw.technology["el_stage_tech"] = nil
 
-atom.util.Technology("el_arc_furnace_tech").addPrerequisite("hardened-hull")
+local metalCasting = atom.util.Technology("el_caster_tech")
+metalCasting.replacePrerequisite("el_arc_furnace_tech", "el_purifier_tech")
+metalCasting.addRecipe("el_arc_furnace_recipe")
+data.raw.technology["el_arc_furnace_tech"] = nil

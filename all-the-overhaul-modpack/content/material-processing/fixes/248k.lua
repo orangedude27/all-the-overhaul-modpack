@@ -29,7 +29,6 @@ atom.util.item.removeByName("fu_crushed_lead_item")
 atom.util.item.removeByName("fi_crushed_coal_item")
 atom.util.item.removeByName("fi_crushed_stone_item")
 
-atom.util.Technology("el_arc_furnace_tech").removeRecipe("el_arc_pure_copper_recipe")
 atom.util.Technology("el_caster_tech").removeRecipe("el_cast_pure_iron_recipe")
 atom.util.Technology("el_caster_tech").removeRecipe("el_cast_pure_copper_recipe")
 atom.util.Technology("el_purifier_tech").removeRecipe("el_purify_iron_recipe")
