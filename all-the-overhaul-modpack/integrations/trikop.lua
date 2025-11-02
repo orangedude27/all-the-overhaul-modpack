@@ -33,3 +33,20 @@ pcbSolderTech.assign({
     prerequisites = { "chemical-science-pack" }
 })
 pcbSolderTech.addIngredient("chemical-science-pack")
+
+-- Add Bismuth trigger technology
+data:extend({
+    {
+        type = "technology",
+        name = "bismuth-smelting",
+        icons = { table.deepcopy(data.raw.recipe["atom-bismuth-plate"].icons[1]) },
+        research_trigger = { type = "mine-entity", entity = "bismuth-ore" },
+        prerequisites = { "kr-fluids-chemistry" },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "atom-bismuth-plate"
+            }
+        }
+    }
+})

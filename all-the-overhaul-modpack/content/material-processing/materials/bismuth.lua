@@ -14,9 +14,6 @@ local config = atom.processing.util.prepareConfig({
     icons = {
         ore = { icon = "__bismuth__/graphics/icons/bismuth-ore.png", icon_size = 64, icon_mipmaps = 3 },
         "pure", "plate", "dust", "ingot", "molten", "enriched", "pellets"
-    },
-    unlockedBy = {
-        oreToPlate = "bismanol"
     }
 })
 
