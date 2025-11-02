@@ -8,3 +8,5 @@ orePurification.addPrerequisite("steel-processing")
 orePurification.replacePrerequisite("el_stage_tech", "electronics")
 orePurification.removePrerequisite("logistic-science-pack")
 data.raw.technology["el_stage_tech"] = nil
+
+atom.util.Technology("el_arc_furnace_tech").addPrerequisite("hardened-hull")
