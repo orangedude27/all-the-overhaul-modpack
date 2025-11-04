@@ -10,7 +10,7 @@ local config = atom.processing.util.prepareConfig({
         plate = "zirconia"
     },
     icons = {
-        ore = { icon = "__bzzirconium2__/graphics/icons/zircon.png", icon_size = 64 },
+        ore = { icon = "__bzzirconium2__/graphics/icons/zircon.png", icon_size = 128 },
         dust = { icon = "__all-the-overhaul-modpack__/graphics/icons/materials/tantalite-dust.png", icon_size = 128 },
         plate = { icon = "__bzzirconium2__/graphics/icons/zirconia.png", icon_size = 128 },
         ingot = { icon = "__bzzirconium2__/graphics/icons/zirconia.png", icon_size = 128 },
