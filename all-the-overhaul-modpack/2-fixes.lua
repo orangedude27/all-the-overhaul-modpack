@@ -11,10 +11,6 @@ Recipe("electronic-circuit").addIngredient("basic-electronic-components", 2)
 Recipe("electronic-circuit").addIngredient("basic-circuit-board", 2)
 Recipe("electronic-circuit-in-laser-mill").addIngredient("basic-electronic-components", 2)
 Recipe("electronic-circuit-in-laser-mill").addIngredient("basic-circuit-board", 2)
-Recipe("electronic-circuit-handcraft-only").addIngredient("basic-electronic-components", 10)
-Recipe("electronic-circuit-handcraft-only").addIngredient("basic-circuit-board", 2)
-Recipe("electronic-circuit-handcraft-only-in-laser-mill").addIngredient("basic-electronic-components", 10)
-Recipe("electronic-circuit-handcraft-only-in-laser-mill").addIngredient("basic-circuit-board", 2)
 
 -- Electronic components
 local electronic_components = Recipe("kr-electronic-components")
