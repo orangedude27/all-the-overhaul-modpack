@@ -13,6 +13,9 @@ atom.util.Recipe("pistol-magazine-bismuth").assign({
 
 -- Merge PCB solder into solder from bztin
 atom.util.Recipe("roboport").replaceIngredient("pcb-solder", "battery", 50)
+atom.util.Recipe("advanced-circuit").removeIngredient("solder")
+atom.util.Recipe("advanced-circuit-in-laser-mill").removeIngredient("solder")
+atom.util.Recipe("advanced-processing-unit").removeIngredient("solder")
 atom.util.recipe.replaceIngredient("pcb-solder", "solder")
 atom.util.recipe.replaceResult("pcb-solder", "solder")
 

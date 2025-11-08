@@ -6,12 +6,6 @@ local Technology = atom.util.Technology
 -- Circuit board
 Recipe("circuit-board").addIngredient("phenolic-board")
 
--- Electronic circuit
-Recipe("electronic-circuit").addIngredient("basic-electronic-components", 2)
-Recipe("electronic-circuit").addIngredient("basic-circuit-board", 2)
-Recipe("electronic-circuit-in-laser-mill").addIngredient("basic-electronic-components", 2)
-Recipe("electronic-circuit-in-laser-mill").addIngredient("basic-circuit-board", 2)
-
 -- Electronic components
 local electronic_components = Recipe("kr-electronic-components")
 electronic_components.removeIngredient("plastic-bar")
@@ -72,10 +66,10 @@ Recipe("construction-robot").replaceIngredient("electronic-circuit", 2)
 -- Processing unit
 Recipe("processing-unit").replaceIngredient("advanced-electronic-components", 2)
 Recipe("processing-unit-in-laser-mill").replaceIngredient("advanced-electronic-components", 2)
-Recipe("processing-unit").removeIngredient("solder")
-Recipe("processing-unit").replaceIngredient("solder", 6)
+Recipe("processing-unit").removeIngredient("solder") -- Remove duplicate ingredient
+Recipe("processing-unit").addIngredient("solder", 6)
 Recipe("processing-unit-in-laser-mill").removeIngredient("solder")
-Recipe("processing-unit-in-laser-mill").replaceIngredient("solder", 6)
+Recipe("processing-unit-in-laser-mill").addIngredient("solder", 6)
 
 -- Assembling machine 1
 local assembling_machine_1 = Recipe("assembling-machine-1")
