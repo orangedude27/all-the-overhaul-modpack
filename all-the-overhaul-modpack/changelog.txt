@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.15
+Date: 10.11.2025
+  Changes:
+    - Add support for elevated rails (optional)
+    - Burner miners have 3x3 area
+    - Add small mineral water starting patch
+    - Sulfuric acid can be crafted in the burner chemical plant
+    - Military is available from the start
+  Bug Fixes:
+    - Move radar back to green science
+    - Remove nitric acid recipe from sulfur processing
+    - Railway requires concrete
+    - Move energy crystal starter recipe to crystal growing
+    - Remove duplicate cobalt plate recipe
+    - Advanced upgrade requires rocket tech card
+---------------------------------------------------------------------------------------------------
 Version: 2.0.14
 Date: 08.11.2025
   Bug Fixes:
