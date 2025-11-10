@@ -1,6 +1,8 @@
 require("dirty-water")
 require("biomass")
 
+local resource_autoplace = require("__core__.lualib.resource-autoplace")
+
 data:extend({
     -- Fix coke recipe
     {
@@ -105,3 +107,18 @@ if settings.startup["atom-disable-laser-artillery"].value then
 
     data.raw["research-achievement"]["destroyer-of-worlds"] = nil
 end
+
+-- Add starting area placement for mineral water and make it final
+data.raw.resource["kr-mineral-water"].autoplace = resource_autoplace.resource_autoplace_settings({
+    name = "kr-mineral-water",
+    order = "c",
+    base_density = 2,
+    base_spots_per_km2 = 0.5,
+    random_probability = 1 / 50,
+    random_spot_size_minimum = 1,
+    random_spot_size_maximum = 1,
+    additional_richness = 50000,
+    has_starting_area_placement = true,
+    regular_rq_factor_multiplier = 1,
+    starting_rq_factor_multiplier = 1
+})
