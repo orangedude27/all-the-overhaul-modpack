@@ -38,6 +38,10 @@ fi_purify_stone_recipe.replaceResult("el_materials_pure_iron", "5d-iron-dust", 3
 fi_purify_stone_recipe.replaceResult("el_materials_pure_copper", "5d-copper-dust", 3)
 fi_purify_stone_recipe.replaceResult("el_dirty_water", "kr-dirty-water", 40)
 
+-- Move it from ore purification to crystal growing
+atom.util.Technology("el_purifier_tech").removeRecipe("el_purify_stone_acidic_recipe")
+atom.util.Technology("el_grower_tech").addRecipe("el_purify_stone_acidic_recipe")
+
 -- Remove dirty water and rich water since it competes with the ATOM ore refining process
 atom.util.item.removeByName("el_dirty_water")
 atom.util.item.removeByName("fi_materials_flourite")
