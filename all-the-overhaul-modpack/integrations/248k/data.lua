@@ -13,3 +13,5 @@ local metalCasting = atom.util.Technology("el_caster_tech")
 metalCasting.replacePrerequisite("el_arc_furnace_tech", "el_purifier_tech")
 metalCasting.addRecipe("el_arc_furnace_recipe")
 data.raw.technology["el_arc_furnace_tech"] = nil
+
+atom.util.Technology("fi_upgrade_tech").addIngredient("se-rocket-science-pack")
