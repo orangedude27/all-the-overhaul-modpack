@@ -231,6 +231,8 @@ local silica_processing = Technology("silica-processing")
 silica_processing.replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
 silica_processing.addIngredient("logistic-science-pack")
 
+Technology("sulfur-processing").removeRecipe("kr-nitric-acid")
+
 data.raw.technology["bismanol"].ignore_tech_cost_multiplier = true
 data.raw.technology["electricity"].ignore_tech_cost_multiplier = true
 data.raw.technology["fuel-processing"].ignore_tech_cost_multiplier = true
