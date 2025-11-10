@@ -1,3 +1,4 @@
+require("vanilla")
 require("bio-industries.data")
 require("k2.data")
 require("248k.data")
