@@ -122,6 +122,8 @@ steel.replaceResult("steel-plate", 6)
 
 -- Final balancing
 atom.util.Recipe("rail").addIngredient("concrete", 2)
+atom.util.Technology("railway").addPrerequisite("concrete")
+
 
 require("2-fixes")
 
