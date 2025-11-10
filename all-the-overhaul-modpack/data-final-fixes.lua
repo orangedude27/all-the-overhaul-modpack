@@ -123,6 +123,7 @@ steel.replaceResult("steel-plate", 6)
 -- Final balancing
 atom.util.Recipe("rail").addIngredient("concrete", 2)
 
+require("2-fixes")
+
 require("integrations.final")
 
-require("2-fixes")

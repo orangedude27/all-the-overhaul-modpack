@@ -131,6 +131,9 @@ Recipe("gimbaled-thruster").removeIngredient("temperature-sensor")
 
 -- Radar
 Recipe("radar").replaceIngredient("basic-circuit-board", "kr-automation-core", 4)
+local radar_tech = Technology("radar")
+radar_tech.removeIngredient("chemical-science-pack")
+radar_tech.replacePrerequisite("chemical-science-pack", "logistic-science-pack")
 
 -- Rocket control unit
 local rocket_control_unit = Recipe("rocket-control-unit")
