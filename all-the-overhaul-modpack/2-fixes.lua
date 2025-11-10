@@ -242,7 +242,6 @@ data.raw.technology["electronics"].ignore_tech_cost_multiplier = false
 Technology("basic-chemistry").addPrerequisite("automation-science-pack")
 Technology("basic-logistics").addPrerequisite("burner-mechanics")
 Technology("titanium-processing").addPrerequisite("lubricant")
-Technology("military").addPrerequisite("copper-processing")
 Technology("mangalloy").addPrerequisite("automation-science-pack")
 Technology("landfill").addPrerequisite("automation-science-pack")
 Technology("worker-robots-speed-2").addPrerequisite("chemical-science-pack")
