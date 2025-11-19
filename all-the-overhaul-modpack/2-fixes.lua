@@ -247,13 +247,16 @@ Technology("titanium-processing").addPrerequisite("lubricant")
 Technology("mangalloy").addPrerequisite("automation-science-pack")
 Technology("landfill").addPrerequisite("automation-science-pack")
 Technology("worker-robots-speed-2").addPrerequisite("chemical-science-pack")
-Technology("fu_KFK_tech").addPrerequisite("se-rocket-science-pack")
 Technology("lamp").addPrerequisite("automation-science-pack")
 Technology("kr-mineral-water-gathering").replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
 Technology("sulfur-processing").replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
 Technology("toluene-production").replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
 Technology("microporous-material").addPrerequisite("logistic-science-pack")
 Technology("logistic-science-pack").addPrerequisite("kr-fluids-chemistry")
+Technology("advanced-capacitors").addPrerequisite("se-rocket-science-pack")
+
+Technology("fu_KFK_tech").addPrerequisite("fi_glass_tech")
+Technology("rocket-silo").addPrerequisite("fu_KFK_tech")
 
 -- Remove new stuff
 atom.util.recipe.removeByName("electronic-circuit-wood")
