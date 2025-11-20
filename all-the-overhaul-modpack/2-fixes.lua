@@ -256,6 +256,7 @@ Technology("logistic-science-pack").addPrerequisite("kr-fluids-chemistry")
 Technology("advanced-capacitors").addPrerequisite("se-rocket-science-pack")
 
 Technology("fu_KFK_tech").addPrerequisite("fi_glass_tech")
+Technology("fu_KFK_tech").removeIngredient("se-rocket-science-pack")
 Technology("rocket-silo").addPrerequisite("fu_KFK_tech")
 
 -- Remove new stuff
