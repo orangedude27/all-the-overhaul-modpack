@@ -8,7 +8,7 @@ function PlayerCreated(event)
 
     if settings.startup["atom-easy-military-start"].value then
         for _, item in pairs(EASY_MILITARY) do
-            if game.item_prototypes[item[1]] ~= nul then
+            if prototypes.item[item[1]] ~= nul then
                 player.insert { name = item[1], count = item[2] }
                 player.print("Added item \"" .. item[1])
             else
@@ -18,7 +18,7 @@ function PlayerCreated(event)
     end
     if settings.startup["atom-easy-automation-start"].value then
         for _, item in pairs(EASY_AUTOMATION) do
-            if game.item_prototypes[item[1]] ~= nul then
+            if prototypes.item[item[1]] ~= nul then
                 player.insert { name = item[1], count = item[2] }
                 player.print("Added item \"" .. item[1])
             else
