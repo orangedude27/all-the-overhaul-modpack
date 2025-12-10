@@ -50,3 +50,11 @@ sodaLimeGlass.replaceIngredient("sodium-carbonate", 5)
 
 -- Remove long handed inserter recycling
 atom.util.recipe.removeByName("se-recycle-long-handed-inserter")
+
+-- Move Sulfur gas processing
+local microporousMaterial = atom.util.Technology("microporous-material")
+microporousMaterial.setPrerequisites({ "kr-atmosphere-condensation" })
+microporousMaterial.addIngredient("chemical-science-pack")
+local sulfurGasProcessing = atom.util.Technology("sulfur-gas-processing")
+sulfurGasProcessing.removePrerequisite("sulfur-processing")
+sulfurGasProcessing.addIngredient("chemical-science-pack")

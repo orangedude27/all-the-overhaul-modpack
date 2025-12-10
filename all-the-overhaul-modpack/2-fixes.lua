@@ -248,7 +248,6 @@ Technology("lamp").addPrerequisite("automation-science-pack")
 Technology("kr-mineral-water-gathering").replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
 Technology("sulfur-processing").replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
 Technology("toluene-production").replacePrerequisite("kr-fluids-chemistry", "logistic-science-pack")
-Technology("microporous-material").addPrerequisite("logistic-science-pack")
 Technology("logistic-science-pack").addPrerequisite("kr-fluids-chemistry")
 Technology("advanced-capacitors").addPrerequisite("se-rocket-science-pack")
 
