@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.17
+Date: 10.12.2025
+  Bug Fixes:
+    - KI Core: Replace solar panel 2.0 with regular solar panel (breaking change)
+    - Move Sulfur gas processing after atmospheric condensation
+    - Move resin from heavy oil from oil processing to advanced oil processing
+    - Add Advanced multi cylinder engine as prerequisite to Atmospheric condensation
+---------------------------------------------------------------------------------------------------
 Version: 2.0.16
 Date: 21.11.2025
   Changes:
