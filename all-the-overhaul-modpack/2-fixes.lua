@@ -174,9 +174,6 @@ Recipe("advanced-circuit-in-laser-mill").replaceIngredient("kr-electronic-compon
 -- Phenolic board stone
 Recipe("phenolic-board-stone").replaceResult("phenolic-board", 2)
 
--- Fullerenes
-data.raw.recipe["fullerenes"].category = "chemistry"
-
 -- Pollution filter
 data.raw["recipe"]["kr-pollution-filter"].category = "crafting"
 data.raw["recipe"]["kr-restore-used-pollution-filter"].category = "crafting-with-fluid"
