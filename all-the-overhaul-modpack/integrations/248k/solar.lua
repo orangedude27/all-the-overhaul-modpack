@@ -12,3 +12,7 @@ solarMk2Tech.unit.ingredients = {
     { "chemical-science-pack", 1 },
     { "productivity-science-pack", 1 }
 }
+
+-- Replace solar panel 2.0 with regular solar panel in KI1 Core
+atom.util.Recipe("el_ki_core_recipe").replaceIngredient("el_solar_item", "solar-panel")
+atom.util.Technology("el_ki_tech").addPrerequisite("solar-energy")
