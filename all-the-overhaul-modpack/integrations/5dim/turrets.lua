@@ -434,3 +434,17 @@ burnerTech3.addIngredient("productivity-science-pack")
 burnerTech3.addIngredient("se-rocket-science-pack")
 burnerTech3.addIngredient("space-science-pack")
 burnerTech3.addIngredient("production-science-pack")
+
+-- Fix refined flammables for flame turret 2 and 3
+for j = 1, 18 do
+    table.insert(data.raw.technology["refined-flammables-" .. j].effects, {
+        type = "turret-attack",
+        turret_id = "5d-flamethrower-turret-02",
+        modifier = 0.2
+    })
+    table.insert(data.raw.technology["refined-flammables-" .. j].effects, {
+        type = "turret-attack",
+        turret_id = "5d-flamethrower-turret-03",
+        modifier = 0.2
+    })
+end
