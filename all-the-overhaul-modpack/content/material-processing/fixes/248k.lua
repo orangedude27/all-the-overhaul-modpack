@@ -3,6 +3,8 @@ atom.util.recipe.replaceIngredient("fi_crushed_coal_item", "atom-coal-dust")
 atom.util.recipe.replaceResult("fi_crushed_coal_item", "atom-coal-dust")
 atom.util.recipe.replaceIngredient("fi_crushed_stone_item", "atom-stone-dust")
 atom.util.recipe.replaceResult("fi_crushed_stone_item", "atom-stone-dust")
+atom.util.recipe.replaceIngredient("fu_crushed_lead_item", "lead-dust")
+atom.util.recipe.replaceResult("fu_crushed_lead_item", "lead-dust")
 
 -- Remove pure to molen/plate recipes
 local stages = { "el", "fi", "fu", "gr" }
