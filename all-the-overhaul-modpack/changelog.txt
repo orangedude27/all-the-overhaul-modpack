@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.18
+Date: 25.12.2025
+  Bug Fixes:
+    - Fix for when mini assemblers tech tree is disabled
+    - Apply refined flammables bonus to all flamethrower tiers
+    - Fix liquid lead coolant recipe being removed
+---------------------------------------------------------------------------------------------------
 Version: 2.0.17
 Date: 10.12.2025
   Bug Fixes:
