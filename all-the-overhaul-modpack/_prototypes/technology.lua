@@ -237,37 +237,39 @@ util.tech_remove_prerequisites("fission-reactor-equipment", { "se-superconductiv
 util.tech_add_prerequisites("fission-reactor-equipment", "hcp-circuit")
 
 -- Electronic machine
-bobmods.lib.tech.hide("mini-basic")
--- 01
-data.raw.technology["mini-assembler-1"].unit.count = 30
-util.tech_remove_prerequisites("mini-assembler-1", { "mini-basic" })
--- 02
-data.raw.technology["mini-assembler-2"].unit.count = 50
--- 03
-data.raw.technology["mini-assembler-3"].unit.count = 100
--- 04
-data.raw.technology["mini-assembler-4"].unit.count = 200
-util.tech_add_ingredients("mini-assembler-4", { "space-science-pack", "kr-optimization-tech-card" }, false)
--- 05
-data.raw.technology["mini-assembler-5"].unit.count = 300
-util.tech_add_ingredients("mini-assembler-5", { "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" }, false)
--- 06
-data.raw.technology["mini-assembler-6"].unit.count = 400
-util.tech_remove_ingredients("mini-assembler-6", { "se-material-science-pack-1" })
-util.tech_add_ingredients("mini-assembler-6", { "utility-science-pack", "production-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "se-astronomic-science-pack-2" }, false)
--- 07
-data.raw.technology["mini-assembler-7"].unit.count = 500
-util.tech_remove_ingredients("mini-assembler-7", { "se-material-science-pack-2" })
-util.tech_add_ingredients("mini-assembler-7", { "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
--- 08
-data.raw.technology["mini-assembler-8"].unit.count = 600
-util.tech_add_ingredients("mini-assembler-8", { "kr-optimization-tech-card", "se-biological-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
--- 09
-data.raw.technology["mini-assembler-9"].unit.count = 700
-util.tech_add_ingredients("mini-assembler-9", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4" }, false)
--- 10
-data.raw.technology["mini-assembler-10"].unit.count = 800
-util.tech_add_ingredients("mini-assembler-10", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "se-deep-space-science-pack-1" }, false)
+if settings.startup["mini-tech-tree"].value then
+    bobmods.lib.tech.hide("mini-basic")
+    -- 01
+    data.raw.technology["mini-assembler-1"].unit.count = 30
+    util.tech_remove_prerequisites("mini-assembler-1", { "mini-basic" })
+    -- 02
+    data.raw.technology["mini-assembler-2"].unit.count = 50
+    -- 03
+    data.raw.technology["mini-assembler-3"].unit.count = 100
+    -- 04
+    data.raw.technology["mini-assembler-4"].unit.count = 200
+    util.tech_add_ingredients("mini-assembler-4", { "space-science-pack", "kr-optimization-tech-card" }, false)
+    -- 05
+    data.raw.technology["mini-assembler-5"].unit.count = 300
+    util.tech_add_ingredients("mini-assembler-5", { "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" }, false)
+    -- 06
+    data.raw.technology["mini-assembler-6"].unit.count = 400
+    util.tech_remove_ingredients("mini-assembler-6", { "se-material-science-pack-1" })
+    util.tech_add_ingredients("mini-assembler-6", { "utility-science-pack", "production-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "se-astronomic-science-pack-2" }, false)
+    -- 07
+    data.raw.technology["mini-assembler-7"].unit.count = 500
+    util.tech_remove_ingredients("mini-assembler-7", { "se-material-science-pack-2" })
+    util.tech_add_ingredients("mini-assembler-7", { "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
+    -- 08
+    data.raw.technology["mini-assembler-8"].unit.count = 600
+    util.tech_add_ingredients("mini-assembler-8", { "kr-optimization-tech-card", "se-biological-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
+    -- 09
+    data.raw.technology["mini-assembler-9"].unit.count = 700
+    util.tech_add_ingredients("mini-assembler-9", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4" }, false)
+    -- 10
+    data.raw.technology["mini-assembler-10"].unit.count = 800
+    util.tech_add_ingredients("mini-assembler-10", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "se-deep-space-science-pack-1" }, false)
+end
 
 data:extend({
     {

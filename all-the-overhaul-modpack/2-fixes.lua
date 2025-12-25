@@ -235,8 +235,10 @@ data.raw.technology["electricity"].ignore_tech_cost_multiplier = true
 data.raw.technology["fuel-processing"].ignore_tech_cost_multiplier = true
 
 data.raw.technology["automation"].ignore_tech_cost_multiplier = false
-data.raw.technology["mini-assembler-1"].ignore_tech_cost_multiplier = false
 data.raw.technology["electronics"].ignore_tech_cost_multiplier = false
+if settings.startup["mini-tech-tree"].value then
+    data.raw.technology["mini-assembler-1"].ignore_tech_cost_multiplier = false
+end
 
 Technology("basic-chemistry").addPrerequisite("automation-science-pack")
 Technology("basic-logistics").addPrerequisite("burner-mechanics")
