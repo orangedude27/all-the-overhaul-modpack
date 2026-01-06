@@ -34,3 +34,8 @@ data.raw.technology["se-pyroflux-smelting"] = nil
 local caster = data.raw["assembling-machine"]["se-casting-machine"]
 caster.crafting_speed = 2
 caster.energy_usage = "200kW"
+
+--Allow more material processing steps in space machines.
+table.insert(data.raw["assembling-machine"]["se-space-thermodynamics-laboratory"].crafting_categories, "el_caster_category")
+table.insert(data.raw["assembling-machine"]["se-space-thermodynamics-laboratory"].crafting_categories, "el_arc_furnace_category")
+table.insert(data.raw["assembling-machine"]["se-space-decontamination-facility"].crafting_categories, "el_purifier_category")
