@@ -104,15 +104,15 @@ electric_mining_drill.removeIngredient("iron-gear-wheel")
 
 -- Electrolysis plant 2
 local electrolysis_plant_2 = Recipe("kr-electrolysis-plant")
-electrolysis_plant_2.addIngredient("hv-power-regulator", 5)
-electrolysis_plant_2.addIngredient("kr-automation-core", 3)
-electrolysis_plant_2.addIngredient("tungsten-carbide", 5)
+electrolysis_plant_2.replaceOrAddIngredient(nil, "hv-power-regulator", 5)
+electrolysis_plant_2.replaceOrAddIngredient(nil, "kr-automation-core", 3)
+electrolysis_plant_2.replaceOrAddIngredient(nil, "tungsten-carbide", 5)
 
 -- Filtration plant 2
 local filtration_plant_2 = Recipe("kr-filtration-plant")
-filtration_plant_2.addIngredient("kr-automation-core", 3)
-filtration_plant_2.addIngredient("tungsten-plate", 20)
-filtration_plant_2.addIngredient("tungsten-carbide", 5)
+filtration_plant_2.replaceOrAddIngredient(nil, "kr-automation-core", 3)
+filtration_plant_2.replaceOrAddIngredient(nil, "tungsten-plate", 20)
+filtration_plant_2.replaceOrAddIngredient(nil, "tungsten-carbide", 5)
 
 -- Foundry
 local foundry = Recipe("foundry")

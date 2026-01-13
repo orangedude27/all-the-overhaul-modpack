@@ -15,12 +15,14 @@ atom.util.Technology("se-space-manufactory").addPrerequisite("space-science-pack
 atom.util.Technology("nuclear-fuel-reprocessing").addPrerequisite("space-science-pack")
 
 atom.util.Technology("basic-chemistry").addPrerequisite("automation-science-pack")
-atom.util.Technology("long-inserters-1").addPrerequisite("automation-science-pack")
-atom.util.Technology("near-inserters").addPrerequisite("automation-science-pack")
+if mods['bobinserters'] then
+    atom.util.Technology("bob-long-inserters-1").addPrerequisite("automation-science-pack")
+    atom.util.Technology("bob-near-inserters").addPrerequisite("automation-science-pack")
+end
 atom.util.Technology("graphite-processing").addPrerequisite("automation-science-pack")
 atom.util.Technology("kr-greenhouse").addPrerequisite("automation-science-pack")
 atom.util.Technology("tinned-cable").addPrerequisite("automation-science-pack")
-atom.util.Technology("electric-mining").addPrerequisite("automation-science-pack")
+atom.util.Technology("electric-mining-drill").addPrerequisite("automation-science-pack")
 
 atom.util.Technology("el_ki_eff_1_tech").removePrerequisite({ "chemical-science-pack" })
 atom.util.Technology("el_ki_eff_1_tech").addPrerequisite("production-science-pack")
@@ -141,7 +143,7 @@ atom.util.Technology("fission-reactor-equipment").removePrerequisite({ "se-energ
 
 atom.util.Technology("fu_robo_tech").addPrerequisite("space-fusion-science-pack-2")
 atom.util.Technology("fi_modules_3_tech").addPrerequisite("space-fusion-science-pack-2")
-atom.util.Technology("kr-imersite-solar-panel-equipment").addPrerequisite("space-fusion-science-pack-2")
+atom.util.Technology("kr-superior-solar-panel-equipment").addPrerequisite("space-fusion-science-pack-2")
 atom.util.Technology("fission-reactor-equipment").addPrerequisite("space-fusion-science-pack-2")
 atom.util.Technology("se-space-material-fabricator").addPrerequisite("space-fusion-science-pack-2")
 atom.util.Technology("kr-fusion-energy").addPrerequisite("space-fusion-science-pack-2")
@@ -151,10 +153,10 @@ atom.util.Technology("fission-reactor-equipment").removeIngredient("se-energy-sc
 
 atom.util.Technology("fu_robo_tech").addIngredient({ "fusion-science-pack-2" })
 atom.util.Technology("fi_modules_3_tech").addIngredient({ "fusion-science-pack-2" })
-atom.util.Technology("kr-imersite-solar-panel-equipment").addIngredient({ "fusion-science-pack-2" })
+atom.util.Technology("kr-superior-solar-panel-equipment").addIngredient({ "fusion-science-pack-2" })
 atom.util.Technology("fission-reactor-equipment").addIngredient({ "fusion-science-pack-2", "se-energy-science-pack-3" })
 atom.util.Technology("kr-matter-tech-card").addIngredient({ "fusion-science-pack-2" })
-atom.util.Technology("se-material-catalogue-1").addIngredient({ "fusion-science-pack-2" })
+atom.util.Technology("se-space-catalogue-material-1").addIngredient({ "fusion-science-pack-2" })
 atom.util.Technology("se-space-material-fabricator").addIngredient({ "fusion-science-pack-2" })
 atom.util.Technology("kr-fusion-energy").addIngredient({ "fusion-science-pack-2" })
 atom.util.Technology("fu_hydrogen_1_tech").addIngredient({ "fusion-science-pack-2" })
@@ -235,7 +237,7 @@ atom.util.Technology("fission-reactor-equipment").addPrerequisite("hcp-circuit")
 
 -- Electronic machine
 if settings.startup["mini-tech-tree"].value then
-    bobmods.lib.tech.hide("mini-basic")
+    atom.util.technology.hide("mini-basic")
     -- 01
     data.raw.technology["mini-assembler-1"].unit.count = 30
     atom.util.Technology("mini-assembler-1").removePrerequisite({ "mini-basic" })
@@ -313,7 +315,7 @@ atom.util.Technology("kr-electric-mining-drill-mk3").removeIngredient({ "product
 atom.util.Technology("kr-electric-mining-drill-mk3").addIngredient({ "kr-optimization-tech-card" })
 
 atom.util.Technology("area-mining-drill").removePrerequisite({ "production-science-pack", "kr-electric-mining-drill-mk2" })
-atom.util.Technology("area-mining-drill").addPrerequisite({ "se-heavy-bearing", "mining-drill-mk3", "se-aeroframe-pole" })
+atom.util.Technology("area-mining-drill").addPrerequisite({ "se-heavy-bearing", "kr-electric-mining-drill-mk3", "se-aeroframe-pole" })
 atom.util.Technology("area-mining-drill").addIngredient({ "utility-science-pack", "se-material-science-pack-2", "se-astronomic-science-pack-1" })
 
 atom.util.Technology("se-processing-iridium").removePrerequisite({ "area-mining-drill" })

@@ -54,6 +54,15 @@ atom.util.technology = {
                 tech.addRecipe(recipeName)
             end
         end
+    end,
+
+    --- Hides a technology from being visible
+    --- @param technologyName string The name of the technology to hide
+    hide = function(technologyName)
+        local technology = data.raw.technology[technologyName]
+        if technology then
+            technology.hidden = true
+        end
     end
 }
 
@@ -275,6 +284,6 @@ function atom.util.Technology(value)
                 clone.effects = {}
             end
             return atom.util.Technology(clone)
-        end
+        end,
     }
 end

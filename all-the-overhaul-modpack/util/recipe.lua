@@ -107,6 +107,15 @@ atom.util.recipe = {
         for _, recipe in pairs(data.raw.recipe) do
             atom.util.Recipe(recipe).replaceResult(old, new, amount)
         end
+    end,
+
+    --- Hides a recipe from being visible
+    --- @param recipeName string The name of the recipe to hide
+    hide = function(recipeName)
+        local recipe = data.raw.recipe[recipeName]
+        if recipe then
+            recipe.hidden = true
+        end
     end
 }
 
@@ -164,7 +173,7 @@ function atom.util.Recipe(value)
         end,
 
         --- Replaces an existing ingredient or adds a new one if old ingredient doesn't exist
-        --- @param oldIngredient string|nil The name of the existing ingredient (nil to just add)
+        --- @param oldIngredient string|nil The name of the existing ingredient (nil to just add/update)
         --- @param newIngredient string The name of the new ingredient
         --- @param amount number The amount of the new ingredient
         replaceOrAddIngredient = function(oldIngredient, newIngredient, amount)
@@ -184,6 +193,15 @@ function atom.util.Recipe(value)
                         if ingredientType then
                             recipe.ingredients[i] = { name = newIngredient, amount = amount, type = ingredientType }
                         end
+                        break
+                    end
+                end
+            else
+                -- When oldIngredient is nil, check if newIngredient already exists and update its amount
+                for i, ingredient in pairs(recipe.ingredients) do
+                    if ingredient.name == newIngredient then
+                        found = true
+                        ingredient.amount = amount
                         break
                     end
                 end

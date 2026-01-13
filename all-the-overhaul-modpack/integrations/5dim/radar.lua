@@ -67,7 +67,8 @@ Recipe("5d-radar-10"):add_ingredient({ "se-aeroframe-bulkhead", 5 })
 
 -- K2
 -- Remove advanced radar
-bobmods.lib.recipe.hide("kr-advanced-radar")
+atom.util.recipe.hide("kr-advanced-radar")
+atom.util.technology.hide("kr-advanced-radar")
 
 
 -- Technologies
@@ -75,7 +76,7 @@ bobmods.lib.recipe.hide("kr-advanced-radar")
 -- 02
 data.raw.technology["5d-radars-1"].unit.count = 200
 atom.util.Technology("5d-radars-1").removePrerequisite({ "logistic-science-pack" })
-atom.util.Technology("5d-radars-1").addPrerequisite({ "kr-radar", "military-science-pack" })
+atom.util.Technology("5d-radars-1").addPrerequisite({ "military-science-pack" })
 atom.util.Technology("5d-radars-1").addIngredient({ "military-science-pack" })
 -- 03
 data.raw.technology["5d-radars-2"].unit.count = 300

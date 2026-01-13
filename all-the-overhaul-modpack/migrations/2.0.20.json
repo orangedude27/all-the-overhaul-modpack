@@ -1,0 +1,11 @@
+{
+    "item": [
+        ["kr-advanced-radar", "5d-radar-4"]
+    ],
+    "recipe": [
+        ["kr-advanced-radar", "5d-radar-4"]
+    ],
+    "technology": [
+        ["kr-advanced-radar", "5d-radars-3"]
+    ]
+}

@@ -13,6 +13,6 @@ end
 -- Technologies
 
 for i = 1, 9 do
-    bobmods.lib.tech.hide("stone-wall-" .. i)
-    bobmods.lib.tech.hide("gate-" .. i)
+    atom.util.technology.hide("stone-wall-" .. i)
+    atom.util.technology.hide("gate-" .. i)
 end
