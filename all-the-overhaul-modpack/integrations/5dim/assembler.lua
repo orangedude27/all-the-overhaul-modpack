@@ -91,37 +91,35 @@ table.insert(data.raw["assembling-machine"]["5d-assembling-machine-10"].crafting
 
 -- Technologies
 
-local util = require("_data-util")
-
 -- 04
 data.raw.technology["automation-4"].unit.count = 400
-util.tech_remove_prerequisites("automation-4", { "production-science-pack" })
-util.tech_add_prerequisites("automation-4", "kr-optimization-tech-card")
-util.tech_add_ingredients("automation-4", { "space-science-pack", "kr-optimization-tech-card" }, false)
+atom.util.Technology("automation-4").removePrerequisite({ "production-science-pack" })
+atom.util.Technology("automation-4").addPrerequisite("kr-optimization-tech-card")
+atom.util.Technology("automation-4").addIngredient({ "space-science-pack", "kr-optimization-tech-card" })
 -- 05
 data.raw.technology["automation-5"].unit.count = 500
-util.tech_add_prerequisites("automation-5", { "se-heavy-girder", "se-energy-science-pack-1" })
-util.tech_add_ingredients("automation-5", { "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" }, false)
+atom.util.Technology("automation-5").addPrerequisite({ "se-heavy-girder", "se-energy-science-pack-1" })
+atom.util.Technology("automation-5").addIngredient({ "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" })
 -- 06
 data.raw.technology["automation-6"].unit.count = 600
-util.tech_add_prerequisites("automation-6", { "se-aeroframe-scaffold", "se-heavy-bearing", "se-energy-science-pack-2" })
-util.tech_remove_ingredients("automation-6", { "se-material-science-pack-1" })
-util.tech_add_ingredients("automation-6", { "utility-science-pack", "production-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "se-astronomic-science-pack-2" }, false)
+atom.util.Technology("automation-6").addPrerequisite({ "se-aeroframe-scaffold", "se-heavy-bearing", "se-energy-science-pack-2" })
+atom.util.Technology("automation-6").removeIngredient({ "se-material-science-pack-1" })
+atom.util.Technology("automation-6").addIngredient({ "utility-science-pack", "production-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "se-astronomic-science-pack-2" })
 -- 07
 data.raw.technology["automation-7"].unit.count = 700
-util.tech_remove_prerequisites("automation-7", { "utility-science-pack" })
-util.tech_add_prerequisites("automation-7", { "se-aeroframe-bulkhead", "se-material-science-pack-3", "se-energy-science-pack-3" })
-util.tech_remove_ingredients("automation-7", { "se-material-science-pack-2" })
-util.tech_add_ingredients("automation-7", { "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
+atom.util.Technology("automation-7").removePrerequisite({ "utility-science-pack" })
+atom.util.Technology("automation-7").addPrerequisite({ "se-aeroframe-bulkhead", "se-material-science-pack-3", "se-energy-science-pack-3" })
+atom.util.Technology("automation-7").removeIngredient({ "se-material-science-pack-2" })
+atom.util.Technology("automation-7").addIngredient({ "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" })
 -- 08
 data.raw.technology["automation-8"].unit.count = 800
-util.tech_add_prerequisites("automation-8", { "kr-ai-core", "hcp-circuit" })
-util.tech_add_ingredients("automation-8", { "kr-optimization-tech-card", "se-biological-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
+atom.util.Technology("automation-8").addPrerequisite({ "kr-ai-core", "hcp-circuit" })
+atom.util.Technology("automation-8").addIngredient({ "kr-optimization-tech-card", "se-biological-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" })
 -- 09
 data.raw.technology["automation-9"].unit.count = 900
-util.tech_add_prerequisites("automation-9", { "se-nanomaterial", "se-heavy-assembly" })
-util.tech_add_ingredients("automation-9", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4" }, false)
+atom.util.Technology("automation-9").addPrerequisite({ "se-nanomaterial", "se-heavy-assembly" })
+atom.util.Technology("automation-9").addIngredient({ "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4" })
 -- 10
 data.raw.technology["automation-10"].unit.count = 1000
-util.tech_add_prerequisites("automation-10", "se-naquium-cube")
-util.tech_add_ingredients("automation-10", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "se-deep-space-science-pack-1" }, false)
+atom.util.Technology("automation-10").addPrerequisite("se-naquium-cube")
+atom.util.Technology("automation-10").addIngredient({ "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "se-deep-space-science-pack-1" })

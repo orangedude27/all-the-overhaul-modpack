@@ -87,58 +87,56 @@ recipe10:add_ingredient({ "se-naquium-cube", 1 })
 
 -- Technologies
 
-local util = require("_data-util")
-
 -- 01
 data.raw.technology["5d-masher-1"].unit.count = 100
-util.tech_remove_prerequisites("5d-masher-1", { "advanced-material-processing-2" })
-util.tech_add_prerequisites("5d-masher-1", { "invar-processing" })
-util.tech_remove_ingredients("5d-masher-1", { "logistic-science-pack", "chemical-science-pack" })
-util.tech_add_ingredients("5d-masher-1", { "kr-basic-tech-card" })
+atom.util.Technology("5d-masher-1").removePrerequisite({ "advanced-material-processing-2" })
+atom.util.Technology("5d-masher-1").addPrerequisite({ "invar-processing" })
+atom.util.Technology("5d-masher-1").removeIngredient({ "logistic-science-pack", "chemical-science-pack" })
+atom.util.Technology("5d-masher-1").addIngredient({ "kr-basic-tech-card" })
 -- 02
 data.raw.technology["5d-masher-2"].unit.count = 200
-util.tech_remove_prerequisites("5d-masher-2", { "advanced-material-processing-3" })
-util.tech_add_prerequisites("5d-masher-2", { "diamond-processing" })
+atom.util.Technology("5d-masher-2").removePrerequisite({ "advanced-material-processing-3" })
+atom.util.Technology("5d-masher-2").addPrerequisite({ "diamond-processing" })
 -- 03
 data.raw.technology["5d-masher-3"].unit.count = 300
-util.tech_remove_prerequisites("5d-masher-3", { "advanced-material-processing-4" })
-util.tech_add_prerequisites("5d-masher-3", { "nitinol-processing", "processing-unit", "productivity-science-pack" })
-util.tech_remove_ingredients("5d-masher-3", { "production-science-pack", "space-science-pack" })
-util.tech_add_ingredients("5d-masher-3", { "productivity-science-pack" })
+atom.util.Technology("5d-masher-3").removePrerequisite({ "advanced-material-processing-4" })
+atom.util.Technology("5d-masher-3").addPrerequisite({ "nitinol-processing", "processing-unit", "productivity-science-pack" })
+atom.util.Technology("5d-masher-3").removeIngredient({ "production-science-pack", "space-science-pack" })
+atom.util.Technology("5d-masher-3").addIngredient({ "productivity-science-pack" })
 -- 04
 data.raw.technology["5d-masher-4"].unit.count = 400
-util.tech_remove_prerequisites("5d-masher-4", { "production-science-pack", "advanced-material-processing-5" })
-util.tech_add_prerequisites("5d-masher-4", "kr-optimization-tech-card")
-util.tech_remove_ingredients("5d-masher-4", { "production-science-pack" })
-util.tech_add_ingredients("5d-masher-4", { "space-science-pack", "kr-optimization-tech-card" }, false)
+atom.util.Technology("5d-masher-4").removePrerequisite({ "production-science-pack", "advanced-material-processing-5" })
+atom.util.Technology("5d-masher-4").addPrerequisite("kr-optimization-tech-card")
+atom.util.Technology("5d-masher-4").removeIngredient({ "production-science-pack" })
+atom.util.Technology("5d-masher-4").addIngredient({ "space-science-pack", "kr-optimization-tech-card" })
 -- 05
 data.raw.technology["5d-masher-5"].unit.count = 500
-util.tech_remove_prerequisites("5d-masher-5", { "advanced-material-processing-6" })
-util.tech_add_prerequisites("5d-masher-5", { "se-heavy-girder", "se-energy-science-pack-1" })
-util.tech_add_ingredients("5d-masher-5", { "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" }, false)
+atom.util.Technology("5d-masher-5").removePrerequisite({ "advanced-material-processing-6" })
+atom.util.Technology("5d-masher-5").addPrerequisite({ "se-heavy-girder", "se-energy-science-pack-1" })
+atom.util.Technology("5d-masher-5").addIngredient({ "utility-science-pack", "kr-optimization-tech-card", "se-material-science-pack-1", "se-energy-science-pack-1" })
 -- 06
 data.raw.technology["5d-masher-6"].unit.count = 600
-util.tech_remove_prerequisites("5d-masher-6", { "advanced-material-processing-7" })
-util.tech_add_prerequisites("5d-masher-6", { "se-aeroframe-scaffold", "se-heavy-bearing", "se-energy-science-pack-2" })
-util.tech_add_ingredients("5d-masher-6", { "utility-science-pack", "production-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "se-astronomic-science-pack-2" }, false)
+atom.util.Technology("5d-masher-6").removePrerequisite({ "advanced-material-processing-7" })
+atom.util.Technology("5d-masher-6").addPrerequisite({ "se-aeroframe-scaffold", "se-heavy-bearing", "se-energy-science-pack-2" })
+atom.util.Technology("5d-masher-6").addIngredient({ "utility-science-pack", "production-science-pack", "kr-optimization-tech-card", "se-material-science-pack-2", "se-energy-science-pack-2", "se-astronomic-science-pack-2" })
 -- 07
 data.raw.technology["5d-masher-7"].unit.count = 700
-util.tech_remove_prerequisites("5d-masher-7", { "utility-science-pack", "advanced-material-processing-8" })
-util.tech_add_prerequisites("5d-masher-7", { "se-aeroframe-bulkhead", "se-material-science-pack-3", "se-energy-science-pack-3" })
-util.tech_remove_ingredients("5d-masher-7", { "se-material-science-pack-2" })
-util.tech_add_ingredients("5d-masher-7", { "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
+atom.util.Technology("5d-masher-7").removePrerequisite({ "utility-science-pack", "advanced-material-processing-8" })
+atom.util.Technology("5d-masher-7").addPrerequisite({ "se-aeroframe-bulkhead", "se-material-science-pack-3", "se-energy-science-pack-3" })
+atom.util.Technology("5d-masher-7").removeIngredient({ "se-material-science-pack-2" })
+atom.util.Technology("5d-masher-7").addIngredient({ "kr-optimization-tech-card", "se-material-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" })
 -- 08
 data.raw.technology["5d-masher-8"].unit.count = 800
-util.tech_remove_prerequisites("5d-masher-8", { "advanced-material-processing-9" })
-util.tech_add_prerequisites("5d-masher-8", { "kr-ai-core", "hcp-circuit" })
-util.tech_add_ingredients("5d-masher-8", { "kr-optimization-tech-card", "se-biological-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" }, false)
+atom.util.Technology("5d-masher-8").removePrerequisite({ "advanced-material-processing-9" })
+atom.util.Technology("5d-masher-8").addPrerequisite({ "kr-ai-core", "hcp-circuit" })
+atom.util.Technology("5d-masher-8").addIngredient({ "kr-optimization-tech-card", "se-biological-science-pack-3", "se-energy-science-pack-3", "se-astronomic-science-pack-3" })
 -- 09
 data.raw.technology["5d-masher-9"].unit.count = 900
-util.tech_remove_prerequisites("5d-masher-9", { "advanced-material-processing-10" })
-util.tech_add_prerequisites("5d-masher-9", { "se-nanomaterial", "se-heavy-assembly" })
-util.tech_add_ingredients("5d-masher-9", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4" }, false)
+atom.util.Technology("5d-masher-9").removePrerequisite({ "advanced-material-processing-10" })
+atom.util.Technology("5d-masher-9").addPrerequisite({ "se-nanomaterial", "se-heavy-assembly" })
+atom.util.Technology("5d-masher-9").addIngredient({ "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4" })
 -- 10
 data.raw.technology["5d-masher-10"].unit.count = 1000
-util.tech_remove_prerequisites("5d-masher-10", { "advanced-material-processing-11" })
-util.tech_add_prerequisites("5d-masher-10", "se-naquium-cube")
-util.tech_add_ingredients("5d-masher-10", { "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "se-deep-space-science-pack-1" }, false)
+atom.util.Technology("5d-masher-10").removePrerequisite({ "advanced-material-processing-11" })
+atom.util.Technology("5d-masher-10").addPrerequisite("se-naquium-cube")
+atom.util.Technology("5d-masher-10").addIngredient({ "kr-optimization-tech-card", "se-biological-science-pack-4", "se-energy-science-pack-4", "se-astronomic-science-pack-4", "se-deep-space-science-pack-1" })

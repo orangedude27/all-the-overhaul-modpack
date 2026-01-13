@@ -1,5 +1,3 @@
-local util = require("_data-util")
-
 -- Entities
 data.raw["lab"]["burner-lab"].researching_speed = 0.75
 

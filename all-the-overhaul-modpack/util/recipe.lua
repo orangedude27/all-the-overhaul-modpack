@@ -163,6 +163,43 @@ function atom.util.Recipe(value)
             end
         end,
 
+        --- Replaces an existing ingredient or adds a new one if old ingredient doesn't exist
+        --- @param oldIngredient string|nil The name of the existing ingredient (nil to just add)
+        --- @param newIngredient string The name of the new ingredient
+        --- @param amount number The amount of the new ingredient
+        replaceOrAddIngredient = function(oldIngredient, newIngredient, amount)
+            if not recipe.ingredients then
+                return
+            end
+
+            local found = false
+            if oldIngredient then
+                for i, ingredient in pairs(recipe.ingredients) do
+                    if ingredient.name == oldIngredient then
+                        found = true
+                        local ingredientType = data.raw.item[newIngredient] and "item"
+                            or data.raw.module[newIngredient] and "item"
+                            or data.raw.fluid[newIngredient] and "fluid"
+                            or nil
+                        if ingredientType then
+                            recipe.ingredients[i] = { name = newIngredient, amount = amount, type = ingredientType }
+                        end
+                        break
+                    end
+                end
+            end
+
+            if not found then
+                local ingredientType = data.raw.item[newIngredient] and "item"
+                    or data.raw.module[newIngredient] and "item"
+                    or data.raw.fluid[newIngredient] and "fluid"
+                    or nil
+                if ingredientType then
+                    table.insert(recipe.ingredients, { name = newIngredient, amount = amount, type = ingredientType })
+                end
+            end
+        end,
+
         --- Replaces an existing ingredient by name with a new ingredient or adjusts the amount
         --- @param old string The name of the existing ingredient
         --- @param new? string The name of the new ingredient

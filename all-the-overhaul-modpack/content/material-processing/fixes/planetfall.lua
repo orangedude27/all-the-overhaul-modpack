@@ -1,5 +1,3 @@
-local util = require("_data-util")
-
 local gyroscope_name = data.raw.item["gyroscope"] and "gyroscope" or "gyro"
 
 atom.util.recipe.removeByName("nickel-plate")
@@ -11,8 +9,8 @@ atom.util.recipe.removeByName("gold-powder")
 atom.util.recipe.removeByName("gold-plate")
 
 -- Tweak copper to gold recipe
-util.replace_or_add_ingredient("trace-gold-from-copper", "copper-ore", atom.processing.materials.copper.itemNames.dust, 4)
-util.replace_or_add_ingredient("trace-gold-from-copper", "aqua-regia", "aqua-regia", 3, true)
+atom.util.Recipe("trace-gold-from-copper").replaceOrAddIngredient("copper-ore", atom.processing.materials.copper.itemNames.dust, 4)
+atom.util.Recipe("trace-gold-from-copper").replaceOrAddIngredient("aqua-regia", "aqua-regia", 3)
 local copperToGold = data.raw.recipe["trace-gold-from-copper"]
 copperToGold.main_product = atom.processing.materials.gold.itemNames.dust
 copperToGold.icons = {
@@ -27,7 +25,7 @@ copperToGold.results = {
     data.raw.fluid["depleted-acid"] and { type = "fluid", name = "depleted-acid", amount = 3 } or nil
 }
 copperToGold.energy_required = 1
-util.recipe_replace_result("depleted-acid-treatment", "gold-powder", "atom-gold-dust", 1)
+atom.util.Recipe("depleted-acid-treatment").replaceResult("gold-powder", "atom-gold-dust", 1)
 
-util.tech_add_prerequisites("micron-tolerance-instruments", { "micron-tolerance-manufacturing", gyroscope_name, "spectroscopy" })
-util.tech_add_prerequisites("kr-quarry-minerals-extraction", { "space-science-pack" })
+atom.util.Technology("micron-tolerance-instruments").addPrerequisite({ "micron-tolerance-manufacturing", gyroscope_name, "spectroscopy" })
+atom.util.Technology("kr-quarry-minerals-extraction").addPrerequisite({ "space-science-pack" })

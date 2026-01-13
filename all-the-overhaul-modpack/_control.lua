@@ -1,5 +1,3 @@
-local util = require("_data-util")
-
 --- Used with on_player_created to get the player and then adjust the starting items if easy start is on.
 ---@param event  #The event that was triggered
 function PlayerCreated(event)

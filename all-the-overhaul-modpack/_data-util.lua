@@ -1,3 +1,52 @@
+--[[
+    ================================================================================================
+    DEPRECATED: This file has been deprecated in favor of the modern atom.util API.
+
+    All functionality has been migrated to the modern API located in the util/ directory.
+    This file is kept for backwards compatibility but should not be used in new code.
+
+    Migration Guide:
+    ================
+
+    Technology Functions:
+    ---------------------
+    OLD: util.tech_add_prerequisites(techName, prereq)
+    NEW: atom.util.Technology(techName).addPrerequisite(prereq)
+
+    OLD: util.tech_remove_prerequisites(techName, prereqs)
+    NEW: atom.util.Technology(techName).removePrerequisite(prereqs)
+
+    OLD: util.tech_add_ingredients(techName, ingredients, cascade)
+    NEW: atom.util.Technology(techName).addIngredient(ingredients)
+    Note: The 'cascade' parameter is no longer needed
+
+    OLD: util.tech_remove_ingredients(techName, ingredients)
+    NEW: atom.util.Technology(techName).removeIngredient(ingredients)
+
+    OLD: util.tech_lock_recipes(techName, recipes)
+    NEW: atom.util.technology.lockRecipes(techName, recipes)
+
+    OLD: util.remove_recipe_from_effects(tech.effects, recipeName)
+    NEW: atom.util.Technology(techName).removeRecipe(recipeName)
+
+    Recipe Functions:
+    -----------------
+    OLD: util.replace_or_add_ingredient(recipeName, oldIngredient, newIngredient, amount, useNormal)
+    NEW: atom.util.Recipe(recipeName).replaceOrAddIngredient(oldIngredient, newIngredient, amount)
+    Note: The 'useNormal' parameter is no longer needed
+
+    Benefits of Modern API:
+    =======================
+    - Cleaner OOP-style chaining
+    - Better type annotations
+    - Handles both single values and arrays automatically
+    - More consistent naming conventions
+    - Better error handling
+
+    See util/technology.lua and util/recipe.lua for complete API documentation.
+    ================================================================================================
+]]--
+
 local data_util = {}
 local debug = false
 data_util.mod_name = "all-the-overhaul-modpack"

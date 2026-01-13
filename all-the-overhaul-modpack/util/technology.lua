@@ -18,6 +18,42 @@ atom.util.technology = {
                 end
             end
         end
+    end,
+
+    --- Locks recipes behind a technology (disables recipe and adds it to tech)
+    --- @param techName string The name of the technology
+    --- @param recipeNames string|table The recipe name(s) to lock
+    lockRecipes = function(techName, recipeNames)
+        local tech = atom.util.Technology(techName)
+        if not tech then
+            return
+        end
+
+        if type(recipeNames) == "string" then
+            recipeNames = { recipeNames }
+        end
+
+        for _, recipeName in pairs(recipeNames) do
+            local recipe = data.raw.recipe[recipeName]
+            if recipe then
+                -- Disable the recipe
+                recipe.enabled = false
+
+                -- Remove recipe from all technologies
+                for _, t in pairs(data.raw.technology) do
+                    if t.effects then
+                        for i = #t.effects, 1, -1 do
+                            if t.effects[i].type == "unlock-recipe" and t.effects[i].recipe == recipeName then
+                                table.remove(t.effects, i)
+                            end
+                        end
+                    end
+                end
+
+                -- Add recipe to the specified technology
+                tech.addRecipe(recipeName)
+            end
+        end
     end
 }
 
@@ -71,20 +107,33 @@ function atom.util.Technology(value)
         end,
 
         --- Adds a prerequisite to the technology
-        --- @param prerequisite string The name of the prerequisite
+        --- @param prerequisite string|table The name of the prerequisite or table of names
         addPrerequisite = function(prerequisite)
-            local _prerequisite = prerequisiteName(prerequisite)
-            if (not table.contains(technology.prerequisites, _prerequisite)) then
-                table.insert(technology.prerequisites, _prerequisite)
+            -- Handle both single string and array
+            if type(prerequisite) == "table" and not prerequisite.prototype then
+                for _, prereq in pairs(prerequisite) do
+                    local _prerequisite = prerequisiteName(prereq)
+                    technology.prerequisites = technology.prerequisites or {}
+                    if not table.contains(technology.prerequisites, _prerequisite) then
+                        table.insert(technology.prerequisites, _prerequisite)
+                    end
+                end
+            else
+                local _prerequisite = prerequisiteName(prerequisite)
+                technology.prerequisites = technology.prerequisites or {}
+                if not table.contains(technology.prerequisites, _prerequisite) then
+                    table.insert(technology.prerequisites, _prerequisite)
+                end
             end
         end,
 
         --- Adds multiple prerequisites to the technology
         --- @param prerequisites table The names of the prerequisite
         addPrerequisites = function(prerequisites)
+            technology.prerequisites = technology.prerequisites or {}
             for _, prerequisite in pairs(prerequisites) do
                 local _prerequisite = prerequisiteName(prerequisite)
-                if (not table.contains(technology.prerequisites, _prerequisite)) then
+                if not table.contains(technology.prerequisites, _prerequisite) then
                     table.insert(technology.prerequisites, _prerequisite)
                 end
             end
@@ -105,35 +154,79 @@ function atom.util.Technology(value)
         end,
 
         --- Removes a prerequisite from the technology
-        --- @param prerequisite string The name of the prerequisite
+        --- @param prerequisite string|table The name of the prerequisite or table of names
         removePrerequisite = function(prerequisite)
-            local _prerequisite = prerequisiteName(prerequisite)
-            for i, techPrerequisite in pairs(technology.prerequisites) do
-                if techPrerequisite == _prerequisite then
-                    table.remove(technology.prerequisites, i)
-                    return
+            if not technology.prerequisites then
+                return
+            end
+
+            -- Handle both single string and array
+            if type(prerequisite) == "table" and not prerequisite.prototype then
+                for _, prereq in pairs(prerequisite) do
+                    local _prerequisite = prerequisiteName(prereq)
+                    for i = #technology.prerequisites, 1, -1 do
+                        if technology.prerequisites[i] == _prerequisite then
+                            table.remove(technology.prerequisites, i)
+                        end
+                    end
+                end
+            else
+                local _prerequisite = prerequisiteName(prerequisite)
+                for i, techPrerequisite in pairs(technology.prerequisites) do
+                    if techPrerequisite == _prerequisite then
+                        table.remove(technology.prerequisites, i)
+                        return
+                    end
                 end
             end
         end,
 
         --- Adds an ingredient to the technology
-        --- @param ingredientName string The name of the ingredient
+        --- @param ingredientName string|table The name of the ingredient or table of ingredient names
         --- @param amount? number The amount of the ingredient (default 1)
         --- @param expensiveAmount? number The amount of the ingredient for the expensive recipe (uses amount if not set)
         addIngredient = function(ingredientName, amount, expensiveAmount)
             if technology.unit then
-                table.insert(technology.unit.ingredients, { ingredientName, amount or 1 })
+                -- Handle both single string and array of ingredients
+                if type(ingredientName) == "table" then
+                    for _, ingredient in pairs(ingredientName) do
+                        -- Check if ingredient already exists
+                        local found = false
+                        for _, existing in pairs(technology.unit.ingredients) do
+                            if existing[1] == ingredient then
+                                found = true
+                                break
+                            end
+                        end
+                        if not found then
+                            table.insert(technology.unit.ingredients, { ingredient, 1 })
+                        end
+                    end
+                else
+                    table.insert(technology.unit.ingredients, { ingredientName, amount or 1 })
+                end
             end
         end,
 
         --- Removes an existing ingredient by name
-        --- @param ingredientName string The name of the ingredient
+        --- @param ingredientName string|table The name of the ingredient or table of ingredient names
         removeIngredient = function(ingredientName)
             if technology.unit then
-                for i, ingredient in pairs(technology.unit.ingredients) do
-                    if ingredient[1] == ingredientName then
-                        table.remove(technology.unit.ingredients, i)
-                        break
+                -- Handle both single string and array of ingredients
+                if type(ingredientName) == "table" then
+                    for _, ingredient in pairs(ingredientName) do
+                        for i = #technology.unit.ingredients, 1, -1 do
+                            if technology.unit.ingredients[i][1] == ingredient then
+                                table.remove(technology.unit.ingredients, i)
+                            end
+                        end
+                    end
+                else
+                    for i, ingredient in pairs(technology.unit.ingredients) do
+                        if ingredient[1] == ingredientName then
+                            table.remove(technology.unit.ingredients, i)
+                            break
+                        end
                     end
                 end
             end

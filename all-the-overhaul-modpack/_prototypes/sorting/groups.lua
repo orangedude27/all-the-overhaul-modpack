@@ -1,5 +1,3 @@
-local util = require("_data-util")
-
 data:extend(
         {
             {

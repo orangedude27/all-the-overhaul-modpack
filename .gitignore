@@ -8,3 +8,6 @@ all-the-overhaul-modpack/.vscode/
 all-the-overhaul-modpack.lnk
 
 .idea
+
+.claude/
+*-cwd

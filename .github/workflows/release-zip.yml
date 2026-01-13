@@ -41,7 +41,7 @@ jobs:
       - name: Zip the mod folder
         id: create_zip
         run: |
-          MOD_FOLDER="my-folder"
+          MOD_FOLDER="all-the-overhaul-modpack"
           VERSION="${{ github.ref_name }}"
           
           # Factorio Portal requires underscores: ModName_1.0.0.zip
