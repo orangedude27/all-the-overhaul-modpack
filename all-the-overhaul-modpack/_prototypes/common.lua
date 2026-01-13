@@ -67,6 +67,7 @@ local crafting_categories = {
     "advanced-crafting",
     "crafting-with-fluid",
     "kr-smelting-crafting",
+    "fi_crafting_category",
 }
 
 data.raw["assembling-machine"]["fi_crafter_entity"].fluid_boxes = fluid_boxes

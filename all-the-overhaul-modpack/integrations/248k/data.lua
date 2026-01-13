@@ -15,3 +15,11 @@ metalCasting.addRecipe("el_arc_furnace_recipe")
 data.raw.technology["el_arc_furnace_tech"] = nil
 
 atom.util.Technology("fi_upgrade_tech").addIngredient("se-rocket-science-pack")
+
+-- Link Black Hole/White Hole technologies to Star Engine tech
+if data.raw.technology["gr_black_hole_tech"] and data.raw.technology["fu_star_engine_tech"] then
+    atom.util.Technology("gr_black_hole_tech").addPrerequisite("fu_star_engine_tech")
+end
+if data.raw.technology["gr_white_hole_tech"] and data.raw.technology["fu_star_engine_tech"] then
+    atom.util.Technology("gr_white_hole_tech").addPrerequisite("fu_star_engine_tech")
+end
