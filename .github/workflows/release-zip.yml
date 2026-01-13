@@ -1,0 +1,69 @@
+name: Release Zipper & Uploader
+
+on:
+  push:
+    tags:
+      - '[0-9]*' # Triggers on tags like 1.0.0
+
+permissions:
+  contents: write
+
+jobs:
+  build-release-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Sanity Check - Verify Version Match
+        run: |
+          # 1. SET YOUR FOLDER NAME HERE
+          MOD_FOLDER="all-the-overhaul-modpack"
+          
+          # 2. Get the expected version from the Git Tag
+          TAG_VERSION="${{ github.ref_name }}"
+          
+          # 3. Read the actual version from info.json inside the folder
+          # We use 'jq' which is pre-installed on GitHub runners
+          FILE_VERSION=$(jq -r .version "$MOD_FOLDER/info.json")
+          
+          echo "Git Tag Version: $TAG_VERSION"
+          echo "Info.json Version: $FILE_VERSION"
+          
+          # 4. Compare them
+          if [ "$TAG_VERSION" != "$FILE_VERSION" ]; then
+            echo "::error::Version mismatch! Tag is $TAG_VERSION but info.json says $FILE_VERSION"
+            exit 1
+          else
+            echo "Versions match. Proceeding..."
+          fi
+
+      - name: Zip the mod folder
+        id: create_zip
+        run: |
+          MOD_FOLDER="my-folder"
+          VERSION="${{ github.ref_name }}"
+          
+          # Factorio Portal requires underscores: ModName_1.0.0.zip
+          ZIP_FILENAME="${MOD_FOLDER}_${VERSION}.zip"
+          
+          echo "Zipping $MOD_FOLDER into $ZIP_FILENAME..."
+          zip -r "$ZIP_FILENAME" "$MOD_FOLDER"
+          
+          echo "ZIP_FILENAME=$ZIP_FILENAME" >> $GITHUB_ENV
+          echo "MOD_FOLDER=$MOD_FOLDER" >> $GITHUB_ENV
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ZIP_FILENAME }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload to Factorio Mod Portal
+        uses: mchangrh/factorio-mod-upload@v2
+        with:
+          mod-name: ${{ env.MOD_FOLDER }}
+        env:
+          FACTORIO_MODS_TOKEN: ${{ secrets.FACTORIO_MOD_PORTAL_KEY }}
+          FILENAME: ./${{ env.ZIP_FILENAME }}
