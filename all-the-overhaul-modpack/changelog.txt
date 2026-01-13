@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.19
+Date: 26.01.2025
+  Bug Fixes:
+    - Fixed Black Hole & White Hole Technologie dependency issue
+    - Fixed being unable to craft Compact fusion cells
+---------------------------------------------------------------------------------------------------
 Version: 2.0.18
 Date: 25.12.2025
   Bug Fixes:
