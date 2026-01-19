@@ -81,6 +81,13 @@ local function SetGroupSubOrder(name, subgroup, group, Iorder, Sorder)
     if Iorder then
         data.raw.recipe[name].order = Iorder
     end
+    if data.raw.item[name] then
+        data.raw.item[name].group = group
+        data.raw.item[name].subgroup = subgroup
+        if Iorder then
+            data.raw.item[name].order = Iorder
+        end
+    end
 end
 
 
@@ -136,12 +143,37 @@ local function Sort(recipe, group)
     end
 end
 
+---Checks ForceGroupTable
+---@param recipe any
+---@return boolean
+local function ForceSort(recipe)
+    local entry = ForceGroupTable[recipe.name]
+    if entry then
+        if type(entry) == "string" then
+            recipe.group = entry
+            atom.util.log.debug("PIG:ForceSort:Group:" .. entry .. ":name:" .. recipe.name)
+            return true
+        elseif type(entry) == "table" then
+            if entry.subgroup and entry.group then
+                SetGroupSubOrder(recipe.name, entry.subgroup, entry.group, entry.order, entry.suborder)
+            else
+                if entry.group then recipe.group = entry.group end
+                if entry.subgroup then recipe.subgroup = entry.subgroup end
+                if entry.order then recipe.order = entry.order end
+            end
+            atom.util.log.debug("PIG:ForceSort:Table:name:" .. recipe.name)
+            return true
+        end
+    end
+    return false
+end
+
 ---Checks to see if recipe with string in name is in group and subgroup and sets if not
 local function ChangeSubgroupAndGroup()
     for _, recipe in pairs(data.raw.recipe) do
         atom.util.log.debug("PIG:recipe:" .. recipe.name)
         --if recipe name matches what we are looking for
-        if not SortDirectly(recipe) then
+        if not ForceSort(recipe) and not SortDirectly(recipe) then
             for _, Group in pairs(GroupSortOrder) do
                 if Sort(recipe, Group) then
                     break

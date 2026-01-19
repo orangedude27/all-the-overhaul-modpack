@@ -1,22 +1,23 @@
 -- Undo ingredient multiplication
 -- Don't put anything wood related above this code
 local update = {
-    "wood", "bi-woodpulp",
-    "bi-seed", "seedling", "water",
+    ["wood"] = true,
+    ["bi-woodpulp"] = true,
+    ["bi-seed"] = true,
+    ["seedling"] = true,
+    ["water"] = true,
 }
 local multiply = function(items)
     for _, item in pairs(items) do
-        for _, updateItem in pairs(update) do
-            if item.name == updateItem then
-                if item.amount then
-                    item.amount = item.amount * 0.25
-                end
-                if item.amount_min then
-                    item.amount_min = item.amount_min * 0.25
-                end
-                if item.amount_max then
-                    item.amount_max = item.amount_max * 0.25
-                end
+        if update[item.name] then
+            if item.amount then
+                item.amount = item.amount * 0.25
+            end
+            if item.amount_min then
+                item.amount_min = item.amount_min * 0.25
+            end
+            if item.amount_max then
+                item.amount_max = item.amount_max * 0.25
             end
         end
     end

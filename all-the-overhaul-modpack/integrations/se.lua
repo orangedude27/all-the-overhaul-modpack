@@ -70,14 +70,17 @@ end
 
 -- Core fragment processing
 -- Results per 20 core fragments
-data.raw.recipe["se-core-fragment-omni"].results = table.assign(
-        resourceYield(20), {
-            { amount = 32, name = "crude-oil", type = "fluid" },
-            { amount = 16, name = "gas", type = "fluid" },
-            { amount = 12, name = "water", type = "fluid" },
-            { amount = 6, name = "kr-mineral-water", type = "fluid" },
-            { amount = 4, name = "se-pyroflux", type = "fluid" }
-        })
+local omniResults = resourceYield(20)
+for _, result in pairs({
+    { amount = 32, name = "crude-oil", type = "fluid" },
+    { amount = 16, name = "gas", type = "fluid" },
+    { amount = 12, name = "water", type = "fluid" },
+    { amount = 6, name = "kr-mineral-water", type = "fluid" },
+    { amount = 4, name = "se-pyroflux", type = "fluid" }
+}) do
+    table.insert(omniResults, result)
+end
+data.raw.recipe["se-core-fragment-omni"].results = omniResults
 
 -- Scrap recycling
 -- Results per 1 scrap
@@ -117,7 +120,8 @@ glassVulcanite.replaceResult("kr-glass", 21)
 local turretDamageBonus = { 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.3, 0.4, 0.4, 0.4, 0.4, 0.5, 0.5, 0.5, 0.5, 0.6, 0.6 }
 for i = 18, 1, -1 do
     local tech = data.raw.technology["physical-projectile-damage-" .. i]
-    for j, effect in pairs(tech.effects) do
+    for j = #tech.effects, 1, -1 do
+        local effect = tech.effects[j]
         if (effect.turret_id) then
             table.remove(tech.effects, j)
         elseif (effect.ammo_category) then

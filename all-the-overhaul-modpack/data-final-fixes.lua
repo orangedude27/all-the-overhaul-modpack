@@ -10,22 +10,19 @@ require("compatibility.fixes")
 data.raw["pipe"]["pipe"].collision_mask = data.raw["pipe"]["kr-steel-pipe"].collision_mask
 data.raw["pipe-to-ground"]["pipe-to-ground"].collision_mask = data.raw["pipe-to-ground"]["kr-steel-pipe-to-ground"].collision_mask
 
-data:extend({
-    -- Fix stone brick recipe
-    {
-        type = "recipe",
-        name = "stone-brick",
-        category = "smelting",
-        energy_required = 16,
-        enabled = true,
-        allow_productivity = true,
-        ingredients = {
-            { type = "item", name = "stone", amount = 5 },
-            { type = "item", name = "zircon", amount = 5 },
-        },
-        results = {{type="item", name="stone-brick", amount=5}},
+-- Fix stone brick recipe
+local stone_brick = data.raw.recipe["stone-brick"]
+if stone_brick then
+    stone_brick.category = "smelting"
+    stone_brick.energy_required = 16
+    stone_brick.enabled = true
+    stone_brick.allow_productivity = true
+    stone_brick.ingredients = {
+        { type = "item", name = "stone", amount = 5 },
+        { type = "item", name = "zircon", amount = 5 },
     }
-})
+    stone_brick.results = {{type="item", name="stone-brick", amount=5}}
+end
 
 -- Fix prerequisites for artillery shell techs
 atom.util.Technology("artillery-shell-range-1").addPrerequisite("utility-science-pack")
@@ -128,4 +125,3 @@ atom.util.Technology("railway").addPrerequisite("concrete")
 require("2-fixes")
 
 require("integrations.final")
-

@@ -8,7 +8,7 @@ local BeaconsSubOrder = {
     ["fi_modules"] = "[f]",
     ["speed"] = "[a]",
     ["productivity"] = "[b]",
-    ["effectivity"] = "[c]",
+    ["efficiency"] = "[c]",
     ["core"] = "[d]",
     ["cpu"] = "[da]",
     ["memory"] = "[db]",
@@ -27,6 +27,7 @@ local CircuitBlacklist = { "aeroframe", "data", "recycle", "cybersyn", "house" }
 local CircuitSubOrder = {
     ["combinator"] = "[e]",
     ["buoy"] = "[d]",
+    ["display"] = "[c]",
     ["lamp"] = "[g]",
     ["signal"] = "[f]",
     ["speaker"] = "[e]",
@@ -48,7 +49,7 @@ local CircuitRecipeOrder = {
     ["mk2"] = "[b]",
     ["se"] = "[b]",
     ["programmable"] = "[b]",
-    --["power"] = "[b]",
+    ["panel"] = "[b]",
     ["receiver"] = "[b]",
     ["rotator"] = "[b]",
     ["constr"] = "[b]",
@@ -85,7 +86,9 @@ local SpaceRecipeOrder = {
     ["gps"] = "[f]",
 }
 --ammo
-local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", "fuel", "artillery-turret", "heavy-rocket-launcher", "rocket-", "turret" }
+local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", 
+                        "fuel", "artillery-turret", "heavy-rocket-launcher", 
+                        "rocket-", "turret", "data" }
 local AmmoSubOrder = {
     ["anti-material"] = "[a]",
     ["railgun"] = "[d]",
@@ -151,6 +154,7 @@ local TilesSubOrder = {
     ["fusion"] = "[z]",
 }
 local TilesRecipeOrder = {
+    ["sand"] = "[a]",
     ["plate"] = "[a]",
     ["plating"] = "[a]",
     ["scaffold"] = "[a]",
@@ -214,6 +218,8 @@ local TransportSubOrder = {
     ["bridge_base"] = "[a]",
 }
 local TransportRecipeOrder = {
+    ["ramp"] = "[a]",
+    ["support"] = "[a]",
     ["equipment"] = "[a]",
     ["dock"] = "[a]",
     ["interface"] = "[a]",
@@ -431,6 +437,7 @@ local LogisticsSubOrder = {
     ["aai-loader"] = "[a]",
 }
 local LogisticsRecipeOrder = {
+    ["bulk"] = "[d]",
     ["steel"] = "[a]",
     ["iron"] = "[i]",
     ["wood"] = "[h]",
@@ -995,7 +1002,6 @@ ReplaceSubgroupDirectName = {
 
 --ADD ORDER TO ME!!!
 
--- Error: subgroup burner doesn't exist
 SortDirectTable = {
     ["immolator"] = { name = "spidertron", order = "[a]" },
     ["spidertron-builder"] = { name = "spidertron", order = "[a]" },
@@ -1215,4 +1221,10 @@ SortDirectTable = {
     ["kr-rocket-turret"] = { name = "artillery-turret", order = "[a]" },
     ["kr-railgun-turret"] = { name = "artillery-turret", order = "[a]" },
     --[""] = { name = "", order = ""},
+}
+
+ForceGroupTable = {
+    --["stone-brick"] = { group = "tiles", subgroup = "concrete", order = "a", suborder = "a" }
+    --["recipe-name"] = "group-name",
+    --["recipe-name"] = { group = "group-name", subgroup = "subgroup-name", order = "order", suborder = "suborder" }
 }
