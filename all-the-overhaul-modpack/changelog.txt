@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.0
+Date: 07.02.2026
+  Changes:
+    - Mark crushing-industry as incompatible
+    - Change Mini-Assembler recipes to match the regular ones
+    - Dredgeworks: Make recipe of MK1 miner consistent with the others
+  Bug Fixes:
+    - Fix that the metal caster didn't accept prod modules
+---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 18.01.2026
   Changes:
