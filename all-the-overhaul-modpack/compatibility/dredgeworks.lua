@@ -23,6 +23,10 @@ if mods["dredgeworks"] then
         }
     })
     data.raw.item["seafloor-drill"].icons = data.raw["mining-drill"]["seafloor-drill"].icons
+    data.raw.recipe["seafloor-drill"].ingredients = {
+        { type = "item", name = "flotation-platform", amount = 4 },
+        { type = "item", name = "electric-mining-drill", amount = 1 }
+    }
     data.raw.technology["floating-drill-technology"].icons = {
         data.raw["mining-drill"]["seafloor-drill"].icons[1],
         createSmallTechIcon()
