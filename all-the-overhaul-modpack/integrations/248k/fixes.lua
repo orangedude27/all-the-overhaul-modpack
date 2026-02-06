@@ -21,7 +21,7 @@ purifier.energy_usage = "320kW"
 
 -- Allow productivity modules in el_caster_entity, add a third module slot and increase crafting speed
 local caster = data.raw["assembling-machine"]["el_caster_entity"]
-table.insert(caster, "productivity")
+table.insert(caster.allowed_effects, "productivity")
 caster.module_slots = 3
 caster.crafting_speed = 4
 caster.energy_usage = "800kW"
