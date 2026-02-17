@@ -17,6 +17,7 @@ local t0_kr_electrolysis_plant = table.deepcopy(data.raw["assembling-machine"]["
 table.assign(t0_kr_electrolysis_plant, {
     name = "t0-electrolysis-plant",
     module_slots = 3,
+    allowed_effects = { "speed", "productivity", "pollution", "quality" },
     energy_usage = "2.5MW",
     crafting_speed = 1,
     next_upgrade = "kr-electrolysis-plant",
@@ -93,6 +94,7 @@ local t2_kr_electrolysis_plant = table.deepcopy(data.raw["assembling-machine"]["
 table.assign(t2_kr_electrolysis_plant, {
     name = "t2-electrolysis-plant",
     module_slots = 5,
+    allowed_effects = { "speed", "productivity", "pollution", "quality" },
     energy_usage = "4MW",
     crafting_speed = 2.5,
     next_upgrade = "t3-electrolysis-plant",
@@ -170,6 +172,7 @@ local t3_kr_electrolysis_plant = table.deepcopy(data.raw["assembling-machine"]["
 table.assign(t3_kr_electrolysis_plant, {
     name = "t3-electrolysis-plant",
     module_slots = 6,
+    allowed_effects = { "speed", "productivity", "pollution", "quality" },
     energy_usage = "5MW",
     crafting_speed = 3.75,
     se_allow_in_space = true,

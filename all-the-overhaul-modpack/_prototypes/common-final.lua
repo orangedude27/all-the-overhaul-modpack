@@ -135,3 +135,6 @@ for i = 1, 10 do
     data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage = (futil.parse_energy(data.raw["assembling-machine"]["mini-assembler-" .. i].energy_usage) / 2) .. "J"
     data.raw["assembling-machine"]["mini-assembler-" .. i].localised_name = { "mini-name.mini-machine", {"", tostring(i) }}
 end
+
+data.raw["assembling-machine"]["kr-electrolysis-plant"].energy_usage = "3.125MW"
+data.raw["assembling-machine"]["kr-electrolysis-plant-spaced"].energy_usage = "3.125MW"
