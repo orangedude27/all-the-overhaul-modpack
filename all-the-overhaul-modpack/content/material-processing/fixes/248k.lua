@@ -18,6 +18,7 @@ for _, stage in pairs(stages) do
 end
 
 atom.util.recipe.removeByName("fu_lead_recipe")
+atom.util.recipe.removeByName("fu_lead_crushed_recipe")
 
 atom.util.item.removeByName("el_arc_pure_aluminum")
 atom.util.item.removeByName("el_arc_pure_copper")
