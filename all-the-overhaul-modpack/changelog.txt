@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.3
+Date: 20.02.2026
+  Changes:
+    - Add limestone to dirty water filtration balancing
+  Bug Fixes:
+    - Disable producitvity modules in the masher
+    - Move rare metal mining to where it was before
+---------------------------------------------------------------------------------------------------
 Version: 2.2.2
 Date: 18.02.2026
   Changes:
