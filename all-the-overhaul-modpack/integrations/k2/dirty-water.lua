@@ -25,6 +25,7 @@ dirtyWaterRecipe("dirty-water-filtration-bismuth", "atom-bismuth-dust", 0.2)
 dirtyWaterRecipe("dirty-water-filtration-chromium", "atom-chromium-dust", 0.2)
 dirtyWaterRecipe("dirty-water-filtration-cobalt", "atom-cobalt-dust", 0.2)
 dirtyWaterRecipe("dirty-water-filtration-indium", "atom-indium-dust", 0.2)
+dirtyWaterRecipe("dirty-water-filtration-limestone", "limestone", 0.2) -- Not powder for calcium balancing
 dirtyWaterRecipe("dirty-water-filtration-manganese", "atom-manganese-dust", 0.2)
 dirtyWaterRecipe("dirty-water-filtration-nickel", "atom-nickel-dust", 0.2)
 dirtyWaterRecipe("dirty-water-filtration-tantalite", "atom-tantalite-dust", 0.2)

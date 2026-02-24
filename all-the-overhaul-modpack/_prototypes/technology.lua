@@ -114,10 +114,12 @@ atom.util.technology.lockRecipes("fu_activator_tech", { "248k-krastorio2-tritium
 atom.util.Technology("el_ki_sup_2_tech").addPrerequisite("space-science-pack")
 atom.util.Technology("fi_ki_eff_1_tech").addPrerequisite("production-science-pack")
 atom.util.Technology("mini-assembler-3").addPrerequisite("production-science-pack")
-atom.util.Technology("electric-foundry").addPrerequisite("production-science-pack")
 atom.util.Technology("robot-attrition-explosion-safety").addPrerequisite("utility-science-pack")
-
 atom.util.Technology("inserter-capacity-bonus-4").addIngredient({"production-science-pack"})
+local electricFoundry = atom.util.Technology("electric-foundry")
+if electricFoundry then
+    electricFoundry.addPrerequisite("production-science-pack")
+end
 
 -- Research line
 -- Fusion science pack 1

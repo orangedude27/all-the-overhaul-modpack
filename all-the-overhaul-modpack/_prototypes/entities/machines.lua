@@ -13,7 +13,6 @@ data.raw["assembling-machine"]["kr-filtration-plant"].energy_usage = "625kW"
 
 data.raw["assembling-machine"]["kr-electrolysis-plant"].module_slots = 4
 data.raw["assembling-machine"]["kr-electrolysis-plant"].crafting_speed = 1.75
-data.raw["assembling-machine"]["kr-electrolysis-plant"].energy_usage = "3.125MW"
 
 data.raw["assembling-machine"]["kr-advanced-furnace"].module_slots = 8
 data.raw["assembling-machine"]["kr-advanced-furnace"].crafting_speed = 384

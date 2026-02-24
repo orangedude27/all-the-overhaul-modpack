@@ -1,6 +1,19 @@
--- Recipes
-
 local Recipe = require('__jalm__/stdlib/data/recipe')
+
+-- Entities
+
+-- Disable productivity modules
+for i = 1, 10 do
+    local masher =  data.raw["furnace"]["5d-masher-" .. string.format("%02d", i)]
+    for j, value in pairs(masher.allowed_effects) do
+        if value == "productivity" then
+            table.remove(masher.allowed_effects, j)
+        end
+    end
+end
+
+
+-- Recipes
 
 local recipe01 = Recipe("5d-masher-01")
 local recipe02 = Recipe("5d-masher-02")

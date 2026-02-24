@@ -122,3 +122,9 @@ data.raw.resource["kr-mineral-water"].autoplace = resource_autoplace.resource_au
     regular_rq_factor_multiplier = 1,
     starting_rq_factor_multiplier = 1
 })
+
+-- Move rare metal mining to where it was before
+table.insert(data.raw.technology["kr-fluids-chemistry"].effects, data.raw.technology["kr-rare-metal-mining"].effects[1])
+atom.util.technology.replacePrerequisite("kr-rare-metal-processing")
+data.raw.technology["kr-rare-metal-mining"] = nil
+data.raw.technology["kr-rare-metal-processing"] = nil

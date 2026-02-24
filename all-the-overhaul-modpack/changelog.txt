@@ -1,4 +1,26 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.3
+Date: 20.02.2026
+  Changes:
+    - Add limestone to dirty water filtration balancing
+  Bug Fixes:
+    - Disable producitvity modules in the masher
+    - Move rare metal mining to where it was before
+---------------------------------------------------------------------------------------------------
+Version: 2.2.2
+Date: 18.02.2026
+  Changes:
+    - Remove lead plate crushing recipe
+  Bug Fixes:
+    - Fix crash when foundry mod is in minimal mode
+---------------------------------------------------------------------------------------------------
+Version: 2.2.1
+Date: 18.02.2026
+  Changes:
+    - Pin version of 248k Redux to <= 0.1.32 because of breaking changes. Don't update it until we make it compatible.
+    - Change allowed modules in the electrolysis plants to match SE changes (thanks Morganite)
+    - Change energy consumption of the electrolysis plants to match SE changes (thanks Morganite)
+---------------------------------------------------------------------------------------------------
 Version: 2.2.0
 Date: 07.02.2026
   Changes:
