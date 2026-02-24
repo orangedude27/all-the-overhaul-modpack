@@ -11,7 +11,7 @@ local config = atom.processing.util.prepareConfig({
         ingot = "aluminum-ingot",
         molten = "molten-aluminum",
         enriched = "enriched-aluminum",
-        pure = "el_materials_pure_aluminum",
+        pure = "el_pure_aluminum",
         pellets = "atom-aluminum-pellets",
         alumina = "alumina"
     },

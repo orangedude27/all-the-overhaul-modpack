@@ -26,7 +26,7 @@ local entity6 = data.raw["lab"]["kr-singularity-lab"]
 entity6.researching_speed = 10
 entity6.module_slots = 6
 
-local entity7 = data.raw["lab"]["fu_lab_entity"]
+local entity7 = data.raw["lab"]["fu_lab"]
 entity7.researching_speed = 20
 entity7.module_slots = 8
 entity7.se_allow_in_space = true
@@ -47,7 +47,7 @@ recipe2.replaceIngredient("bakelite", "zircaloy-4", 10)
 
 local recipe3 = atom.util.Recipe("5d-lab-03")
 recipe3.addIngredient("scanner", 5)
-recipe3.replaceIngredient("transport-belt", "fi_materials_glass", 10)
+recipe3.replaceIngredient("transport-belt", "fi_glass", 10)
 recipe3.replaceIngredient("bakelite", "nitinol-plate", 10)
 recipe3.replaceIngredient("electronic-circuit", "processing-unit", 10)
 
@@ -55,11 +55,11 @@ local recipe4 = atom.util.Recipe("kr-advanced-lab")
 recipe4.replaceIngredient("lab", "5d-lab-03", 1)
 
 -- 248k
-atom.util.Recipe("gr_lab_recipe").replaceIngredient("lab", "se-space-science-lab", 40)
-atom.util.Recipe("fu_fusor_recipe").replaceIngredient("lab", "se-space-science-lab", 10)
-atom.util.Recipe("fu_fusor_recipe").replaceIngredient("low-density-structure", "heat-resistant-low-density-structure", 100)
-atom.util.Recipe("gr_charger_recipe").replaceIngredient("lab", "se-space-science-lab", 10)
-atom.util.Recipe("gr_charger_recipe").addIngredient("kr-stabilizer-charging-station", 1)
+atom.util.Recipe("gr_lab").replaceIngredient("lab", "se-space-science-lab", 40)
+atom.util.Recipe("fu_fusor").replaceIngredient("lab", "se-space-science-lab", 10)
+atom.util.Recipe("fu_fusor").replaceIngredient("low-density-structure", "heat-resistant-low-density-structure", 100)
+atom.util.Recipe("gr_charger").replaceIngredient("lab", "se-space-science-lab", 10)
+atom.util.Recipe("gr_charger").addIngredient("kr-stabilizer-charging-station", 1)
 
 
 -- Technologies

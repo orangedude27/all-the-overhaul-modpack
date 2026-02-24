@@ -7,7 +7,7 @@
     "description": "Modpack for a SE+K2+248K+BZores playthrough. I did not make any of the mods used, only added them and adjusted settings to make a balanced playstyle.",
     "dependencies": [
         "base >= 2.0.69",
-        "248k-Redux <= 0.1.32",
+        "248k-Redux >= 0.1.35",
         "aai-containers",
         "aai-industry",
         "Adjustable-Inventory-Size",

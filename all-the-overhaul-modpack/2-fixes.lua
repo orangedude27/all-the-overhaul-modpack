@@ -47,15 +47,15 @@ Recipe("lubricant").replaceIngredient("heavy-oil", 10)
 -- Multi-cylinder engine
 local multi_cylinder_engine = Recipe("engine-unit")
 multi_cylinder_engine.removeIngredient("steel-plate")
-multi_cylinder_engine.removeIngredient("el_materials_ALK")
+multi_cylinder_engine.removeIngredient("el_ALK")
 
 -- Medium electric pole
-Recipe("medium-electric-pole").removeIngredient("el_materials_ALK")
+Recipe("medium-electric-pole").removeIngredient("el_ALK")
 
 -- Chemical plant
 local chemical_plant = Recipe("chemical-plant")
 chemical_plant.removeIngredient("lead-plate")
-chemical_plant.removeIngredient("el_materials_ALK")
+chemical_plant.removeIngredient("el_ALK")
 
 -- Centrifuge
 Recipe("centrifuge").removeIngredient("lead-plate")
@@ -78,7 +78,7 @@ assembling_machine_1.removeIngredient("iron-gear-wheel")
 assembling_machine_1.removeIngredient("lead-plate")
 
 -- Assembling machine 2
-Recipe("assembling-machine-2").removeIngredient("el_materials_ALK")
+Recipe("assembling-machine-2").removeIngredient("el_ALK")
 
 -- Assembling machine 3
 Recipe("assembling-machine-3").replaceIngredient("titanium-plate", "hv-power-regulator", 1)
@@ -124,7 +124,7 @@ end
 Recipe("kr-atmospheric-condenser").replaceIngredient("advanced-multi-cylinder-engine", 2)
 
 -- Oil refinery
-Recipe("oil-refinery").removeIngredient("el_materials_ALK")
+Recipe("oil-refinery").removeIngredient("el_ALK")
 
 -- Gimbaled thruster
 Recipe("gimbaled-thruster").removeIngredient("temperature-sensor")

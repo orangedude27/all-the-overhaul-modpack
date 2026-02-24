@@ -5,8 +5,8 @@ local config = atom.processing.util.prepareConfig({
     order = "x",
     itemNames = {
         dust = "atom-neodymium-dust",
-        plate = "fi_materials_neodym",
-        ingot = "fu_materials_neodym_ingot",
+        plate = "fi_neodym",
+        ingot = "fu_neodym_ingot",
     },
     icons = {
         plate = { icon = "__248k-Redux-graphics__/ressources/fission/fi_materials/fi_materials_neodym.png", icon_size = 64 },
