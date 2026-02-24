@@ -2,7 +2,7 @@ local equipment = require("_functions/equipment")
 local equipmentCategoriesLoco = { "solar-equipment", "transport-shield", "battery-equipment", "defense-equipment", "generator-equipment", "el_train_equipment", "fi_train_equipment" }
 local equipmentCategoriesWagon = { "solar-equipment", "transport-shield", "battery-equipment", "defense-equipment", "generator-equipment", "vehicle-robot-interaction-equipment" }
 
-data.raw["movement-bonus-equipment"]["el_train_equipment_accelerator_item"].movement_bonus = 0.25
+data.raw["movement-bonus-equipment"]["el_train_equipment_accelerator"].movement_bonus = 0.25
 
 -- Vanilla Locomotive
 local loc1Grid = data.raw["equipment-grid"]["kr-locomotive-grid"]
@@ -47,7 +47,7 @@ equipment.add_categories_to_grid("kr-wagons-grid", equipmentCategoriesWagon)
 
 data.raw["cargo-wagon"]["black-cargo-wagon"].equipment_grid = "kr-wagons-grid"
 data.raw["fluid-wagon"]["black-fluid-wagon"].equipment_grid = "kr-wagons-grid"
-data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"].equipment_grid = "kr-wagons-grid"
-data.raw["cargo-wagon"]["gr_magnet_wagon_entity"].equipment_grid = "kr-wagons-grid"
-data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"].equipment_grid = "kr-wagons-grid"
-data.raw["fluid-wagon"]["gr_magnet_tanker_entity"].equipment_grid = "kr-wagons-grid"
+data.raw["cargo-wagon"]["gr_magnet_wagon_pre"].equipment_grid = "kr-wagons-grid"
+data.raw["cargo-wagon"]["gr_magnet_wagon"].equipment_grid = "kr-wagons-grid"
+data.raw["fluid-wagon"]["gr_magnet_tanker_pre"].equipment_grid = "kr-wagons-grid"
+data.raw["fluid-wagon"]["gr_magnet_tanker"].equipment_grid = "kr-wagons-grid"

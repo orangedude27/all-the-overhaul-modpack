@@ -43,7 +43,7 @@ data.raw.recipe["se-kr-dirty-water-filtration-holmium"].subgroup = "water"
 data.raw.recipe["se-kr-dirty-water-filtration-iridium"].subgroup = "water"
 
 -- Add recipe for stone dust to dirty water
-local stoneRecipe = atom.util.Recipe(table.deepcopy(data.raw.recipe["el_purify_stone_acidic_recipe"]))
+local stoneRecipe = atom.util.Recipe(table.deepcopy(data.raw.recipe["el_purify_stone_acidic"]))
 table.assign(stoneRecipe.prototype, {
     name = "atom-dirty-water-stone-dust",
     ingredients = {

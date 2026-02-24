@@ -60,13 +60,13 @@ table.insert(lab4.inputs, "utility-science-pack")
 table.insert(lab4.inputs, "kr-optimization-tech-card")
 table.insert(lab4.inputs, "fi_ki_science")
 table.insert(lab4.inputs, "fu_ki_science")
-table.insert(lab4.inputs, "gr_materials_red_pack_item")
-table.insert(lab4.inputs, "gr_materials_green_pack_item")
-table.insert(lab4.inputs, "gr_materials_blue_pack_item")
-table.insert(lab4.inputs, "gr_materials_purple_pack_item")
-table.insert(lab4.inputs, "gr_materials_yellow_pack_item")
-table.insert(lab4.inputs, "gr_materials_grey_pack_item")
-table.insert(lab4.inputs, "gr_materials_white_pack_item")
+table.insert(lab4.inputs, "gr_red_pack")
+table.insert(lab4.inputs, "gr_green_pack")
+table.insert(lab4.inputs, "gr_blue_pack")
+table.insert(lab4.inputs, "gr_purple_pack")
+table.insert(lab4.inputs, "gr_yellow_pack")
+table.insert(lab4.inputs, "gr_grey_pack")
+table.insert(lab4.inputs, "gr_white_pack")
 
 local lab5 = data.raw["lab"]["se-space-science-lab"]
 lab5.inputs = table.deepcopy(lab4.inputs)
@@ -93,7 +93,7 @@ table.insert(lab5.inputs, "se-material-science-pack-4")
 table.insert(lab5.inputs, "kr-advanced-tech-card")
 table.insert(lab5.inputs, "kr-matter-tech-card")
 table.insert(lab5.inputs, "se-deep-space-science-pack-1")
-table.insert(lab5.inputs, "fu_space_probe_science_item")
+table.insert(lab5.inputs, "fu_space_probe_science")
 
 local lab6 = data.raw["lab"]["kr-singularity-lab"]
 lab6.inputs = table.deepcopy(lab5.inputs)
@@ -103,7 +103,7 @@ table.insert(lab6.inputs, "se-deep-space-science-pack-2")
 table.insert(lab6.inputs, "se-deep-space-science-pack-3")
 table.insert(lab6.inputs, "se-deep-space-science-pack-4")
 
-local lab7 = data.raw["lab"]["fu_lab_entity-spaced"]
+local lab7 = data.raw["lab"]["fu_lab-spaced"]
 lab7.inputs = lab6.inputs
 
 -- Somehow copper cable recipe is not unlocked

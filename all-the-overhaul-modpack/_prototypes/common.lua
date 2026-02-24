@@ -70,14 +70,14 @@ local crafting_categories = {
     "fi_crafting_category",
 }
 
-data.raw["assembling-machine"]["fi_crafter_entity"].fluid_boxes = fluid_boxes
-data.raw["assembling-machine"]["gr_crafter_entity"].fluid_boxes = fluid_boxes
+data.raw["assembling-machine"]["fi_crafter"].fluid_boxes = fluid_boxes
+data.raw["assembling-machine"]["gr_crafter"].fluid_boxes = fluid_boxes
 
-data.raw["assembling-machine"]["fi_crafter_entity"].fluid_boxes_off_when_no_fluid_recipe = true
-data.raw["assembling-machine"]["gr_crafter_entity"].fluid_boxes_off_when_no_fluid_recipe = true
+data.raw["assembling-machine"]["fi_crafter"].fluid_boxes_off_when_no_fluid_recipe = true
+data.raw["assembling-machine"]["gr_crafter"].fluid_boxes_off_when_no_fluid_recipe = true
 
-data.raw["assembling-machine"]["fi_crafter_entity"].crafting_categories = crafting_categories
-data.raw["assembling-machine"]["gr_crafter_entity"].crafting_categories = crafting_categories
+data.raw["assembling-machine"]["fi_crafter"].crafting_categories = crafting_categories
+data.raw["assembling-machine"]["gr_crafter"].crafting_categories = crafting_categories
 
 equipment.create_equipment_category("generator-equipment")
 equipment.create_equipment_category("defense-equipment")
@@ -87,8 +87,8 @@ equipment.create_equipment_category("solar-equipment")
 equipment.create_grid("kr-advanced-tank-grid")
 
 data.raw["assembling-machine"]["kr-research-server"].ingredient_count = 20
-data.raw["assembling-machine"]["el_purifier_entity"].ingredient_count = 20
-data.raw["assembling-machine"]["fu_magnet_entity"].ingredient_count = 3
+data.raw["assembling-machine"]["el_purifier"].ingredient_count = 20
+data.raw["assembling-machine"]["fu_magnet"].ingredient_count = 3
 
 ---Adjust grid size
 ---@param grid_name string
@@ -131,5 +131,5 @@ for _, item in pairs(data.raw.tool) do
     end
 end
 
-data.raw.item["fu_materials_carbon_fiber"].localised_name = "Graphite fiber"
-data.raw.item["fu_materials_KFK"].localised_name = "Graphite fiber reinforced plastic"
+data.raw.item["fu_carbon_fiber"].localised_name = "Graphite fiber"
+data.raw.item["fu_KFK"].localised_name = "Graphite fiber reinforced plastic"

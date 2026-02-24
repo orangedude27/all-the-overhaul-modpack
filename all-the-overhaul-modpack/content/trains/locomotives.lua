@@ -16,7 +16,7 @@ table.assign(data.raw.locomotive["locomotive"].energy_source, {
 })
 
 -- Diesel Train
-table.assign(data.raw.locomotive["el_diesel_train_entity"], {
+table.assign(data.raw.locomotive["el_diesel_train"], {
     weight = 3000,
     max_speed = 0.96,
     max_power = "1.6MW",
@@ -26,7 +26,7 @@ table.assign(data.raw.locomotive["el_diesel_train_entity"], {
     reversing_power_modifier = 0.6,
     max_health = 2000
 })
-table.assign(data.raw.locomotive["el_diesel_train_entity"].energy_source, {
+table.assign(data.raw.locomotive["el_diesel_train"].energy_source, {
     effectivity = 0.8,
     fuel_categories = { "kr-vehicle-fuel", "el_train_fuel" },
     fuel_inventory_size = 2
@@ -52,7 +52,7 @@ table.assign(data.raw.locomotive["kr-nuclear-locomotive"].energy_source, {
 })
 
 -- EM Suspension Train 1
-table.assign(data.raw.locomotive["gr_magnet_train_pre_entity"], {
+table.assign(data.raw.locomotive["gr_magnet_train_pre"], {
     weight = 6000,
     max_speed = 1.33,
     max_power = "5.33MW",
@@ -63,7 +63,7 @@ table.assign(data.raw.locomotive["gr_magnet_train_pre_entity"], {
     equipment_grid = "gr_magnet_train_pre_grid",
     max_health = 2000
 })
-table.assign(data.raw.locomotive["gr_magnet_train_pre_entity"].energy_source, {
+table.assign(data.raw.locomotive["gr_magnet_train_pre"].energy_source, {
     effectivity = 1,
     fuel_categories = { "nuclear", "nuclear-advanced", "nuclear-high-energy" },
     fuel_inventory_size = 1,
@@ -71,7 +71,7 @@ table.assign(data.raw.locomotive["gr_magnet_train_pre_entity"].energy_source, {
 })
 
 -- EM Suspension Train 2
-table.assign(data.raw.locomotive["gr_magnet_train_entity"], {
+table.assign(data.raw.locomotive["gr_magnet_train"], {
     weight = 4000,
     max_speed = 3.0,
     max_power = "10MW",

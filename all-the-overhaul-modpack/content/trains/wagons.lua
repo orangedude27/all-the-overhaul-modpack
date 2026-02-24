@@ -14,14 +14,14 @@ table.assign(data.raw["cargo-wagon"]["black-cargo-wagon"], {
     max_speed = 2.0
 })
 
-table.assign(data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"], {
+table.assign(data.raw["cargo-wagon"]["gr_magnet_wagon_pre"], {
     inventory_size = 80,
     max_health = 1500,
     weight = 1500,
     max_speed = 2.66
 })
 
-table.assign(data.raw["cargo-wagon"]["gr_magnet_wagon_entity"], {
+table.assign(data.raw["cargo-wagon"]["gr_magnet_wagon"], {
     inventory_size = 100,
     max_health = 2000,
     weight = 2000,
@@ -45,14 +45,14 @@ table.assign(data.raw["fluid-wagon"]["black-fluid-wagon"], {
     max_speed = 2.0
 })
 
-table.assign(data.raw["fluid-wagon"]["gr_magnet_tanker_pre_entity"], {
+table.assign(data.raw["fluid-wagon"]["gr_magnet_tanker_pre"], {
     capacity = 75000,
     max_health = 1500,
     weight = 2000,
     max_speed = 2.66
 })
 
-table.assign(data.raw["fluid-wagon"]["gr_magnet_tanker_entity"], {
+table.assign(data.raw["fluid-wagon"]["gr_magnet_tanker"], {
     capacity = 100000,
     max_health = 2000,
     weight = 2500,

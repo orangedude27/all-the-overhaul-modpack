@@ -275,7 +275,7 @@ data:extend({
         type = "technology",
         name = "t-lab",
         effects = {
-            { type = "unlock-recipe", recipe = "fu_lab_recipe" },
+            { type = "unlock-recipe", recipe = "fu_lab" },
         },
         icon = "__248k-Redux-graphics__/ressources/techs/fu_lab_tech.png",
         icon_size = 128,
