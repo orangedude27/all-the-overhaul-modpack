@@ -22,7 +22,7 @@ local config = atom.processing.util.prepareConfig({
 })
 
 local create = atom.processing.create(config)
-local dustToIngotRecipe = create.dustToIngotRecipe()
+local dustToPlateRecipe = create.dustToPlateRecipe()
 local oreToPlateRecipe = create.oreToPlateRecipe()
 local enrichedToIngotRecipe = create.enrichedToIngotRecipe()
 
@@ -30,8 +30,9 @@ oreToPlateRecipe.prototype.results = {
     { type = "item", name = config.itemNames.ingot, amount = 2 },
     { type = "item", name = config.itemNames.ingot, amount = 1, probability = 0.50 },
 }
+oreToPlateRecipe.prototype.hide_from_signal_gui = false
 
-dustToIngotRecipe.prototype.results = {
+dustToPlateRecipe.prototype.results = {
     { type = "item", name = config.itemNames.ingot, amount = 5 },
     { type = "item", name = config.itemNames.ingot, amount = 1, probability = 0.50 },
 }
@@ -44,7 +45,7 @@ enrichedToIngotRecipe.prototype.results = {
 atom.util.applyAll({
     oreToPlateRecipe,
     create.oreToDustRecipe(),
-    dustToIngotRecipe,
+    dustToPlateRecipe,
     create.dustToEnrichedRecipe(),
     enrichedToIngotRecipe,
     create.item("dust"),

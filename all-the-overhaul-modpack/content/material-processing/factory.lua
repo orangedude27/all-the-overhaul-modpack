@@ -73,7 +73,8 @@ atom.processing.create = function(config)
                 results = results,
                 main_product = config.itemNames.plate,
                 subgroup = config.subgroup,
-                enabled = false
+                enabled = false,
+                hide_from_signal_gui = false
             })
             recipe.allowProductivity()
             recipe.unlockedByTechnology(config.unlockedBy.dustToPlate or "5d-masher-1")
@@ -131,7 +132,8 @@ atom.processing.create = function(config)
                 results = results,
                 main_product = config.itemNames.plate,
                 subgroup = config.subgroup,
-                enabled = false
+                enabled = false,
+                hide_from_signal_gui = false
             })
             recipe.unlockedByTechnology(config.unlockedBy.ingotToPlate or "atom-advanced-ore-processing-1")
             return recipe
@@ -181,7 +183,8 @@ atom.processing.create = function(config)
                     { type = "item", name = config.itemNames.plate, amount = 6 },
                 },
                 subgroup = config.subgroup,
-                enabled = false
+                enabled = false,
+                hide_from_signal_gui = false
             })
             recipe.unlockedByTechnology(config.unlockedBy.moltenToPlate or "atom-advanced-ore-processing-2")
             return recipe
@@ -235,7 +238,8 @@ atom.processing.create = function(config)
                     { type = "item", name = config.itemNames.ingot, amount = 2 },
                 },
                 subgroup = config.subgroup,
-                enabled = false
+                enabled = false,
+                hide_from_signal_gui = false
             })
             recipe.allowProductivity()
             recipe.unlockedByTechnology(config.unlockedBy.enrichedToIngot or "atom-advanced-ore-processing-2")
@@ -345,7 +349,8 @@ atom.processing.create = function(config)
                     { type = "item", name = config.itemNames.ingot, amount = 2 }
                 },
                 subgroup = config.subgroup,
-                enabled = false
+                enabled = false,
+                hide_from_signal_gui = false
             })
             recipe.allowProductivity()
             recipe.unlockedByTechnology(config.unlockedBy.pelletsToIngot or "atom-advanced-ore-processing-4")
