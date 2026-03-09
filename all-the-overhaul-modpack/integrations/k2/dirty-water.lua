@@ -47,6 +47,7 @@ data.raw.recipe["se-kr-dirty-water-filtration-iridium"].subgroup = "water"
 local stoneRecipe = atom.util.Recipe(table.deepcopy(data.raw.recipe["el_purify_stone_acidic_recipe"]))
 table.assign(stoneRecipe.prototype, {
     name = "atom-dirty-water-stone-dust",
+    localised_name = { "fluid-name.kr-dirty-water" },
     ingredients = {
         { type = "fluid", name = "water", amount = 100, ignored_by_productivity = 100, ignored_by_stats = 100 },
         { type = "item", name = "atom-stone-dust", amount = 4 },
