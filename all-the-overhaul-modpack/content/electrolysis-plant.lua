@@ -22,57 +22,59 @@ table.assign(t0_kr_electrolysis_plant, {
     crafting_speed = 1,
     next_upgrade = "kr-electrolysis-plant",
     se_allow_in_space = true,
-    animation = {
-        layers = {
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__all-the-overhaul-modpack__/graphics/entity/electrolysis-plant-mk0/hr-electrolysis-plant.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 1,
+                    shift = { 0, 0 },
+                },
+                {
+                    filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-sh.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 1,
+                    draw_as_shadow = true,
+                    shift = { 0, 0 },
+                },
+            },
+        },
+        working_visualisations = {
             {
-                filename = "__all-the-overhaul-modpack__/graphics/entity/electrolysis-plant-mk0/hr-electrolysis-plant.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 1,
-                shift = { 0, 0 },
+                apply_recipe_tint = "primary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-work.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 12,
+                    line_length = 6,
+                    animation_speed = 0.4,
+                    shift = { 0, 0 },
+                    blend_mode = "additive",
+                    draw_as_glow = true,
+                },
             },
             {
-                filename = "__Krastorio2Assets__/entities/electrolysis-plant/hr-electrolysis-plant-sh.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 1,
-                draw_as_shadow = true,
-                shift = { 0, 0 },
+                apply_recipe_tint = "primary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-work-light.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 12,
+                    line_length = 6,
+                    animation_speed = 0.4,
+                    shift = { 0, 0 },
+                    draw_as_light = true,
+                },
             },
-        },
-    },
-    working_visualisations = {
-        {
-            apply_recipe_tint = "primary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/electrolysis-plant/hr-electrolysis-plant-work.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 12,
-                line_length = 6,
-                animation_speed = 0.4,
-                shift = { 0, 0 },
-                blend_mode = "additive",
-                draw_as_glow = true,
-            },
-        },
-        {
-            apply_recipe_tint = "primary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/electrolysis-plant/hr-electrolysis-plant-work-light.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 12,
-                line_length = 6,
-                animation_speed = 0.4,
-                shift = { 0, 0 },
-                draw_as_light = true,
-            },
-        },
+        }
     }
 })
 t0_kr_electrolysis_plant.minable.result = "t0-electrolysis-plant"
@@ -99,57 +101,59 @@ table.assign(t2_kr_electrolysis_plant, {
     crafting_speed = 2.5,
     next_upgrade = "t3-electrolysis-plant",
     se_allow_in_space = true,
-    animation = {
-        layers = {
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__all-the-overhaul-modpack__/graphics/entity/electrolysis-plant-mk2/hr-electrolysis-plant.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 1,
+                    shift = { 0, 0 },
+                },
+                {
+                    filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-sh.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 1,
+                    draw_as_shadow = true,
+                    shift = { 0, 0 },
+                },
+            },
+        },
+        working_visualisations = {
             {
-                filename = "__all-the-overhaul-modpack__/graphics/entity/electrolysis-plant-mk2/hr-electrolysis-plant.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 1,
-                shift = { 0, 0 },
+                apply_recipe_tint = "primary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-work.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 12,
+                    line_length = 6,
+                    animation_speed = 0.4,
+                    shift = { 0, 0 },
+                    blend_mode = "additive",
+                    draw_as_glow = true,
+                },
             },
             {
-                filename = "__Krastorio2Assets__/entities/electrolysis-plant/hr-electrolysis-plant-sh.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 1,
-                draw_as_shadow = true,
-                shift = { 0, 0 },
+                apply_recipe_tint = "primary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-work-light.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 12,
+                    line_length = 6,
+                    animation_speed = 0.4,
+                    shift = { 0, 0 },
+                    draw_as_light = true,
+                },
             },
-        },
-    },
-    working_visualisations = {
-        {
-            apply_recipe_tint = "primary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/electrolysis-plant/hr-electrolysis-plant-work.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 12,
-                line_length = 6,
-                animation_speed = 0.4,
-                shift = { 0, 0 },
-                blend_mode = "additive",
-                draw_as_glow = true,
-            },
-        },
-        {
-            apply_recipe_tint = "primary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/electrolysis-plant/hr-electrolysis-plant-work-light.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 12,
-                line_length = 6,
-                animation_speed = 0.4,
-                shift = { 0, 0 },
-                draw_as_light = true,
-            },
-        },
+        }
     }
 })
 t2_kr_electrolysis_plant.minable.result = "t2-electrolysis-plant"
@@ -176,57 +180,59 @@ table.assign(t3_kr_electrolysis_plant, {
     energy_usage = "5MW",
     crafting_speed = 3.75,
     se_allow_in_space = true,
-    animation = {
-        layers = {
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__all-the-overhaul-modpack__/graphics/entity/electrolysis-plant-mk3/hr-electrolysis-plant.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 1,
+                    shift = { 0, 0 },
+                },
+                {
+                    filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-sh.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 1,
+                    draw_as_shadow = true,
+                    shift = { 0, 0 },
+                },
+            },
+        },
+        working_visualisations = {
             {
-                filename = "__all-the-overhaul-modpack__/graphics/entity/electrolysis-plant-mk3/hr-electrolysis-plant.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 1,
-                shift = { 0, 0 },
+                apply_recipe_tint = "primary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-work.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 12,
+                    line_length = 6,
+                    animation_speed = 0.4,
+                    shift = { 0, 0 },
+                    blend_mode = "additive",
+                    draw_as_glow = true,
+                },
             },
             {
-                filename = "__Krastorio2Assets__/entities/electrolysis-plant/hr-electrolysis-plant-sh.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 1,
-                draw_as_shadow = true,
-                shift = { 0, 0 },
+                apply_recipe_tint = "primary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/electrolysis-plant/electrolysis-plant-work-light.png",
+                    width = 380,
+                    height = 380,
+                    scale = 0.5,
+                    frame_count = 12,
+                    line_length = 6,
+                    animation_speed = 0.4,
+                    shift = { 0, 0 },
+                    draw_as_light = true,
+                },
             },
-        },
-    },
-    working_visualisations = {
-        {
-            apply_recipe_tint = "primary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/electrolysis-plant/hr-electrolysis-plant-work.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 12,
-                line_length = 6,
-                animation_speed = 0.4,
-                shift = { 0, 0 },
-                blend_mode = "additive",
-                draw_as_glow = true,
-            },
-        },
-        {
-            apply_recipe_tint = "primary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/electrolysis-plant/hr-electrolysis-plant-work-light.png",
-                width = 380,
-                height = 380,
-                scale = 0.5,
-                frame_count = 12,
-                line_length = 6,
-                animation_speed = 0.4,
-                shift = { 0, 0 },
-                draw_as_light = true,
-            },
-        },
+        }
     }
 })
 t3_kr_electrolysis_plant.minable.result = "t3-electrolysis-plant"
