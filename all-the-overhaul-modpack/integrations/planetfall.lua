@@ -5,6 +5,7 @@ end
 
 -- Alternative gold from copper recipe
 local goldRareRecipe = atom.util.Recipe("trace-gold-from-copper").clone("trace-gold-from-copper-rare")
+goldRareRecipe.prototype.localised_name = { "recipe-name.trace-gold-from-copper-rare" }
 goldRareRecipe.replaceIngredient("5d-copper-dust", 3)
 goldRareRecipe.addIngredient("atom-rare-metals-dust", 1)
 goldRareRecipe.addSmallIcon(atom.processing.materials.rareMetals.icons.ore, "top-right")
