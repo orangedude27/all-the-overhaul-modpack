@@ -20,70 +20,72 @@ table.assign(t0_kr_filtration_plant, {
     energy_usage = "500kW",
     crafting_speed = 1,
     next_upgrade = "kr-filtration-plant",
-    animation = {
-        layers = {
-            {
-                filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk0/hr-filtration-plant.png",
-                priority = "high",
-                width = 460,
-                height = 520,
-                shift = { 0, -0.2 },
-                frame_count = 1,
-                scale = 0.5,
-            },
-            {
-                filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-sh.png",
-                priority = "high",
-                width = 498,
-                height = 438,
-                shift = { 0.33, 0.32 },
-                frame_count = 1,
-                scale = 0.5,
-                draw_as_shadow = true,
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk0/hr-filtration-plant.png",
+                    priority = "high",
+                    width = 460,
+                    height = 520,
+                    shift = { 0, -0.2 },
+                    frame_count = 1,
+                    scale = 0.5,
+                },
+                {
+                    filename = "__Krastorio2Assets__/buildings/filtration-plant/filtration-plant-sh.png",
+                    priority = "high",
+                    width = 498,
+                    height = 438,
+                    shift = { 0.33, 0.32 },
+                    frame_count = 1,
+                    scale = 0.5,
+                    draw_as_shadow = true,
+                },
             },
         },
-    },
-    working_visualisations = {
-        {
-            animation = {
-                filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk0/hr-filtration-plant-working.png",
-                priority = "high",
-                width = 340,
-                height = 370,
-                shift = { 0.3, -0.59 },
-                frame_count = 30,
-                line_length = 6,
-                animation_speed = 0.6,
-                scale = 0.5,
-            },
+        working_visualisations = {
+            {
+                animation = {
+                    filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk0/hr-filtration-plant-working.png",
+                    priority = "high",
+                    width = 340,
+                    height = 370,
+                    shift = { 0.3, -0.59 },
+                    frame_count = 30,
+                    line_length = 6,
+                    animation_speed = 0.6,
+                    scale = 0.5,
+                },
 
-        },
-        {
-            apply_recipe_tint = "primary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-dirty-mask.png",
-                width = 156,
-                height = 120,
-                scale = 0.5,
-                frame_count = 30,
-                line_length = 6,
-                animation_speed = 0.6,
-                shift = { 1.61, -1.02 },
             },
-        },
-        {
-            apply_recipe_tint = "secondary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-clear-mask.png",
-                width = 156,
-                height = 120,
-                scale = 0.5,
-                frame_count = 30,
-                line_length = 6,
-                animation_speed = 0.6,
-                shift = { 1.61, 1.31 },
+            {
+                apply_recipe_tint = "primary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/filtration-plant/filtration-plant-dirty-mask.png",
+                    width = 156,
+                    height = 120,
+                    scale = 0.5,
+                    frame_count = 30,
+                    line_length = 6,
+                    animation_speed = 0.6,
+                    shift = { 1.61, -1.02 },
+                },
             },
-        },
+            {
+                apply_recipe_tint = "secondary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/filtration-plant/filtration-plant-clear-mask.png",
+                    width = 156,
+                    height = 120,
+                    scale = 0.5,
+                    frame_count = 30,
+                    line_length = 6,
+                    animation_speed = 0.6,
+                    shift = { 1.61, 1.31 },
+                },
+            },
+        }
     }
 })
 t0_kr_filtration_plant.minable.result = "t0-filtration-plant"
@@ -108,69 +110,71 @@ table.assign(t2_kr_filtration_plant, {
     energy_usage = "750kW",
     crafting_speed = 2.5,
     next_upgrade = "t3-filtration-plant",
-    animation = {
-        layers = {
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk2/hr-filtration-plant.png",
+                    priority = "high",
+                    width = 460,
+                    height = 520,
+                    shift = { 0, -0.2 },
+                    frame_count = 1,
+                    scale = 0.5,
+                },
+                {
+                    filename = "__Krastorio2Assets__/buildings/filtration-plant/filtration-plant-sh.png",
+                    priority = "high",
+                    width = 498,
+                    height = 438,
+                    shift = { 0.33, 0.32 },
+                    frame_count = 1,
+                    scale = 0.5,
+                    draw_as_shadow = true,
+                },
+            },
+        },
+        working_visualisations = {
             {
-                filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk2/hr-filtration-plant.png",
-                priority = "high",
-                width = 460,
-                height = 520,
-                shift = { 0, -0.2 },
-                frame_count = 1,
-                scale = 0.5,
+                animation = {
+                    filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk2/hr-filtration-plant-working.png",
+                    priority = "high",
+                    width = 340,
+                    height = 370,
+                    shift = { 0.3, -0.59 },
+                    frame_count = 30,
+                    line_length = 6,
+                    animation_speed = 0.6,
+                    scale = 0.5,
+                },
             },
             {
-                filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-sh.png",
-                priority = "high",
-                width = 498,
-                height = 438,
-                shift = { 0.33, 0.32 },
-                frame_count = 1,
-                scale = 0.5,
-                draw_as_shadow = true,
+                apply_recipe_tint = "primary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/filtration-plant/filtration-plant-dirty-mask.png",
+                    width = 156,
+                    height = 120,
+                    scale = 0.5,
+                    frame_count = 30,
+                    line_length = 6,
+                    animation_speed = 0.6,
+                    shift = { 1.61, -1.02 },
+                },
             },
-        },
-    },
-    working_visualisations = {
-        {
-            animation = {
-                filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk2/hr-filtration-plant-working.png",
-                priority = "high",
-                width = 340,
-                height = 370,
-                shift = { 0.3, -0.59 },
-                frame_count = 30,
-                line_length = 6,
-                animation_speed = 0.6,
-                scale = 0.5,
+            {
+                apply_recipe_tint = "secondary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/filtration-plant/filtration-plant-clear-mask.png",
+                    width = 156,
+                    height = 120,
+                    scale = 0.5,
+                    frame_count = 30,
+                    line_length = 6,
+                    animation_speed = 0.6,
+                    shift = { 1.61, 1.31 },
+                },
             },
-        },
-        {
-            apply_recipe_tint = "primary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-dirty-mask.png",
-                width = 156,
-                height = 120,
-                scale = 0.5,
-                frame_count = 30,
-                line_length = 6,
-                animation_speed = 0.6,
-                shift = { 1.61, -1.02 },
-            },
-        },
-        {
-            apply_recipe_tint = "secondary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-clear-mask.png",
-                width = 156,
-                height = 120,
-                scale = 0.5,
-                frame_count = 30,
-                line_length = 6,
-                animation_speed = 0.6,
-                shift = { 1.61, 1.31 },
-            },
-        },
+        }
     }
 })
 t2_kr_filtration_plant.minable.result = "t2-filtration-plant"
@@ -195,69 +199,71 @@ table.assign(t3_kr_filtration_plant, {
     module_slots = 6,
     energy_usage = "875kW",
     crafting_speed = 3.75,
-    animation = {
-        layers = {
+    graphics_set = {
+        animation = {
+            layers = {
+                {
+                    filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk3/hr-filtration-plant.png",
+                    priority = "high",
+                    width = 460,
+                    height = 520,
+                    shift = { 0, -0.2 },
+                    frame_count = 1,
+                    scale = 0.5,
+                },
+                {
+                    filename = "__Krastorio2Assets__/buildings/filtration-plant/filtration-plant-sh.png",
+                    priority = "high",
+                    width = 498,
+                    height = 438,
+                    shift = { 0.33, 0.32 },
+                    frame_count = 1,
+                    scale = 0.5,
+                    draw_as_shadow = true,
+                },
+            },
+        },
+        working_visualisations = {
             {
-                filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk3/hr-filtration-plant.png",
-                priority = "high",
-                width = 460,
-                height = 520,
-                shift = { 0, -0.2 },
-                frame_count = 1,
-                scale = 0.5,
+                animation = {
+                    filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk3/hr-filtration-plant-working.png",
+                    priority = "high",
+                    width = 340,
+                    height = 370,
+                    shift = { 0.3, -0.59 },
+                    frame_count = 30,
+                    line_length = 6,
+                    animation_speed = 0.6,
+                    scale = 0.5,
+                },
             },
             {
-                filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-sh.png",
-                priority = "high",
-                width = 498,
-                height = 438,
-                shift = { 0.33, 0.32 },
-                frame_count = 1,
-                scale = 0.5,
-                draw_as_shadow = true,
+                apply_recipe_tint = "primary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/filtration-plant/filtration-plant-dirty-mask.png",
+                    width = 156,
+                    height = 120,
+                    scale = 0.5,
+                    frame_count = 30,
+                    line_length = 6,
+                    animation_speed = 0.6,
+                    shift = { 1.61, -1.02 },
+                },
             },
-        },
-    },
-    working_visualisations = {
-        {
-            animation = {
-                filename = "__all-the-overhaul-modpack__/graphics/entity/filtration-plant-mk3/hr-filtration-plant-working.png",
-                priority = "high",
-                width = 340,
-                height = 370,
-                shift = { 0.3, -0.59 },
-                frame_count = 30,
-                line_length = 6,
-                animation_speed = 0.6,
-                scale = 0.5,
+            {
+                apply_recipe_tint = "secondary",
+                animation = {
+                    filename = "__Krastorio2Assets__/buildings/filtration-plant/filtration-plant-clear-mask.png",
+                    width = 156,
+                    height = 120,
+                    scale = 0.5,
+                    frame_count = 30,
+                    line_length = 6,
+                    animation_speed = 0.6,
+                    shift = { 1.61, 1.31 },
+                },
             },
-        },
-        {
-            apply_recipe_tint = "primary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-dirty-mask.png",
-                width = 156,
-                height = 120,
-                scale = 0.5,
-                frame_count = 30,
-                line_length = 6,
-                animation_speed = 0.6,
-                shift = { 1.61, -1.02 },
-            },
-        },
-        {
-            apply_recipe_tint = "secondary",
-            animation = {
-                filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-clear-mask.png",
-                width = 156,
-                height = 120,
-                scale = 0.5,
-                frame_count = 30,
-                line_length = 6,
-                animation_speed = 0.6,
-                shift = { 1.61, 1.31 },
-            },
-        },
+        }
     }
 })
 t3_kr_filtration_plant.minable.result = "t3-filtration-plant"
