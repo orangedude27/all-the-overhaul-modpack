@@ -51,3 +51,5 @@ atom.processing.util.createDefaultData(config)
 atom.processing.util.finalizeConfig(config)
 
 atom.processing.materials.copper = config
+
+atom.util.recipe.removeByName("kr-copper-plate-from-enriched-copper")

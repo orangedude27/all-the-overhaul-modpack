@@ -33,3 +33,6 @@ atom.processing.util.createDefaultData(config)
 atom.processing.util.finalizeConfig(config)
 
 atom.processing.materials.iron = config
+
+atom.util.recipe.removeByName("kr-enriched-iron")
+atom.util.recipe.removeByName("kr-iron-plate-from-enriched-iron")

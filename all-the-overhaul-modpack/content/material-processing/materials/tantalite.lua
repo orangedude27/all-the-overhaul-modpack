@@ -118,3 +118,6 @@ atom.processing.util.finalizeConfig(niobiumConfig)
 
 atom.processing.materials.tantalum = tantalumConfig
 atom.processing.materials.niobium = niobiumConfig
+
+atom.util.recipe.removeByName("molten-tantalite")
+atom.util.recipe.removeByName("enriched-tantalite-smelting")

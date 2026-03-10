@@ -26,3 +26,5 @@ atom.processing.util.createDefaultData(config)
 atom.processing.util.finalizeConfig(config)
 
 atom.processing.materials.chromium = config
+
+atom.util.recipe.removeByName("molten-chromium")
