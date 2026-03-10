@@ -25,3 +25,5 @@ atom.processing.util.createDefaultData(config)
 atom.processing.util.finalizeConfig(config)
 
 atom.processing.materials.indium = config
+
+atom.util.recipe.removeByName("molten-indium")

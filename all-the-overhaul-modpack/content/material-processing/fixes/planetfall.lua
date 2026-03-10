@@ -29,3 +29,5 @@ atom.util.Recipe("depleted-acid-treatment").replaceResult("gold-powder", "atom-g
 
 atom.util.Technology("micron-tolerance-instruments").addPrerequisite({ "micron-tolerance-manufacturing", gyroscope_name, "spectroscopy" })
 atom.util.Technology("kr-quarry-minerals-extraction").addPrerequisite({ "space-science-pack" })
+
+atom.util.item.removeByName("invar-ingot")
