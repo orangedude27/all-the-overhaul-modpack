@@ -43,21 +43,21 @@ table.assign(data.raw.item["kr-advanced-fuel"], {
 -- Train Fuel
 
 -- Diesel Fuel
-table.assign(data.raw.item["el_train_fuel_diesel_item"], {
+table.assign(data.raw.item["el_train_fuel_diesel"], {
     fuel_acceleration_multiplier = 1.25,
     fuel_top_speed_multiplier = 1.25,
     fuel_emissions_multiplier = 1.0
 })
 
 -- Energized Diesel Fuel
-table.assign(data.raw.item["el_train_fuel_diesel_energized_item"], {
+table.assign(data.raw.item["el_train_fuel_diesel_energized"], {
     fuel_acceleration_multiplier = 1.375,
     fuel_top_speed_multiplier = 1.3,
     fuel_emissions_multiplier = 1.5
 })
 
 -- Super Energized Diesel Fuel
-table.assign(data.raw.item["fi_fuel_train_crystal_item"], {
+table.assign(data.raw.item["fi_fuel_train_crystal"], {
     fuel_acceleration_multiplier = 1.5,
     fuel_top_speed_multiplier = 1.35,
     fuel_emissions_multiplier = 1.5
@@ -67,31 +67,31 @@ table.assign(data.raw.item["fi_fuel_train_crystal_item"], {
 -- Nuclear Fuel
 
 -- Thorium Fuel Rod
-table.assign(data.raw.item["fi_basic_thorium_fuel_item"], {
+table.assign(data.raw.item["fi_basic_thorium_fuel"], {
     fuel_acceleration_multiplier = 1.5,
     fuel_top_speed_multiplier = 1.5
 })
 
 -- Uranium-233 Fuel Rod
-table.assign(data.raw.item["fi_advanced_thorium_fuel_item"], {
+table.assign(data.raw.item["fi_advanced_thorium_fuel"], {
     fuel_acceleration_multiplier = 1.625,
     fuel_top_speed_multiplier = 1.5
 })
 
 -- Uranium-235 Fuel Rod
-table.assign(data.raw.item["fi_basic_fuel_item"], {
+table.assign(data.raw.item["fi_basic_fuel"], {
     fuel_acceleration_multiplier = 1.75,
     fuel_top_speed_multiplier = 1.5
 })
 
 -- Mox Fuel Rod
-table.assign(data.raw.item["fi_advanced_fuel_item"], {
+table.assign(data.raw.item["fi_advanced_fuel"], {
     fuel_acceleration_multiplier = 1.875,
     fuel_top_speed_multiplier = 1.625
 })
 
 -- High Energy Mox Fuel Rod
-table.assign(data.raw.item["fi_pure_fuel_item"], {
+table.assign(data.raw.item["fi_pure_fuel"], {
     fuel_acceleration_multiplier = 2.0,
     fuel_top_speed_multiplier = 1.75
 })

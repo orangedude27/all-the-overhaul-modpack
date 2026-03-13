@@ -8,8 +8,8 @@ require("_prototypes/recipe")
 require("_prototypes/technology")
 require("_prototypes/sorting/sorter")
 
-data.raw["item"]["fu_tech_sign_item"].icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-2.png"
-data.raw["item"]["fu_tech_sign_item"].icon_size = 128
+data.raw["item"]["fu_tech_sign"].icon = "__all-the-overhaul-modpack__/graphics/icons/fusion-catalogue-2.png"
+data.raw["item"]["fu_tech_sign"].icon_size = 128
 
 for _, ammo in pairs(data.raw.ammo) do
     if type(ammo.ammo_type) == "table" then
@@ -36,4 +36,4 @@ for _, ammo in pairs(data.raw.ammo) do
     :: continue ::
 end
 
-table.insert(data.raw["assembling-machine"]["fu_ingot_entity"].crafting_categories, "casting")
+table.insert(data.raw["assembling-machine"]["fu_ingot"].crafting_categories, "casting")

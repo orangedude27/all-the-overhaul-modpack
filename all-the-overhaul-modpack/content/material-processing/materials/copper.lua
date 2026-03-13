@@ -9,7 +9,7 @@ local config = atom.processing.util.prepareConfig({
         ingot = "se-copper-ingot",
         molten = "se-molten-copper",
         enriched = "kr-enriched-copper",
-        pure = "el_materials_pure_copper",
+        pure = "el_pure_copper",
         pellets = "atom-copper-pellets"
     },
     icons = {

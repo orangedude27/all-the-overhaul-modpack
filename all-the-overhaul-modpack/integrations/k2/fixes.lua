@@ -26,7 +26,7 @@ miningDrill3.replaceIngredient("elite-gearbox", "advanced-gearbox", 4)
 miningDrill3.replaceIngredient("se-heavy-composite", "nitinol-plate", 4)
 miningDrill3.replaceIngredient("area-mining-drill", "kr-electric-mining-drill-mk2", 1)
 miningDrill3.addIngredient("cobalt-carbide", 5)
-miningDrill3.addIngredient("fu_materials_KFK", 6)
+miningDrill3.addIngredient("fu_KFK", 6)
 miningDrill3.addIngredient("processing-unit", 5)
 
 data.raw.fluid["kr-hydrogen"].fuel_value = "150kJ"

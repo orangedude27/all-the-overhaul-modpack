@@ -1,8 +1,8 @@
 -- Remove solid reactor in favor of 5Dim's nuclear reactor mk1 and 2
 -- Nerf it to not break existing setups completely
-atom.util.recipe.removeByName("fi_solid_reactor_recipe")
+atom.util.recipe.removeByName("fi_solid_reactor")
 data.raw.technology["fi_solid_reactor_tech"] = nil
-data.raw.reactor["fi_solid_reactor_entity"].neighbour_bonus = 0.25
+data.raw.reactor["fi_solid_reactor"].neighbour_bonus = 0.25
 
 -- Move "Nuclear fission energy" to productivity tech
 local nuclearFissionTech = atom.util.Technology("fi_energy_tech")
@@ -21,15 +21,15 @@ data.raw["fuel-category"]["fi_pure_fuel"] = nil
 
 
 -- Thorium fuel rods
-local thoriumItem = data.raw.item["fi_basic_thorium_fuel_item"]
+local thoriumItem = data.raw.item["fi_basic_thorium_fuel"]
 thoriumItem.fuel_value = "10GJ"
 thoriumItem.fuel_category = "nuclear"
 thoriumItem.fuel_glow_color = { r = 0.85, g = 0.85, b = 0.85, a = 1 }
 
-local thoriumRecipe = atom.util.Recipe("fi_basic_thorium_fuel_recipe")
+local thoriumRecipe = atom.util.Recipe("fi_basic_thorium_fuel")
 thoriumRecipe.removeIngredient("uranium-238")
-thoriumRecipe.replaceIngredient("fi_thorium232_item", 20)
-thoriumRecipe.replaceIngredient("el_materials_ALK", "lead-plate", 10)
+thoriumRecipe.replaceIngredient("fi_thorium232", 20)
+thoriumRecipe.replaceIngredient("el_ALK", "lead-plate", 10)
 thoriumRecipe.addIngredient("zircaloy-4", 10)
 
 data:extend({
@@ -42,7 +42,7 @@ data:extend({
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "fi_basic_thorium_fuel_recipe",
+                recipe = "fi_basic_thorium_fuel",
             },
             {
                 type = "unlock-recipe",
@@ -68,24 +68,24 @@ local purifierTech = atom.util.Technology("fi_advanced_purifier_tech")
 purifierTech.removeIngredient("se-rocket-science-pack")
 purifierTech.addIngredient("productivity-science-pack", 1)
 purifierTech.replacePrerequisite("uranium-processing", "thorium-fuel")
-purifierTech.addRecipe("fi_uranium233_recipe")
+purifierTech.addRecipe("fi_uranium233")
 purifierTech.prototype.unit.count = 250
 
-local solutionRecipe = atom.util.Recipe("fi_solution_recipe")
+local solutionRecipe = atom.util.Recipe("fi_solution")
 solutionRecipe.replaceIngredient("fi_strong_acid", "el_acidic_water")
 solutionRecipe.prototype.results[1].ignored_by_productivity = 20
 solutionRecipe.prototype.results[1].ignored_by_stats = 20
 
 
 -- Uranium-233 fuel rods
-local uranium233Item = data.raw.item["fi_advanced_thorium_fuel_item"]
+local uranium233Item = data.raw.item["fi_advanced_thorium_fuel"]
 uranium233Item.fuel_value = "20GJ"
 uranium233Item.fuel_category = "nuclear-advanced"
 uranium233Item.fuel_glow_color = { r = 0.67, g = 0.90, b = 0.69, a = 1 }
 
-local uranium233Recipe = atom.util.Recipe("fi_advanced_thorium_fuel_recipe")
+local uranium233Recipe = atom.util.Recipe("fi_advanced_thorium_fuel")
 uranium233Recipe.prototype.results[1].amount = 4
-uranium233Recipe.replaceIngredient("el_materials_ALK", "lead-plate", 10)
+uranium233Recipe.replaceIngredient("el_ALK", "lead-plate", 10)
 uranium233Recipe.addIngredient("zircaloy-4", 10)
 
 data:extend({
@@ -98,11 +98,11 @@ data:extend({
         effects = {
             {
                 type = 'unlock-recipe',
-                recipe = 'fi_advanced_thorium_fuel_recipe',
+                recipe = 'fi_advanced_thorium_fuel',
             },
             {
                 type = 'unlock-recipe',
-                recipe = 'fi_advanced_thorium_fuel_recycle_recipe',
+                recipe = 'fi_advanced_thorium_fuel_recycle',
             }
         },
         unit = {
@@ -121,15 +121,15 @@ data:extend({
 
 
 -- Uranium-235 fuel rods
-local uranium235Item = data.raw.item["fi_basic_fuel_item"]
+local uranium235Item = data.raw.item["fi_basic_fuel"]
 uranium235Item.fuel_value = "40GJ"
 uranium235Item.fuel_category = "nuclear-advanced"
 uranium235Item.fuel_glow_color = { r = 0.50, g = 0.95, b = 0.55, a = 1 }
 
-local uranium235Recipe = atom.util.Recipe("fi_basic_fuel_recipe")
+local uranium235Recipe = atom.util.Recipe("fi_basic_fuel")
 uranium235Recipe.prototype.energy_required = 50
 uranium235Recipe.prototype.results[1].amount = 5
-uranium235Recipe.replaceIngredient("el_materials_ALK", "lead-plate", 10)
+uranium235Recipe.replaceIngredient("el_ALK", "lead-plate", 10)
 uranium235Recipe.addIngredient("zircaloy-4", 10)
 
 local uranium235Tech = atom.util.Technology("fi_refining_tech")
@@ -141,11 +141,11 @@ uranium235Tech.assign({
     effects = {
         {
             type = 'unlock-recipe',
-            recipe = 'fi_plutonium239_recipe',
+            recipe = 'fi_plutonium239',
         },
         {
             type = 'unlock-recipe',
-            recipe = 'fi_basic_fuel_recipe',
+            recipe = 'fi_basic_fuel',
         }
     }
 })
@@ -165,15 +165,15 @@ nuclearCraftingTech.addIngredient("space-science-pack")
 
 
 -- Plutonium-239 fuel rods
-local plutonium239Item = data.raw.item["fi_advanced_fuel_item"]
+local plutonium239Item = data.raw.item["fi_advanced_fuel"]
 plutonium239Item.fuel_value = "80GJ"
 plutonium239Item.fuel_category = "nuclear-high-energy"
 plutonium239Item.fuel_glow_color = { r = 0.57, g = 0.91, b = 1, a = 1 }
 
-local plutonium239Recipe = atom.util.Recipe("fi_advanced_fuel_recipe")
+local plutonium239Recipe = atom.util.Recipe("fi_advanced_fuel")
 plutonium239Recipe.prototype.results[1].amount = 5
 plutonium239Recipe.prototype.energy_required = 75
-plutonium239Recipe.replaceIngredient("el_materials_ALK", "lead-plate", 10)
+plutonium239Recipe.replaceIngredient("el_ALK", "lead-plate", 10)
 plutonium239Recipe.addIngredient("zircaloy-4", 10)
 
 data:extend({
@@ -186,11 +186,11 @@ data:extend({
         effects = {
             {
                 type = 'unlock-recipe',
-                recipe = 'fi_advanced_fuel_recipe',
+                recipe = 'fi_advanced_fuel',
             },
             {
                 type = 'unlock-recipe',
-                recipe = 'fi_advanced_fuel_recycle_recipe',
+                recipe = 'fi_advanced_fuel_recycle',
             }
         },
         unit = {
@@ -211,15 +211,15 @@ data:extend({
 
 
 -- High energy mox fuel rods (U235 + Pu239)
-local highEnergyItem = data.raw.item["fi_pure_fuel_item"]
+local highEnergyItem = data.raw.item["fi_pure_fuel"]
 highEnergyItem.fuel_value = "160GJ"
 highEnergyItem.fuel_category = "nuclear-high-energy"
 highEnergyItem.fuel_glow_color = { r = 0.91, g = 0.86, b = 0.62, a = 1 }
 
-local highEnergyRecipe = atom.util.Recipe("fi_pure_fuel_recipe")
+local highEnergyRecipe = atom.util.Recipe("fi_pure_fuel")
 highEnergyRecipe.prototype.results[1].amount = 5
 highEnergyRecipe.prototype.energy_required = 100
-highEnergyRecipe.replaceIngredient("el_materials_ALK", "lead-plate", 10)
+highEnergyRecipe.replaceIngredient("el_ALK", "lead-plate", 10)
 highEnergyRecipe.addIngredient("zircaloy-4", 10)
 
 data:extend({
@@ -232,11 +232,11 @@ data:extend({
         effects = {
             {
                 type = 'unlock-recipe',
-                recipe = 'fi_pure_fuel_recipe',
+                recipe = 'fi_pure_fuel',
             },
             {
                 type = 'unlock-recipe',
-                recipe = 'fi_pure_fuel_recycle_recipe',
+                recipe = 'fi_pure_fuel_recycle',
             }
         },
         unit = {
@@ -260,8 +260,8 @@ data:extend({
 -- Cleanup
 atom.util.technology.replacePrerequisite("fi_energy_tech", "nuclear-power")
 data.raw.technology["fi_energy_tech"] = nil
-atom.util.recipe.replaceIngredient("uranium-fuel-cell", "fi_basic_thorium_fuel_item")
-atom.util.recipe.replaceIngredient("fi_solid_reactor_item", "nuclear-reactor")
+atom.util.recipe.replaceIngredient("uranium-fuel-cell", "fi_basic_thorium_fuel")
+atom.util.recipe.replaceIngredient("fi_solid_reactor", "nuclear-reactor")
 
 -- Keep the items for the menu simulations and just remove the recipes
 atom.util.recipe.removeByItem("uranium-fuel-cell")
@@ -279,5 +279,5 @@ for item, _ in pairs(data.raw.item) do
     end
 end
 
-data.raw.reactor["fi_solid_reactor_entity"].energy_source.fuel_categories = { "nuclear", "nuclear-advanced", "nuclear-high-energy" }
-data.raw["assembling-machine"]["fi_crafter_entity"].energy_source.fuel_categories = { "nuclear" }
+data.raw.reactor["fi_solid_reactor"].energy_source.fuel_categories = { "nuclear", "nuclear-advanced", "nuclear-high-energy" }
+data.raw["assembling-machine"]["fi_crafter"].energy_source.fuel_categories = { "nuclear" }

@@ -1,6 +1,6 @@
 -- Balance solar
 -- Set both in data and final-fixes because of 248k/scripts/krastorio2/overhaul.lua and solar productivity mod using data-updates phase
-data.raw["solar-panel"]["el_solar_entity"].production = "200kW"
+data.raw["solar-panel"]["el_solar"].production = "200kW"
 
 -- Technologies
 local orePurification = atom.util.Technology("el_purifier_tech")
@@ -11,7 +11,7 @@ data.raw.technology["el_stage_tech"] = nil
 
 local metalCasting = atom.util.Technology("el_caster_tech")
 metalCasting.replacePrerequisite("el_arc_furnace_tech", "el_purifier_tech")
-metalCasting.addRecipe("el_arc_furnace_recipe")
+metalCasting.addRecipe("el_arc_furnace")
 data.raw.technology["el_arc_furnace_tech"] = nil
 
 atom.util.Technology("fi_upgrade_tech").addIngredient("se-rocket-science-pack")

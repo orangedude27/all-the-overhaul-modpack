@@ -1,26 +1,26 @@
 require("solar")
 
 -- Add ingoing pipe connection to the arc furnace for Pyroflux
-local arcFurnace = data.raw["assembling-machine"]["el_arc_furnace_entity"]
+local arcFurnace = data.raw["assembling-machine"]["el_arc_furnace"]
 for i = 1, 2 do
     local fluidBox = arcFurnace.fluid_boxes[i]
     fluidBox.production_type = "input"
     fluidBox.pipe_connections[1].flow_direction = "input"
 end
 
--- Increase speed of el_arc_furnace_entity
+-- Increase speed of el_arc_furnace
 arcFurnace.crafting_speed = 4
 arcFurnace.energy_usage = "1600kW"
 
 -- Allow productivity modules in el_purifier_entity, add a third module slot and increase crafting speed
-local purifier = data.raw["assembling-machine"]["el_purifier_entity"]
+local purifier = data.raw["assembling-machine"]["el_purifier"]
 table.insert(purifier.allowed_effects, "productivity")
 purifier.module_slots = 3
 purifier.crafting_speed = 4
 purifier.energy_usage = "320kW"
 
 -- Allow productivity modules in el_caster_entity, add a third module slot and increase crafting speed
-local caster = data.raw["assembling-machine"]["el_caster_entity"]
+local caster = data.raw["assembling-machine"]["el_caster"]
 table.insert(caster.allowed_effects, "productivity")
 caster.module_slots = 3
 caster.crafting_speed = 4
@@ -33,18 +33,18 @@ data.raw.technology["fu_titan_ingot_tech"] = nil
 data.raw.technology["fu_neodym_ingot_tech"] = nil
 
 -- Fix stone to energy crystal recipe to get energy crystal production starting
-local fi_purify_stone_recipe = atom.util.Recipe("el_purify_stone_acidic_recipe")
-fi_purify_stone_recipe.replaceResult("el_materials_pure_iron", "5d-iron-dust", 3)
-fi_purify_stone_recipe.replaceResult("el_materials_pure_copper", "5d-copper-dust", 3)
+local fi_purify_stone_recipe = atom.util.Recipe("el_purify_stone_acidic")
+fi_purify_stone_recipe.replaceResult("el_pure_iron", "5d-iron-dust", 3)
+fi_purify_stone_recipe.replaceResult("el_pure_copper", "5d-copper-dust", 3)
 fi_purify_stone_recipe.replaceResult("el_dirty_water", "kr-dirty-water", 40)
 
 -- Move it from ore purification to crystal growing
-atom.util.Technology("el_purifier_tech").removeRecipe("el_purify_stone_acidic_recipe")
-atom.util.Technology("el_grower_tech").addRecipe("el_purify_stone_acidic_recipe")
+atom.util.Technology("el_purifier_tech").removeRecipe("el_purify_stone_acidic")
+atom.util.Technology("el_grower_tech").addRecipe("el_purify_stone_acidic")
 
 -- Remove dirty water and rich water since it competes with the ATOM ore refining process
 atom.util.item.removeByName("el_dirty_water")
-atom.util.item.removeByName("fi_materials_flourite")
+atom.util.item.removeByName("fi_flourite")
 atom.util.item.removeByName("fi_dirty_water")
 atom.util.Technology("nuclear-waste-extraction").removePrerequisite("rich-water-filtration")
 data.raw.technology["rich-water-filtration"] = nil
@@ -68,16 +68,16 @@ table.assign(lithium248k, {
     icon_mipmaps = lithiumK2.icon_mipmaps,
 })
 data.raw.technology["kr-lithium-processing"] = nil
-atom.util.item.migrate("el_lithium_item", "kr-lithium")
+atom.util.item.migrate("el_lithium", "kr-lithium")
 
 -- Adjust low density structure recipe
-local lds = data.raw.recipe["fi_low-density-structure_recipe"]
+local lds = data.raw.recipe["fi_low-density-structure"]
 lds.ingredients = {
     { type = "item", name = "titanium-plate", amount = 4 },
     { type = "item", name = "niobium-plate", amount = 10 },
     { type = "item", name = "carbon-fiber", amount = 10 },
     { type = "item", name = "bismuth-glass", amount = 4 },
-    { type = "item", name = "el_materials_ALK", amount = 5 },
+    { type = "item", name = "el_ALK", amount = 5 },
     { type = "item", name = "chromel-r-fabric", amount = 5 },
     { type = "fluid", name = "helium", amount = 20 }
 }
@@ -86,46 +86,46 @@ lds.category = "laser-milling-exclusive"
 atom.util.Recipe(lds).allowProductivity()
 
 -- Energy crystal usage
-atom.util.Recipe("productivity-module").addIngredient("el_energy_crystal_item", 10)
-atom.util.Recipe("productivity-module-2").addIngredient("el_energy_crystal_item", 10)
-atom.util.Recipe("kr-big-battery-equipment").addIngredient("el_energy_crystal_item", 4)
-atom.util.Recipe("se-rtg-equipment").addIngredient("el_energy_crystal_item", 4)
-atom.util.Recipe("kr-big-solar-panel-equipment").addIngredient("el_energy_crystal_item", 4)
+atom.util.Recipe("productivity-module").addIngredient("el_energy_crystal", 10)
+atom.util.Recipe("productivity-module-2").addIngredient("el_energy_crystal", 10)
+atom.util.Recipe("kr-big-battery-equipment").addIngredient("el_energy_crystal", 4)
+atom.util.Recipe("se-rtg-equipment").addIngredient("el_energy_crystal", 4)
+atom.util.Recipe("kr-big-solar-panel-equipment").addIngredient("el_energy_crystal", 4)
 
 -- Refined crystal usage
-atom.util.Recipe("productivity-module-3").replaceIngredient("mlcc", "fu_materials_refined_crystal", 4)
-atom.util.Recipe("kr-big-battery-mk2-equipment").addIngredient("fu_materials_refined_crystal", 4)
-atom.util.Recipe("kr-big-superior-solar-panel-equipment").addIngredient("fu_materials_refined_crystal", 4)
+atom.util.Recipe("productivity-module-3").replaceIngredient("mlcc", "fu_refined_crystal", 4)
+atom.util.Recipe("kr-big-battery-mk2-equipment").addIngredient("fu_refined_crystal", 4)
+atom.util.Recipe("kr-big-superior-solar-panel-equipment").addIngredient("fu_refined_crystal", 4)
 
 -- Neodymium usage
-atom.util.Recipe("se-space-hypercooler").addIngredient("fi_materials_neodym", 15)
-atom.util.Recipe("se-space-radiator").addIngredient("fi_materials_neodym", 15)
-atom.util.Recipe("se-space-radiator-2").addIngredient("fi_materials_neodym", 15)
+atom.util.Recipe("se-space-hypercooler").addIngredient("fi_neodym", 15)
+atom.util.Recipe("se-space-radiator").addIngredient("fi_neodym", 15)
+atom.util.Recipe("se-space-radiator-2").addIngredient("fi_neodym", 15)
 
 -- Adjust quantum processor recipe
-atom.util.Recipe("se-quantum-processor").replaceIngredient("processing-unit", "gr_materials_circuit", 4)
+atom.util.Recipe("se-quantum-processor").replaceIngredient("processing-unit", "gr_circuit", 4)
 
 -- Change localized name of a few things that have similar names
-data.raw.recipe["fu_carbon_fiber_recipe"].localised_name = "Graphite fiber"
-data.raw.recipe["fu_KFK_recipe"].localised_name = "Graphite fiber reinforced plastic"
-data.raw.item["fu_tech_sign_item"].localised_name = "Broad fusion catalogue"
+data.raw.recipe["fu_carbon_fiber"].localised_name = "Graphite fiber"
+data.raw.recipe["fu_KFK"].localised_name = "Graphite fiber reinforced plastic"
+data.raw.item["fu_tech_sign"].localised_name = "Broad fusion catalogue"
 data.raw.technology["fu_energy_tech"].localised_name = "Fusion catalogue 2"
 
 -- Remove HCP circuit
-atom.util.item.removeByName("fi_materials_hcp")
+atom.util.item.removeByName("fi_hcp") --This appears to already not exist.
 
 -- Adjust T-Lab recipe
-table.assign(data.raw.recipe["fu_lab_recipe"], {
+table.assign(data.raw.recipe["fu_lab"], {
     category = "space-manufacturing",
     ingredients = {
         { type = "item", name = "kr-singularity-lab", amount = 2 },
         { type = "item", name = "kr-energy-control-unit", amount = 50 },
         { type = "item", name = "se-space-radiator-2", amount = 10 },
         { type = "item", name = "se-space-hypercooler", amount = 4 },
-        { type = "item", name = "gr_materials_circuit", amount = 100 },
-        { type = "item", name = "fu_materials_energy_charged_crystal", amount = 50 },
-        { type = "item", name = "fu_materials_KFK", amount = 100 },
-        { type = "item", name = "fu_materials_TIM", amount = 100 },
+        { type = "item", name = "gr_circuit", amount = 100 },
+        { type = "item", name = "fu_energy_charged_crystal", amount = 50 },
+        { type = "item", name = "fu_KFK", amount = 100 },
+        { type = "item", name = "fu_TIM", amount = 100 },
         { type = "item", name = "fu_materials_magnet", amount = 50 },
         { type = "item", name = "kr-ai-core", amount = 50 },
         { type = "item", name = "se-naquium-processor", amount = 20 },
@@ -139,19 +139,19 @@ table.assign(data.raw.recipe["fu_lab_recipe"], {
 })
 
 -- Reset S-Lab inputs
-data.raw.lab["gr_lab_entity"].inputs = {
+data.raw.lab["gr_lab"].inputs = {
     "se-rocket-science-pack",
-    "gr_materials_red_pack_item",
-    "gr_materials_green_pack_item",
-    "gr_materials_blue_pack_item",
-    "gr_materials_purple_pack_item",
-    "gr_materials_yellow_pack_item",
-    "gr_materials_grey_pack_item",
-    "gr_materials_white_pack_item"
+    "gr_red_pack",
+    "gr_green_pack",
+    "gr_blue_pack",
+    "gr_purple_pack",
+    "gr_yellow_pack",
+    "gr_grey_pack",
+    "gr_white_pack"
 }
 
 -- Make fuel categories of burner generator match vanilla boiler
-data.raw["burner-generator"]["el_burner_entity"].burner.fuel_categories = data.raw.boiler["boiler"].energy_source.fuel_categories
+data.raw["burner-generator"]["el_burner"].burner.fuel_categories = data.raw.boiler["boiler"].energy_source.fuel_categories
 
 data:extend({
     -- Integrate tritium from 248k with K2
@@ -171,16 +171,16 @@ atom.util.recipe.replaceIngredient("fi_strong_acid", "el_acidic_water")
 atom.util.item.removeByName("fi_strong_acid")
 
 -- Balance Nuclear assembling machine to compete with Assembling machine mk3
-local nuclearAssembler = data.raw["assembling-machine"]["fi_crafter_entity"]
+local nuclearAssembler = data.raw["assembling-machine"]["fi_crafter"]
 nuclearAssembler.module_slots = 5
 nuclearAssembler.energy_source.fuel_inventory_size = 1
 nuclearAssembler.energy_source.burnt_inventory_size = 1
 
 -- Reduce energy usage of advanced roboport to sane values
-data.raw["roboport"]["fi_robo_port_entity"].energy_usage = "200kW"
-data.raw["roboport"]["fi_robo_port_entity"].energy_source.input_flow_limit = "8MW"
-data.raw["roboport"]["fi_robo_charger_entity"].energy_usage = "100kW"
-data.raw["roboport"]["fi_robo_charger_entity"].energy_source.input_flow_limit = "8MW"
+data.raw["roboport"]["fi_robo_port"].energy_usage = "200kW"
+data.raw["roboport"]["fi_robo_port"].energy_source.input_flow_limit = "8MW"
+data.raw["roboport"]["fi_robo_charger"].energy_usage = "100kW"
+data.raw["roboport"]["fi_robo_charger"].energy_source.input_flow_limit = "8MW"
 
 -- Add hardened hull to metal casting prerequisites (I didn't find the reason why data stage doesn't work)
 atom.util.Technology("el_caster_tech").addPrerequisite("hardened-hull")

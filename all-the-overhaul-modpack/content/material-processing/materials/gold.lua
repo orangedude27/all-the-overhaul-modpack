@@ -3,12 +3,12 @@ local config = atom.processing.util.prepareConfig({
     order = "l",
     itemNames = {
         ore = "gold-ore",
-        plate = "fi_materials_gold",
+        plate = "fi_gold",
         dust = "atom-gold-dust",
         ingot = "gold-ingot",
         molten = "molten-gold",
         enriched = "gold-powder",
-        pure = "fi_materials_pure_gold",
+        pure = "fi_pure_gold",
         pellets = "atom-gold-pellets"
     },
     icons = {

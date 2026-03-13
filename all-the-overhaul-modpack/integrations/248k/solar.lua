@@ -1,5 +1,5 @@
 -- Set both in data and final-fixes because of 248k/scripts/krastorio2/overhaul.lua and solar productivity mod using data-updates phase
-data.raw["solar-panel"]["el_solar_entity"].production = "200kW"
+data.raw["solar-panel"]["el_solar"].production = "200kW"
 
 -- Move solar panel 2.0 to productivity science
 atom.util.technology.replacePrerequisite("el_solar_tech", "concrete", "el_energy_tech")
@@ -14,5 +14,5 @@ solarMk2Tech.unit.ingredients = {
 }
 
 -- Replace solar panel 2.0 with regular solar panel in KI1 Core
-atom.util.Recipe("el_ki_core_recipe").replaceIngredient("el_solar_item", "solar-panel")
+atom.util.Recipe("el_ki_core").replaceIngredient("el_solar", "solar-panel")
 atom.util.Technology("el_ki_tech").addPrerequisite("solar-energy")

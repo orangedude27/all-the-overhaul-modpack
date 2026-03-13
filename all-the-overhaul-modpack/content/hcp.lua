@@ -1,4 +1,4 @@
-local hcp_circuit_results = {{ type = "item", name = "gr_materials_circuit", amount = 1 }}
+local hcp_circuit_results = {{ type = "item", name = "gr_circuit", amount = 1 }}
 if data.raw.fluid["depleted-acid"] then
     table.insert(hcp_circuit_results, { type = "fluid", name = "depleted-acid", amount = 50 })
 end
@@ -20,7 +20,7 @@ data:extend({
         energy_required = 10,
         enabled = false,
         ingredients = {
-            { type = "item", name = "gr_materials_pcb", amount = 1 },
+            { type = "item", name = "gr_pcb", amount = 1 },
             { type = "item", name = "se-holmium-plate", amount = 1 },
             { type = "item", name = "tin-plate", amount = 2 },
             { type = "fluid", name = "ferric-chloride-solution", amount = 5 }
@@ -42,9 +42,9 @@ data:extend({
             { type = "fluid", name = "fi_strong_acid", amount = 50 },
         },
         results = {
-            { type = "item", name = "gr_materials_circuit", amount = 1 }
+            { type = "item", name = "gr_circuit", amount = 1 }
         },
-        main_product = "gr_materials_circuit",
+        main_product = "gr_circuit",
         allow_decomposition = false
     },
     {
@@ -55,12 +55,12 @@ data:extend({
         enabled = false,
         ingredients = {
             { type = "fluid", name = "se-vitalic-acid", amount = 4 },
-            { type = "item", name = "fi_materials_glass_fiber", amount = 1 },
-            { type = "item", name = "fu_materials_carbon_fiber", amount = 1 },
+            { type = "item", name = "fi_glass_fiber", amount = 1 },
+            { type = "item", name = "fu_carbon_fiber", amount = 1 },
             { type = "item", name = "plastic-bar", amount = 4 },
         },
         results = {
-            { type = "item", name = "gr_materials_pcb", amount = 6 }
+            { type = "item", name = "gr_pcb", amount = 6 }
         },
         allow_decomposition = false
     },
@@ -97,24 +97,24 @@ atom.util.technology.replacePrerequisite("gr_circuit_tech", "gr_stage_tech")
 data.raw.technology["gr_circuit_tech"] = nil
 
 -- HCP circuit usage
-atom.util.Recipe("fission-reactor-equipment").replaceIngredient("processing-unit", "gr_materials_circuit", 150)
-atom.util.Recipe("kr-big-battery-mk3-equipment").replaceIngredient("processing-unit", "gr_materials_circuit", 2)
-atom.util.Recipe("kr-battery-mk3-equipment").replaceIngredient("processing-unit", "gr_materials_circuit", 1)
-atom.util.Recipe("se-space-supercomputer-3").replaceIngredient("processing-unit", "gr_materials_circuit", 1000)
-atom.util.Recipe("se-thruster-suit-3").replaceIngredient("processing-unit", "gr_materials_circuit", 100)
-atom.util.Recipe("se-thruster-suit-4").replaceIngredient("processing-unit", "gr_materials_circuit", 200)
-atom.util.Recipe("se-big-turbine").addIngredient("gr_materials_circuit", 20)
-atom.util.Recipe("se-energy-transmitter-emitter").replaceIngredient("processing-unit", "gr_materials_circuit", 100)
-atom.util.Recipe("se-energy-transmitter-injector").replaceIngredient("processing-unit", "gr_materials_circuit", 50)
-atom.util.Recipe("se-energy-receiver").replaceIngredient("processing-unit", "gr_materials_circuit", 50)
-atom.util.Recipe("se-antimatter-reactor").replaceIngredient("processing-unit", "gr_materials_circuit", 500)
-atom.util.Recipe("se-nexus").addIngredient("gr_materials_circuit", 10)
-atom.util.Recipe("kr-stabilizer-charging-station").replaceIngredient("processing-unit", "gr_materials_circuit", 1)
-atom.util.Recipe("kr-antimatter-reactor").addIngredient("gr_materials_circuit", 100)
-atom.util.Recipe("kr-energy-storage").addIngredient("gr_materials_circuit", 10)
-atom.util.Recipe("kr-antimatter-turret-rocket").replaceIngredient("processing-unit", "gr_materials_circuit", 1)
-atom.util.Recipe("kr-antimatter-rocket").replaceIngredient("processing-unit", "gr_materials_circuit", 1)
-atom.util.Recipe("kr-antimatter-artillery-shell").replaceIngredient("processing-unit", "gr_materials_circuit", 1)
-atom.util.Recipe("kr-antimatter-railgun-shell").replaceIngredient("processing-unit", "gr_materials_circuit", 1)
-atom.util.Recipe("kr-antimatter-reactor-equipment").addIngredient("gr_materials_circuit", 50)
-atom.util.Recipe("fu_star_engine_core_recipe").replaceIngredient("processing-unit", "gr_materials_circuit", 3000)
+atom.util.Recipe("fission-reactor-equipment").replaceIngredient("processing-unit", "gr_circuit", 150)
+atom.util.Recipe("kr-big-battery-mk3-equipment").replaceIngredient("processing-unit", "gr_circuit", 2)
+atom.util.Recipe("kr-battery-mk3-equipment").replaceIngredient("processing-unit", "gr_circuit", 1)
+atom.util.Recipe("se-space-supercomputer-3").replaceIngredient("processing-unit", "gr_circuit", 1000)
+atom.util.Recipe("se-thruster-suit-3").replaceIngredient("processing-unit", "gr_circuit", 100)
+atom.util.Recipe("se-thruster-suit-4").replaceIngredient("processing-unit", "gr_circuit", 200)
+atom.util.Recipe("se-big-turbine").addIngredient("gr_circuit", 20)
+atom.util.Recipe("se-energy-transmitter-emitter").replaceIngredient("processing-unit", "gr_circuit", 100)
+atom.util.Recipe("se-energy-transmitter-injector").replaceIngredient("processing-unit", "gr_circuit", 50)
+atom.util.Recipe("se-energy-receiver").replaceIngredient("processing-unit", "gr_circuit", 50)
+atom.util.Recipe("se-antimatter-reactor").replaceIngredient("processing-unit", "gr_circuit", 500)
+atom.util.Recipe("se-nexus").addIngredient("gr_circuit", 10)
+atom.util.Recipe("kr-stabilizer-charging-station").replaceIngredient("processing-unit", "gr_circuit", 1)
+atom.util.Recipe("kr-antimatter-reactor").addIngredient("gr_circuit", 100)
+atom.util.Recipe("kr-energy-storage").addIngredient("gr_circuit", 10)
+atom.util.Recipe("kr-antimatter-turret-rocket").replaceIngredient("processing-unit", "gr_circuit", 1)
+atom.util.Recipe("kr-antimatter-rocket").replaceIngredient("processing-unit", "gr_circuit", 1)
+atom.util.Recipe("kr-antimatter-artillery-shell").replaceIngredient("processing-unit", "gr_circuit", 1)
+atom.util.Recipe("kr-antimatter-railgun-shell").replaceIngredient("processing-unit", "gr_circuit", 1)
+atom.util.Recipe("kr-antimatter-reactor-equipment").addIngredient("gr_circuit", 50)
+atom.util.Recipe("fu_star_engine_core").replaceIngredient("processing-unit", "gr_circuit", 3000)

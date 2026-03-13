@@ -9,7 +9,7 @@ local config = atom.processing.util.prepareConfig({
         ingot = "se-iron-ingot",
         molten = "se-molten-iron",
         enriched = "kr-enriched-iron",
-        pure = "el_materials_pure_iron",
+        pure = "el_pure_iron",
         pellets = "atom-iron-pellets"
     },
     icons = {

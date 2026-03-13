@@ -1,4 +1,4 @@
-data.raw.furnace["fu_burner_entity"].energy_source.emissions_per_minute = { pollution = 100 };
+data.raw.furnace["fu_burner"].energy_source.emissions_per_minute = { pollution = 100 };
 
 function make_burner_recipe(item)
     -- fix for ElectricTrains crash
@@ -29,7 +29,7 @@ function make_burner_recipe(item)
 end
 
 for i, _ in pairs(data.raw.item) do
-    if not (data.raw.item[i].name == "fi_materials_waste") then
+    if not (data.raw.item[i].name == "fi_waste") then
         if (data.raw.item["fu_burn_" .. i .. "_recipe"] == nil) then
             make_burner_recipe(data.raw.item[i].name)
         end

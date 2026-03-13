@@ -89,7 +89,7 @@ assembler8.ingredients = {
     { type = "item", name = "kr-imersium-beam", amount = 9 },
     { type = "item", name = "cobalt-carbide", amount = 2 },
     { type = "item", name = "kr-ai-core", amount = 1 },
-    { type = "item", name = "gr_materials_circuit", amount = 10 }
+    { type = "item", name = "gr_circuit", amount = 10 }
 }
 
 -- 09
@@ -100,7 +100,7 @@ assembler9.ingredients = {
     { type = "item", name = "cobalt-carbide", amount = 2 },
     { type = "item", name = "se-aeroframe-bulkhead", amount = 10 },
     { type = "item", name = "se-heavy-bearing", amount = 8 },
-    { type = "item", name = "gr_materials_circuit", amount = 15 },
+    { type = "item", name = "gr_circuit", amount = 15 },
     { type = "item", name = "kr-ai-core", amount = 1 },
     { type = "item", name = "se-nanomaterial", amount = 10 },
     { type = "item", name = "se-heavy-assembly", amount = 10 }
@@ -113,7 +113,7 @@ assembler10.ingredients = {
     { type = "item", name = "solder", amount = 8 },
     { type = "item", name = "se-aeroframe-bulkhead", amount = 10 },
     { type = "item", name = "se-heavy-bearing", amount = 8 },
-    { type = "item", name = "gr_materials_circuit", amount = 20 },
+    { type = "item", name = "gr_circuit", amount = 20 },
     { type = "item", name = "kr-ai-core", amount = 1 },
     { type = "item", name = "se-nanomaterial", amount = 10 },
     { type = "item", name = "se-heavy-assembly", amount = 10 },
