@@ -158,7 +158,6 @@ atom.util.Technology("fi_modules_3_tech").addIngredient({ "fusion-science-pack-2
 atom.util.Technology("kr-superior-solar-panel-equipment").addIngredient({ "fusion-science-pack-2" })
 atom.util.Technology("fission-reactor-equipment").addIngredient({ "fusion-science-pack-2", "se-energy-science-pack-3" })
 atom.util.Technology("kr-matter-tech-card").addIngredient({ "fusion-science-pack-2" })
-atom.util.Technology("se-space-catalogue-material-1").addIngredient({ "fusion-science-pack-2" })
 atom.util.Technology("se-space-material-fabricator").addIngredient({ "fusion-science-pack-2" })
 atom.util.Technology("kr-fusion-energy").addIngredient({ "fusion-science-pack-2" })
 atom.util.Technology("fu_hydrogen_1_tech").addIngredient({ "fusion-science-pack-2" })
