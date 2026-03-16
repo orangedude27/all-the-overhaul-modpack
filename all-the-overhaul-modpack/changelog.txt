@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.4
+Date: 16.03.2026
+  Bug Fixes:
+    - 248k: Fixes for 0.1.35 breaking changes (thanks Morganite)
+    - Fix graphics for new tiers of electrolysis plant and filtration plant (thanks Morganite)
+    - Expose signals for more plate and ingot recipes (thanks Morganite)
+    - Fix localization for dirty water and trace metal extraction recipes (thanks Morganite)
+    - Removed molten metal recipes which are worse than the ones ATOM creates (thanks Morganite)
+    - Enable caster and arc furnace recipes in grounded thermodynamics facilities (thanks Morganite)
+    - Fix cyclical dependency softlock for Material Catelogue 1 (thanks Morganite)
+    - K2: Add missing kr-prefix
+---------------------------------------------------------------------------------------------------
 Version: 2.2.3
 Date: 20.02.2026
   Changes:
