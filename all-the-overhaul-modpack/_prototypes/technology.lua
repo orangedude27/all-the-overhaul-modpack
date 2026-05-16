@@ -16,7 +16,9 @@ atom.util.Technology("nuclear-fuel-reprocessing").addPrerequisite("space-science
 
 atom.util.Technology("basic-chemistry").addPrerequisite("automation-science-pack")
 if mods['bobinserters'] then
-    atom.util.Technology("bob-long-inserters-1").addPrerequisite("automation-science-pack")
+    if data.raw.technology["bob-long-inserters-1"] then
+        atom.util.Technology("bob-long-inserters-1").addPrerequisite("automation-science-pack")
+    end
     atom.util.Technology("bob-near-inserters").addPrerequisite("automation-science-pack")
 end
 atom.util.Technology("graphite-processing").addPrerequisite("automation-science-pack")
