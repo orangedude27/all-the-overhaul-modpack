@@ -65,6 +65,7 @@ dustToPureRecipe.prototype.results = {
     { type = "item", name = tantalumConfig.itemNames.pure, amount = 3 },
     { type = "item", name = niobiumConfig.itemNames.pure, amount = 3 }
 }
+table.insert(dustToPureRecipe.prototype.icons, atom.util.icon.createSmallIcon(niobiumConfig.icons.pure, "top-right"))
 
 atom.util.applyAll({
     oreToPlateRecipe,
@@ -121,3 +122,42 @@ atom.processing.materials.niobium = niobiumConfig
 
 atom.util.recipe.removeByName("molten-tantalite")
 atom.util.recipe.removeByName("enriched-tantalite-smelting")
+
+local targetedTantalite = atom.util.Recipe("atom-tantalite-slurry").clone("atom-targeted-tantalite-slurry")
+targetedTantalite.assign({ 
+    results = {
+        { type = "item", name = tantalumConfig.itemNames.pure, amount_min = 3, amount_max = 5 },
+        { type = "item", name = niobiumConfig.itemNames.pure, amount = 1, probability = 0.5 }
+    }, 
+    main_product = tantalumConfig.itemNames.pure,
+    localised_name = {"recipe-name.atom-targeted-tantalite-slurry"}
+})
+table.remove(targetedTantalite.prototype.icons, 2)
+targetedTantalite.apply()
+local targetedNiobium = atom.util.Recipe("atom-tantalite-slurry").clone("atom-targeted-niobium-slurry")
+targetedNiobium.assign({ 
+    results = {
+        { type = "item", name = niobiumConfig.itemNames.pure, amount_min = 3, amount_max = 5 },
+        { type = "item", name = tantalumConfig.itemNames.pure, amount = 1, probability = 0.5 }
+    }, 
+    main_product = niobiumConfig.itemNames.pure,
+    localised_name = {"recipe-name.atom-targeted-niobium-slurry"}
+})
+table.remove(targetedNiobium.prototype.icons, 3)
+targetedNiobium.apply()
+
+
+local targetedTech = atom.util.Technology("atom-advanced-ore-processing-3").clone("targeted-tantalite-purification", true)
+targetedTech.addRecipe("atom-targeted-tantalite-slurry")
+targetedTech.addRecipe("atom-targeted-niobium-slurry")
+targetedTech.addPrerequisite("atom-advanced-ore-processing-3")
+targetedTech.addPrerequisite("targeted-tantalite-refining")
+targetedTech.createSmallIcon(tantalumConfig.icons.pure, "bottom-right")
+targetedTech.createSmallIcon(niobiumConfig.icons.pure, "bottom-left")
+targetedTech.prototype.unit.count = 100
+targetedTech.apply()
+
+local targetedTech1 = atom.util.Technology("targeted-tantalite-refining")
+targetedTech1.replacePrerequisite("se-material-science-pack-1", "atom-advanced-ore-processing-2")
+targetedTech1.removeIngredient({"se-material-science-pack-1", "production-science-pack", "utility-science-pack"})
+targetedTech1.apply()
