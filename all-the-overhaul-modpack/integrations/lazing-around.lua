@@ -1,4 +1,5 @@
 -- Add second fluid box to laser-mill to enable recipes with two fluids (one being helium)
+if #data.raw["assembling-machine"]["laser-mill"].fluid_boxes == 2 then
 local newInput = {
   production_type = "input",
   pipe_picture = data.raw["assembling-machine"]["laser-mill"].fluid_boxes[1].pipe_picture,
@@ -11,3 +12,4 @@ local newInput = {
   secondary_draw_orders = { north = -1, east = -1, west = -1 }
 }
 table.insert(data.raw["assembling-machine"]["laser-mill"].fluid_boxes, newInput)
+end
