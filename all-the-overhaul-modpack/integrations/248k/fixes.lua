@@ -162,7 +162,8 @@ data:extend({
         energy_required = 1,
         ingredients = { { type = "fluid", name = "fu_tritium", amount = 3 } },
         results = {{type="item", name="kr-tritium", amount=1}},
-        enabled = true
+        enabled = true,
+        localised_name = {"item-name.kr-tritium"}
     }
 })
 
