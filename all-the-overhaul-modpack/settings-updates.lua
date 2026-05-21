@@ -337,6 +337,15 @@ if mods["mini-machines"] then
     change_setting("mini-electro", false)
     change_setting("mini-multi", false)
     change_setting("mini-balance", false)
+    change_setting("mini-centrifuge", false)
+    change_setting("mini-dropas", true)
+    change_setting("mini-norecipe", false)
+    change_setting("mini-nuclear-reactor", false)
+    change_setting("mini-steam-engines", false)
+    change_setting("mini-accumulator", false)
+    change_setting("mini-solar-panel", false)
+    change_setting("mini-tech-tree", true)
+    change_setting("mini-lab", false)
 end
 
 --se
