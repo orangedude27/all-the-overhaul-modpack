@@ -30,6 +30,9 @@ for _, technology in pairs(data.raw.technology) do
 end
 data.raw.technology["se-pyroflux-smelting"] = nil
 
+--For some reason, the above does not catch the bismuth glass recipe
+atom.util.Recipe("se-bismuth-glass").unlockedByTechnology("atom-advanced-ore-processing-2")
+
 -- Increase speed for se-casting-machine
 local caster = data.raw["assembling-machine"]["se-casting-machine"]
 caster.crafting_speed = 2
