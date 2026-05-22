@@ -103,7 +103,9 @@ local rocketFuelRecipes = {
     "kr-rocket-fuel-with-ammonia",
     "kr-rocket-fuel-with-hydrogen-chloride",
     "se-vulcanite-rocket-fuel",
-    "rocket-fuel"
+    "rocket-fuel",
+    "hydrogen-peroxide-rocket-fuel",
+    "nitrous-oxide-rocket-fuel"
 }
 for _, recipeName in pairs(rocketFuelRecipes) do
     atom.util.Recipe(recipeName).removeIngredient("iron-plate")
