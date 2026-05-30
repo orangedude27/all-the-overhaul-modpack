@@ -45,3 +45,26 @@ EASY_AUTOMATION = {
     { "underground-belt", 50 },
     { "splitter", 50 }
 }
+
+function rmm_check()
+    for _, force in pairs(game.forces) do
+        if force.technologies["kr-fluids-chemistry"].researched == true then
+            force.technologies["kr-rare-metal-mining"].researched = true
+        end
+    end
+end
+
+script.on_configuration_changed(rmm_check)
+
+commands.add_command("atom_fix_rare_metals", nil, function(command)
+    rmm_check()
+end)
+
+--No revert event because it seems to happen on it's own... plus for ATOM even if it doesn't that's probably fine.
+script.on_event(defines.events.on_research_finished, function(event)
+    game.print(serpent.block(event.research.name))
+    if event.research.name == "kr-fluids-chemistry" then
+        event.research.force.technologies["kr-rare-metal-mining"].researched = true
+    end
+end)
+

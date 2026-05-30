@@ -129,3 +129,5 @@ atom.util.technology.replacePrerequisite("kr-rare-metal-processing")
 -- Hiding these instead of deleting them to prevent an error from K2 when migrating saves
 data.raw.technology["kr-rare-metal-mining"].hidden = true
 data.raw.technology["kr-rare-metal-processing"].hidden = true
+data.raw.technology["kr-rare-metal-processing"].research_trigger = nil
+data.raw.technology["kr-rare-metal-processing"].unit = data.raw.technology["kr-rare-metal-mining"].unit

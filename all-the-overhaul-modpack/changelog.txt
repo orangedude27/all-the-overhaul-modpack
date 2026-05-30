@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.6
+Date: 30.05.2026
+  Bug Fixes:
+    - Fix inability to mine rare metals under some circumstances
+    - Hide the not-required-in-ATOM rare metal processing tech a bit more completely
+---------------------------------------------------------------------------------------------------
 Version: 2.2.5
 Date: 24.05.2026
   Thanks to Morganite for all the fixes
