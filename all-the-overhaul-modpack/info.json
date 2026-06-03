@@ -1,6 +1,6 @@
 {
     "name": "all-the-overhaul-modpack",
-    "version": "2.2.6",
+    "version": "2.2.7",
     "title": "All The Overhauls Modpack",
     "author": "Orangedude27, Sportacus, cackling fiend, BLackATM, amberatelier",
     "factorio_version": "2.0",
@@ -49,7 +49,7 @@
         "spaceexplorationdatachipaugmenter",
         "ThemTharHills-Updated",
         "WipMod_TA-miners",
-        "mini-machines < 9.4.0",
+        "mini-machines >= 9.4.3",
         "5dim_core",
         "5dim_compatibility",
         "5dim_automation",
@@ -89,7 +89,6 @@
         "! bztitanium",
         "! bztungsten",
         "! bzzirconium",
-        "! crushing-industry",
-        "! mini-micro-settings"
+        "! crushing-industry"
     ]
 }

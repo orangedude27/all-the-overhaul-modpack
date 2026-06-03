@@ -344,8 +344,8 @@ if mods["mini-machines"] then
     change_setting("mini-steam-engines", false)
     change_setting("mini-accumulator", false)
     change_setting("mini-solar-panel", false)
-    change_setting("mini-tech-tree", true)
     change_setting("mini-lab", false)
+    change_setting("mini-legacy-code", true)
 end
 
 --se
