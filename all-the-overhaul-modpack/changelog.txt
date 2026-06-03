@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.7
+Date: 03.06.2026
+  Bug Fixes:
+    - Restored compatibility with new version of Mini Machines (Thanks to Kryzeth for doing the hard part)
+---------------------------------------------------------------------------------------------------
 Version: 2.2.6
 Date: 30.05.2026
   Bug Fixes:
